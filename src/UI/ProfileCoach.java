@@ -1,6 +1,7 @@
 package UI;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 /*
@@ -14,6 +15,12 @@ import javax.swing.border.*;
 public class ProfileCoach extends JFrame {
     public ProfileCoach() {
         initComponents();
+    }
+
+    private void editButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        this.dispose();
+        EditProfileCoach.run();
     }
 
     private void initComponents() {
@@ -158,6 +165,7 @@ public class ProfileCoach extends JFrame {
             editButton.setBackground(SystemColor.textHighlight);
             editButton.setText("EDIT");
             editButton.setForeground(Color.white);
+            editButton.addActionListener(e -> editButtonActionPerformed(e));
             body.add(editButton);
             editButton.setBounds(35, 585, 90, 40);
 
