@@ -29,6 +29,18 @@ public class MyLessonCoach extends JFrame {
         LessonDetailCoach.run();
     }
 
+    private void homeButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        this.dispose();
+        MyLessonCoach.run();
+    }
+
+    private void nextPageButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        this.dispose();
+        MyLessonCoach.run();
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -71,7 +83,8 @@ public class MyLessonCoach extends JFrame {
         coachName6 = new JLabel();
         moreButton6 = new JButton();
         nextPageButton = new JButton();
-        nextPageButton2 = new JButton();
+        Upload = new JButton();
+        homeButton = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -565,17 +578,27 @@ public class MyLessonCoach extends JFrame {
             nextPageButton.setBackground(SystemColor.textHighlight);
             nextPageButton.setText("NEXT PAGE");
             nextPageButton.setForeground(Color.white);
+            nextPageButton.addActionListener(e -> nextPageButtonActionPerformed(e));
             body.add(nextPageButton);
-            nextPageButton.setBounds(655, 45, 120, 40);
+            nextPageButton.setBounds(660, 45, 120, 40);
 
-            //---- nextPageButton2 ----
-            nextPageButton2.setBorderPainted(false);
-            nextPageButton2.setBackground(new Color(217, 0, 27));
-            nextPageButton2.setText("UPLOAD");
-            nextPageButton2.setForeground(Color.white);
-            nextPageButton2.addActionListener(e -> nextPageButton2ActionPerformed(e));
-            body.add(nextPageButton2);
-            nextPageButton2.setBounds(525, 45, 120, 40);
+            //---- Upload ----
+            Upload.setBorderPainted(false);
+            Upload.setBackground(new Color(217, 0, 27));
+            Upload.setText("UPLOAD");
+            Upload.setForeground(Color.white);
+            Upload.addActionListener(e -> nextPageButton2ActionPerformed(e));
+            body.add(Upload);
+            Upload.setBounds(490, 45, 120, 40);
+
+            //---- homeButton ----
+            homeButton.setBorderPainted(false);
+            homeButton.setBackground(SystemColor.textHighlight);
+            homeButton.setText("NEXT PAGE");
+            homeButton.setForeground(Color.white);
+            homeButton.addActionListener(e -> homeButtonActionPerformed(e));
+            body.add(homeButton);
+            homeButton.setBounds(615, 45, 40, 40);
 
             {
                 // compute preferred size
@@ -655,7 +678,8 @@ public class MyLessonCoach extends JFrame {
     private JLabel coachName6;
     private JButton moreButton6;
     private JButton nextPageButton;
-    private JButton nextPageButton2;
+    private JButton Upload;
+    private JButton homeButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         MyLessonCoach.run();

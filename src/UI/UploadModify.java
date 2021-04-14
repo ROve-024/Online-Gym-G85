@@ -78,6 +78,7 @@ public class UploadModify extends JFrame {
 
             //---- textField1 ----
             textField1.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 16));
+            textField1.setMargin(new Insets(2, 10, 2, 6));
             body.add(textField1);
             textField1.setBounds(35, 165, 730, textField1.getPreferredSize().height);
 
@@ -93,6 +94,7 @@ public class UploadModify extends JFrame {
 
                 //---- textArea1 ----
                 textArea1.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 16));
+                textArea1.setMargin(new Insets(5, 10, 5, 10));
                 scrollPane1.setViewportView(textArea1);
             }
             body.add(scrollPane1);
