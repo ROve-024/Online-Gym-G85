@@ -18,18 +18,39 @@ public class NavigatorAdmin extends JFrame {
     }
 
     private void userManageActionPerformed(ActionEvent e) {
+        java.awt.Window[] win = java.awt.Window.getWindows();
+        int i=0;
+        while (i<win.length) {
+            win[i].dispose();
+            i++;
+        }
+        NavigatorAdmin.run();
         UserManageAll.run();
     }
 
     private void lessonManageActionPerformed(ActionEvent e) {
+        java.awt.Window[] win = java.awt.Window.getWindows();
+        int i=0;
+        while (i<win.length) {
+            win[i].dispose();
+            i++;
+        }
+        NavigatorAdmin.run();
         ALLLesson.run();
     }
 
     private void VenuesManageActionPerformed(ActionEvent e) {
         // TODO add your code here
+        java.awt.Window[] win = java.awt.Window.getWindows();
+        int i=0;
+        while (i<win.length) {
+            win[i].dispose();
+            i++;
+        }
+        NavigatorAdmin.run();
     }
 
-    private void userManage2ActionPerformed(ActionEvent e) {
+    private void switchAccountActionPerformed(ActionEvent e) {
         // TODO add your code here
         this.dispose();
         Login.run();
@@ -53,7 +74,7 @@ public class NavigatorAdmin extends JFrame {
         label2 = new JButton();
         label3 = new JButton();
         label4 = new JButton();
-        userManage2 = new JButton();
+        switchAccount = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -176,14 +197,14 @@ public class NavigatorAdmin extends JFrame {
             body.add(label4);
             label4.setBounds(20, 290, 25, 25);
 
-            //---- userManage2 ----
-            userManage2.setText("Switch Account");
-            userManage2.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-            userManage2.setBackground(Color.white);
-            userManage2.setBorderPainted(false);
-            userManage2.addActionListener(e -> userManage2ActionPerformed(e));
-            body.add(userManage2);
-            userManage2.setBounds(-5, 595, 175, 60);
+            //---- switchAccount ----
+            switchAccount.setText("Switch Account");
+            switchAccount.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+            switchAccount.setBackground(Color.white);
+            switchAccount.setBorderPainted(false);
+            switchAccount.addActionListener(e -> switchAccountActionPerformed(e));
+            body.add(switchAccount);
+            switchAccount.setBounds(-5, 595, 175, 60);
 
             {
                 // compute preferred size
@@ -238,7 +259,7 @@ public class NavigatorAdmin extends JFrame {
     private JButton label2;
     private JButton label3;
     private JButton label4;
-    private JButton userManage2;
+    private JButton switchAccount;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         NavigatorAdmin.run();

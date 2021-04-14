@@ -19,17 +19,38 @@ public class NavigatorMember extends JFrame {
 
     private void myLessonActionPerformed(ActionEvent e) {
         // TODO add your code here
+        java.awt.Window[] win = java.awt.Window.getWindows();
+        int i=0;
+        while (i<win.length) {
+            win[i].dispose();
+            i++;
+        }
+        NavigatorMember.run();
         LessonHomeMember.run();
     }
 
     private void myPlanActionPerformed(ActionEvent e) {
         // TODO add your code here
+        java.awt.Window[] win = java.awt.Window.getWindows();
+        int i=0;
+        while (i<win.length) {
+            win[i].dispose();
+            i++;
+        }
+        NavigatorMember.run();
         PlanHomeMember.run();
 
     }
 
     private void myProfileActionPerformed(ActionEvent e) {
         // TODO add your code here
+        java.awt.Window[] win = java.awt.Window.getWindows();
+        int i=0;
+        while (i<win.length) {
+            win[i].dispose();
+            i++;
+        }
+        NavigatorMember.run();
         ProfileMember.run();
     }
 
