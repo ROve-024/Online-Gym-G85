@@ -76,7 +76,7 @@ public class EditProfileMember extends JFrame {
             //---- finishButton ----
             finishButton.setBorderPainted(false);
             finishButton.setBackground(SystemColor.textHighlight);
-            finishButton.setText("EDIT");
+            finishButton.setText("FINISH");
             finishButton.setForeground(Color.white);
             finishButton.addActionListener(e -> finishButtonActionPerformed(e));
             body.add(finishButton);
@@ -120,6 +120,7 @@ public class EditProfileMember extends JFrame {
                 //---- name ----
                 name.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
                 name.setBorder(null);
+                name.setMargin(new Insets(2, 10, 2, 6));
                 nameContainer.add(name);
                 name.setBounds(185, 14, 500, name.getPreferredSize().height);
 
@@ -155,6 +156,7 @@ public class EditProfileMember extends JFrame {
                 //---- email ----
                 email.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
                 email.setBorder(null);
+                email.setMargin(new Insets(2, 10, 2, 6));
                 emailContainer.add(email);
                 email.setBounds(185, 14, 500, email.getPreferredSize().height);
 
@@ -190,6 +192,7 @@ public class EditProfileMember extends JFrame {
                 //---- phoneNumber ----
                 phoneNumber.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
                 phoneNumber.setBorder(null);
+                phoneNumber.setMargin(new Insets(2, 10, 2, 6));
                 phoneNumberContainer.add(phoneNumber);
                 phoneNumber.setBounds(185, 14, 500, phoneNumber.getPreferredSize().height);
 
@@ -225,6 +228,7 @@ public class EditProfileMember extends JFrame {
                 //---- currentPassword ----
                 currentPassword.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
                 currentPassword.setBorder(null);
+                currentPassword.setMargin(new Insets(2, 10, 2, 6));
                 currentPasswordContainer.add(currentPassword);
                 currentPassword.setBounds(185, 14, 500, currentPassword.getPreferredSize().height);
 
@@ -260,6 +264,7 @@ public class EditProfileMember extends JFrame {
                 //---- newPassword ----
                 newPassword.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
                 newPassword.setBorder(null);
+                newPassword.setMargin(new Insets(2, 10, 2, 6));
                 newPasswordContainer.add(newPassword);
                 newPassword.setBounds(185, 14, 500, newPassword.getPreferredSize().height);
 
@@ -295,6 +300,7 @@ public class EditProfileMember extends JFrame {
                 //---- confirmPassword ----
                 confirmPassword.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
                 confirmPassword.setBorder(null);
+                confirmPassword.setMargin(new Insets(2, 10, 2, 6));
                 confirmPasswordContainer.add(confirmPassword);
                 confirmPassword.setBounds(185, 14, 500, confirmPassword.getPreferredSize().height);
 
