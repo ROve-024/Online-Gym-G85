@@ -1,45 +1,25 @@
-package UI;
+package UI.Member;
+
+import UI.Other.Login;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 /*
- * Created by JFormDesigner on Thu Apr 08 13:25:02 CST 2021
+ * Created by JFormDesigner on Fri Apr 09 12:20:21 CST 2021
  */
 
 
 /**
  * @author Anna
  */
-public class NavigatorAdmin extends JFrame {
-    public NavigatorAdmin() {
+public class NavigatorMember extends JFrame {
+    public NavigatorMember() {
         initComponents();
     }
 
-    private void userManageActionPerformed(ActionEvent e) {
-        java.awt.Window[] win = java.awt.Window.getWindows();
-        int i=0;
-        while (i<win.length) {
-            win[i].dispose();
-            i++;
-        }
-        NavigatorAdmin.run();
-        UserManageAll.run();
-    }
-
-    private void lessonManageActionPerformed(ActionEvent e) {
-        java.awt.Window[] win = java.awt.Window.getWindows();
-        int i=0;
-        while (i<win.length) {
-            win[i].dispose();
-            i++;
-        }
-        NavigatorAdmin.run();
-        ALLLesson.run();
-    }
-
-    private void VenuesManageActionPerformed(ActionEvent e) {
+    private void myLessonActionPerformed(ActionEvent e) {
         // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
         int i=0;
@@ -47,15 +27,40 @@ public class NavigatorAdmin extends JFrame {
             win[i].dispose();
             i++;
         }
-        NavigatorAdmin.run();
+        NavigatorMember.run();
+        LessonHomeMember.run();
     }
 
-    private void switchAccountActionPerformed(ActionEvent e) {
+    private void myPlanActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        java.awt.Window[] win = java.awt.Window.getWindows();
+        int i=0;
+        while (i<win.length) {
+            win[i].dispose();
+            i++;
+        }
+        NavigatorMember.run();
+        PlanHomeMember.run();
+
+    }
+
+    private void myProfileActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        java.awt.Window[] win = java.awt.Window.getWindows();
+        int i=0;
+        while (i<win.length) {
+            win[i].dispose();
+            i++;
+        }
+        NavigatorMember.run();
+        ProfileMember.run();
+    }
+
+    private void switchAccoutActionPerformed(ActionEvent e) {
         // TODO add your code here
         this.dispose();
         Login.run();
     }
-
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
@@ -65,16 +70,16 @@ public class NavigatorAdmin extends JFrame {
         welcomeMsg = new JLabel();
         decorationLine1 = new JLabel();
         menu = new JPanel();
-        userManageMenu = new JPanel();
-        userManage = new JButton();
-        lessonManageMenu = new JPanel();
-        lessonManage = new JButton();
-        VenuesManageMenu = new JPanel();
-        VenuesManage = new JButton();
+        myLessonMenu = new JPanel();
+        myLesson = new JButton();
+        myPlanMenu = new JPanel();
+        myPlan = new JButton();
+        myProfileMenu = new JPanel();
+        myProfile = new JButton();
         label2 = new JButton();
         label3 = new JButton();
         label4 = new JButton();
-        switchAccount = new JButton();
+        switchAccout = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -119,53 +124,53 @@ public class NavigatorAdmin extends JFrame {
             {
                 menu.setLayout(new GridLayout(0, 1));
 
-                //======== userManageMenu ========
+                //======== myLessonMenu ========
                 {
-                    userManageMenu.setBackground(Color.white);
-                    userManageMenu.setLayout(new GridLayout());
+                    myLessonMenu.setBackground(Color.white);
+                    myLessonMenu.setLayout(new GridLayout());
 
-                    //---- userManage ----
-                    userManage.setText("User Management");
-                    userManage.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-                    userManage.setBackground(Color.white);
-                    userManage.setBorderPainted(false);
-                    userManage.setHorizontalAlignment(SwingConstants.LEFT);
-                    userManage.addActionListener(e -> userManageActionPerformed(e));
-                    userManageMenu.add(userManage);
+                    //---- myLesson ----
+                    myLesson.setText("ALL Lesson");
+                    myLesson.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+                    myLesson.setBackground(Color.white);
+                    myLesson.setBorderPainted(false);
+                    myLesson.setHorizontalAlignment(SwingConstants.LEFT);
+                    myLesson.addActionListener(e -> myLessonActionPerformed(e));
+                    myLessonMenu.add(myLesson);
                 }
-                menu.add(userManageMenu);
+                menu.add(myLessonMenu);
 
-                //======== lessonManageMenu ========
+                //======== myPlanMenu ========
                 {
-                    lessonManageMenu.setBackground(Color.white);
-                    lessonManageMenu.setLayout(new GridLayout());
+                    myPlanMenu.setBackground(Color.white);
+                    myPlanMenu.setLayout(new GridLayout());
 
-                    //---- lessonManage ----
-                    lessonManage.setText("Lesson Management ");
-                    lessonManage.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-                    lessonManage.setBackground(Color.white);
-                    lessonManage.setBorderPainted(false);
-                    lessonManage.setHorizontalAlignment(SwingConstants.LEFT);
-                    lessonManage.addActionListener(e -> lessonManageActionPerformed(e));
-                    lessonManageMenu.add(lessonManage);
+                    //---- myPlan ----
+                    myPlan.setText("My Plan");
+                    myPlan.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+                    myPlan.setBackground(Color.white);
+                    myPlan.setBorderPainted(false);
+                    myPlan.setHorizontalAlignment(SwingConstants.LEFT);
+                    myPlan.addActionListener(e -> myPlanActionPerformed(e));
+                    myPlanMenu.add(myPlan);
                 }
-                menu.add(lessonManageMenu);
+                menu.add(myPlanMenu);
 
-                //======== VenuesManageMenu ========
+                //======== myProfileMenu ========
                 {
-                    VenuesManageMenu.setBackground(Color.white);
-                    VenuesManageMenu.setLayout(new GridLayout());
+                    myProfileMenu.setBackground(Color.white);
+                    myProfileMenu.setLayout(new GridLayout());
 
-                    //---- VenuesManage ----
-                    VenuesManage.setText("Venues Management");
-                    VenuesManage.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-                    VenuesManage.setBackground(Color.white);
-                    VenuesManage.setBorderPainted(false);
-                    VenuesManage.setHorizontalAlignment(SwingConstants.LEFT);
-                    VenuesManage.addActionListener(e -> VenuesManageActionPerformed(e));
-                    VenuesManageMenu.add(VenuesManage);
+                    //---- myProfile ----
+                    myProfile.setText("My Profile");
+                    myProfile.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+                    myProfile.setBackground(Color.white);
+                    myProfile.setBorderPainted(false);
+                    myProfile.setHorizontalAlignment(SwingConstants.LEFT);
+                    myProfile.addActionListener(e -> myProfileActionPerformed(e));
+                    myProfileMenu.add(myProfile);
                 }
-                menu.add(VenuesManageMenu);
+                menu.add(myProfileMenu);
             }
             body.add(menu);
             menu.setBounds(50, 135, 280, 200);
@@ -197,14 +202,14 @@ public class NavigatorAdmin extends JFrame {
             body.add(label4);
             label4.setBounds(20, 290, 25, 25);
 
-            //---- switchAccount ----
-            switchAccount.setText("Switch Account");
-            switchAccount.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-            switchAccount.setBackground(Color.white);
-            switchAccount.setBorderPainted(false);
-            switchAccount.addActionListener(e -> switchAccountActionPerformed(e));
-            body.add(switchAccount);
-            switchAccount.setBounds(-5, 595, 175, 60);
+            //---- switchAccout ----
+            switchAccout.setText("Switch Account");
+            switchAccout.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+            switchAccout.setBackground(Color.white);
+            switchAccout.setBorderPainted(false);
+            switchAccout.addActionListener(e -> switchAccoutActionPerformed(e));
+            body.add(switchAccout);
+            switchAccout.setBounds(-5, 595, 175, 60);
 
             {
                 // compute preferred size
@@ -250,26 +255,26 @@ public class NavigatorAdmin extends JFrame {
     private JLabel welcomeMsg;
     private JLabel decorationLine1;
     private JPanel menu;
-    private JPanel userManageMenu;
-    private JButton userManage;
-    private JPanel lessonManageMenu;
-    private JButton lessonManage;
-    private JPanel VenuesManageMenu;
-    private JButton VenuesManage;
+    private JPanel myLessonMenu;
+    private JButton myLesson;
+    private JPanel myPlanMenu;
+    private JButton myPlan;
+    private JPanel myProfileMenu;
+    private JButton myProfile;
     private JButton label2;
     private JButton label3;
     private JButton label4;
-    private JButton switchAccount;
+    private JButton switchAccout;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
-        NavigatorAdmin.run();
+        NavigatorMember.run();
     }
 
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    NavigatorAdmin frame = new NavigatorAdmin();
+                    NavigatorMember frame = new NavigatorMember();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-1100/2,screenSize.height/2-700/2);
                     frame.setVisible(true);
@@ -279,5 +284,4 @@ public class NavigatorAdmin extends JFrame {
             }
         });
     }
-
 }

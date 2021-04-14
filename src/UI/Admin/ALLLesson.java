@@ -1,32 +1,26 @@
-package UI;
+package UI.Admin;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 /*
- * Created by JFormDesigner on Fri Apr 09 10:53:28 CST 2021
+ * Created by JFormDesigner on Thu Apr 08 20:16:38 CST 2021
  */
 
 
 /**
  * @author Anna
  */
-public class LessonHomeMember extends JFrame {
-    public LessonHomeMember() {
+public class ALLLesson extends JFrame {
+    public ALLLesson() {
         initComponents();
-    }
-
-    private void coachSearchButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
-        this.dispose();
-        CoachSearch.run();
     }
 
     private void moreButton1ActionPerformed(ActionEvent e) {
         // TODO add your code here
         this.dispose();
-        LessonDetailCustomer.run();
+        LessonDetailAdmin.run();
     }
 
     private void initComponents() {
@@ -73,7 +67,6 @@ public class LessonHomeMember extends JFrame {
         search = new JTextField();
         searchButton = new JButton();
         nextPageButton = new JButton();
-        coachSearchButton = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -93,7 +86,7 @@ public class LessonHomeMember extends JFrame {
             decorationLine.setBounds(35, 115, 730, decorationLine.getPreferredSize().height);
 
             //---- title ----
-            title.setText("Lesson ");
+            title.setText("ALL Lesson ");
             title.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 32));
             title.setBackground(Color.white);
             body.add(title);
@@ -583,15 +576,6 @@ public class LessonHomeMember extends JFrame {
             body.add(nextPageButton);
             nextPageButton.setBounds(655, 45, 120, 40);
 
-            //---- coachSearchButton ----
-            coachSearchButton.setBorderPainted(false);
-            coachSearchButton.setBackground(SystemColor.textHighlight);
-            coachSearchButton.setText("COACH");
-            coachSearchButton.setForeground(Color.white);
-            coachSearchButton.addActionListener(e -> coachSearchButtonActionPerformed(e));
-            body.add(coachSearchButton);
-            coachSearchButton.setBounds(200, 45, 85, 40);
-
             {
                 // compute preferred size
                 Dimension preferredSize = new Dimension();
@@ -672,17 +656,16 @@ public class LessonHomeMember extends JFrame {
     private JTextField search;
     private JButton searchButton;
     private JButton nextPageButton;
-    private JButton coachSearchButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
-        LessonHomeMember.run();
+        ALLLesson.run();
     }
 
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    LessonHomeMember frame = new LessonHomeMember();
+                    ALLLesson frame = new ALLLesson();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setVisible(true);

@@ -1,4 +1,6 @@
-package UI;
+package UI.Coach;
+
+import UI.Member.ViewMemberProfile;
 
 import java.awt.*;
 import java.awt.event.*;

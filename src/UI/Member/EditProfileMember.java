@@ -2,7 +2,7 @@
  * Created by JFormDesigner on Fri Apr 09 14:22:20 CST 2021
  */
 
-package UI;
+package UI.Member;
 
 import java.awt.*;
 import java.awt.event.*;

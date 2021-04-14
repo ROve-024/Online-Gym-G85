@@ -1,26 +1,19 @@
-package UI;
+package UI.Member;
 
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 /*
- * Created by JFormDesigner on Fri Apr 09 10:48:29 CST 2021
+ * Created by JFormDesigner on Fri Apr 09 10:47:17 CST 2021
  */
 
 
 /**
  * @author Anna
  */
-public class ProfileMember extends JFrame {
-    public ProfileMember() {
+public class ViewMemberProfile extends JFrame {
+    public ViewMemberProfile() {
         initComponents();
-    }
-
-    private void editButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
-        this.dispose();
-        EditProfileMember.run();
     }
 
     private void initComponents() {
@@ -28,7 +21,6 @@ public class ProfileMember extends JFrame {
         body = new JPanel();
         decorationLine = new JLabel();
         title = new JLabel();
-        balance = new JLabel();
         uidGym = new JLabel();
         avatar = new JButton();
         nameTip = new JLabel();
@@ -39,7 +31,6 @@ public class ProfileMember extends JFrame {
         email = new JLabel();
         phoneNumber = new JLabel();
         gender = new JLabel();
-        editButton = new JButton();
         decorationLine2 = new JPanel();
         decorationLine3 = new JPanel();
         decorationLine4 = new JPanel();
@@ -74,13 +65,6 @@ public class ProfileMember extends JFrame {
             title.setBackground(Color.white);
             body.add(title);
             title.setBounds(new Rectangle(new Point(25, 45), title.getPreferredSize()));
-
-            //---- balance ----
-            balance.setText("Balance: 1200$");
-            balance.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 17));
-            balance.setForeground(Color.gray);
-            body.add(balance);
-            balance.setBounds(35, 93, 160, balance.getPreferredSize().height);
 
             //---- uidGym ----
             uidGym.setText("UID:88888888 GYM: Muscle King ");
@@ -167,15 +151,6 @@ public class ProfileMember extends JFrame {
             gender.setForeground(Color.gray);
             body.add(gender);
             gender.setBounds(390, 520, 255, 23);
-
-            //---- editButton ----
-            editButton.setBorderPainted(false);
-            editButton.setBackground(SystemColor.textHighlight);
-            editButton.setText("EDIT");
-            editButton.setForeground(Color.white);
-            editButton.addActionListener(e -> editButtonActionPerformed(e));
-            body.add(editButton);
-            editButton.setBounds(35, 585, 90, 40);
 
             //======== decorationLine2 ========
             {
@@ -458,7 +433,6 @@ public class ProfileMember extends JFrame {
     private JPanel body;
     private JLabel decorationLine;
     private JLabel title;
-    private JLabel balance;
     private JLabel uidGym;
     private JButton avatar;
     private JLabel nameTip;
@@ -469,7 +443,6 @@ public class ProfileMember extends JFrame {
     private JLabel email;
     private JLabel phoneNumber;
     private JLabel gender;
-    private JButton editButton;
     private JPanel decorationLine2;
     private JPanel decorationLine3;
     private JPanel decorationLine4;
@@ -482,14 +455,14 @@ public class ProfileMember extends JFrame {
     private JPanel decorationLine11;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
-        ProfileMember.run();
+        ViewMemberProfile.run();
     }
 
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    ProfileMember frame = new ProfileMember();
+                    ViewMemberProfile frame = new ViewMemberProfile();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setVisible(true);

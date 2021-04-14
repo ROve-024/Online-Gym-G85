@@ -1,19 +1,21 @@
-package UI;
+package UI.Coach;
+
+import UI.Other.Login;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 /*
- * Created by JFormDesigner on Fri Apr 09 12:20:21 CST 2021
+ * Created by JFormDesigner on Fri Apr 09 12:06:39 CST 2021
  */
 
 
 /**
  * @author Anna
  */
-public class NavigatorMember extends JFrame {
-    public NavigatorMember() {
+public class NavigatorCoach extends JFrame {
+    public NavigatorCoach() {
         initComponents();
     }
 
@@ -25,8 +27,8 @@ public class NavigatorMember extends JFrame {
             win[i].dispose();
             i++;
         }
-        NavigatorMember.run();
-        LessonHomeMember.run();
+        NavigatorCoach.run();
+        MyLessonCoach.run();
     }
 
     private void myPlanActionPerformed(ActionEvent e) {
@@ -37,9 +39,8 @@ public class NavigatorMember extends JFrame {
             win[i].dispose();
             i++;
         }
-        NavigatorMember.run();
-        PlanHomeMember.run();
-
+        NavigatorCoach.run();
+        PlanHomeCoach.run();
     }
 
     private void myProfileActionPerformed(ActionEvent e) {
@@ -50,8 +51,8 @@ public class NavigatorMember extends JFrame {
             win[i].dispose();
             i++;
         }
-        NavigatorMember.run();
-        ProfileMember.run();
+        NavigatorCoach.run();
+        ProfileCoach.run();
     }
 
     private void switchAccoutActionPerformed(ActionEvent e) {
@@ -59,6 +60,8 @@ public class NavigatorMember extends JFrame {
         this.dispose();
         Login.run();
     }
+
+
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
@@ -128,7 +131,7 @@ public class NavigatorMember extends JFrame {
                     myLessonMenu.setLayout(new GridLayout());
 
                     //---- myLesson ----
-                    myLesson.setText("ALL Lesson");
+                    myLesson.setText("My Lesson");
                     myLesson.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
                     myLesson.setBackground(Color.white);
                     myLesson.setBorderPainted(false);
@@ -265,14 +268,14 @@ public class NavigatorMember extends JFrame {
     private JButton switchAccout;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
-        NavigatorMember.run();
+        NavigatorCoach.run();
     }
 
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    NavigatorMember frame = new NavigatorMember();
+                    NavigatorCoach frame = new NavigatorCoach();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-1100/2,screenSize.height/2-700/2);
                     frame.setVisible(true);

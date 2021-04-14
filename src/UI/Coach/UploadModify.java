@@ -1,4 +1,4 @@
-package UI;
+package UI.Coach;
 
 import java.awt.*;
 import java.awt.event.*;

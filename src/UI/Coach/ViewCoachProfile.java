@@ -1,18 +1,18 @@
-package UI;
+package UI.Coach;
 
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.*;
 /*
- * Created by JFormDesigner on Fri Apr 09 10:47:17 CST 2021
+ * Created by JFormDesigner on Fri Apr 09 10:50:20 CST 2021
  */
 
 
 /**
  * @author Anna
  */
-public class ViewMemberProfile extends JFrame {
-    public ViewMemberProfile() {
+public class ViewCoachProfile extends JFrame {
+    public ViewCoachProfile() {
         initComponents();
     }
 
@@ -41,6 +41,7 @@ public class ViewMemberProfile extends JFrame {
         decorationLine9 = new JPanel();
         decorationLine10 = new JPanel();
         decorationLine11 = new JPanel();
+        editButton = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -392,6 +393,14 @@ public class ViewMemberProfile extends JFrame {
             body.add(decorationLine11);
             decorationLine11.setBounds(390, 557, 375, 2);
 
+            //---- editButton ----
+            editButton.setBorderPainted(false);
+            editButton.setBackground(SystemColor.textHighlight);
+            editButton.setText("LESSON");
+            editButton.setForeground(Color.white);
+            body.add(editButton);
+            editButton.setBounds(35, 590, 90, 40);
+
             {
                 // compute preferred size
                 Dimension preferredSize = new Dimension();
@@ -453,16 +462,17 @@ public class ViewMemberProfile extends JFrame {
     private JPanel decorationLine9;
     private JPanel decorationLine10;
     private JPanel decorationLine11;
+    private JButton editButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
-        ViewMemberProfile.run();
+        ViewCoachProfile.run();
     }
 
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    ViewMemberProfile frame = new ViewMemberProfile();
+                    ViewCoachProfile frame = new ViewCoachProfile();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setVisible(true);

@@ -1,4 +1,8 @@
-package UI;
+package UI.Other;
+
+import UI.Admin.NavigatorAdmin;
+import UI.Coach.NavigatorCoach;
+import UI.Member.NavigatorMember;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -86,7 +90,7 @@ public class Login extends JFrame {
             userButton.setBounds(new Rectangle(new Point(55, 95), userButton.getPreferredSize()));
 
             //---- adminButton ----
-            adminButton.setText("Admin");
+            adminButton.setText("UI/Admin");
             adminButton.setBackground(UIManager.getColor("Button.darcula.disabledText.shadow"));
             loginBody.add(adminButton);
             adminButton.setBounds(280, 95, 70, 21);

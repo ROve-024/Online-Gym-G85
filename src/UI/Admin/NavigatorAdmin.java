@@ -1,23 +1,47 @@
-package UI;
+package UI.Admin;
+
+import UI.Other.Login;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 /*
- * Created by JFormDesigner on Fri Apr 09 12:06:39 CST 2021
+ * Created by JFormDesigner on Thu Apr 08 13:25:02 CST 2021
  */
 
 
 /**
  * @author Anna
  */
-public class NavigatorCoach extends JFrame {
-    public NavigatorCoach() {
+public class NavigatorAdmin extends JFrame {
+    public NavigatorAdmin() {
         initComponents();
     }
 
-    private void myLessonActionPerformed(ActionEvent e) {
+    private void userManageActionPerformed(ActionEvent e) {
+        java.awt.Window[] win = java.awt.Window.getWindows();
+        int i=0;
+        while (i<win.length) {
+            win[i].dispose();
+            i++;
+        }
+        NavigatorAdmin.run();
+        UserManageAll.run();
+    }
+
+    private void lessonManageActionPerformed(ActionEvent e) {
+        java.awt.Window[] win = java.awt.Window.getWindows();
+        int i=0;
+        while (i<win.length) {
+            win[i].dispose();
+            i++;
+        }
+        NavigatorAdmin.run();
+        ALLLesson.run();
+    }
+
+    private void VenuesManageActionPerformed(ActionEvent e) {
         // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
         int i=0;
@@ -25,40 +49,14 @@ public class NavigatorCoach extends JFrame {
             win[i].dispose();
             i++;
         }
-        NavigatorCoach.run();
-        MyLessonCoach.run();
+        NavigatorAdmin.run();
     }
 
-    private void myPlanActionPerformed(ActionEvent e) {
-        // TODO add your code here
-        java.awt.Window[] win = java.awt.Window.getWindows();
-        int i=0;
-        while (i<win.length) {
-            win[i].dispose();
-            i++;
-        }
-        NavigatorCoach.run();
-        PlanHomeCoach.run();
-    }
-
-    private void myProfileActionPerformed(ActionEvent e) {
-        // TODO add your code here
-        java.awt.Window[] win = java.awt.Window.getWindows();
-        int i=0;
-        while (i<win.length) {
-            win[i].dispose();
-            i++;
-        }
-        NavigatorCoach.run();
-        ProfileCoach.run();
-    }
-
-    private void switchAccoutActionPerformed(ActionEvent e) {
+    private void switchAccountActionPerformed(ActionEvent e) {
         // TODO add your code here
         this.dispose();
         Login.run();
     }
-
 
 
     private void initComponents() {
@@ -69,16 +67,16 @@ public class NavigatorCoach extends JFrame {
         welcomeMsg = new JLabel();
         decorationLine1 = new JLabel();
         menu = new JPanel();
-        myLessonMenu = new JPanel();
-        myLesson = new JButton();
-        myPlanMenu = new JPanel();
-        myPlan = new JButton();
-        myProfileMenu = new JPanel();
-        myProfile = new JButton();
+        userManageMenu = new JPanel();
+        userManage = new JButton();
+        lessonManageMenu = new JPanel();
+        lessonManage = new JButton();
+        VenuesManageMenu = new JPanel();
+        VenuesManage = new JButton();
         label2 = new JButton();
         label3 = new JButton();
         label4 = new JButton();
-        switchAccout = new JButton();
+        switchAccount = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -123,53 +121,53 @@ public class NavigatorCoach extends JFrame {
             {
                 menu.setLayout(new GridLayout(0, 1));
 
-                //======== myLessonMenu ========
+                //======== userManageMenu ========
                 {
-                    myLessonMenu.setBackground(Color.white);
-                    myLessonMenu.setLayout(new GridLayout());
+                    userManageMenu.setBackground(Color.white);
+                    userManageMenu.setLayout(new GridLayout());
 
-                    //---- myLesson ----
-                    myLesson.setText("My Lesson");
-                    myLesson.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-                    myLesson.setBackground(Color.white);
-                    myLesson.setBorderPainted(false);
-                    myLesson.setHorizontalAlignment(SwingConstants.LEFT);
-                    myLesson.addActionListener(e -> myLessonActionPerformed(e));
-                    myLessonMenu.add(myLesson);
+                    //---- userManage ----
+                    userManage.setText("User Management");
+                    userManage.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+                    userManage.setBackground(Color.white);
+                    userManage.setBorderPainted(false);
+                    userManage.setHorizontalAlignment(SwingConstants.LEFT);
+                    userManage.addActionListener(e -> userManageActionPerformed(e));
+                    userManageMenu.add(userManage);
                 }
-                menu.add(myLessonMenu);
+                menu.add(userManageMenu);
 
-                //======== myPlanMenu ========
+                //======== lessonManageMenu ========
                 {
-                    myPlanMenu.setBackground(Color.white);
-                    myPlanMenu.setLayout(new GridLayout());
+                    lessonManageMenu.setBackground(Color.white);
+                    lessonManageMenu.setLayout(new GridLayout());
 
-                    //---- myPlan ----
-                    myPlan.setText("My Plan");
-                    myPlan.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-                    myPlan.setBackground(Color.white);
-                    myPlan.setBorderPainted(false);
-                    myPlan.setHorizontalAlignment(SwingConstants.LEFT);
-                    myPlan.addActionListener(e -> myPlanActionPerformed(e));
-                    myPlanMenu.add(myPlan);
+                    //---- lessonManage ----
+                    lessonManage.setText("Lesson Management ");
+                    lessonManage.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+                    lessonManage.setBackground(Color.white);
+                    lessonManage.setBorderPainted(false);
+                    lessonManage.setHorizontalAlignment(SwingConstants.LEFT);
+                    lessonManage.addActionListener(e -> lessonManageActionPerformed(e));
+                    lessonManageMenu.add(lessonManage);
                 }
-                menu.add(myPlanMenu);
+                menu.add(lessonManageMenu);
 
-                //======== myProfileMenu ========
+                //======== VenuesManageMenu ========
                 {
-                    myProfileMenu.setBackground(Color.white);
-                    myProfileMenu.setLayout(new GridLayout());
+                    VenuesManageMenu.setBackground(Color.white);
+                    VenuesManageMenu.setLayout(new GridLayout());
 
-                    //---- myProfile ----
-                    myProfile.setText("My Profile");
-                    myProfile.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-                    myProfile.setBackground(Color.white);
-                    myProfile.setBorderPainted(false);
-                    myProfile.setHorizontalAlignment(SwingConstants.LEFT);
-                    myProfile.addActionListener(e -> myProfileActionPerformed(e));
-                    myProfileMenu.add(myProfile);
+                    //---- VenuesManage ----
+                    VenuesManage.setText("Venues Management");
+                    VenuesManage.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+                    VenuesManage.setBackground(Color.white);
+                    VenuesManage.setBorderPainted(false);
+                    VenuesManage.setHorizontalAlignment(SwingConstants.LEFT);
+                    VenuesManage.addActionListener(e -> VenuesManageActionPerformed(e));
+                    VenuesManageMenu.add(VenuesManage);
                 }
-                menu.add(myProfileMenu);
+                menu.add(VenuesManageMenu);
             }
             body.add(menu);
             menu.setBounds(50, 135, 280, 200);
@@ -201,14 +199,14 @@ public class NavigatorCoach extends JFrame {
             body.add(label4);
             label4.setBounds(20, 290, 25, 25);
 
-            //---- switchAccout ----
-            switchAccout.setText("Switch Account");
-            switchAccout.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-            switchAccout.setBackground(Color.white);
-            switchAccout.setBorderPainted(false);
-            switchAccout.addActionListener(e -> switchAccoutActionPerformed(e));
-            body.add(switchAccout);
-            switchAccout.setBounds(-5, 595, 175, 60);
+            //---- switchAccount ----
+            switchAccount.setText("Switch Account");
+            switchAccount.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+            switchAccount.setBackground(Color.white);
+            switchAccount.setBorderPainted(false);
+            switchAccount.addActionListener(e -> switchAccountActionPerformed(e));
+            body.add(switchAccount);
+            switchAccount.setBounds(-5, 595, 175, 60);
 
             {
                 // compute preferred size
@@ -254,26 +252,26 @@ public class NavigatorCoach extends JFrame {
     private JLabel welcomeMsg;
     private JLabel decorationLine1;
     private JPanel menu;
-    private JPanel myLessonMenu;
-    private JButton myLesson;
-    private JPanel myPlanMenu;
-    private JButton myPlan;
-    private JPanel myProfileMenu;
-    private JButton myProfile;
+    private JPanel userManageMenu;
+    private JButton userManage;
+    private JPanel lessonManageMenu;
+    private JButton lessonManage;
+    private JPanel VenuesManageMenu;
+    private JButton VenuesManage;
     private JButton label2;
     private JButton label3;
     private JButton label4;
-    private JButton switchAccout;
+    private JButton switchAccount;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
-        NavigatorCoach.run();
+        NavigatorAdmin.run();
     }
 
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    NavigatorCoach frame = new NavigatorCoach();
+                    NavigatorAdmin frame = new NavigatorAdmin();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-1100/2,screenSize.height/2-700/2);
                     frame.setVisible(true);
@@ -283,4 +281,5 @@ public class NavigatorCoach extends JFrame {
             }
         });
     }
+
 }

@@ -1,19 +1,26 @@
-package UI;
+package UI.Member;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 /*
- * Created by JFormDesigner on Fri Apr 09 10:50:20 CST 2021
+ * Created by JFormDesigner on Fri Apr 09 10:48:29 CST 2021
  */
 
 
 /**
  * @author Anna
  */
-public class ViewCoachProfile extends JFrame {
-    public ViewCoachProfile() {
+public class ProfileMember extends JFrame {
+    public ProfileMember() {
         initComponents();
+    }
+
+    private void editButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        this.dispose();
+        EditProfileMember.run();
     }
 
     private void initComponents() {
@@ -21,6 +28,7 @@ public class ViewCoachProfile extends JFrame {
         body = new JPanel();
         decorationLine = new JLabel();
         title = new JLabel();
+        balance = new JLabel();
         uidGym = new JLabel();
         avatar = new JButton();
         nameTip = new JLabel();
@@ -31,6 +39,7 @@ public class ViewCoachProfile extends JFrame {
         email = new JLabel();
         phoneNumber = new JLabel();
         gender = new JLabel();
+        editButton = new JButton();
         decorationLine2 = new JPanel();
         decorationLine3 = new JPanel();
         decorationLine4 = new JPanel();
@@ -41,7 +50,6 @@ public class ViewCoachProfile extends JFrame {
         decorationLine9 = new JPanel();
         decorationLine10 = new JPanel();
         decorationLine11 = new JPanel();
-        editButton = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -66,6 +74,13 @@ public class ViewCoachProfile extends JFrame {
             title.setBackground(Color.white);
             body.add(title);
             title.setBounds(new Rectangle(new Point(25, 45), title.getPreferredSize()));
+
+            //---- balance ----
+            balance.setText("Balance: 1200$");
+            balance.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 17));
+            balance.setForeground(Color.gray);
+            body.add(balance);
+            balance.setBounds(35, 93, 160, balance.getPreferredSize().height);
 
             //---- uidGym ----
             uidGym.setText("UID:88888888 GYM: Muscle King ");
@@ -152,6 +167,15 @@ public class ViewCoachProfile extends JFrame {
             gender.setForeground(Color.gray);
             body.add(gender);
             gender.setBounds(390, 520, 255, 23);
+
+            //---- editButton ----
+            editButton.setBorderPainted(false);
+            editButton.setBackground(SystemColor.textHighlight);
+            editButton.setText("EDIT");
+            editButton.setForeground(Color.white);
+            editButton.addActionListener(e -> editButtonActionPerformed(e));
+            body.add(editButton);
+            editButton.setBounds(35, 585, 90, 40);
 
             //======== decorationLine2 ========
             {
@@ -393,14 +417,6 @@ public class ViewCoachProfile extends JFrame {
             body.add(decorationLine11);
             decorationLine11.setBounds(390, 557, 375, 2);
 
-            //---- editButton ----
-            editButton.setBorderPainted(false);
-            editButton.setBackground(SystemColor.textHighlight);
-            editButton.setText("LESSON");
-            editButton.setForeground(Color.white);
-            body.add(editButton);
-            editButton.setBounds(35, 590, 90, 40);
-
             {
                 // compute preferred size
                 Dimension preferredSize = new Dimension();
@@ -442,6 +458,7 @@ public class ViewCoachProfile extends JFrame {
     private JPanel body;
     private JLabel decorationLine;
     private JLabel title;
+    private JLabel balance;
     private JLabel uidGym;
     private JButton avatar;
     private JLabel nameTip;
@@ -452,6 +469,7 @@ public class ViewCoachProfile extends JFrame {
     private JLabel email;
     private JLabel phoneNumber;
     private JLabel gender;
+    private JButton editButton;
     private JPanel decorationLine2;
     private JPanel decorationLine3;
     private JPanel decorationLine4;
@@ -462,17 +480,16 @@ public class ViewCoachProfile extends JFrame {
     private JPanel decorationLine9;
     private JPanel decorationLine10;
     private JPanel decorationLine11;
-    private JButton editButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
-        ViewCoachProfile.run();
+        ProfileMember.run();
     }
 
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    ViewCoachProfile frame = new ViewCoachProfile();
+                    ProfileMember frame = new ProfileMember();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setVisible(true);

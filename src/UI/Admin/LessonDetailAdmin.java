@@ -1,38 +1,35 @@
-package UI;
+package UI.Admin;
+
+import UI.Coach.ProfileCoach;
+import UI.Coach.UploadModify;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 /*
- * Created by JFormDesigner on Thu Apr 08 16:20:14 CST 2021
+ * Created by JFormDesigner on Thu Apr 08 19:38:51 CST 2021
  */
 
 
 /**
  * @author Anna
  */
-public class LessonDetailCustomer extends JFrame {
-    public LessonDetailCustomer() {
+public class LessonDetailAdmin extends JFrame {
+    public LessonDetailAdmin() {
         initComponents();
     }
 
-    private void joinButtonActionPerformed(ActionEvent e) {
+    private void joinButton3ActionPerformed(ActionEvent e) {
         // TODO add your code here
         this.dispose();
-        LessonVideo.run();
-    }
-
-    private void bookButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
-        this.dispose();
-        Book.run();
+        UploadModify.run();
     }
 
     private void coachDetailButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         this.dispose();
-        ViewCoachProfile.run();
+        ProfileCoach.run();
     }
 
     private void initComponents() {
@@ -43,12 +40,12 @@ public class LessonDetailCustomer extends JFrame {
         lessonPicture = new JLabel();
         lessonName = new JLabel();
         lessionMsg = new JTextPane();
-        joinButton = new JButton();
-        bookButton = new JButton();
         coachAvatar = new JLabel();
         coachName = new JLabel();
         coachMsg = new JTextPane();
         coachDetailButton = new JButton();
+        joinButton3 = new JButton();
+        joinButton4 = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -99,39 +96,22 @@ public class LessonDetailCustomer extends JFrame {
             body.add(lessionMsg);
             lessionMsg.setBounds(350, 215, 398, 138);
 
-            //---- joinButton ----
-            joinButton.setText("JOIN NOW");
-            joinButton.setBackground(SystemColor.menu);
-            joinButton.setBorder(null);
-            joinButton.addActionListener(e -> joinButtonActionPerformed(e));
-            body.add(joinButton);
-            joinButton.setBounds(350, 365, 100, 50);
-
-            //---- bookButton ----
-            bookButton.setText("BOOK(vip)");
-            bookButton.setBackground(new Color(217, 0, 27));
-            bookButton.setBorder(null);
-            bookButton.setForeground(Color.white);
-            bookButton.addActionListener(e -> bookButtonActionPerformed(e));
-            body.add(bookButton);
-            bookButton.setBounds(450, 365, 100, 50);
-
             //---- coachAvatar ----
             coachAvatar.setText("Coach");
             coachAvatar.setBorder(LineBorder.createBlackLineBorder());
             coachAvatar.setHorizontalAlignment(SwingConstants.CENTER);
             body.add(coachAvatar);
-            coachAvatar.setBounds(30, 485, 75, 75);
+            coachAvatar.setBounds(30, 440, 75, 75);
 
             //---- coachName ----
             coachName.setText("Coach Name");
             coachName.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 24));
             coachName.setBackground(Color.white);
             body.add(coachName);
-            coachName.setBounds(115, 485, 190, 42);
+            coachName.setBounds(115, 440, 190, 42);
 
             //---- coachMsg ----
-            coachMsg.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.");
+            coachMsg.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo.");
             coachMsg.setBackground(Color.white);
             coachMsg.setBorder(null);
             coachMsg.setCaretColor(Color.white);
@@ -139,7 +119,7 @@ public class LessonDetailCustomer extends JFrame {
             coachMsg.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
             coachMsg.setEditable(false);
             body.add(coachMsg);
-            coachMsg.setBounds(115, 520, 530, 45);
+            coachMsg.setBounds(115, 475, 525, 45);
 
             //---- coachDetailButton ----
             coachDetailButton.setText("DETAIL");
@@ -147,7 +127,23 @@ public class LessonDetailCustomer extends JFrame {
             coachDetailButton.setBorder(null);
             coachDetailButton.addActionListener(e -> coachDetailButtonActionPerformed(e));
             body.add(coachDetailButton);
-            coachDetailButton.setBounds(650, 505, 100, 50);
+            coachDetailButton.setBounds(660, 460, 100, 50);
+
+            //---- joinButton3 ----
+            joinButton3.setText("EDITOR");
+            joinButton3.setBackground(SystemColor.menu);
+            joinButton3.setBorder(null);
+            joinButton3.addActionListener(e -> joinButton3ActionPerformed(e));
+            body.add(joinButton3);
+            joinButton3.setBounds(30, 570, 100, 50);
+
+            //---- joinButton4 ----
+            joinButton4.setText("DELETE");
+            joinButton4.setBackground(new Color(217, 0, 27));
+            joinButton4.setBorder(null);
+            joinButton4.setForeground(Color.white);
+            body.add(joinButton4);
+            joinButton4.setBounds(130, 570, 100, 50);
 
             {
                 // compute preferred size
@@ -193,22 +189,22 @@ public class LessonDetailCustomer extends JFrame {
     private JLabel lessonPicture;
     private JLabel lessonName;
     private JTextPane lessionMsg;
-    private JButton joinButton;
-    private JButton bookButton;
     private JLabel coachAvatar;
     private JLabel coachName;
     private JTextPane coachMsg;
     private JButton coachDetailButton;
+    private JButton joinButton3;
+    private JButton joinButton4;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
-        LessonDetailCustomer.run();
+        LessonDetailAdmin.run();
     }
 
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    LessonDetailCustomer frame = new LessonDetailCustomer();
+                    LessonDetailAdmin frame = new LessonDetailAdmin();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setVisible(true);

@@ -1,44 +1,34 @@
-package UI;
+package UI.Member;
+
+import UI.Coach.CoachSearch;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 /*
- * Created by JFormDesigner on Fri Apr 09 11:03:20 CST 2021
+ * Created by JFormDesigner on Fri Apr 09 10:53:28 CST 2021
  */
 
 
 /**
  * @author Anna
  */
-public class MyLessonCoach extends JFrame {
-    public MyLessonCoach() {
+public class LessonHomeMember extends JFrame {
+    public LessonHomeMember() {
         initComponents();
     }
 
-    private void nextPageButton2ActionPerformed(ActionEvent e) {
+    private void coachSearchButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         this.dispose();
-        UploadModify.run();
+        CoachSearch.run();
     }
 
     private void moreButton1ActionPerformed(ActionEvent e) {
         // TODO add your code here
         this.dispose();
-        LessonDetailCoach.run();
-    }
-
-    private void homeButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
-        this.dispose();
-        MyLessonCoach.run();
-    }
-
-    private void nextPageButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
-        this.dispose();
-        MyLessonCoach.run();
+        LessonDetailCustomer.run();
     }
 
     private void initComponents() {
@@ -82,9 +72,10 @@ public class MyLessonCoach extends JFrame {
         lessonLevel6 = new JLabel();
         coachName6 = new JLabel();
         moreButton6 = new JButton();
+        search = new JTextField();
+        searchButton = new JButton();
         nextPageButton = new JButton();
-        Upload = new JButton();
-        homeButton = new JButton();
+        coachSearchButton = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -104,7 +95,7 @@ public class MyLessonCoach extends JFrame {
             decorationLine.setBounds(35, 115, 730, decorationLine.getPreferredSize().height);
 
             //---- title ----
-            title.setText("My Lesson ");
+            title.setText("Lesson ");
             title.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 32));
             title.setBackground(Color.white);
             body.add(title);
@@ -573,32 +564,35 @@ public class MyLessonCoach extends JFrame {
             body.add(lesson6);
             lesson6.setBounds(25, 385, 240, 250);
 
+            //---- search ----
+            search.setBackground(SystemColor.menu);
+            search.setBorder(null);
+            search.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+            body.add(search);
+            search.setBounds(300, 45, 300, 40);
+
+            //---- searchButton ----
+            searchButton.setBorderPainted(false);
+            searchButton.setBackground(SystemColor.textHighlight);
+            body.add(searchButton);
+            searchButton.setBounds(600, 45, 40, 40);
+
             //---- nextPageButton ----
             nextPageButton.setBorderPainted(false);
-            nextPageButton.setBackground(SystemColor.textHighlight);
+            nextPageButton.setBackground(new Color(217, 0, 27));
             nextPageButton.setText("NEXT PAGE");
             nextPageButton.setForeground(Color.white);
-            nextPageButton.addActionListener(e -> nextPageButtonActionPerformed(e));
             body.add(nextPageButton);
-            nextPageButton.setBounds(660, 45, 120, 40);
+            nextPageButton.setBounds(655, 45, 120, 40);
 
-            //---- Upload ----
-            Upload.setBorderPainted(false);
-            Upload.setBackground(new Color(217, 0, 27));
-            Upload.setText("UPLOAD");
-            Upload.setForeground(Color.white);
-            Upload.addActionListener(e -> nextPageButton2ActionPerformed(e));
-            body.add(Upload);
-            Upload.setBounds(490, 45, 120, 40);
-
-            //---- homeButton ----
-            homeButton.setBorderPainted(false);
-            homeButton.setBackground(SystemColor.textHighlight);
-            homeButton.setText("NEXT PAGE");
-            homeButton.setForeground(Color.white);
-            homeButton.addActionListener(e -> homeButtonActionPerformed(e));
-            body.add(homeButton);
-            homeButton.setBounds(615, 45, 40, 40);
+            //---- coachSearchButton ----
+            coachSearchButton.setBorderPainted(false);
+            coachSearchButton.setBackground(SystemColor.textHighlight);
+            coachSearchButton.setText("COACH");
+            coachSearchButton.setForeground(Color.white);
+            coachSearchButton.addActionListener(e -> coachSearchButtonActionPerformed(e));
+            body.add(coachSearchButton);
+            coachSearchButton.setBounds(200, 45, 85, 40);
 
             {
                 // compute preferred size
@@ -677,19 +671,20 @@ public class MyLessonCoach extends JFrame {
     private JLabel lessonLevel6;
     private JLabel coachName6;
     private JButton moreButton6;
+    private JTextField search;
+    private JButton searchButton;
     private JButton nextPageButton;
-    private JButton Upload;
-    private JButton homeButton;
+    private JButton coachSearchButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
-        MyLessonCoach.run();
+        LessonHomeMember.run();
     }
 
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    MyLessonCoach frame = new MyLessonCoach();
+                    LessonHomeMember frame = new LessonHomeMember();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setVisible(true);

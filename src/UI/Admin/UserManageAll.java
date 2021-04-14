@@ -1,4 +1,6 @@
-package UI;
+package UI.Admin;
+
+import UI.Coach.ProfileCoach;
 
 import java.awt.*;
 import java.awt.event.*;

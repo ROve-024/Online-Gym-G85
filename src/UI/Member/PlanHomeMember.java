@@ -1,4 +1,4 @@
-package UI;
+package UI.Member;
 
 import java.awt.*;
 import javax.swing.*;

@@ -1,26 +1,28 @@
-package UI;
+package UI.Member;
+
+import UI.Coach.MyLessonCoach;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 /*
- * Created by JFormDesigner on Thu Apr 08 20:16:38 CST 2021
+ * Created by JFormDesigner on Fri Apr 09 12:10:09 CST 2021
  */
 
 
 /**
  * @author Anna
  */
-public class ALLLesson extends JFrame {
-    public ALLLesson() {
+public class MyLessonMember extends JFrame {
+    public MyLessonMember() {
         initComponents();
     }
 
     private void moreButton1ActionPerformed(ActionEvent e) {
         // TODO add your code here
         this.dispose();
-        LessonDetailAdmin.run();
+        LessonDetailCustomer.run();
     }
 
     private void initComponents() {
@@ -86,7 +88,7 @@ public class ALLLesson extends JFrame {
             decorationLine.setBounds(35, 115, 730, decorationLine.getPreferredSize().height);
 
             //---- title ----
-            title.setText("ALL Lesson ");
+            title.setText("My Lesson ");
             title.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 32));
             title.setBackground(Color.white);
             body.add(title);
@@ -658,16 +660,16 @@ public class ALLLesson extends JFrame {
     private JButton nextPageButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
-        ALLLesson.run();
+        MyLessonCoach.run();
     }
 
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    ALLLesson frame = new ALLLesson();
+                    MyLessonCoach frame = new MyLessonCoach();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
-                    frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
+                    frame.setLocation(screenSize.width/2-1100/2,screenSize.height/2-700/2);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

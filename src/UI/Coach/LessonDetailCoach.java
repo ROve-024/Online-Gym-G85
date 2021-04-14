@@ -1,32 +1,26 @@
-package UI;
+package UI.Coach;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 /*
- * Created by JFormDesigner on Thu Apr 08 19:38:51 CST 2021
+ * Created by JFormDesigner on Thu Apr 08 16:56:55 CST 2021
  */
 
 
 /**
  * @author Anna
  */
-public class LessonDetailAdmin extends JFrame {
-    public LessonDetailAdmin() {
+public class LessonDetailCoach extends JFrame {
+    public LessonDetailCoach() {
         initComponents();
     }
 
-    private void joinButton3ActionPerformed(ActionEvent e) {
+    private void editButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         this.dispose();
         UploadModify.run();
-    }
-
-    private void coachDetailButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
-        this.dispose();
-        ProfileCoach.run();
     }
 
     private void initComponents() {
@@ -40,9 +34,7 @@ public class LessonDetailAdmin extends JFrame {
         coachAvatar = new JLabel();
         coachName = new JLabel();
         coachMsg = new JTextPane();
-        coachDetailButton = new JButton();
-        joinButton3 = new JButton();
-        joinButton4 = new JButton();
+        editButton = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -118,29 +110,14 @@ public class LessonDetailAdmin extends JFrame {
             body.add(coachMsg);
             coachMsg.setBounds(115, 475, 525, 45);
 
-            //---- coachDetailButton ----
-            coachDetailButton.setText("DETAIL");
-            coachDetailButton.setBackground(SystemColor.menu);
-            coachDetailButton.setBorder(null);
-            coachDetailButton.addActionListener(e -> coachDetailButtonActionPerformed(e));
-            body.add(coachDetailButton);
-            coachDetailButton.setBounds(660, 460, 100, 50);
-
-            //---- joinButton3 ----
-            joinButton3.setText("EDITOR");
-            joinButton3.setBackground(SystemColor.menu);
-            joinButton3.setBorder(null);
-            joinButton3.addActionListener(e -> joinButton3ActionPerformed(e));
-            body.add(joinButton3);
-            joinButton3.setBounds(30, 570, 100, 50);
-
-            //---- joinButton4 ----
-            joinButton4.setText("DELETE");
-            joinButton4.setBackground(new Color(217, 0, 27));
-            joinButton4.setBorder(null);
-            joinButton4.setForeground(Color.white);
-            body.add(joinButton4);
-            joinButton4.setBounds(130, 570, 100, 50);
+            //---- editButton ----
+            editButton.setText("EDIT");
+            editButton.setBackground(new Color(217, 0, 27));
+            editButton.setBorder(null);
+            editButton.setForeground(Color.white);
+            editButton.addActionListener(e -> editButtonActionPerformed(e));
+            body.add(editButton);
+            editButton.setBounds(30, 570, 100, 50);
 
             {
                 // compute preferred size
@@ -189,19 +166,17 @@ public class LessonDetailAdmin extends JFrame {
     private JLabel coachAvatar;
     private JLabel coachName;
     private JTextPane coachMsg;
-    private JButton coachDetailButton;
-    private JButton joinButton3;
-    private JButton joinButton4;
+    private JButton editButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
-        LessonDetailAdmin.run();
+        LessonDetailCoach.run();
     }
 
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    LessonDetailAdmin frame = new LessonDetailAdmin();
+                    LessonDetailCoach frame = new LessonDetailCoach();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setVisible(true);

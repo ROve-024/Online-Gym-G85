@@ -1,4 +1,4 @@
-package UI;
+package UI.Other;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -70,7 +70,7 @@ public class SignUp extends JFrame {
             userButton.setBounds(new Rectangle(new Point(55, 95), userButton.getPreferredSize()));
 
             //---- adminButton ----
-            adminButton.setText("Admin");
+            adminButton.setText("UI/Admin");
             adminButton.setBackground(UIManager.getColor("Button.darcula.disabledText.shadow"));
             body.add(adminButton);
             adminButton.setBounds(280, 95, 70, 21);
