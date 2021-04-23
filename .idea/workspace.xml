@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="Add test file, modify class name">
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Member/LessonDetailMember.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\Program Files\Environment\apache-maven-3.6.3\maven-repo" />
+        <option name="userSettingsFile" value="C:\Program Files\Environment\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1qv23TcfMwYo1P5Fsl90CSm2Wfv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="directory" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\main\resources\icons" />
+      <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\UI" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src" />
+      <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\main\resources" />
+      <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\main" />
+      <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\UI\Other" />
+      <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\UI\Admin" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ALLLessonAdmin">
+    <configuration name="ALLLessonAdmin" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.Admin.ALLLessonAdmin" />
+      <module name="Group85" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GUI.Admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LessonDetailAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.Admin.LessonDetailAdmin" />
+      <module name="Group85" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GUI.Admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LessonDetailMember" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.Member.LessonDetailMember" />
+      <module name="Group85" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GUI.Member.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NavigatorCoach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UI.NavigatorCoach" />
+      <module name="Group85" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.Run" />
+      <module name="Group85" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminGuiTest.testAllLessonAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Group85" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.qmbupt.grp85.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.qmbupt.grp85.gui" />
+      <option name="MAIN_CLASS_NAME" value="org.qmbupt.grp85.gui.AdminGuiTest" />
+      <option name="METHOD_NAME" value="testAllLessonAdmin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.ALLLessonAdmin" />
+      <item itemvalue="Application.LessonDetailMember" />
+      <item itemvalue="Application.NavigatorCoach" />
+      <item itemvalue="Application.Run" />
+      <item itemvalue="Application.LessonDetailAdmin" />
+      <item itemvalue="JUnit.AdminGuiTest.testAllLessonAdmin" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LessonDetailAdmin" />
+        <item itemvalue="Application.LessonDetailMember" />
+        <item itemvalue="JUnit.AdminGuiTest.testAllLessonAdmin" />
+        <item itemvalue="Application.Run" />
+        <item itemvalue="Application.NavigatorCoach" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="" />
+      <created>1617945547762</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617945547762</updated>
+      <workItem from="1617945549584" duration="6568000" />
+      <workItem from="1617952471619" duration="216000" />
+      <workItem from="1617952883291" duration="254000" />
+      <workItem from="1617953636237" duration="71000" />
+      <workItem from="1617953761282" duration="405000" />
+      <workItem from="1618215169932" duration="1198000" />
+      <workItem from="1618365520221" duration="2533000" />
+      <workItem from="1618368480259" duration="666000" />
+      <workItem from="1618414260534" duration="613000" />
+      <workItem from="1618491867695" duration="54000" />
+      <workItem from="1618492159998" duration="611000" />
+      <workItem from="1618583293740" duration="34000" />
+      <workItem from="1618916373499" duration="1960000" />
+      <workItem from="1619068690100" duration="23000" />
+      <workItem from="1619143562857" duration="6907000" />
+      <workItem from="1619153117852" duration="1275000" />
+      <workItem from="1619154440230" duration="139000" />
+      <workItem from="1619154925556" duration="278000" />
+    </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1617952547719</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617952547719</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update">
+      <created>1617952654252</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617952654252</updated>
+    </task>
+    <task id="LOCAL-00003" summary="README">
+      <created>1617953698782</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617953698782</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Improve user experience">
+      <created>1618366371643</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1618366371643</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Improve user experience">
+      <created>1618368149125</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1618368149125</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adjust file structure">
+      <created>1618368891534</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1618368891534</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Adjust file structure">
+      <created>1618369164644</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1618369164644</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add test file, modify class name">
+      <created>1619145948123</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1619145948123</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add test file, modify class name">
+      <created>1619145988676</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1619145988676</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <MESSAGE value="README" />
+    <MESSAGE value="Improve user experience" />
+    <MESSAGE value="Adjust file structure" />
+    <MESSAGE value="Add test file, modify class name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add test file, modify class name" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
