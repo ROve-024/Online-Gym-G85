@@ -19,26 +19,26 @@ public class MyLessonCoach extends JFrame {
 
     private void nextPageButton2ActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         UploadModify.run();
+        this.dispose();
     }
 
     private void moreButton1ActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         LessonDetailCoach.run();
+        this.dispose();
     }
 
     private void homeButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         MyLessonCoach.run();
+        this.dispose();
     }
 
     private void nextPageButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         MyLessonCoach.run();
+        this.dispose();
     }
 
     private void initComponents() {

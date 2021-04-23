@@ -19,8 +19,8 @@ public class ProfileCoach extends JFrame {
 
     private void editButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         EditProfileCoach.run();
+        this.dispose();
     }
 
     private void initComponents() {

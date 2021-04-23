@@ -19,8 +19,8 @@ public class LessonVideo extends JFrame {
 
     private void lessonHomeButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         LessonHomeMember.run();
+        this.dispose();
     }
 
     private void initComponents() {

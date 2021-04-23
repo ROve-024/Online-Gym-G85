@@ -19,8 +19,8 @@ public class UploadModify extends JFrame {
 
     private void finishButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         LessonDetailCoach.run();
+        this.dispose();
     }
 
     private void initComponents() {

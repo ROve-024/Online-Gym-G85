@@ -21,26 +21,26 @@ public class LessonDetailMember extends JFrame {
 
     private void joinButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         LessonVideo.run();
+        this.dispose();
     }
 
     private void bookButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         Book.run();
+        this.dispose();
     }
 
     private void coachDetailButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         ViewCoachProfile.run();
+        this.dispose();
     }
 
     private void homeButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         LessonHomeMember.run();
+        this.dispose();
     }
 
     private void initComponents() {

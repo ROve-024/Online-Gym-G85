@@ -19,8 +19,8 @@ public class LessonDetailCoach extends JFrame {
 
     private void editButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         UploadModify.run();
+        this.dispose();
     }
 
     private void initComponents() {

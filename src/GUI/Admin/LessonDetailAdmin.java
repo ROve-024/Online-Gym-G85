@@ -22,14 +22,14 @@ public class LessonDetailAdmin extends JFrame {
 
     private void joinButton3ActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         UploadModify.run();
+        this.dispose();
     }
 
     private void coachDetailButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         ProfileCoach.run();
+        this.dispose();
     }
 
     private void initComponents() {

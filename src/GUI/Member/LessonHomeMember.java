@@ -19,8 +19,8 @@ public class LessonHomeMember extends JFrame {
 
     private void moreButton1ActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         LessonDetailMember.run();
+        this.dispose();
     }
 
     private void initComponents() {

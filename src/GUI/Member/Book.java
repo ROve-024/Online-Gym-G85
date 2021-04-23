@@ -18,8 +18,8 @@ public class Book extends JFrame {
 
     private void finishButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         PlanHomeMember.run();
+        this.dispose();
     }
 
     private void initComponents() {

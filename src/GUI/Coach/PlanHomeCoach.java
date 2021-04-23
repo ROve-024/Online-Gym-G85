@@ -21,8 +21,8 @@ public class PlanHomeCoach extends JFrame {
 
     private void profileButton1ActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         ViewMemberProfile.run();
+        this.dispose();
     }
 
     private void initComponents() {

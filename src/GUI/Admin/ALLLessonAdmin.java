@@ -19,8 +19,8 @@ public class ALLLessonAdmin extends JFrame {
 
     private void moreButton1ActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         LessonDetailAdmin.run();
+        this.dispose();
     }
 
     private void initComponents() {

@@ -19,8 +19,8 @@ public class ProfileMember extends JFrame {
 
     private void editButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
         EditProfileMember.run();
+        this.dispose();
     }
 
     private void initComponents() {
