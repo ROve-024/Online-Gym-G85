@@ -1,3 +1,3 @@
 # GUI DEMO
 
-![](README.assets/demo 0_2.gif)
+![](README.assets/demo0_2.gif)
