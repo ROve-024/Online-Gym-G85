@@ -89,6 +89,8 @@ public class NavigatorCoach extends JFrame {
 
         //======== this ========
         setBackground(Color.white);
+        setIconImage(new ImageIcon(getClass().getResource("/resources/icons/gym.png")).getImage());
+        setTitle("Gym Group85 v0.2");
         var contentPane = getContentPane();
         contentPane.setLayout(null);
 

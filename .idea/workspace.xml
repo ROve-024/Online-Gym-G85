@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="Added images and icons" />
+    <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="Added images and icons">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Admin/ALLLessonAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Admin/ALLLessonAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Admin/LessonDetailAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Admin/LessonDetailAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Admin/NavigatorAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Admin/NavigatorAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Admin/UserManageAllAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Admin/UserManageAllAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/EditProfileCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/EditProfileCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/LessonDetailCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/LessonDetailCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/MyLessonCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/MyLessonCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/NavigatorCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/NavigatorCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/PlanHomeCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/PlanHomeCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/ProfileCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/ProfileCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/UploadModify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/UploadModify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/ViewCoachProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/ViewCoachProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/EditProfileMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/EditProfileMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/LessonDetailMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/LessonDetailMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/LessonHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/LessonHomeMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/LessonVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/LessonVideo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/MyLessonMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/MyLessonMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/PlanHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/PlanHomeMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/ProfileMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/ProfileMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/ViewMemberProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/ViewMemberProfile.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +67,7 @@
     <property name="add_unversioned_files" value="$PROJECT_DIR$/src/GUI/Admin/ALLLessonAdmin.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Admin/UserManageAllAdmin.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/LessonVideo.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/LessonHomeMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/EditProfileMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Admin/NavigatorAdmin.jfd" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/icons" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -53,6 +76,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\resources\icons" />
       <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\main\resources\icons" />
       <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\UI" />
     </key>
@@ -193,6 +217,8 @@
       <workItem from="1619166213839" duration="9924000" />
       <workItem from="1619178538916" duration="207000" />
       <workItem from="1619180003922" duration="77000" />
+      <workItem from="1619180295339" duration="137000" />
+      <workItem from="1619220211542" duration="678000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1617952547719</created>
@@ -299,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619180050044</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added images and icons">
+      <created>1619180394996</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1619180394996</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

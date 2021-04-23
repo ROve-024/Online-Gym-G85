@@ -39,6 +39,7 @@ public class LessonVideo extends JFrame {
 
         //======== this ========
         setBackground(Color.white);
+        setIconImage(new ImageIcon(getClass().getResource("/resources/icons/gym.png")).getImage());
         var contentPane = getContentPane();
         contentPane.setLayout(null);
 

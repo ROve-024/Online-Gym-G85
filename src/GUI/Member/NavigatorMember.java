@@ -88,6 +88,8 @@ public class NavigatorMember extends JFrame {
 
         //======== this ========
         setBackground(Color.white);
+        setTitle("Gym Group85 v0.2");
+        setIconImage(new ImageIcon(getClass().getResource("/resources/icons/gym.png")).getImage());
         var contentPane = getContentPane();
         contentPane.setLayout(null);
 

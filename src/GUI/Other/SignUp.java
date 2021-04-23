@@ -37,6 +37,7 @@ public class SignUp extends JFrame {
         agree = new JCheckBox();
 
         //======== this ========
+        setIconImage(new ImageIcon(getClass().getResource("/resources/icons/gym.png")).getImage());
         var contentPane = getContentPane();
         contentPane.setLayout(null);
 
@@ -70,7 +71,7 @@ public class SignUp extends JFrame {
             userButton.setBounds(new Rectangle(new Point(55, 95), userButton.getPreferredSize()));
 
             //---- adminButton ----
-            adminButton.setText("GUI/Admin");
+            adminButton.setText("Admin");
             adminButton.setBackground(UIManager.getColor("Button.darcula.disabledText.shadow"));
             body.add(adminButton);
             adminButton.setBounds(280, 95, 70, 21);
