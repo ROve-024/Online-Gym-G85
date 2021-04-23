@@ -75,7 +75,7 @@ public class EditProfileCoach extends JFrame {
 
             //---- finishButton ----
             finishButton.setBorderPainted(false);
-            finishButton.setBackground(SystemColor.textHighlight);
+            finishButton.setBackground(new Color(240, 240, 240));
             finishButton.setText("FINISH");
             finishButton.setForeground(Color.white);
             finishButton.addActionListener(e -> finishButtonActionPerformed(e));
@@ -396,6 +396,7 @@ public class EditProfileCoach extends JFrame {
                     EditProfileCoach frame = new EditProfileCoach();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
+                    frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

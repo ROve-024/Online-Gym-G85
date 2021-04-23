@@ -404,7 +404,7 @@ public class PlanHomeMember extends JFrame {
 
             //---- nextPageButton ----
             nextPageButton.setBorderPainted(false);
-            nextPageButton.setBackground(SystemColor.textHighlight);
+            nextPageButton.setBackground(SystemColor.control);
             nextPageButton.setText("NEXT");
             nextPageButton.setForeground(Color.white);
             body.add(nextPageButton);
@@ -495,6 +495,7 @@ public class PlanHomeMember extends JFrame {
                     PlanHomeMember frame = new PlanHomeMember();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
+                    frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

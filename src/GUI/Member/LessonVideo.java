@@ -23,6 +23,10 @@ public class LessonVideo extends JFrame {
         this.dispose();
     }
 
+    private void homeButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -31,7 +35,7 @@ public class LessonVideo extends JFrame {
         panel1 = new JPanel();
         lessonName = new JLabel();
         lessionMsg = new JTextPane();
-        lessonHomeButton = new JButton();
+        homeButton2 = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -98,14 +102,13 @@ public class LessonVideo extends JFrame {
             body.add(lessionMsg);
             lessionMsg.setBounds(30, 535, 750, 138);
 
-            //---- lessonHomeButton ----
-            lessonHomeButton.setBorderPainted(false);
-            lessonHomeButton.setBackground(SystemColor.textHighlight);
-            lessonHomeButton.setText("LESSON HOME");
-            lessonHomeButton.setForeground(Color.white);
-            lessonHomeButton.addActionListener(e -> lessonHomeButtonActionPerformed(e));
-            body.add(lessonHomeButton);
-            lessonHomeButton.setBounds(640, 45, 140, 40);
+            //---- homeButton2 ----
+            homeButton2.setBorderPainted(false);
+            homeButton2.setBackground(SystemColor.menu);
+            homeButton2.setIcon(new ImageIcon(getClass().getResource("/resources/icons/home.png")));
+            homeButton2.addActionListener(e -> homeButtonActionPerformed(e));
+            body.add(homeButton2);
+            homeButton2.setBounds(675, 45, 100, 40);
 
             {
                 // compute preferred size
@@ -151,7 +154,7 @@ public class LessonVideo extends JFrame {
     private JPanel panel1;
     private JLabel lessonName;
     private JTextPane lessionMsg;
-    private JButton lessonHomeButton;
+    private JButton homeButton2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         LessonVideo.run();
@@ -164,6 +167,7 @@ public class LessonVideo extends JFrame {
                     LessonVideo frame = new LessonVideo();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
+                    frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

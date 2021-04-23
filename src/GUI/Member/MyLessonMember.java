@@ -25,13 +25,45 @@ public class MyLessonMember extends JFrame {
         this.dispose();
     }
 
+    private void homeButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void previousButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void nextButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void moreButton2ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void moreButton3ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void moreButton6ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void moreButton5ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void moreButton4ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
         decorationLine = new JLabel();
         title = new JLabel();
         lesson1 = new JPanel();
-        lessonPicture1 = new JPanel();
+        lessonPicture1 = new JLabel();
         lessonName = new JLabel();
         lessonLevel1 = new JLabel();
         coachName1 = new JLabel();
@@ -40,35 +72,37 @@ public class MyLessonMember extends JFrame {
         lessonName2 = new JLabel();
         lessonLevel2 = new JLabel();
         coachName2 = new JLabel();
-        lessonPicture2 = new JPanel();
+        lessonPicture2 = new JLabel();
         moreButton2 = new JButton();
         lesson3 = new JPanel();
         lessonName3 = new JLabel();
         lessonLevel3 = new JLabel();
         moreButton3 = new JButton();
         coachName3 = new JLabel();
-        lessonPicture3 = new JPanel();
+        lessonPicture3 = new JLabel();
         lesson4 = new JPanel();
         lessonName4 = new JLabel();
         lessonLevel4 = new JLabel();
         moreButton4 = new JButton();
         coachName4 = new JLabel();
-        lessonPicture4 = new JPanel();
+        lessonPicture4 = new JLabel();
         lesson5 = new JPanel();
         lessonName5 = new JLabel();
         lessonLevel5 = new JLabel();
         coachName5 = new JLabel();
-        lessonPicture5 = new JPanel();
+        lessonPicture5 = new JLabel();
         moreButton5 = new JButton();
         lesson6 = new JPanel();
-        lessonPicture6 = new JPanel();
+        lessonPicture6 = new JLabel();
         lessonName6 = new JLabel();
         lessonLevel6 = new JLabel();
         coachName6 = new JLabel();
         moreButton6 = new JButton();
         search = new JTextField();
         searchButton = new JButton();
-        nextPageButton = new JButton();
+        homeButton = new JButton();
+        previousButton = new JButton();
+        nextButton = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -99,28 +133,11 @@ public class MyLessonMember extends JFrame {
                 lesson1.setBackground(SystemColor.menu);
                 lesson1.setLayout(null);
 
-                //======== lessonPicture1 ========
-                {
-                    lessonPicture1.setBackground(SystemColor.activeCaption);
-                    lessonPicture1.setLayout(null);
-
-                    {
-                        // compute preferred size
-                        Dimension preferredSize = new Dimension();
-                        for(int i = 0; i < lessonPicture1.getComponentCount(); i++) {
-                            Rectangle bounds = lessonPicture1.getComponent(i).getBounds();
-                            preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                            preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                        }
-                        Insets insets = lessonPicture1.getInsets();
-                        preferredSize.width += insets.right;
-                        preferredSize.height += insets.bottom;
-                        lessonPicture1.setMinimumSize(preferredSize);
-                        lessonPicture1.setPreferredSize(preferredSize);
-                    }
-                }
+                //---- lessonPicture1 ----
+                lessonPicture1.setBackground(SystemColor.activeCaption);
+                lessonPicture1.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/synthesize.png")));
                 lesson1.add(lessonPicture1);
-                lessonPicture1.setBounds(0, 0, 250, 160);
+                lessonPicture1.setBounds(2, 1, 236, 160);
 
                 //---- lessonName ----
                 lessonName.setText("Lesson Name");
@@ -200,34 +217,18 @@ public class MyLessonMember extends JFrame {
                 lesson2.add(coachName2);
                 coachName2.setBounds(5, 225, 85, 17);
 
-                //======== lessonPicture2 ========
-                {
-                    lessonPicture2.setBackground(SystemColor.activeCaption);
-                    lessonPicture2.setLayout(null);
-
-                    {
-                        // compute preferred size
-                        Dimension preferredSize = new Dimension();
-                        for(int i = 0; i < lessonPicture2.getComponentCount(); i++) {
-                            Rectangle bounds = lessonPicture2.getComponent(i).getBounds();
-                            preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                            preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                        }
-                        Insets insets = lessonPicture2.getInsets();
-                        preferredSize.width += insets.right;
-                        preferredSize.height += insets.bottom;
-                        lessonPicture2.setMinimumSize(preferredSize);
-                        lessonPicture2.setPreferredSize(preferredSize);
-                    }
-                }
+                //---- lessonPicture2 ----
+                lessonPicture2.setBackground(SystemColor.activeCaption);
+                lessonPicture2.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/synthesize.png")));
                 lesson2.add(lessonPicture2);
-                lessonPicture2.setBounds(0, 0, 250, 160);
+                lessonPicture2.setBounds(2, 1, 236, 160);
 
                 //---- moreButton2 ----
                 moreButton2.setText("MORE");
                 moreButton2.setBackground(Color.white);
                 moreButton2.setBorderPainted(false);
                 moreButton2.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                moreButton2.addActionListener(e -> moreButton2ActionPerformed(e));
                 lesson2.add(moreButton2);
                 moreButton2.setBounds(170, 220, 65, 25);
 
@@ -274,6 +275,7 @@ public class MyLessonMember extends JFrame {
                 moreButton3.setBackground(Color.white);
                 moreButton3.setBorderPainted(false);
                 moreButton3.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                moreButton3.addActionListener(e -> moreButton3ActionPerformed(e));
                 lesson3.add(moreButton3);
                 moreButton3.setBounds(170, 220, 65, 25);
 
@@ -285,28 +287,11 @@ public class MyLessonMember extends JFrame {
                 lesson3.add(coachName3);
                 coachName3.setBounds(5, 225, 85, 17);
 
-                //======== lessonPicture3 ========
-                {
-                    lessonPicture3.setBackground(SystemColor.activeCaption);
-                    lessonPicture3.setLayout(null);
-
-                    {
-                        // compute preferred size
-                        Dimension preferredSize = new Dimension();
-                        for(int i = 0; i < lessonPicture3.getComponentCount(); i++) {
-                            Rectangle bounds = lessonPicture3.getComponent(i).getBounds();
-                            preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                            preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                        }
-                        Insets insets = lessonPicture3.getInsets();
-                        preferredSize.width += insets.right;
-                        preferredSize.height += insets.bottom;
-                        lessonPicture3.setMinimumSize(preferredSize);
-                        lessonPicture3.setPreferredSize(preferredSize);
-                    }
-                }
+                //---- lessonPicture3 ----
+                lessonPicture3.setBackground(SystemColor.activeCaption);
+                lessonPicture3.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/synthesize.png")));
                 lesson3.add(lessonPicture3);
-                lessonPicture3.setBounds(0, 0, 250, 160);
+                lessonPicture3.setBounds(2, 1, 236, 160);
 
                 {
                     // compute preferred size
@@ -351,6 +336,7 @@ public class MyLessonMember extends JFrame {
                 moreButton4.setBackground(Color.white);
                 moreButton4.setBorderPainted(false);
                 moreButton4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                moreButton4.addActionListener(e -> moreButton4ActionPerformed(e));
                 lesson4.add(moreButton4);
                 moreButton4.setBounds(170, 220, 65, 25);
 
@@ -362,28 +348,11 @@ public class MyLessonMember extends JFrame {
                 lesson4.add(coachName4);
                 coachName4.setBounds(5, 225, 85, 17);
 
-                //======== lessonPicture4 ========
-                {
-                    lessonPicture4.setBackground(SystemColor.activeCaption);
-                    lessonPicture4.setLayout(null);
-
-                    {
-                        // compute preferred size
-                        Dimension preferredSize = new Dimension();
-                        for(int i = 0; i < lessonPicture4.getComponentCount(); i++) {
-                            Rectangle bounds = lessonPicture4.getComponent(i).getBounds();
-                            preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                            preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                        }
-                        Insets insets = lessonPicture4.getInsets();
-                        preferredSize.width += insets.right;
-                        preferredSize.height += insets.bottom;
-                        lessonPicture4.setMinimumSize(preferredSize);
-                        lessonPicture4.setPreferredSize(preferredSize);
-                    }
-                }
+                //---- lessonPicture4 ----
+                lessonPicture4.setBackground(SystemColor.activeCaption);
+                lessonPicture4.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/synthesize.png")));
                 lesson4.add(lessonPicture4);
-                lessonPicture4.setBounds(0, 0, 250, 160);
+                lessonPicture4.setBounds(2, 1, 236, 160);
 
                 {
                     // compute preferred size
@@ -431,34 +400,18 @@ public class MyLessonMember extends JFrame {
                 lesson5.add(coachName5);
                 coachName5.setBounds(5, 225, 85, 17);
 
-                //======== lessonPicture5 ========
-                {
-                    lessonPicture5.setBackground(SystemColor.activeCaption);
-                    lessonPicture5.setLayout(null);
-
-                    {
-                        // compute preferred size
-                        Dimension preferredSize = new Dimension();
-                        for(int i = 0; i < lessonPicture5.getComponentCount(); i++) {
-                            Rectangle bounds = lessonPicture5.getComponent(i).getBounds();
-                            preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                            preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                        }
-                        Insets insets = lessonPicture5.getInsets();
-                        preferredSize.width += insets.right;
-                        preferredSize.height += insets.bottom;
-                        lessonPicture5.setMinimumSize(preferredSize);
-                        lessonPicture5.setPreferredSize(preferredSize);
-                    }
-                }
+                //---- lessonPicture5 ----
+                lessonPicture5.setBackground(SystemColor.activeCaption);
+                lessonPicture5.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/synthesize.png")));
                 lesson5.add(lessonPicture5);
-                lessonPicture5.setBounds(0, 0, 250, 160);
+                lessonPicture5.setBounds(2, 1, 236, 160);
 
                 //---- moreButton5 ----
                 moreButton5.setText("MORE");
                 moreButton5.setBackground(Color.white);
                 moreButton5.setBorderPainted(false);
                 moreButton5.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                moreButton5.addActionListener(e -> moreButton5ActionPerformed(e));
                 lesson5.add(moreButton5);
                 moreButton5.setBounds(170, 220, 65, 25);
 
@@ -485,28 +438,11 @@ public class MyLessonMember extends JFrame {
                 lesson6.setBackground(SystemColor.menu);
                 lesson6.setLayout(null);
 
-                //======== lessonPicture6 ========
-                {
-                    lessonPicture6.setBackground(SystemColor.activeCaption);
-                    lessonPicture6.setLayout(null);
-
-                    {
-                        // compute preferred size
-                        Dimension preferredSize = new Dimension();
-                        for(int i = 0; i < lessonPicture6.getComponentCount(); i++) {
-                            Rectangle bounds = lessonPicture6.getComponent(i).getBounds();
-                            preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                            preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                        }
-                        Insets insets = lessonPicture6.getInsets();
-                        preferredSize.width += insets.right;
-                        preferredSize.height += insets.bottom;
-                        lessonPicture6.setMinimumSize(preferredSize);
-                        lessonPicture6.setPreferredSize(preferredSize);
-                    }
-                }
+                //---- lessonPicture6 ----
+                lessonPicture6.setBackground(SystemColor.activeCaption);
+                lessonPicture6.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/synthesize.png")));
                 lesson6.add(lessonPicture6);
-                lessonPicture6.setBounds(0, 0, 250, 160);
+                lessonPicture6.setBounds(2, 1, 236, 160);
 
                 //---- lessonName6 ----
                 lessonName6.setText("Lesson Name");
@@ -536,6 +472,7 @@ public class MyLessonMember extends JFrame {
                 moreButton6.setBackground(Color.white);
                 moreButton6.setBorderPainted(false);
                 moreButton6.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                moreButton6.addActionListener(e -> moreButton6ActionPerformed(e));
                 lesson6.add(moreButton6);
                 moreButton6.setBounds(170, 220, 65, 25);
 
@@ -562,21 +499,37 @@ public class MyLessonMember extends JFrame {
             search.setBorder(null);
             search.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
             body.add(search);
-            search.setBounds(300, 45, 300, 40);
+            search.setBounds(275, 45, 300, 40);
 
             //---- searchButton ----
             searchButton.setBorderPainted(false);
-            searchButton.setBackground(SystemColor.textHighlight);
+            searchButton.setBackground(SystemColor.controlHighlight);
             body.add(searchButton);
-            searchButton.setBounds(600, 45, 40, 40);
+            searchButton.setBounds(575, 45, 40, 40);
 
-            //---- nextPageButton ----
-            nextPageButton.setBorderPainted(false);
-            nextPageButton.setBackground(new Color(217, 0, 27));
-            nextPageButton.setText("NEXT PAGE");
-            nextPageButton.setForeground(Color.white);
-            body.add(nextPageButton);
-            nextPageButton.setBounds(655, 45, 120, 40);
+            //---- homeButton ----
+            homeButton.setBorderPainted(false);
+            homeButton.setBackground(SystemColor.menu);
+            homeButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/home.png")));
+            homeButton.addActionListener(e -> homeButtonActionPerformed(e));
+            body.add(homeButton);
+            homeButton.setBounds(645, 45, 40, 40);
+
+            //---- previousButton ----
+            previousButton.setBorderPainted(false);
+            previousButton.setBackground(SystemColor.menu);
+            previousButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/previous.png")));
+            previousButton.addActionListener(e -> previousButtonActionPerformed(e));
+            body.add(previousButton);
+            previousButton.setBounds(690, 45, 40, 40);
+
+            //---- nextButton ----
+            nextButton.setBorderPainted(false);
+            nextButton.setBackground(SystemColor.menu);
+            nextButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/next.png")));
+            nextButton.addActionListener(e -> nextButtonActionPerformed(e));
+            body.add(nextButton);
+            nextButton.setBounds(735, 45, 40, 40);
 
             {
                 // compute preferred size
@@ -620,7 +573,7 @@ public class MyLessonMember extends JFrame {
     private JLabel decorationLine;
     private JLabel title;
     private JPanel lesson1;
-    private JPanel lessonPicture1;
+    private JLabel lessonPicture1;
     private JLabel lessonName;
     private JLabel lessonLevel1;
     private JLabel coachName1;
@@ -629,35 +582,37 @@ public class MyLessonMember extends JFrame {
     private JLabel lessonName2;
     private JLabel lessonLevel2;
     private JLabel coachName2;
-    private JPanel lessonPicture2;
+    private JLabel lessonPicture2;
     private JButton moreButton2;
     private JPanel lesson3;
     private JLabel lessonName3;
     private JLabel lessonLevel3;
     private JButton moreButton3;
     private JLabel coachName3;
-    private JPanel lessonPicture3;
+    private JLabel lessonPicture3;
     private JPanel lesson4;
     private JLabel lessonName4;
     private JLabel lessonLevel4;
     private JButton moreButton4;
     private JLabel coachName4;
-    private JPanel lessonPicture4;
+    private JLabel lessonPicture4;
     private JPanel lesson5;
     private JLabel lessonName5;
     private JLabel lessonLevel5;
     private JLabel coachName5;
-    private JPanel lessonPicture5;
+    private JLabel lessonPicture5;
     private JButton moreButton5;
     private JPanel lesson6;
-    private JPanel lessonPicture6;
+    private JLabel lessonPicture6;
     private JLabel lessonName6;
     private JLabel lessonLevel6;
     private JLabel coachName6;
     private JButton moreButton6;
     private JTextField search;
     private JButton searchButton;
-    private JButton nextPageButton;
+    private JButton homeButton;
+    private JButton previousButton;
+    private JButton nextButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         MyLessonCoach.run();
@@ -670,6 +625,7 @@ public class MyLessonMember extends JFrame {
                     MyLessonCoach frame = new MyLessonCoach();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-1100/2,screenSize.height/2-700/2);
+                    frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

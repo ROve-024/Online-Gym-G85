@@ -22,7 +22,7 @@ public class ViewCoachProfile extends JFrame {
         decorationLine = new JLabel();
         title = new JLabel();
         uidGym = new JLabel();
-        avatar = new JButton();
+        avatar = new JLabel();
         nameTip = new JLabel();
         emailTip = new JLabel();
         phoneNumberTip = new JLabel();
@@ -41,7 +41,7 @@ public class ViewCoachProfile extends JFrame {
         decorationLine9 = new JPanel();
         decorationLine10 = new JPanel();
         decorationLine11 = new JPanel();
-        editButton = new JButton();
+        lessonButton = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -77,7 +77,8 @@ public class ViewCoachProfile extends JFrame {
 
             //---- avatar ----
             avatar.setBackground(SystemColor.textHighlight);
-            avatar.setBorderPainted(false);
+            avatar.setHorizontalAlignment(SwingConstants.CENTER);
+            avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar150/Acatar (28).jpg")));
             body.add(avatar);
             avatar.setBounds(295, 145, 150, 150);
 
@@ -393,13 +394,13 @@ public class ViewCoachProfile extends JFrame {
             body.add(decorationLine11);
             decorationLine11.setBounds(390, 557, 375, 2);
 
-            //---- editButton ----
-            editButton.setBorderPainted(false);
-            editButton.setBackground(SystemColor.textHighlight);
-            editButton.setText("LESSON");
-            editButton.setForeground(Color.white);
-            body.add(editButton);
-            editButton.setBounds(35, 590, 90, 40);
+            //---- lessonButton ----
+            lessonButton.setBorderPainted(false);
+            lessonButton.setBackground(SystemColor.menu);
+            lessonButton.setText("LESSON");
+            lessonButton.setForeground(Color.white);
+            body.add(lessonButton);
+            lessonButton.setBounds(35, 590, 90, 40);
 
             {
                 // compute preferred size
@@ -443,7 +444,7 @@ public class ViewCoachProfile extends JFrame {
     private JLabel decorationLine;
     private JLabel title;
     private JLabel uidGym;
-    private JButton avatar;
+    private JLabel avatar;
     private JLabel nameTip;
     private JLabel emailTip;
     private JLabel phoneNumberTip;
@@ -462,7 +463,7 @@ public class ViewCoachProfile extends JFrame {
     private JPanel decorationLine9;
     private JPanel decorationLine10;
     private JPanel decorationLine11;
-    private JButton editButton;
+    private JButton lessonButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         ViewCoachProfile.run();
@@ -475,6 +476,7 @@ public class ViewCoachProfile extends JFrame {
                     ViewCoachProfile frame = new ViewCoachProfile();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
+                    frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

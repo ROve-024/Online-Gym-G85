@@ -25,6 +25,58 @@ public class PlanHomeCoach extends JFrame {
         this.dispose();
     }
 
+    private void previousButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void nextButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void profileButton2ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void profileButton3ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void profileButton4ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void profileButton5ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void profileButton6ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void deleteButton1ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void deleteButton2ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void deleteButton3ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void deleteButton4ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void deleteButton5ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void deleteButton6ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -67,7 +119,8 @@ public class PlanHomeCoach extends JFrame {
         startTime6 = new JLabel();
         deleteButton6 = new JButton();
         profileButton6 = new JButton();
-        nextPageButton = new JButton();
+        previousButton = new JButton();
+        nextButton = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -122,6 +175,7 @@ public class PlanHomeCoach extends JFrame {
                 deleteButton1.setBorderPainted(false);
                 deleteButton1.setBackground(new Color(217, 0, 27));
                 deleteButton1.setForeground(Color.white);
+                deleteButton1.addActionListener(e -> deleteButton1ActionPerformed(e));
                 planDetail.add(deleteButton1);
                 deleteButton1.setBounds(610, 15, 100, 40);
 
@@ -204,6 +258,7 @@ public class PlanHomeCoach extends JFrame {
                 deleteButton2.setBorderPainted(false);
                 deleteButton2.setBackground(new Color(217, 0, 27));
                 deleteButton2.setForeground(Color.white);
+                deleteButton2.addActionListener(e -> deleteButton2ActionPerformed(e));
                 planDetail2.add(deleteButton2);
                 deleteButton2.setBounds(610, 15, 100, 40);
 
@@ -211,6 +266,7 @@ public class PlanHomeCoach extends JFrame {
                 profileButton2.setText("PROFILE");
                 profileButton2.setBorderPainted(false);
                 profileButton2.setBackground(Color.white);
+                profileButton2.addActionListener(e -> profileButton2ActionPerformed(e));
                 planDetail2.add(profileButton2);
                 profileButton2.setBounds(495, 15, 100, 40);
 
@@ -261,6 +317,7 @@ public class PlanHomeCoach extends JFrame {
                 deleteButton3.setBorderPainted(false);
                 deleteButton3.setBackground(new Color(217, 0, 27));
                 deleteButton3.setForeground(Color.white);
+                deleteButton3.addActionListener(e -> deleteButton3ActionPerformed(e));
                 planDetail3.add(deleteButton3);
                 deleteButton3.setBounds(610, 15, 100, 40);
 
@@ -268,6 +325,7 @@ public class PlanHomeCoach extends JFrame {
                 profileButton3.setText("PROFILE");
                 profileButton3.setBorderPainted(false);
                 profileButton3.setBackground(Color.white);
+                profileButton3.addActionListener(e -> profileButton3ActionPerformed(e));
                 planDetail3.add(profileButton3);
                 profileButton3.setBounds(495, 15, 100, 40);
 
@@ -318,6 +376,7 @@ public class PlanHomeCoach extends JFrame {
                 deleteButton4.setBorderPainted(false);
                 deleteButton4.setBackground(new Color(217, 0, 27));
                 deleteButton4.setForeground(Color.white);
+                deleteButton4.addActionListener(e -> deleteButton4ActionPerformed(e));
                 planDetail4.add(deleteButton4);
                 deleteButton4.setBounds(610, 15, 100, 40);
 
@@ -325,6 +384,7 @@ public class PlanHomeCoach extends JFrame {
                 profileButton4.setText("PROFILE");
                 profileButton4.setBorderPainted(false);
                 profileButton4.setBackground(Color.white);
+                profileButton4.addActionListener(e -> profileButton4ActionPerformed(e));
                 planDetail4.add(profileButton4);
                 profileButton4.setBounds(495, 15, 100, 40);
 
@@ -375,6 +435,7 @@ public class PlanHomeCoach extends JFrame {
                 deleteButton5.setBorderPainted(false);
                 deleteButton5.setBackground(new Color(217, 0, 27));
                 deleteButton5.setForeground(Color.white);
+                deleteButton5.addActionListener(e -> deleteButton5ActionPerformed(e));
                 planDetail5.add(deleteButton5);
                 deleteButton5.setBounds(610, 15, 100, 40);
 
@@ -382,6 +443,7 @@ public class PlanHomeCoach extends JFrame {
                 profileButton5.setText("PROFILE");
                 profileButton5.setBorderPainted(false);
                 profileButton5.setBackground(Color.white);
+                profileButton5.addActionListener(e -> profileButton5ActionPerformed(e));
                 planDetail5.add(profileButton5);
                 profileButton5.setBounds(495, 15, 100, 40);
 
@@ -432,6 +494,7 @@ public class PlanHomeCoach extends JFrame {
                 deleteButton6.setBorderPainted(false);
                 deleteButton6.setBackground(new Color(217, 0, 27));
                 deleteButton6.setForeground(Color.white);
+                deleteButton6.addActionListener(e -> deleteButton6ActionPerformed(e));
                 planDetail6.add(deleteButton6);
                 deleteButton6.setBounds(610, 15, 100, 40);
 
@@ -439,6 +502,7 @@ public class PlanHomeCoach extends JFrame {
                 profileButton6.setText("PROFILE");
                 profileButton6.setBorderPainted(false);
                 profileButton6.setBackground(Color.white);
+                profileButton6.addActionListener(e -> profileButton6ActionPerformed(e));
                 planDetail6.add(profileButton6);
                 profileButton6.setBounds(495, 15, 100, 40);
 
@@ -460,13 +524,21 @@ public class PlanHomeCoach extends JFrame {
             body.add(planDetail6);
             planDetail6.setBounds(45, 510, 720, 70);
 
-            //---- nextPageButton ----
-            nextPageButton.setBorderPainted(false);
-            nextPageButton.setBackground(SystemColor.textHighlight);
-            nextPageButton.setText("NEXT");
-            nextPageButton.setForeground(Color.white);
-            body.add(nextPageButton);
-            nextPageButton.setBounds(655, 595, 100, 40);
+            //---- previousButton ----
+            previousButton.setBorderPainted(false);
+            previousButton.setBackground(SystemColor.menu);
+            previousButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/previous.png")));
+            previousButton.addActionListener(e -> previousButtonActionPerformed(e));
+            body.add(previousButton);
+            previousButton.setBounds(680, 590, 40, 40);
+
+            //---- nextButton ----
+            nextButton.setBorderPainted(false);
+            nextButton.setBackground(SystemColor.menu);
+            nextButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/next.png")));
+            nextButton.addActionListener(e -> nextButtonActionPerformed(e));
+            body.add(nextButton);
+            nextButton.setBounds(725, 590, 40, 40);
 
             {
                 // compute preferred size
@@ -546,7 +618,8 @@ public class PlanHomeCoach extends JFrame {
     private JLabel startTime6;
     private JButton deleteButton6;
     private JButton profileButton6;
-    private JButton nextPageButton;
+    private JButton previousButton;
+    private JButton nextButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         PlanHomeCoach.run();
@@ -559,6 +632,7 @@ public class PlanHomeCoach extends JFrame {
                     PlanHomeCoach frame = new PlanHomeCoach();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
+                    frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

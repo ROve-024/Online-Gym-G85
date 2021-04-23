@@ -83,8 +83,9 @@ public class ProfileCoach extends JFrame {
             uidGym.setBounds(470, 93, 300, 24);
 
             //---- avatar ----
-            avatar.setBackground(SystemColor.textHighlight);
+            avatar.setBackground(SystemColor.menu);
             avatar.setBorderPainted(false);
+            avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar150/Acatar (20).jpg")));
             body.add(avatar);
             avatar.setBounds(295, 145, 150, 150);
 
@@ -162,7 +163,7 @@ public class ProfileCoach extends JFrame {
 
             //---- editButton ----
             editButton.setBorderPainted(false);
-            editButton.setBackground(SystemColor.textHighlight);
+            editButton.setBackground(SystemColor.menu);
             editButton.setText("EDIT");
             editButton.setForeground(Color.white);
             editButton.addActionListener(e -> editButtonActionPerformed(e));
@@ -483,6 +484,7 @@ public class ProfileCoach extends JFrame {
                     ProfileCoach frame = new ProfileCoach();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
+                    frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

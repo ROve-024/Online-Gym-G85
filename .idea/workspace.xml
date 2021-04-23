@@ -8,19 +8,28 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Admin/ALLLessonAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Admin/ALLLessonAdmin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Admin/LessonDetailAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Admin/LessonDetailAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Admin/NavigatorAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Admin/NavigatorAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Admin/UserManageAllAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Admin/UserManageAllAdmin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Coach/EditProfileCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/EditProfileCoach.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Coach/LessonDetailCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/LessonDetailCoach.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Coach/MyLessonCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/MyLessonCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/NavigatorCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/NavigatorCoach.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Coach/PlanHomeCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/PlanHomeCoach.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Coach/ProfileCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/ProfileCoach.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Coach/UploadModify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/UploadModify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/ViewCoachProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/ViewCoachProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Member/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Member/EditProfileMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/EditProfileMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Member/LessonDetailMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/LessonDetailMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Member/LessonHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/LessonHomeMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Member/LessonVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/LessonVideo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Member/MyLessonMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/MyLessonMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/NavigatorMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/NavigatorMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/PlanHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/PlanHomeMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Member/ProfileMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/ProfileMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/ViewMemberProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/ViewMemberProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Other/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Other/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/icons/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/icons/search.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +67,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/src/GUI/Admin/ALLLessonAdmin.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Admin/UserManageAllAdmin.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/LessonVideo.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/LessonHomeMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/EditProfileMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Admin/NavigatorAdmin.jfd" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -120,12 +130,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NavigatorCoach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="UI.NavigatorCoach" />
+    <configuration name="NavigatorAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.Admin.NavigatorAdmin" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GUI.*" />
+          <option name="PATTERN" value="GUI.Admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NavigatorCoach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.Coach.NavigatorCoach" />
+      <module name="Group85" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GUI.Coach.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -157,37 +180,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminGuiTest.testAllLessonAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Group85" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.qmbupt.grp85.gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.qmbupt.grp85.gui" />
-      <option name="MAIN_CLASS_NAME" value="org.qmbupt.grp85.gui.AdminGuiTest" />
-      <option name="METHOD_NAME" value="testAllLessonAdmin" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.ALLLessonAdmin" />
       <item itemvalue="Application.LessonDetailMember" />
-      <item itemvalue="Application.NavigatorCoach" />
       <item itemvalue="Application.Run" />
       <item itemvalue="Application.LessonDetailAdmin" />
-      <item itemvalue="JUnit.AdminGuiTest.testAllLessonAdmin" />
+      <item itemvalue="Application.NavigatorAdmin" />
+      <item itemvalue="Application.NavigatorCoach" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Run" />
+        <item itemvalue="Application.NavigatorCoach" />
+        <item itemvalue="Application.NavigatorAdmin" />
         <item itemvalue="Application.LessonDetailAdmin" />
         <item itemvalue="Application.LessonDetailMember" />
-        <item itemvalue="JUnit.AdminGuiTest.testAllLessonAdmin" />
-        <item itemvalue="Application.NavigatorCoach" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +225,9 @@
       <workItem from="1619154440230" duration="139000" />
       <workItem from="1619154925556" duration="744000" />
       <workItem from="1619155721653" duration="44000" />
-      <workItem from="1619155880582" duration="325000" />
+      <workItem from="1619155880582" duration="428000" />
+      <workItem from="1619160555002" duration="4495000" />
+      <workItem from="1619166213839" duration="9773000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1617952547719</created>
@@ -290,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619155369227</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update">
+      <created>1619156309865</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1619156309865</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

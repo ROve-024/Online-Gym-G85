@@ -57,7 +57,12 @@ public class NavigatorCoach extends JFrame {
 
     private void switchAccoutActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
+        java.awt.Window[] win = java.awt.Window.getWindows();
+        int i=0;
+        while (i<win.length) {
+            win[i].dispose();
+            i++;
+        }
         Login.run();
     }
 
@@ -66,7 +71,7 @@ public class NavigatorCoach extends JFrame {
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
-        label1 = new JButton();
+        label1 = new JLabel();
         username = new JLabel();
         welcomeMsg = new JLabel();
         decorationLine1 = new JLabel();
@@ -97,10 +102,10 @@ public class NavigatorCoach extends JFrame {
             label1.setText("avatar");
             label1.setBackground(Color.black);
             label1.setForeground(Color.white);
+            label1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (24).jpg")));
             label1.setHorizontalAlignment(SwingConstants.CENTER);
-            label1.setBorderPainted(false);
             body.add(label1);
-            label1.setBounds(20, 20, 75, 75);
+            label1.setBounds(15, 20, 90, 75);
 
             //---- username ----
             username.setText("Username");
@@ -177,29 +182,29 @@ public class NavigatorCoach extends JFrame {
             menu.setBounds(50, 135, 280, 200);
 
             //---- label2 ----
-            label2.setText("Icon");
-            label2.setBackground(Color.black);
+            label2.setBackground(Color.white);
             label2.setForeground(Color.white);
             label2.setHorizontalAlignment(SwingConstants.CENTER);
             label2.setBorderPainted(false);
+            label2.setIcon(new ImageIcon(getClass().getResource("/resources/icons/video.png")));
             body.add(label2);
             label2.setBounds(20, 157, 25, 25);
 
             //---- label3 ----
-            label3.setText("Icon");
-            label3.setBackground(Color.black);
+            label3.setBackground(Color.white);
             label3.setForeground(Color.white);
             label3.setHorizontalAlignment(SwingConstants.CENTER);
             label3.setBorderPainted(false);
+            label3.setIcon(new ImageIcon(getClass().getResource("/resources/icons/plan.png")));
             body.add(label3);
             label3.setBounds(20, 222, 25, 25);
 
             //---- label4 ----
-            label4.setText("Icon");
-            label4.setBackground(Color.black);
+            label4.setBackground(Color.white);
             label4.setForeground(Color.white);
             label4.setHorizontalAlignment(SwingConstants.CENTER);
             label4.setBorderPainted(false);
+            label4.setIcon(new ImageIcon(getClass().getResource("/resources/icons/people.png")));
             body.add(label4);
             label4.setBounds(20, 290, 25, 25);
 
@@ -251,7 +256,7 @@ public class NavigatorCoach extends JFrame {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel body;
-    private JButton label1;
+    private JLabel label1;
     private JLabel username;
     private JLabel welcomeMsg;
     private JLabel decorationLine1;
@@ -278,6 +283,7 @@ public class NavigatorCoach extends JFrame {
                     NavigatorCoach frame = new NavigatorCoach();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-1100/2,screenSize.height/2-700/2);
+                    frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

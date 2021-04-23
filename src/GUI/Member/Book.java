@@ -122,6 +122,7 @@ public class Book extends JFrame {
             public void run() {
                 try {
                     Book frame = new Book();
+                    frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

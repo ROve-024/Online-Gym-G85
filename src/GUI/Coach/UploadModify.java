@@ -34,7 +34,7 @@ public class UploadModify extends JFrame {
         label2 = new JLabel();
         scrollPane1 = new JScrollPane();
         textArea1 = new JTextArea();
-        finishButton2 = new JButton();
+        videoSelectedButton = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -100,13 +100,13 @@ public class UploadModify extends JFrame {
             body.add(scrollPane1);
             scrollPane1.setBounds(35, 235, 730, 235);
 
-            //---- finishButton2 ----
-            finishButton2.setBorderPainted(false);
-            finishButton2.setBackground(new Color(220, 220, 220));
-            finishButton2.setText("SELECT A FILE");
-            finishButton2.setForeground(Color.white);
-            body.add(finishButton2);
-            finishButton2.setBounds(35, 485, 175, 40);
+            //---- videoSelectedButton ----
+            videoSelectedButton.setBorderPainted(false);
+            videoSelectedButton.setBackground(new Color(220, 220, 220));
+            videoSelectedButton.setText("SELECT A FILE");
+            videoSelectedButton.setForeground(Color.white);
+            body.add(videoSelectedButton);
+            videoSelectedButton.setBounds(35, 485, 175, 40);
 
             {
                 // compute preferred size
@@ -155,7 +155,7 @@ public class UploadModify extends JFrame {
     private JLabel label2;
     private JScrollPane scrollPane1;
     private JTextArea textArea1;
-    private JButton finishButton2;
+    private JButton videoSelectedButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         UploadModify.run();
@@ -168,6 +168,7 @@ public class UploadModify extends JFrame {
                     UploadModify frame = new UploadModify();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
+                    frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

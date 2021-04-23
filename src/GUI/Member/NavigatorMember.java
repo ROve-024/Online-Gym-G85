@@ -58,14 +58,19 @@ public class NavigatorMember extends JFrame {
 
     private void switchAccoutActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
+        java.awt.Window[] win = java.awt.Window.getWindows();
+        int i=0;
+        while (i<win.length) {
+            win[i].dispose();
+            i++;
+        }
         Login.run();
     }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
-        label1 = new JButton();
+        label1 = new JLabel();
         username = new JLabel();
         welcomeMsg = new JLabel();
         decorationLine1 = new JLabel();
@@ -76,10 +81,10 @@ public class NavigatorMember extends JFrame {
         myPlan = new JButton();
         myProfileMenu = new JPanel();
         myProfile = new JButton();
+        switchAccout = new JButton();
         label2 = new JButton();
         label3 = new JButton();
         label4 = new JButton();
-        switchAccout = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -97,9 +102,9 @@ public class NavigatorMember extends JFrame {
             label1.setBackground(Color.black);
             label1.setForeground(Color.white);
             label1.setHorizontalAlignment(SwingConstants.CENTER);
-            label1.setBorderPainted(false);
+            label1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (6).jpg")));
             body.add(label1);
-            label1.setBounds(20, 20, 75, 75);
+            label1.setBounds(15, 20, 90, 75);
 
             //---- username ----
             username.setText("Username");
@@ -175,33 +180,6 @@ public class NavigatorMember extends JFrame {
             body.add(menu);
             menu.setBounds(50, 135, 280, 200);
 
-            //---- label2 ----
-            label2.setText("Icon");
-            label2.setBackground(Color.black);
-            label2.setForeground(Color.white);
-            label2.setHorizontalAlignment(SwingConstants.CENTER);
-            label2.setBorderPainted(false);
-            body.add(label2);
-            label2.setBounds(20, 157, 25, 25);
-
-            //---- label3 ----
-            label3.setText("Icon");
-            label3.setBackground(Color.black);
-            label3.setForeground(Color.white);
-            label3.setHorizontalAlignment(SwingConstants.CENTER);
-            label3.setBorderPainted(false);
-            body.add(label3);
-            label3.setBounds(20, 222, 25, 25);
-
-            //---- label4 ----
-            label4.setText("Icon");
-            label4.setBackground(Color.black);
-            label4.setForeground(Color.white);
-            label4.setHorizontalAlignment(SwingConstants.CENTER);
-            label4.setBorderPainted(false);
-            body.add(label4);
-            label4.setBounds(20, 290, 25, 25);
-
             //---- switchAccout ----
             switchAccout.setText("Switch Account");
             switchAccout.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
@@ -210,6 +188,33 @@ public class NavigatorMember extends JFrame {
             switchAccout.addActionListener(e -> switchAccoutActionPerformed(e));
             body.add(switchAccout);
             switchAccout.setBounds(-5, 595, 175, 60);
+
+            //---- label2 ----
+            label2.setBackground(Color.white);
+            label2.setForeground(Color.white);
+            label2.setHorizontalAlignment(SwingConstants.CENTER);
+            label2.setBorderPainted(false);
+            label2.setIcon(new ImageIcon(getClass().getResource("/resources/icons/video.png")));
+            body.add(label2);
+            label2.setBounds(20, 157, 25, 25);
+
+            //---- label3 ----
+            label3.setBackground(Color.white);
+            label3.setForeground(Color.white);
+            label3.setHorizontalAlignment(SwingConstants.CENTER);
+            label3.setBorderPainted(false);
+            label3.setIcon(new ImageIcon(getClass().getResource("/resources/icons/plan.png")));
+            body.add(label3);
+            label3.setBounds(20, 222, 25, 25);
+
+            //---- label4 ----
+            label4.setBackground(Color.white);
+            label4.setForeground(Color.white);
+            label4.setHorizontalAlignment(SwingConstants.CENTER);
+            label4.setBorderPainted(false);
+            label4.setIcon(new ImageIcon(getClass().getResource("/resources/icons/people.png")));
+            body.add(label4);
+            label4.setBounds(20, 287, 25, 25);
 
             {
                 // compute preferred size
@@ -250,7 +255,7 @@ public class NavigatorMember extends JFrame {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel body;
-    private JButton label1;
+    private JLabel label1;
     private JLabel username;
     private JLabel welcomeMsg;
     private JLabel decorationLine1;
@@ -261,10 +266,10 @@ public class NavigatorMember extends JFrame {
     private JButton myPlan;
     private JPanel myProfileMenu;
     private JButton myProfile;
+    private JButton switchAccout;
     private JButton label2;
     private JButton label3;
     private JButton label4;
-    private JButton switchAccout;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         NavigatorMember.run();
@@ -277,6 +282,7 @@ public class NavigatorMember extends JFrame {
                     NavigatorMember frame = new NavigatorMember();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-1100/2,screenSize.height/2-700/2);
+                    frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

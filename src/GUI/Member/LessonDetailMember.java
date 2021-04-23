@@ -57,7 +57,7 @@ public class LessonDetailMember extends JFrame {
         coachName = new JLabel();
         coachMsg = new JTextPane();
         coachDetailButton = new JButton();
-        homeButton = new JButton();
+        homeButton2 = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -84,9 +84,9 @@ public class LessonDetailMember extends JFrame {
             title.setBounds(new Rectangle(new Point(25, 45), title.getPreferredSize()));
 
             //---- lessonPicture ----
-            lessonPicture.setText("Lesson Picture");
-            lessonPicture.setBorder(LineBorder.createBlackLineBorder());
+            lessonPicture.setBorder(new LineBorder(Color.lightGray));
             lessonPicture.setHorizontalAlignment(SwingConstants.CENTER);
+            lessonPicture.setIcon(new ImageIcon(getClass().getResource("/resources/images/lessonPic/yoga.png")));
             body.add(lessonPicture);
             lessonPicture.setBounds(30, 165, 300, 251);
 
@@ -126,9 +126,9 @@ public class LessonDetailMember extends JFrame {
             bookButton.setBounds(450, 365, 100, 50);
 
             //---- coachAvatar ----
-            coachAvatar.setText("Coach");
-            coachAvatar.setBorder(LineBorder.createBlackLineBorder());
+            coachAvatar.setBorder(new LineBorder(Color.white));
             coachAvatar.setHorizontalAlignment(SwingConstants.CENTER);
+            coachAvatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (10).jpg")));
             body.add(coachAvatar);
             coachAvatar.setBounds(30, 485, 75, 75);
 
@@ -158,13 +158,13 @@ public class LessonDetailMember extends JFrame {
             body.add(coachDetailButton);
             coachDetailButton.setBounds(650, 505, 100, 50);
 
-            //---- homeButton ----
-            homeButton.setText("HOME");
-            homeButton.setBackground(SystemColor.menu);
-            homeButton.setBorder(null);
-            homeButton.addActionListener(e -> homeButtonActionPerformed(e));
-            body.add(homeButton);
-            homeButton.setBounds(665, 45, 100, 50);
+            //---- homeButton2 ----
+            homeButton2.setBorderPainted(false);
+            homeButton2.setBackground(SystemColor.menu);
+            homeButton2.setIcon(new ImageIcon(getClass().getResource("/resources/icons/home.png")));
+            homeButton2.addActionListener(e -> homeButtonActionPerformed(e));
+            body.add(homeButton2);
+            homeButton2.setBounds(675, 45, 100, 40);
 
             {
                 // compute preferred size
@@ -216,7 +216,7 @@ public class LessonDetailMember extends JFrame {
     private JLabel coachName;
     private JTextPane coachMsg;
     private JButton coachDetailButton;
-    private JButton homeButton;
+    private JButton homeButton2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         LessonDetailMember.run();
@@ -229,6 +229,7 @@ public class LessonDetailMember extends JFrame {
                     LessonDetailMember frame = new LessonDetailMember();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
+                    frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

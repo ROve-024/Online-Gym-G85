@@ -93,6 +93,7 @@ public class ProfileMember extends JFrame {
             //---- avatar ----
             avatar.setBackground(SystemColor.textHighlight);
             avatar.setBorderPainted(false);
+            avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar150/Acatar (6).jpg")));
             body.add(avatar);
             avatar.setBounds(295, 145, 150, 150);
 
@@ -170,9 +171,8 @@ public class ProfileMember extends JFrame {
 
             //---- editButton ----
             editButton.setBorderPainted(false);
-            editButton.setBackground(SystemColor.textHighlight);
+            editButton.setBackground(SystemColor.control);
             editButton.setText("EDIT");
-            editButton.setForeground(Color.white);
             editButton.addActionListener(e -> editButtonActionPerformed(e));
             body.add(editButton);
             editButton.setBounds(35, 585, 90, 40);
@@ -492,6 +492,7 @@ public class ProfileMember extends JFrame {
                     ProfileMember frame = new ProfileMember();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
+                    frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

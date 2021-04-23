@@ -22,7 +22,7 @@ public class ViewMemberProfile extends JFrame {
         decorationLine = new JLabel();
         title = new JLabel();
         uidGym = new JLabel();
-        avatar = new JButton();
+        avatar = new JLabel();
         nameTip = new JLabel();
         emailTip = new JLabel();
         phoneNumberTip = new JLabel();
@@ -76,7 +76,7 @@ public class ViewMemberProfile extends JFrame {
 
             //---- avatar ----
             avatar.setBackground(SystemColor.textHighlight);
-            avatar.setBorderPainted(false);
+            avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar150/Acatar (8).jpg")));
             body.add(avatar);
             avatar.setBounds(295, 145, 150, 150);
 
@@ -434,7 +434,7 @@ public class ViewMemberProfile extends JFrame {
     private JLabel decorationLine;
     private JLabel title;
     private JLabel uidGym;
-    private JButton avatar;
+    private JLabel avatar;
     private JLabel nameTip;
     private JLabel emailTip;
     private JLabel phoneNumberTip;
@@ -465,6 +465,7 @@ public class ViewMemberProfile extends JFrame {
                     ViewMemberProfile frame = new ViewMemberProfile();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
+                    frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

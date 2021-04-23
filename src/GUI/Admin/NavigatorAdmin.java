@@ -41,7 +41,7 @@ public class NavigatorAdmin extends JFrame {
         ALLLessonAdmin.run();
     }
 
-    private void VenuesManageActionPerformed(ActionEvent e) {
+    private void switchAccountActionPerformed(ActionEvent e) {
         // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
         int i=0;
@@ -49,12 +49,6 @@ public class NavigatorAdmin extends JFrame {
             win[i].dispose();
             i++;
         }
-        NavigatorAdmin.run();
-    }
-
-    private void switchAccountActionPerformed(ActionEvent e) {
-        // TODO add your code here
-        this.dispose();
         Login.run();
     }
 
@@ -62,7 +56,7 @@ public class NavigatorAdmin extends JFrame {
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
-        label1 = new JButton();
+        avatar = new JLabel();
         username = new JLabel();
         welcomeMsg = new JLabel();
         decorationLine1 = new JLabel();
@@ -72,11 +66,9 @@ public class NavigatorAdmin extends JFrame {
         lessonManageMenu = new JPanel();
         lessonManage = new JButton();
         VenuesManageMenu = new JPanel();
-        VenuesManage = new JButton();
+        switchAccount = new JButton();
         label2 = new JButton();
         label3 = new JButton();
-        label4 = new JButton();
-        switchAccount = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -89,14 +81,14 @@ public class NavigatorAdmin extends JFrame {
             body.setBorder(null);
             body.setLayout(null);
 
-            //---- label1 ----
-            label1.setText("avatar");
-            label1.setBackground(Color.black);
-            label1.setForeground(Color.white);
-            label1.setHorizontalAlignment(SwingConstants.CENTER);
-            label1.setBorderPainted(false);
-            body.add(label1);
-            label1.setBounds(20, 20, 75, 75);
+            //---- avatar ----
+            avatar.setText("avatar");
+            avatar.setBackground(Color.black);
+            avatar.setForeground(Color.white);
+            avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (7).jpg")));
+            avatar.setHorizontalAlignment(SwingConstants.CENTER);
+            body.add(avatar);
+            avatar.setBounds(15, 20, 85, 75);
 
             //---- username ----
             username.setText("Username");
@@ -157,47 +149,11 @@ public class NavigatorAdmin extends JFrame {
                 {
                     VenuesManageMenu.setBackground(Color.white);
                     VenuesManageMenu.setLayout(new GridLayout());
-
-                    //---- VenuesManage ----
-                    VenuesManage.setText("Venues Management");
-                    VenuesManage.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-                    VenuesManage.setBackground(Color.white);
-                    VenuesManage.setBorderPainted(false);
-                    VenuesManage.setHorizontalAlignment(SwingConstants.LEFT);
-                    VenuesManage.addActionListener(e -> VenuesManageActionPerformed(e));
-                    VenuesManageMenu.add(VenuesManage);
                 }
                 menu.add(VenuesManageMenu);
             }
             body.add(menu);
             menu.setBounds(50, 135, 280, 200);
-
-            //---- label2 ----
-            label2.setText("Icon");
-            label2.setBackground(Color.black);
-            label2.setForeground(Color.white);
-            label2.setHorizontalAlignment(SwingConstants.CENTER);
-            label2.setBorderPainted(false);
-            body.add(label2);
-            label2.setBounds(20, 157, 25, 25);
-
-            //---- label3 ----
-            label3.setText("Icon");
-            label3.setBackground(Color.black);
-            label3.setForeground(Color.white);
-            label3.setHorizontalAlignment(SwingConstants.CENTER);
-            label3.setBorderPainted(false);
-            body.add(label3);
-            label3.setBounds(20, 222, 25, 25);
-
-            //---- label4 ----
-            label4.setText("Icon");
-            label4.setBackground(Color.black);
-            label4.setForeground(Color.white);
-            label4.setHorizontalAlignment(SwingConstants.CENTER);
-            label4.setBorderPainted(false);
-            body.add(label4);
-            label4.setBounds(20, 290, 25, 25);
 
             //---- switchAccount ----
             switchAccount.setText("Switch Account");
@@ -207,6 +163,24 @@ public class NavigatorAdmin extends JFrame {
             switchAccount.addActionListener(e -> switchAccountActionPerformed(e));
             body.add(switchAccount);
             switchAccount.setBounds(-5, 595, 175, 60);
+
+            //---- label2 ----
+            label2.setBackground(Color.white);
+            label2.setForeground(Color.white);
+            label2.setHorizontalAlignment(SwingConstants.CENTER);
+            label2.setBorderPainted(false);
+            label2.setIcon(new ImageIcon(getClass().getResource("/resources/icons/people.png")));
+            body.add(label2);
+            label2.setBounds(25, 157, 25, 25);
+
+            //---- label3 ----
+            label3.setBackground(Color.white);
+            label3.setForeground(Color.white);
+            label3.setHorizontalAlignment(SwingConstants.CENTER);
+            label3.setBorderPainted(false);
+            label3.setIcon(new ImageIcon(getClass().getResource("/resources/icons/video.png")));
+            body.add(label3);
+            label3.setBounds(25, 222, 25, 25);
 
             {
                 // compute preferred size
@@ -247,7 +221,7 @@ public class NavigatorAdmin extends JFrame {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel body;
-    private JButton label1;
+    private JLabel avatar;
     private JLabel username;
     private JLabel welcomeMsg;
     private JLabel decorationLine1;
@@ -257,11 +231,9 @@ public class NavigatorAdmin extends JFrame {
     private JPanel lessonManageMenu;
     private JButton lessonManage;
     private JPanel VenuesManageMenu;
-    private JButton VenuesManage;
+    private JButton switchAccount;
     private JButton label2;
     private JButton label3;
-    private JButton label4;
-    private JButton switchAccount;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         NavigatorAdmin.run();
@@ -274,6 +246,7 @@ public class NavigatorAdmin extends JFrame {
                     NavigatorAdmin frame = new NavigatorAdmin();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-1100/2,screenSize.height/2-700/2);
+                    frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

@@ -75,7 +75,7 @@ public class EditProfileMember extends JFrame {
 
             //---- finishButton ----
             finishButton.setBorderPainted(false);
-            finishButton.setBackground(SystemColor.textHighlight);
+            finishButton.setBackground(SystemColor.menu);
             finishButton.setText("FINISH");
             finishButton.setForeground(Color.white);
             finishButton.addActionListener(e -> finishButtonActionPerformed(e));
@@ -395,6 +395,7 @@ public class EditProfileMember extends JFrame {
                     EditProfileMember frame = new EditProfileMember();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
+                    frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

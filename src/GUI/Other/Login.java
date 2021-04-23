@@ -90,10 +90,10 @@ public class Login extends JFrame {
             userButton.setBounds(new Rectangle(new Point(55, 95), userButton.getPreferredSize()));
 
             //---- adminButton ----
-            adminButton.setText("GUI/Admin");
+            adminButton.setText("Admin");
             adminButton.setBackground(UIManager.getColor("Button.darcula.disabledText.shadow"));
             loginBody.add(adminButton);
-            adminButton.setBounds(280, 95, 70, 21);
+            adminButton.setBounds(280, 95, 75, 21);
 
             //---- coachButton ----
             coachButton.setText("Coach");
