@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="Added titles and icon of app">
+    <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="Added controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Other/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Other/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Warning/LoginWarning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Warning/LoginWarning.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,7 @@
       <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\UI\Admin" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Run">
+  <component name="RunManager" selected="Application.LoginWarning">
     <configuration name="ALLLessonAdmin" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.Admin.ALLLessonAdmin" />
       <module name="Group85" />
@@ -95,12 +96,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LessonDetailAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI.Admin.LessonDetailAdmin" />
+    <configuration name="LoginWarning" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.Warning.LoginWarning" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GUI.Admin.*" />
+          <option name="PATTERN" value="GUI.Warning.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,21 +148,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.ALLLessonAdmin" />
       <item itemvalue="Application.Run" />
-      <item itemvalue="Application.LessonDetailAdmin" />
       <item itemvalue="Application.NavigatorAdmin" />
       <item itemvalue="Application.NavigatorCoach" />
       <item itemvalue="Application.Buffer" />
+      <item itemvalue="Application.LoginWarning" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LoginWarning" />
         <item itemvalue="Application.Run" />
         <item itemvalue="Application.Buffer" />
         <item itemvalue="Application.NavigatorCoach" />
         <item itemvalue="Application.NavigatorAdmin" />
-        <item itemvalue="Application.LessonDetailAdmin" />
       </list>
     </recent_temporary>
   </component>
@@ -201,6 +213,8 @@
       <workItem from="1619220211542" duration="1142000" />
       <workItem from="1620298619617" duration="1841000" />
       <workItem from="1620304475517" duration="4384000" />
+      <workItem from="1620311650398" duration="596000" />
+      <workItem from="1620313140115" duration="3607000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1617952547719</created>
@@ -328,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619221189437</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added controller">
+      <created>1620311736004</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1620311736004</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +377,8 @@
     <MESSAGE value="Update" />
     <MESSAGE value="Added images and icons" />
     <MESSAGE value="Added titles and icon of app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added titles and icon of app" />
+    <MESSAGE value="Added controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added controller" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

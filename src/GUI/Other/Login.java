@@ -4,6 +4,7 @@ import GUI.Admin.NavigatorAdmin;
 import GUI.Coach.NavigatorCoach;
 import GUI.Member.NavigatorMember;
 import Controller.CoachFunction;
+import GUI.Warning.LoginWarning;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -35,6 +36,7 @@ public class Login extends JFrame {
                 NavigatorCoach.run();
             }
             else{
+                LoginWarning.run();
                 Login.run();
             }
         }
