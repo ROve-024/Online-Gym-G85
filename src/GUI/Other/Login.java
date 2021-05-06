@@ -3,6 +3,7 @@ package GUI.Other;
 import GUI.Admin.NavigatorAdmin;
 import GUI.Coach.NavigatorCoach;
 import GUI.Member.NavigatorMember;
+import Controller.CoachFunction;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -23,11 +24,19 @@ public class Login extends JFrame {
     private void loginButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         this.dispose();
+        String account = this.username.getText();
+        String password = new String(this.password.getPassword());
+//        System.out.println(account+": "+password);
         if(this.userButton.isSelected()){
             NavigatorMember.run();
         }
         else if(this.coachButton.isSelected()){
-            NavigatorCoach.run();
+            if(CoachFunction.login(account, password)){
+                NavigatorCoach.run();
+            }
+            else{
+                Login.run();
+            }
         }
         else if(this.adminButton.isSelected()){
             NavigatorAdmin.run();

@@ -1,0 +1,20 @@
+<DATA>
+
+	<ROW>
+		<ClassID>1</ClassID>
+		<IsLive>0</IsLive>
+		<Fee>10.00</Fee>
+		<CoachID>2</CoachID>
+		<VedioAddress>Rec.com</VedioAddress>
+		<Profile>yoga</Profile>
+	</ROW>
+
+	<ROW>
+		<ClassID>2</ClassID>
+		<IsLive>1</IsLive>
+		<Fee>20.00</Fee>
+		<CoachID>1</CoachID>
+		<VedioAddress>Live.com</VedioAddress>
+		<Profile>aerobics</Profile>
+	</ROW>
+</DATA>
