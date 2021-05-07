@@ -4,16 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="Added database`">
+    <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CoachFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CoachFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Admin/NavigatorAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Admin/NavigatorAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/NavigatorCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Coach/NavigatorCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Member/NavigatorMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Member/NavigatorMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Other/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/LoginSignUp/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Other/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/LoginSignUp/SignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Run.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Warning/LoginWarning.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Coach.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ClassFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ClassFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ClientFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ClientFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CoachFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CoachFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/OrderFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/OrderFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Admin/ALLLessonAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Admin/LessonDetailAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Admin/NavigatorAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/NavigatorAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Admin/UserManageAllAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/UserManageAllAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Buffer/Buffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/buffer/Buffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/EditProfileCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/EditProfileCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/LessonDetailCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/LessonDetailCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/MyLessonCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/NavigatorCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/NavigatorCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/PlanHomeCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/ProfileCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ProfileCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/UploadModify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/UploadModify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Coach/ViewCoachProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/LoginSignUp/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/loginSignUp/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/LoginSignUp/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/loginSignUp/SignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/EditProfileMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/EditProfileMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/LessonDetailMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/LessonHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/LessonVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonVideo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/MyLessonMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/MyLessonMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/NavigatorMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/NavigatorMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/PlanHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/ProfileMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/ProfileMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Member/ViewMemberProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/ViewMemberProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Run.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Warning/Warning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/warning/Warning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IO/Class/ClassData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IO/classes/ClassData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IO/Class/ReadClassXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IO/classes/ReadClassXml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IO/Class/WriteClassXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IO/classes/WriteClassXml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IO/Order/OrderData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IO/order/OrderData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IO/Order/ReadOrderXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IO/order/ReadOrderXml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IO/Order/WriteOrderXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IO/order/WriteOrderXml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IO/client/ReadClientXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IO/client/ReadClientXml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IO/coach/XmlTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/XmlTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Coach.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,11 +112,11 @@
   </component>
   <component name="RunManager" selected="Application.Run">
     <configuration name="ALLLessonAdmin" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI.Admin.ALLLessonAdmin" />
+      <option name="MAIN_CLASS_NAME" value="gui.admin.ALLLessonAdmin" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GUI.Admin.*" />
+          <option name="PATTERN" value="gui.admin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,11 +125,11 @@
       </method>
     </configuration>
     <configuration name="Buffer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI.Buffer.Buffer" />
+      <option name="MAIN_CLASS_NAME" value="gui.buffer.Buffer" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GUI.Buffer.*" />
+          <option name="PATTERN" value="gui.buffer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,7 +142,7 @@
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GUI.Warning.*" />
+          <option name="PATTERN" value="gui.warning.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,11 +151,11 @@
       </method>
     </configuration>
     <configuration name="NavigatorAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI.Admin.NavigatorAdmin" />
+      <option name="MAIN_CLASS_NAME" value="gui.admin.NavigatorAdmin" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GUI.Admin.*" />
+          <option name="PATTERN" value="gui.admin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,11 +164,11 @@
       </method>
     </configuration>
     <configuration name="NavigatorCoach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI.Coach.NavigatorCoach" />
+      <option name="MAIN_CLASS_NAME" value="gui.coach.NavigatorCoach" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GUI.Coach.*" />
+          <option name="PATTERN" value="gui.coach.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,11 +177,11 @@
       </method>
     </configuration>
     <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI.Run" />
+      <option name="MAIN_CLASS_NAME" value="Run" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GUI.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -222,7 +257,7 @@
       <workItem from="1620311650398" duration="596000" />
       <workItem from="1620313140115" duration="3724000" />
       <workItem from="1620346541879" duration="1353000" />
-      <workItem from="1620350462056" duration="992000" />
+      <workItem from="1620350462056" duration="3608000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1617952547719</created>
@@ -378,7 +413,21 @@
       <option name="project" value="LOCAL" />
       <updated>1620350482389</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="update">
+      <created>1620351633469</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1620351633469</updated>
+    </task>
+    <task id="LOCAL-00024" summary="update">
+      <created>1620351670385</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1620351670385</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +446,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update" />
     <MESSAGE value="README" />
     <MESSAGE value="Improve user experience" />
     <MESSAGE value="Adjust file structure" />
@@ -409,7 +457,8 @@
     <MESSAGE value="Added controller" />
     <MESSAGE value="Added database" />
     <MESSAGE value="Added database`" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added database`" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

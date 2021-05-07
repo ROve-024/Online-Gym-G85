@@ -1,3 +1,3 @@
-# GUI DEMO
+# gui DEMO
 
 ![](README.assets/demo0_2.gif)
