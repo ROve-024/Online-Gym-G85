@@ -2,7 +2,7 @@
  * Created by JFormDesigner on Fri May 07 09:32:06 CST 2021
  */
 
-package gui.warning;
+package gui.other;
 
 import java.awt.*;
 import java.awt.event.*;

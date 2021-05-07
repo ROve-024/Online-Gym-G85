@@ -1,7 +1,7 @@
 package gui.coach;
 
 import controller.CoachFunction;
-import gui.buffer.Buffer;
+import gui.other.Buffer;
 import io.coach.CoachData;
 
 import java.awt.*;
@@ -513,10 +513,10 @@ public class ProfileCoach extends JFrame {
         CoachData coachData = CoachFunction.searchCoachByID(ID);
         this.uid.setText(Buffer.dataIsEmpty("UID: "+ ID));
         this.gym.setText(Buffer.dataIsEmpty("GYM: "));
-        this.name.setText(Buffer.dataIsEmpty(coachData.getCoachName()));
-        this.email.setText(Buffer.dataIsEmpty("Empty"));
-        this.phoneNumber.setText(Buffer.dataIsEmpty(coachData.getCoachPhonenumber()));
-        this.gender.setText(Buffer.dataIsEmpty(coachData.getCoachSex()));
+        this.name.setText(Buffer.dataIsEmpty(coachData.getName()));
+        this.email.setText(Buffer.dataIsEmpty(coachData.getEmail()));
+        this.phoneNumber.setText(Buffer.dataIsEmpty(coachData.getPhonenumber()));
+        this.gender.setText(Buffer.dataIsEmpty(coachData.getSex()));
 
     }
 

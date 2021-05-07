@@ -1,4 +1,4 @@
-package gui.buffer;
+package gui.other;
 import controller.CoachFunction;
 import io.coach.CoachData;
 
@@ -15,7 +15,6 @@ public class Buffer {
         }catch (IOException e){
             throw new RuntimeException(e);
         }
-        System.out.println(line);
         return line;
     }
     public static void setBuffer(String ID){
@@ -24,8 +23,8 @@ public class Buffer {
         try {
             file.createNewFile();
             BufferedWriter out = new BufferedWriter(new FileWriter(file));
-            out.write(ID); // \r\n为换行
-            out.flush(); // 把缓存区内容压入文件
+            out.write(ID);
+            out.flush();
             out.close();
         }
         catch (Exception e){
@@ -50,11 +49,5 @@ public class Buffer {
             result = string;
         }
         return result;
-    }
-
-    public static void main(String[] args) {
-        Buffer.getBuffer();
-        Buffer.setBuffer("1231231231321321321");
-        Buffer.getBuffer();
     }
 }

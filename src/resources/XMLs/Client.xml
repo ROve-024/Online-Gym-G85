@@ -6,6 +6,7 @@
         <Account>client001</Account>
         <Password>123456</Password>
         <Phonenumber>12375672136</Phonenumber>
+        <Email>123@qq.com</Email>
         <Sex>male</Sex>
         <Balance>0.99</Balance>
         <VIPlevel>1</VIPlevel>
@@ -16,8 +17,20 @@
         <Account>client002</Account>
         <Password>1234567</Password>
         <Phonenumber>16465498665</Phonenumber>
+        <Email>456@qq.com</Email>
         <Sex>female</Sex>
         <Balance>1000</Balance>
         <VIPlevel>3</VIPlevel>
+    </ROW>
+    <ROW>
+        <ClientID>3</ClientID>
+        <Name>Empty</Name>
+        <Account>S</Account>
+        <Password>1</Password>
+        <Phonenumber>Empty</Phonenumber>
+        <Email/>
+        <Sex>Empty</Sex>
+        <Balance/>
+        <VIPlevel/>
     </ROW>
 </DATA>

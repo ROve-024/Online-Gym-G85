@@ -57,6 +57,7 @@ public class ReadClientXml {
             emp.setAccount(getTagValue("Account", element));
             emp.setPassword(getTagValue("Password", element));
             emp.setPhonenumber(getTagValue("Phonenumber", element));
+			emp.setEmail(getTagValue("Email", element));
             emp.setSex(getTagValue("Sex", element));
 			emp.setBalance(getTagValue("Balance", element));
 			emp.setVIPlevel(getTagValue("VIPlevel", element));

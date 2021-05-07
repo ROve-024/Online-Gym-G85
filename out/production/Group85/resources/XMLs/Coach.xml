@@ -6,6 +6,7 @@
         <Account>coach001</Account>
         <Password>123456</Password>
         <Phonenumber>616534654</Phonenumber>
+        <Email>123@qq.com</Email>
         <Sex>male</Sex>
         <Profile>Strong</Profile>
     </ROW>
@@ -15,34 +16,18 @@
         <Account>coach002</Account>
         <Password>1234567</Password>
         <Phonenumber>321156466</Phonenumber>
+        <Email>456@qq.com</Email>
         <Sex>female</Sex>
         <Profile>thin</Profile>
     </ROW>
     <ROW>
-        <CoachID>21</CoachID>
-        <Name>Empty</Name>
-        <Account>coach003</Account>
-        <Password>1234567</Password>
-        <Phonenumber>Empty</Phonenumber>
-        <Sex>Empty</Sex>
-        <Profile>Empty</Profile>
-    </ROW>
-    <ROW>
-        <CoachID>22</CoachID>
-        <Name>Empty</Name>
-        <Account>coach004</Account>
-        <Password>1234567</Password>
-        <Phonenumber>Empty</Phonenumber>
-        <Sex>Empty</Sex>
-        <Profile>Empty</Profile>
-    </ROW>
-    <ROW>
-        <CoachID>23</CoachID>
+        <CoachID>3</CoachID>
         <Name>V.V.</Name>
         <Account>V</Account>
         <Password>1</Password>
         <Phonenumber>10086</Phonenumber>
-        <Sex>Empty</Sex>
+        <Email>username@example.com</Email>
+        <Sex>male</Sex>
         <Profile>Empty</Profile>
     </ROW>
 </DATA>

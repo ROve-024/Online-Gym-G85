@@ -42,6 +42,7 @@ public class LessonDetailCoach extends JFrame {
         coachMsg = new JTextPane();
         editButton = new JButton();
         homeButton = new JButton();
+        lessonType = new JLabel();
 
         //======== this ========
         setBackground(Color.white);
@@ -135,6 +136,12 @@ public class LessonDetailCoach extends JFrame {
             body.add(homeButton);
             homeButton.setBounds(675, 45, 100, 40);
 
+            //---- lessonType ----
+            lessonType.setText("Type");
+            lessonType.setBackground(new Color(240, 128, 128));
+            body.add(lessonType);
+            lessonType.setBounds(new Rectangle(new Point(350, 370), lessonType.getPreferredSize()));
+
             {
                 // compute preferred size
                 Dimension preferredSize = new Dimension();
@@ -184,6 +191,7 @@ public class LessonDetailCoach extends JFrame {
     private JTextPane coachMsg;
     private JButton editButton;
     private JButton homeButton;
+    private JLabel lessonType;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         LessonDetailCoach.run();

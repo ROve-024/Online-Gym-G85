@@ -51,6 +51,10 @@ public class WriteClientXml {
                     Phonenumber.setTextContent(clientData.getPhonenumber());
                     client.appendChild(Phonenumber);
 
+                    Element Email = document.createElement("Email");
+                    Email.setTextContent(clientData.getEmail());
+                    client.appendChild(Email);
+
                     Element Sex = document.createElement("Sex");
                     Sex.setTextContent(clientData.getSex());
                     client.appendChild(Sex);

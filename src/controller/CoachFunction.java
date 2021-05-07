@@ -22,11 +22,11 @@ public class CoachFunction {
 
     public static int maxCoachID(List<CoachData> coachList){
         int maxId = 0;
+        CoachData coachData;
 
         for(int i=0;i<coachList.size();i++) {
-            CoachData coachData;
             coachData = coachList.get(i);
-            int temp = Integer.parseInt(coachData.getCoachID());
+            int temp = Integer.parseInt(coachData.getID());
             if(maxId<=temp){
                 maxId = temp;
             }
@@ -43,7 +43,7 @@ public class CoachFunction {
 
         for(int  i = 0 ; i<coachList.size();i++){
             coachData = coachList.get(i);
-            if(coachData.getCoachAccount().equals(Account) && coachData.getCoachPassword().equals(Password)){
+            if(coachData.getAccount().equals(Account) && coachData.getPassword().equals(Password)){
                 ifMatch = true;
             }
         }
@@ -57,7 +57,7 @@ public class CoachFunction {
 
         for(int  i = 0 ; i<coachList.size();i++){
             CoachData temp = coachList.get(i);
-            if(temp.getCoachAccount().equals(Account)){
+            if(temp.getAccount().equals(Account)){
                 ifExist = true;
             }
         }
@@ -72,13 +72,14 @@ public class CoachFunction {
 
         String newID = Integer.toString(maxCoachID(coachList)+1);
 
-        coachData.setCoachAccount(Account);
+        coachData.setAccount(Account);
         coachData.setCoachID(newID);
-        coachData.setCoachName("Empty");
-        coachData.setCoachPassword(Password);
-        coachData.setCoachPhonenumber("Empty");
-        coachData.setCoachProfile("Empty");
-        coachData.setCoachSex("Empty");
+        coachData.setName("Empty");
+        coachData.setPassword(Password);
+        coachData.setPhonenumber("Empty");
+        coachData.setEmail("Empty");
+        coachData.setProfile("Empty");
+        coachData.setSex("Empty");
 
         coachList.add(coachData);
 
@@ -94,7 +95,7 @@ public class CoachFunction {
         for(int i=0;i<coachList.size();i++) {
             CoachData temp;
             temp = coachList.get(i);
-            if(temp.getCoachName().equals(Name)){
+            if(temp.getName().equals(Name)){
                 coachData = temp;
             }
         }
@@ -109,7 +110,7 @@ public class CoachFunction {
         for(int i=0;i<coachList.size();i++) {
             CoachData temp;
             temp = coachList.get(i);
-            if(temp.getCoachID().equals(ID)){
+            if(temp.getID().equals(ID)){
                 coachData = temp;
             }
         }
@@ -122,12 +123,13 @@ public class CoachFunction {
         for(int i=0;i<coachList.size();i++) {
             CoachData temp;
             temp = coachList.get(i);
-            if(temp.getCoachAccount().equals(updateCoachData.getCoachAccount())){
-                coachList.get(i).setCoachName(updateCoachData.getCoachName());
-                coachList.get(i).setCoachPassword(updateCoachData.getCoachPassword());
-                coachList.get(i).setCoachPhonenumber(updateCoachData.getCoachPhonenumber());
-                coachList.get(i).setCoachProfile(updateCoachData.getCoachProfile());
-                coachList.get(i).setCoachSex(updateCoachData.getCoachSex());
+            if(temp.getAccount().equals(updateCoachData.getAccount())){
+                coachList.get(i).setName(updateCoachData.getName());
+                coachList.get(i).setPassword(updateCoachData.getPassword());
+                coachList.get(i).setPhonenumber(updateCoachData.getPhonenumber());
+                coachList.get(i).setEmail(updateCoachData.getEmail());
+                coachList.get(i).setProfile(updateCoachData.getProfile());
+                coachList.get(i).setSex(updateCoachData.getSex());
             }
         }
 
@@ -140,7 +142,7 @@ public class CoachFunction {
         for(int i=0;i<coachList.size();i++) {
             CoachData temp;
             temp = coachList.get(i);
-            if(temp.getCoachID().equals(ID)) {
+            if(temp.getID().equals(ID)) {
                 coachList.remove(i);
             }
         }
@@ -153,7 +155,7 @@ public class CoachFunction {
         for(int i=0;i<coachList.size();i++) {
             CoachData temp;
             temp = coachList.get(i);
-            if(temp.getCoachAccount().equals(Account)) {
+            if(temp.getAccount().equals(Account)) {
                 coachList.remove(i);
             }
         }
@@ -167,10 +169,10 @@ public class CoachFunction {
         for(int i=0;i<coachList.size();i++) {
             CoachData temp;
             temp = coachList.get(i);
-            if(temp.getCoachAccount().equals(Account)){
+            if(temp.getAccount().equals(Account)){
                 coachData = temp;
             }
         }
-        return coachData.getCoachID();
+        return coachData.getID();
     }
 }

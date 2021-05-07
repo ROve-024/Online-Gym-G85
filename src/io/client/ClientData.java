@@ -7,6 +7,7 @@ public class ClientData {
 	private String Account;
 	private String Password;
 	private String Phonenumber;
+	private String Email;
 	private String Sex;
 	private String Balance;
 	private String VIPlevel;
@@ -35,6 +36,11 @@ public class ClientData {
 	public void setPhonenumber(String Phonenumber)
 	{
 		this.Phonenumber = Phonenumber;
+	}
+
+	public void setEmail(String Email)
+	{
+		this.Email = Email;
 	}
 	
 	public void setSex(String Sex)
@@ -78,6 +84,11 @@ public class ClientData {
 		return this.Phonenumber;
 	}
 
+	public String getEmail()
+	{
+		return this.Email;
+	}
+
 	public String getSex()
 	{
 		return this.Sex;
@@ -103,6 +114,7 @@ public class ClientData {
 				"Account: " + Account + "\n" +
 				"Password: " + Password + "\n" +
 				"Phonenumber: " + Phonenumber + "\n" +
+				"Email" + Email + "\n" +
 				"Sex: " + Sex + "\n" +
 				"Balance: " + Balance + "\n" +
 				"VIPlevel: " + VIPlevel + "\n" +

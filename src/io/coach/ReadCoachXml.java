@@ -51,12 +51,13 @@ public class ReadCoachXml {
 		{
 			Element element = (Element) node;
 			emp.setCoachID(getTagValue("CoachID", element));
-            emp.setCoachName(getTagValue("Name", element));
-            emp.setCoachAccount(getTagValue("Account", element));
-            emp.setCoachPassword(getTagValue("Password", element));
-            emp.setCoachPhonenumber(getTagValue("Phonenumber", element));
-            emp.setCoachSex(getTagValue("Sex", element));
-            emp.setCoachProfile(getTagValue("Profile", element));
+            emp.setName(getTagValue("Name", element));
+            emp.setAccount(getTagValue("Account", element));
+            emp.setPassword(getTagValue("Password", element));
+            emp.setPhonenumber(getTagValue("Phonenumber", element));
+			emp.setEmail(getTagValue("Email", element));
+            emp.setSex(getTagValue("Sex", element));
+            emp.setProfile(getTagValue("Profile", element));
 		}
 		
 		return emp;

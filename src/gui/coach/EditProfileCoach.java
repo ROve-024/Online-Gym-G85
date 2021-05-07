@@ -5,8 +5,8 @@
 package gui.coach;
 
 import controller.CoachFunction;
-import gui.buffer.Buffer;
-import gui.warning.Warning;
+import gui.other.Buffer;
+import gui.other.Warning;
 import io.coach.CoachData;
 
 import java.awt.*;
@@ -25,18 +25,17 @@ public class EditProfileCoach extends JFrame {
     private void finishButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         CoachData coachData = Buffer.getSession();
-        System.out.println(coachData.getCoachAccount()+" "+coachData.getCoachPassword());
-        if(CoachFunction.loginMatch(coachData.getCoachAccount(), new String(this.currentPassword.getPassword()))){
+        if(CoachFunction.loginMatch(coachData.getAccount(), new String(this.currentPassword.getPassword()))){
             if(new String(this.newPassword.getPassword()).equals(new String(this.confirmPassword.getPassword()))){
-                coachData.setCoachName(Buffer.toEmpty(this.name.getText()));
-                //email
-                coachData.setCoachPhonenumber(Buffer.toEmpty(this.phoneNumber.getText()));
-                coachData.setCoachPassword(Buffer.toEmpty(new String(this.newPassword.getPassword())));
+                coachData.setName(Buffer.toEmpty(this.name.getText()));
+                coachData.setEmail(Buffer.toEmpty(this.email.getText()));
+                coachData.setPhonenumber(Buffer.toEmpty(this.phoneNumber.getText()));
+                coachData.setPassword(Buffer.toEmpty(new String(this.newPassword.getPassword())));
                 if(maleRadio.isSelected()){
-                    coachData.setCoachSex("male");
+                    coachData.setSex("male");
                 }
                 else{
-                    coachData.setCoachSex("female");
+                    coachData.setSex("female");
                 }
                 CoachFunction.updateCoachInfo(coachData);
                 ProfileCoach.run();
@@ -150,10 +149,10 @@ public class EditProfileCoach extends JFrame {
 
                 //---- name ----
                 name.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
-                name.setBorder(null);
+                name.setBorder(new EmptyBorder(5, 10, 5, 0));
                 name.setMargin(new Insets(2, 10, 2, 6));
                 nameContainer.add(name);
-                name.setBounds(185, 14, 500, name.getPreferredSize().height);
+                name.setBounds(185, 14, 500, 30);
 
                 {
                     // compute preferred size
@@ -186,10 +185,10 @@ public class EditProfileCoach extends JFrame {
 
                 //---- email ----
                 email.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
-                email.setBorder(null);
+                email.setBorder(new EmptyBorder(5, 10, 5, 0));
                 email.setMargin(new Insets(2, 10, 2, 6));
                 emailContainer.add(email);
-                email.setBounds(185, 14, 500, email.getPreferredSize().height);
+                email.setBounds(185, 14, 500, 30);
 
                 {
                     // compute preferred size
@@ -222,10 +221,10 @@ public class EditProfileCoach extends JFrame {
 
                 //---- phoneNumber ----
                 phoneNumber.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
-                phoneNumber.setBorder(null);
+                phoneNumber.setBorder(new EmptyBorder(5, 10, 5, 0));
                 phoneNumber.setMargin(new Insets(2, 10, 2, 6));
                 phoneNumberContainer.add(phoneNumber);
-                phoneNumber.setBounds(185, 14, 500, phoneNumber.getPreferredSize().height);
+                phoneNumber.setBounds(185, 14, 500, 30);
 
                 {
                     // compute preferred size
@@ -258,10 +257,10 @@ public class EditProfileCoach extends JFrame {
 
                 //---- currentPassword ----
                 currentPassword.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
-                currentPassword.setBorder(null);
+                currentPassword.setBorder(new EmptyBorder(5, 10, 5, 0));
                 currentPassword.setMargin(new Insets(2, 10, 2, 6));
                 currentPasswordContainer.add(currentPassword);
-                currentPassword.setBounds(185, 14, 500, currentPassword.getPreferredSize().height);
+                currentPassword.setBounds(185, 14, 500, 30);
 
                 {
                     // compute preferred size
@@ -294,10 +293,10 @@ public class EditProfileCoach extends JFrame {
 
                 //---- newPassword ----
                 newPassword.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
-                newPassword.setBorder(null);
+                newPassword.setBorder(new EmptyBorder(5, 10, 5, 0));
                 newPassword.setMargin(new Insets(2, 10, 2, 6));
                 newPasswordContainer.add(newPassword);
-                newPassword.setBounds(185, 14, 500, newPassword.getPreferredSize().height);
+                newPassword.setBounds(185, 14, 500, 30);
 
                 {
                     // compute preferred size
@@ -330,10 +329,10 @@ public class EditProfileCoach extends JFrame {
 
                 //---- confirmPassword ----
                 confirmPassword.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
-                confirmPassword.setBorder(null);
+                confirmPassword.setBorder(new EmptyBorder(5, 10, 5, 0));
                 confirmPassword.setMargin(new Insets(2, 10, 2, 6));
                 confirmPasswordContainer.add(confirmPassword);
-                confirmPassword.setBounds(185, 14, 500, confirmPassword.getPreferredSize().height);
+                confirmPassword.setBounds(185, 14, 500, 30);
 
                 {
                     // compute preferred size
@@ -459,13 +458,13 @@ public class EditProfileCoach extends JFrame {
     }
     private void init(){
         CoachData coachData = Buffer.getSession();
-        this.name.setText(Buffer.dataIsEmpty(coachData.getCoachName()));
-        this.email.setText(Buffer.dataIsEmpty(""));
-        this.phoneNumber.setText(Buffer.dataIsEmpty(coachData.getCoachPhonenumber()));
-        this.currentPassword.setText(Buffer.dataIsEmpty(coachData.getCoachPassword()));
-        this.newPassword.setText(Buffer.dataIsEmpty(coachData.getCoachPassword()));
-        this.confirmPassword.setText(Buffer.dataIsEmpty(coachData.getCoachPassword()));
-        if(coachData.getCoachSex().equals("male")){
+        this.name.setText(Buffer.dataIsEmpty(coachData.getName()));
+        this.email.setText(Buffer.dataIsEmpty(coachData.getEmail()));
+        this.phoneNumber.setText(Buffer.dataIsEmpty(coachData.getPhonenumber()));
+        this.currentPassword.setText(Buffer.dataIsEmpty(coachData.getPassword()));
+        this.newPassword.setText(Buffer.dataIsEmpty(coachData.getPassword()));
+        this.confirmPassword.setText(Buffer.dataIsEmpty(coachData.getPassword()));
+        if(coachData.getSex().equals("male")){
             this.maleRadio.setSelected(true);
             this.femaleRadio.setSelected(false);
         }

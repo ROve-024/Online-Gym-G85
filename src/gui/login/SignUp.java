@@ -1,8 +1,10 @@
-package gui.loginSignUp;
+package gui.login;
 
+import javax.swing.border.*;
+import controller.ClientFunction;
 import controller.CoachFunction;
-import gui.buffer.Buffer;
-import gui.warning.Warning;
+import gui.other.Buffer;
+import gui.other.Warning;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -25,20 +27,50 @@ public class SignUp extends JFrame {
         String account = this.account.getText();
         String password = new String(this.password.getPassword());
         String rePassword = new String(this.rePassword.getPassword());
-        System.out.println(password+"\n"+rePassword);
-        if(CoachFunction.ifExistSameAccount(account))
-        {
-            Warning.run("The account entered already exists");
+        if(userButton.isSelected()){
+            if(ClientFunction.ifExistSameAccount(account))
+            {
+                Warning.run("The account entered already exists");
+            }
+            else if(!password.equals(rePassword)){
+                Warning.run("The password did not match the re-typed password");
+            }
+            else{
+                String ID = ClientFunction.signUpSubmit(account,password);
+                Buffer.setBuffer(ID);
+                Login.run();
+                this.dispose();
+            }
         }
-        else if(!password.equals(rePassword)){
-
-            Warning.run("The password did not match the re-typed password");
+        else if(coachButton.isSelected()){
+            if(CoachFunction.ifExistSameAccount(account))
+            {
+                Warning.run("The account entered already exists");
+            }
+            else if(!password.equals(rePassword)){
+                Warning.run("The password did not match the re-typed password");
+            }
+            else{
+                String ID = CoachFunction.signUpSubmit(account,password);
+                Buffer.setBuffer(ID);
+                Login.run();
+                this.dispose();
+            }
         }
-        else{
-            String ID = CoachFunction.signUpSubmit(account,password);
-            Buffer.setBuffer(ID);
-            Login.run();
-            this.dispose();
+        else if(adminButton.isSelected()){
+//            if(CoachFunction.ifExistSameAccount(account))
+//            {
+//                Warning.run("The account entered already exists");
+//            }
+//            else if(!password.equals(rePassword)){
+//                Warning.run("The password did not match the re-typed password");
+//            }
+//            else{
+//                String ID = CoachFunction.signUpSubmit(account,password);
+//                Buffer.setBuffer(ID);
+//                Login.run();
+//                this.dispose();
+//            }
         }
     }
 
@@ -55,6 +87,9 @@ public class SignUp extends JFrame {
         password = new JPasswordField();
         policy = new JButton();
         agree = new JCheckBox();
+        accountTip = new JLabel();
+        passwordTip = new JLabel();
+        confirmTip = new JLabel();
 
         //======== this ========
         setIconImage(new ImageIcon(getClass().getResource("/resources/icons/gym.png")).getImage());
@@ -85,40 +120,46 @@ public class SignUp extends JFrame {
 
             //---- userButton ----
             userButton.setText("User");
-            userButton.setBackground(UIManager.getColor("Button.darcula.disabledText.shadow"));
+            userButton.setBackground(Color.white);
             userButton.setSelected(true);
+            userButton.setForeground(Color.gray);
             body.add(userButton);
-            userButton.setBounds(new Rectangle(new Point(55, 95), userButton.getPreferredSize()));
+            userButton.setBounds(new Rectangle(new Point(55, 305), userButton.getPreferredSize()));
 
             //---- adminButton ----
             adminButton.setText("Admin");
-            adminButton.setBackground(UIManager.getColor("Button.darcula.disabledText.shadow"));
+            adminButton.setBackground(Color.white);
+            adminButton.setForeground(Color.gray);
             body.add(adminButton);
-            adminButton.setBounds(280, 95, 70, 21);
+            adminButton.setBounds(280, 305, 70, 21);
 
             //---- coachButton ----
             coachButton.setText("Coach");
-            coachButton.setBackground(UIManager.getColor("Button.darcula.disabledText.shadow"));
+            coachButton.setBackground(Color.white);
+            coachButton.setForeground(Color.gray);
             body.add(coachButton);
-            coachButton.setBounds(165, 95, 70, 21);
+            coachButton.setBounds(165, 305, 70, 21);
 
             //---- account ----
             account.setBackground(new Color(242, 242, 242));
             account.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+            account.setBorder(new EmptyBorder(5, 10, 5, 0));
             body.add(account);
-            account.setBounds(50, 130, 300, 50);
+            account.setBounds(50, 85, 300, 50);
 
             //---- rePassword ----
             rePassword.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 18));
             rePassword.setBackground(new Color(242, 242, 242));
+            rePassword.setBorder(new EmptyBorder(5, 10, 5, 0));
             body.add(rePassword);
-            rePassword.setBounds(50, 250, 300, 50);
+            rePassword.setBounds(50, 245, 300, 50);
 
             //---- password ----
             password.setBackground(new Color(242, 242, 242));
             password.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+            password.setBorder(new EmptyBorder(5, 10, 5, 0));
             body.add(password);
-            password.setBounds(50, 190, 300, 50);
+            password.setBounds(50, 165, 300, 50);
 
             //---- policy ----
             policy.setText("Terms & Conditions");
@@ -127,13 +168,37 @@ public class SignUp extends JFrame {
             policy.setForeground(new Color(22, 155, 213));
             policy.setHorizontalAlignment(SwingConstants.LEFT);
             body.add(policy);
-            policy.setBounds(213, 300, 157, 50);
+            policy.setBounds(212, 330, 157, 50);
 
             //---- agree ----
             agree.setText("I have read and agree to ");
             agree.setBackground(Color.white);
             body.add(agree);
-            agree.setBounds(50, 300, 170, 50);
+            agree.setBounds(50, 330, 170, 50);
+
+            //---- accountTip ----
+            accountTip.setText("ACCOUNT");
+            accountTip.setBackground(Color.white);
+            accountTip.setFont(new Font("Arial", Font.PLAIN, 12));
+            accountTip.setForeground(Color.gray);
+            body.add(accountTip);
+            accountTip.setBounds(50, 65, 100, accountTip.getPreferredSize().height);
+
+            //---- passwordTip ----
+            passwordTip.setText("PASSWORD");
+            passwordTip.setBackground(Color.white);
+            passwordTip.setFont(new Font("Arial", Font.PLAIN, 12));
+            passwordTip.setForeground(Color.gray);
+            body.add(passwordTip);
+            passwordTip.setBounds(50, 145, 100, 14);
+
+            //---- confirmTip ----
+            confirmTip.setText("CONFIRM");
+            confirmTip.setBackground(Color.white);
+            confirmTip.setFont(new Font("Arial", Font.PLAIN, 12));
+            confirmTip.setForeground(Color.gray);
+            body.add(confirmTip);
+            confirmTip.setBounds(50, 225, 100, 14);
 
             {
                 // compute preferred size
@@ -151,7 +216,7 @@ public class SignUp extends JFrame {
             }
         }
         contentPane.add(body);
-        body.setBounds(0, 0, 400, 675);
+        body.setBounds(0, 0, 400, 645);
 
         {
             // compute preferred size
@@ -190,6 +255,9 @@ public class SignUp extends JFrame {
     private JPasswordField password;
     private JButton policy;
     private JCheckBox agree;
+    private JLabel accountTip;
+    private JLabel passwordTip;
+    private JLabel confirmTip;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         SignUp.run();

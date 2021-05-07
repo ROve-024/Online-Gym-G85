@@ -1,9 +1,16 @@
 package gui.coach;
 
+import controller.ClassFunction;
+import controller.CoachFunction;
+import gui.other.Buffer;
+import io.classes.ClassData;
+import io.coach.CoachData;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
+import java.util.List;
 /*
  * Created by JFormDesigner on Fri Apr 09 11:03:20 CST 2021
  */
@@ -13,6 +20,8 @@ import javax.swing.border.*;
  * @author Anna
  */
 public class MyLessonCoach extends JFrame {
+    private int page = 0;
+    private List<ClassData> list;
     public MyLessonCoach() {
         initComponents();
     }
@@ -61,7 +70,7 @@ public class MyLessonCoach extends JFrame {
         // TODO add your code here
     }
 
-    private void moreButton6ActionPerformed(ActionEvent e) {
+    private void moreButton4ActionPerformed(ActionEvent e) {
         // TODO add your code here
     }
 
@@ -69,9 +78,10 @@ public class MyLessonCoach extends JFrame {
         // TODO add your code here
     }
 
-    private void moreButton4ActionPerformed(ActionEvent e) {
+    private void moreButton6ActionPerformed(ActionEvent e) {
         // TODO add your code here
     }
+
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
@@ -80,38 +90,38 @@ public class MyLessonCoach extends JFrame {
         title = new JLabel();
         lesson1 = new JPanel();
         lessonPicture1 = new JLabel();
-        lessonName = new JLabel();
-        lessonLevel1 = new JLabel();
+        lessonName1 = new JLabel();
+        lessonType1 = new JLabel();
         coachName1 = new JLabel();
         moreButton1 = new JButton();
         lesson2 = new JPanel();
         lessonName2 = new JLabel();
-        lessonLevel2 = new JLabel();
+        lessonType2 = new JLabel();
         coachName2 = new JLabel();
         lessonPicture2 = new JLabel();
         moreButton2 = new JButton();
         lesson3 = new JPanel();
         lessonName3 = new JLabel();
-        lessonLevel3 = new JLabel();
+        lessonType3 = new JLabel();
         moreButton3 = new JButton();
         coachName3 = new JLabel();
         lessonPicture3 = new JLabel();
-        lesson4 = new JPanel();
-        lessonName4 = new JLabel();
-        lessonLevel4 = new JLabel();
-        moreButton4 = new JButton();
-        coachName4 = new JLabel();
-        lessonPicture4 = new JLabel();
         lesson5 = new JPanel();
         lessonName5 = new JLabel();
-        lessonLevel5 = new JLabel();
+        lessonType5 = new JLabel();
         coachName5 = new JLabel();
         lessonPicture5 = new JLabel();
         moreButton5 = new JButton();
+        lesson4 = new JPanel();
+        lessonName4 = new JLabel();
+        lessonType4 = new JLabel();
+        moreButton4 = new JButton();
+        coachName4 = new JLabel();
+        lessonPicture4 = new JLabel();
         lesson6 = new JPanel();
         lessonPicture6 = new JLabel();
         lessonName6 = new JLabel();
-        lessonLevel6 = new JLabel();
+        lessonType6 = new JLabel();
         coachName6 = new JLabel();
         moreButton6 = new JButton();
         Upload = new JButton();
@@ -155,20 +165,20 @@ public class MyLessonCoach extends JFrame {
                 lesson1.add(lessonPicture1);
                 lessonPicture1.setBounds(1, 1, 238, 160);
 
-                //---- lessonName ----
-                lessonName.setText("Lesson Name");
-                lessonName.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
-                lessonName.setBackground(SystemColor.menu);
-                lesson1.add(lessonName);
-                lessonName.setBounds(5, 165, 195, lessonName.getPreferredSize().height);
+                //---- lessonName1 ----
+                lessonName1.setText("Lesson Name");
+                lessonName1.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
+                lessonName1.setBackground(SystemColor.menu);
+                lesson1.add(lessonName1);
+                lessonName1.setBounds(5, 165, 195, lessonName1.getPreferredSize().height);
 
-                //---- lessonLevel1 ----
-                lessonLevel1.setText("Lesson Level");
-                lessonLevel1.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                lessonLevel1.setBackground(SystemColor.menu);
-                lessonLevel1.setForeground(new Color(150, 150, 150));
-                lesson1.add(lessonLevel1);
-                lessonLevel1.setBounds(5, 190, 85, 17);
+                //---- lessonType1 ----
+                lessonType1.setText("Lesson Level");
+                lessonType1.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
+                lessonType1.setBackground(SystemColor.menu);
+                lessonType1.setForeground(new Color(150, 150, 150));
+                lesson1.add(lessonType1);
+                lessonType1.setBounds(5, 190, 85, 17);
 
                 //---- coachName1 ----
                 coachName1.setText("Coach Name");
@@ -217,13 +227,13 @@ public class MyLessonCoach extends JFrame {
                 lesson2.add(lessonName2);
                 lessonName2.setBounds(5, 165, 195, lessonName2.getPreferredSize().height);
 
-                //---- lessonLevel2 ----
-                lessonLevel2.setText("Lesson Level");
-                lessonLevel2.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                lessonLevel2.setBackground(SystemColor.menu);
-                lessonLevel2.setForeground(new Color(150, 150, 150));
-                lesson2.add(lessonLevel2);
-                lessonLevel2.setBounds(5, 190, 85, 17);
+                //---- lessonType2 ----
+                lessonType2.setText("Lesson Level");
+                lessonType2.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
+                lessonType2.setBackground(SystemColor.menu);
+                lessonType2.setForeground(new Color(150, 150, 150));
+                lesson2.add(lessonType2);
+                lessonType2.setBounds(5, 190, 85, 17);
 
                 //---- coachName2 ----
                 coachName2.setText("Coach Name");
@@ -278,13 +288,13 @@ public class MyLessonCoach extends JFrame {
                 lesson3.add(lessonName3);
                 lessonName3.setBounds(5, 165, 195, lessonName3.getPreferredSize().height);
 
-                //---- lessonLevel3 ----
-                lessonLevel3.setText("Lesson Level");
-                lessonLevel3.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                lessonLevel3.setBackground(SystemColor.menu);
-                lessonLevel3.setForeground(new Color(150, 150, 150));
-                lesson3.add(lessonLevel3);
-                lessonLevel3.setBounds(5, 190, 85, 17);
+                //---- lessonType3 ----
+                lessonType3.setText("Live Lesson");
+                lessonType3.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
+                lessonType3.setBackground(SystemColor.menu);
+                lessonType3.setForeground(new Color(150, 150, 150));
+                lesson3.add(lessonType3);
+                lessonType3.setBounds(5, 190, 85, 17);
 
                 //---- moreButton3 ----
                 moreButton3.setText("MORE");
@@ -327,67 +337,6 @@ public class MyLessonCoach extends JFrame {
             body.add(lesson3);
             lesson3.setBounds(535, 125, 240, 250);
 
-            //======== lesson4 ========
-            {
-                lesson4.setBackground(SystemColor.menu);
-                lesson4.setLayout(null);
-
-                //---- lessonName4 ----
-                lessonName4.setText("Lesson Name");
-                lessonName4.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
-                lessonName4.setBackground(SystemColor.menu);
-                lesson4.add(lessonName4);
-                lessonName4.setBounds(5, 165, 195, lessonName4.getPreferredSize().height);
-
-                //---- lessonLevel4 ----
-                lessonLevel4.setText("Lesson Level");
-                lessonLevel4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                lessonLevel4.setBackground(SystemColor.menu);
-                lessonLevel4.setForeground(new Color(150, 150, 150));
-                lesson4.add(lessonLevel4);
-                lessonLevel4.setBounds(5, 190, 85, 17);
-
-                //---- moreButton4 ----
-                moreButton4.setText("MORE");
-                moreButton4.setBackground(Color.white);
-                moreButton4.setBorderPainted(false);
-                moreButton4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                moreButton4.addActionListener(e -> moreButton4ActionPerformed(e));
-                lesson4.add(moreButton4);
-                moreButton4.setBounds(170, 220, 65, 25);
-
-                //---- coachName4 ----
-                coachName4.setText("Coach Name");
-                coachName4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                coachName4.setBackground(SystemColor.menu);
-                coachName4.setForeground(new Color(120, 120, 120));
-                lesson4.add(coachName4);
-                coachName4.setBounds(5, 225, 85, 17);
-
-                //---- lessonPicture4 ----
-                lessonPicture4.setBackground(SystemColor.activeCaption);
-                lessonPicture4.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/yoga.png")));
-                lesson4.add(lessonPicture4);
-                lessonPicture4.setBounds(1, 1, 238, 160);
-
-                {
-                    // compute preferred size
-                    Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < lesson4.getComponentCount(); i++) {
-                        Rectangle bounds = lesson4.getComponent(i).getBounds();
-                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                    }
-                    Insets insets = lesson4.getInsets();
-                    preferredSize.width += insets.right;
-                    preferredSize.height += insets.bottom;
-                    lesson4.setMinimumSize(preferredSize);
-                    lesson4.setPreferredSize(preferredSize);
-                }
-            }
-            body.add(lesson4);
-            lesson4.setBounds(535, 385, 240, 250);
-
             //======== lesson5 ========
             {
                 lesson5.setBackground(SystemColor.menu);
@@ -400,13 +349,13 @@ public class MyLessonCoach extends JFrame {
                 lesson5.add(lessonName5);
                 lessonName5.setBounds(5, 165, 195, lessonName5.getPreferredSize().height);
 
-                //---- lessonLevel5 ----
-                lessonLevel5.setText("Lesson Level");
-                lessonLevel5.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                lessonLevel5.setBackground(SystemColor.menu);
-                lessonLevel5.setForeground(new Color(150, 150, 150));
-                lesson5.add(lessonLevel5);
-                lessonLevel5.setBounds(5, 190, 85, 17);
+                //---- lessonType5 ----
+                lessonType5.setText("Lesson Level");
+                lessonType5.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
+                lessonType5.setBackground(SystemColor.menu);
+                lessonType5.setForeground(new Color(150, 150, 150));
+                lesson5.add(lessonType5);
+                lessonType5.setBounds(5, 190, 85, 17);
 
                 //---- coachName5 ----
                 coachName5.setText("Coach Name");
@@ -449,6 +398,67 @@ public class MyLessonCoach extends JFrame {
             body.add(lesson5);
             lesson5.setBounds(280, 385, 240, 250);
 
+            //======== lesson4 ========
+            {
+                lesson4.setBackground(SystemColor.menu);
+                lesson4.setLayout(null);
+
+                //---- lessonName4 ----
+                lessonName4.setText("Lesson Name");
+                lessonName4.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
+                lessonName4.setBackground(SystemColor.menu);
+                lesson4.add(lessonName4);
+                lessonName4.setBounds(5, 165, 195, lessonName4.getPreferredSize().height);
+
+                //---- lessonType4 ----
+                lessonType4.setText("Lesson Level");
+                lessonType4.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
+                lessonType4.setBackground(SystemColor.menu);
+                lessonType4.setForeground(new Color(150, 150, 150));
+                lesson4.add(lessonType4);
+                lessonType4.setBounds(5, 190, 85, 17);
+
+                //---- moreButton4 ----
+                moreButton4.setText("MORE");
+                moreButton4.setBackground(Color.white);
+                moreButton4.setBorderPainted(false);
+                moreButton4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                moreButton4.addActionListener(e -> moreButton4ActionPerformed(e));
+                lesson4.add(moreButton4);
+                moreButton4.setBounds(170, 220, 65, 25);
+
+                //---- coachName4 ----
+                coachName4.setText("Coach Name");
+                coachName4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
+                coachName4.setBackground(SystemColor.menu);
+                coachName4.setForeground(new Color(120, 120, 120));
+                lesson4.add(coachName4);
+                coachName4.setBounds(5, 225, 85, 17);
+
+                //---- lessonPicture4 ----
+                lessonPicture4.setBackground(SystemColor.activeCaption);
+                lessonPicture4.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/yoga.png")));
+                lesson4.add(lessonPicture4);
+                lessonPicture4.setBounds(1, 1, 238, 160);
+
+                {
+                    // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < lesson4.getComponentCount(); i++) {
+                        Rectangle bounds = lesson4.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = lesson4.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    lesson4.setMinimumSize(preferredSize);
+                    lesson4.setPreferredSize(preferredSize);
+                }
+            }
+            body.add(lesson4);
+            lesson4.setBounds(25, 385, 240, 250);
+
             //======== lesson6 ========
             {
                 lesson6.setBackground(SystemColor.menu);
@@ -467,13 +477,13 @@ public class MyLessonCoach extends JFrame {
                 lesson6.add(lessonName6);
                 lessonName6.setBounds(5, 165, 195, lessonName6.getPreferredSize().height);
 
-                //---- lessonLevel6 ----
-                lessonLevel6.setText("Lesson Level");
-                lessonLevel6.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                lessonLevel6.setBackground(SystemColor.menu);
-                lessonLevel6.setForeground(new Color(150, 150, 150));
-                lesson6.add(lessonLevel6);
-                lessonLevel6.setBounds(5, 190, 85, 17);
+                //---- lessonType6 ----
+                lessonType6.setText("Lesson Level");
+                lessonType6.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
+                lessonType6.setBackground(SystemColor.menu);
+                lessonType6.setForeground(new Color(150, 150, 150));
+                lesson6.add(lessonType6);
+                lessonType6.setBounds(5, 190, 85, 17);
 
                 //---- coachName6 ----
                 coachName6.setText("Coach Name");
@@ -508,7 +518,7 @@ public class MyLessonCoach extends JFrame {
                 }
             }
             body.add(lesson6);
-            lesson6.setBounds(25, 385, 240, 250);
+            lesson6.setBounds(535, 385, 240, 250);
 
             //---- Upload ----
             Upload.setBorderPainted(false);
@@ -586,38 +596,38 @@ public class MyLessonCoach extends JFrame {
     private JLabel title;
     private JPanel lesson1;
     private JLabel lessonPicture1;
-    private JLabel lessonName;
-    private JLabel lessonLevel1;
+    private JLabel lessonName1;
+    private JLabel lessonType1;
     private JLabel coachName1;
     private JButton moreButton1;
     private JPanel lesson2;
     private JLabel lessonName2;
-    private JLabel lessonLevel2;
+    private JLabel lessonType2;
     private JLabel coachName2;
     private JLabel lessonPicture2;
     private JButton moreButton2;
     private JPanel lesson3;
     private JLabel lessonName3;
-    private JLabel lessonLevel3;
+    private JLabel lessonType3;
     private JButton moreButton3;
     private JLabel coachName3;
     private JLabel lessonPicture3;
-    private JPanel lesson4;
-    private JLabel lessonName4;
-    private JLabel lessonLevel4;
-    private JButton moreButton4;
-    private JLabel coachName4;
-    private JLabel lessonPicture4;
     private JPanel lesson5;
     private JLabel lessonName5;
-    private JLabel lessonLevel5;
+    private JLabel lessonType5;
     private JLabel coachName5;
     private JLabel lessonPicture5;
     private JButton moreButton5;
+    private JPanel lesson4;
+    private JLabel lessonName4;
+    private JLabel lessonType4;
+    private JButton moreButton4;
+    private JLabel coachName4;
+    private JLabel lessonPicture4;
     private JPanel lesson6;
     private JLabel lessonPicture6;
     private JLabel lessonName6;
-    private JLabel lessonLevel6;
+    private JLabel lessonType6;
     private JLabel coachName6;
     private JButton moreButton6;
     private JButton Upload;
@@ -634,6 +644,7 @@ public class MyLessonCoach extends JFrame {
             public void run() {
                 try {
                     MyLessonCoach frame = new MyLessonCoach();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setResizable(false);
@@ -643,5 +654,53 @@ public class MyLessonCoach extends JFrame {
                 }
             }
         });
+    }
+    private void init(){
+        CoachData coachData = Buffer.getSession();
+        list = ClassFunction.searchClassByCoachName(coachData.getName());
+        this.update();
+
+    }
+    private void update(){
+        int i = 0;
+        int remainPage = this.list.size() - this.page * 6;
+        CoachData coachDataTemp;
+        ClassData[] classData = new ClassData[6];
+        if((remainPage / 6) > 0){
+            for(i = 0; i < 6; i++){
+                classData[i] = this.list.get(i + this.page*6);
+            }
+            this.lessonName1.setText(classData[0].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[0].getCoachID());
+            this.coachName1.setText(coachDataTemp.getName());
+            this.lessonType1.setText(classData[0].getIsLive());
+
+            this.lessonName2.setText(classData[1].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[1].getCoachID());
+            this.coachName2.setText(coachDataTemp.getName());
+            this.lessonType2.setText(classData[1].getIsLive());
+
+            this.lessonName3.setText(classData[2].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[2].getCoachID());
+            this.coachName3.setText(coachDataTemp.getName());
+            this.lessonType3.setText(classData[2].getIsLive());
+
+            this.lessonName4.setText(classData[3].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[3].getCoachID());
+            this.coachName1.setText(coachDataTemp.getName());
+            this.lessonType4.setText(classData[3].getIsLive());
+
+            this.lessonName5.setText(classData[4].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[4].getCoachID());
+            this.coachName5.setText(coachDataTemp.getName());
+            this.lessonType5.setText(classData[4].getIsLive());
+
+            this.lessonName6.setText(classData[5].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[5].getCoachID());
+            this.coachName6.setText(coachDataTemp.getName());
+            this.lessonType6.setText(classData[5].getIsLive());
+        }else{
+
+        }
     }
 }

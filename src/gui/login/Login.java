@@ -1,12 +1,13 @@
-package gui.loginSignUp;
+package gui.login;
 
+import javax.swing.border.*;
+import controller.ClientFunction;
 import gui.admin.NavigatorAdmin;
-import gui.buffer.Buffer;
+import gui.other.Buffer;
 import gui.coach.NavigatorCoach;
 import gui.member.NavigatorMember;
 import controller.CoachFunction;
-import gui.warning.Warning;
-import io.coach.CoachData;
+import gui.other.Warning;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -26,16 +27,23 @@ public class Login extends JFrame {
 
     private void loginButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-//        this.dispose();
+        Buffer.setBuffer("");
         String account = this.username.getText();
         String password = new String(this.password.getPassword());
 //        System.out.println(account+": "+password);
         if(this.userButton.isSelected()){
-            NavigatorMember.run();
+            if(ClientFunction.loginMatch(account, password)){
+                String ID = ClientFunction.getIDByAccount(account);
+                Buffer.setBuffer(ID);
+                NavigatorMember.run();
+                this.dispose();
+            }
+            else{
+                Warning.run("Wrong account or password, please try again.");
+            }
         }
         else if(this.coachButton.isSelected()){
             if(CoachFunction.loginMatch(account, password)){
-                Buffer.setBuffer("");
                 String ID = CoachFunction.getIDByAccount(account);
                 Buffer.setBuffer(ID);
                 NavigatorCoach.run();
@@ -70,6 +78,8 @@ public class Login extends JFrame {
         signUpTip = new JPanel();
         signUpMsg = new JLabel();
         signUpButton = new JButton();
+        accountTip = new JLabel();
+        PasswordTip = new JLabel();
 
         //======== this ========
         setBackground(Color.white);
@@ -103,32 +113,37 @@ public class Login extends JFrame {
             userButton.setText("User");
             userButton.setBackground(UIManager.getColor("Button.darcula.disabledText.shadow"));
             userButton.setSelected(true);
+            userButton.setForeground(Color.gray);
             loginBody.add(userButton);
-            userButton.setBounds(new Rectangle(new Point(55, 95), userButton.getPreferredSize()));
+            userButton.setBounds(new Rectangle(new Point(50, 225), userButton.getPreferredSize()));
 
             //---- adminButton ----
             adminButton.setText("Admin");
             adminButton.setBackground(UIManager.getColor("Button.darcula.disabledText.shadow"));
+            adminButton.setForeground(Color.gray);
             loginBody.add(adminButton);
-            adminButton.setBounds(280, 95, 75, 21);
+            adminButton.setBounds(275, 225, 75, 21);
 
             //---- coachButton ----
             coachButton.setText("Coach");
             coachButton.setBackground(UIManager.getColor("Button.darcula.disabledText.shadow"));
+            coachButton.setForeground(Color.gray);
             loginBody.add(coachButton);
-            coachButton.setBounds(165, 95, 70, 21);
+            coachButton.setBounds(160, 225, 70, 21);
 
             //---- username ----
             username.setBackground(new Color(242, 242, 242));
             username.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+            username.setBorder(new EmptyBorder(5, 10, 5, 10));
             loginBody.add(username);
-            username.setBounds(50, 130, 300, 50);
+            username.setBounds(50, 85, 300, 50);
 
             //---- password ----
             password.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 18));
             password.setBackground(new Color(242, 242, 242));
+            password.setBorder(new EmptyBorder(5, 10, 5, 0));
             loginBody.add(password);
-            password.setBounds(50, 190, 300, 50);
+            password.setBounds(50, 165, 300, 50);
 
             //======== signUpTip ========
             {
@@ -154,6 +169,22 @@ public class Login extends JFrame {
             loginBody.add(signUpTip);
             signUpTip.setBounds(92, 570, 215, 50);
 
+            //---- accountTip ----
+            accountTip.setText("ACCOUNT");
+            accountTip.setBackground(Color.white);
+            accountTip.setFont(new Font("Arial", Font.PLAIN, 12));
+            accountTip.setForeground(Color.gray);
+            loginBody.add(accountTip);
+            accountTip.setBounds(50, 65, 100, accountTip.getPreferredSize().height);
+
+            //---- PasswordTip ----
+            PasswordTip.setText("PASSWORD");
+            PasswordTip.setBackground(Color.white);
+            PasswordTip.setFont(new Font("Arial", Font.PLAIN, 12));
+            PasswordTip.setForeground(Color.gray);
+            loginBody.add(PasswordTip);
+            PasswordTip.setBounds(50, 145, 100, 17);
+
             {
                 // compute preferred size
                 Dimension preferredSize = new Dimension();
@@ -170,7 +201,7 @@ public class Login extends JFrame {
             }
         }
         contentPane.add(loginBody);
-        loginBody.setBounds(0, 0, 400, 675);
+        loginBody.setBounds(0, 0, 400, 645);
 
         {
             // compute preferred size
@@ -209,6 +240,8 @@ public class Login extends JFrame {
     private JPanel signUpTip;
     private JLabel signUpMsg;
     private JButton signUpButton;
+    private JLabel accountTip;
+    private JLabel PasswordTip;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         Login.run();

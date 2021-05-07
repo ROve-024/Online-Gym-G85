@@ -37,31 +37,35 @@ public class WriteCoachXml {
 
                     // 为coach添加子节点
                     Element CoachID = document.createElement("CoachID");
-                    CoachID.setTextContent(coachData.getCoachID());
+                    CoachID.setTextContent(coachData.getID());
                     coach.appendChild(CoachID);
 
                     Element Name = document.createElement("Name");
-                    Name.setTextContent(coachData.getCoachName());
+                    Name.setTextContent(coachData.getName());
                     coach.appendChild(Name);
 
                     Element Account = document.createElement("Account");
-                    Account.setTextContent(coachData.getCoachAccount());
+                    Account.setTextContent(coachData.getAccount());
                     coach.appendChild(Account);
 
                     Element Password = document.createElement("Password");
-                    Password.setTextContent(coachData.getCoachPassword());
+                    Password.setTextContent(coachData.getPassword());
                     coach.appendChild(Password);
 
                     Element Phonenumber = document.createElement("Phonenumber");
-                    Phonenumber.setTextContent(coachData.getCoachPhonenumber());
+                    Phonenumber.setTextContent(coachData.getPhonenumber());
                     coach.appendChild(Phonenumber);
 
+                    Element Email = document.createElement("Email");
+                    Email.setTextContent(coachData.getEmail());
+                    coach.appendChild(Email);
+
                     Element Sex = document.createElement("Sex");
-                    Sex.setTextContent(coachData.getCoachSex());
+                    Sex.setTextContent(coachData.getSex());
                     coach.appendChild(Sex);
 
                     Element Profile = document.createElement("Profile");
-                    Profile.setTextContent(coachData.getCoachProfile());
+                    Profile.setTextContent(coachData.getProfile());
                     coach.appendChild(Profile);
 
                     // 为根节点添加子节点

@@ -7,6 +7,7 @@ public class CoachData {
 	private String Account;
 	private String Password;
 	private String Phonenumber;
+	private String Email;
 	private String Sex;
 	private String Profile;
 	
@@ -15,67 +16,77 @@ public class CoachData {
 		this.CoachID = CoachID;
 	}
 	
-	public void setCoachName(String Name) 
+	public void setName(String Name)
 	{
 		this.Name = Name;
 	}
 	
-	public void setCoachAccount(String Account) 
+	public void setAccount(String Account)
 	{
 		this.Account = Account;
 	}
 	
-	public void setCoachPassword(String Password) 
+	public void setPassword(String Password)
 	{
 		this.Password = Password;
 	}
 	
-	public void setCoachPhonenumber(String Phonenumber) 
+	public void setPhonenumber(String Phonenumber)
 	{
 		this.Phonenumber = Phonenumber;
 	}
+
+	public void setEmail(String Email)
+	{
+		this.Email = Email;
+	}
 	
-	public void setCoachSex(String Sex) 
+	public void setSex(String Sex)
 	{
 		this.Sex = Sex;
 	}
 	
-	public void setCoachProfile(String Profile) 
+	public void setProfile(String Profile)
 	{
 		this.Profile = Profile;
 	}
 
-	public String getCoachID()
+	public String getID()
 	{
 		return CoachID;
 	}
 
-	public String getCoachName()
+	public String getName()
 	{
 		return this.Name;
 	}
 
-	public String getCoachAccount()
+	public String getAccount()
 	{
 		return this.Account;
 	}
 
-	public String getCoachPassword()
+	public String getPassword()
 	{
 		return this.Password;
 	}
 
-	public String getCoachPhonenumber()
+	public String getPhonenumber()
 	{
 		return this.Phonenumber;
 	}
 
-	public String getCoachSex()
+	public String getEmail()
+	{
+		return this.Email;
+	}
+
+	public String getSex()
 	{
 		return this.Sex;
 	}
 
-	public String getCoachProfile()
+	public String getProfile()
 	{
 		return this.Profile;
 	}
@@ -90,7 +101,7 @@ public class CoachData {
 				"Password: " + Password + "\n" +
 				"Phonenumber: " + Phonenumber + "\n" +
 				"Sex: " + Sex + "\n" +
-				"Profile: " + Profile + "\n" +
+				"Profilee: " + Profile + "\n" +
 				"----------------------------\n";
 
 	}

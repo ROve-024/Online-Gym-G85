@@ -3,6 +3,7 @@ package io.classes;
 public class ClassData {
 	
 	private String ClassID;
+	private String Name;
 	private String IsLive;
 	private String Fee;
 	private String CoachID;
@@ -13,6 +14,10 @@ public class ClassData {
 	public void setClassID(String ClassID)
 	{
 		this.ClassID = ClassID;
+	}
+
+	public void setName(String Name) {
+		this.Name = Name;
 	}
 	
 	public void setIsLive(String IsLive)
@@ -46,6 +51,10 @@ public class ClassData {
 		return this.ClassID;
 	}
 
+	public String getName(){
+		return this.Name;
+	}
+
 	public String getIsLive()
 	{
 		return this.IsLive;
@@ -77,6 +86,7 @@ public class ClassData {
 		return
 				"----------------------------\n" +
 				"ClassID: " + ClassID + "\n" +
+				"Name:" + Name + "\n" +
 				"IsLive: " + IsLive + "\n" +
 				"Fee: " + Fee + "\n" +
 				"CoachID: " + CoachID + "\n" +

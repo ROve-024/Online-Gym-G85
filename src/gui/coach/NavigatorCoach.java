@@ -1,9 +1,8 @@
 package gui.coach;
 
 import io.coach.CoachData;
-import controller.CoachFunction;
-import gui.buffer.Buffer;
-import gui.loginSignUp.Login;
+import gui.other.Buffer;
+import gui.login.Login;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -300,7 +299,7 @@ public class NavigatorCoach extends JFrame {
     }
     private void init(){
         CoachData coachData = Buffer.getSession();
-        this.username.setText(coachData.getCoachAccount());
+        this.username.setText(coachData.getAccount());
         this.welcomeMsg.setText("Welcome, coach.");
     }
 }

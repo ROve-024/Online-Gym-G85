@@ -48,6 +48,8 @@ public class EditProfileMember extends JFrame {
         confirmPasswordContainer = new JPanel();
         confirmPasswordTip = new JLabel();
         confirmPassword = new JPasswordField();
+        maleRadio = new JRadioButton();
+        femaleRadio = new JRadioButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -81,7 +83,7 @@ public class EditProfileMember extends JFrame {
             finishButton.setForeground(Color.white);
             finishButton.addActionListener(e -> finishButtonActionPerformed(e));
             body.add(finishButton);
-            finishButton.setBounds(50, 575, 90, 40);
+            finishButton.setBounds(50, 590, 90, 40);
 
             //======== decorationLine2 ========
             {
@@ -105,7 +107,7 @@ public class EditProfileMember extends JFrame {
                 }
             }
             body.add(decorationLine2);
-            decorationLine2.setBounds(35, 125, 4, 480);
+            decorationLine2.setBounds(35, 125, 4, 490);
 
             //======== nameContainer ========
             {
@@ -323,6 +325,20 @@ public class EditProfileMember extends JFrame {
             body.add(confirmPasswordContainer);
             confirmPasswordContainer.setBounds(50, 500, 700, 60);
 
+            //---- maleRadio ----
+            maleRadio.setText("Male");
+            maleRadio.setBackground(Color.white);
+            maleRadio.setForeground(Color.gray);
+            body.add(maleRadio);
+            maleRadio.setBounds(50, 565, 60, maleRadio.getPreferredSize().height);
+
+            //---- femaleRadio ----
+            femaleRadio.setText("Female");
+            femaleRadio.setBackground(Color.white);
+            femaleRadio.setForeground(Color.gray);
+            body.add(femaleRadio);
+            femaleRadio.setBounds(120, 565, 75, femaleRadio.getPreferredSize().height);
+
             {
                 // compute preferred size
                 Dimension preferredSize = new Dimension();
@@ -357,6 +373,11 @@ public class EditProfileMember extends JFrame {
         }
         pack();
         setLocationRelativeTo(getOwner());
+
+        //---- gender ----
+        var gender = new ButtonGroup();
+        gender.add(maleRadio);
+        gender.add(femaleRadio);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -384,6 +405,8 @@ public class EditProfileMember extends JFrame {
     private JPanel confirmPasswordContainer;
     private JLabel confirmPasswordTip;
     private JPasswordField confirmPassword;
+    private JRadioButton maleRadio;
+    private JRadioButton femaleRadio;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         EditProfileMember.run();

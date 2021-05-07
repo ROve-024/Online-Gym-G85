@@ -2,17 +2,55 @@
 <DATA>
     <ROW>
         <ClassID>1</ClassID>
-        <IsLive>0</IsLive>
+        <Name>haha</Name>
+        <IsLive>Live Lesson</IsLive>
         <Fee>10.00</Fee>
-        <CoachID>2</CoachID>
+        <CoachID>3</CoachID>
         <VedioAddress>Rec.com</VedioAddress>
         <Profile>yoga</Profile>
     </ROW>
     <ROW>
         <ClassID>2</ClassID>
-        <IsLive>1</IsLive>
+        <Name>xixi</Name>
+        <IsLive>Live Lesson</IsLive>
         <Fee>20.00</Fee>
-        <CoachID>1</CoachID>
+        <CoachID>3</CoachID>
+        <VedioAddress>Live.com</VedioAddress>
+        <Profile>aerobics</Profile>
+    </ROW>
+    <ROW>
+        <ClassID>3</ClassID>
+        <Name>ikik</Name>
+        <IsLive>Live Lesson</IsLive>
+        <Fee>20.00</Fee>
+        <CoachID>3</CoachID>
+        <VedioAddress>Live.com</VedioAddress>
+        <Profile>aerobics</Profile>
+    </ROW>
+    <ROW>
+        <ClassID>4</ClassID>
+        <Name>ybyb</Name>
+        <IsLive>Live Lesson</IsLive>
+        <Fee>20.00</Fee>
+        <CoachID>3</CoachID>
+        <VedioAddress>Live.com</VedioAddress>
+        <Profile>aerobics</Profile>
+    </ROW>
+    <ROW>
+        <ClassID>5</ClassID>
+        <Name>njnj</Name>
+        <IsLive>Live Lesson</IsLive>
+        <Fee>20.00</Fee>
+        <CoachID>3</CoachID>
+        <VedioAddress>Live.com</VedioAddress>
+        <Profile>aerobics</Profile>
+    </ROW>
+    <ROW>
+        <ClassID>6</ClassID>
+        <Name>veve</Name>
+        <IsLive>Live Lesson</IsLive>
+        <Fee>20.00</Fee>
+        <CoachID>3</CoachID>
         <VedioAddress>Live.com</VedioAddress>
         <Profile>aerobics</Profile>
     </ROW>

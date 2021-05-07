@@ -35,6 +35,10 @@ public class WriteClassXml {
                     ClassID.setTextContent(classData.getClassID());
                     classes.appendChild(ClassID);
 
+                    Element Name = document.createElement("Name");
+                    Name.setTextContent(classData.getName());
+                    classes.appendChild(Name);
+
                     Element IsLive = document.createElement("IsLive");
                     IsLive.setTextContent(classData.getIsLive());
                     classes.appendChild(IsLive);
