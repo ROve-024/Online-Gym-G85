@@ -687,7 +687,7 @@ public class MyLessonCoach extends JFrame {
 
             this.lessonName4.setText(classData[3].getName());
             coachDataTemp = CoachFunction.searchCoachByID(classData[3].getCoachID());
-            this.coachName1.setText(coachDataTemp.getName());
+            this.coachName4.setText(coachDataTemp.getName());
             this.lessonType4.setText(classData[3].getIsLive());
 
             this.lessonName5.setText(classData[4].getName());
