@@ -1,4 +1,4 @@
-package IO.coach;
+package io.coach;
 
 import java.io.File;
 
@@ -12,11 +12,12 @@ import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class DeleteXml {
+public class ModifyXml {
 	
-public void deleteXml() {
+	public void modifyXml() {
 		
 		//Scanner sc = new Scanner(System.in);
         String str = "Password";
@@ -33,16 +34,15 @@ public void deleteXml() {
 			doc.getDocumentElement().normalize();
 									
 			NodeList nList = doc.getElementsByTagName("ROW");
-			Element root = doc.getDocumentElement();
 			Element emp = null;
 	        //loop for each employee
 	        for(int i=0; i<nList.getLength();i++){
 	            emp = (Element) nList.item(i);
+	            Node password = emp.getElementsByTagName(str).item(0).getFirstChild();
 	            String coachid = emp.getElementsByTagName("CoachID").item(0).getFirstChild().getNodeValue();
 	            if(coachid.equalsIgnoreCase("1")) {
-	            	System.out.print("2222");
-	            	root.removeChild(emp);
-	            	break;
+	            	System.out.print("1111");
+	            	password.setNodeValue("654321");
 	            }
 	        }
 			 
@@ -56,5 +56,7 @@ public void deleteXml() {
 			e.printStackTrace();
 		}
 	}
-
+	
 }
+	
+	

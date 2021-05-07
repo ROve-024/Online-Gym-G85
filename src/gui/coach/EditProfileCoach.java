@@ -4,6 +4,11 @@
 
 package gui.coach;
 
+import controller.CoachFunction;
+import gui.buffer.Buffer;
+import gui.warning.Warning;
+import io.coach.CoachData;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -19,8 +24,31 @@ public class EditProfileCoach extends JFrame {
 
     private void finishButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        ProfileCoach.run();
-        this.dispose();
+        CoachData coachData = Buffer.getSession();
+        System.out.println(coachData.getCoachAccount()+" "+coachData.getCoachPassword());
+        if(CoachFunction.loginMatch(coachData.getCoachAccount(), new String(this.currentPassword.getPassword()))){
+            if(new String(this.newPassword.getPassword()).equals(new String(this.confirmPassword.getPassword()))){
+                coachData.setCoachName(Buffer.toEmpty(this.name.getText()));
+                //email
+                coachData.setCoachPhonenumber(Buffer.toEmpty(this.phoneNumber.getText()));
+                coachData.setCoachPassword(Buffer.toEmpty(new String(this.newPassword.getPassword())));
+                if(maleRadio.isSelected()){
+                    coachData.setCoachSex("male");
+                }
+                else{
+                    coachData.setCoachSex("female");
+                }
+                CoachFunction.updateCoachInfo(coachData);
+                ProfileCoach.run();
+                this.dispose();
+            }
+            else {
+                Warning.run("The password did not match the re-typed password");
+            }
+        }
+        else{
+            Warning.run("Wrong password,Please try again.");
+        }
     }
 
     private void initComponents() {
@@ -48,6 +76,8 @@ public class EditProfileCoach extends JFrame {
         confirmPasswordContainer = new JPanel();
         confirmPasswordTip = new JLabel();
         confirmPassword = new JPasswordField();
+        maleRadio = new JRadioButton();
+        femaleRadio = new JRadioButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -81,7 +111,7 @@ public class EditProfileCoach extends JFrame {
             finishButton.setForeground(Color.white);
             finishButton.addActionListener(e -> finishButtonActionPerformed(e));
             body.add(finishButton);
-            finishButton.setBounds(50, 575, 90, 40);
+            finishButton.setBounds(50, 590, 90, 40);
 
             //======== decorationLine2 ========
             {
@@ -105,7 +135,7 @@ public class EditProfileCoach extends JFrame {
                 }
             }
             body.add(decorationLine2);
-            decorationLine2.setBounds(35, 125, 4, 480);
+            decorationLine2.setBounds(35, 125, 4, 490);
 
             //======== nameContainer ========
             {
@@ -323,6 +353,20 @@ public class EditProfileCoach extends JFrame {
             body.add(confirmPasswordContainer);
             confirmPasswordContainer.setBounds(50, 500, 700, 60);
 
+            //---- maleRadio ----
+            maleRadio.setText("Male");
+            maleRadio.setBackground(Color.white);
+            maleRadio.setForeground(Color.gray);
+            body.add(maleRadio);
+            maleRadio.setBounds(50, 565, 60, maleRadio.getPreferredSize().height);
+
+            //---- femaleRadio ----
+            femaleRadio.setText("Female");
+            femaleRadio.setBackground(Color.white);
+            femaleRadio.setForeground(Color.gray);
+            body.add(femaleRadio);
+            femaleRadio.setBounds(120, 565, 75, 21);
+
             {
                 // compute preferred size
                 Dimension preferredSize = new Dimension();
@@ -357,6 +401,11 @@ public class EditProfileCoach extends JFrame {
         }
         pack();
         setLocationRelativeTo(getOwner());
+
+        //---- gender ----
+        var gender = new ButtonGroup();
+        gender.add(maleRadio);
+        gender.add(femaleRadio);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -384,6 +433,8 @@ public class EditProfileCoach extends JFrame {
     private JPanel confirmPasswordContainer;
     private JLabel confirmPasswordTip;
     private JPasswordField confirmPassword;
+    private JRadioButton maleRadio;
+    private JRadioButton femaleRadio;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 
     public static void main(String[] args) {
@@ -395,6 +446,7 @@ public class EditProfileCoach extends JFrame {
             public void run() {
                 try {
                     EditProfileCoach frame = new EditProfileCoach();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setResizable(false);
@@ -404,5 +456,22 @@ public class EditProfileCoach extends JFrame {
                 }
             }
         });
+    }
+    private void init(){
+        CoachData coachData = Buffer.getSession();
+        this.name.setText(Buffer.dataIsEmpty(coachData.getCoachName()));
+        this.email.setText(Buffer.dataIsEmpty(""));
+        this.phoneNumber.setText(Buffer.dataIsEmpty(coachData.getCoachPhonenumber()));
+        this.currentPassword.setText(Buffer.dataIsEmpty(coachData.getCoachPassword()));
+        this.newPassword.setText(Buffer.dataIsEmpty(coachData.getCoachPassword()));
+        this.confirmPassword.setText(Buffer.dataIsEmpty(coachData.getCoachPassword()));
+        if(coachData.getCoachSex().equals("male")){
+            this.maleRadio.setSelected(true);
+            this.femaleRadio.setSelected(false);
+        }
+        else{
+            this.maleRadio.setSelected(false);
+            this.femaleRadio.setSelected(true);
+        }
     }
 }

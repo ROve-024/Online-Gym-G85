@@ -1,4 +1,4 @@
-package IO.order;
+package io.order;
 
 public class OrderData {
 	

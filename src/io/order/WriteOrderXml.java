@@ -1,4 +1,4 @@
-package IO.classes;
+package io.order;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -12,56 +12,56 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.util.List;
 
-public class WriteClassXml {
+public class WriteOrderXml {
 
-        public void writeXML(List<ClassData> classList) {
+        public void writeXML(List<OrderData> orderList) {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            ClassData classData;
+            OrderData orderData;
             try {
                 DocumentBuilder builder = factory.newDocumentBuilder();
                 Document document = builder.newDocument();
 
                 // 创建根节点
-                Element classstore = document.createElement("DATA");
+                Element orderstore = document.createElement("DATA");
 
                 // 创建子节点
-                for(int i=0;i<classList.size();i++) {
-                    classData = classList.get(i);
+                for(int i=0;i<orderList.size();i++) {
+                    orderData = orderList.get(i);
 
-                    Element classes = document.createElement("ROW");
+                    Element order = document.createElement("ROW");
 
-                    // 为class添加子节点
-                    Element ClassID = document.createElement("ClassID");
-                    ClassID.setTextContent(classData.getClassID());
-                    classes.appendChild(ClassID);
+                    // 为order添加子节点
+                    Element OrderID = document.createElement("OrderID");
+                    OrderID.setTextContent(orderData.getOrderID());
+                    order.appendChild(OrderID);
 
-                    Element IsLive = document.createElement("IsLive");
-                    IsLive.setTextContent(classData.getIsLive());
-                    classes.appendChild(IsLive);
-
-                    Element Fee = document.createElement("Fee");
-                    Fee.setTextContent(classData.getFee());
-                    classes.appendChild(Fee);
+                    Element ClientID = document.createElement("ClientID");
+                    ClientID.setTextContent(orderData.getClientID());
+                    order.appendChild(ClientID);
 
                     Element CoachID = document.createElement("CoachID");
-                    CoachID.setTextContent(classData.getCoachID());
-                    classes.appendChild(CoachID);
+                    CoachID.setTextContent(orderData.getCoachID());
+                    order.appendChild(CoachID);
 
-                    Element VedioAddress = document.createElement("VedioAddress");
-                    VedioAddress.setTextContent(classData.getVedioAddress());
-                    classes.appendChild(VedioAddress);
+                    Element ClassID = document.createElement("ClassID");
+                    ClassID.setTextContent(orderData.getClassID());
+                    order.appendChild(ClassID);
 
-                    Element Profile = document.createElement("Profile");
-                    Profile.setTextContent(classData.getProfile());
-                    classes.appendChild(Profile);
+                    Element StartTime = document.createElement("StartTime");
+                    StartTime.setTextContent(orderData.getStartTime());
+                    order.appendChild(StartTime);
+
+                    Element Endtime = document.createElement("Endtime");
+                    Endtime.setTextContent(orderData.getEndtime());
+                    order.appendChild(Endtime);
 
 
                     // 为根节点添加子节点
-                    classstore.appendChild(classes);
+                    orderstore.appendChild(order);
                 }
 
                 // 将根节点添加到Document下
-                document.appendChild(classstore);
+                document.appendChild(orderstore);
 
                 /*
                  * 下面开始实现： 生成XML文件
@@ -77,7 +77,7 @@ public class WriteClassXml {
                 tf.setOutputProperty(OutputKeys.INDENT, "yes");
 
                 // 使用Transformer的transform()方法将DOM树转换成XML
-                File  xmlFile = new File("src/resources/XMLs/Class.xml");
+                File  xmlFile = new File("src/resources/XMLs/Order.xml");
                 tf.transform(new DOMSource(document), new StreamResult(xmlFile));
 
             } catch (ParserConfigurationException e) {

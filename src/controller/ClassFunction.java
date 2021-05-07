@@ -1,11 +1,11 @@
 package controller;
 
-import IO.classes.ClassData;
-import IO.classes.WriteClassXml;
+import io.classes.ClassData;
+import io.classes.WriteClassXml;
 
 import java.util.List;
 
-import static IO.classes.ReadClassXml.readClassXML;
+import static io.classes.ReadClassXml.readClassXML;
 
 public class ClassFunction {
     public static List getWholeClass(){                    //return the whole class info

@@ -1,5 +1,8 @@
 package gui.coach;
 
+import io.coach.CoachData;
+import controller.CoachFunction;
+import gui.buffer.Buffer;
 import gui.loginSignUp.Login;
 
 import java.awt.*;
@@ -118,8 +121,9 @@ public class NavigatorCoach extends JFrame {
 
             //---- welcomeMsg ----
             welcomeMsg.setText("Welcome, .....");
+            welcomeMsg.setForeground(Color.gray);
             body.add(welcomeMsg);
-            welcomeMsg.setBounds(new Rectangle(new Point(103, 60), welcomeMsg.getPreferredSize()));
+            welcomeMsg.setBounds(103, 60, 207, welcomeMsg.getPreferredSize().height);
 
             //---- decorationLine1 ----
             decorationLine1.setBackground(Color.black);
@@ -283,6 +287,7 @@ public class NavigatorCoach extends JFrame {
             public void run() {
                 try {
                     NavigatorCoach frame = new NavigatorCoach();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-1100/2,screenSize.height/2-700/2);
                     frame.setResizable(false);
@@ -292,5 +297,10 @@ public class NavigatorCoach extends JFrame {
                 }
             }
         });
+    }
+    private void init(){
+        CoachData coachData = Buffer.getSession();
+        this.username.setText(coachData.getCoachAccount());
+        this.welcomeMsg.setText("Welcome, coach.");
     }
 }

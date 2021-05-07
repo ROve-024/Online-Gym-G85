@@ -1,4 +1,4 @@
-package IO.order;
+package io.client;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -11,16 +11,16 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReadOrderXml {
+public class ReadClientXml {
 	
-	public static List readOrderXML() {
+	public static List readClientXML() {
 		
-		File  xmlFile = new File("src/resources/XMLs/Order.xml");
+		File  xmlFile = new File("src/resources/XMLs/Client.xml");
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();  //Step1
 		DocumentBuilder builder;
 
 		//now XML is loaded as Document in memory, lets convert it to Object List
-		List<OrderData> empList = new ArrayList<OrderData>();
+		List<ClientData> empList = new ArrayList<ClientData>();
 		try {
 			builder = factory.newDocumentBuilder();   //Step2
 			Document doc = builder.parse(xmlFile);  //Step3
@@ -31,10 +31,10 @@ public class ReadOrderXml {
 			NodeList nList = doc.getElementsByTagName("ROW");   //Read the contains in the node ROW
 						
 			for(int  i = 0 ; i<nList.getLength();i++){
-				empList.add(getOrderData(nList.item(i)));
+				empList.add(getClientData(nList.item(i)));
 			}
 			 //lets print Employee list information
-            //for (OrderData emp : empList) {
+            //for (ClientData emp : empList) {
             //    System.out.println(emp.toString());
             //}
 		}
@@ -45,19 +45,21 @@ public class ReadOrderXml {
 		return empList;
 	}
 	
-	private static OrderData getOrderData(Node node)
+	private static ClientData getClientData(Node node)
 	{
 		//XMLReaderDOM domReader = new XMLReaderDOM();
-		OrderData emp = new OrderData();
+		ClientData emp = new ClientData();
 		if (node.getNodeType() == Node.ELEMENT_NODE)
 		{
 			Element element = (Element) node;
-			emp.setOrderID(getTagValue("OrderID", element));
-            emp.setClientID(getTagValue("ClientID", element));
-            emp.setCoachID(getTagValue("CoachID", element));
-            emp.setClassID(getTagValue("ClassID", element));
-            emp.setStartTime(getTagValue("StartTime", element));
-            emp.setEndtime(getTagValue("Endtime", element));
+			emp.setClientID(getTagValue("ClientID", element));
+            emp.setName(getTagValue("Name", element));
+            emp.setAccount(getTagValue("Account", element));
+            emp.setPassword(getTagValue("Password", element));
+            emp.setPhonenumber(getTagValue("Phonenumber", element));
+            emp.setSex(getTagValue("Sex", element));
+			emp.setBalance(getTagValue("Balance", element));
+			emp.setVIPlevel(getTagValue("VIPlevel", element));
 		}
 		
 		return emp;

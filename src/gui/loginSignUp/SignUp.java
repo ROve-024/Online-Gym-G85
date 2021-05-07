@@ -32,7 +32,7 @@ public class SignUp extends JFrame {
         }
         else if(!password.equals(rePassword)){
 
-            Warning.run("The password did not match \nthe re-typed password");
+            Warning.run("The password did not match the re-typed password");
         }
         else{
             String ID = CoachFunction.signUpSubmit(account,password);

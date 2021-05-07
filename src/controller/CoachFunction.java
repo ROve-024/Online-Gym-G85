@@ -1,11 +1,11 @@
 package controller;
 
-import IO.coach.CoachData;
-import IO.coach.WriteCoachXml;
+import io.coach.CoachData;
+import io.coach.WriteCoachXml;
 
 import java.util.List;
 
-import static IO.coach.ReadCoachXml.readCoachXML;
+import static io.coach.ReadCoachXml.readCoachXML;
 
 public class CoachFunction {
 
@@ -116,18 +116,18 @@ public class CoachFunction {
         return coachData;
     }
 
-    public static void updateCoachInfo(String Account, String Name, String Password, String Phonenumber, String Profile, String Sex){
+    public static void updateCoachInfo(CoachData updateCoachData){
         List<CoachData> coachList = getWholeCoach();
 
         for(int i=0;i<coachList.size();i++) {
             CoachData temp;
             temp = coachList.get(i);
-            if(temp.getCoachAccount().equals(Account)){
-                coachList.get(i).setCoachName(Name);
-                coachList.get(i).setCoachPassword(Password);
-                coachList.get(i).setCoachPhonenumber(Phonenumber);
-                coachList.get(i).setCoachProfile(Profile);
-                coachList.get(i).setCoachSex(Sex);
+            if(temp.getCoachAccount().equals(updateCoachData.getCoachAccount())){
+                coachList.get(i).setCoachName(updateCoachData.getCoachName());
+                coachList.get(i).setCoachPassword(updateCoachData.getCoachPassword());
+                coachList.get(i).setCoachPhonenumber(updateCoachData.getCoachPhonenumber());
+                coachList.get(i).setCoachProfile(updateCoachData.getCoachProfile());
+                coachList.get(i).setCoachSex(updateCoachData.getCoachSex());
             }
         }
 
@@ -158,5 +158,19 @@ public class CoachFunction {
             }
         }
         writeCoach(coachList);
+    }
+
+    public static String getIDByAccount(String Account){
+        List<CoachData> coachList = getWholeCoach();
+        CoachData coachData = null;
+
+        for(int i=0;i<coachList.size();i++) {
+            CoachData temp;
+            temp = coachList.get(i);
+            if(temp.getCoachAccount().equals(Account)){
+                coachData = temp;
+            }
+        }
+        return coachData.getCoachID();
     }
 }

@@ -1,4 +1,4 @@
-package IO.classes;
+package io.classes;
 
 public class ClassData {
 	

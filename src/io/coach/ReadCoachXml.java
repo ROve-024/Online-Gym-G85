@@ -1,26 +1,24 @@
-package IO.classes;
+package io.coach;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
-public class ReadClassXml {
+import org.w3c.dom.Document;import org.w3c.dom.Element;
+import org.w3c.dom.Node;import org.w3c.dom.NodeList;
+
+public class ReadCoachXml {
 	
-	public static List readClassXML() {
+	public static List readCoachXML() {
 		
-		File  xmlFile = new File("src/resources/XMLs/Class.xml");
+		File  xmlFile = new File("src/resources/XMLs/Coach.xml");
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();  //Step1
 		DocumentBuilder builder;
 
 		//now XML is loaded as Document in memory, lets convert it to Object List
-		List<ClassData> empList = new ArrayList<ClassData>();
+		List<CoachData> empList = new ArrayList<CoachData>();
 		try {
 			builder = factory.newDocumentBuilder();   //Step2
 			Document doc = builder.parse(xmlFile);  //Step3
@@ -31,10 +29,10 @@ public class ReadClassXml {
 			NodeList nList = doc.getElementsByTagName("ROW");   //Read the contains in the node ROW
 						
 			for(int  i = 0 ; i<nList.getLength();i++){
-				empList.add(getClassData(nList.item(i)));
+				empList.add(getCoachData(nList.item(i)));
 			}
 			 //lets print Employee list information
-            //for (ClassData emp : empList) {
+            //for (CoachData emp : empList) {
             //    System.out.println(emp.toString());
             //}
 		}
@@ -45,19 +43,20 @@ public class ReadClassXml {
 		return empList;
 	}
 	
-	private static ClassData getClassData(Node node)
+	private static CoachData getCoachData(Node node) 
 	{
 		//XMLReaderDOM domReader = new XMLReaderDOM();
-		ClassData emp = new ClassData();
+		CoachData emp = new CoachData();
 		if (node.getNodeType() == Node.ELEMENT_NODE)
 		{
 			Element element = (Element) node;
-			emp.setClassID(getTagValue("ClassID", element));
-            emp.setIsLive(getTagValue("IsLive", element));
-            emp.setFee(getTagValue("Fee", element));
-            emp.setCoachID(getTagValue("CoachID", element));
-            emp.setVedioAddress(getTagValue("VedioAddress", element));
-            emp.setProfile(getTagValue("Profile", element));
+			emp.setCoachID(getTagValue("CoachID", element));
+            emp.setCoachName(getTagValue("Name", element));
+            emp.setCoachAccount(getTagValue("Account", element));
+            emp.setCoachPassword(getTagValue("Password", element));
+            emp.setCoachPhonenumber(getTagValue("Phonenumber", element));
+            emp.setCoachSex(getTagValue("Sex", element));
+            emp.setCoachProfile(getTagValue("Profile", element));
 		}
 		
 		return emp;

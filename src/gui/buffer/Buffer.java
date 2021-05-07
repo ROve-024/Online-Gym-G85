@@ -1,4 +1,7 @@
 package gui.buffer;
+import controller.CoachFunction;
+import io.coach.CoachData;
+
 import java.io.*;
 
 public class Buffer {
@@ -28,6 +31,25 @@ public class Buffer {
         catch (Exception e){
             System.out.println("Create File Error!");
         }
+    }
+    public static CoachData getSession(){
+        String ID = Buffer.getBuffer();
+        CoachData coachData = CoachFunction.searchCoachByID(ID);
+        return coachData;
+    }
+    public static String dataIsEmpty(String string){
+        String result = "";
+        if(!string.equals("Empty")){
+            result = string;
+        }
+        return result;
+    }
+    public static String toEmpty(String string){
+        String result = "Empty";
+        if(!string.equals("")){
+            result = string;
+        }
+        return result;
     }
 
     public static void main(String[] args) {

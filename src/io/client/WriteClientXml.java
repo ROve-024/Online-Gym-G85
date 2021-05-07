@@ -1,4 +1,4 @@
-package IO.client;
+package io.client;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

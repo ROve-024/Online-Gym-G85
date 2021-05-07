@@ -1,4 +1,4 @@
-package IO.client;
+package io.client;
 
 public class ClientData {
 	

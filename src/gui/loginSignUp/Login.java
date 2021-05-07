@@ -1,10 +1,12 @@
 package gui.loginSignUp;
 
 import gui.admin.NavigatorAdmin;
+import gui.buffer.Buffer;
 import gui.coach.NavigatorCoach;
 import gui.member.NavigatorMember;
 import controller.CoachFunction;
 import gui.warning.Warning;
+import io.coach.CoachData;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -33,11 +35,14 @@ public class Login extends JFrame {
         }
         else if(this.coachButton.isSelected()){
             if(CoachFunction.loginMatch(account, password)){
+                Buffer.setBuffer("");
+                String ID = CoachFunction.getIDByAccount(account);
+                Buffer.setBuffer(ID);
                 NavigatorCoach.run();
                 this.dispose();
             }
             else{
-                Warning.run("Wrong password, please try again.");
+                Warning.run("Wrong account or password, please try again.");
             }
         }
         else if(this.adminButton.isSelected()){

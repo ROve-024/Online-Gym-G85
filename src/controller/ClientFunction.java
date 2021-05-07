@@ -1,11 +1,11 @@
 package controller;
 
-import IO.client.ClientData;
-import IO.client.WriteClientXml;
+import io.client.ClientData;
+import io.client.WriteClientXml;
 
 import java.util.List;
 
-import static IO.client.ReadClientXml.readClientXML;
+import static io.client.ReadClientXml.readClientXML;
 
 public class ClientFunction {
     public static List getWholeClient(){                    //return the whole client info

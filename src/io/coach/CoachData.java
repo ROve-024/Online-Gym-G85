@@ -1,4 +1,4 @@
-package IO.coach;
+package io.coach;
 
 public class CoachData {
 	
@@ -90,7 +90,7 @@ public class CoachData {
 				"Password: " + Password + "\n" +
 				"Phonenumber: " + Phonenumber + "\n" +
 				"Sex: " + Sex + "\n" +
-				"Profilee: " + Profile + "\n" +
+				"Profile: " + Profile + "\n" +
 				"----------------------------\n";
 
 	}

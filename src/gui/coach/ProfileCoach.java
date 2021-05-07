@@ -1,5 +1,9 @@
 package gui.coach;
 
+import controller.CoachFunction;
+import gui.buffer.Buffer;
+import io.coach.CoachData;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -28,7 +32,8 @@ public class ProfileCoach extends JFrame {
         body = new JPanel();
         decorationLine = new JLabel();
         title = new JLabel();
-        uidGym = new JLabel();
+        uid = new JLabel();
+        gym = new JLabel();
         avatar = new JButton();
         nameTip = new JLabel();
         emailTip = new JLabel();
@@ -75,13 +80,21 @@ public class ProfileCoach extends JFrame {
             body.add(title);
             title.setBounds(new Rectangle(new Point(25, 45), title.getPreferredSize()));
 
-            //---- uidGym ----
-            uidGym.setText("UID:88888888 GYM: Muscle King ");
-            uidGym.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 17));
-            uidGym.setForeground(Color.gray);
-            uidGym.setHorizontalAlignment(SwingConstants.RIGHT);
-            body.add(uidGym);
-            uidGym.setBounds(470, 93, 300, 24);
+            //---- uid ----
+            uid.setText("UID:88888888 ");
+            uid.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 17));
+            uid.setForeground(Color.gray);
+            uid.setHorizontalAlignment(SwingConstants.RIGHT);
+            body.add(uid);
+            uid.setBounds(470, 93, 130, 24);
+
+            //---- gym ----
+            gym.setText("GYM: Muscle King ");
+            gym.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 17));
+            gym.setForeground(Color.gray);
+            gym.setHorizontalAlignment(SwingConstants.RIGHT);
+            body.add(gym);
+            gym.setBounds(600, 93, 170, 24);
 
             //---- avatar ----
             avatar.setBackground(SystemColor.menu);
@@ -452,7 +465,8 @@ public class ProfileCoach extends JFrame {
     private JPanel body;
     private JLabel decorationLine;
     private JLabel title;
-    private JLabel uidGym;
+    private JLabel uid;
+    private JLabel gym;
     private JButton avatar;
     private JLabel nameTip;
     private JLabel emailTip;
@@ -483,6 +497,7 @@ public class ProfileCoach extends JFrame {
             public void run() {
                 try {
                     ProfileCoach frame = new ProfileCoach();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setResizable(false);
@@ -493,4 +508,16 @@ public class ProfileCoach extends JFrame {
             }
         });
     }
+    private void init(){
+        String ID = Buffer.getBuffer();
+        CoachData coachData = CoachFunction.searchCoachByID(ID);
+        this.uid.setText(Buffer.dataIsEmpty("UID: "+ ID));
+        this.gym.setText(Buffer.dataIsEmpty("GYM: "));
+        this.name.setText(Buffer.dataIsEmpty(coachData.getCoachName()));
+        this.email.setText(Buffer.dataIsEmpty("Empty"));
+        this.phoneNumber.setText(Buffer.dataIsEmpty(coachData.getCoachPhonenumber()));
+        this.gender.setText(Buffer.dataIsEmpty(coachData.getCoachSex()));
+
+    }
+
 }

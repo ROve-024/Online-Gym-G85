@@ -1,4 +1,4 @@
-package IO.coach;
+package io.coach;
 
 import java.io.File;
 import javax.xml.parsers.DocumentBuilder;
