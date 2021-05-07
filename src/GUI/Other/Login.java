@@ -24,7 +24,7 @@ public class Login extends JFrame {
 
     private void loginButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        this.dispose();
+//        this.dispose();
         String account = this.username.getText();
         String password = new String(this.password.getPassword());
 //        System.out.println(account+": "+password);
@@ -34,10 +34,10 @@ public class Login extends JFrame {
         else if(this.coachButton.isSelected()){
             if(CoachFunction.login(account, password)){
                 NavigatorCoach.run();
+                this.dispose();
             }
             else{
                 LoginWarning.run();
-                Login.run();
             }
         }
         else if(this.adminButton.isSelected()){

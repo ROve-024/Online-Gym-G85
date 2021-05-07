@@ -83,7 +83,15 @@ public class CoachData {
 	public String toString() 
 	{   
 		
-		return "----------------------------\n" + "CoachID: " + CoachID + "\n" + "Name: " + Name + "\n" + "Account: " + Account + "\n" + "Password: " + Password + "\n" + "Phonenumber: " + Phonenumber + "\n" + "Sex: " + Sex + "\n" + "Profilee: " + Profile + "\n" + "----------------------------\n";
+		return "----------------------------\n" +
+				"CoachID: " + CoachID + "\n" +
+				"Name: " + Name + "\n" +
+				"Account: " + Account + "\n" +
+				"Password: " + Password + "\n" +
+				"Phonenumber: " + Phonenumber + "\n" +
+				"Sex: " + Sex + "\n" +
+				"Profilee: " + Profile + "\n" +
+				"----------------------------\n";
 
 	}
 	

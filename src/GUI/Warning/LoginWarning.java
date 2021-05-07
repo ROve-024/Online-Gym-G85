@@ -21,6 +21,7 @@ public class LoginWarning extends JFrame {
 
     private void confirmButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
+        this.dispose();
     }
 
     private void initComponents() {
@@ -76,7 +77,7 @@ public class LoginWarning extends JFrame {
                 }
             }
             mainPenel.add(titlePanel);
-            titlePanel.setBounds(0, 15, 400, 50);
+            titlePanel.setBounds(10, 15, 400, 50);
 
             //---- confirmButton ----
             confirmButton.setText("  CONFIRM  ");
@@ -84,7 +85,7 @@ public class LoginWarning extends JFrame {
             confirmButton.setForeground(Color.white);
             confirmButton.addActionListener(e -> confirmButtonActionPerformed(e));
             mainPenel.add(confirmButton);
-            confirmButton.setBounds(140, 95, 120, 40);
+            confirmButton.setBounds(150, 95, 120, 40);
 
             {
                 // compute preferred size
@@ -102,7 +103,7 @@ public class LoginWarning extends JFrame {
             }
         }
         contentPane.add(mainPenel);
-        mainPenel.setBounds(0, 0, 400, 150);
+        mainPenel.setBounds(0, 0, 420, 150);
 
         {
             // compute preferred size

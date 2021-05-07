@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="Added controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CoachFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CoachFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Other/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Other/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Warning/LoginWarning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Warning/LoginWarning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IO/coach/CoachData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IO/coach/CoachData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Class.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Client.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Coach.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +74,7 @@
       <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\UI\Admin" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LoginWarning">
+  <component name="RunManager" selected="Application.Run">
     <configuration name="ALLLessonAdmin" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.Admin.ALLLessonAdmin" />
       <module name="Group85" />
@@ -148,17 +153,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.ALLLessonAdmin" />
       <item itemvalue="Application.Run" />
@@ -169,8 +163,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LoginWarning" />
         <item itemvalue="Application.Run" />
+        <item itemvalue="Application.LoginWarning" />
         <item itemvalue="Application.Buffer" />
         <item itemvalue="Application.NavigatorCoach" />
         <item itemvalue="Application.NavigatorAdmin" />
@@ -214,7 +208,8 @@
       <workItem from="1620298619617" duration="1841000" />
       <workItem from="1620304475517" duration="4384000" />
       <workItem from="1620311650398" duration="596000" />
-      <workItem from="1620313140115" duration="3607000" />
+      <workItem from="1620313140115" duration="3724000" />
+      <workItem from="1620346541879" duration="367000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1617952547719</created>
@@ -349,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620311736004</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added controller">
+      <created>1620316836497</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1620316836498</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
