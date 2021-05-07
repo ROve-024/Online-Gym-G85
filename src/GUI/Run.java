@@ -1,6 +1,6 @@
 package GUI;
 
-import GUI.Other.Login;
+import GUI.LoginSignUp.Login;
 
 public class Run {
     public static void main(String[] args) {

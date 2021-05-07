@@ -1,10 +1,10 @@
-package GUI.Other;
+package GUI.LoginSignUp;
 
 import GUI.Admin.NavigatorAdmin;
 import GUI.Coach.NavigatorCoach;
 import GUI.Member.NavigatorMember;
 import Controller.CoachFunction;
-import GUI.Warning.LoginWarning;
+import GUI.Warning.Warning;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -32,12 +32,12 @@ public class Login extends JFrame {
             NavigatorMember.run();
         }
         else if(this.coachButton.isSelected()){
-            if(CoachFunction.login(account, password)){
+            if(CoachFunction.loginMatch(account, password)){
                 NavigatorCoach.run();
                 this.dispose();
             }
             else{
-                LoginWarning.run();
+                Warning.run();
             }
         }
         else if(this.adminButton.isSelected()){

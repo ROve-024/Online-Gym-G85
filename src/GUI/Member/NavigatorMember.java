@@ -1,6 +1,6 @@
 package GUI.Member;
 
-import GUI.Other.Login;
+import GUI.LoginSignUp.Login;
 
 import java.awt.*;
 import java.awt.event.*;

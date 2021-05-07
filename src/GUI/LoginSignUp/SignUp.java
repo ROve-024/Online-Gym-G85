@@ -1,4 +1,4 @@
-package GUI.Other;
+package GUI.LoginSignUp;
 
 import java.awt.*;
 import java.awt.event.*;

@@ -35,7 +35,7 @@ public class CoachFunction {
         return maxId;
     }
 
-    public static boolean login(String Account, String Password){       //check the account and the password if match
+    public static boolean loginMatch(String Account, String Password){       //check the account and the password if match
         List<CoachData> coachList = getWholeCoach();
 
         boolean ifMatch = false;
@@ -51,7 +51,21 @@ public class CoachFunction {
         return ifMatch;
     }
 
-    public void signUp(String Account, String Password){
+    public static boolean ifExistSameAccount(String Account){
+        List<CoachData> coachList = getWholeCoach();
+        boolean ifExist = false;
+
+        for(int  i = 0 ; i<coachList.size();i++){
+            CoachData temp = coachList.get(i);
+            if(temp.getCoachAccount().equals(Account)){
+                ifExist = true;
+            }
+        }
+
+        return ifExist;
+    }
+
+    public void signUpSubmit(String Account, String Password){
         List<CoachData> coachList = getWholeCoach();
 
         CoachData coachData = new CoachData();
@@ -95,8 +109,50 @@ public class CoachFunction {
                 coachData = temp;
             }
         }
-
         return coachData;
     }
 
+    public void updateCoachInfo(String Account, String Name, String Password, String Phonenumber, String Profile, String Sex){
+        List<CoachData> coachList = getWholeCoach();
+
+        for(int i=0;i<coachList.size();i++) {
+            CoachData temp;
+            temp = coachList.get(i);
+            if(temp.getCoachAccount().equals(Account)){
+                coachList.get(i).setCoachName(Name);
+                coachList.get(i).setCoachPassword(Password);
+                coachList.get(i).setCoachPhonenumber(Phonenumber);
+                coachList.get(i).setCoachProfile(Profile);
+                coachList.get(i).setCoachSex(Sex);
+            }
+        }
+
+        writeCoach(coachList);
+    }
+
+    public void DeleteCoachByID(String ID){
+        List<CoachData> coachList = getWholeCoach();
+
+        for(int i=0;i<coachList.size();i++) {
+            CoachData temp;
+            temp = coachList.get(i);
+            if(temp.getCoachID().equals(ID)) {
+                coachList.remove(i);
+            }
+        }
+        writeCoach(coachList);
+    }
+
+    public void DeleteCoachByAccount(String Account){
+        List<CoachData> coachList = getWholeCoach();
+
+        for(int i=0;i<coachList.size();i++) {
+            CoachData temp;
+            temp = coachList.get(i);
+            if(temp.getCoachAccount().equals(Account)) {
+                coachList.remove(i);
+            }
+        }
+        writeCoach(coachList);
+    }
 }
