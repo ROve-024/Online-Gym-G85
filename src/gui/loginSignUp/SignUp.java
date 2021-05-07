@@ -1,6 +1,7 @@
 package gui.loginSignUp;
 
 import controller.CoachFunction;
+import gui.buffer.Buffer;
 import gui.warning.Warning;
 
 import java.awt.*;
@@ -34,7 +35,8 @@ public class SignUp extends JFrame {
             Warning.run("The password did not match \nthe re-typed password");
         }
         else{
-            CoachFunction.signUpSubmit(account,password);
+            String ID = CoachFunction.signUpSubmit(account,password);
+            Buffer.setBuffer(ID);
             Login.run();
             this.dispose();
         }

@@ -56,7 +56,7 @@ public class Warning extends JFrame {
                 tips.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
                 tips.setForeground(Color.gray);
                 titlePanel.add(tips);
-                tips.setBounds(65, 13, 310, 30);
+                tips.setBounds(65, 13, 470, 30);
 
                 {
                     // compute preferred size
@@ -74,7 +74,7 @@ public class Warning extends JFrame {
                 }
             }
             mainPenel.add(titlePanel);
-            titlePanel.setBounds(10, 15, 400, 50);
+            titlePanel.setBounds(10, 15, 540, 50);
 
             //---- confirmButton ----
             confirmButton.setText("  CONFIRM  ");
@@ -82,7 +82,7 @@ public class Warning extends JFrame {
             confirmButton.setForeground(Color.white);
             confirmButton.addActionListener(e -> confirmButtonActionPerformed(e));
             mainPenel.add(confirmButton);
-            confirmButton.setBounds(150, 95, 120, 40);
+            confirmButton.setBounds(220, 95, 120, 40);
 
             {
                 // compute preferred size
@@ -100,7 +100,7 @@ public class Warning extends JFrame {
             }
         }
         contentPane.add(mainPenel);
-        mainPenel.setBounds(0, 0, 420, 150);
+        mainPenel.setBounds(0, 0, 560, 150);
 
         {
             // compute preferred size

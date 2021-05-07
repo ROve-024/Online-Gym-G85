@@ -65,13 +65,15 @@ public class CoachFunction {
         return ifExist;
     }
 
-    public static void signUpSubmit(String Account, String Password){
+    public static String signUpSubmit(String Account, String Password){
         List<CoachData> coachList = getWholeCoach();
 
         CoachData coachData = new CoachData();
 
+        String newID = Integer.toString(maxCoachID(coachList)+1);
+
         coachData.setCoachAccount(Account);
-        coachData.setCoachID(Integer.toString(maxCoachID(coachList)) + 1);
+        coachData.setCoachID(newID);
         coachData.setCoachName("Empty");
         coachData.setCoachPassword(Password);
         coachData.setCoachPhonenumber("Empty");
@@ -81,6 +83,8 @@ public class CoachFunction {
         coachList.add(coachData);
 
         writeCoach(coachList);
+
+        return newID;
     }
 
     public static CoachData searchCoachByName(String Name){
