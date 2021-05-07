@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="Added controller">
+    <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="Added database`">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CoachFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CoachFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Other/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Other/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Warning/LoginWarning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Warning/LoginWarning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IO/coach/CoachData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IO/coach/CoachData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Class.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Client.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Coach.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Client.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Coach.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +205,7 @@
       <workItem from="1620304475517" duration="4384000" />
       <workItem from="1620311650398" duration="596000" />
       <workItem from="1620313140115" duration="3724000" />
-      <workItem from="1620346541879" duration="367000" />
+      <workItem from="1620346541879" duration="1353000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1617952547719</created>
@@ -351,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620316836498</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added database">
+      <created>1620346963101</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1620346963101</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +383,8 @@
     <MESSAGE value="Added images and icons" />
     <MESSAGE value="Added titles and icon of app" />
     <MESSAGE value="Added controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added controller" />
+    <MESSAGE value="Added database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
