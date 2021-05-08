@@ -28,9 +28,9 @@
         <Account>S</Account>
         <Password>1</Password>
         <Phonenumber>Empty</Phonenumber>
-        <Email/>
+        <Email>Empty</Email>
         <Sex>Empty</Sex>
-        <Balance/>
-        <VIPlevel/>
+        <Balance>Empty</Balance>
+        <VIPlevel>Empty</VIPlevel>
     </ROW>
 </DATA>

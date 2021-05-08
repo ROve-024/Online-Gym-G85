@@ -4,11 +4,11 @@ import io.coach.CoachData;
 
 import java.io.*;
 
-public class Buffer {
+public class LessonBuffer {
     public static String getBuffer(){
         String line = "";
         try{
-            File filename = new File("src/resources/buffer/buffer.txt");
+            File filename = new File("src/resources/buffer/lessonBuffer.txt");
             InputStreamReader reader = new InputStreamReader(new FileInputStream(filename));
             BufferedReader br = new BufferedReader(reader);
             line = br.readLine();
@@ -18,7 +18,7 @@ public class Buffer {
         return line;
     }
     public static void setBuffer(String ID){
-        File file = new File("src/resources/buffer/buffer.txt");
+        File file = new File("src/resources/buffer/lessonBuffer.txt");
         file.delete();
         try {
             file.createNewFile();
@@ -30,24 +30,5 @@ public class Buffer {
         catch (Exception e){
             System.out.println("Create File Error!");
         }
-    }
-    public static CoachData getSession(){
-        String ID = Buffer.getBuffer();
-        CoachData coachData = CoachFunction.searchCoachByID(ID);
-        return coachData;
-    }
-    public static String dataIsEmpty(String string){
-        String result = "";
-        if(!string.equals("Empty")){
-            result = string;
-        }
-        return result;
-    }
-    public static String toEmpty(String string){
-        String result = "Empty";
-        if(!string.equals("")){
-            result = string;
-        }
-        return result;
     }
 }

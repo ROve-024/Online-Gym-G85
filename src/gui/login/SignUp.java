@@ -3,7 +3,7 @@ package gui.login;
 import javax.swing.border.*;
 import controller.ClientFunction;
 import controller.CoachFunction;
-import gui.other.Buffer;
+import gui.other.LoginBuffer;
 import gui.other.Warning;
 
 import java.awt.*;
@@ -37,7 +37,7 @@ public class SignUp extends JFrame {
             }
             else{
                 String ID = ClientFunction.signUpSubmit(account,password);
-                Buffer.setBuffer(ID);
+                LoginBuffer.setBuffer(ID);
                 Login.run();
                 this.dispose();
             }
@@ -52,7 +52,7 @@ public class SignUp extends JFrame {
             }
             else{
                 String ID = CoachFunction.signUpSubmit(account,password);
-                Buffer.setBuffer(ID);
+                LoginBuffer.setBuffer(ID);
                 Login.run();
                 this.dispose();
             }

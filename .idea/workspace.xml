@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/resources/buffer/loginBuffer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Client.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ClientFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ClientFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/EditProfileCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/EditProfileCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/LessonDetailCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/LessonDetailCoach.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/NavigatorCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/NavigatorCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/ProfileCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ProfileCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/login/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/login/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/login/SignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/other/Buffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/other/LoginBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Class.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Client.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/buffer/buffer.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/src/GUI/Admin/ALLLessonAdmin.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Admin/UserManageAllAdmin.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/LessonVideo.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/LessonHomeMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/EditProfileMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Admin/NavigatorAdmin.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Other/SignUp.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/coach/EditProfileCoach.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/member/EditProfileMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/coach/LessonDetailCoach.jfd" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/src/GUI/Admin/ALLLessonAdmin.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Admin/UserManageAllAdmin.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/LessonVideo.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/LessonHomeMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/EditProfileMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Admin/NavigatorAdmin.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Other/SignUp.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/coach/EditProfileCoach.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/member/EditProfileMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/coach/LessonDetailCoach.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/coach/MyLessonCoach.jfd" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Group85-master/Group85-master" />
@@ -68,7 +82,7 @@
       <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\UI\Other" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Run">
+  <component name="RunManager" selected="Application.MyLessonCoach">
     <configuration name="ALLLessonAdmin" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.admin.ALLLessonAdmin" />
       <module name="Group85" />
@@ -108,12 +122,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginWarning" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI.Warning.LoginWarning" />
+    <configuration name="MyLessonCoach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.coach.MyLessonCoach" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gui.warning.*" />
+          <option name="PATTERN" value="gui.coach.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,21 +161,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.ALLLessonAdmin" />
       <item itemvalue="Application.Run" />
       <item itemvalue="Application.NavigatorCoach" />
-      <item itemvalue="Application.LoginWarning" />
       <item itemvalue="Application.EditProfileCoach" />
       <item itemvalue="Application.LessonDetailCoach" />
+      <item itemvalue="Application.MyLessonCoach" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyLessonCoach" />
         <item itemvalue="Application.Run" />
         <item itemvalue="Application.EditProfileCoach" />
         <item itemvalue="Application.LessonDetailCoach" />
         <item itemvalue="Application.NavigatorCoach" />
-        <item itemvalue="Application.LoginWarning" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +236,9 @@
       <workItem from="1620368970468" duration="7131000" />
       <workItem from="1620380102123" duration="7161000" />
       <workItem from="1620396436310" duration="16000" />
-      <workItem from="1620396903011" duration="35000" />
+      <workItem from="1620396903011" duration="67000" />
+      <workItem from="1620397659686" duration="858000" />
+      <workItem from="1620440409070" duration="4824000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1617952547719</created>
@@ -414,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620396075370</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="update">
+      <created>1620396956156</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1620396956157</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

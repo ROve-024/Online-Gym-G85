@@ -2,13 +2,13 @@ package controller;
 
 import io.client.ClientData;
 import io.client.WriteClientXml;
-import io.coach.CoachData;
 
 import java.util.List;
 
 import static io.client.ReadClientXml.readClientXML;
 
 public class ClientFunction {
+	
     public static List getWholeClient(){                    //return the whole client info
         List<ClientData> clientList = readClientXML();
 
@@ -44,7 +44,7 @@ public class ClientFunction {
         	clientData = clientList.get(i);
             if(clientData.getAccount().equals(Account) && clientData.getPassword().equals(Password)){
                 ifMatch = true;
-//                break;
+                break;
             }
         }
 
@@ -58,7 +58,7 @@ public class ClientFunction {
             ClientData temp = clientList.get(i);
             if(temp.getAccount().equals(Account)){
                 ifExist = true;
-//                break;
+                break;
             }
         }
 
@@ -77,7 +77,9 @@ public class ClientFunction {
         clientData.setPassword(Password);
         clientData.setPhonenumber("Empty");
         clientData.setSex("Empty");
-
+        clientData.setBalance("Empty");
+        clientData.setVIPlevel("Empty");
+        clientData.setEmail("Empty");
         clientList.add(clientData);
 
         writeClient(clientList);
@@ -93,7 +95,7 @@ public class ClientFunction {
             temp = clientList.get(i);
             if(temp.getName().equals(Name)){
                 clientData = temp;
-//                break;
+                break;
             }
         }
 
@@ -108,7 +110,7 @@ public class ClientFunction {
             temp = clientList.get(i);
             if(temp.getClientID().equals(ID)){
             	clientData = temp;
-//            	break;
+            	break;
             }
         }
         return clientData;
@@ -124,7 +126,7 @@ public class ClientFunction {
             	clientList.get(i).setPassword(Password);
             	clientList.get(i).setPhonenumber(Phonenumber);
             	clientList.get(i).setSex(Sex);
-//            	break;
+            	break;
             }
         }
 
@@ -138,7 +140,7 @@ public class ClientFunction {
             temp = clientList.get(i);
             if(temp.getClientID().equals(ID)) {
             	clientList.remove(i);
-//            	break;
+            	break;
             }
         }
         writeClient(clientList);
@@ -151,7 +153,7 @@ public class ClientFunction {
             temp = clientList.get(i);
             if(temp.getAccount().equals(Account)) {
             	clientList.remove(i);
-//            	break;
+            	break;
             }
         }
         writeClient(clientList);
@@ -165,7 +167,7 @@ public class ClientFunction {
             temp = clientList.get(i);
             if(temp.getAccount().equals(Account)){
             	clientData = temp;
-//            	break;
+            	break;
             }
         }
         return clientData.getClientID();

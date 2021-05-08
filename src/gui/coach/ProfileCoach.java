@@ -1,7 +1,7 @@
 package gui.coach;
 
 import controller.CoachFunction;
-import gui.other.Buffer;
+import gui.other.LoginBuffer;
 import io.coach.CoachData;
 
 import java.awt.*;
@@ -509,14 +509,14 @@ public class ProfileCoach extends JFrame {
         });
     }
     private void init(){
-        String ID = Buffer.getBuffer();
+        String ID = LoginBuffer.getBuffer();
         CoachData coachData = CoachFunction.searchCoachByID(ID);
-        this.uid.setText(Buffer.dataIsEmpty("UID: "+ ID));
-        this.gym.setText(Buffer.dataIsEmpty("GYM: "));
-        this.name.setText(Buffer.dataIsEmpty(coachData.getName()));
-        this.email.setText(Buffer.dataIsEmpty(coachData.getEmail()));
-        this.phoneNumber.setText(Buffer.dataIsEmpty(coachData.getPhonenumber()));
-        this.gender.setText(Buffer.dataIsEmpty(coachData.getSex()));
+        this.uid.setText(LoginBuffer.dataIsEmpty("UID: "+ ID));
+        this.gym.setText(LoginBuffer.dataIsEmpty("GYM: "));
+        this.name.setText(LoginBuffer.dataIsEmpty(coachData.getName()));
+        this.email.setText(LoginBuffer.dataIsEmpty(coachData.getEmail()));
+        this.phoneNumber.setText(LoginBuffer.dataIsEmpty(coachData.getPhonenumber()));
+        this.gender.setText(LoginBuffer.dataIsEmpty(coachData.getSex()));
 
     }
 

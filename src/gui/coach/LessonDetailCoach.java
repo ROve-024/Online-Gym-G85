@@ -197,11 +197,14 @@ public class LessonDetailCoach extends JFrame {
         LessonDetailCoach.run();
     }
 
+    private String lessonID = "";
+
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
                     LessonDetailCoach frame = new LessonDetailCoach();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setResizable(false);
@@ -211,5 +214,8 @@ public class LessonDetailCoach extends JFrame {
                 }
             }
         });
+    }
+    private void init(){
+
     }
 }
