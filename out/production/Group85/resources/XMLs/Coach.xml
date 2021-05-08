@@ -2,17 +2,17 @@
 <DATA>
     <ROW>
         <CoachID>1</CoachID>
-        <Name>a</Name>
+        <Name>Ash</Name>
         <Account>coach001</Account>
-        <Password>123456</Password>
-        <Phonenumber>616534654</Phonenumber>
-        <Email>123@qq.com</Email>
-        <Sex>male</Sex>
-        <Profile>Strong</Profile>
+        <Password>1234567</Password>
+        <Phonenumber>321156466</Phonenumber>
+        <Email>456@qq.com</Email>
+        <Sex>female</Sex>
+        <Profile>thin</Profile>
     </ROW>
     <ROW>
         <CoachID>2</CoachID>
-        <Name>b</Name>
+        <Name>Echo</Name>
         <Account>coach002</Account>
         <Password>1234567</Password>
         <Phonenumber>321156466</Phonenumber>

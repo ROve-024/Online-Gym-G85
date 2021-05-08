@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <DATA>
     <ROW>
-        <ClientID>1</ClientID>
-        <Name>A</Name>
-        <Account>client001</Account>
-        <Password>123456</Password>
-        <Phonenumber>12375672136</Phonenumber>
-        <Email>123@qq.com</Email>
-        <Sex>male</Sex>
-        <Balance>0.99</Balance>
-        <VIPlevel>1</VIPlevel>
-    </ROW>
-    <ROW>
         <ClientID>2</ClientID>
         <Name>B</Name>
         <Account>client002</Account>
@@ -30,17 +19,6 @@
         <Phonenumber>10001</Phonenumber>
         <Email>username@example.com</Email>
         <Sex>female</Sex>
-        <Balance>Empty</Balance>
-        <VIPlevel>Empty</VIPlevel>
-    </ROW>
-    <ROW>
-        <ClientID>4</ClientID>
-        <Name>Empty</Name>
-        <Account>SB</Account>
-        <Password>1</Password>
-        <Phonenumber>Empty</Phonenumber>
-        <Email>Empty</Email>
-        <Sex>Empty</Sex>
         <Balance>Empty</Balance>
         <VIPlevel>Empty</VIPlevel>
     </ROW>
