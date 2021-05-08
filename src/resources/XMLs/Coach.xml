@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <DATA>
     <ROW>
-        <CoachID>1</CoachID>
-        <Name>Ash</Name>
-        <Account>coach001</Account>
-        <Password>1234567</Password>
-        <Phonenumber>321156466</Phonenumber>
-        <Email>456@qq.com</Email>
-        <Sex>female</Sex>
-        <Profile>thin</Profile>
-    </ROW>
-    <ROW>
         <CoachID>2</CoachID>
         <Name>Echo</Name>
         <Account>coach002</Account>
