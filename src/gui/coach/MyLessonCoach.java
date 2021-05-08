@@ -2,6 +2,7 @@ package gui.coach;
 
 import controller.ClassFunction;
 import controller.CoachFunction;
+import gui.other.LessonBuffer;
 import gui.other.LoginBuffer;
 import gui.other.Warning;
 import io.classes.ClassData;
@@ -57,31 +58,53 @@ public class MyLessonCoach extends JFrame {
 
     private void moreButton1ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6).getClassID());
         LessonDetailCoach.run();
         this.dispose();
     }
 
     private void moreButton2ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6 + 1).getClassID());
+        LessonDetailCoach.run();
+        this.dispose();
     }
 
     private void moreButton3ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6 + 2).getClassID());
+        LessonDetailCoach.run();
+        this.dispose();
     }
 
     private void moreButton4ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6 + 3).getClassID());
+        LessonDetailCoach.run();
+        this.dispose();
     }
 
     private void moreButton5ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6 + 4).getClassID());
+        LessonDetailCoach.run();
+        this.dispose();
     }
 
     private void moreButton6ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6 + 5).getClassID());
+        LessonDetailCoach.run();
+        this.dispose();
     }
 
-    private void nextPageButton2ActionPerformed(ActionEvent e) {
+    private void UploadActionPerformed(ActionEvent e) {
         // TODO add your code here
     }
 
@@ -528,7 +551,7 @@ public class MyLessonCoach extends JFrame {
             Upload.setBackground(new Color(217, 0, 27));
             Upload.setText("UPLOAD");
             Upload.setForeground(Color.white);
-            Upload.addActionListener(e -> nextPageButton2ActionPerformed(e));
+            Upload.addActionListener(e -> UploadActionPerformed(e));
             body.add(Upload);
             Upload.setBounds(505, 45, 120, 40);
 
@@ -662,10 +685,9 @@ public class MyLessonCoach extends JFrame {
         });
     }
     private void init(){
-        CoachData coachData = LoginBuffer.getSession();
+        CoachData coachData = LoginBuffer.getCoachSession();
         list = ClassFunction.searchClassByCoachName(coachData.getName());
         this.update();
-
     }
     private void update(){
         int i = 0;
@@ -674,6 +696,8 @@ public class MyLessonCoach extends JFrame {
         ClassData[] classData = new ClassData[6];
 
         switch (this.lessonRemainNumb){
+            case 0:
+                break;
             case 1:
                 this.lessonName2.setOpaque(false);
                 this.lessonType2.setOpaque(false);

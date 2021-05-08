@@ -24,7 +24,7 @@ public class EditProfileCoach extends JFrame {
 
     private void finishButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        CoachData coachData = LoginBuffer.getSession();
+        CoachData coachData = LoginBuffer.getCoachSession();
         if(CoachFunction.loginMatch(coachData.getAccount(), new String(this.currentPassword.getPassword()))){
             if(new String(this.newPassword.getPassword()).equals(new String(this.confirmPassword.getPassword()))){
                 coachData.setName(LoginBuffer.toEmpty(this.name.getText()));
@@ -46,7 +46,7 @@ public class EditProfileCoach extends JFrame {
             }
         }
         else{
-            Warning.run("Wrong password,Please try again.");
+            Warning.run("Wrong password,please try again.");
         }
     }
 
@@ -457,7 +457,7 @@ public class EditProfileCoach extends JFrame {
         });
     }
     private void init(){
-        CoachData coachData = LoginBuffer.getSession();
+        CoachData coachData = LoginBuffer.getCoachSession();
         this.name.setText(LoginBuffer.dataIsEmpty(coachData.getName()));
         this.email.setText(LoginBuffer.dataIsEmpty(coachData.getEmail()));
         this.phoneNumber.setText(LoginBuffer.dataIsEmpty(coachData.getPhonenumber()));

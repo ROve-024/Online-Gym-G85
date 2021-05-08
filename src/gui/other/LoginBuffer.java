@@ -1,5 +1,8 @@
 package gui.other;
+import controller.ClientFunction;
 import controller.CoachFunction;
+import io.classes.ClassData;
+import io.client.ClientData;
 import io.coach.CoachData;
 
 import java.io.*;
@@ -31,10 +34,15 @@ public class LoginBuffer {
             System.out.println("Create File Error!");
         }
     }
-    public static CoachData getSession(){
+    public static CoachData getCoachSession(){
         String ID = LoginBuffer.getBuffer();
         CoachData coachData = CoachFunction.searchCoachByID(ID);
         return coachData;
+    }
+    public static ClientData getClientSession(){
+        String ID = LoginBuffer.getBuffer();
+        ClientData clientData = ClientFunction.searchClientByID(ID);
+        return clientData;
     }
     public static String dataIsEmpty(String string){
         String result = "";

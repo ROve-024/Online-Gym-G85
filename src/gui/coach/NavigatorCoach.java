@@ -298,7 +298,7 @@ public class NavigatorCoach extends JFrame {
         });
     }
     private void init(){
-        CoachData coachData = LoginBuffer.getSession();
+        CoachData coachData = LoginBuffer.getCoachSession();
         this.username.setText(coachData.getAccount());
         this.welcomeMsg.setText("Welcome, coach.");
     }

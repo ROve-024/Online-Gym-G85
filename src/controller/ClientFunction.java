@@ -115,17 +115,18 @@ public class ClientFunction {
         }
         return clientData;
     }
-    public static void updateClientInfo(String Account, String Name, String Password, String Phonenumber, String Profile, String Sex){
+    public static void updateClientInfo(ClientData clientData){
         List<ClientData> clientList = getWholeClient();
 
         for(int i=0;i<clientList.size();i++) {
             ClientData temp;
             temp = clientList.get(i);
-            if(temp.getAccount().equals(Account)){
-            	clientList.get(i).setName(Name);
-            	clientList.get(i).setPassword(Password);
-            	clientList.get(i).setPhonenumber(Phonenumber);
-            	clientList.get(i).setSex(Sex);
+            if(temp.getAccount().equals(clientData.getAccount())){
+            	clientList.get(i).setName(clientData.getName());
+            	clientList.get(i).setPassword(clientData.getPassword());
+            	clientList.get(i).setPhonenumber(clientData.getPhonenumber());
+                clientList.get(i).setEmail(clientData.getEmail());
+            	clientList.get(i).setSex(clientData.getSex());
             	break;
             }
         }

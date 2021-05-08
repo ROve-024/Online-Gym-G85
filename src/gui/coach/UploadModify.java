@@ -1,5 +1,9 @@
 package gui.coach;
 
+import controller.ClassFunction;
+import gui.other.LessonBuffer;
+import io.classes.ClassData;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -19,7 +23,15 @@ public class UploadModify extends JFrame {
 
     private void finishButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
+
         LessonDetailCoach.run();
+        this.dispose();
+    }
+
+    private void deleteButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        ClassFunction.deleteClassByID(lessonID);
+        MyLessonCoach.run();
         this.dispose();
     }
 
@@ -35,6 +47,7 @@ public class UploadModify extends JFrame {
         scrollPane1 = new JScrollPane();
         textArea1 = new JTextArea();
         videoSelectedButton = new JButton();
+        deleteButton = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -80,6 +93,9 @@ public class UploadModify extends JFrame {
             //---- textField1 ----
             textField1.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 16));
             textField1.setMargin(new Insets(2, 10, 2, 6));
+            textField1.setBorder(new EmptyBorder(5, 10, 5, 0));
+            textField1.setCaretColor(Color.darkGray);
+            textField1.setBackground(new Color(245, 245, 245));
             body.add(textField1);
             textField1.setBounds(35, 165, 730, textField1.getPreferredSize().height);
 
@@ -96,6 +112,9 @@ public class UploadModify extends JFrame {
                 //---- textArea1 ----
                 textArea1.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 16));
                 textArea1.setMargin(new Insets(5, 10, 5, 10));
+                textArea1.setBorder(new EmptyBorder(5, 10, 5, 0));
+                textArea1.setCaretColor(Color.darkGray);
+                textArea1.setBackground(new Color(245, 245, 245));
                 scrollPane1.setViewportView(textArea1);
             }
             body.add(scrollPane1);
@@ -108,6 +127,15 @@ public class UploadModify extends JFrame {
             videoSelectedButton.setForeground(Color.white);
             body.add(videoSelectedButton);
             videoSelectedButton.setBounds(35, 485, 175, 40);
+
+            //---- deleteButton ----
+            deleteButton.setBorderPainted(false);
+            deleteButton.setBackground(new Color(240, 128, 128));
+            deleteButton.setText("DELETE");
+            deleteButton.setForeground(Color.white);
+            deleteButton.addActionListener(e -> deleteButtonActionPerformed(e));
+            body.add(deleteButton);
+            deleteButton.setBounds(130, 585, 90, 40);
 
             {
                 // compute preferred size
@@ -157,10 +185,14 @@ public class UploadModify extends JFrame {
     private JScrollPane scrollPane1;
     private JTextArea textArea1;
     private JButton videoSelectedButton;
+    private JButton deleteButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         UploadModify.run();
     }
+
+    private String lessonID = LessonBuffer.getBuffer();
+    ClassData classData = ClassFunction.searchClassByID(this.lessonID);
 
     public static void run(){
         EventQueue.invokeLater(new Runnable() {

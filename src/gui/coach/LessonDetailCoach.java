@@ -1,5 +1,11 @@
 package gui.coach;
 
+import controller.ClassFunction;
+import controller.CoachFunction;
+import gui.other.LessonBuffer;
+import io.classes.ClassData;
+import io.coach.CoachData;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -36,7 +42,7 @@ public class LessonDetailCoach extends JFrame {
         title = new JLabel();
         lessonPicture = new JLabel();
         lessonName = new JLabel();
-        lessionMsg = new JTextPane();
+        lessonMsg = new JTextPane();
         coachAvatar = new JLabel();
         coachName = new JLabel();
         coachMsg = new JTextPane();
@@ -83,16 +89,16 @@ public class LessonDetailCoach extends JFrame {
             body.add(lessonName);
             lessonName.setBounds(350, 165, 267, 42);
 
-            //---- lessionMsg ----
-            lessionMsg.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.");
-            lessionMsg.setBackground(Color.white);
-            lessionMsg.setBorder(null);
-            lessionMsg.setCaretColor(Color.white);
-            lessionMsg.setDisabledTextColor(Color.white);
-            lessionMsg.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-            lessionMsg.setEditable(false);
-            body.add(lessionMsg);
-            lessionMsg.setBounds(350, 215, 398, 138);
+            //---- lessonMsg ----
+            lessonMsg.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.");
+            lessonMsg.setBackground(Color.white);
+            lessonMsg.setBorder(null);
+            lessonMsg.setCaretColor(Color.white);
+            lessonMsg.setDisabledTextColor(Color.white);
+            lessonMsg.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
+            lessonMsg.setEditable(false);
+            body.add(lessonMsg);
+            lessonMsg.setBounds(350, 215, 398, 130);
 
             //---- coachAvatar ----
             coachAvatar.setBorder(new LineBorder(Color.white));
@@ -140,7 +146,7 @@ public class LessonDetailCoach extends JFrame {
             lessonType.setText("Type");
             lessonType.setBackground(new Color(240, 128, 128));
             body.add(lessonType);
-            lessonType.setBounds(new Rectangle(new Point(350, 370), lessonType.getPreferredSize()));
+            lessonType.setBounds(350, 345, 75, lessonType.getPreferredSize().height);
 
             {
                 // compute preferred size
@@ -185,7 +191,7 @@ public class LessonDetailCoach extends JFrame {
     private JLabel title;
     private JLabel lessonPicture;
     private JLabel lessonName;
-    private JTextPane lessionMsg;
+    private JTextPane lessonMsg;
     private JLabel coachAvatar;
     private JLabel coachName;
     private JTextPane coachMsg;
@@ -197,7 +203,8 @@ public class LessonDetailCoach extends JFrame {
         LessonDetailCoach.run();
     }
 
-    private String lessonID = "";
+    private String lessonID = LessonBuffer.getBuffer();
+    ClassData classData = ClassFunction.searchClassByID(this.lessonID);
 
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
@@ -216,6 +223,12 @@ public class LessonDetailCoach extends JFrame {
         });
     }
     private void init(){
+        this.lessonName.setText(this.classData.getName());
+//        this.lessonMsg.setText();
+        this.lessonType.setText(this.classData.getProfile());
+        CoachData coachData = CoachFunction.searchCoachByID(this.classData.getCoachID());
+        this.coachName.setText(coachData.getName());
+//        this.coachMsg.setText();
 
     }
 }

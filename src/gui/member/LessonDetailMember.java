@@ -107,7 +107,7 @@ public class LessonDetailMember extends JFrame {
             lessionMsg.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
             lessionMsg.setEditable(false);
             body.add(lessionMsg);
-            lessionMsg.setBounds(350, 215, 398, 138);
+            lessionMsg.setBounds(350, 215, 398, 130);
 
             //---- joinButton ----
             joinButton.setText("JOIN NOW");
