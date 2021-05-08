@@ -62,16 +62,17 @@ public class ClassFunction {
 
     public static void deleteClassByCoachID(String coachID){
         List<ClassData> classList = getWholeClass();
+        List<ClassData> newClassList = new ArrayList<ClassData>();
         ClassData temp;
 
         for(int i=0;i<classList.size();i++){
             temp = classList.get(i);
-            if(temp.getCoachID().equals(coachID)){
-                classList.remove(i);
+            if(!temp.getCoachID().equals(coachID)){
+                newClassList.add(temp);
             }
         }
 
-        writeClass(classList);
+        writeClass(newClassList);
     }
 
     public static ClassData searchClassByID(String ID){

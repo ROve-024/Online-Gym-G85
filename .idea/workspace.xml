@@ -5,26 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/buffer/lessonBuffer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/AdminFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AdminFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ClassFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ClassFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CoachFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CoachFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/NavigatorAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/NavigatorAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/UserManageAllAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/UserManageAllAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/NavigatorMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/NavigatorMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/other/LessonBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/other/LessonBuffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/other/LoginBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/other/LoginBuffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Admin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Class.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Client.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Coach.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/buffer/loginBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/loginBuffer.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +229,7 @@
       <workItem from="1620455544558" duration="362000" />
       <workItem from="1620456139632" duration="505000" />
       <workItem from="1620461087477" duration="6120000" />
-      <workItem from="1620473015706" duration="10244000" />
+      <workItem from="1620473015706" duration="10598000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1617952547719</created>
@@ -486,7 +469,28 @@
       <option name="project" value="LOCAL" />
       <updated>1620464323239</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="update">
+      <created>1620484629457</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1620484629458</updated>
+    </task>
+    <task id="LOCAL-00036" summary="update">
+      <created>1620484677556</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1620484677556</updated>
+    </task>
+    <task id="LOCAL-00037" summary="update">
+      <created>1620484749313</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1620484749313</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
