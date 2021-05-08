@@ -4,8 +4,16 @@
 
 package gui.admin;
 
+import controller.ClientFunction;
+import controller.CoachFunction;
+import gui.other.ViewBuffer;
+import gui.other.Warning;
+import io.client.ClientData;
+import io.coach.CoachData;
+
 import java.awt.*;
 import java.awt.event.*;
+import java.util.List;
 import javax.swing.*;
 import javax.swing.border.*;
 
@@ -17,84 +25,157 @@ public class UserManageAllAdmin extends JFrame {
         initComponents();
     }
 
-    private void memberNextButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
-    }
-
     private void memberPrevButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        if(this.pageClient == 0){
+            Warning.run("No previous page here.");
+        }
+        else{
+            this.pageClient--;
+            this.updateClient();
+        }
+    }
+    private void memberNextButtonActionPerformed(ActionEvent e) {
+        int remainItem = this.clientList.size() - 6 * (this.pageClient + 1);
+        if(remainItem <= 0){
+            Warning.run("No more page here.");
+        }
+        else{
+            this.pageClient++;
+            this.updateClient();
+        }
     }
 
     private void coachPrevButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        if(this.pageCoach == 0){
+            Warning.run("No previous page here.");
+        }
+        else{
+            this.pageCoach--;
+            this.updateCoach();
+        }
     }
 
     private void coachNextButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        int remainItem = this.coachList.size() - 6 * (this.pageCoach + 1);
+        if(remainItem <= 0){
+            Warning.run("No more page here.");
+        }
+        else{
+            this.pageCoach++;
+            this.updateCoach();
+        }
     }
 
     private void memberMoreButton1ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.clientList.get(this.pageClient*8).getClientID());
+        AdminViewMemberProfile.run();
+        this.dispose();
     }
 
     private void memberMoreButton2ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.clientList.get(this.pageClient*8 + 1).getClientID());
+        AdminViewMemberProfile.run();
+        this.dispose();
     }
 
     private void memberMoreButton3ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.clientList.get(this.pageClient*8 + 2).getClientID());
+        AdminViewMemberProfile.run();
+        this.dispose();
     }
 
     private void memberMoreButton4ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.clientList.get(this.pageClient*8 + 3).getClientID());
+        AdminViewMemberProfile.run();
+        this.dispose();
     }
 
     private void memberMoreButton5ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.clientList.get(this.pageClient*8 + 4).getClientID());
+        AdminViewMemberProfile.run();
+        this.dispose();
     }
 
     private void memberMoreButton6ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.clientList.get(this.pageClient*8 + 5).getClientID());
+        AdminViewMemberProfile.run();
+        this.dispose();
     }
 
     private void memberMoreButton7ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.clientList.get(this.pageClient*8 + 6).getClientID());
+        AdminViewMemberProfile.run();
+        this.dispose();
     }
 
     private void memberMoreButton8ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.clientList.get(this.pageClient*8 + 7).getClientID());
+        AdminViewMemberProfile.run();
+        this.dispose();
     }
 
     private void coachMoreButton1ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.coachList.get(this.pageCoach*8).getID());
+        AdminViewCoachProfile.run();
+        this.dispose();
     }
 
     private void coachMoreButton2ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.coachList.get(this.pageCoach*8 + 1).getID());
+        AdminViewCoachProfile.run();
+        this.dispose();
     }
 
     private void coachMoreButton3ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.coachList.get(this.pageCoach*8 + 2).getID());
+        AdminViewCoachProfile.run();
+        this.dispose();
     }
 
     private void coachMoreButton4ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.coachList.get(this.pageCoach*8 + 3).getID());
+        AdminViewCoachProfile.run();
+        this.dispose();
     }
 
     private void coachMoreButton5ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.coachList.get(this.pageCoach*8 + 4).getID());
+        AdminViewCoachProfile.run();
+        this.dispose();
     }
 
     private void coachMoreButton6ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.coachList.get(this.pageCoach*8 + 5).getID());
+        AdminViewCoachProfile.run();
+        this.dispose();
     }
 
     private void coachMoreButton7ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.coachList.get(this.pageCoach*8 + 6).getID());
+        AdminViewCoachProfile.run();
+        this.dispose();
     }
 
     private void coachMoreButton8ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.coachList.get(this.pageCoach*8 + 7).getID());
+        AdminViewCoachProfile.run();
+        this.dispose();
     }
 
 
@@ -106,93 +187,93 @@ public class UserManageAllAdmin extends JFrame {
         body = new JPanel();
         decorationLine = new JLabel();
         title = new JLabel();
-        coachName = new JLabel();
+        MembetTip = new JLabel();
         memberNextButton = new JButton();
-        customer1 = new JPanel();
-        avatar1 = new JLabel();
-        firstName1 = new JLabel();
-        lastName1 = new JLabel();
+        client1 = new JPanel();
+        clientAvatar1 = new JLabel();
+        clientName1 = new JLabel();
+        clientGender1 = new JLabel();
         memberMoreButton1 = new JButton();
-        customer2 = new JPanel();
-        avatar2 = new JLabel();
-        firstName2 = new JLabel();
-        lastName2 = new JLabel();
-        memberMoreButton2 = new JButton();
-        customer3 = new JPanel();
-        avatar3 = new JLabel();
-        firstName3 = new JLabel();
-        lastName3 = new JLabel();
-        memberMoreButton3 = new JButton();
-        customer4 = new JPanel();
-        avatar4 = new JLabel();
-        firstName4 = new JLabel();
-        lastName4 = new JLabel();
-        memberMoreButton4 = new JButton();
-        customer5 = new JPanel();
-        avatar5 = new JLabel();
-        firstName5 = new JLabel();
-        lastName5 = new JLabel();
-        memberMoreButton5 = new JButton();
-        customer6 = new JPanel();
-        avatar6 = new JLabel();
-        firstName6 = new JLabel();
-        lastName6 = new JLabel();
-        memberMoreButton6 = new JButton();
-        customer7 = new JPanel();
-        avatar7 = new JLabel();
-        firstName7 = new JLabel();
-        lastName7 = new JLabel();
-        memberMoreButton7 = new JButton();
-        customer8 = new JPanel();
-        avatar8 = new JLabel();
-        firstName8 = new JLabel();
-        lastName8 = new JLabel();
-        memberMoreButton8 = new JButton();
         decorationLine2 = new JLabel();
-        coachName2 = new JLabel();
-        customer9 = new JPanel();
-        avatar9 = new JLabel();
-        firstName9 = new JLabel();
-        lastName9 = new JLabel();
+        coachTips = new JLabel();
+        coach1 = new JPanel();
+        coachAvatar1 = new JLabel();
+        coachName1 = new JLabel();
         coachMoreButton1 = new JButton();
-        customer10 = new JPanel();
-        avatar10 = new JLabel();
-        firstName10 = new JLabel();
-        lastName10 = new JLabel();
-        coachMoreButton2 = new JButton();
-        customer11 = new JPanel();
-        avatar11 = new JLabel();
-        firstName11 = new JLabel();
-        lastName11 = new JLabel();
-        coachMoreButton3 = new JButton();
-        customer12 = new JPanel();
-        avatar12 = new JLabel();
-        firstName12 = new JLabel();
-        lastName12 = new JLabel();
-        coachMoreButton4 = new JButton();
-        customer13 = new JPanel();
-        avatar13 = new JLabel();
-        firstName13 = new JLabel();
-        lastName13 = new JLabel();
-        coachMoreButton5 = new JButton();
-        customer14 = new JPanel();
-        avatar14 = new JLabel();
-        firstName14 = new JLabel();
-        lastName14 = new JLabel();
-        coachMoreButton6 = new JButton();
-        customer15 = new JPanel();
-        avatar15 = new JLabel();
-        firstName15 = new JLabel();
-        lastName15 = new JLabel();
-        coachMoreButton7 = new JButton();
-        customer16 = new JPanel();
-        avatar16 = new JLabel();
-        firstName16 = new JLabel();
-        lastName16 = new JLabel();
-        coachMoreButton8 = new JButton();
+        coachGender1 = new JLabel();
         memberPrevButton = new JButton();
         coachPrevButton = new JButton();
         coachNextButton = new JButton();
+        client2 = new JPanel();
+        clientAvatar2 = new JLabel();
+        clientName2 = new JLabel();
+        clientGender2 = new JLabel();
+        memberMoreButton2 = new JButton();
+        client3 = new JPanel();
+        clientAvatar3 = new JLabel();
+        clientName3 = new JLabel();
+        clientGender3 = new JLabel();
+        memberMoreButton3 = new JButton();
+        client4 = new JPanel();
+        clientAvatar4 = new JLabel();
+        clientName4 = new JLabel();
+        clientGender4 = new JLabel();
+        memberMoreButton4 = new JButton();
+        client5 = new JPanel();
+        clientAvatar5 = new JLabel();
+        clientName5 = new JLabel();
+        clientGender5 = new JLabel();
+        memberMoreButton5 = new JButton();
+        client6 = new JPanel();
+        clientAvatar6 = new JLabel();
+        clientName6 = new JLabel();
+        clientGender6 = new JLabel();
+        memberMoreButton6 = new JButton();
+        client7 = new JPanel();
+        clientAvatar7 = new JLabel();
+        clientName7 = new JLabel();
+        clientGender7 = new JLabel();
+        memberMoreButton7 = new JButton();
+        client8 = new JPanel();
+        clientAvatar8 = new JLabel();
+        clientName8 = new JLabel();
+        clientGender8 = new JLabel();
+        memberMoreButton8 = new JButton();
+        coach2 = new JPanel();
+        coachAvatar2 = new JLabel();
+        coachName2 = new JLabel();
+        coachMoreButton2 = new JButton();
+        coachGender2 = new JLabel();
+        coach3 = new JPanel();
+        coachAvatar3 = new JLabel();
+        coachName3 = new JLabel();
+        coachMoreButton3 = new JButton();
+        coachGender3 = new JLabel();
+        coach4 = new JPanel();
+        coachAvatar4 = new JLabel();
+        coachName4 = new JLabel();
+        coachMoreButton4 = new JButton();
+        coachGender4 = new JLabel();
+        coach5 = new JPanel();
+        coachAvatar5 = new JLabel();
+        coachName5 = new JLabel();
+        coachMoreButton5 = new JButton();
+        coachGender5 = new JLabel();
+        coach6 = new JPanel();
+        coachAvatar6 = new JLabel();
+        coachName6 = new JLabel();
+        coachMoreButton6 = new JButton();
+        coachGender6 = new JLabel();
+        coach7 = new JPanel();
+        coachAvatar7 = new JLabel();
+        coachName7 = new JLabel();
+        coachMoreButton7 = new JButton();
+        coachGender7 = new JLabel();
+        coach8 = new JPanel();
+        coachAvatar8 = new JLabel();
+        coachName8 = new JLabel();
+        coachMoreButton8 = new JButton();
+        coachGender8 = new JLabel();
 
         //======== this ========
         setBackground(Color.white);
@@ -219,12 +300,12 @@ public class UserManageAllAdmin extends JFrame {
             body.add(title);
             title.setBounds(new Rectangle(new Point(25, 45), title.getPreferredSize()));
 
-            //---- coachName ----
-            coachName.setText("Member");
-            coachName.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 24));
-            coachName.setBackground(Color.white);
-            body.add(coachName);
-            coachName.setBounds(35, 120, 190, 42);
+            //---- MembetTip ----
+            MembetTip.setText("Member");
+            MembetTip.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 24));
+            MembetTip.setBackground(Color.white);
+            body.add(MembetTip);
+            MembetTip.setBounds(35, 120, 190, 42);
 
             //---- memberNextButton ----
             memberNextButton.setBackground(SystemColor.menu);
@@ -234,32 +315,33 @@ public class UserManageAllAdmin extends JFrame {
             body.add(memberNextButton);
             memberNextButton.setBounds(725, 120, 40, 40);
 
-            //======== customer1 ========
+            //======== client1 ========
             {
-                customer1.setBackground(SystemColor.window);
-                customer1.setBorder(new LineBorder(Color.lightGray));
-                customer1.setLayout(null);
+                client1.setBackground(SystemColor.window);
+                client1.setBorder(new LineBorder(Color.lightGray));
+                client1.setLayout(null);
 
-                //---- avatar1 ----
-                avatar1.setBackground(Color.white);
-                avatar1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
-                avatar1.setHorizontalAlignment(SwingConstants.CENTER);
-                customer1.add(avatar1);
-                avatar1.setBounds(10, 10, 75, 75);
+                //---- clientAvatar1 ----
+                clientAvatar1.setBackground(Color.white);
+                clientAvatar1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
+                clientAvatar1.setHorizontalAlignment(SwingConstants.CENTER);
+                client1.add(clientAvatar1);
+                clientAvatar1.setBounds(10, 10, 75, 75);
 
-                //---- firstName1 ----
-                firstName1.setText("First Name");
-                firstName1.setFont(firstName1.getFont().deriveFont(firstName1.getFont().getStyle() | Font.BOLD, firstName1.getFont().getSize() + 2f));
-                firstName1.setBackground(SystemColor.menu);
-                customer1.add(firstName1);
-                firstName1.setBounds(90, 10, 80, firstName1.getPreferredSize().height);
+                //---- clientName1 ----
+                clientName1.setText("First Name");
+                clientName1.setFont(clientName1.getFont().deriveFont(clientName1.getFont().getStyle() | Font.BOLD, clientName1.getFont().getSize() + 2f));
+                clientName1.setBackground(SystemColor.menu);
+                client1.add(clientName1);
+                clientName1.setBounds(90, 10, 80, clientName1.getPreferredSize().height);
 
-                //---- lastName1 ----
-                lastName1.setText("Last Name");
-                lastName1.setFont(lastName1.getFont().deriveFont(lastName1.getFont().getStyle() | Font.BOLD, lastName1.getFont().getSize() + 2f));
-                lastName1.setBackground(SystemColor.menu);
-                customer1.add(lastName1);
-                lastName1.setBounds(90, 27, 85, 17);
+                //---- clientGender1 ----
+                clientGender1.setText("Female");
+                clientGender1.setFont(new Font("Arial", Font.ITALIC, 12));
+                clientGender1.setBackground(SystemColor.menu);
+                clientGender1.setForeground(Color.gray);
+                client1.add(clientGender1);
+                clientGender1.setBounds(90, 31, 45, 17);
 
                 //---- memberMoreButton1 ----
                 memberMoreButton1.setText("MORE");
@@ -267,404 +349,26 @@ public class UserManageAllAdmin extends JFrame {
                 memberMoreButton1.setBorderPainted(false);
                 memberMoreButton1.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
                 memberMoreButton1.addActionListener(e -> memberMoreButton1ActionPerformed(e));
-                customer1.add(memberMoreButton1);
+                client1.add(memberMoreButton1);
                 memberMoreButton1.setBounds(100, 60, 65, 25);
 
                 {
                     // compute preferred size
                     Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < customer1.getComponentCount(); i++) {
-                        Rectangle bounds = customer1.getComponent(i).getBounds();
+                    for(int i = 0; i < client1.getComponentCount(); i++) {
+                        Rectangle bounds = client1.getComponent(i).getBounds();
                         preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
                         preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
                     }
-                    Insets insets = customer1.getInsets();
+                    Insets insets = client1.getInsets();
                     preferredSize.width += insets.right;
                     preferredSize.height += insets.bottom;
-                    customer1.setMinimumSize(preferredSize);
-                    customer1.setPreferredSize(preferredSize);
+                    client1.setMinimumSize(preferredSize);
+                    client1.setPreferredSize(preferredSize);
                 }
             }
-            body.add(customer1);
-            customer1.setBounds(35, 165, 175, 100);
-
-            //======== customer2 ========
-            {
-                customer2.setBackground(SystemColor.window);
-                customer2.setBorder(new LineBorder(Color.lightGray));
-                customer2.setLayout(null);
-
-                //---- avatar2 ----
-                avatar2.setBackground(Color.white);
-                avatar2.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
-                avatar2.setHorizontalAlignment(SwingConstants.CENTER);
-                customer2.add(avatar2);
-                avatar2.setBounds(10, 10, 75, 75);
-
-                //---- firstName2 ----
-                firstName2.setText("First Name");
-                firstName2.setFont(firstName2.getFont().deriveFont(firstName2.getFont().getStyle() | Font.BOLD, firstName2.getFont().getSize() + 2f));
-                firstName2.setBackground(SystemColor.menu);
-                customer2.add(firstName2);
-                firstName2.setBounds(90, 10, 80, firstName2.getPreferredSize().height);
-
-                //---- lastName2 ----
-                lastName2.setText("Last Name");
-                lastName2.setFont(lastName2.getFont().deriveFont(lastName2.getFont().getStyle() | Font.BOLD, lastName2.getFont().getSize() + 2f));
-                lastName2.setBackground(SystemColor.menu);
-                customer2.add(lastName2);
-                lastName2.setBounds(90, 27, 85, 17);
-
-                //---- memberMoreButton2 ----
-                memberMoreButton2.setText("MORE");
-                memberMoreButton2.setBackground(SystemColor.menu);
-                memberMoreButton2.setBorderPainted(false);
-                memberMoreButton2.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                memberMoreButton2.addActionListener(e -> memberMoreButton2ActionPerformed(e));
-                customer2.add(memberMoreButton2);
-                memberMoreButton2.setBounds(100, 60, 65, 25);
-
-                {
-                    // compute preferred size
-                    Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < customer2.getComponentCount(); i++) {
-                        Rectangle bounds = customer2.getComponent(i).getBounds();
-                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                    }
-                    Insets insets = customer2.getInsets();
-                    preferredSize.width += insets.right;
-                    preferredSize.height += insets.bottom;
-                    customer2.setMinimumSize(preferredSize);
-                    customer2.setPreferredSize(preferredSize);
-                }
-            }
-            body.add(customer2);
-            customer2.setBounds(220, 165, 175, 100);
-
-            //======== customer3 ========
-            {
-                customer3.setBackground(SystemColor.window);
-                customer3.setBorder(new LineBorder(Color.lightGray));
-                customer3.setLayout(null);
-
-                //---- avatar3 ----
-                avatar3.setBackground(Color.white);
-                avatar3.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
-                avatar3.setHorizontalAlignment(SwingConstants.CENTER);
-                customer3.add(avatar3);
-                avatar3.setBounds(10, 10, 75, 75);
-
-                //---- firstName3 ----
-                firstName3.setText("First Name");
-                firstName3.setFont(firstName3.getFont().deriveFont(firstName3.getFont().getStyle() | Font.BOLD, firstName3.getFont().getSize() + 2f));
-                firstName3.setBackground(SystemColor.menu);
-                customer3.add(firstName3);
-                firstName3.setBounds(90, 10, 80, firstName3.getPreferredSize().height);
-
-                //---- lastName3 ----
-                lastName3.setText("Last Name");
-                lastName3.setFont(lastName3.getFont().deriveFont(lastName3.getFont().getStyle() | Font.BOLD, lastName3.getFont().getSize() + 2f));
-                lastName3.setBackground(SystemColor.menu);
-                customer3.add(lastName3);
-                lastName3.setBounds(90, 27, 85, 17);
-
-                //---- memberMoreButton3 ----
-                memberMoreButton3.setText("MORE");
-                memberMoreButton3.setBackground(SystemColor.menu);
-                memberMoreButton3.setBorderPainted(false);
-                memberMoreButton3.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                memberMoreButton3.addActionListener(e -> memberMoreButton3ActionPerformed(e));
-                customer3.add(memberMoreButton3);
-                memberMoreButton3.setBounds(100, 60, 65, 25);
-
-                {
-                    // compute preferred size
-                    Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < customer3.getComponentCount(); i++) {
-                        Rectangle bounds = customer3.getComponent(i).getBounds();
-                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                    }
-                    Insets insets = customer3.getInsets();
-                    preferredSize.width += insets.right;
-                    preferredSize.height += insets.bottom;
-                    customer3.setMinimumSize(preferredSize);
-                    customer3.setPreferredSize(preferredSize);
-                }
-            }
-            body.add(customer3);
-            customer3.setBounds(405, 165, 175, 100);
-
-            //======== customer4 ========
-            {
-                customer4.setBackground(SystemColor.window);
-                customer4.setBorder(new LineBorder(Color.lightGray));
-                customer4.setLayout(null);
-
-                //---- avatar4 ----
-                avatar4.setBackground(Color.white);
-                avatar4.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
-                avatar4.setHorizontalAlignment(SwingConstants.CENTER);
-                customer4.add(avatar4);
-                avatar4.setBounds(10, 10, 75, 75);
-
-                //---- firstName4 ----
-                firstName4.setText("First Name");
-                firstName4.setFont(firstName4.getFont().deriveFont(firstName4.getFont().getStyle() | Font.BOLD, firstName4.getFont().getSize() + 2f));
-                firstName4.setBackground(SystemColor.menu);
-                customer4.add(firstName4);
-                firstName4.setBounds(90, 10, 80, firstName4.getPreferredSize().height);
-
-                //---- lastName4 ----
-                lastName4.setText("Last Name");
-                lastName4.setFont(lastName4.getFont().deriveFont(lastName4.getFont().getStyle() | Font.BOLD, lastName4.getFont().getSize() + 2f));
-                lastName4.setBackground(SystemColor.menu);
-                customer4.add(lastName4);
-                lastName4.setBounds(90, 27, 85, 17);
-
-                //---- memberMoreButton4 ----
-                memberMoreButton4.setText("MORE");
-                memberMoreButton4.setBackground(SystemColor.menu);
-                memberMoreButton4.setBorderPainted(false);
-                memberMoreButton4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                memberMoreButton4.addActionListener(e -> memberMoreButton4ActionPerformed(e));
-                customer4.add(memberMoreButton4);
-                memberMoreButton4.setBounds(100, 60, 65, 25);
-
-                {
-                    // compute preferred size
-                    Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < customer4.getComponentCount(); i++) {
-                        Rectangle bounds = customer4.getComponent(i).getBounds();
-                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                    }
-                    Insets insets = customer4.getInsets();
-                    preferredSize.width += insets.right;
-                    preferredSize.height += insets.bottom;
-                    customer4.setMinimumSize(preferredSize);
-                    customer4.setPreferredSize(preferredSize);
-                }
-            }
-            body.add(customer4);
-            customer4.setBounds(590, 165, 175, 100);
-
-            //======== customer5 ========
-            {
-                customer5.setBackground(SystemColor.window);
-                customer5.setBorder(new LineBorder(Color.lightGray));
-                customer5.setLayout(null);
-
-                //---- avatar5 ----
-                avatar5.setBackground(Color.white);
-                avatar5.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
-                avatar5.setHorizontalAlignment(SwingConstants.CENTER);
-                customer5.add(avatar5);
-                avatar5.setBounds(10, 10, 75, 75);
-
-                //---- firstName5 ----
-                firstName5.setText("First Name");
-                firstName5.setFont(firstName5.getFont().deriveFont(firstName5.getFont().getStyle() | Font.BOLD, firstName5.getFont().getSize() + 2f));
-                firstName5.setBackground(SystemColor.menu);
-                customer5.add(firstName5);
-                firstName5.setBounds(90, 10, 80, firstName5.getPreferredSize().height);
-
-                //---- lastName5 ----
-                lastName5.setText("Last Name");
-                lastName5.setFont(lastName5.getFont().deriveFont(lastName5.getFont().getStyle() | Font.BOLD, lastName5.getFont().getSize() + 2f));
-                lastName5.setBackground(SystemColor.menu);
-                customer5.add(lastName5);
-                lastName5.setBounds(90, 27, 85, 17);
-
-                //---- memberMoreButton5 ----
-                memberMoreButton5.setText("MORE");
-                memberMoreButton5.setBackground(SystemColor.menu);
-                memberMoreButton5.setBorderPainted(false);
-                memberMoreButton5.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                memberMoreButton5.addActionListener(e -> memberMoreButton5ActionPerformed(e));
-                customer5.add(memberMoreButton5);
-                memberMoreButton5.setBounds(100, 60, 65, 25);
-
-                {
-                    // compute preferred size
-                    Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < customer5.getComponentCount(); i++) {
-                        Rectangle bounds = customer5.getComponent(i).getBounds();
-                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                    }
-                    Insets insets = customer5.getInsets();
-                    preferredSize.width += insets.right;
-                    preferredSize.height += insets.bottom;
-                    customer5.setMinimumSize(preferredSize);
-                    customer5.setPreferredSize(preferredSize);
-                }
-            }
-            body.add(customer5);
-            customer5.setBounds(35, 275, 175, 100);
-
-            //======== customer6 ========
-            {
-                customer6.setBackground(SystemColor.window);
-                customer6.setBorder(new LineBorder(Color.lightGray));
-                customer6.setLayout(null);
-
-                //---- avatar6 ----
-                avatar6.setBackground(Color.white);
-                avatar6.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
-                avatar6.setHorizontalAlignment(SwingConstants.CENTER);
-                customer6.add(avatar6);
-                avatar6.setBounds(10, 10, 75, 75);
-
-                //---- firstName6 ----
-                firstName6.setText("First Name");
-                firstName6.setFont(firstName6.getFont().deriveFont(firstName6.getFont().getStyle() | Font.BOLD, firstName6.getFont().getSize() + 2f));
-                firstName6.setBackground(SystemColor.menu);
-                customer6.add(firstName6);
-                firstName6.setBounds(90, 10, 80, firstName6.getPreferredSize().height);
-
-                //---- lastName6 ----
-                lastName6.setText("Last Name");
-                lastName6.setFont(lastName6.getFont().deriveFont(lastName6.getFont().getStyle() | Font.BOLD, lastName6.getFont().getSize() + 2f));
-                lastName6.setBackground(SystemColor.menu);
-                customer6.add(lastName6);
-                lastName6.setBounds(90, 27, 85, 17);
-
-                //---- memberMoreButton6 ----
-                memberMoreButton6.setText("MORE");
-                memberMoreButton6.setBackground(SystemColor.menu);
-                memberMoreButton6.setBorderPainted(false);
-                memberMoreButton6.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                memberMoreButton6.addActionListener(e -> memberMoreButton6ActionPerformed(e));
-                customer6.add(memberMoreButton6);
-                memberMoreButton6.setBounds(100, 60, 65, 25);
-
-                {
-                    // compute preferred size
-                    Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < customer6.getComponentCount(); i++) {
-                        Rectangle bounds = customer6.getComponent(i).getBounds();
-                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                    }
-                    Insets insets = customer6.getInsets();
-                    preferredSize.width += insets.right;
-                    preferredSize.height += insets.bottom;
-                    customer6.setMinimumSize(preferredSize);
-                    customer6.setPreferredSize(preferredSize);
-                }
-            }
-            body.add(customer6);
-            customer6.setBounds(220, 275, 175, 100);
-
-            //======== customer7 ========
-            {
-                customer7.setBackground(SystemColor.window);
-                customer7.setBorder(new LineBorder(Color.lightGray));
-                customer7.setLayout(null);
-
-                //---- avatar7 ----
-                avatar7.setBackground(Color.white);
-                avatar7.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
-                avatar7.setHorizontalAlignment(SwingConstants.CENTER);
-                customer7.add(avatar7);
-                avatar7.setBounds(10, 10, 75, 75);
-
-                //---- firstName7 ----
-                firstName7.setText("First Name");
-                firstName7.setFont(firstName7.getFont().deriveFont(firstName7.getFont().getStyle() | Font.BOLD, firstName7.getFont().getSize() + 2f));
-                firstName7.setBackground(SystemColor.menu);
-                customer7.add(firstName7);
-                firstName7.setBounds(90, 10, 80, firstName7.getPreferredSize().height);
-
-                //---- lastName7 ----
-                lastName7.setText("Last Name");
-                lastName7.setFont(lastName7.getFont().deriveFont(lastName7.getFont().getStyle() | Font.BOLD, lastName7.getFont().getSize() + 2f));
-                lastName7.setBackground(SystemColor.menu);
-                customer7.add(lastName7);
-                lastName7.setBounds(90, 27, 85, 17);
-
-                //---- memberMoreButton7 ----
-                memberMoreButton7.setText("MORE");
-                memberMoreButton7.setBackground(SystemColor.menu);
-                memberMoreButton7.setBorderPainted(false);
-                memberMoreButton7.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                memberMoreButton7.addActionListener(e -> memberMoreButton7ActionPerformed(e));
-                customer7.add(memberMoreButton7);
-                memberMoreButton7.setBounds(100, 60, 65, 25);
-
-                {
-                    // compute preferred size
-                    Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < customer7.getComponentCount(); i++) {
-                        Rectangle bounds = customer7.getComponent(i).getBounds();
-                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                    }
-                    Insets insets = customer7.getInsets();
-                    preferredSize.width += insets.right;
-                    preferredSize.height += insets.bottom;
-                    customer7.setMinimumSize(preferredSize);
-                    customer7.setPreferredSize(preferredSize);
-                }
-            }
-            body.add(customer7);
-            customer7.setBounds(405, 275, 175, 100);
-
-            //======== customer8 ========
-            {
-                customer8.setBackground(SystemColor.window);
-                customer8.setBorder(new LineBorder(Color.lightGray));
-                customer8.setLayout(null);
-
-                //---- avatar8 ----
-                avatar8.setBackground(Color.white);
-                avatar8.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
-                avatar8.setHorizontalAlignment(SwingConstants.CENTER);
-                customer8.add(avatar8);
-                avatar8.setBounds(10, 10, 75, 75);
-
-                //---- firstName8 ----
-                firstName8.setText("First Name");
-                firstName8.setFont(firstName8.getFont().deriveFont(firstName8.getFont().getStyle() | Font.BOLD, firstName8.getFont().getSize() + 2f));
-                firstName8.setBackground(SystemColor.menu);
-                customer8.add(firstName8);
-                firstName8.setBounds(90, 10, 80, firstName8.getPreferredSize().height);
-
-                //---- lastName8 ----
-                lastName8.setText("Last Name");
-                lastName8.setFont(lastName8.getFont().deriveFont(lastName8.getFont().getStyle() | Font.BOLD, lastName8.getFont().getSize() + 2f));
-                lastName8.setBackground(SystemColor.menu);
-                customer8.add(lastName8);
-                lastName8.setBounds(90, 27, 85, 17);
-
-                //---- memberMoreButton8 ----
-                memberMoreButton8.setText("MORE");
-                memberMoreButton8.setBackground(SystemColor.menu);
-                memberMoreButton8.setBorderPainted(false);
-                memberMoreButton8.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                memberMoreButton8.addActionListener(e -> memberMoreButton8ActionPerformed(e));
-                customer8.add(memberMoreButton8);
-                memberMoreButton8.setBounds(100, 60, 65, 25);
-
-                {
-                    // compute preferred size
-                    Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < customer8.getComponentCount(); i++) {
-                        Rectangle bounds = customer8.getComponent(i).getBounds();
-                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                    }
-                    Insets insets = customer8.getInsets();
-                    preferredSize.width += insets.right;
-                    preferredSize.height += insets.bottom;
-                    customer8.setMinimumSize(preferredSize);
-                    customer8.setPreferredSize(preferredSize);
-                }
-            }
-            body.add(customer8);
-            customer8.setBounds(590, 275, 175, 100);
+            body.add(client1);
+            client1.setBounds(35, 165, 175, 100);
 
             //---- decorationLine2 ----
             decorationLine2.setBackground(Color.black);
@@ -672,39 +376,32 @@ public class UserManageAllAdmin extends JFrame {
             body.add(decorationLine2);
             decorationLine2.setBounds(35, 380, 730, 2);
 
-            //---- coachName2 ----
-            coachName2.setText("Coach");
-            coachName2.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 24));
-            coachName2.setBackground(Color.white);
-            body.add(coachName2);
-            coachName2.setBounds(35, 385, 190, 42);
+            //---- coachTips ----
+            coachTips.setText("Coach");
+            coachTips.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 24));
+            coachTips.setBackground(Color.white);
+            body.add(coachTips);
+            coachTips.setBounds(35, 385, 190, 42);
 
-            //======== customer9 ========
+            //======== coach1 ========
             {
-                customer9.setBackground(SystemColor.window);
-                customer9.setBorder(new LineBorder(Color.lightGray));
-                customer9.setLayout(null);
+                coach1.setBackground(SystemColor.window);
+                coach1.setBorder(new LineBorder(Color.lightGray));
+                coach1.setLayout(null);
 
-                //---- avatar9 ----
-                avatar9.setBackground(Color.white);
-                avatar9.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
-                avatar9.setHorizontalAlignment(SwingConstants.CENTER);
-                customer9.add(avatar9);
-                avatar9.setBounds(10, 10, 75, 75);
+                //---- coachAvatar1 ----
+                coachAvatar1.setBackground(Color.white);
+                coachAvatar1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
+                coachAvatar1.setHorizontalAlignment(SwingConstants.CENTER);
+                coach1.add(coachAvatar1);
+                coachAvatar1.setBounds(10, 10, 75, 75);
 
-                //---- firstName9 ----
-                firstName9.setText("First Name");
-                firstName9.setFont(firstName9.getFont().deriveFont(firstName9.getFont().getStyle() | Font.BOLD, firstName9.getFont().getSize() + 2f));
-                firstName9.setBackground(SystemColor.menu);
-                customer9.add(firstName9);
-                firstName9.setBounds(90, 10, 80, firstName9.getPreferredSize().height);
-
-                //---- lastName9 ----
-                lastName9.setText("Last Name");
-                lastName9.setFont(lastName9.getFont().deriveFont(lastName9.getFont().getStyle() | Font.BOLD, lastName9.getFont().getSize() + 2f));
-                lastName9.setBackground(SystemColor.menu);
-                customer9.add(lastName9);
-                lastName9.setBounds(90, 27, 85, 17);
+                //---- coachName1 ----
+                coachName1.setText("First Name");
+                coachName1.setFont(coachName1.getFont().deriveFont(coachName1.getFont().getStyle() | Font.BOLD, coachName1.getFont().getSize() + 2f));
+                coachName1.setBackground(SystemColor.menu);
+                coach1.add(coachName1);
+                coachName1.setBounds(90, 10, 80, coachName1.getPreferredSize().height);
 
                 //---- coachMoreButton1 ----
                 coachMoreButton1.setText("MORE");
@@ -712,404 +409,34 @@ public class UserManageAllAdmin extends JFrame {
                 coachMoreButton1.setBorderPainted(false);
                 coachMoreButton1.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
                 coachMoreButton1.addActionListener(e -> coachMoreButton1ActionPerformed(e));
-                customer9.add(coachMoreButton1);
+                coach1.add(coachMoreButton1);
                 coachMoreButton1.setBounds(100, 60, 65, 25);
 
-                {
-                    // compute preferred size
-                    Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < customer9.getComponentCount(); i++) {
-                        Rectangle bounds = customer9.getComponent(i).getBounds();
-                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                    }
-                    Insets insets = customer9.getInsets();
-                    preferredSize.width += insets.right;
-                    preferredSize.height += insets.bottom;
-                    customer9.setMinimumSize(preferredSize);
-                    customer9.setPreferredSize(preferredSize);
-                }
-            }
-            body.add(customer9);
-            customer9.setBounds(35, 430, 175, 100);
-
-            //======== customer10 ========
-            {
-                customer10.setBackground(SystemColor.window);
-                customer10.setBorder(new LineBorder(Color.lightGray));
-                customer10.setLayout(null);
-
-                //---- avatar10 ----
-                avatar10.setBackground(Color.white);
-                avatar10.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
-                avatar10.setHorizontalAlignment(SwingConstants.CENTER);
-                customer10.add(avatar10);
-                avatar10.setBounds(10, 10, 75, 75);
-
-                //---- firstName10 ----
-                firstName10.setText("First Name");
-                firstName10.setFont(firstName10.getFont().deriveFont(firstName10.getFont().getStyle() | Font.BOLD, firstName10.getFont().getSize() + 2f));
-                firstName10.setBackground(SystemColor.menu);
-                customer10.add(firstName10);
-                firstName10.setBounds(90, 10, 80, firstName10.getPreferredSize().height);
-
-                //---- lastName10 ----
-                lastName10.setText("Last Name");
-                lastName10.setFont(lastName10.getFont().deriveFont(lastName10.getFont().getStyle() | Font.BOLD, lastName10.getFont().getSize() + 2f));
-                lastName10.setBackground(SystemColor.menu);
-                customer10.add(lastName10);
-                lastName10.setBounds(90, 27, 85, 17);
-
-                //---- coachMoreButton2 ----
-                coachMoreButton2.setText("MORE");
-                coachMoreButton2.setBackground(SystemColor.menu);
-                coachMoreButton2.setBorderPainted(false);
-                coachMoreButton2.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                coachMoreButton2.addActionListener(e -> coachMoreButton2ActionPerformed(e));
-                customer10.add(coachMoreButton2);
-                coachMoreButton2.setBounds(100, 60, 65, 25);
+                //---- coachGender1 ----
+                coachGender1.setText("Female");
+                coachGender1.setFont(new Font("Arial", Font.ITALIC, 12));
+                coachGender1.setBackground(SystemColor.menu);
+                coachGender1.setForeground(Color.gray);
+                coach1.add(coachGender1);
+                coachGender1.setBounds(90, 31, 45, 17);
 
                 {
                     // compute preferred size
                     Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < customer10.getComponentCount(); i++) {
-                        Rectangle bounds = customer10.getComponent(i).getBounds();
+                    for(int i = 0; i < coach1.getComponentCount(); i++) {
+                        Rectangle bounds = coach1.getComponent(i).getBounds();
                         preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
                         preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
                     }
-                    Insets insets = customer10.getInsets();
+                    Insets insets = coach1.getInsets();
                     preferredSize.width += insets.right;
                     preferredSize.height += insets.bottom;
-                    customer10.setMinimumSize(preferredSize);
-                    customer10.setPreferredSize(preferredSize);
+                    coach1.setMinimumSize(preferredSize);
+                    coach1.setPreferredSize(preferredSize);
                 }
             }
-            body.add(customer10);
-            customer10.setBounds(220, 430, 175, 100);
-
-            //======== customer11 ========
-            {
-                customer11.setBackground(SystemColor.window);
-                customer11.setBorder(new LineBorder(Color.lightGray));
-                customer11.setLayout(null);
-
-                //---- avatar11 ----
-                avatar11.setBackground(Color.white);
-                avatar11.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
-                avatar11.setHorizontalAlignment(SwingConstants.CENTER);
-                customer11.add(avatar11);
-                avatar11.setBounds(10, 10, 75, 75);
-
-                //---- firstName11 ----
-                firstName11.setText("First Name");
-                firstName11.setFont(firstName11.getFont().deriveFont(firstName11.getFont().getStyle() | Font.BOLD, firstName11.getFont().getSize() + 2f));
-                firstName11.setBackground(SystemColor.menu);
-                customer11.add(firstName11);
-                firstName11.setBounds(90, 10, 80, firstName11.getPreferredSize().height);
-
-                //---- lastName11 ----
-                lastName11.setText("Last Name");
-                lastName11.setFont(lastName11.getFont().deriveFont(lastName11.getFont().getStyle() | Font.BOLD, lastName11.getFont().getSize() + 2f));
-                lastName11.setBackground(SystemColor.menu);
-                customer11.add(lastName11);
-                lastName11.setBounds(90, 27, 85, 17);
-
-                //---- coachMoreButton3 ----
-                coachMoreButton3.setText("MORE");
-                coachMoreButton3.setBackground(SystemColor.menu);
-                coachMoreButton3.setBorderPainted(false);
-                coachMoreButton3.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                coachMoreButton3.addActionListener(e -> coachMoreButton3ActionPerformed(e));
-                customer11.add(coachMoreButton3);
-                coachMoreButton3.setBounds(100, 60, 65, 25);
-
-                {
-                    // compute preferred size
-                    Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < customer11.getComponentCount(); i++) {
-                        Rectangle bounds = customer11.getComponent(i).getBounds();
-                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                    }
-                    Insets insets = customer11.getInsets();
-                    preferredSize.width += insets.right;
-                    preferredSize.height += insets.bottom;
-                    customer11.setMinimumSize(preferredSize);
-                    customer11.setPreferredSize(preferredSize);
-                }
-            }
-            body.add(customer11);
-            customer11.setBounds(405, 430, 175, 100);
-
-            //======== customer12 ========
-            {
-                customer12.setBackground(SystemColor.window);
-                customer12.setBorder(new LineBorder(Color.lightGray));
-                customer12.setLayout(null);
-
-                //---- avatar12 ----
-                avatar12.setBackground(Color.white);
-                avatar12.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
-                avatar12.setHorizontalAlignment(SwingConstants.CENTER);
-                customer12.add(avatar12);
-                avatar12.setBounds(10, 10, 75, 75);
-
-                //---- firstName12 ----
-                firstName12.setText("First Name");
-                firstName12.setFont(firstName12.getFont().deriveFont(firstName12.getFont().getStyle() | Font.BOLD, firstName12.getFont().getSize() + 2f));
-                firstName12.setBackground(SystemColor.menu);
-                customer12.add(firstName12);
-                firstName12.setBounds(90, 10, 80, firstName12.getPreferredSize().height);
-
-                //---- lastName12 ----
-                lastName12.setText("Last Name");
-                lastName12.setFont(lastName12.getFont().deriveFont(lastName12.getFont().getStyle() | Font.BOLD, lastName12.getFont().getSize() + 2f));
-                lastName12.setBackground(SystemColor.menu);
-                customer12.add(lastName12);
-                lastName12.setBounds(90, 27, 85, 17);
-
-                //---- coachMoreButton4 ----
-                coachMoreButton4.setText("MORE");
-                coachMoreButton4.setBackground(SystemColor.menu);
-                coachMoreButton4.setBorderPainted(false);
-                coachMoreButton4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                coachMoreButton4.addActionListener(e -> coachMoreButton4ActionPerformed(e));
-                customer12.add(coachMoreButton4);
-                coachMoreButton4.setBounds(100, 60, 65, 25);
-
-                {
-                    // compute preferred size
-                    Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < customer12.getComponentCount(); i++) {
-                        Rectangle bounds = customer12.getComponent(i).getBounds();
-                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                    }
-                    Insets insets = customer12.getInsets();
-                    preferredSize.width += insets.right;
-                    preferredSize.height += insets.bottom;
-                    customer12.setMinimumSize(preferredSize);
-                    customer12.setPreferredSize(preferredSize);
-                }
-            }
-            body.add(customer12);
-            customer12.setBounds(590, 430, 175, 100);
-
-            //======== customer13 ========
-            {
-                customer13.setBackground(SystemColor.window);
-                customer13.setBorder(new LineBorder(Color.lightGray));
-                customer13.setLayout(null);
-
-                //---- avatar13 ----
-                avatar13.setBackground(Color.white);
-                avatar13.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
-                avatar13.setHorizontalAlignment(SwingConstants.CENTER);
-                customer13.add(avatar13);
-                avatar13.setBounds(10, 10, 75, 75);
-
-                //---- firstName13 ----
-                firstName13.setText("First Name");
-                firstName13.setFont(firstName13.getFont().deriveFont(firstName13.getFont().getStyle() | Font.BOLD, firstName13.getFont().getSize() + 2f));
-                firstName13.setBackground(SystemColor.menu);
-                customer13.add(firstName13);
-                firstName13.setBounds(90, 10, 80, firstName13.getPreferredSize().height);
-
-                //---- lastName13 ----
-                lastName13.setText("Last Name");
-                lastName13.setFont(lastName13.getFont().deriveFont(lastName13.getFont().getStyle() | Font.BOLD, lastName13.getFont().getSize() + 2f));
-                lastName13.setBackground(SystemColor.menu);
-                customer13.add(lastName13);
-                lastName13.setBounds(90, 27, 85, 17);
-
-                //---- coachMoreButton5 ----
-                coachMoreButton5.setText("MORE");
-                coachMoreButton5.setBackground(SystemColor.menu);
-                coachMoreButton5.setBorderPainted(false);
-                coachMoreButton5.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                coachMoreButton5.addActionListener(e -> coachMoreButton5ActionPerformed(e));
-                customer13.add(coachMoreButton5);
-                coachMoreButton5.setBounds(100, 60, 65, 25);
-
-                {
-                    // compute preferred size
-                    Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < customer13.getComponentCount(); i++) {
-                        Rectangle bounds = customer13.getComponent(i).getBounds();
-                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                    }
-                    Insets insets = customer13.getInsets();
-                    preferredSize.width += insets.right;
-                    preferredSize.height += insets.bottom;
-                    customer13.setMinimumSize(preferredSize);
-                    customer13.setPreferredSize(preferredSize);
-                }
-            }
-            body.add(customer13);
-            customer13.setBounds(35, 540, 175, 100);
-
-            //======== customer14 ========
-            {
-                customer14.setBackground(SystemColor.window);
-                customer14.setBorder(new LineBorder(Color.lightGray));
-                customer14.setLayout(null);
-
-                //---- avatar14 ----
-                avatar14.setBackground(Color.white);
-                avatar14.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
-                avatar14.setHorizontalAlignment(SwingConstants.CENTER);
-                customer14.add(avatar14);
-                avatar14.setBounds(10, 10, 75, 75);
-
-                //---- firstName14 ----
-                firstName14.setText("First Name");
-                firstName14.setFont(firstName14.getFont().deriveFont(firstName14.getFont().getStyle() | Font.BOLD, firstName14.getFont().getSize() + 2f));
-                firstName14.setBackground(SystemColor.menu);
-                customer14.add(firstName14);
-                firstName14.setBounds(90, 10, 80, firstName14.getPreferredSize().height);
-
-                //---- lastName14 ----
-                lastName14.setText("Last Name");
-                lastName14.setFont(lastName14.getFont().deriveFont(lastName14.getFont().getStyle() | Font.BOLD, lastName14.getFont().getSize() + 2f));
-                lastName14.setBackground(SystemColor.menu);
-                customer14.add(lastName14);
-                lastName14.setBounds(90, 27, 85, 17);
-
-                //---- coachMoreButton6 ----
-                coachMoreButton6.setText("MORE");
-                coachMoreButton6.setBackground(SystemColor.menu);
-                coachMoreButton6.setBorderPainted(false);
-                coachMoreButton6.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                coachMoreButton6.addActionListener(e -> coachMoreButton6ActionPerformed(e));
-                customer14.add(coachMoreButton6);
-                coachMoreButton6.setBounds(100, 60, 65, 25);
-
-                {
-                    // compute preferred size
-                    Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < customer14.getComponentCount(); i++) {
-                        Rectangle bounds = customer14.getComponent(i).getBounds();
-                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                    }
-                    Insets insets = customer14.getInsets();
-                    preferredSize.width += insets.right;
-                    preferredSize.height += insets.bottom;
-                    customer14.setMinimumSize(preferredSize);
-                    customer14.setPreferredSize(preferredSize);
-                }
-            }
-            body.add(customer14);
-            customer14.setBounds(220, 540, 175, 100);
-
-            //======== customer15 ========
-            {
-                customer15.setBackground(SystemColor.window);
-                customer15.setBorder(new LineBorder(Color.lightGray));
-                customer15.setLayout(null);
-
-                //---- avatar15 ----
-                avatar15.setBackground(Color.white);
-                avatar15.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
-                avatar15.setHorizontalAlignment(SwingConstants.CENTER);
-                customer15.add(avatar15);
-                avatar15.setBounds(10, 10, 75, 75);
-
-                //---- firstName15 ----
-                firstName15.setText("First Name");
-                firstName15.setFont(firstName15.getFont().deriveFont(firstName15.getFont().getStyle() | Font.BOLD, firstName15.getFont().getSize() + 2f));
-                firstName15.setBackground(SystemColor.menu);
-                customer15.add(firstName15);
-                firstName15.setBounds(90, 10, 80, firstName15.getPreferredSize().height);
-
-                //---- lastName15 ----
-                lastName15.setText("Last Name");
-                lastName15.setFont(lastName15.getFont().deriveFont(lastName15.getFont().getStyle() | Font.BOLD, lastName15.getFont().getSize() + 2f));
-                lastName15.setBackground(SystemColor.menu);
-                customer15.add(lastName15);
-                lastName15.setBounds(90, 27, 85, 17);
-
-                //---- coachMoreButton7 ----
-                coachMoreButton7.setText("MORE");
-                coachMoreButton7.setBackground(SystemColor.menu);
-                coachMoreButton7.setBorderPainted(false);
-                coachMoreButton7.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                coachMoreButton7.addActionListener(e -> coachMoreButton7ActionPerformed(e));
-                customer15.add(coachMoreButton7);
-                coachMoreButton7.setBounds(100, 60, 65, 25);
-
-                {
-                    // compute preferred size
-                    Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < customer15.getComponentCount(); i++) {
-                        Rectangle bounds = customer15.getComponent(i).getBounds();
-                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                    }
-                    Insets insets = customer15.getInsets();
-                    preferredSize.width += insets.right;
-                    preferredSize.height += insets.bottom;
-                    customer15.setMinimumSize(preferredSize);
-                    customer15.setPreferredSize(preferredSize);
-                }
-            }
-            body.add(customer15);
-            customer15.setBounds(405, 540, 175, 100);
-
-            //======== customer16 ========
-            {
-                customer16.setBackground(SystemColor.window);
-                customer16.setBorder(new LineBorder(Color.lightGray));
-                customer16.setLayout(null);
-
-                //---- avatar16 ----
-                avatar16.setBackground(Color.white);
-                avatar16.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
-                avatar16.setHorizontalAlignment(SwingConstants.CENTER);
-                customer16.add(avatar16);
-                avatar16.setBounds(10, 10, 75, 75);
-
-                //---- firstName16 ----
-                firstName16.setText("First Name");
-                firstName16.setFont(firstName16.getFont().deriveFont(firstName16.getFont().getStyle() | Font.BOLD, firstName16.getFont().getSize() + 2f));
-                firstName16.setBackground(SystemColor.menu);
-                customer16.add(firstName16);
-                firstName16.setBounds(90, 10, 80, firstName16.getPreferredSize().height);
-
-                //---- lastName16 ----
-                lastName16.setText("Last Name");
-                lastName16.setFont(lastName16.getFont().deriveFont(lastName16.getFont().getStyle() | Font.BOLD, lastName16.getFont().getSize() + 2f));
-                lastName16.setBackground(SystemColor.menu);
-                customer16.add(lastName16);
-                lastName16.setBounds(90, 27, 85, 17);
-
-                //---- coachMoreButton8 ----
-                coachMoreButton8.setText("MORE");
-                coachMoreButton8.setBackground(SystemColor.menu);
-                coachMoreButton8.setBorderPainted(false);
-                coachMoreButton8.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                coachMoreButton8.addActionListener(e -> coachMoreButton8ActionPerformed(e));
-                customer16.add(coachMoreButton8);
-                coachMoreButton8.setBounds(100, 60, 65, 25);
-
-                {
-                    // compute preferred size
-                    Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < customer16.getComponentCount(); i++) {
-                        Rectangle bounds = customer16.getComponent(i).getBounds();
-                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                    }
-                    Insets insets = customer16.getInsets();
-                    preferredSize.width += insets.right;
-                    preferredSize.height += insets.bottom;
-                    customer16.setMinimumSize(preferredSize);
-                    customer16.setPreferredSize(preferredSize);
-                }
-            }
-            body.add(customer16);
-            customer16.setBounds(590, 540, 175, 100);
+            body.add(coach1);
+            coach1.setBounds(35, 430, 175, 100);
 
             //---- memberPrevButton ----
             memberPrevButton.setBackground(SystemColor.menu);
@@ -1134,6 +461,776 @@ public class UserManageAllAdmin extends JFrame {
             coachNextButton.addActionListener(e -> coachNextButtonActionPerformed(e));
             body.add(coachNextButton);
             coachNextButton.setBounds(725, 385, 40, 40);
+
+            //======== client2 ========
+            {
+                client2.setBackground(SystemColor.window);
+                client2.setBorder(new LineBorder(Color.lightGray));
+                client2.setLayout(null);
+
+                //---- clientAvatar2 ----
+                clientAvatar2.setBackground(Color.white);
+                clientAvatar2.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
+                clientAvatar2.setHorizontalAlignment(SwingConstants.CENTER);
+                client2.add(clientAvatar2);
+                clientAvatar2.setBounds(10, 10, 75, 75);
+
+                //---- clientName2 ----
+                clientName2.setText("First Name");
+                clientName2.setFont(clientName2.getFont().deriveFont(clientName2.getFont().getStyle() | Font.BOLD, clientName2.getFont().getSize() + 2f));
+                clientName2.setBackground(SystemColor.menu);
+                client2.add(clientName2);
+                clientName2.setBounds(90, 10, 80, clientName2.getPreferredSize().height);
+
+                //---- clientGender2 ----
+                clientGender2.setText("Female");
+                clientGender2.setFont(new Font("Arial", Font.ITALIC, 12));
+                clientGender2.setBackground(SystemColor.menu);
+                clientGender2.setForeground(Color.gray);
+                client2.add(clientGender2);
+                clientGender2.setBounds(90, 31, 45, 17);
+
+                //---- memberMoreButton2 ----
+                memberMoreButton2.setText("MORE");
+                memberMoreButton2.setBackground(SystemColor.menu);
+                memberMoreButton2.setBorderPainted(false);
+                memberMoreButton2.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                memberMoreButton2.addActionListener(e -> memberMoreButton2ActionPerformed(e));
+                client2.add(memberMoreButton2);
+                memberMoreButton2.setBounds(100, 60, 65, 25);
+
+                {
+                    // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < client2.getComponentCount(); i++) {
+                        Rectangle bounds = client2.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = client2.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    client2.setMinimumSize(preferredSize);
+                    client2.setPreferredSize(preferredSize);
+                }
+            }
+            body.add(client2);
+            client2.setBounds(220, 165, 175, 100);
+
+            //======== client3 ========
+            {
+                client3.setBackground(SystemColor.window);
+                client3.setBorder(new LineBorder(Color.lightGray));
+                client3.setLayout(null);
+
+                //---- clientAvatar3 ----
+                clientAvatar3.setBackground(Color.white);
+                clientAvatar3.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
+                clientAvatar3.setHorizontalAlignment(SwingConstants.CENTER);
+                client3.add(clientAvatar3);
+                clientAvatar3.setBounds(10, 10, 75, 75);
+
+                //---- clientName3 ----
+                clientName3.setText("First Name");
+                clientName3.setFont(clientName3.getFont().deriveFont(clientName3.getFont().getStyle() | Font.BOLD, clientName3.getFont().getSize() + 2f));
+                clientName3.setBackground(SystemColor.menu);
+                client3.add(clientName3);
+                clientName3.setBounds(90, 10, 80, clientName3.getPreferredSize().height);
+
+                //---- clientGender3 ----
+                clientGender3.setText("Female");
+                clientGender3.setFont(new Font("Arial", Font.ITALIC, 12));
+                clientGender3.setBackground(SystemColor.menu);
+                clientGender3.setForeground(Color.gray);
+                client3.add(clientGender3);
+                clientGender3.setBounds(90, 31, 45, 17);
+
+                //---- memberMoreButton3 ----
+                memberMoreButton3.setText("MORE");
+                memberMoreButton3.setBackground(SystemColor.menu);
+                memberMoreButton3.setBorderPainted(false);
+                memberMoreButton3.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                memberMoreButton3.addActionListener(e -> memberMoreButton3ActionPerformed(e));
+                client3.add(memberMoreButton3);
+                memberMoreButton3.setBounds(100, 60, 65, 25);
+
+                {
+                    // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < client3.getComponentCount(); i++) {
+                        Rectangle bounds = client3.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = client3.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    client3.setMinimumSize(preferredSize);
+                    client3.setPreferredSize(preferredSize);
+                }
+            }
+            body.add(client3);
+            client3.setBounds(405, 165, 175, 100);
+
+            //======== client4 ========
+            {
+                client4.setBackground(SystemColor.window);
+                client4.setBorder(new LineBorder(Color.lightGray));
+                client4.setLayout(null);
+
+                //---- clientAvatar4 ----
+                clientAvatar4.setBackground(Color.white);
+                clientAvatar4.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
+                clientAvatar4.setHorizontalAlignment(SwingConstants.CENTER);
+                client4.add(clientAvatar4);
+                clientAvatar4.setBounds(10, 10, 75, 75);
+
+                //---- clientName4 ----
+                clientName4.setText("First Name");
+                clientName4.setFont(clientName4.getFont().deriveFont(clientName4.getFont().getStyle() | Font.BOLD, clientName4.getFont().getSize() + 2f));
+                clientName4.setBackground(SystemColor.menu);
+                client4.add(clientName4);
+                clientName4.setBounds(90, 10, 80, clientName4.getPreferredSize().height);
+
+                //---- clientGender4 ----
+                clientGender4.setText("Female");
+                clientGender4.setFont(new Font("Arial", Font.ITALIC, 12));
+                clientGender4.setBackground(SystemColor.menu);
+                clientGender4.setForeground(Color.gray);
+                client4.add(clientGender4);
+                clientGender4.setBounds(90, 31, 45, 17);
+
+                //---- memberMoreButton4 ----
+                memberMoreButton4.setText("MORE");
+                memberMoreButton4.setBackground(SystemColor.menu);
+                memberMoreButton4.setBorderPainted(false);
+                memberMoreButton4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                memberMoreButton4.addActionListener(e -> memberMoreButton4ActionPerformed(e));
+                client4.add(memberMoreButton4);
+                memberMoreButton4.setBounds(100, 60, 65, 25);
+
+                {
+                    // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < client4.getComponentCount(); i++) {
+                        Rectangle bounds = client4.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = client4.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    client4.setMinimumSize(preferredSize);
+                    client4.setPreferredSize(preferredSize);
+                }
+            }
+            body.add(client4);
+            client4.setBounds(590, 165, 175, 100);
+
+            //======== client5 ========
+            {
+                client5.setBackground(SystemColor.window);
+                client5.setBorder(new LineBorder(Color.lightGray));
+                client5.setLayout(null);
+
+                //---- clientAvatar5 ----
+                clientAvatar5.setBackground(Color.white);
+                clientAvatar5.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
+                clientAvatar5.setHorizontalAlignment(SwingConstants.CENTER);
+                client5.add(clientAvatar5);
+                clientAvatar5.setBounds(10, 10, 75, 75);
+
+                //---- clientName5 ----
+                clientName5.setText("First Name");
+                clientName5.setFont(clientName5.getFont().deriveFont(clientName5.getFont().getStyle() | Font.BOLD, clientName5.getFont().getSize() + 2f));
+                clientName5.setBackground(SystemColor.menu);
+                client5.add(clientName5);
+                clientName5.setBounds(90, 10, 80, clientName5.getPreferredSize().height);
+
+                //---- clientGender5 ----
+                clientGender5.setText("Female");
+                clientGender5.setFont(new Font("Arial", Font.ITALIC, 12));
+                clientGender5.setBackground(SystemColor.menu);
+                clientGender5.setForeground(Color.gray);
+                client5.add(clientGender5);
+                clientGender5.setBounds(90, 31, 45, 17);
+
+                //---- memberMoreButton5 ----
+                memberMoreButton5.setText("MORE");
+                memberMoreButton5.setBackground(SystemColor.menu);
+                memberMoreButton5.setBorderPainted(false);
+                memberMoreButton5.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                memberMoreButton5.addActionListener(e -> memberMoreButton5ActionPerformed(e));
+                client5.add(memberMoreButton5);
+                memberMoreButton5.setBounds(100, 60, 65, 25);
+
+                {
+                    // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < client5.getComponentCount(); i++) {
+                        Rectangle bounds = client5.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = client5.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    client5.setMinimumSize(preferredSize);
+                    client5.setPreferredSize(preferredSize);
+                }
+            }
+            body.add(client5);
+            client5.setBounds(35, 275, 175, 100);
+
+            //======== client6 ========
+            {
+                client6.setBackground(SystemColor.window);
+                client6.setBorder(new LineBorder(Color.lightGray));
+                client6.setLayout(null);
+
+                //---- clientAvatar6 ----
+                clientAvatar6.setBackground(Color.white);
+                clientAvatar6.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
+                clientAvatar6.setHorizontalAlignment(SwingConstants.CENTER);
+                client6.add(clientAvatar6);
+                clientAvatar6.setBounds(10, 10, 75, 75);
+
+                //---- clientName6 ----
+                clientName6.setText("First Name");
+                clientName6.setFont(clientName6.getFont().deriveFont(clientName6.getFont().getStyle() | Font.BOLD, clientName6.getFont().getSize() + 2f));
+                clientName6.setBackground(SystemColor.menu);
+                client6.add(clientName6);
+                clientName6.setBounds(90, 10, 80, clientName6.getPreferredSize().height);
+
+                //---- clientGender6 ----
+                clientGender6.setText("Female");
+                clientGender6.setFont(new Font("Arial", Font.ITALIC, 12));
+                clientGender6.setBackground(SystemColor.menu);
+                clientGender6.setForeground(Color.gray);
+                client6.add(clientGender6);
+                clientGender6.setBounds(90, 31, 45, 17);
+
+                //---- memberMoreButton6 ----
+                memberMoreButton6.setText("MORE");
+                memberMoreButton6.setBackground(SystemColor.menu);
+                memberMoreButton6.setBorderPainted(false);
+                memberMoreButton6.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                memberMoreButton6.addActionListener(e -> memberMoreButton6ActionPerformed(e));
+                client6.add(memberMoreButton6);
+                memberMoreButton6.setBounds(100, 60, 65, 25);
+
+                {
+                    // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < client6.getComponentCount(); i++) {
+                        Rectangle bounds = client6.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = client6.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    client6.setMinimumSize(preferredSize);
+                    client6.setPreferredSize(preferredSize);
+                }
+            }
+            body.add(client6);
+            client6.setBounds(220, 275, 175, 100);
+
+            //======== client7 ========
+            {
+                client7.setBackground(SystemColor.window);
+                client7.setBorder(new LineBorder(Color.lightGray));
+                client7.setLayout(null);
+
+                //---- clientAvatar7 ----
+                clientAvatar7.setBackground(Color.white);
+                clientAvatar7.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
+                clientAvatar7.setHorizontalAlignment(SwingConstants.CENTER);
+                client7.add(clientAvatar7);
+                clientAvatar7.setBounds(10, 10, 75, 75);
+
+                //---- clientName7 ----
+                clientName7.setText("First Name");
+                clientName7.setFont(clientName7.getFont().deriveFont(clientName7.getFont().getStyle() | Font.BOLD, clientName7.getFont().getSize() + 2f));
+                clientName7.setBackground(SystemColor.menu);
+                client7.add(clientName7);
+                clientName7.setBounds(90, 10, 80, clientName7.getPreferredSize().height);
+
+                //---- clientGender7 ----
+                clientGender7.setText("Female");
+                clientGender7.setFont(new Font("Arial", Font.ITALIC, 12));
+                clientGender7.setBackground(SystemColor.menu);
+                clientGender7.setForeground(Color.gray);
+                client7.add(clientGender7);
+                clientGender7.setBounds(90, 31, 45, 17);
+
+                //---- memberMoreButton7 ----
+                memberMoreButton7.setText("MORE");
+                memberMoreButton7.setBackground(SystemColor.menu);
+                memberMoreButton7.setBorderPainted(false);
+                memberMoreButton7.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                memberMoreButton7.addActionListener(e -> memberMoreButton7ActionPerformed(e));
+                client7.add(memberMoreButton7);
+                memberMoreButton7.setBounds(100, 60, 65, 25);
+
+                {
+                    // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < client7.getComponentCount(); i++) {
+                        Rectangle bounds = client7.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = client7.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    client7.setMinimumSize(preferredSize);
+                    client7.setPreferredSize(preferredSize);
+                }
+            }
+            body.add(client7);
+            client7.setBounds(405, 275, 175, 100);
+
+            //======== client8 ========
+            {
+                client8.setBackground(SystemColor.window);
+                client8.setBorder(new LineBorder(Color.lightGray));
+                client8.setLayout(null);
+
+                //---- clientAvatar8 ----
+                clientAvatar8.setBackground(Color.white);
+                clientAvatar8.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
+                clientAvatar8.setHorizontalAlignment(SwingConstants.CENTER);
+                client8.add(clientAvatar8);
+                clientAvatar8.setBounds(10, 10, 75, 75);
+
+                //---- clientName8 ----
+                clientName8.setText("First Name");
+                clientName8.setFont(clientName8.getFont().deriveFont(clientName8.getFont().getStyle() | Font.BOLD, clientName8.getFont().getSize() + 2f));
+                clientName8.setBackground(SystemColor.menu);
+                client8.add(clientName8);
+                clientName8.setBounds(90, 10, 80, clientName8.getPreferredSize().height);
+
+                //---- clientGender8 ----
+                clientGender8.setText("Female");
+                clientGender8.setFont(new Font("Arial", Font.ITALIC, 12));
+                clientGender8.setBackground(SystemColor.menu);
+                clientGender8.setForeground(Color.gray);
+                client8.add(clientGender8);
+                clientGender8.setBounds(90, 31, 45, 17);
+
+                //---- memberMoreButton8 ----
+                memberMoreButton8.setText("MORE");
+                memberMoreButton8.setBackground(SystemColor.menu);
+                memberMoreButton8.setBorderPainted(false);
+                memberMoreButton8.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                memberMoreButton8.addActionListener(e -> memberMoreButton8ActionPerformed(e));
+                client8.add(memberMoreButton8);
+                memberMoreButton8.setBounds(100, 60, 65, 25);
+
+                {
+                    // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < client8.getComponentCount(); i++) {
+                        Rectangle bounds = client8.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = client8.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    client8.setMinimumSize(preferredSize);
+                    client8.setPreferredSize(preferredSize);
+                }
+            }
+            body.add(client8);
+            client8.setBounds(590, 275, 175, 100);
+
+            //======== coach2 ========
+            {
+                coach2.setBackground(SystemColor.window);
+                coach2.setBorder(new LineBorder(Color.lightGray));
+                coach2.setLayout(null);
+
+                //---- coachAvatar2 ----
+                coachAvatar2.setBackground(Color.white);
+                coachAvatar2.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
+                coachAvatar2.setHorizontalAlignment(SwingConstants.CENTER);
+                coach2.add(coachAvatar2);
+                coachAvatar2.setBounds(10, 10, 75, 75);
+
+                //---- coachName2 ----
+                coachName2.setText("First Name");
+                coachName2.setFont(coachName2.getFont().deriveFont(coachName2.getFont().getStyle() | Font.BOLD, coachName2.getFont().getSize() + 2f));
+                coachName2.setBackground(SystemColor.menu);
+                coach2.add(coachName2);
+                coachName2.setBounds(90, 10, 80, coachName2.getPreferredSize().height);
+
+                //---- coachMoreButton2 ----
+                coachMoreButton2.setText("MORE");
+                coachMoreButton2.setBackground(SystemColor.menu);
+                coachMoreButton2.setBorderPainted(false);
+                coachMoreButton2.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                coachMoreButton2.addActionListener(e -> coachMoreButton2ActionPerformed(e));
+                coach2.add(coachMoreButton2);
+                coachMoreButton2.setBounds(100, 60, 65, 25);
+
+                //---- coachGender2 ----
+                coachGender2.setText("Female");
+                coachGender2.setFont(new Font("Arial", Font.ITALIC, 12));
+                coachGender2.setBackground(SystemColor.menu);
+                coachGender2.setForeground(Color.gray);
+                coach2.add(coachGender2);
+                coachGender2.setBounds(90, 31, 45, 17);
+
+                {
+                    // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < coach2.getComponentCount(); i++) {
+                        Rectangle bounds = coach2.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = coach2.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    coach2.setMinimumSize(preferredSize);
+                    coach2.setPreferredSize(preferredSize);
+                }
+            }
+            body.add(coach2);
+            coach2.setBounds(220, 430, 175, 100);
+
+            //======== coach3 ========
+            {
+                coach3.setBackground(SystemColor.window);
+                coach3.setBorder(new LineBorder(Color.lightGray));
+                coach3.setLayout(null);
+
+                //---- coachAvatar3 ----
+                coachAvatar3.setBackground(Color.white);
+                coachAvatar3.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
+                coachAvatar3.setHorizontalAlignment(SwingConstants.CENTER);
+                coach3.add(coachAvatar3);
+                coachAvatar3.setBounds(10, 10, 75, 75);
+
+                //---- coachName3 ----
+                coachName3.setText("First Name");
+                coachName3.setFont(coachName3.getFont().deriveFont(coachName3.getFont().getStyle() | Font.BOLD, coachName3.getFont().getSize() + 2f));
+                coachName3.setBackground(SystemColor.menu);
+                coach3.add(coachName3);
+                coachName3.setBounds(90, 10, 80, coachName3.getPreferredSize().height);
+
+                //---- coachMoreButton3 ----
+                coachMoreButton3.setText("MORE");
+                coachMoreButton3.setBackground(SystemColor.menu);
+                coachMoreButton3.setBorderPainted(false);
+                coachMoreButton3.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                coachMoreButton3.addActionListener(e -> coachMoreButton3ActionPerformed(e));
+                coach3.add(coachMoreButton3);
+                coachMoreButton3.setBounds(100, 60, 65, 25);
+
+                //---- coachGender3 ----
+                coachGender3.setText("Female");
+                coachGender3.setFont(new Font("Arial", Font.ITALIC, 12));
+                coachGender3.setBackground(SystemColor.menu);
+                coachGender3.setForeground(Color.gray);
+                coach3.add(coachGender3);
+                coachGender3.setBounds(90, 31, 45, 17);
+
+                {
+                    // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < coach3.getComponentCount(); i++) {
+                        Rectangle bounds = coach3.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = coach3.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    coach3.setMinimumSize(preferredSize);
+                    coach3.setPreferredSize(preferredSize);
+                }
+            }
+            body.add(coach3);
+            coach3.setBounds(405, 430, 175, 100);
+
+            //======== coach4 ========
+            {
+                coach4.setBackground(SystemColor.window);
+                coach4.setBorder(new LineBorder(Color.lightGray));
+                coach4.setLayout(null);
+
+                //---- coachAvatar4 ----
+                coachAvatar4.setBackground(Color.white);
+                coachAvatar4.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
+                coachAvatar4.setHorizontalAlignment(SwingConstants.CENTER);
+                coach4.add(coachAvatar4);
+                coachAvatar4.setBounds(10, 10, 75, 75);
+
+                //---- coachName4 ----
+                coachName4.setText("First Name");
+                coachName4.setFont(coachName4.getFont().deriveFont(coachName4.getFont().getStyle() | Font.BOLD, coachName4.getFont().getSize() + 2f));
+                coachName4.setBackground(SystemColor.menu);
+                coach4.add(coachName4);
+                coachName4.setBounds(90, 10, 80, coachName4.getPreferredSize().height);
+
+                //---- coachMoreButton4 ----
+                coachMoreButton4.setText("MORE");
+                coachMoreButton4.setBackground(SystemColor.menu);
+                coachMoreButton4.setBorderPainted(false);
+                coachMoreButton4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                coachMoreButton4.addActionListener(e -> coachMoreButton4ActionPerformed(e));
+                coach4.add(coachMoreButton4);
+                coachMoreButton4.setBounds(100, 60, 65, 25);
+
+                //---- coachGender4 ----
+                coachGender4.setText("Female");
+                coachGender4.setFont(new Font("Arial", Font.ITALIC, 12));
+                coachGender4.setBackground(SystemColor.menu);
+                coachGender4.setForeground(Color.gray);
+                coach4.add(coachGender4);
+                coachGender4.setBounds(90, 31, 45, 17);
+
+                {
+                    // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < coach4.getComponentCount(); i++) {
+                        Rectangle bounds = coach4.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = coach4.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    coach4.setMinimumSize(preferredSize);
+                    coach4.setPreferredSize(preferredSize);
+                }
+            }
+            body.add(coach4);
+            coach4.setBounds(590, 430, 175, 100);
+
+            //======== coach5 ========
+            {
+                coach5.setBackground(SystemColor.window);
+                coach5.setBorder(new LineBorder(Color.lightGray));
+                coach5.setLayout(null);
+
+                //---- coachAvatar5 ----
+                coachAvatar5.setBackground(Color.white);
+                coachAvatar5.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
+                coachAvatar5.setHorizontalAlignment(SwingConstants.CENTER);
+                coach5.add(coachAvatar5);
+                coachAvatar5.setBounds(10, 10, 75, 75);
+
+                //---- coachName5 ----
+                coachName5.setText("First Name");
+                coachName5.setFont(coachName5.getFont().deriveFont(coachName5.getFont().getStyle() | Font.BOLD, coachName5.getFont().getSize() + 2f));
+                coachName5.setBackground(SystemColor.menu);
+                coach5.add(coachName5);
+                coachName5.setBounds(90, 10, 80, coachName5.getPreferredSize().height);
+
+                //---- coachMoreButton5 ----
+                coachMoreButton5.setText("MORE");
+                coachMoreButton5.setBackground(SystemColor.menu);
+                coachMoreButton5.setBorderPainted(false);
+                coachMoreButton5.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                coachMoreButton5.addActionListener(e -> coachMoreButton5ActionPerformed(e));
+                coach5.add(coachMoreButton5);
+                coachMoreButton5.setBounds(100, 60, 65, 25);
+
+                //---- coachGender5 ----
+                coachGender5.setText("Female");
+                coachGender5.setFont(new Font("Arial", Font.ITALIC, 12));
+                coachGender5.setBackground(SystemColor.menu);
+                coachGender5.setForeground(Color.gray);
+                coach5.add(coachGender5);
+                coachGender5.setBounds(90, 31, 45, 17);
+
+                {
+                    // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < coach5.getComponentCount(); i++) {
+                        Rectangle bounds = coach5.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = coach5.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    coach5.setMinimumSize(preferredSize);
+                    coach5.setPreferredSize(preferredSize);
+                }
+            }
+            body.add(coach5);
+            coach5.setBounds(35, 540, 175, 100);
+
+            //======== coach6 ========
+            {
+                coach6.setBackground(SystemColor.window);
+                coach6.setBorder(new LineBorder(Color.lightGray));
+                coach6.setLayout(null);
+
+                //---- coachAvatar6 ----
+                coachAvatar6.setBackground(Color.white);
+                coachAvatar6.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
+                coachAvatar6.setHorizontalAlignment(SwingConstants.CENTER);
+                coach6.add(coachAvatar6);
+                coachAvatar6.setBounds(10, 10, 75, 75);
+
+                //---- coachName6 ----
+                coachName6.setText("First Name");
+                coachName6.setFont(coachName6.getFont().deriveFont(coachName6.getFont().getStyle() | Font.BOLD, coachName6.getFont().getSize() + 2f));
+                coachName6.setBackground(SystemColor.menu);
+                coach6.add(coachName6);
+                coachName6.setBounds(90, 10, 80, coachName6.getPreferredSize().height);
+
+                //---- coachMoreButton6 ----
+                coachMoreButton6.setText("MORE");
+                coachMoreButton6.setBackground(SystemColor.menu);
+                coachMoreButton6.setBorderPainted(false);
+                coachMoreButton6.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                coachMoreButton6.addActionListener(e -> coachMoreButton6ActionPerformed(e));
+                coach6.add(coachMoreButton6);
+                coachMoreButton6.setBounds(100, 60, 65, 25);
+
+                //---- coachGender6 ----
+                coachGender6.setText("Female");
+                coachGender6.setFont(new Font("Arial", Font.ITALIC, 12));
+                coachGender6.setBackground(SystemColor.menu);
+                coachGender6.setForeground(Color.gray);
+                coach6.add(coachGender6);
+                coachGender6.setBounds(90, 31, 45, 17);
+
+                {
+                    // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < coach6.getComponentCount(); i++) {
+                        Rectangle bounds = coach6.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = coach6.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    coach6.setMinimumSize(preferredSize);
+                    coach6.setPreferredSize(preferredSize);
+                }
+            }
+            body.add(coach6);
+            coach6.setBounds(220, 540, 175, 100);
+
+            //======== coach7 ========
+            {
+                coach7.setBackground(SystemColor.window);
+                coach7.setBorder(new LineBorder(Color.lightGray));
+                coach7.setLayout(null);
+
+                //---- coachAvatar7 ----
+                coachAvatar7.setBackground(Color.white);
+                coachAvatar7.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
+                coachAvatar7.setHorizontalAlignment(SwingConstants.CENTER);
+                coach7.add(coachAvatar7);
+                coachAvatar7.setBounds(10, 10, 75, 75);
+
+                //---- coachName7 ----
+                coachName7.setText("First Name");
+                coachName7.setFont(coachName7.getFont().deriveFont(coachName7.getFont().getStyle() | Font.BOLD, coachName7.getFont().getSize() + 2f));
+                coachName7.setBackground(SystemColor.menu);
+                coach7.add(coachName7);
+                coachName7.setBounds(90, 10, 80, coachName7.getPreferredSize().height);
+
+                //---- coachMoreButton7 ----
+                coachMoreButton7.setText("MORE");
+                coachMoreButton7.setBackground(SystemColor.menu);
+                coachMoreButton7.setBorderPainted(false);
+                coachMoreButton7.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                coachMoreButton7.addActionListener(e -> coachMoreButton7ActionPerformed(e));
+                coach7.add(coachMoreButton7);
+                coachMoreButton7.setBounds(100, 60, 65, 25);
+
+                //---- coachGender7 ----
+                coachGender7.setText("Female");
+                coachGender7.setFont(new Font("Arial", Font.ITALIC, 12));
+                coachGender7.setBackground(SystemColor.menu);
+                coachGender7.setForeground(Color.gray);
+                coach7.add(coachGender7);
+                coachGender7.setBounds(90, 31, 45, 17);
+
+                {
+                    // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < coach7.getComponentCount(); i++) {
+                        Rectangle bounds = coach7.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = coach7.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    coach7.setMinimumSize(preferredSize);
+                    coach7.setPreferredSize(preferredSize);
+                }
+            }
+            body.add(coach7);
+            coach7.setBounds(405, 540, 175, 100);
+
+            //======== coach8 ========
+            {
+                coach8.setBackground(SystemColor.window);
+                coach8.setBorder(new LineBorder(Color.lightGray));
+                coach8.setLayout(null);
+
+                //---- coachAvatar8 ----
+                coachAvatar8.setBackground(Color.white);
+                coachAvatar8.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
+                coachAvatar8.setHorizontalAlignment(SwingConstants.CENTER);
+                coach8.add(coachAvatar8);
+                coachAvatar8.setBounds(10, 10, 75, 75);
+
+                //---- coachName8 ----
+                coachName8.setText("First Name");
+                coachName8.setFont(coachName8.getFont().deriveFont(coachName8.getFont().getStyle() | Font.BOLD, coachName8.getFont().getSize() + 2f));
+                coachName8.setBackground(SystemColor.menu);
+                coach8.add(coachName8);
+                coachName8.setBounds(90, 10, 80, coachName8.getPreferredSize().height);
+
+                //---- coachMoreButton8 ----
+                coachMoreButton8.setText("MORE");
+                coachMoreButton8.setBackground(SystemColor.menu);
+                coachMoreButton8.setBorderPainted(false);
+                coachMoreButton8.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                coachMoreButton8.addActionListener(e -> coachMoreButton8ActionPerformed(e));
+                coach8.add(coachMoreButton8);
+                coachMoreButton8.setBounds(100, 60, 65, 25);
+
+                //---- coachGender8 ----
+                coachGender8.setText("Female");
+                coachGender8.setFont(new Font("Arial", Font.ITALIC, 12));
+                coachGender8.setBackground(SystemColor.menu);
+                coachGender8.setForeground(Color.gray);
+                coach8.add(coachGender8);
+                coachGender8.setBounds(90, 31, 45, 17);
+
+                {
+                    // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < coach8.getComponentCount(); i++) {
+                        Rectangle bounds = coach8.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = coach8.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    coach8.setMinimumSize(preferredSize);
+                    coach8.setPreferredSize(preferredSize);
+                }
+            }
+            body.add(coach8);
+            coach8.setBounds(590, 540, 175, 100);
 
             {
                 // compute preferred size
@@ -1176,103 +1273,111 @@ public class UserManageAllAdmin extends JFrame {
     private JPanel body;
     private JLabel decorationLine;
     private JLabel title;
-    private JLabel coachName;
+    private JLabel MembetTip;
     private JButton memberNextButton;
-    private JPanel customer1;
-    private JLabel avatar1;
-    private JLabel firstName1;
-    private JLabel lastName1;
+    private JPanel client1;
+    private JLabel clientAvatar1;
+    private JLabel clientName1;
+    private JLabel clientGender1;
     private JButton memberMoreButton1;
-    private JPanel customer2;
-    private JLabel avatar2;
-    private JLabel firstName2;
-    private JLabel lastName2;
-    private JButton memberMoreButton2;
-    private JPanel customer3;
-    private JLabel avatar3;
-    private JLabel firstName3;
-    private JLabel lastName3;
-    private JButton memberMoreButton3;
-    private JPanel customer4;
-    private JLabel avatar4;
-    private JLabel firstName4;
-    private JLabel lastName4;
-    private JButton memberMoreButton4;
-    private JPanel customer5;
-    private JLabel avatar5;
-    private JLabel firstName5;
-    private JLabel lastName5;
-    private JButton memberMoreButton5;
-    private JPanel customer6;
-    private JLabel avatar6;
-    private JLabel firstName6;
-    private JLabel lastName6;
-    private JButton memberMoreButton6;
-    private JPanel customer7;
-    private JLabel avatar7;
-    private JLabel firstName7;
-    private JLabel lastName7;
-    private JButton memberMoreButton7;
-    private JPanel customer8;
-    private JLabel avatar8;
-    private JLabel firstName8;
-    private JLabel lastName8;
-    private JButton memberMoreButton8;
     private JLabel decorationLine2;
-    private JLabel coachName2;
-    private JPanel customer9;
-    private JLabel avatar9;
-    private JLabel firstName9;
-    private JLabel lastName9;
+    private JLabel coachTips;
+    private JPanel coach1;
+    private JLabel coachAvatar1;
+    private JLabel coachName1;
     private JButton coachMoreButton1;
-    private JPanel customer10;
-    private JLabel avatar10;
-    private JLabel firstName10;
-    private JLabel lastName10;
-    private JButton coachMoreButton2;
-    private JPanel customer11;
-    private JLabel avatar11;
-    private JLabel firstName11;
-    private JLabel lastName11;
-    private JButton coachMoreButton3;
-    private JPanel customer12;
-    private JLabel avatar12;
-    private JLabel firstName12;
-    private JLabel lastName12;
-    private JButton coachMoreButton4;
-    private JPanel customer13;
-    private JLabel avatar13;
-    private JLabel firstName13;
-    private JLabel lastName13;
-    private JButton coachMoreButton5;
-    private JPanel customer14;
-    private JLabel avatar14;
-    private JLabel firstName14;
-    private JLabel lastName14;
-    private JButton coachMoreButton6;
-    private JPanel customer15;
-    private JLabel avatar15;
-    private JLabel firstName15;
-    private JLabel lastName15;
-    private JButton coachMoreButton7;
-    private JPanel customer16;
-    private JLabel avatar16;
-    private JLabel firstName16;
-    private JLabel lastName16;
-    private JButton coachMoreButton8;
+    private JLabel coachGender1;
     private JButton memberPrevButton;
     private JButton coachPrevButton;
     private JButton coachNextButton;
+    private JPanel client2;
+    private JLabel clientAvatar2;
+    private JLabel clientName2;
+    private JLabel clientGender2;
+    private JButton memberMoreButton2;
+    private JPanel client3;
+    private JLabel clientAvatar3;
+    private JLabel clientName3;
+    private JLabel clientGender3;
+    private JButton memberMoreButton3;
+    private JPanel client4;
+    private JLabel clientAvatar4;
+    private JLabel clientName4;
+    private JLabel clientGender4;
+    private JButton memberMoreButton4;
+    private JPanel client5;
+    private JLabel clientAvatar5;
+    private JLabel clientName5;
+    private JLabel clientGender5;
+    private JButton memberMoreButton5;
+    private JPanel client6;
+    private JLabel clientAvatar6;
+    private JLabel clientName6;
+    private JLabel clientGender6;
+    private JButton memberMoreButton6;
+    private JPanel client7;
+    private JLabel clientAvatar7;
+    private JLabel clientName7;
+    private JLabel clientGender7;
+    private JButton memberMoreButton7;
+    private JPanel client8;
+    private JLabel clientAvatar8;
+    private JLabel clientName8;
+    private JLabel clientGender8;
+    private JButton memberMoreButton8;
+    private JPanel coach2;
+    private JLabel coachAvatar2;
+    private JLabel coachName2;
+    private JButton coachMoreButton2;
+    private JLabel coachGender2;
+    private JPanel coach3;
+    private JLabel coachAvatar3;
+    private JLabel coachName3;
+    private JButton coachMoreButton3;
+    private JLabel coachGender3;
+    private JPanel coach4;
+    private JLabel coachAvatar4;
+    private JLabel coachName4;
+    private JButton coachMoreButton4;
+    private JLabel coachGender4;
+    private JPanel coach5;
+    private JLabel coachAvatar5;
+    private JLabel coachName5;
+    private JButton coachMoreButton5;
+    private JLabel coachGender5;
+    private JPanel coach6;
+    private JLabel coachAvatar6;
+    private JLabel coachName6;
+    private JButton coachMoreButton6;
+    private JLabel coachGender6;
+    private JPanel coach7;
+    private JLabel coachAvatar7;
+    private JLabel coachName7;
+    private JButton coachMoreButton7;
+    private JLabel coachGender7;
+    private JPanel coach8;
+    private JLabel coachAvatar8;
+    private JLabel coachName8;
+    private JButton coachMoreButton8;
+    private JLabel coachGender8;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         UserManageAllAdmin.run();
     }
+
+    private int pageClient = 0;
+    private int pageCoach = 0;
+    private List<ClientData> clientList;
+    private List<CoachData> coachList;
+    private int clientRemainNumb = 0;
+    private int coachRemainNumb = 0;
 
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
                     UserManageAllAdmin frame = new UserManageAllAdmin();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setResizable(false);
@@ -1282,5 +1387,326 @@ public class UserManageAllAdmin extends JFrame {
                 }
             }
         });
+    }
+    private void init(){
+        this.clientList = ClientFunction.getWholeClient();
+        this.coachList = CoachFunction.getWholeCoach();
+        this.updateClient();
+        this.updateCoach();
+    }
+    private void updateClient(){
+        int i = 0;
+        int remainPage = this.clientList.size() - this.pageClient * 8;
+        ClientData[] clientData = new ClientData[8];
+
+        switch (this.clientRemainNumb){
+            case 0:
+                break;
+            case 1:
+                this.clientName2.setOpaque(false);
+                this.clientGender2.setOpaque(false);
+                this.memberMoreButton2.setVisible(true);
+            case 2:
+                this.clientName3.setOpaque(false);
+                this.clientGender3.setOpaque(false);
+                this.memberMoreButton3.setVisible(true);
+            case 3:
+                this.clientName4.setOpaque(false);
+                this.clientGender4.setOpaque(false);
+                this.memberMoreButton4.setVisible(true);
+            case 4:
+                this.clientName5.setOpaque(false);
+                this.clientGender5.setOpaque(false);
+                this.memberMoreButton5.setVisible(true);
+            case 5:
+                this.clientName6.setOpaque(false);
+                this.clientGender6.setOpaque(false);
+                this.memberMoreButton6.setVisible(true);
+            case 6:
+                this.clientName7.setOpaque(false);
+                this.clientGender7.setOpaque(false);
+                this.memberMoreButton7.setVisible(true);
+            case 7:
+                this.clientName8.setOpaque(false);
+                this.clientGender8.setOpaque(false);
+                this.memberMoreButton8.setVisible(true);
+
+        }
+
+        if((remainPage / 8) > 0){
+            for(i = 0; i < 8; i++){
+                clientData[i] = this.clientList.get(i + this.pageClient*6);
+            }
+            this.clientName1.setText(clientData[0].getName());
+            this.clientGender1.setText(clientData[0].getSex());
+
+            this.clientName2.setText(clientData[1].getName());
+            this.clientGender2.setText(clientData[1].getSex());
+
+            this.clientName3.setText(clientData[2].getName());
+            this.clientGender3.setText(clientData[2].getSex());
+
+            this.clientName4.setText(clientData[3].getName());
+            this.clientGender4.setText(clientData[3].getSex());
+
+            this.clientName5.setText(clientData[4].getName());
+            this.clientGender5.setText(clientData[4].getSex());
+
+            this.clientName6.setText(clientData[5].getName());
+            this.clientGender6.setText(clientData[5].getSex());
+
+            this.clientName7.setText(clientData[6].getName());
+            this.clientGender7.setText(clientData[6].getSex());
+
+            this.clientName8.setText(clientData[7].getName());
+            this.clientGender8.setText(clientData[7].getSex());
+
+        }else{
+            this.clientRemainNumb = this.clientList.size() % 8;
+            for(i = 0; i < clientRemainNumb; i++){
+                clientData[i] = this.clientList.get(i + this.pageClient * 8);
+            }
+            //Set text for the remaining client
+            switch (clientRemainNumb){
+                case 7:
+                    this.clientName7.setText(clientData[6].getName());
+                    this.clientGender7.setText(clientData[6].getSex());
+                case 6:
+                    this.clientName6.setText(clientData[5].getName());
+                    this.clientGender6.setText(clientData[5].getSex());
+                case 5:
+                    this.clientName5.setText(clientData[4].getName());
+                    this.clientGender5.setText(clientData[4].getSex());
+                case 4:
+                    this.clientName4.setText(clientData[3].getName());
+                    this.clientGender4.setText(clientData[3].getSex());
+                case 3:
+                    this.clientName3.setText(clientData[2].getName());
+                    this.clientGender3.setText(clientData[2].getSex());
+                case 2:
+                    this.clientName2.setText(clientData[1].getName());
+                    this.clientGender2.setText(clientData[1].getSex());
+                case 1:
+                    this.clientName1.setText(clientData[0].getName());
+                    this.clientGender1.setText(clientData[0].getSex());
+            }
+            //Set style for the remaining clients
+            switch (clientRemainNumb){
+                case 1:
+                    this.clientName2.setText("");
+                    this.clientName2.setBackground(new Color(230,230,230));
+                    this.clientName2.setOpaque(true);
+                    this.clientGender2.setText("");
+                    this.clientGender2.setBackground(new Color(230,230,230));
+                    this.clientGender2.setOpaque(true);
+                    this.memberMoreButton2.setVisible(false);
+                case 2:
+                    this.clientName3.setText("");
+                    this.clientName3.setBackground(new Color(230,230,230));
+                    this.clientName3.setOpaque(true);
+                    this.clientGender3.setText("");
+                    this.clientGender3.setBackground(new Color(230,230,230));
+                    this.clientGender3.setOpaque(true);
+                    this.memberMoreButton3.setVisible(false);
+                case 3:
+                    this.clientName4.setText("");
+                    this.clientName4.setBackground(new Color(230,230,230));
+                    this.clientName4.setOpaque(true);
+                    this.clientGender4.setText("");
+                    this.clientGender4.setBackground(new Color(230,230,230));
+                    this.clientGender4.setOpaque(true);
+                    this.memberMoreButton4.setVisible(false);
+                case 4:
+                    this.clientName5.setText("");
+                    this.clientName5.setBackground(new Color(230,230,230));
+                    this.clientName5.setOpaque(true);
+                    this.clientGender5.setText("");
+                    this.clientGender5.setBackground(new Color(230,230,230));
+                    this.clientGender5.setOpaque(true);
+                    this.memberMoreButton5.setVisible(false);
+                case 5:
+                    this.clientName6.setText("");
+                    this.clientName6.setBackground(new Color(230,230,230));
+                    this.clientName6.setOpaque(true);
+                    this.clientGender6.setText("");
+                    this.clientGender6.setBackground(new Color(230,230,230));
+                    this.clientGender6.setOpaque(true);
+                    this.memberMoreButton6.setVisible(false);
+                case 6:
+                    this.clientName7.setText("");
+                    this.clientName7.setBackground(new Color(230,230,230));
+                    this.clientName7.setOpaque(true);
+                    this.clientGender7.setText("");
+                    this.clientGender7.setBackground(new Color(230,230,230));
+                    this.clientGender7.setOpaque(true);
+                    this.memberMoreButton7.setVisible(false);
+                case 7:
+                    this.clientName8.setText("");
+                    this.clientName8.setBackground(new Color(230,230,230));
+                    this.clientName8.setOpaque(true);
+                    this.clientGender8.setText("");
+                    this.clientGender8.setBackground(new Color(230,230,230));
+                    this.clientGender8.setOpaque(true);
+                    this.memberMoreButton8.setVisible(false);
+            }
+        }
+    }
+
+    private void updateCoach(){
+        int i = 0;
+        int remainPage = this.coachList.size() - this.pageCoach * 8;
+        CoachData[] coachData = new CoachData[8];
+
+        switch (this.clientRemainNumb){
+            case 0:
+                break;
+            case 1:
+                this.coachName2.setOpaque(false);
+                this.coachGender2.setOpaque(false);
+                this.coachMoreButton2.setVisible(true);
+            case 2:
+                this.coachName3.setOpaque(false);
+                this.coachGender3.setOpaque(false);
+                this.coachMoreButton3.setVisible(true);
+            case 3:
+                this.coachName4.setOpaque(false);
+                this.coachGender4.setOpaque(false);
+                this.coachMoreButton4.setVisible(true);
+            case 4:
+                this.coachName5.setOpaque(false);
+                this.coachGender5.setOpaque(false);
+                this.coachMoreButton5.setVisible(true);
+            case 5:
+                this.coachName6.setOpaque(false);
+                this.coachGender6.setOpaque(false);
+                this.coachMoreButton6.setVisible(true);
+            case 6:
+                this.coachName7.setOpaque(false);
+                this.coachGender7.setOpaque(false);
+                this.coachMoreButton7.setVisible(true);
+            case 7:
+                this.coachName8.setOpaque(false);
+                this.coachGender8.setOpaque(false);
+                this.coachMoreButton8.setVisible(true);
+
+        }
+
+        if((remainPage / 8) > 0){
+            for(i = 0; i < 8; i++){
+                coachData[i] = this.coachList.get(i + this.pageCoach*8);
+            }
+            this.coachName1.setText(coachData[0].getName());
+            this.coachGender1.setText(coachData[0].getSex());
+
+            this.coachName2.setText(coachData[1].getName());
+            this.coachGender2.setText(coachData[1].getSex());
+
+            this.coachName3.setText(coachData[2].getName());
+            this.coachGender3.setText(coachData[2].getSex());
+
+            this.coachName4.setText(coachData[3].getName());
+            this.coachGender4.setText(coachData[3].getSex());
+
+            this.coachName5.setText(coachData[4].getName());
+            this.coachGender5.setText(coachData[4].getSex());
+
+            this.coachName6.setText(coachData[5].getName());
+            this.coachGender6.setText(coachData[5].getSex());
+
+            this.coachName7.setText(coachData[6].getName());
+            this.coachGender7.setText(coachData[6].getSex());
+
+            this.coachName8.setText(coachData[7].getName());
+            this.coachGender8.setText(coachData[7].getSex());
+
+        }else{
+            this.coachRemainNumb = this.coachList.size() % 8;
+            for(i = 0; i < coachRemainNumb; i++){
+                coachData[i] = this.coachList.get(i + this.pageCoach * 8);
+            }
+            //Set text for the remaining client
+            switch (coachRemainNumb){
+                case 7:
+                    this.coachName7.setText(coachData[6].getName());
+                    this.coachGender7.setText(coachData[6].getSex());
+                case 6:
+                    this.coachName6.setText(coachData[5].getName());
+                    this.coachGender6.setText(coachData[5].getSex());
+                case 5:
+                    this.coachName5.setText(coachData[4].getName());
+                    this.coachGender5.setText(coachData[4].getSex());
+                case 4:
+                    this.coachName4.setText(coachData[3].getName());
+                    this.coachGender4.setText(coachData[3].getSex());
+                case 3:
+                    this.coachName3.setText(coachData[2].getName());
+                    this.coachGender3.setText(coachData[2].getSex());
+                case 2:
+                    this.coachName2.setText(coachData[1].getName());
+                    this.coachGender2.setText(coachData[1].getSex());
+                case 1:
+                    this.coachName1.setText(coachData[0].getName());
+                    this.coachGender1.setText(coachData[0].getSex());
+            }
+            //Set style for the remaining clients
+            switch (coachRemainNumb){
+                case 1:
+                    this.coachName2.setText("");
+                    this.coachName2.setBackground(new Color(230,230,230));
+                    this.coachName2.setOpaque(true);
+                    this.coachGender2.setText("");
+                    this.coachGender2.setBackground(new Color(230,230,230));
+                    this.coachGender2.setOpaque(true);
+                    this.coachMoreButton2.setVisible(false);
+                case 2:
+                    this.coachName3.setText("");
+                    this.coachName3.setBackground(new Color(230,230,230));
+                    this.coachName3.setOpaque(true);
+                    this.coachGender3.setText("");
+                    this.coachGender3.setBackground(new Color(230,230,230));
+                    this.coachGender3.setOpaque(true);
+                    this.coachMoreButton3.setVisible(false);
+                case 3:
+                    this.coachName4.setText("");
+                    this.coachName4.setBackground(new Color(230,230,230));
+                    this.coachName4.setOpaque(true);
+                    this.coachGender4.setText("");
+                    this.coachGender4.setBackground(new Color(230,230,230));
+                    this.coachGender4.setOpaque(true);
+                    this.coachMoreButton4.setVisible(false);
+                case 4:
+                    this.coachName5.setText("");
+                    this.coachName5.setBackground(new Color(230,230,230));
+                    this.coachName5.setOpaque(true);
+                    this.coachGender5.setText("");
+                    this.coachGender5.setBackground(new Color(230,230,230));
+                    this.coachGender5.setOpaque(true);
+                    this.coachMoreButton5.setVisible(false);
+                case 5:
+                    this.coachName6.setText("");
+                    this.coachName6.setBackground(new Color(230,230,230));
+                    this.coachName6.setOpaque(true);
+                    this.coachGender6.setText("");
+                    this.coachGender6.setBackground(new Color(230,230,230));
+                    this.coachGender6.setOpaque(true);
+                    this.coachMoreButton6.setVisible(false);
+                case 6:
+                    this.coachName7.setText("");
+                    this.coachName7.setBackground(new Color(230,230,230));
+                    this.coachName7.setOpaque(true);
+                    this.coachGender7.setText("");
+                    this.coachGender7.setBackground(new Color(230,230,230));
+                    this.coachGender7.setOpaque(true);
+                    this.coachMoreButton7.setVisible(false);
+                case 7:
+                    this.coachName8.setText("");
+                    this.coachName8.setBackground(new Color(230,230,230));
+                    this.coachName8.setOpaque(true);
+                    this.coachGender8.setText("");
+                    this.coachGender8.setBackground(new Color(230,230,230));
+                    this.coachGender8.setOpaque(true);
+                    this.coachMoreButton8.setVisible(false);
+            }
+        }
     }
 }

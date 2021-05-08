@@ -4,8 +4,18 @@
 
 package gui.admin;
 
+import controller.ClassFunction;
+import controller.CoachFunction;
+import gui.coach.LessonDetailCoach;
+import gui.other.LessonBuffer;
+import gui.other.LoginBuffer;
+import gui.other.Warning;
+import io.classes.ClassData;
+import io.coach.CoachData;
+
 import java.awt.*;
 import java.awt.event.*;
+import java.util.List;
 import javax.swing.*;
 import javax.swing.border.*;
 
@@ -18,56 +28,83 @@ public class ALLLessonAdmin extends JFrame {
     }
 
     private void homeButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
-        ALLLessonAdmin.run();
-        this.dispose();
+        this.page = 0;
+        this.update();
     }
 
     private void previousButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
-        ALLLessonAdmin.run();
-        this.dispose();
+        if(this.page == 0){
+            Warning.run("No previous page here.");
+        }
+        else{
+            this.page--;
+            this.update();
+        }
     }
 
     private void nextButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
-        ALLLessonAdmin.run();
-        this.dispose();
+        int remainItem = this.list.size() - 6 * (this.page + 1);
+        if(remainItem <= 0){
+            Warning.run("No more page here.");
+        }
+        else{
+            this.page++;
+            this.update();
+        }
     }
 
     private void moreButton1ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6).getClassID());
         LessonDetailAdmin.run();
         this.dispose();
     }
 
     private void moreButton2ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6 + 1).getClassID());
         LessonDetailAdmin.run();
         this.dispose();
     }
 
     private void moreButton3ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6 + 2).getClassID());
         LessonDetailAdmin.run();
         this.dispose();
     }
 
-    private void moreButton6ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+    private void moreButton4ActionPerformed(ActionEvent e) {
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6 + 3).getClassID());
         LessonDetailAdmin.run();
         this.dispose();
     }
 
     private void moreButton5ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6 + 4).getClassID());
         LessonDetailAdmin.run();
         this.dispose();
     }
-    private void moreButton4ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+
+    private void moreButton6ActionPerformed(ActionEvent e) {
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6 + 5).getClassID());
         LessonDetailAdmin.run();
         this.dispose();
+    }
+
+    private void searchButtonActionPerformed(ActionEvent e) {
+        if(this.titleRadioButton.isSelected()){
+            list.clear();
+            list.add(ClassFunction.searchClassByName(this.search.getText()));
+        }else if(this.coachRadioButton.isSelected()){
+            list = ClassFunction.searchClassByCoachName(this.search.getText());
+        }else if(this.typeRadioButton.isSelected()){
+            list = ClassFunction.searchClassByProfile(this.search.getText());
+        }
+        this.update();
     }
 
 
@@ -79,47 +116,50 @@ public class ALLLessonAdmin extends JFrame {
         body = new JPanel();
         decorationLine = new JLabel();
         title = new JLabel();
+        search = new JTextField();
+        searchButton = new JButton();
+        homeButton = new JButton();
+        previousButton = new JButton();
+        nextButton = new JButton();
         lesson1 = new JPanel();
         lessonPicture1 = new JLabel();
-        lessonName = new JLabel();
-        lessonLevel1 = new JLabel();
+        lessonName1 = new JLabel();
+        lessonType1 = new JLabel();
         coachName1 = new JLabel();
         moreButton1 = new JButton();
         lesson2 = new JPanel();
         lessonName2 = new JLabel();
-        lessonLevel2 = new JLabel();
+        lessonType2 = new JLabel();
         coachName2 = new JLabel();
         lessonPicture2 = new JLabel();
         moreButton2 = new JButton();
         lesson3 = new JPanel();
         lessonName3 = new JLabel();
-        lessonLevel3 = new JLabel();
+        lessonType3 = new JLabel();
         moreButton3 = new JButton();
         coachName3 = new JLabel();
         lessonPicture3 = new JLabel();
         lesson4 = new JPanel();
         lessonName4 = new JLabel();
-        lessonLevel4 = new JLabel();
+        lessonType4 = new JLabel();
         moreButton4 = new JButton();
         coachName4 = new JLabel();
         lessonPicture4 = new JLabel();
         lesson5 = new JPanel();
         lessonName5 = new JLabel();
-        lessonLevel5 = new JLabel();
+        lessonType5 = new JLabel();
         coachName5 = new JLabel();
         lessonPicture5 = new JLabel();
         moreButton5 = new JButton();
         lesson6 = new JPanel();
         lessonPicture6 = new JLabel();
         lessonName6 = new JLabel();
-        lessonLevel6 = new JLabel();
+        lessonType6 = new JLabel();
         coachName6 = new JLabel();
         moreButton6 = new JButton();
-        search = new JTextField();
-        searchButton = new JButton();
-        homeButton = new JButton();
-        previousButton = new JButton();
-        nextButton = new JButton();
+        typeRadioButton = new JRadioButton();
+        coachRadioButton = new JRadioButton();
+        titleRadioButton = new JRadioButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -146,6 +186,45 @@ public class ALLLessonAdmin extends JFrame {
             body.add(title);
             title.setBounds(new Rectangle(new Point(25, 45), title.getPreferredSize()));
 
+            //---- search ----
+            search.setBackground(SystemColor.menu);
+            search.setBorder(new EmptyBorder(5, 10, 5, 0));
+            search.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+            body.add(search);
+            search.setBounds(265, 45, 300, 40);
+
+            //---- searchButton ----
+            searchButton.setBorderPainted(false);
+            searchButton.setBackground(SystemColor.controlHighlight);
+            searchButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/search.png")));
+            searchButton.addActionListener(e -> searchButtonActionPerformed(e));
+            body.add(searchButton);
+            searchButton.setBounds(565, 45, 40, 40);
+
+            //---- homeButton ----
+            homeButton.setBorderPainted(false);
+            homeButton.setBackground(SystemColor.menu);
+            homeButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/home.png")));
+            homeButton.addActionListener(e -> homeButtonActionPerformed(e));
+            body.add(homeButton);
+            homeButton.setBounds(645, 45, 40, 40);
+
+            //---- previousButton ----
+            previousButton.setBorderPainted(false);
+            previousButton.setBackground(SystemColor.menu);
+            previousButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/previous.png")));
+            previousButton.addActionListener(e -> previousButtonActionPerformed(e));
+            body.add(previousButton);
+            previousButton.setBounds(690, 45, 40, 40);
+
+            //---- nextButton ----
+            nextButton.setBorderPainted(false);
+            nextButton.setBackground(SystemColor.menu);
+            nextButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/next.png")));
+            nextButton.addActionListener(e -> nextButtonActionPerformed(e));
+            body.add(nextButton);
+            nextButton.setBounds(735, 45, 40, 40);
+
             //======== lesson1 ========
             {
                 lesson1.setBackground(SystemColor.menu);
@@ -153,24 +232,24 @@ public class ALLLessonAdmin extends JFrame {
 
                 //---- lessonPicture1 ----
                 lessonPicture1.setBackground(SystemColor.activeCaption);
-                lessonPicture1.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/crunches.png")));
+                lessonPicture1.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/run.png")));
                 lesson1.add(lessonPicture1);
-                lessonPicture1.setBounds(2, 1, 236, 160);
+                lessonPicture1.setBounds(1, 1, 238, 160);
 
-                //---- lessonName ----
-                lessonName.setText("Lesson Name");
-                lessonName.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
-                lessonName.setBackground(SystemColor.menu);
-                lesson1.add(lessonName);
-                lessonName.setBounds(5, 165, 195, lessonName.getPreferredSize().height);
+                //---- lessonName1 ----
+                lessonName1.setText("Lesson Name");
+                lessonName1.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
+                lessonName1.setBackground(SystemColor.menu);
+                lesson1.add(lessonName1);
+                lessonName1.setBounds(7, 168, 195, 23);
 
-                //---- lessonLevel1 ----
-                lessonLevel1.setText("Lesson Level");
-                lessonLevel1.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                lessonLevel1.setBackground(SystemColor.menu);
-                lessonLevel1.setForeground(new Color(150, 150, 150));
-                lesson1.add(lessonLevel1);
-                lessonLevel1.setBounds(5, 190, 85, 17);
+                //---- lessonType1 ----
+                lessonType1.setText("Lesson Level");
+                lessonType1.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
+                lessonType1.setBackground(SystemColor.menu);
+                lessonType1.setForeground(new Color(150, 150, 150));
+                lesson1.add(lessonType1);
+                lessonType1.setBounds(7, 195, 85, 17);
 
                 //---- coachName1 ----
                 coachName1.setText("Coach Name");
@@ -178,7 +257,7 @@ public class ALLLessonAdmin extends JFrame {
                 coachName1.setBackground(SystemColor.menu);
                 coachName1.setForeground(new Color(120, 120, 120));
                 lesson1.add(coachName1);
-                coachName1.setBounds(5, 225, 85, 17);
+                coachName1.setBounds(7, 225, 120, 18);
 
                 //---- moreButton1 ----
                 moreButton1.setText("MORE");
@@ -217,15 +296,15 @@ public class ALLLessonAdmin extends JFrame {
                 lessonName2.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
                 lessonName2.setBackground(SystemColor.menu);
                 lesson2.add(lessonName2);
-                lessonName2.setBounds(5, 165, 195, lessonName2.getPreferredSize().height);
+                lessonName2.setBounds(7, 168, 195, 23);
 
-                //---- lessonLevel2 ----
-                lessonLevel2.setText("Lesson Level");
-                lessonLevel2.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                lessonLevel2.setBackground(SystemColor.menu);
-                lessonLevel2.setForeground(new Color(150, 150, 150));
-                lesson2.add(lessonLevel2);
-                lessonLevel2.setBounds(5, 190, 85, 17);
+                //---- lessonType2 ----
+                lessonType2.setText("Lesson Level");
+                lessonType2.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
+                lessonType2.setBackground(SystemColor.menu);
+                lessonType2.setForeground(new Color(150, 150, 150));
+                lesson2.add(lessonType2);
+                lessonType2.setBounds(7, 195, 85, 17);
 
                 //---- coachName2 ----
                 coachName2.setText("Coach Name");
@@ -233,13 +312,13 @@ public class ALLLessonAdmin extends JFrame {
                 coachName2.setBackground(SystemColor.menu);
                 coachName2.setForeground(new Color(120, 120, 120));
                 lesson2.add(coachName2);
-                coachName2.setBounds(5, 225, 85, 17);
+                coachName2.setBounds(7, 225, 120, 18);
 
                 //---- lessonPicture2 ----
                 lessonPicture2.setBackground(SystemColor.activeCaption);
-                lessonPicture2.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/yoga.png")));
+                lessonPicture2.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/crunches.png")));
                 lesson2.add(lessonPicture2);
-                lessonPicture2.setBounds(2, 1, 236, 160);
+                lessonPicture2.setBounds(1, 1, 238, 160);
 
                 //---- moreButton2 ----
                 moreButton2.setText("MORE");
@@ -278,15 +357,15 @@ public class ALLLessonAdmin extends JFrame {
                 lessonName3.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
                 lessonName3.setBackground(SystemColor.menu);
                 lesson3.add(lessonName3);
-                lessonName3.setBounds(5, 165, 195, lessonName3.getPreferredSize().height);
+                lessonName3.setBounds(7, 168, 195, 23);
 
-                //---- lessonLevel3 ----
-                lessonLevel3.setText("Lesson Level");
-                lessonLevel3.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                lessonLevel3.setBackground(SystemColor.menu);
-                lessonLevel3.setForeground(new Color(150, 150, 150));
-                lesson3.add(lessonLevel3);
-                lessonLevel3.setBounds(5, 190, 85, 17);
+                //---- lessonType3 ----
+                lessonType3.setText("Live Lesson");
+                lessonType3.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
+                lessonType3.setBackground(SystemColor.menu);
+                lessonType3.setForeground(new Color(150, 150, 150));
+                lesson3.add(lessonType3);
+                lessonType3.setBounds(7, 195, 85, 17);
 
                 //---- moreButton3 ----
                 moreButton3.setText("MORE");
@@ -303,13 +382,13 @@ public class ALLLessonAdmin extends JFrame {
                 coachName3.setBackground(SystemColor.menu);
                 coachName3.setForeground(new Color(120, 120, 120));
                 lesson3.add(coachName3);
-                coachName3.setBounds(5, 225, 85, 17);
+                coachName3.setBounds(7, 225, 120, 18);
 
                 //---- lessonPicture3 ----
                 lessonPicture3.setBackground(SystemColor.activeCaption);
-                lessonPicture3.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/run.png")));
+                lessonPicture3.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/soccer.png")));
                 lesson3.add(lessonPicture3);
-                lessonPicture3.setBounds(2, 1, 236, 160);
+                lessonPicture3.setBounds(1, 1, 238, 160);
 
                 {
                     // compute preferred size
@@ -339,22 +418,22 @@ public class ALLLessonAdmin extends JFrame {
                 lessonName4.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
                 lessonName4.setBackground(SystemColor.menu);
                 lesson4.add(lessonName4);
-                lessonName4.setBounds(5, 165, 195, lessonName4.getPreferredSize().height);
+                lessonName4.setBounds(7, 168, 195, 23);
 
-                //---- lessonLevel4 ----
-                lessonLevel4.setText("Lesson Level");
-                lessonLevel4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                lessonLevel4.setBackground(SystemColor.menu);
-                lessonLevel4.setForeground(new Color(150, 150, 150));
-                lesson4.add(lessonLevel4);
-                lessonLevel4.setBounds(5, 190, 85, 17);
+                //---- lessonType4 ----
+                lessonType4.setText("Lesson Level");
+                lessonType4.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
+                lessonType4.setBackground(SystemColor.menu);
+                lessonType4.setForeground(new Color(150, 150, 150));
+                lesson4.add(lessonType4);
+                lessonType4.setBounds(7, 195, 85, 17);
 
                 //---- moreButton4 ----
                 moreButton4.setText("MORE");
                 moreButton4.setBackground(Color.white);
                 moreButton4.setBorderPainted(false);
                 moreButton4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                moreButton4.addActionListener(e -> moreButton6ActionPerformed(e));
+                moreButton4.addActionListener(e -> moreButton4ActionPerformed(e));
                 lesson4.add(moreButton4);
                 moreButton4.setBounds(170, 220, 65, 25);
 
@@ -364,13 +443,13 @@ public class ALLLessonAdmin extends JFrame {
                 coachName4.setBackground(SystemColor.menu);
                 coachName4.setForeground(new Color(120, 120, 120));
                 lesson4.add(coachName4);
-                coachName4.setBounds(5, 225, 85, 17);
+                coachName4.setBounds(7, 225, 120, 18);
 
                 //---- lessonPicture4 ----
                 lessonPicture4.setBackground(SystemColor.activeCaption);
-                lessonPicture4.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/dumbbell.png")));
+                lessonPicture4.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/yoga.png")));
                 lesson4.add(lessonPicture4);
-                lessonPicture4.setBounds(2, 1, 236, 160);
+                lessonPicture4.setBounds(1, 1, 238, 160);
 
                 {
                     // compute preferred size
@@ -388,7 +467,7 @@ public class ALLLessonAdmin extends JFrame {
                 }
             }
             body.add(lesson4);
-            lesson4.setBounds(535, 385, 240, 250);
+            lesson4.setBounds(25, 385, 240, 250);
 
             //======== lesson5 ========
             {
@@ -400,15 +479,15 @@ public class ALLLessonAdmin extends JFrame {
                 lessonName5.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
                 lessonName5.setBackground(SystemColor.menu);
                 lesson5.add(lessonName5);
-                lessonName5.setBounds(5, 165, 195, lessonName5.getPreferredSize().height);
+                lessonName5.setBounds(7, 168, 195, 23);
 
-                //---- lessonLevel5 ----
-                lessonLevel5.setText("Lesson Level");
-                lessonLevel5.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                lessonLevel5.setBackground(SystemColor.menu);
-                lessonLevel5.setForeground(new Color(150, 150, 150));
-                lesson5.add(lessonLevel5);
-                lessonLevel5.setBounds(5, 190, 85, 17);
+                //---- lessonType5 ----
+                lessonType5.setText("Lesson Level");
+                lessonType5.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
+                lessonType5.setBackground(SystemColor.menu);
+                lessonType5.setForeground(new Color(150, 150, 150));
+                lesson5.add(lessonType5);
+                lessonType5.setBounds(7, 195, 85, 17);
 
                 //---- coachName5 ----
                 coachName5.setText("Coach Name");
@@ -416,13 +495,13 @@ public class ALLLessonAdmin extends JFrame {
                 coachName5.setBackground(SystemColor.menu);
                 coachName5.setForeground(new Color(120, 120, 120));
                 lesson5.add(coachName5);
-                coachName5.setBounds(5, 225, 85, 17);
+                coachName5.setBounds(7, 225, 120, 18);
 
                 //---- lessonPicture5 ----
                 lessonPicture5.setBackground(SystemColor.activeCaption);
                 lessonPicture5.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/synthesize.png")));
                 lesson5.add(lessonPicture5);
-                lessonPicture5.setBounds(2, 1, 236, 160);
+                lessonPicture5.setBounds(1, 1, 238, 160);
 
                 //---- moreButton5 ----
                 moreButton5.setText("MORE");
@@ -458,24 +537,24 @@ public class ALLLessonAdmin extends JFrame {
 
                 //---- lessonPicture6 ----
                 lessonPicture6.setBackground(SystemColor.activeCaption);
-                lessonPicture6.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/soccer.png")));
+                lessonPicture6.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/dumbbell.png")));
                 lesson6.add(lessonPicture6);
-                lessonPicture6.setBounds(2, 1, 236, 160);
+                lessonPicture6.setBounds(1, 1, 238, 160);
 
                 //---- lessonName6 ----
                 lessonName6.setText("Lesson Name");
                 lessonName6.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
                 lessonName6.setBackground(SystemColor.menu);
                 lesson6.add(lessonName6);
-                lessonName6.setBounds(5, 165, 195, lessonName6.getPreferredSize().height);
+                lessonName6.setBounds(7, 168, 195, 23);
 
-                //---- lessonLevel6 ----
-                lessonLevel6.setText("Lesson Level");
-                lessonLevel6.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                lessonLevel6.setBackground(SystemColor.menu);
-                lessonLevel6.setForeground(new Color(150, 150, 150));
-                lesson6.add(lessonLevel6);
-                lessonLevel6.setBounds(5, 190, 85, 17);
+                //---- lessonType6 ----
+                lessonType6.setText("Lesson Level");
+                lessonType6.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
+                lessonType6.setBackground(SystemColor.menu);
+                lessonType6.setForeground(new Color(150, 150, 150));
+                lesson6.add(lessonType6);
+                lessonType6.setBounds(7, 195, 85, 17);
 
                 //---- coachName6 ----
                 coachName6.setText("Coach Name");
@@ -483,14 +562,14 @@ public class ALLLessonAdmin extends JFrame {
                 coachName6.setBackground(SystemColor.menu);
                 coachName6.setForeground(new Color(120, 120, 120));
                 lesson6.add(coachName6);
-                coachName6.setBounds(5, 225, 85, 17);
+                coachName6.setBounds(7, 225, 120, 18);
 
                 //---- moreButton6 ----
                 moreButton6.setText("MORE");
                 moreButton6.setBackground(Color.white);
                 moreButton6.setBorderPainted(false);
                 moreButton6.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                moreButton6.addActionListener(e -> moreButton4ActionPerformed(e));
+                moreButton6.addActionListener(e -> moreButton6ActionPerformed(e));
                 lesson6.add(moreButton6);
                 moreButton6.setBounds(170, 220, 65, 25);
 
@@ -510,45 +589,35 @@ public class ALLLessonAdmin extends JFrame {
                 }
             }
             body.add(lesson6);
-            lesson6.setBounds(25, 385, 240, 250);
+            lesson6.setBounds(535, 385, 240, 250);
 
-            //---- search ----
-            search.setBackground(SystemColor.menu);
-            search.setBorder(null);
-            search.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-            body.add(search);
-            search.setBounds(265, 45, 300, 40);
+            //---- typeRadioButton ----
+            typeRadioButton.setText("Type");
+            typeRadioButton.setBackground(Color.white);
+            typeRadioButton.setBorder(null);
+            typeRadioButton.setForeground(Color.gray);
+            typeRadioButton.setFont(new Font("Arial", Font.PLAIN, 12));
+            body.add(typeRadioButton);
+            typeRadioButton.setBounds(390, 85, 65, 21);
 
-            //---- searchButton ----
-            searchButton.setBorderPainted(false);
-            searchButton.setBackground(SystemColor.controlHighlight);
-            searchButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/search.png")));
-            body.add(searchButton);
-            searchButton.setBounds(565, 45, 40, 40);
+            //---- coachRadioButton ----
+            coachRadioButton.setText("Coach");
+            coachRadioButton.setBackground(Color.white);
+            coachRadioButton.setBorder(null);
+            coachRadioButton.setForeground(Color.gray);
+            coachRadioButton.setFont(new Font("Arial", Font.PLAIN, 12));
+            body.add(coachRadioButton);
+            coachRadioButton.setBounds(325, 85, 65, 21);
 
-            //---- homeButton ----
-            homeButton.setBorderPainted(false);
-            homeButton.setBackground(SystemColor.menu);
-            homeButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/home.png")));
-            homeButton.addActionListener(e -> homeButtonActionPerformed(e));
-            body.add(homeButton);
-            homeButton.setBounds(645, 45, 40, 40);
-
-            //---- previousButton ----
-            previousButton.setBorderPainted(false);
-            previousButton.setBackground(SystemColor.menu);
-            previousButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/previous.png")));
-            previousButton.addActionListener(e -> previousButtonActionPerformed(e));
-            body.add(previousButton);
-            previousButton.setBounds(690, 45, 40, 40);
-
-            //---- nextButton ----
-            nextButton.setBorderPainted(false);
-            nextButton.setBackground(SystemColor.menu);
-            nextButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/next.png")));
-            nextButton.addActionListener(e -> nextButtonActionPerformed(e));
-            body.add(nextButton);
-            nextButton.setBounds(735, 45, 40, 40);
+            //---- titleRadioButton ----
+            titleRadioButton.setText("Title");
+            titleRadioButton.setBackground(Color.white);
+            titleRadioButton.setBorder(null);
+            titleRadioButton.setForeground(Color.gray);
+            titleRadioButton.setFont(new Font("Arial", Font.PLAIN, 12));
+            titleRadioButton.setSelected(true);
+            body.add(titleRadioButton);
+            titleRadioButton.setBounds(270, 85, 55, 21);
 
             {
                 // compute preferred size
@@ -584,6 +653,12 @@ public class ALLLessonAdmin extends JFrame {
         }
         pack();
         setLocationRelativeTo(getOwner());
+
+        //---- searchType ----
+        var searchType = new ButtonGroup();
+        searchType.add(typeRadioButton);
+        searchType.add(coachRadioButton);
+        searchType.add(titleRadioButton);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -591,56 +666,64 @@ public class ALLLessonAdmin extends JFrame {
     private JPanel body;
     private JLabel decorationLine;
     private JLabel title;
+    private JTextField search;
+    private JButton searchButton;
+    private JButton homeButton;
+    private JButton previousButton;
+    private JButton nextButton;
     private JPanel lesson1;
     private JLabel lessonPicture1;
-    private JLabel lessonName;
-    private JLabel lessonLevel1;
+    private JLabel lessonName1;
+    private JLabel lessonType1;
     private JLabel coachName1;
     private JButton moreButton1;
     private JPanel lesson2;
     private JLabel lessonName2;
-    private JLabel lessonLevel2;
+    private JLabel lessonType2;
     private JLabel coachName2;
     private JLabel lessonPicture2;
     private JButton moreButton2;
     private JPanel lesson3;
     private JLabel lessonName3;
-    private JLabel lessonLevel3;
+    private JLabel lessonType3;
     private JButton moreButton3;
     private JLabel coachName3;
     private JLabel lessonPicture3;
     private JPanel lesson4;
     private JLabel lessonName4;
-    private JLabel lessonLevel4;
+    private JLabel lessonType4;
     private JButton moreButton4;
     private JLabel coachName4;
     private JLabel lessonPicture4;
     private JPanel lesson5;
     private JLabel lessonName5;
-    private JLabel lessonLevel5;
+    private JLabel lessonType5;
     private JLabel coachName5;
     private JLabel lessonPicture5;
     private JButton moreButton5;
     private JPanel lesson6;
     private JLabel lessonPicture6;
     private JLabel lessonName6;
-    private JLabel lessonLevel6;
+    private JLabel lessonType6;
     private JLabel coachName6;
     private JButton moreButton6;
-    private JTextField search;
-    private JButton searchButton;
-    private JButton homeButton;
-    private JButton previousButton;
-    private JButton nextButton;
+    private JRadioButton typeRadioButton;
+    private JRadioButton coachRadioButton;
+    private JRadioButton titleRadioButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         ALLLessonAdmin.run();
     }
+
+    private int page = 0;
+    private List<ClassData> list;
+    private int lessonRemainNumb = 0;
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
                     ALLLessonAdmin frame = new ALLLessonAdmin();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setVisible(true);
@@ -650,5 +733,172 @@ public class ALLLessonAdmin extends JFrame {
                 }
             }
         });
+    }
+
+    private void init(){
+        list = ClassFunction.getWholeClass();
+        this.update();
+    }
+    private void update(){
+        int i = 0;
+        int remainPage = this.list.size() - this.page * 6;
+        CoachData coachDataTemp;
+        ClassData[] classData = new ClassData[6];
+
+        switch (this.lessonRemainNumb){
+            case 0:
+                break;
+            case 1:
+                this.lessonName2.setOpaque(false);
+                this.lessonType2.setOpaque(false);
+                this.coachName2.setOpaque(false);
+                this.moreButton2.setVisible(true);
+            case 2:
+                this.lessonName3.setOpaque(false);
+                this.lessonType3.setOpaque(false);
+                this.coachName3.setOpaque(false);
+                this.moreButton3.setVisible(true);
+            case 3:
+                this.lessonName4.setOpaque(false);
+                this.lessonType4.setOpaque(false);
+                this.coachName4.setOpaque(false);
+                this.moreButton4.setVisible(true);
+            case 4:
+                this.lessonName5.setOpaque(false);
+                this.lessonType5.setOpaque(false);
+                this.coachName5.setOpaque(false);
+                this.moreButton5.setVisible(true);
+            case 5:
+                this.lessonName6.setOpaque(false);
+                this.lessonType6.setOpaque(false);
+                this.coachName6.setOpaque(false);
+                this.moreButton6.setVisible(true);
+        }
+
+        if((remainPage / 6) > 0){
+            for(i = 0; i < 6; i++){
+                classData[i] = this.list.get(i + this.page*6);
+            }
+            this.lessonName1.setText(classData[0].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[0].getCoachID());
+            this.coachName1.setText(coachDataTemp.getName());
+            this.lessonType1.setText(classData[0].getIsLive());
+
+            this.lessonName2.setText(classData[1].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[1].getCoachID());
+            this.coachName2.setText(coachDataTemp.getName());
+            this.lessonType2.setText(classData[1].getIsLive());
+
+            this.lessonName3.setText(classData[2].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[2].getCoachID());
+            this.coachName3.setText(coachDataTemp.getName());
+            this.lessonType3.setText(classData[2].getIsLive());
+
+            this.lessonName4.setText(classData[3].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[3].getCoachID());
+            this.coachName4.setText(coachDataTemp.getName());
+            this.lessonType4.setText(classData[3].getIsLive());
+
+            this.lessonName5.setText(classData[4].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[4].getCoachID());
+            this.coachName5.setText(coachDataTemp.getName());
+            this.lessonType5.setText(classData[4].getIsLive());
+
+            this.lessonName6.setText(classData[5].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[5].getCoachID());
+            this.coachName6.setText(coachDataTemp.getName());
+            this.lessonType6.setText(classData[5].getIsLive());
+        }else{
+            this.lessonRemainNumb = this.list.size() % 6;
+            for(i = 0; i < lessonRemainNumb; i++){
+                classData[i] = this.list.get(i + this.page*6);
+            }
+            //Set text for the remaining lessons
+            switch (lessonRemainNumb){
+                case 5:
+                    this.lessonName5.setText(classData[4].getName());
+                    coachDataTemp = CoachFunction.searchCoachByID(classData[4].getCoachID());
+                    this.coachName5.setText(coachDataTemp.getName());
+                    this.lessonType5.setText(classData[4].getIsLive());
+                case 4:
+                    this.lessonName4.setText(classData[3].getName());
+                    coachDataTemp = CoachFunction.searchCoachByID(classData[3].getCoachID());
+                    this.coachName4.setText(coachDataTemp.getName());
+                    this.lessonType4.setText(classData[3].getIsLive());
+                case 3:
+                    this.lessonName3.setText(classData[2].getName());
+                    coachDataTemp = CoachFunction.searchCoachByID(classData[2].getCoachID());
+                    this.coachName3.setText(coachDataTemp.getName());
+                    this.lessonType3.setText(classData[2].getIsLive());
+                case 2:
+                    this.lessonName2.setText(classData[1].getName());
+                    coachDataTemp = CoachFunction.searchCoachByID(classData[1].getCoachID());
+                    this.coachName2.setText(coachDataTemp.getName());
+                    this.lessonType2.setText(classData[1].getIsLive());
+                case 1:
+                    this.lessonName1.setText(classData[0].getName());
+                    coachDataTemp = CoachFunction.searchCoachByID(classData[0].getCoachID());
+                    this.coachName1.setText(coachDataTemp.getName());
+                    this.lessonType1.setText(classData[0].getIsLive());
+            }
+            //Set style for the remaining lessons
+            switch (lessonRemainNumb){
+                case 1:
+                    this.lessonName2.setText("");
+                    this.lessonName2.setBackground(new Color(230,230,230));
+                    this.lessonName2.setOpaque(true);
+                    this.lessonType2.setText("");
+                    this.lessonType2.setBackground(new Color(230,230,230));
+                    this.lessonType2.setOpaque(true);
+                    this.coachName2.setText("");
+                    this.coachName2.setBackground(new Color(230,230,230));
+                    this.coachName2.setOpaque(true);
+                    this.moreButton2.setVisible(false);
+                case 2:
+                    this.lessonName3.setText("");
+                    this.lessonName3.setBackground(new Color(230,230,230));
+                    this.lessonName3.setOpaque(true);
+                    this.lessonType3.setText("");
+                    this.lessonType3.setBackground(new Color(230,230,230));
+                    this.lessonType3.setOpaque(true);
+                    this.coachName3.setText("");
+                    this.coachName3.setBackground(new Color(230,230,230));
+                    this.coachName3.setOpaque(true);
+                    this.moreButton3.setVisible(false);
+                case 3:
+                    this.lessonName4.setText("");
+                    this.lessonName4.setBackground(new Color(230,230,230));
+                    this.lessonName4.setOpaque(true);
+                    this.lessonType4.setText("");
+                    this.lessonType4.setBackground(new Color(230,230,230));
+                    this.lessonType4.setOpaque(true);
+                    this.coachName4.setText("");
+                    this.coachName4.setBackground(new Color(230,230,230));
+                    this.coachName4.setOpaque(true);
+                    this.moreButton4.setVisible(false);
+                case 4:
+                    this.lessonName5.setText("");
+                    this.lessonName5.setBackground(new Color(230,230,230));
+                    this.lessonName5.setOpaque(true);
+                    this.lessonType5.setText("");
+                    this.lessonType5.setBackground(new Color(230,230,230));
+                    this.lessonType5.setOpaque(true);
+                    this.coachName5.setText("");
+                    this.coachName5.setBackground(new Color(230,230,230));
+                    this.coachName5.setOpaque(true);
+                    this.moreButton5.setVisible(false);
+                case 5:
+                    this.lessonName6.setText("");
+                    this.lessonName6.setBackground(new Color(230,230,230));
+                    this.lessonName6.setOpaque(true);
+                    this.lessonType6.setText("");
+                    this.lessonType6.setBackground(new Color(230,230,230));
+                    this.lessonType6.setOpaque(true);
+                    this.coachName6.setText("");
+                    this.coachName6.setBackground(new Color(230,230,230));
+                    this.coachName6.setOpaque(true);
+                    this.moreButton6.setVisible(false);
+            }
+        }
     }
 }

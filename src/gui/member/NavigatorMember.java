@@ -1,6 +1,8 @@
 package gui.member;
 
 import gui.login.Login;
+import gui.other.LoginBuffer;
+import io.client.ClientData;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -118,7 +120,7 @@ public class NavigatorMember extends JFrame {
             //---- welcomeMsg ----
             welcomeMsg.setText("Welcome, .....");
             body.add(welcomeMsg);
-            welcomeMsg.setBounds(new Rectangle(new Point(103, 60), welcomeMsg.getPreferredSize()));
+            welcomeMsg.setBounds(103, 60, 222, welcomeMsg.getPreferredSize().height);
 
             //---- decorationLine1 ----
             decorationLine1.setBackground(Color.black);
@@ -282,6 +284,7 @@ public class NavigatorMember extends JFrame {
             public void run() {
                 try {
                     NavigatorMember frame = new NavigatorMember();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-1100/2,screenSize.height/2-700/2);
                     frame.setResizable(false);
@@ -291,5 +294,10 @@ public class NavigatorMember extends JFrame {
                 }
             }
         });
+    }
+    private void init(){
+        ClientData clientData = LoginBuffer.getClientSession();
+        this.username.setText(clientData.getAccount());
+        this.welcomeMsg.setText("Welcome, dear client.");
     }
 }

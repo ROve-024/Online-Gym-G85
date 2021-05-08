@@ -1,6 +1,8 @@
 package gui.other;
+import controller.AdminFunction;
 import controller.ClientFunction;
 import controller.CoachFunction;
+import io.admin.AdminData;
 import io.classes.ClassData;
 import io.client.ClientData;
 import io.coach.CoachData;
@@ -38,6 +40,11 @@ public class LoginBuffer {
         String ID = LoginBuffer.getBuffer();
         CoachData coachData = CoachFunction.searchCoachByID(ID);
         return coachData;
+    }
+    public static AdminData getAdminSession(){
+        String ID = LoginBuffer.getBuffer();
+        AdminData adminData = AdminFunction.searchAdminByID(ID);
+        return adminData;
     }
     public static ClientData getClientSession(){
         String ID = LoginBuffer.getBuffer();

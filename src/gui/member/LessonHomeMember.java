@@ -28,14 +28,12 @@ public class LessonHomeMember extends JFrame {
     }
 
     private void homeButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
         this.page = 0;
         this.list = ClassFunction.getWholeClass();
         this.update();
     }
 
     private void previousButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
         if(this.page == 0){
             Warning.run("No previous page here.");
         }
@@ -46,7 +44,6 @@ public class LessonHomeMember extends JFrame {
     }
 
     private void nextButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
         int remainItem = this.list.size() - 6 * (this.page + 1);
 
         if(remainItem <= 0){
@@ -59,7 +56,6 @@ public class LessonHomeMember extends JFrame {
     }
 
     private void moreButton1ActionPerformed(ActionEvent e) {
-        // TODO add your code here
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6).getClassID());
         LessonDetailCoach.run();
@@ -67,7 +63,6 @@ public class LessonHomeMember extends JFrame {
     }
 
     private void moreButton2ActionPerformed(ActionEvent e) {
-        // TODO add your code here
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6 + 1).getClassID());
         LessonDetailCoach.run();
@@ -75,7 +70,6 @@ public class LessonHomeMember extends JFrame {
     }
 
     private void moreButton3ActionPerformed(ActionEvent e) {
-        // TODO add your code here
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6 + 2).getClassID());
         LessonDetailCoach.run();
@@ -83,7 +77,6 @@ public class LessonHomeMember extends JFrame {
     }
 
     private void moreButton4ActionPerformed(ActionEvent e) {
-        // TODO add your code here
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6 + 3).getClassID());
         LessonDetailCoach.run();
@@ -91,7 +84,6 @@ public class LessonHomeMember extends JFrame {
     }
 
     private void moreButton5ActionPerformed(ActionEvent e) {
-        // TODO add your code here
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6 + 4).getClassID());
         LessonDetailCoach.run();
@@ -99,7 +91,6 @@ public class LessonHomeMember extends JFrame {
     }
 
     private void moreButton6ActionPerformed(ActionEvent e) {
-        // TODO add your code here
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6 + 5).getClassID());
         LessonDetailCoach.run();
@@ -107,7 +98,6 @@ public class LessonHomeMember extends JFrame {
     }
 
     private void searchButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
         if(this.titleRadioButton.isSelected()){
             list.clear();
             list.add(ClassFunction.searchClassByName(this.search.getText()));

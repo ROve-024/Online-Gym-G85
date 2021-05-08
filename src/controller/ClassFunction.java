@@ -4,6 +4,7 @@ import io.classes.ClassData;
 import io.classes.WriteClassXml;
 import io.coach.CoachData;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static io.classes.ReadClassXml.readClassXML;
@@ -55,6 +56,22 @@ public class ClassFunction {
                 classList.remove(i);
             }
         }
+
+        writeClass(classList);
+    }
+
+    public static void deleteClassByCoachID(String coachID){
+        List<ClassData> classList = getWholeClass();
+        ClassData temp;
+
+        for(int i=0;i<classList.size();i++){
+            temp = classList.get(i);
+            if(temp.getCoachID().equals(coachID)){
+                classList.remove(i);
+            }
+        }
+
+        writeClass(classList);
     }
 
     public static ClassData searchClassByID(String ID){
@@ -66,6 +83,10 @@ public class ClassFunction {
             if(temp.getClassID().equals(ID)){
                 classData = temp;
             }
+        }
+
+        if(classData == null){
+            classData = new ClassData();
         }
 
         return  classData;

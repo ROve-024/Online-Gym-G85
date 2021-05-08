@@ -1,6 +1,5 @@
 package gui.other;
-import controller.CoachFunction;
-import io.coach.CoachData;
+
 
 import java.io.*;
 

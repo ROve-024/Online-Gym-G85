@@ -143,6 +143,8 @@ public class CoachFunction {
             CoachData temp;
             temp = coachList.get(i);
             if(temp.getID().equals(ID)) {
+                ClassFunction classFunction = new ClassFunction();
+                classFunction.deleteClassByCoachID(coachList.get(i).getID());
                 coachList.remove(i);
             }
         }
@@ -156,6 +158,8 @@ public class CoachFunction {
             CoachData temp;
             temp = coachList.get(i);
             if(temp.getAccount().equals(Account)) {
+                ClassFunction classFunction = new ClassFunction();
+                classFunction.deleteClassByCoachID(coachList.get(i).getID());
                 coachList.remove(i);
             }
         }

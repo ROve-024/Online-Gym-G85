@@ -1,7 +1,12 @@
 package gui.admin;
 
+import controller.ClassFunction;
+import controller.CoachFunction;
 import gui.coach.ProfileCoach;
 import gui.coach.UploadModify;
+import gui.other.LessonBuffer;
+import io.classes.ClassData;
+import io.coach.CoachData;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -20,20 +25,24 @@ public class LessonDetailAdmin extends JFrame {
         initComponents();
     }
 
-    private void joinButton3ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+    private void editButtonActionPerformed(ActionEvent e) {
         UploadModify.run();
         this.dispose();
     }
 
     private void coachDetailButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
         ProfileCoach.run();
         this.dispose();
     }
 
     private void homeButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        ALLLessonAdmin.run();
+        this.dispose();
+    }
+
+    private void deleteButtonActionPerformed(ActionEvent e) {
+        System.out.println("删除lesson：ID="+lessonID);
+        ClassFunction.deleteClassByID(lessonID);
         ALLLessonAdmin.run();
         this.dispose();
     }
@@ -50,8 +59,8 @@ public class LessonDetailAdmin extends JFrame {
         coachName = new JLabel();
         coachMsg = new JTextPane();
         coachDetailButton = new JButton();
-        joinButton3 = new JButton();
-        joinButton4 = new JButton();
+        editButton = new JButton();
+        deleteButton = new JButton();
         homeButton = new JButton();
 
         //======== this ========
@@ -138,21 +147,22 @@ public class LessonDetailAdmin extends JFrame {
             body.add(coachDetailButton);
             coachDetailButton.setBounds(660, 460, 100, 50);
 
-            //---- joinButton3 ----
-            joinButton3.setText("EDITOR");
-            joinButton3.setBackground(SystemColor.menu);
-            joinButton3.setBorder(null);
-            joinButton3.addActionListener(e -> joinButton3ActionPerformed(e));
-            body.add(joinButton3);
-            joinButton3.setBounds(30, 570, 100, 50);
+            //---- editButton ----
+            editButton.setText("EDITOR");
+            editButton.setBackground(SystemColor.menu);
+            editButton.setBorder(null);
+            editButton.addActionListener(e -> editButtonActionPerformed(e));
+            body.add(editButton);
+            editButton.setBounds(30, 570, 100, 50);
 
-            //---- joinButton4 ----
-            joinButton4.setText("DELETE");
-            joinButton4.setBackground(new Color(217, 0, 27));
-            joinButton4.setBorder(null);
-            joinButton4.setForeground(Color.white);
-            body.add(joinButton4);
-            joinButton4.setBounds(130, 570, 100, 50);
+            //---- deleteButton ----
+            deleteButton.setText("DELETE");
+            deleteButton.setBackground(new Color(217, 0, 27));
+            deleteButton.setBorder(null);
+            deleteButton.setForeground(Color.white);
+            deleteButton.addActionListener(e -> deleteButtonActionPerformed(e));
+            body.add(deleteButton);
+            deleteButton.setBounds(130, 570, 100, 50);
 
             //---- homeButton ----
             homeButton.setBorderPainted(false);
@@ -210,19 +220,22 @@ public class LessonDetailAdmin extends JFrame {
     private JLabel coachName;
     private JTextPane coachMsg;
     private JButton coachDetailButton;
-    private JButton joinButton3;
-    private JButton joinButton4;
+    private JButton editButton;
+    private JButton deleteButton;
     private JButton homeButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         LessonDetailAdmin.run();
     }
 
+    private String lessonID = LessonBuffer.getBuffer();
+    ClassData classData = ClassFunction.searchClassByID(this.lessonID);
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
                     LessonDetailAdmin frame = new LessonDetailAdmin();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setResizable(false);
@@ -232,5 +245,14 @@ public class LessonDetailAdmin extends JFrame {
                 }
             }
         });
+    }
+    private void init(){
+        this.lessonName.setText(this.classData.getName());
+//        this.lessonMsg.setText();
+//        this.lessonType.setText(this.classData.getProfile());
+        CoachData coachData = CoachFunction.searchCoachByID(this.classData.getCoachID());
+        this.coachName.setText(coachData.getName());
+//        this.coachMsg.setText();
+
     }
 }

@@ -5,12 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/login/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/login/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/login/SignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/coach/WriteCoachXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/coach/WriteCoachXml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/buffer/lessonBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/AdminFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AdminFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ClassFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ClassFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CoachFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CoachFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/admin/NavigatorAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/NavigatorAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/admin/UserManageAllAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/UserManageAllAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/NavigatorMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/NavigatorMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/other/LessonBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/other/LessonBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/other/LoginBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/other/LoginBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Admin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Class.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Client.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/XMLs/Coach.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/buffer/loginBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/loginBuffer.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,10 +62,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/src/GUI/Admin/ALLLessonAdmin.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Admin/UserManageAllAdmin.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/LessonVideo.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/LessonHomeMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/EditProfileMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Admin/NavigatorAdmin.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Other/SignUp.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/coach/EditProfileCoach.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/member/EditProfileMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/coach/LessonDetailCoach.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/coach/MyLessonCoach.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/coach/UploadModify.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/member/LessonHomeMember.jfd" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/src/GUI/Admin/ALLLessonAdmin.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Admin/UserManageAllAdmin.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/LessonVideo.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/LessonHomeMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Member/EditProfileMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Admin/NavigatorAdmin.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/GUI/Other/SignUp.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/coach/EditProfileCoach.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/member/EditProfileMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/coach/LessonDetailCoach.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/coach/MyLessonCoach.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/coach/UploadModify.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/member/LessonHomeMember.jfd&#10;C:/Users/newtr/Documents/我的文件/大学/大学课程/大二/java/Group85/src/gui/admin/ALLLessonAdmin.jfd" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Group85-master/Group85-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/gui/admin" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -61,6 +74,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\gui\admin" />
       <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\resources\icons" />
       <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\main\resources\icons" />
       <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\UI" />
@@ -73,7 +87,7 @@
       <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\UI\Other" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Run">
+  <component name="RunManager" selected="Application.NavigatorAdmin">
     <configuration name="ALLLessonAdmin" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.admin.ALLLessonAdmin" />
       <module name="Group85" />
@@ -87,8 +101,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EditProfileCoach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.coach.EditProfileCoach" />
+    <configuration name="LessonDetailAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.admin.LessonDetailAdmin" />
+      <module name="Group85" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NavigatorAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.admin.NavigatorAdmin" />
+      <module name="Group85" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NavigatorCoach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.coach.NavigatorCoach" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
@@ -100,8 +140,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LessonHomeMember" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.member.LessonHomeMember" />
+    <configuration name="NavigatorMember" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.member.NavigatorMember" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
@@ -113,12 +153,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyLessonCoach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.coach.MyLessonCoach" />
+    <configuration name="UserManageAllAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.admin.UserManageAllAdmin" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gui.coach.*" />
+          <option name="PATTERN" value="gui.admin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,60 +166,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Run" />
-      <module name="Group85" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UploadModify" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.coach.UploadModify" />
-      <module name="Group85" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="gui.coach.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.ALLLessonAdmin" />
-      <item itemvalue="Application.Run" />
-      <item itemvalue="Application.EditProfileCoach" />
-      <item itemvalue="Application.MyLessonCoach" />
-      <item itemvalue="Application.UploadModify" />
-      <item itemvalue="Application.LessonHomeMember" />
+      <item itemvalue="Application.LessonDetailAdmin" />
+      <item itemvalue="Application.NavigatorAdmin" />
+      <item itemvalue="Application.NavigatorCoach" />
+      <item itemvalue="Application.NavigatorMember" />
+      <item itemvalue="Application.UserManageAllAdmin" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Run" />
-        <item itemvalue="Application.LessonHomeMember" />
-        <item itemvalue="Application.MyLessonCoach" />
-        <item itemvalue="Application.UploadModify" />
-        <item itemvalue="Application.EditProfileCoach" />
+        <item itemvalue="Application.NavigatorAdmin" />
+        <item itemvalue="Application.UserManageAllAdmin" />
+        <item itemvalue="Application.NavigatorMember" />
+        <item itemvalue="Application.NavigatorCoach" />
+        <item itemvalue="Application.LessonDetailAdmin" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +245,8 @@
       <workItem from="1620455227423" duration="193000" />
       <workItem from="1620455544558" duration="362000" />
       <workItem from="1620456139632" duration="505000" />
-      <workItem from="1620461087477" duration="2979000" />
+      <workItem from="1620461087477" duration="6120000" />
+      <workItem from="1620473015706" duration="10244000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1617952547719</created>
@@ -459,7 +472,21 @@
       <option name="project" value="LOCAL" />
       <updated>1620455296524</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="update">
+      <created>1620464290873</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1620464290874</updated>
+    </task>
+    <task id="LOCAL-00034" summary="update">
+      <created>1620464323239</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1620464323239</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

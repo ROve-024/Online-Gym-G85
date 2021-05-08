@@ -81,4 +81,14 @@
         <VedioAddress>Live.com</VedioAddress>
         <Profile>aerobics</Profile>
     </ROW>
+    <ROW>
+        <ClassID>10</ClassID>
+        <Name>jqve</Name>
+        <IsLive>Live Lesson</IsLive>
+        <Fee>20.00</Fee>
+        <CoachID>1</CoachID>
+        <VedioAddress>Live.com</VedioAddress>
+        <Profile>aerobics</Profile>
+    </ROW>
+
 </DATA>

@@ -1,6 +1,10 @@
 package gui.admin;
 
+import controller.AdminFunction;
 import gui.login.Login;
+import gui.other.LoginBuffer;
+import io.admin.AdminData;
+import io.coach.CoachData;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -102,7 +106,7 @@ public class NavigatorAdmin extends JFrame {
             //---- welcomeMsg ----
             welcomeMsg.setText("Welcome, .....");
             body.add(welcomeMsg);
-            welcomeMsg.setBounds(new Rectangle(new Point(103, 60), welcomeMsg.getPreferredSize()));
+            welcomeMsg.setBounds(103, 60, 217, welcomeMsg.getPreferredSize().height);
 
             //---- decorationLine1 ----
             decorationLine1.setBackground(Color.black);
@@ -246,6 +250,7 @@ public class NavigatorAdmin extends JFrame {
             public void run() {
                 try {
                     NavigatorAdmin frame = new NavigatorAdmin();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-1100/2,screenSize.height/2-700/2);
                     frame.setResizable(false);
@@ -256,5 +261,9 @@ public class NavigatorAdmin extends JFrame {
             }
         });
     }
-
+    private void init(){
+        AdminData adminData = LoginBuffer.getAdminSession();
+        this.username.setText(adminData.getAccount());
+        this.welcomeMsg.setText("Welcome, admin.");
+    }
 }
