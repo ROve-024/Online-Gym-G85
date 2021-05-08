@@ -1,6 +1,8 @@
 package gui.login;
 
 import javax.swing.border.*;
+
+import controller.AdminFunction;
 import controller.ClientFunction;
 import gui.admin.NavigatorAdmin;
 import gui.other.LoginBuffer;
@@ -21,6 +23,7 @@ import javax.swing.*;
  * @author Anna
  */
 public class Login extends JFrame {
+
     public Login() {
         initComponents();
     }
@@ -54,7 +57,16 @@ public class Login extends JFrame {
             }
         }
         else if(this.adminButton.isSelected()){
-            NavigatorAdmin.run();
+            if(AdminFunction.loginMatch(account, password)){
+                String ID = AdminFunction.getIDByAccount(account);
+                LoginBuffer.setBuffer(ID);
+                NavigatorAdmin.run();
+                this.dispose();
+            }
+            else{
+                Warning.run("Wrong account or password, please try again.");
+            }
+
         }
 
     }

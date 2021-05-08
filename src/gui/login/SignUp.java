@@ -1,6 +1,8 @@
 package gui.login;
 
 import javax.swing.border.*;
+
+import controller.AdminFunction;
 import controller.ClientFunction;
 import controller.CoachFunction;
 import gui.other.LoginBuffer;
@@ -58,19 +60,19 @@ public class SignUp extends JFrame {
             }
         }
         else if(adminButton.isSelected()){
-//            if(CoachFunction.ifExistSameAccount(account))
-//            {
-//                Warning.run("The account entered already exists");
-//            }
-//            else if(!password.equals(rePassword)){
-//                Warning.run("The password did not match the re-typed password");
-//            }
-//            else{
-//                String ID = CoachFunction.signUpSubmit(account,password);
-//                Buffer.setBuffer(ID);
-//                Login.run();
-//                this.dispose();
-//            }
+            if(AdminFunction.ifExistSameAccount(account))
+            {
+                Warning.run("The account entered already exists");
+            }
+            else if(!password.equals(rePassword)){
+                Warning.run("The password did not match the re-typed password");
+            }
+            else{
+                String ID = AdminFunction.signUpSubmit(account,password);
+                LoginBuffer.setBuffer(ID);
+                Login.run();
+                this.dispose();
+            }
         }
     }
 

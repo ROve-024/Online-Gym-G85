@@ -33,4 +33,15 @@
         <Balance>Empty</Balance>
         <VIPlevel>Empty</VIPlevel>
     </ROW>
+    <ROW>
+        <ClientID>4</ClientID>
+        <Name>Empty</Name>
+        <Account>SB</Account>
+        <Password>1</Password>
+        <Phonenumber>Empty</Phonenumber>
+        <Email>Empty</Email>
+        <Sex>Empty</Sex>
+        <Balance>Empty</Balance>
+        <VIPlevel>Empty</VIPlevel>
+    </ROW>
 </DATA>
