@@ -24,8 +24,19 @@
     </ROW>
     <ROW>
         <ClientID>3</ClientID>
-        <Name>Empty</Name>
+        <Name>LEE Hua</Name>
         <Account>S</Account>
+        <Password>1</Password>
+        <Phonenumber>10001</Phonenumber>
+        <Email>username@example.com</Email>
+        <Sex>female</Sex>
+        <Balance>Empty</Balance>
+        <VIPlevel>Empty</VIPlevel>
+    </ROW>
+    <ROW>
+        <ClientID>4</ClientID>
+        <Name>Empty</Name>
+        <Account>SB</Account>
         <Password>1</Password>
         <Phonenumber>Empty</Phonenumber>
         <Email>Empty</Email>
