@@ -5,12 +5,10 @@
 package gui.member;
 
 import controller.ClientFunction;
-import controller.CoachFunction;
 import gui.coach.ProfileCoach;
-import gui.other.LoginBuffer;
+import gui.other.UserBuffer;
 import gui.other.Warning;
 import io.client.ClientData;
-import io.coach.CoachData;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -26,13 +24,13 @@ public class EditProfileMember extends JFrame {
     }
 
     private void finishButtonActionPerformed(ActionEvent e) {
-        ClientData clientData = LoginBuffer.getClientSession();
+        ClientData clientData = UserBuffer.getClientSession();
         if(ClientFunction.loginMatch(clientData.getAccount(), new String(this.currentPassword.getPassword()))){
             if(new String(this.newPassword.getPassword()).equals(new String(this.confirmPassword.getPassword()))){
-                clientData.setName(LoginBuffer.toEmpty(this.name.getText()));
-                clientData.setEmail(LoginBuffer.toEmpty(this.email.getText()));
-                clientData.setPhonenumber(LoginBuffer.toEmpty(this.phoneNumber.getText()));
-                clientData.setPassword(LoginBuffer.toEmpty(new String(this.newPassword.getPassword())));
+                clientData.setName(UserBuffer.toEmpty(this.name.getText()));
+                clientData.setEmail(UserBuffer.toEmpty(this.email.getText()));
+                clientData.setPhonenumber(UserBuffer.toEmpty(this.phoneNumber.getText()));
+                clientData.setPassword(UserBuffer.toEmpty(new String(this.newPassword.getPassword())));
                 if(maleRadio.isSelected()){
                     clientData.setSex("male");
                 }
@@ -459,13 +457,13 @@ public class EditProfileMember extends JFrame {
     }
 
     private void init(){
-        ClientData clientData = LoginBuffer.getClientSession();
-        this.name.setText(LoginBuffer.dataIsEmpty(clientData.getName()));
-        this.email.setText(LoginBuffer.dataIsEmpty(clientData.getEmail()));
-        this.phoneNumber.setText(LoginBuffer.dataIsEmpty(clientData.getPhonenumber()));
-        this.currentPassword.setText(LoginBuffer.dataIsEmpty(clientData.getPassword()));
-        this.newPassword.setText(LoginBuffer.dataIsEmpty(clientData.getPassword()));
-        this.confirmPassword.setText(LoginBuffer.dataIsEmpty(clientData.getPassword()));
+        ClientData clientData = UserBuffer.getClientSession();
+        this.name.setText(UserBuffer.dataIsEmpty(clientData.getName()));
+        this.email.setText(UserBuffer.dataIsEmpty(clientData.getEmail()));
+        this.phoneNumber.setText(UserBuffer.dataIsEmpty(clientData.getPhonenumber()));
+        this.currentPassword.setText(UserBuffer.dataIsEmpty(clientData.getPassword()));
+        this.newPassword.setText(UserBuffer.dataIsEmpty(clientData.getPassword()));
+        this.confirmPassword.setText(UserBuffer.dataIsEmpty(clientData.getPassword()));
         if(clientData.getSex().equals("male")){
             this.maleRadio.setSelected(true);
             this.femaleRadio.setSelected(false);

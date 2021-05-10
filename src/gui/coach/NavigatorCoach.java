@@ -1,7 +1,7 @@
 package gui.coach;
 
 import io.coach.CoachData;
-import gui.other.LoginBuffer;
+import gui.other.UserBuffer;
 import gui.login.Login;
 
 import java.awt.*;
@@ -298,7 +298,7 @@ public class NavigatorCoach extends JFrame {
         });
     }
     private void init(){
-        CoachData coachData = LoginBuffer.getCoachSession();
+        CoachData coachData = UserBuffer.getCoachSession();
         this.username.setText(coachData.getAccount());
         this.welcomeMsg.setText("Welcome, coach.");
     }

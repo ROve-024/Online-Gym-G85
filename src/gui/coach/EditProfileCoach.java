@@ -5,7 +5,7 @@
 package gui.coach;
 
 import controller.CoachFunction;
-import gui.other.LoginBuffer;
+import gui.other.UserBuffer;
 import gui.other.Warning;
 import io.coach.CoachData;
 
@@ -24,13 +24,13 @@ public class EditProfileCoach extends JFrame {
 
     private void finishButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        CoachData coachData = LoginBuffer.getCoachSession();
+        CoachData coachData = UserBuffer.getCoachSession();
         if(CoachFunction.loginMatch(coachData.getAccount(), new String(this.currentPassword.getPassword()))){
             if(new String(this.newPassword.getPassword()).equals(new String(this.confirmPassword.getPassword()))){
-                coachData.setName(LoginBuffer.toEmpty(this.name.getText()));
-                coachData.setEmail(LoginBuffer.toEmpty(this.email.getText()));
-                coachData.setPhonenumber(LoginBuffer.toEmpty(this.phoneNumber.getText()));
-                coachData.setPassword(LoginBuffer.toEmpty(new String(this.newPassword.getPassword())));
+                coachData.setName(UserBuffer.toEmpty(this.name.getText()));
+                coachData.setEmail(UserBuffer.toEmpty(this.email.getText()));
+                coachData.setPhonenumber(UserBuffer.toEmpty(this.phoneNumber.getText()));
+                coachData.setPassword(UserBuffer.toEmpty(new String(this.newPassword.getPassword())));
                 if(maleRadio.isSelected()){
                     coachData.setSex("male");
                 }
@@ -457,13 +457,13 @@ public class EditProfileCoach extends JFrame {
         });
     }
     private void init(){
-        CoachData coachData = LoginBuffer.getCoachSession();
-        this.name.setText(LoginBuffer.dataIsEmpty(coachData.getName()));
-        this.email.setText(LoginBuffer.dataIsEmpty(coachData.getEmail()));
-        this.phoneNumber.setText(LoginBuffer.dataIsEmpty(coachData.getPhonenumber()));
-        this.currentPassword.setText(LoginBuffer.dataIsEmpty(coachData.getPassword()));
-        this.newPassword.setText(LoginBuffer.dataIsEmpty(coachData.getPassword()));
-        this.confirmPassword.setText(LoginBuffer.dataIsEmpty(coachData.getPassword()));
+        CoachData coachData = UserBuffer.getCoachSession();
+        this.name.setText(UserBuffer.dataIsEmpty(coachData.getName()));
+        this.email.setText(UserBuffer.dataIsEmpty(coachData.getEmail()));
+        this.phoneNumber.setText(UserBuffer.dataIsEmpty(coachData.getPhonenumber()));
+        this.currentPassword.setText(UserBuffer.dataIsEmpty(coachData.getPassword()));
+        this.newPassword.setText(UserBuffer.dataIsEmpty(coachData.getPassword()));
+        this.confirmPassword.setText(UserBuffer.dataIsEmpty(coachData.getPassword()));
         if(coachData.getSex().equals("male")){
             this.maleRadio.setSelected(true);
             this.femaleRadio.setSelected(false);

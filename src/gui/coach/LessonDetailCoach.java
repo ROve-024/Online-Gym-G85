@@ -225,7 +225,7 @@ public class LessonDetailCoach extends JFrame {
     private void init(){
         this.lessonName.setText(this.classData.getName());
 //        this.lessonMsg.setText();
-        this.lessonType.setText(this.classData.getProfile());
+        this.lessonType.setText(this.classData.getDetail());
         CoachData coachData = CoachFunction.searchCoachByID(this.classData.getCoachID());
         this.coachName.setText(coachData.getName());
 //        this.coachMsg.setText();

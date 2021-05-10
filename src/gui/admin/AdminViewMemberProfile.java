@@ -6,11 +6,9 @@ package gui.admin;
 
 import java.awt.event.*;
 import controller.ClientFunction;
-import controller.CoachFunction;
-import gui.other.LoginBuffer;
+import gui.other.UserBuffer;
 import gui.other.ViewBuffer;
 import io.client.ClientData;
-import io.coach.CoachData;
 
 import java.awt.*;
 import javax.swing.*;
@@ -515,12 +513,12 @@ public class AdminViewMemberProfile extends JFrame {
     private void init(){
         String ID = ViewBuffer.getBuffer();
         ClientData clientData = ClientFunction.searchClientByID(ID);
-        this.uid.setText(LoginBuffer.dataIsEmpty("UID: "+ ID));
-        this.gym.setText(LoginBuffer.dataIsEmpty("GYM: "));
-        this.name.setText(LoginBuffer.dataIsEmpty(clientData.getName()));
-        this.email.setText(LoginBuffer.dataIsEmpty(clientData.getEmail()));
-        this.phoneNumber.setText(LoginBuffer.dataIsEmpty(clientData.getPhonenumber()));
-        this.gender.setText(LoginBuffer.dataIsEmpty(clientData.getSex()));
+        this.uid.setText(UserBuffer.dataIsEmpty("UID: "+ ID));
+        this.gym.setText(UserBuffer.dataIsEmpty("GYM: "));
+        this.name.setText(UserBuffer.dataIsEmpty(clientData.getName()));
+        this.email.setText(UserBuffer.dataIsEmpty(clientData.getEmail()));
+        this.phoneNumber.setText(UserBuffer.dataIsEmpty(clientData.getPhonenumber()));
+        this.gender.setText(UserBuffer.dataIsEmpty(clientData.getSex()));
 
     }
 }

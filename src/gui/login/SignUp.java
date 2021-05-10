@@ -5,7 +5,7 @@ import javax.swing.border.*;
 import controller.AdminFunction;
 import controller.ClientFunction;
 import controller.CoachFunction;
-import gui.other.LoginBuffer;
+import gui.other.UserBuffer;
 import gui.other.Warning;
 
 import java.awt.*;
@@ -39,7 +39,7 @@ public class SignUp extends JFrame {
             }
             else{
                 String ID = ClientFunction.signUpSubmit(account,password);
-                LoginBuffer.setBuffer(ID);
+                UserBuffer.setBuffer(ID);
                 Login.run();
                 this.dispose();
             }
@@ -54,7 +54,7 @@ public class SignUp extends JFrame {
             }
             else{
                 String ID = CoachFunction.signUpSubmit(account,password);
-                LoginBuffer.setBuffer(ID);
+                UserBuffer.setBuffer(ID);
                 Login.run();
                 this.dispose();
             }
@@ -69,7 +69,7 @@ public class SignUp extends JFrame {
             }
             else{
                 String ID = AdminFunction.signUpSubmit(account,password);
-                LoginBuffer.setBuffer(ID);
+                UserBuffer.setBuffer(ID);
                 Login.run();
                 this.dispose();
             }

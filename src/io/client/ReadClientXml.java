@@ -61,6 +61,9 @@ public class ReadClientXml {
             emp.setSex(getTagValue("Sex", element));
 			emp.setBalance(getTagValue("Balance", element));
 			emp.setVIPlevel(getTagValue("VIPlevel", element));
+			emp.setTarget(getTagValue("Target", element));
+			emp.setPhysicalCondition(getTagValue("PhysicalCondition", element));
+			emp.setFileAddress(getTagValue("FileAddress", element));
 		}
 		
 		return emp;

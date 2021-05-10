@@ -3,17 +3,16 @@ import controller.AdminFunction;
 import controller.ClientFunction;
 import controller.CoachFunction;
 import io.admin.AdminData;
-import io.classes.ClassData;
 import io.client.ClientData;
 import io.coach.CoachData;
 
 import java.io.*;
 
-public class LoginBuffer {
+public class UserBuffer {
     public static String getBuffer(){
         String line = "";
         try{
-            File filename = new File("src/resources/buffer/loginBuffer.txt");
+            File filename = new File("src/resources/buffer/userVuffer.txt");
             InputStreamReader reader = new InputStreamReader(new FileInputStream(filename));
             BufferedReader br = new BufferedReader(reader);
             line = br.readLine();
@@ -23,7 +22,7 @@ public class LoginBuffer {
         return line;
     }
     public static void setBuffer(String ID){
-        File file = new File("src/resources/buffer/loginBuffer.txt");
+        File file = new File("src/resources/buffer/userVuffer.txt");
         file.delete();
         try {
             file.createNewFile();
@@ -37,17 +36,17 @@ public class LoginBuffer {
         }
     }
     public static CoachData getCoachSession(){
-        String ID = LoginBuffer.getBuffer();
+        String ID = UserBuffer.getBuffer();
         CoachData coachData = CoachFunction.searchCoachByID(ID);
         return coachData;
     }
     public static AdminData getAdminSession(){
-        String ID = LoginBuffer.getBuffer();
+        String ID = UserBuffer.getBuffer();
         AdminData adminData = AdminFunction.searchAdminByID(ID);
         return adminData;
     }
     public static ClientData getClientSession(){
-        String ID = LoginBuffer.getBuffer();
+        String ID = UserBuffer.getBuffer();
         ClientData clientData = ClientFunction.searchClientByID(ID);
         return clientData;
     }

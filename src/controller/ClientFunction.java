@@ -2,13 +2,13 @@ package controller;
 
 import io.client.ClientData;
 import io.client.WriteClientXml;
+import io.coach.CoachData;
 
 import java.util.List;
 
 import static io.client.ReadClientXml.readClientXML;
 
 public class ClientFunction {
-	
     public static List getWholeClient(){                    //return the whole client info
         List<ClientData> clientList = readClientXML();
 
@@ -19,6 +19,7 @@ public class ClientFunction {
         WriteClientXml wx = new WriteClientXml();
         wx.writeXML(clientList);
     }
+
     public static int maxClientID(List<ClientData> clientList){
         int maxId = 0;
 
@@ -41,7 +42,7 @@ public class ClientFunction {
         ClientData clientData;
 
         for(int  i = 0 ; i<clientList.size();i++){
-        	clientData = clientList.get(i);
+            clientData = clientList.get(i);
             if(clientData.getAccount().equals(Account) && clientData.getPassword().equals(Password)){
                 ifMatch = true;
                 break;
@@ -51,7 +52,7 @@ public class ClientFunction {
         return ifMatch;
     }
     public static boolean ifExistSameAccount(String Account){
-    	List<ClientData> clientList = getWholeClient();
+        List<ClientData> clientList = getWholeClient();
         boolean ifExist = false;
 
         for(int  i = 0 ; i<clientList.size();i++){
@@ -77,9 +78,7 @@ public class ClientFunction {
         clientData.setPassword(Password);
         clientData.setPhonenumber("Empty");
         clientData.setSex("Empty");
-        clientData.setBalance("Empty");
-        clientData.setVIPlevel("Empty");
-        clientData.setEmail("Empty");
+
         clientList.add(clientData);
 
         writeClient(clientList);
@@ -106,11 +105,11 @@ public class ClientFunction {
         ClientData clientData = null;
 
         for(int i=0;i<clientList.size();i++) {
-        	ClientData temp;
+            ClientData temp;
             temp = clientList.get(i);
             if(temp.getClientID().equals(ID)){
-            	clientData = temp;
-            	break;
+                clientData = temp;
+                break;
             }
         }
         return clientData;
@@ -122,12 +121,11 @@ public class ClientFunction {
             ClientData temp;
             temp = clientList.get(i);
             if(temp.getAccount().equals(clientData.getAccount())){
-            	clientList.get(i).setName(clientData.getName());
-            	clientList.get(i).setPassword(clientData.getPassword());
-            	clientList.get(i).setPhonenumber(clientData.getPhonenumber());
-                clientList.get(i).setEmail(clientData.getEmail());
-            	clientList.get(i).setSex(clientData.getSex());
-            	break;
+                clientList.get(i).setName(clientData.getName());
+                clientList.get(i).setPassword(clientData.getPassword());
+                clientList.get(i).setPhonenumber(clientData.getPhonenumber());
+                clientList.get(i).setSex(clientData.getSex());
+                break;
             }
         }
 
@@ -140,8 +138,8 @@ public class ClientFunction {
             ClientData temp;
             temp = clientList.get(i);
             if(temp.getClientID().equals(ID)) {
-            	clientList.remove(i);
-            	break;
+                clientList.remove(i);
+                break;
             }
         }
         writeClient(clientList);
@@ -150,11 +148,11 @@ public class ClientFunction {
         List<ClientData> clientList = getWholeClient();
 
         for(int i=0;i<clientList.size();i++) {
-        	ClientData temp;
+            ClientData temp;
             temp = clientList.get(i);
             if(temp.getAccount().equals(Account)) {
-            	clientList.remove(i);
-            	break;
+                clientList.remove(i);
+                break;
             }
         }
         writeClient(clientList);
@@ -164,11 +162,11 @@ public class ClientFunction {
         ClientData clientData = null;
 
         for(int i=0;i<clientList.size();i++) {
-        	ClientData temp;
+            ClientData temp;
             temp = clientList.get(i);
             if(temp.getAccount().equals(Account)){
-            	clientData = temp;
-            	break;
+                clientData = temp;
+                break;
             }
         }
         return clientData.getClientID();

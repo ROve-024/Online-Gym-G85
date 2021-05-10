@@ -1,10 +1,8 @@
 package gui.admin;
 
-import controller.AdminFunction;
 import gui.login.Login;
-import gui.other.LoginBuffer;
+import gui.other.UserBuffer;
 import io.admin.AdminData;
-import io.coach.CoachData;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -262,7 +260,7 @@ public class NavigatorAdmin extends JFrame {
         });
     }
     private void init(){
-        AdminData adminData = LoginBuffer.getAdminSession();
+        AdminData adminData = UserBuffer.getAdminSession();
         this.username.setText(adminData.getAccount());
         this.welcomeMsg.setText("Welcome, admin.");
     }

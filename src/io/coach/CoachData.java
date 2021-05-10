@@ -2,14 +2,15 @@ package io.coach;
 
 public class CoachData {
 	
-	private String CoachID;
-	private String Name;
-	private String Account;
-	private String Password;
-	private String Phonenumber;
-	private String Email;
-	private String Sex;
-	private String Profile;
+	private String CoachID = new String("Empty");
+	private String Name = new String("Empty");
+	private String Account = new String("Empty");
+	private String Password = new String("Empty");
+	private String Phonenumber = new String("Empty");
+	private String Email = new String("Empty");
+	private String Sex = new String("Empty");
+	private String Profile = new String("Empty");
+	private String FileAddress = new String("Empty");
 	
 	public void setCoachID(String CoachID) 
 	{
@@ -51,6 +52,11 @@ public class CoachData {
 		this.Profile = Profile;
 	}
 
+	public void setFileAddress(String FileAddress)
+	{
+		this.FileAddress = FileAddress;
+	}
+
 	public String getID()
 	{
 		return CoachID;
@@ -90,6 +96,11 @@ public class CoachData {
 	{
 		return this.Profile;
 	}
+
+	public String getFileAddress()
+	{
+		return this.FileAddress;
+	}
 	
 	public String toString() 
 	{   
@@ -102,6 +113,7 @@ public class CoachData {
 				"Phonenumber: " + Phonenumber + "\n" +
 				"Sex: " + Sex + "\n" +
 				"Profilee: " + Profile + "\n" +
+				"FileAddress" + FileAddress + "\n" +
 				"----------------------------\n";
 
 	}

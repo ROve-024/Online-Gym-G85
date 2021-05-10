@@ -2,15 +2,18 @@ package io.client;
 
 public class ClientData {
 	
-	private String ClientID;
-	private String Name;
-	private String Account;
-	private String Password;
-	private String Phonenumber;
-	private String Email;
-	private String Sex;
-	private String Balance;
-	private String VIPlevel;
+	private String ClientID = new String("Empty");
+	private String Name = new String("Empty");
+	private String Account = new String("Empty");
+	private String Password = new String("Empty");
+	private String Phonenumber = new String("Empty");
+	private String Email = new String("Empty");
+	private String Sex = new String("Empty");
+	private String Balance = new String("Empty");
+	private String VIPlevel = new String("Empty");
+	private String Target = new String("Empty");
+	private String PhysicalCondition = new String("Empty");
+	private String FileAddress = new String("Empty");
 
 	
 	public void setClientID(String ClientID)
@@ -58,6 +61,21 @@ public class ClientData {
 		this.VIPlevel = VIPlevel;
 	}
 
+	public void setTarget(String Target)
+	{
+		this.Target = Target;
+	}
+
+	public void setPhysicalCondition(String PhysicalCondition)
+	{
+		this.PhysicalCondition = PhysicalCondition;
+	}
+
+	public void setFileAddress(String FileAddress)
+	{
+		this.FileAddress = FileAddress;
+	}
+
 
 	public String getClientID()
 	{
@@ -103,6 +121,21 @@ public class ClientData {
 	{
 		return this.VIPlevel;
 	}
+
+	public String getTarget()
+	{
+		return this.Target;
+	}
+
+	public String getPhysicalCondition()
+	{
+		return this.PhysicalCondition;
+	}
+
+	public String getFileAddress()
+	{
+		return this.FileAddress;
+	}
 	
 	public String toString() 
 	{   
@@ -118,6 +151,9 @@ public class ClientData {
 				"Sex: " + Sex + "\n" +
 				"Balance: " + Balance + "\n" +
 				"VIPlevel: " + VIPlevel + "\n" +
+				"Target: " + Target + "\n" +
+				"PhysicalCondition: " + PhysicalCondition + "\n" +
+				"FileAddress: " + FileAddress + "\n" +
 				"----------------------------\n";
 
 	}

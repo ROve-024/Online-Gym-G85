@@ -5,7 +5,7 @@ import javax.swing.border.*;
 import controller.AdminFunction;
 import controller.ClientFunction;
 import gui.admin.NavigatorAdmin;
-import gui.other.LoginBuffer;
+import gui.other.UserBuffer;
 import gui.coach.NavigatorCoach;
 import gui.member.NavigatorMember;
 import controller.CoachFunction;
@@ -30,14 +30,14 @@ public class Login extends JFrame {
 
     private void loginButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        LoginBuffer.setBuffer("");
+        UserBuffer.setBuffer("");
         String account = this.username.getText();
         String password = new String(this.password.getPassword());
 //        System.out.println(account+": "+password);
         if(this.userButton.isSelected()){
             if(ClientFunction.loginMatch(account, password)){
                 String ID = ClientFunction.getIDByAccount(account);
-                LoginBuffer.setBuffer(ID);
+                UserBuffer.setBuffer(ID);
                 NavigatorMember.run();
                 this.dispose();
             }
@@ -48,7 +48,7 @@ public class Login extends JFrame {
         else if(this.coachButton.isSelected()){
             if(CoachFunction.loginMatch(account, password)){
                 String ID = CoachFunction.getIDByAccount(account);
-                LoginBuffer.setBuffer(ID);
+                UserBuffer.setBuffer(ID);
                 NavigatorCoach.run();
                 this.dispose();
             }
@@ -59,7 +59,7 @@ public class Login extends JFrame {
         else if(this.adminButton.isSelected()){
             if(AdminFunction.loginMatch(account, password)){
                 String ID = AdminFunction.getIDByAccount(account);
-                LoginBuffer.setBuffer(ID);
+                UserBuffer.setBuffer(ID);
                 NavigatorAdmin.run();
                 this.dispose();
             }

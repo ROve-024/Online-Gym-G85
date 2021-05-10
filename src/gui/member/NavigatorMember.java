@@ -1,7 +1,7 @@
 package gui.member;
 
 import gui.login.Login;
-import gui.other.LoginBuffer;
+import gui.other.UserBuffer;
 import io.client.ClientData;
 
 import java.awt.*;
@@ -69,6 +69,11 @@ public class NavigatorMember extends JFrame {
         Login.run();
     }
 
+    private void vipLevelActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        OpenVip.run();
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -87,6 +92,7 @@ public class NavigatorMember extends JFrame {
         label2 = new JButton();
         label3 = new JButton();
         label4 = new JButton();
+        vipLevel = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -220,6 +226,16 @@ public class NavigatorMember extends JFrame {
             body.add(label4);
             label4.setBounds(20, 287, 25, 25);
 
+            //---- vipLevel ----
+            vipLevel.setText("Level 0");
+            vipLevel.setFont(new Font("Microsoft YaHei UI", Font.BOLD | Font.ITALIC, 12));
+            vipLevel.setBackground(new Color(240, 128, 128));
+            vipLevel.setForeground(Color.white);
+            vipLevel.setBorder(null);
+            vipLevel.addActionListener(e -> vipLevelActionPerformed(e));
+            body.add(vipLevel);
+            vipLevel.setBounds(222, 35, 55, 23);
+
             {
                 // compute preferred size
                 Dimension preferredSize = new Dimension();
@@ -274,6 +290,7 @@ public class NavigatorMember extends JFrame {
     private JButton label2;
     private JButton label3;
     private JButton label4;
+    private JButton vipLevel;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         NavigatorMember.run();
@@ -296,7 +313,7 @@ public class NavigatorMember extends JFrame {
         });
     }
     private void init(){
-        ClientData clientData = LoginBuffer.getClientSession();
+        ClientData clientData = UserBuffer.getClientSession();
         this.username.setText(clientData.getAccount());
         this.welcomeMsg.setText("Welcome, dear client.");
     }

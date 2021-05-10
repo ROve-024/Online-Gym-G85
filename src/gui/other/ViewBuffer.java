@@ -1,5 +1,12 @@
 package gui.other;
 
+import controller.ClassFunction;
+import controller.ClientFunction;
+import controller.CoachFunction;
+import io.classes.ClassData;
+import io.client.ClientData;
+import io.coach.CoachData;
+
 import java.io.*;
 
 public class ViewBuffer {
@@ -29,4 +36,15 @@ public class ViewBuffer {
             System.out.println("Create File Error!");
         }
     }
+    public static CoachData getViewCoachBuffer(){
+        String ID = LessonBuffer.getBuffer();
+        CoachData coachData = CoachFunction.searchCoachByID(ID);
+        return coachData;
+    }
+    public static ClientData getViewClientBuffer(){
+        String ID = LessonBuffer.getBuffer();
+        ClientData clientData = ClientFunction.searchClientByID(ID);
+        return clientData;
+    }
+
 }

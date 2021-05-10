@@ -3,7 +3,7 @@ package gui.coach;
 import controller.ClassFunction;
 import controller.CoachFunction;
 import gui.other.LessonBuffer;
-import gui.other.LoginBuffer;
+import gui.other.UserBuffer;
 import gui.other.Warning;
 import io.classes.ClassData;
 import io.coach.CoachData;
@@ -685,7 +685,7 @@ public class MyLessonCoach extends JFrame {
         });
     }
     private void init(){
-        CoachData coachData = LoginBuffer.getCoachSession();
+        CoachData coachData = UserBuffer.getCoachSession();
         list = ClassFunction.searchClassByCoachName(coachData.getName());
         this.update();
     }

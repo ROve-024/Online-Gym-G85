@@ -112,7 +112,7 @@ public class ClassFunction {
 
         for(int i=0;i<classList.size();i++){
             ClassData temp = classList.get(i);
-            if(!temp.getProfile().equals(Profile)){
+            if(!temp.getCategory().equals(Profile)){
                 classList.remove(i);
             }
         }
@@ -153,8 +153,11 @@ public class ClassFunction {
                 classList.get(i).setCoachID(classData.getCoachID());
                 classList.get(i).setFee(classData.getFee());
                 classList.get(i).setIsLive(classData.getIsLive());
-                classList.get(i).setProfile(classData.getProfile());
+                classList.get(i).setCategory(classData.getCategory());
                 classList.get(i).setVedioAddress(classData.getVedioAddress());
+                classList.get(i).setDetail(classData.getDetail());
+                classList.get(i).setVIPLevel(classData.getVIPLevel());
+                classList.get(i).setFileAddress(classData.getFileAddress());
             }
         }
 

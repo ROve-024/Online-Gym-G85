@@ -58,7 +58,10 @@ public class ReadClassXml {
             emp.setFee(getTagValue("Fee", element));
             emp.setCoachID(getTagValue("CoachID", element));
             emp.setVedioAddress(getTagValue("VedioAddress", element));
-            emp.setProfile(getTagValue("Profile", element));
+            emp.setCategory(getTagValue("Category", element));
+			emp.setDetail(getTagValue("Detail", element));
+			emp.setVIPLevel(getTagValue("VIPLevel", element));
+			emp.setFileAddress(getTagValue("FileAddress", element));
 		}
 		
 		return emp;

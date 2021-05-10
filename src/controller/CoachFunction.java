@@ -79,6 +79,7 @@ public class CoachFunction {
         coachData.setPhonenumber("Empty");
         coachData.setEmail("Empty");
         coachData.setProfile("Empty");
+        coachData.setFileAddress("Empty");
         coachData.setSex("Empty");
 
         coachList.add(coachData);
@@ -129,6 +130,7 @@ public class CoachFunction {
                 coachList.get(i).setPhonenumber(updateCoachData.getPhonenumber());
                 coachList.get(i).setEmail(updateCoachData.getEmail());
                 coachList.get(i).setProfile(updateCoachData.getProfile());
+                coachList.get(i).setFileAddress(updateCoachData.getFileAddress());
                 coachList.get(i).setSex(updateCoachData.getSex());
             }
         }

@@ -1,6 +1,11 @@
 package gui.other;
 
 
+import controller.ClassFunction;
+import controller.CoachFunction;
+import io.classes.ClassData;
+import io.coach.CoachData;
+
 import java.io.*;
 
 public class LessonBuffer {
@@ -29,5 +34,10 @@ public class LessonBuffer {
         catch (Exception e){
             System.out.println("Create File Error!");
         }
+    }
+    public static ClassData getLessonBuffer(){
+        String ID = LessonBuffer.getBuffer();
+        ClassData classData = ClassFunction.searchClassByID(ID);
+        return classData;
     }
 }

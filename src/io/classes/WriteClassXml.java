@@ -55,9 +55,21 @@ public class WriteClassXml {
                     VedioAddress.setTextContent(classData.getVedioAddress());
                     classes.appendChild(VedioAddress);
 
-                    Element Profile = document.createElement("Profile");
-                    Profile.setTextContent(classData.getProfile());
-                    classes.appendChild(Profile);
+                    Element Category = document.createElement("Category");
+                    Category.setTextContent(classData.getCategory());
+                    classes.appendChild(Category);
+
+                    Element Detail = document.createElement("Detail");
+                    Detail.setTextContent(classData.getDetail());
+                    classes.appendChild(Detail);
+
+                    Element VIPLevel = document.createElement("VIPLevel");
+                    VIPLevel.setTextContent(classData.getVIPLevel());
+                    classes.appendChild(VIPLevel);
+
+                    Element FileAddress = document.createElement("FileAddress");
+                    FileAddress.setTextContent(classData.getFileAddress());
+                    classes.appendChild(FileAddress);
 
 
                     // 为根节点添加子节点

@@ -67,6 +67,18 @@ public class WriteClientXml {
                     VIPlevel.setTextContent(clientData.getVIPlevel());
                     client.appendChild(VIPlevel);
 
+                    Element Target = document.createElement("Target");
+                    Target.setTextContent(clientData.getTarget());
+                    client.appendChild(Target);
+
+                    Element PhysicalCondition = document.createElement("PhysicalCondition");
+                    PhysicalCondition.setTextContent(clientData.getPhysicalCondition());
+                    client.appendChild(PhysicalCondition);
+
+                    Element FileAddress = document.createElement("FileAddress");
+                    FileAddress.setTextContent(clientData.getFileAddress());
+                    client.appendChild(FileAddress);
+
 
                     // 为根节点添加子节点
                     clientstore.appendChild(client);
