@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/buffer/viewBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/buffer/viewBuffer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/OpenVip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/OpenVip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/buffer/viewBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/viewBuffer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Client.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Coach.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +69,7 @@
       <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\UI\Other" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.OpenVip">
+  <component name="RunManager" selected="Application.Run">
     <configuration name="ALLLessonAdmin" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.admin.ALLLessonAdmin" />
       <module name="Group85" />
@@ -147,17 +142,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.ALLLessonAdmin" />
       <item itemvalue="Application.NavigatorAdmin" />
@@ -168,10 +152,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.OpenVip" />
-        <item itemvalue="Application.NavigatorAdmin" />
         <item itemvalue="Application.Run" />
         <item itemvalue="Application.NavigatorMember" />
+        <item itemvalue="Application.OpenVip" />
+        <item itemvalue="Application.NavigatorAdmin" />
         <item itemvalue="Application.UserManageAllAdmin" />
       </list>
     </recent_temporary>
@@ -233,9 +217,15 @@
       <workItem from="1620486495425" duration="216000" />
       <workItem from="1620558835353" duration="1679000" />
       <workItem from="1620563669037" duration="1973000" />
-      <workItem from="1620615006899" duration="6426000" />
-      <workItem from="1620638569353" duration="1677000" />
-      <workItem from="1620644752637" duration="8101000" />
+      <workItem from="1620615006899" duration="6523000" />
+      <workItem from="1620636924141" duration="636000" />
+      <workItem from="1620639396982" duration="1028000" />
+      <workItem from="1620640502562" duration="43000" />
+      <workItem from="1620640963603" duration="7000" />
+      <workItem from="1620645159547" duration="85000" />
+      <workItem from="1620647957633" duration="646000" />
+      <workItem from="1620648854888" duration="300000" />
+      <workItem from="1620649204956" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1617952547719</created>
@@ -517,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620486554187</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="update">
+      <created>1620621721620</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1620621721620</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
