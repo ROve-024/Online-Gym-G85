@@ -6,46 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Client.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Coach.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/buffer/loginBuffer.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/buffer/viewBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/buffer/viewBuffer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ClassFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ClassFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ClientFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ClientFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CoachFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CoachFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/AdminViewCoachProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/AdminViewCoachProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/AdminViewMemberProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/AdminViewMemberProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/NavigatorAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/NavigatorAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/EditProfileCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/EditProfileCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/LessonDetailCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/LessonDetailCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/NavigatorCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/NavigatorCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/ProfileCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ProfileCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/login/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/login/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/login/SignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/EditProfileMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/EditProfileMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/NavigatorMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/NavigatorMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/other/LessonBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/other/LessonBuffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/other/LoginBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/other/UserBuffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/other/ViewBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/other/ViewBuffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/classes/ClassData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/classes/ClassData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/classes/ReadClassXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/classes/ReadClassXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/classes/WriteClassXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/classes/WriteClassXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/client/ClientData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/client/ClientData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/client/ReadClientXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/client/ReadClientXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/client/WriteClientXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/client/WriteClientXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/coach/CoachData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/coach/CoachData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/coach/ReadCoachXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/coach/ReadCoachXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/coach/WriteCoachXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/coach/WriteCoachXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Admin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Class.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Client.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Coach.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/XMLs/Order.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Order.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/buffer/loginBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/userVuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/OpenVip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/OpenVip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/buffer/viewBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/viewBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Client.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Coach.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +74,7 @@
       <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\UI\Other" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NavigatorMember">
+  <component name="RunManager" selected="Application.OpenVip">
     <configuration name="ALLLessonAdmin" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.admin.ALLLessonAdmin" />
       <module name="Group85" />
@@ -203,10 +168,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NavigatorMember" />
-        <item itemvalue="Application.Run" />
         <item itemvalue="Application.OpenVip" />
         <item itemvalue="Application.NavigatorAdmin" />
+        <item itemvalue="Application.Run" />
+        <item itemvalue="Application.NavigatorMember" />
         <item itemvalue="Application.UserManageAllAdmin" />
       </list>
     </recent_temporary>
@@ -269,6 +234,8 @@
       <workItem from="1620558835353" duration="1679000" />
       <workItem from="1620563669037" duration="1973000" />
       <workItem from="1620615006899" duration="6426000" />
+      <workItem from="1620638569353" duration="1677000" />
+      <workItem from="1620644752637" duration="8101000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1617952547719</created>

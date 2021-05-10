@@ -4,7 +4,13 @@
 
 package gui.member;
 
+import controller.ClientFunction;
+import gui.coach.ProfileCoach;
+import gui.other.UserBuffer;
+import io.client.ClientData;
+
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 
@@ -14,6 +20,22 @@ import javax.swing.border.*;
 public class OpenVip extends JFrame {
     public OpenVip() {
         initComponents();
+    }
+
+    private void purchaseButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        ClientData clientData = UserBuffer.getClientSession();
+        if(levelChoice1.isSelected()){
+            clientData.setVIPlevel("1");
+        }
+        else if(levelChoice2.isSelected()){
+            clientData.setVIPlevel("2");
+        }
+        else{
+            clientData.setVIPlevel("3");
+        }
+        ClientFunction.updateClientInfo(clientData);
+        this.dispose();
     }
 
     private void initComponents() {
@@ -29,7 +51,7 @@ public class OpenVip extends JFrame {
         decorationLine2 = new JLabel();
         levelTips1 = new JLabel();
         vipFeature1 = new JLabel();
-        radioButton1 = new JRadioButton();
+        levelChoice1 = new JRadioButton();
         reduceNumb = new JLabel();
         reduceTips1 = new JLabel();
         PriceTips1 = new JLabel();
@@ -39,7 +61,7 @@ public class OpenVip extends JFrame {
         decorationLine3 = new JLabel();
         levelTips2 = new JLabel();
         vipFeature2 = new JLabel();
-        level2Vip = new JRadioButton();
+        levelChoice2 = new JRadioButton();
         reduceNumb2 = new JLabel();
         reduceTips2 = new JLabel();
         PriceTips3 = new JLabel();
@@ -49,7 +71,7 @@ public class OpenVip extends JFrame {
         vipIcon3 = new JLabel();
         decorationLine4 = new JLabel();
         levelTips3 = new JLabel();
-        level1Choice3 = new JRadioButton();
+        levelChoice3 = new JRadioButton();
         reduceNumb3 = new JLabel();
         reduceTips3 = new JLabel();
         vipFeature3 = new JLabel();
@@ -57,7 +79,7 @@ public class OpenVip extends JFrame {
         vipFeature6 = new JLabel();
         PriceTips5 = new JLabel();
         PriceTips6 = new JLabel();
-        button1 = new JButton();
+        purchaseButton = new JButton();
 
         //======== this ========
         var contentPane = getContentPane();
@@ -132,10 +154,10 @@ public class OpenVip extends JFrame {
                 vipPanel1.add(vipFeature1);
                 vipFeature1.setBounds(70, 195, 100, vipFeature1.getPreferredSize().height);
 
-                //---- radioButton1 ----
-                radioButton1.setBackground(Color.white);
-                vipPanel1.add(radioButton1);
-                radioButton1.setBounds(105, 365, 20, 20);
+                //---- levelChoice1 ----
+                levelChoice1.setBackground(Color.white);
+                vipPanel1.add(levelChoice1);
+                levelChoice1.setBounds(105, 365, 20, 20);
 
                 //---- reduceNumb ----
                 reduceNumb.setText("35");
@@ -212,10 +234,10 @@ public class OpenVip extends JFrame {
                 vipPanel2.add(vipFeature2);
                 vipFeature2.setBounds(70, 195, 105, vipFeature2.getPreferredSize().height);
 
-                //---- level2Vip ----
-                level2Vip.setBackground(Color.white);
-                vipPanel2.add(level2Vip);
-                level2Vip.setBounds(105, 365, 20, 20);
+                //---- levelChoice2 ----
+                levelChoice2.setBackground(Color.white);
+                vipPanel2.add(levelChoice2);
+                levelChoice2.setBounds(105, 365, 20, 20);
 
                 //---- reduceNumb2 ----
                 reduceNumb2.setText("35");
@@ -292,10 +314,10 @@ public class OpenVip extends JFrame {
                 vipPanel3.add(levelTips3);
                 levelTips3.setBounds(65, 160, 100, 17);
 
-                //---- level1Choice3 ----
-                level1Choice3.setBackground(Color.white);
-                vipPanel3.add(level1Choice3);
-                level1Choice3.setBounds(105, 365, 20, 20);
+                //---- levelChoice3 ----
+                levelChoice3.setBackground(Color.white);
+                vipPanel3.add(levelChoice3);
+                levelChoice3.setBounds(105, 365, 20, 20);
 
                 //---- reduceNumb3 ----
                 reduceNumb3.setText("35");
@@ -362,12 +384,13 @@ public class OpenVip extends JFrame {
             body.add(vipPanel3);
             vipPanel3.setBounds(535, 155, 230, 400);
 
-            //---- button1 ----
-            button1.setText("PURCHASE");
-            button1.setBackground(new Color(240, 128, 128));
-            button1.setForeground(Color.white);
-            body.add(button1);
-            button1.setBounds(340, 585, 120, 45);
+            //---- purchaseButton ----
+            purchaseButton.setText("PURCHASE");
+            purchaseButton.setBackground(new Color(240, 128, 128));
+            purchaseButton.setForeground(Color.white);
+            purchaseButton.addActionListener(e -> purchaseButtonActionPerformed(e));
+            body.add(purchaseButton);
+            purchaseButton.setBounds(340, 585, 120, 45);
 
             {
                 // compute preferred size
@@ -406,9 +429,9 @@ public class OpenVip extends JFrame {
 
         //---- purchChoice ----
         var purchChoice = new ButtonGroup();
-        purchChoice.add(radioButton1);
-        purchChoice.add(level2Vip);
-        purchChoice.add(level1Choice3);
+        purchChoice.add(levelChoice1);
+        purchChoice.add(levelChoice2);
+        purchChoice.add(levelChoice3);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -424,7 +447,7 @@ public class OpenVip extends JFrame {
     private JLabel decorationLine2;
     private JLabel levelTips1;
     private JLabel vipFeature1;
-    private JRadioButton radioButton1;
+    private JRadioButton levelChoice1;
     private JLabel reduceNumb;
     private JLabel reduceTips1;
     private JLabel PriceTips1;
@@ -434,7 +457,7 @@ public class OpenVip extends JFrame {
     private JLabel decorationLine3;
     private JLabel levelTips2;
     private JLabel vipFeature2;
-    private JRadioButton level2Vip;
+    private JRadioButton levelChoice2;
     private JLabel reduceNumb2;
     private JLabel reduceTips2;
     private JLabel PriceTips3;
@@ -444,7 +467,7 @@ public class OpenVip extends JFrame {
     private JLabel vipIcon3;
     private JLabel decorationLine4;
     private JLabel levelTips3;
-    private JRadioButton level1Choice3;
+    private JRadioButton levelChoice3;
     private JLabel reduceNumb3;
     private JLabel reduceTips3;
     private JLabel vipFeature3;
@@ -452,7 +475,7 @@ public class OpenVip extends JFrame {
     private JLabel vipFeature6;
     private JLabel PriceTips5;
     private JLabel PriceTips6;
-    private JButton button1;
+    private JButton purchaseButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 
     public static void main(String[] args) {
@@ -464,6 +487,7 @@ public class OpenVip extends JFrame {
             public void run() {
                 try {
                     OpenVip frame = new OpenVip();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setResizable(false);
@@ -474,4 +498,9 @@ public class OpenVip extends JFrame {
             }
         });
     }
+    private void init(){
+        ClientData clientData = UserBuffer.getClientSession();
+        this.currentLevel.setText("Level" + clientData.getVIPlevel());
+    }
+
 }
