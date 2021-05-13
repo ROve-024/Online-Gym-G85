@@ -1,0 +1,1019 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			"background": sfield java.awt.Color white
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/resources/icons/gym.png" )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "body"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "decorationLine"
+					"background": sfield java.awt.Color black
+					"border": &LineBorder0 new javax.swing.border.LineBorder( sfield java.awt.Color black, 1, false )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 115
+					"width": 730
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "title"
+					"text": "User Management"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 32 )
+					"background": sfield java.awt.Color white
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 25
+					"y": 45
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "MembetTip"
+					"text": "Member"
+					"font": &Font0 new java.awt.Font( "Microsoft YaHei UI", 0, 24 )
+					"background": sfield java.awt.Color white
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 190
+					"height": 42
+					"x": 35
+					"y": 120
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "memberNextButton"
+					"background": sfield java.awt.SystemColor menu
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/icons/next.png" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "memberNextButtonActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 40
+					"height": 40
+					"x": 725
+					"y": 120
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "client1"
+					"background": sfield java.awt.SystemColor window
+					"border": &LineBorder1 new javax.swing.border.LineBorder( sfield java.awt.Color lightGray, 1, false )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientAvatar1"
+						"background": sfield java.awt.Color white
+						"icon": &SwingIcon0 new com.jformdesigner.model.SwingIcon( 0, "/resources/images/avatar/Acatar (1).jpg" )
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 10
+						"width": 75
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientName1"
+						"text": "First Name"
+						"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( null, 1, 2, false )
+						"background": sfield java.awt.SystemColor menu
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 90
+						"y": 10
+						"width": 80
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientGender1"
+						"text": "Female"
+						"font": &Font1 new java.awt.Font( "Arial", 2, 12 )
+						"background": sfield java.awt.SystemColor menu
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 17
+						"x": 90
+						"y": 31
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "memberMoreButton1"
+						"text": "MORE"
+						"background": sfield java.awt.SystemColor menu
+						"borderPainted": false
+						"font": &Font2 new java.awt.Font( "Microsoft YaHei UI", 0, 9 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "memberMoreButton1ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 100
+						"y": 60
+						"width": 65
+						"height": 25
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 165
+					"width": 175
+					"height": 100
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "decorationLine2"
+					"background": sfield java.awt.Color black
+					"border": #LineBorder0
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 730
+					"height": 2
+					"x": 35
+					"y": 380
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "coachTips"
+					"text": "Coach"
+					"font": #Font0
+					"background": sfield java.awt.Color white
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 190
+					"height": 42
+					"x": 35
+					"y": 385
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "coach1"
+					"background": sfield java.awt.SystemColor window
+					"border": #LineBorder1
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachAvatar1"
+						"background": sfield java.awt.Color white
+						"icon": &SwingIcon1 new com.jformdesigner.model.SwingIcon( 0, "/resources/images/avatar/Acatar (17).jpg" )
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 10
+						"width": 75
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachName1"
+						"text": "First Name"
+						"font": #SwingDerivedFont0
+						"background": sfield java.awt.SystemColor menu
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 90
+						"y": 10
+						"width": 80
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "coachMoreButton1"
+						"text": "MORE"
+						"background": sfield java.awt.SystemColor menu
+						"borderPainted": false
+						"font": #Font2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "coachMoreButton1ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 100
+						"y": 60
+						"width": 65
+						"height": 25
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachGender1"
+						"text": "Female"
+						"font": #Font1
+						"background": sfield java.awt.SystemColor menu
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 17
+						"x": 90
+						"y": 31
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 100
+					"x": 35
+					"y": 430
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "memberPrevButton"
+					"background": sfield java.awt.SystemColor menu
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/icons/previous.png" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "memberPrevButtonActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 40
+					"height": 40
+					"x": 680
+					"y": 120
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "coachPrevButton"
+					"background": sfield java.awt.SystemColor menu
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/icons/previous.png" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "coachPrevButtonActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 40
+					"height": 40
+					"x": 680
+					"y": 385
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "coachNextButton"
+					"background": sfield java.awt.SystemColor menu
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/icons/next.png" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "coachNextButtonActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 40
+					"height": 40
+					"x": 725
+					"y": 385
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "client2"
+					"background": sfield java.awt.SystemColor window
+					"border": #LineBorder1
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientAvatar2"
+						"background": sfield java.awt.Color white
+						"icon": #SwingIcon0
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 10
+						"width": 75
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientName2"
+						"text": "First Name"
+						"font": #SwingDerivedFont0
+						"background": sfield java.awt.SystemColor menu
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 90
+						"y": 10
+						"width": 80
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientGender2"
+						"text": "Female"
+						"font": #Font1
+						"background": sfield java.awt.SystemColor menu
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 17
+						"x": 90
+						"y": 31
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "memberMoreButton2"
+						"text": "MORE"
+						"background": sfield java.awt.SystemColor menu
+						"borderPainted": false
+						"font": #Font2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "memberMoreButton2ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 100
+						"y": 60
+						"width": 65
+						"height": 25
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 100
+					"x": 220
+					"y": 165
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "client3"
+					"background": sfield java.awt.SystemColor window
+					"border": #LineBorder1
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientAvatar3"
+						"background": sfield java.awt.Color white
+						"icon": #SwingIcon0
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 10
+						"width": 75
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientName3"
+						"text": "First Name"
+						"font": #SwingDerivedFont0
+						"background": sfield java.awt.SystemColor menu
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 90
+						"y": 10
+						"width": 80
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientGender3"
+						"text": "Female"
+						"font": #Font1
+						"background": sfield java.awt.SystemColor menu
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 17
+						"x": 90
+						"y": 31
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "memberMoreButton3"
+						"text": "MORE"
+						"background": sfield java.awt.SystemColor menu
+						"borderPainted": false
+						"font": #Font2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "memberMoreButton3ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 100
+						"y": 60
+						"width": 65
+						"height": 25
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 100
+					"x": 405
+					"y": 165
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "client4"
+					"background": sfield java.awt.SystemColor window
+					"border": #LineBorder1
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientAvatar4"
+						"background": sfield java.awt.Color white
+						"icon": #SwingIcon0
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 10
+						"width": 75
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientName4"
+						"text": "First Name"
+						"font": #SwingDerivedFont0
+						"background": sfield java.awt.SystemColor menu
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 90
+						"y": 10
+						"width": 80
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientGender4"
+						"text": "Female"
+						"font": #Font1
+						"background": sfield java.awt.SystemColor menu
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 17
+						"x": 90
+						"y": 31
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "memberMoreButton4"
+						"text": "MORE"
+						"background": sfield java.awt.SystemColor menu
+						"borderPainted": false
+						"font": #Font2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "memberMoreButton4ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 100
+						"y": 60
+						"width": 65
+						"height": 25
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 100
+					"x": 590
+					"y": 165
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "client5"
+					"background": sfield java.awt.SystemColor window
+					"border": #LineBorder1
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientAvatar5"
+						"background": sfield java.awt.Color white
+						"icon": #SwingIcon0
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 10
+						"width": 75
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientName5"
+						"text": "First Name"
+						"font": #SwingDerivedFont0
+						"background": sfield java.awt.SystemColor menu
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 90
+						"y": 10
+						"width": 80
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientGender5"
+						"text": "Female"
+						"font": #Font1
+						"background": sfield java.awt.SystemColor menu
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 17
+						"x": 90
+						"y": 31
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "memberMoreButton5"
+						"text": "MORE"
+						"background": sfield java.awt.SystemColor menu
+						"borderPainted": false
+						"font": #Font2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "memberMoreButton5ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 100
+						"y": 60
+						"width": 65
+						"height": 25
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 100
+					"x": 35
+					"y": 275
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "client6"
+					"background": sfield java.awt.SystemColor window
+					"border": #LineBorder1
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientAvatar6"
+						"background": sfield java.awt.Color white
+						"icon": #SwingIcon0
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 10
+						"width": 75
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientName6"
+						"text": "First Name"
+						"font": #SwingDerivedFont0
+						"background": sfield java.awt.SystemColor menu
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 90
+						"y": 10
+						"width": 80
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientGender6"
+						"text": "Female"
+						"font": #Font1
+						"background": sfield java.awt.SystemColor menu
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 17
+						"x": 90
+						"y": 31
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "memberMoreButton6"
+						"text": "MORE"
+						"background": sfield java.awt.SystemColor menu
+						"borderPainted": false
+						"font": #Font2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "memberMoreButton6ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 100
+						"y": 60
+						"width": 65
+						"height": 25
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 100
+					"x": 220
+					"y": 275
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "client7"
+					"background": sfield java.awt.SystemColor window
+					"border": #LineBorder1
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientAvatar7"
+						"background": sfield java.awt.Color white
+						"icon": #SwingIcon0
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 10
+						"width": 75
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientName7"
+						"text": "First Name"
+						"font": #SwingDerivedFont0
+						"background": sfield java.awt.SystemColor menu
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 90
+						"y": 10
+						"width": 80
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientGender7"
+						"text": "Female"
+						"font": #Font1
+						"background": sfield java.awt.SystemColor menu
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 17
+						"x": 90
+						"y": 31
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "memberMoreButton7"
+						"text": "MORE"
+						"background": sfield java.awt.SystemColor menu
+						"borderPainted": false
+						"font": #Font2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "memberMoreButton7ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 100
+						"y": 60
+						"width": 65
+						"height": 25
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 100
+					"x": 405
+					"y": 275
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "client8"
+					"background": sfield java.awt.SystemColor window
+					"border": #LineBorder1
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientAvatar8"
+						"background": sfield java.awt.Color white
+						"icon": #SwingIcon0
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 10
+						"width": 75
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientName8"
+						"text": "First Name"
+						"font": #SwingDerivedFont0
+						"background": sfield java.awt.SystemColor menu
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 90
+						"y": 10
+						"width": 80
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "clientGender8"
+						"text": "Female"
+						"font": #Font1
+						"background": sfield java.awt.SystemColor menu
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 17
+						"x": 90
+						"y": 31
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "memberMoreButton8"
+						"text": "MORE"
+						"background": sfield java.awt.SystemColor menu
+						"borderPainted": false
+						"font": #Font2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "memberMoreButton8ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 100
+						"y": 60
+						"width": 65
+						"height": 25
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 100
+					"x": 590
+					"y": 275
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "coach2"
+					"background": sfield java.awt.SystemColor window
+					"border": #LineBorder1
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachAvatar2"
+						"background": sfield java.awt.Color white
+						"icon": #SwingIcon1
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 10
+						"width": 75
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachName2"
+						"text": "First Name"
+						"font": #SwingDerivedFont0
+						"background": sfield java.awt.SystemColor menu
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 90
+						"y": 10
+						"width": 80
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "coachMoreButton2"
+						"text": "MORE"
+						"background": sfield java.awt.SystemColor menu
+						"borderPainted": false
+						"font": #Font2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "coachMoreButton2ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 100
+						"y": 60
+						"width": 65
+						"height": 25
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachGender2"
+						"text": "Female"
+						"font": #Font1
+						"background": sfield java.awt.SystemColor menu
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 17
+						"x": 90
+						"y": 31
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 100
+					"x": 220
+					"y": 430
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "coach3"
+					"background": sfield java.awt.SystemColor window
+					"border": #LineBorder1
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachAvatar3"
+						"background": sfield java.awt.Color white
+						"icon": #SwingIcon1
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 10
+						"width": 75
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachName3"
+						"text": "First Name"
+						"font": #SwingDerivedFont0
+						"background": sfield java.awt.SystemColor menu
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 90
+						"y": 10
+						"width": 80
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "coachMoreButton3"
+						"text": "MORE"
+						"background": sfield java.awt.SystemColor menu
+						"borderPainted": false
+						"font": #Font2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "coachMoreButton3ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 100
+						"y": 60
+						"width": 65
+						"height": 25
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachGender3"
+						"text": "Female"
+						"font": #Font1
+						"background": sfield java.awt.SystemColor menu
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 17
+						"x": 90
+						"y": 31
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 100
+					"x": 405
+					"y": 430
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "coach4"
+					"background": sfield java.awt.SystemColor window
+					"border": #LineBorder1
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachAvatar4"
+						"background": sfield java.awt.Color white
+						"icon": #SwingIcon1
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 10
+						"width": 75
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachName4"
+						"text": "First Name"
+						"font": #SwingDerivedFont0
+						"background": sfield java.awt.SystemColor menu
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 90
+						"y": 10
+						"width": 80
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "coachMoreButton4"
+						"text": "MORE"
+						"background": sfield java.awt.SystemColor menu
+						"borderPainted": false
+						"font": #Font2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "coachMoreButton4ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 100
+						"y": 60
+						"width": 65
+						"height": 25
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachGender4"
+						"text": "Female"
+						"font": #Font1
+						"background": sfield java.awt.SystemColor menu
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 17
+						"x": 90
+						"y": 31
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 100
+					"x": 590
+					"y": 430
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "coach5"
+					"background": sfield java.awt.SystemColor window
+					"border": #LineBorder1
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachAvatar5"
+						"background": sfield java.awt.Color white
+						"icon": #SwingIcon1
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 10
+						"width": 75
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachName5"
+						"text": "First Name"
+						"font": #SwingDerivedFont0
+						"background": sfield java.awt.SystemColor menu
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 90
+						"y": 10
+						"width": 80
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "coachMoreButton5"
+						"text": "MORE"
+						"background": sfield java.awt.SystemColor menu
+						"borderPainted": false
+						"font": #Font2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "coachMoreButton5ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 100
+						"y": 60
+						"width": 65
+						"height": 25
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachGender5"
+						"text": "Female"
+						"font": #Font1
+						"background": sfield java.awt.SystemColor menu
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 17
+						"x": 90
+						"y": 31
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 100
+					"x": 35
+					"y": 540
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "coach6"
+					"background": sfield java.awt.SystemColor window
+					"border": #LineBorder1
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachAvatar6"
+						"background": sfield java.awt.Color white
+						"icon": #SwingIcon1
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 10
+						"width": 75
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachName6"
+						"text": "First Name"
+						"font": #SwingDerivedFont0
+						"background": sfield java.awt.SystemColor menu
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 90
+						"y": 10
+						"width": 80
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "coachMoreButton6"
+						"text": "MORE"
+						"background": sfield java.awt.SystemColor menu
+						"borderPainted": false
+						"font": #Font2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "coachMoreButton6ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 100
+						"y": 60
+						"width": 65
+						"height": 25
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachGender6"
+						"text": "Female"
+						"font": #Font1
+						"background": sfield java.awt.SystemColor menu
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 17
+						"x": 90
+						"y": 31
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 100
+					"x": 220
+					"y": 540
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "coach7"
+					"background": sfield java.awt.SystemColor window
+					"border": #LineBorder1
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachAvatar7"
+						"background": sfield java.awt.Color white
+						"icon": #SwingIcon1
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 10
+						"width": 75
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachName7"
+						"text": "First Name"
+						"font": #SwingDerivedFont0
+						"background": sfield java.awt.SystemColor menu
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 90
+						"y": 10
+						"width": 80
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "coachMoreButton7"
+						"text": "MORE"
+						"background": sfield java.awt.SystemColor menu
+						"borderPainted": false
+						"font": #Font2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "coachMoreButton7ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 100
+						"y": 60
+						"width": 65
+						"height": 25
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachGender7"
+						"text": "Female"
+						"font": #Font1
+						"background": sfield java.awt.SystemColor menu
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 17
+						"x": 90
+						"y": 31
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 100
+					"x": 405
+					"y": 540
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "coach8"
+					"background": sfield java.awt.SystemColor window
+					"border": #LineBorder1
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachAvatar8"
+						"background": sfield java.awt.Color white
+						"icon": #SwingIcon1
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 10
+						"width": 75
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachName8"
+						"text": "First Name"
+						"font": #SwingDerivedFont0
+						"background": sfield java.awt.SystemColor menu
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 90
+						"y": 10
+						"width": 80
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "coachMoreButton8"
+						"text": "MORE"
+						"background": sfield java.awt.SystemColor menu
+						"borderPainted": false
+						"font": #Font2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "coachMoreButton8ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 100
+						"y": 60
+						"width": 65
+						"height": 25
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "coachGender8"
+						"text": "Female"
+						"font": #Font1
+						"background": sfield java.awt.SystemColor menu
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 17
+						"x": 90
+						"y": 31
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 100
+					"x": 590
+					"y": 540
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 800
+				"height": 655
+				"x": 0
+				"y": 0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 800, 685 )
+		} )
+	}
+}
