@@ -475,6 +475,7 @@ public class ViewCoachProfile extends JFrame {
             public void run() {
                 try {
                     ViewCoachProfile frame = new ViewCoachProfile();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setResizable(false);

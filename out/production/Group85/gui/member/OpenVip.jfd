@@ -103,7 +103,7 @@ new FormModel {
 						"width": 100
 					} )
 					add( new FormComponent( "javax.swing.JRadioButton" ) {
-						name: "radioButton1"
+						name: "levelChoice1"
 						"background": &Color1 new java.awt.Color( 255, 255, 255, 255 )
 						"$buttonGroup": new FormReference( "purchChoice" )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
@@ -203,7 +203,7 @@ new FormModel {
 						"width": 105
 					} )
 					add( new FormComponent( "javax.swing.JRadioButton" ) {
-						name: "level2Vip"
+						name: "levelChoice2"
 						"background": #Color1
 						"$buttonGroup": new FormReference( "purchChoice" )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
@@ -304,7 +304,7 @@ new FormModel {
 						"y": 160
 					} )
 					add( new FormComponent( "javax.swing.JRadioButton" ) {
-						name: "level1Choice3"
+						name: "levelChoice3"
 						"background": #Color1
 						"$buttonGroup": new FormReference( "purchChoice" )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {

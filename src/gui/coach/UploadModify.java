@@ -199,6 +199,7 @@ public class UploadModify extends JFrame {
             public void run() {
                 try {
                     UploadModify frame = new UploadModify();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setResizable(false);
