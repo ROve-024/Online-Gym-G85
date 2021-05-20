@@ -28,4 +28,18 @@
         <PhysicalCondition>good</PhysicalCondition>
         <FileAddress>123.jpg</FileAddress>
     </ROW>
+    <ROW>
+        <ClientID>3</ClientID>
+        <Name>Empty</Name>
+        <Account>S</Account>
+        <Password>1</Password>
+        <Phonenumber>Empty</Phonenumber>
+        <Email>Empty</Email>
+        <Sex>Empty</Sex>
+        <Balance>Empty</Balance>
+        <VIPlevel>Empty</VIPlevel>
+        <Target>Empty</Target>
+        <PhysicalCondition>Empty</PhysicalCondition>
+        <FileAddress>Empty</FileAddress>
+    </ROW>
 </DATA>

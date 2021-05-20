@@ -9,7 +9,7 @@
         <Email>123@qq.com</Email>
         <Sex>male</Sex>
         <Profile>Strong</Profile>
-        <File>123.jpg</File>
+        <FileAddress>123.jpg</FileAddress>
     </ROW>
     <ROW>
         <CoachID>2</CoachID>
@@ -20,6 +20,6 @@
         <Email>456@qq.com</Email>
         <Sex>female</Sex>
         <Profile>thin</Profile>
-        <File>123.jpg</File>
+        <FileAddress>123.jpg</FileAddress>
     </ROW>
 </DATA>

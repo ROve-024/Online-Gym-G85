@@ -393,11 +393,10 @@ new FormModel {
 					"y": 155
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
-					name: "purchaseButton"
+					name: "button1"
 					"text": "PURCHASE"
 					"background": new java.awt.Color( 240, 128, 128, 255 )
 					"foreground": sfield java.awt.Color white
-					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "purchaseButtonActionPerformed", true ) )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 340
 					"y": 585
