@@ -631,6 +631,7 @@ public class PlanHomeCoach extends JFrame {
             public void run() {
                 try {
                     PlanHomeCoach frame = new PlanHomeCoach();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setResizable(false);

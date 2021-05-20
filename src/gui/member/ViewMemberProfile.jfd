@@ -1,0 +1,268 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			"background": sfield java.awt.Color white
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/resources/icons/gym.png" )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "body"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "decorationLine"
+					"background": sfield java.awt.Color black
+					"border": new javax.swing.border.LineBorder( sfield java.awt.Color black, 1, false )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 115
+					"width": 730
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "title"
+					"text": "My Profile "
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 32 )
+					"background": sfield java.awt.Color white
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 25
+					"y": 45
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "uidGym"
+					"text": "UID:88888888 GYM: Muscle King "
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 17 )
+					"foreground": sfield java.awt.Color gray
+					"horizontalAlignment": 4
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 300
+					"height": 24
+					"x": 470
+					"y": 93
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "avatar"
+					"background": sfield java.awt.SystemColor textHighlight
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/images/avatar150/Acatar (8).jpg" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 295
+					"y": 145
+					"width": 150
+					"height": 150
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "nameTip"
+					"text": "Name"
+					"horizontalAlignment": 4
+					"background": sfield java.awt.Color white
+					"font": &Font0 new java.awt.Font( "Microsoft YaHei UI", 0, 17 )
+					"foreground": sfield java.awt.Color gray
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 175
+					"y": 340
+					"width": 175
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "emailTip"
+					"text": "Email"
+					"horizontalAlignment": 4
+					"background": sfield java.awt.Color white
+					"font": #Font0
+					"foreground": sfield java.awt.Color gray
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 23
+					"x": 175
+					"y": 400
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "phoneNumberTip"
+					"text": "Phone Number"
+					"horizontalAlignment": 4
+					"background": sfield java.awt.Color white
+					"font": #Font0
+					"foreground": sfield java.awt.Color gray
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 23
+					"x": 175
+					"y": 460
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "genderTip"
+					"text": "Gender"
+					"horizontalAlignment": 4
+					"background": sfield java.awt.Color white
+					"font": #Font0
+					"foreground": sfield java.awt.Color gray
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 23
+					"x": 175
+					"y": 520
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "name"
+					"text": "Your Name"
+					"horizontalAlignment": 2
+					"background": sfield java.awt.Color white
+					"font": #Font0
+					"foreground": sfield java.awt.Color gray
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 23
+					"x": 390
+					"y": 340
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "email"
+					"text": "username@example.com"
+					"horizontalAlignment": 2
+					"background": sfield java.awt.Color white
+					"font": #Font0
+					"foreground": sfield java.awt.Color gray
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 255
+					"height": 23
+					"x": 390
+					"y": 400
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "phoneNumber"
+					"text": "+86 123 4567 8910"
+					"horizontalAlignment": 2
+					"background": sfield java.awt.Color white
+					"font": #Font0
+					"foreground": sfield java.awt.Color gray
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 255
+					"height": 23
+					"x": 390
+					"y": 460
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "gender"
+					"text": "Female"
+					"horizontalAlignment": 2
+					"background": sfield java.awt.Color white
+					"font": #Font0
+					"foreground": sfield java.awt.Color gray
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 255
+					"height": 23
+					"x": 390
+					"y": 520
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "decorationLine2"
+					"background": &Color0 new java.awt.Color( 220, 220, 220, 255 )
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 315
+					"height": 2
+					"x": 35
+					"y": 380
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "decorationLine3"
+					"background": #Color0
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 315
+					"height": 2
+					"x": 35
+					"y": 440
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "decorationLine4"
+					"background": #Color0
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 315
+					"height": 2
+					"x": 35
+					"y": 500
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "decorationLine5"
+					"background": #Color0
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 315
+					"height": 2
+					"x": 35
+					"y": 557
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "decorationLine6"
+					"background": #Color0
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 315
+					"height": 2
+					"x": 35
+					"y": 325
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "decorationLine7"
+					"background": #Color0
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 375
+					"height": 2
+					"x": 390
+					"y": 325
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "decorationLine8"
+					"background": #Color0
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 375
+					"height": 2
+					"x": 390
+					"y": 380
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "decorationLine9"
+					"background": #Color0
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 375
+					"height": 2
+					"x": 390
+					"y": 440
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "decorationLine10"
+					"background": #Color0
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 375
+					"height": 2
+					"x": 390
+					"y": 500
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "decorationLine11"
+					"background": #Color0
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 375
+					"height": 2
+					"x": 390
+					"y": 557
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 800
+				"height": 655
+				"x": 0
+				"y": 0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 800, 685 )
+		} )
+	}
+}

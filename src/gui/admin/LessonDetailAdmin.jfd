@@ -1,0 +1,167 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			"background": sfield java.awt.Color white
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/resources/icons/gym.png" )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "body"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "decorationLine"
+					"background": sfield java.awt.Color black
+					"border": new javax.swing.border.LineBorder( sfield java.awt.Color black, 1, false )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 115
+					"width": 730
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "title"
+					"text": "Detail of Lesson "
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 32 )
+					"background": sfield java.awt.Color white
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 25
+					"y": 45
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lessonPicture"
+					"border": new javax.swing.border.LineBorder( sfield java.awt.Color lightGray, 1, false )
+					"horizontalAlignment": 0
+					"background": sfield java.awt.SystemColor menu
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/images/preview/crunches.png" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 30
+					"y": 165
+					"width": 300
+					"height": 250
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lessonName"
+					"text": "Lesson Name"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 32 )
+					"background": sfield java.awt.Color white
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 267
+					"height": 42
+					"x": 350
+					"y": 165
+				} )
+				add( new FormComponent( "javax.swing.JTextPane" ) {
+					name: "lessionMsg"
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget."
+					"background": sfield java.awt.Color white
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"caretColor": sfield java.awt.Color white
+					"disabledTextColor": sfield java.awt.Color white
+					"font": &Font0 new java.awt.Font( "Microsoft YaHei UI", 0, 13 )
+					"editable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 398
+					"height": 138
+					"x": 350
+					"y": 215
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "coachAvatar"
+					"border": new javax.swing.border.LineBorder( sfield java.awt.Color white, 1, false )
+					"horizontalAlignment": 0
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/images/avatar/Acatar (3).jpg" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 75
+					"x": 30
+					"y": 440
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "coachName"
+					"text": "Coach Name"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 24 )
+					"background": sfield java.awt.Color white
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 190
+					"height": 42
+					"x": 115
+					"y": 440
+				} )
+				add( new FormComponent( "javax.swing.JTextPane" ) {
+					name: "coachMsg"
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo."
+					"background": sfield java.awt.Color white
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"caretColor": sfield java.awt.Color white
+					"disabledTextColor": sfield java.awt.Color white
+					"font": #Font0
+					"editable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 525
+					"height": 45
+					"x": 115
+					"y": 475
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "coachDetailButton"
+					"text": "DETAIL"
+					"background": sfield java.awt.SystemColor menu
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "coachDetailButtonActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 100
+					"height": 50
+					"x": 660
+					"y": 460
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "editButton"
+					"text": "EDITOR"
+					"background": sfield java.awt.SystemColor menu
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "editButtonActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 100
+					"height": 50
+					"x": 30
+					"y": 570
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "deleteButton"
+					"text": "DELETE"
+					"background": new java.awt.Color( 217, 0, 27, 255 )
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"foreground": sfield java.awt.Color white
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "deleteButtonActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 100
+					"height": 50
+					"x": 130
+					"y": 570
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "homeButton"
+					"borderPainted": false
+					"background": sfield java.awt.SystemColor menu
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/icons/home.png" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "homeButtonActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 100
+					"height": 40
+					"x": 675
+					"y": 45
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 800
+				"height": 655
+				"x": 0
+				"y": 0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 800, 685 )
+		} )
+	}
+}
