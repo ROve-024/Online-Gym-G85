@@ -79,7 +79,7 @@ public class OpenVip extends JFrame {
         vipFeature6 = new JLabel();
         PriceTips5 = new JLabel();
         PriceTips6 = new JLabel();
-        purchaseButton = new JButton();
+        button1 = new JButton();
 
         //======== this ========
         var contentPane = getContentPane();
@@ -384,13 +384,12 @@ public class OpenVip extends JFrame {
             body.add(vipPanel3);
             vipPanel3.setBounds(535, 155, 230, 400);
 
-            //---- purchaseButton ----
-            purchaseButton.setText("PURCHASE");
-            purchaseButton.setBackground(new Color(240, 128, 128));
-            purchaseButton.setForeground(Color.white);
-            purchaseButton.addActionListener(e -> purchaseButtonActionPerformed(e));
-            body.add(purchaseButton);
-            purchaseButton.setBounds(340, 585, 120, 45);
+            //---- button1 ----
+            button1.setText("PURCHASE");
+            button1.setBackground(new Color(240, 128, 128));
+            button1.setForeground(Color.white);
+            body.add(button1);
+            button1.setBounds(340, 585, 120, 45);
 
             {
                 // compute preferred size
@@ -475,7 +474,7 @@ public class OpenVip extends JFrame {
     private JLabel vipFeature6;
     private JLabel PriceTips5;
     private JLabel PriceTips6;
-    private JButton purchaseButton;
+    private JButton button1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 
     public static void main(String[] args) {
