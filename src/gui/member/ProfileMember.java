@@ -1,5 +1,8 @@
 package gui.member;
 
+import gui.other.UserBuffer;
+import io.client.ClientData;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -28,7 +31,7 @@ public class ProfileMember extends JFrame {
         body = new JPanel();
         decorationLine = new JLabel();
         title = new JLabel();
-        balance = new JLabel();
+        VIPLevel = new JLabel();
         uidGym = new JLabel();
         avatar = new JButton();
         nameTip = new JLabel();
@@ -76,12 +79,12 @@ public class ProfileMember extends JFrame {
             body.add(title);
             title.setBounds(new Rectangle(new Point(25, 45), title.getPreferredSize()));
 
-            //---- balance ----
-            balance.setText("Balance: 1200$");
-            balance.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 17));
-            balance.setForeground(Color.gray);
-            body.add(balance);
-            balance.setBounds(35, 93, 160, balance.getPreferredSize().height);
+            //---- VIPLevel ----
+            VIPLevel.setText("VIP: ");
+            VIPLevel.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 17));
+            VIPLevel.setForeground(Color.gray);
+            body.add(VIPLevel);
+            VIPLevel.setBounds(35, 95, 160, VIPLevel.getPreferredSize().height);
 
             //---- uidGym ----
             uidGym.setText("UID:88888888 GYM: Muscle King ");
@@ -459,7 +462,7 @@ public class ProfileMember extends JFrame {
     private JPanel body;
     private JLabel decorationLine;
     private JLabel title;
-    private JLabel balance;
+    private JLabel VIPLevel;
     private JLabel uidGym;
     private JButton avatar;
     private JLabel nameTip;
@@ -491,6 +494,7 @@ public class ProfileMember extends JFrame {
             public void run() {
                 try {
                     ProfileMember frame = new ProfileMember();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setResizable(false);
@@ -500,5 +504,15 @@ public class ProfileMember extends JFrame {
                 }
             }
         });
+    }
+    private void init() {
+        String ID = UserBuffer.getBuffer();
+        ClientData clientData = UserBuffer.getClientSession();
+        this.uidGym.setText(UserBuffer.dataIsEmpty("UID: "+ ID + "    " + "GYM: "));
+        this.VIPLevel.setText(UserBuffer.dataIsEmpty("VIP Level" + clientData.getVIPlevel()));
+        this.name.setText(UserBuffer.dataIsEmpty(clientData.getName()));
+        this.email.setText(UserBuffer.dataIsEmpty(clientData.getEmail()));
+        this.phoneNumber.setText(UserBuffer.dataIsEmpty(clientData.getPhonenumber()));
+        this.gender.setText(UserBuffer.dataIsEmpty(clientData.getSex()));
     }
 }

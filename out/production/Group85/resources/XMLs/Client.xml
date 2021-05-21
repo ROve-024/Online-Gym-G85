@@ -9,7 +9,7 @@
         <Email>123@qq.com</Email>
         <Sex>male</Sex>
         <Balance>0.99</Balance>
-        <VIPlevel>1</VIPlevel>
+        <VIPlevel>2</VIPlevel>
         <Target>haha</Target>
         <PhysicalCondition>good</PhysicalCondition>
         <FileAddress>123.jpg</FileAddress>
@@ -30,12 +30,12 @@
     </ROW>
     <ROW>
         <ClientID>3</ClientID>
-        <Name>Empty</Name>
-        <Account>S</Account>
-        <Password>1</Password>
-        <Phonenumber>Empty</Phonenumber>
+        <Name>lt</Name>
+        <Account>ZZ</Account>
+        <Password>2</Password>
+        <Phonenumber>1</Phonenumber>
         <Email>Empty</Email>
-        <Sex>Empty</Sex>
+        <Sex>female</Sex>
         <Balance>Empty</Balance>
         <VIPlevel>Empty</VIPlevel>
         <Target>Empty</Target>

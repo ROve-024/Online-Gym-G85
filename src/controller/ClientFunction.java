@@ -22,9 +22,9 @@ public class ClientFunction {
 
     public static int maxClientID(List<ClientData> clientList){
         int maxId = 0;
+        ClientData clientData;
 
         for(int i=0;i<clientList.size();i++) {
-            ClientData clientData;
             clientData = clientList.get(i);
             int temp = Integer.parseInt(clientData.getClientID());
             if(maxId<=temp){
@@ -77,7 +77,13 @@ public class ClientFunction {
         clientData.setName("Empty");
         clientData.setPassword(Password);
         clientData.setPhonenumber("Empty");
+        clientData.setEmail("Empty");
         clientData.setSex("Empty");
+        clientData.setBalance("Empty");
+        clientData.setVIPlevel("Empty");
+        clientData.setTarget("Empty");
+        clientData.setPhysicalCondition("Empty");
+        clientData.setFileAddress("Empty");
 
         clientList.add(clientData);
 
@@ -114,17 +120,23 @@ public class ClientFunction {
         }
         return clientData;
     }
-    public static void updateClientInfo(ClientData clientData){
+    public static void updateClientInfo(ClientData updateClientData){
         List<ClientData> clientList = getWholeClient();
 
         for(int i=0;i<clientList.size();i++) {
             ClientData temp;
             temp = clientList.get(i);
-            if(temp.getAccount().equals(clientData.getAccount())){
-                clientList.get(i).setName(clientData.getName());
-                clientList.get(i).setPassword(clientData.getPassword());
-                clientList.get(i).setPhonenumber(clientData.getPhonenumber());
-                clientList.get(i).setSex(clientData.getSex());
+            if(temp.getAccount().equals(updateClientData.getAccount())){
+                clientList.get(i).setName(updateClientData.getName());
+                clientList.get(i).setPassword(updateClientData.getPassword());
+                clientList.get(i).setPhonenumber(updateClientData.getPhonenumber());
+                clientList.get(i).setSex(updateClientData.getSex());
+                clientList.get(i).setEmail(updateClientData.getEmail());
+                clientList.get(i).setBalance(updateClientData.getBalance());
+                clientList.get(i).setVIPlevel(updateClientData.getVIPlevel());
+                clientList.get(i).setTarget(updateClientData.getTarget());
+                clientList.get(i).setPhysicalCondition(updateClientData.getPhysicalCondition());
+                clientList.get(i).setFileAddress(updateClientData.getFileAddress());
                 break;
             }
         }

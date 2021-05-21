@@ -1,5 +1,10 @@
 package gui.coach;
 
+import controller.CoachFunction;
+import gui.other.UserBuffer;
+import io.client.ClientData;
+import io.coach.CoachData;
+
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.*;
@@ -62,11 +67,11 @@ public class ViewCoachProfile extends JFrame {
             decorationLine.setBounds(35, 115, 730, decorationLine.getPreferredSize().height);
 
             //---- title ----
-            title.setText("My Profile ");
+            title.setText("Coach Profile ");
             title.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 32));
             title.setBackground(Color.white);
             body.add(title);
-            title.setBounds(new Rectangle(new Point(25, 45), title.getPreferredSize()));
+            title.setBounds(new Rectangle(new Point(35, 45), title.getPreferredSize()));
 
             //---- uidGym ----
             uidGym.setText("UID:88888888 GYM: Muscle King ");
@@ -485,5 +490,14 @@ public class ViewCoachProfile extends JFrame {
                 }
             }
         });
+    }
+    private void init() {
+        String ID = UserBuffer.getBuffer();
+        CoachData coachData = CoachFunction.searchCoachByID(ID);
+        this.uidGym.setText(UserBuffer.dataIsEmpty("UID: "+ ID + "    " + "GYM: "));
+        this.name.setText(UserBuffer.dataIsEmpty(coachData.getName()));
+        this.email.setText(UserBuffer.dataIsEmpty(coachData.getEmail()));
+        this.phoneNumber.setText(UserBuffer.dataIsEmpty(coachData.getPhonenumber()));
+        this.gender.setText(UserBuffer.dataIsEmpty(coachData.getSex()));
     }
 }

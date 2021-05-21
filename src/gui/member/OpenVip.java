@@ -22,7 +22,7 @@ public class OpenVip extends JFrame {
         initComponents();
     }
 
-    private void purchaseButtonActionPerformed(ActionEvent e) {
+    private void button1ActionPerformed(ActionEvent e) {     //PURCHASE Action
         // TODO add your code here
         ClientData clientData = UserBuffer.getClientSession();
         if(levelChoice1.isSelected()){
@@ -388,6 +388,7 @@ public class OpenVip extends JFrame {
             button1.setText("PURCHASE");
             button1.setBackground(new Color(240, 128, 128));
             button1.setForeground(Color.white);
+            button1.addActionListener(e -> button1ActionPerformed(e));
             body.add(button1);
             button1.setBounds(340, 585, 120, 45);
 

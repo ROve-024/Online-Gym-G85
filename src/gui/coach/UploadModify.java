@@ -2,6 +2,7 @@ package gui.coach;
 
 import controller.ClassFunction;
 import gui.other.LessonBuffer;
+import gui.other.UserBuffer;
 import io.classes.ClassData;
 
 import java.awt.*;
@@ -23,7 +24,18 @@ public class UploadModify extends JFrame {
 
     private void finishButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-
+        ClassData classData = LessonBuffer.getLessonBuffer();
+        classData.setName(LessonBuffer.toEmpty(this.className.getText()));
+        classData.setDetail(LessonBuffer.toEmpty(this.classDetail.getText()));
+        classData.setCategory(LessonBuffer.toEmpty(this.classCategory.getText()));
+        classData.setVIPLevel(LessonBuffer.toEmpty(this.needVIP.getSelectedItem().toString()));
+        if(Live.isSelected()) {
+            classData.setIsLive("1");
+        }
+        else {
+            classData.setIsLive("0");
+        }
+        ClassFunction.updateClassInfo(classData);
         LessonDetailCoach.run();
         this.dispose();
     }
@@ -42,12 +54,19 @@ public class UploadModify extends JFrame {
         title = new JLabel();
         finishButton = new JButton();
         label1 = new JLabel();
-        textField1 = new JTextField();
+        className = new JTextField();
         label2 = new JLabel();
-        scrollPane1 = new JScrollPane();
-        textArea1 = new JTextArea();
+        classDetail = new JTextField();
         videoSelectedButton = new JButton();
         deleteButton = new JButton();
+        label3 = new JLabel();
+        classCategory = new JTextField();
+        label4 = new JLabel();
+        label5 = new JLabel();
+        label6 = new JLabel();
+        Live = new JRadioButton();
+        NotLive = new JRadioButton();
+        needVIP = new JComboBox<>();
 
         //======== this ========
         setBackground(Color.white);
@@ -90,14 +109,14 @@ public class UploadModify extends JFrame {
             body.add(label1);
             label1.setBounds(35, 135, 130, label1.getPreferredSize().height);
 
-            //---- textField1 ----
-            textField1.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 16));
-            textField1.setMargin(new Insets(2, 10, 2, 6));
-            textField1.setBorder(new EmptyBorder(5, 10, 5, 0));
-            textField1.setCaretColor(Color.darkGray);
-            textField1.setBackground(new Color(245, 245, 245));
-            body.add(textField1);
-            textField1.setBounds(35, 165, 730, textField1.getPreferredSize().height);
+            //---- className ----
+            className.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+            className.setMargin(new Insets(2, 10, 2, 6));
+            className.setBorder(new EmptyBorder(5, 10, 5, 10));
+            className.setCaretColor(Color.darkGray);
+            className.setBackground(new Color(245, 245, 245));
+            body.add(className);
+            className.setBounds(35, 165, 730, 40);
 
             //---- label2 ----
             label2.setText("Lesson Description");
@@ -106,19 +125,14 @@ public class UploadModify extends JFrame {
             body.add(label2);
             label2.setBounds(35, 205, 265, 24);
 
-            //======== scrollPane1 ========
-            {
-
-                //---- textArea1 ----
-                textArea1.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 16));
-                textArea1.setMargin(new Insets(5, 10, 5, 10));
-                textArea1.setBorder(new EmptyBorder(5, 10, 5, 0));
-                textArea1.setCaretColor(Color.darkGray);
-                textArea1.setBackground(new Color(245, 245, 245));
-                scrollPane1.setViewportView(textArea1);
-            }
-            body.add(scrollPane1);
-            scrollPane1.setBounds(35, 235, 730, 235);
+            //---- classDetail ----
+            classDetail.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+            classDetail.setMargin(new Insets(5, 10, 5, 10));
+            classDetail.setBorder(new EmptyBorder(5, 10, 5, 10));
+            classDetail.setCaretColor(Color.darkGray);
+            classDetail.setBackground(new Color(245, 245, 245));
+            body.add(classDetail);
+            classDetail.setBounds(35, 235, 730, 40);
 
             //---- videoSelectedButton ----
             videoSelectedButton.setBorderPainted(false);
@@ -126,7 +140,7 @@ public class UploadModify extends JFrame {
             videoSelectedButton.setText("SELECT A FILE");
             videoSelectedButton.setForeground(Color.white);
             body.add(videoSelectedButton);
-            videoSelectedButton.setBounds(35, 485, 175, 40);
+            videoSelectedButton.setBounds(35, 520, 175, 40);
 
             //---- deleteButton ----
             deleteButton.setBorderPainted(false);
@@ -136,6 +150,64 @@ public class UploadModify extends JFrame {
             deleteButton.addActionListener(e -> deleteButtonActionPerformed(e));
             body.add(deleteButton);
             deleteButton.setBounds(130, 585, 90, 40);
+
+            //---- label3 ----
+            label3.setText("Lessom Type");
+            label3.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
+            body.add(label3);
+            label3.setBounds(35, 285, 260, 25);
+
+            //---- classCategory ----
+            classCategory.setBackground(new Color(245, 245, 245));
+            classCategory.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+            classCategory.setCaretColor(Color.darkGray);
+            classCategory.setBorder(new EmptyBorder(5, 10, 5, 10));
+            body.add(classCategory);
+            classCategory.setBounds(35, 310, 730, 40);
+
+            //---- label4 ----
+            label4.setText("VIP Level");
+            label4.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
+            body.add(label4);
+            label4.setBounds(35, 360, 390, label4.getPreferredSize().height);
+
+            //---- label5 ----
+            label5.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
+            body.add(label5);
+            label5.setBounds(40, 440, 365, label5.getPreferredSize().height);
+
+            //---- label6 ----
+            label6.setText("Live or Not");
+            label6.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
+            body.add(label6);
+            label6.setBounds(35, 435, 145, 30);
+
+            //---- Live ----
+            Live.setText("Live");
+            Live.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+            Live.setBackground(Color.white);
+            body.add(Live);
+            Live.setBounds(35, 470, 105, Live.getPreferredSize().height);
+
+            //---- NotLive ----
+            NotLive.setText("Not Live");
+            NotLive.setBackground(Color.white);
+            NotLive.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+            body.add(NotLive);
+            NotLive.setBounds(145, 470, 100, NotLive.getPreferredSize().height);
+
+            //---- needVIP ----
+            needVIP.setMaximumRowCount(4);
+            needVIP.setModel(new DefaultComboBoxModel<>(new String[] {
+                "0",
+                "1",
+                "2",
+                "3"
+            }));
+            needVIP.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
+            needVIP.setBackground(new Color(245, 245, 245));
+            body.add(needVIP);
+            needVIP.setBounds(35, 385, 730, 40);
 
             {
                 // compute preferred size
@@ -153,7 +225,7 @@ public class UploadModify extends JFrame {
             }
         }
         contentPane.add(body);
-        body.setBounds(0, 0, 800, 655);
+        body.setBounds(5, 0, 800, 655);
 
         {
             // compute preferred size
@@ -171,6 +243,11 @@ public class UploadModify extends JFrame {
         }
         pack();
         setLocationRelativeTo(getOwner());
+
+        //---- LiveGroup ----
+        var LiveGroup = new ButtonGroup();
+        LiveGroup.add(Live);
+        LiveGroup.add(NotLive);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -180,12 +257,19 @@ public class UploadModify extends JFrame {
     private JLabel title;
     private JButton finishButton;
     private JLabel label1;
-    private JTextField textField1;
+    private JTextField className;
     private JLabel label2;
-    private JScrollPane scrollPane1;
-    private JTextArea textArea1;
+    private JTextField classDetail;
     private JButton videoSelectedButton;
     private JButton deleteButton;
+    private JLabel label3;
+    private JTextField classCategory;
+    private JLabel label4;
+    private JLabel label5;
+    private JLabel label6;
+    private JRadioButton Live;
+    private JRadioButton NotLive;
+    private JComboBox<String> needVIP;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         UploadModify.run();
@@ -209,5 +293,22 @@ public class UploadModify extends JFrame {
                 }
             }
         });
+    }
+    private void init() {
+        String ID = LessonBuffer.getBuffer();
+        ClassData classData = LessonBuffer.getLessonBuffer();
+        System.out.println(classData);
+        this.className.setText(LessonBuffer.dataIsEmpty(classData.getName()));
+        this.classDetail.setText(LessonBuffer.dataIsEmpty(classData.getDetail()));
+        this.classCategory.setText(LessonBuffer.dataIsEmpty(classData.getCategory()));
+        this.needVIP.setSelectedItem(LessonBuffer.dataIsEmpty(classData.getVIPLevel()));
+        String isLive = classData.getIsLive();
+        if(isLive.equals("1")) {
+            Live.setSelected(true);
+        }
+        else {
+            NotLive.setSelected(true);
+        }
+
     }
 }

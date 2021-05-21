@@ -101,7 +101,7 @@ public class EditProfileMember extends JFrame {
             title.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 32));
             title.setBackground(Color.white);
             body.add(title);
-            title.setBounds(new Rectangle(new Point(25, 45), title.getPreferredSize()));
+            title.setBounds(25, 45, 305, title.getPreferredSize().height);
 
             //---- finishButton ----
             finishButton.setBorderPainted(false);

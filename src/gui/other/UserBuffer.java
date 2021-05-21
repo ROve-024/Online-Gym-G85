@@ -12,7 +12,7 @@ public class UserBuffer {
     public static String getBuffer(){
         String line = "";
         try{
-            File filename = new File("src/resources/buffer/userVuffer.txt");
+            File filename = new File("src/resources/buffer/userBuffer.txt");
             InputStreamReader reader = new InputStreamReader(new FileInputStream(filename));
             BufferedReader br = new BufferedReader(reader);
             line = br.readLine();
@@ -22,7 +22,7 @@ public class UserBuffer {
         return line;
     }
     public static void setBuffer(String ID){
-        File file = new File("src/resources/buffer/userVuffer.txt");
+        File file = new File("src/resources/buffer/userBuffer.txt");
         file.delete();
         try {
             file.createNewFile();

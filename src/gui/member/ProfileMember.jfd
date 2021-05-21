@@ -30,13 +30,13 @@ new FormModel {
 					"y": 45
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
-					name: "balance"
-					"text": "Balance: 1200$"
+					name: "VIPLevel"
+					"text": "VIP: "
 					"font": &Font0 new java.awt.Font( "Microsoft YaHei UI", 0, 17 )
 					"foreground": sfield java.awt.Color gray
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 35
-					"y": 93
+					"y": 95
 					"width": 160
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {

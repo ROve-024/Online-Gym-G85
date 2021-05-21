@@ -642,4 +642,7 @@ public class PlanHomeCoach extends JFrame {
             }
         });
     }
+    private void init() {
+
+    }
 }

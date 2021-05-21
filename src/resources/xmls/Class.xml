@@ -1,27 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<DATA>
-    <ROW>
-        <ClassID>1</ClassID>
-        <Name>haha</Name>
-        <IsLive>0</IsLive>
-        <Fee>10.00</Fee>
-        <CoachID>2</CoachID>
-        <VedioAddress>Rec.com</VedioAddress>
-        <Category>yoga</Category>
-        <Detail>haha</Detail>
-        <VIPLevel>2</VIPLevel>
-        <FileAddress>123.jpg</FileAddress>
-    </ROW>
-    <ROW>
-        <ClassID>2</ClassID>
-        <Name>xixi</Name>
-        <IsLive>1</IsLive>
-        <Fee>20.00</Fee>
-        <CoachID>1</CoachID>
-        <VedioAddress>Live.com</VedioAddress>
-        <Category>aerobics</Category>
-        <Detail>haha</Detail>
-        <VIPLevel>2</VIPLevel>
-        <FileAddress>123.jpg</FileAddress>
-    </ROW>
-</DATA>
+<DATA/>

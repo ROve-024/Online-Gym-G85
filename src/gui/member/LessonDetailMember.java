@@ -228,6 +228,7 @@ public class LessonDetailMember extends JFrame {
             public void run() {
                 try {
                     LessonDetailMember frame = new LessonDetailMember();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setResizable(false);
@@ -237,5 +238,8 @@ public class LessonDetailMember extends JFrame {
                 }
             }
         });
+    }
+    private void init() {
+
     }
 }

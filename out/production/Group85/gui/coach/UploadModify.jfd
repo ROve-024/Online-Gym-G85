@@ -53,16 +53,17 @@ new FormModel {
 					"width": 130
 				} )
 				add( new FormComponent( "javax.swing.JTextField" ) {
-					name: "textField1"
-					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+					name: "className"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
 					"margin": new java.awt.Insets( 2, 10, 2, 6 )
-					"border": &EmptyBorder0 new javax.swing.border.EmptyBorder( 5, 10, 5, 0 )
+					"border": &EmptyBorder0 new javax.swing.border.EmptyBorder( 5, 10, 5, 10 )
 					"caretColor": sfield java.awt.Color darkGray
 					"background": &Color0 new java.awt.Color( 245, 245, 245, 255 )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 35
 					"y": 165
 					"width": 730
+					"height": 40
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "label2"
@@ -75,21 +76,18 @@ new FormModel {
 					"x": 35
 					"y": 205
 				} )
-				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-					name: "scrollPane1"
-					add( new FormComponent( "javax.swing.JTextArea" ) {
-						name: "textArea1"
-						"font": new java.awt.Font( "Monospaced", 0, 16 )
-						"margin": new java.awt.Insets( 5, 10, 5, 10 )
-						"border": #EmptyBorder0
-						"caretColor": sfield java.awt.Color darkGray
-						"background": #Color0
-					} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "classDetail"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
+					"margin": new java.awt.Insets( 5, 10, 5, 10 )
+					"border": #EmptyBorder0
+					"caretColor": sfield java.awt.Color darkGray
+					"background": #Color0
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 35
 					"y": 235
 					"width": 730
-					"height": 235
+					"height": 40
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "videoSelectedButton"
@@ -101,7 +99,7 @@ new FormModel {
 					"width": 175
 					"height": 40
 					"x": 35
-					"y": 485
+					"y": 520
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "deleteButton"
@@ -116,15 +114,109 @@ new FormModel {
 					"x": 130
 					"y": 585
 				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "Lessom Type"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 18 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 285
+					"width": 260
+					"height": 25
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "classCategory"
+					"background": new java.awt.Color( 245, 245, 245, 255 )
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
+					"caretColor": sfield java.awt.Color darkGray
+					"border": #EmptyBorder0
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 310
+					"width": 730
+					"height": 40
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label4"
+					"text": "VIP Level"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 18 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 360
+					"width": 390
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label5"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 18 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 40
+					"y": 440
+					"width": 365
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label6"
+					"text": "Live or Not"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 18 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 435
+					"width": 145
+					"height": 30
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "Live"
+					"text": "Live"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
+					"background": sfield java.awt.Color white
+					"$buttonGroup": new FormReference( "LiveGroup" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 470
+					"width": 105
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "NotLive"
+					"text": "Not Live"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
+					"$buttonGroup": new FormReference( "LiveGroup" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 145
+					"y": 470
+					"width": 100
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "needVIP"
+					"maximumRowCount": 4
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "0"
+						addElement( "0" )
+						addElement( "1" )
+						addElement( "2" )
+						addElement( "3" )
+					}
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 18 )
+					"background": new java.awt.Color( 245, 245, 245, 255 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 385
+					"width": 730
+					"height": 40
+				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 800
 				"height": 655
-				"x": 0
+				"x": 5
 				"y": 0
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
 			"size": new java.awt.Dimension( 800, 685 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "LiveGroup"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 701 )
 		} )
 	}
 }

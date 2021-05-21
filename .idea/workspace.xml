@@ -6,6 +6,38 @@
   <component name="ChangeListManager">
     <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/coach/UploadModify.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/coach/UploadModify.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/coach/ViewCoachProfile.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/coach/ViewCoachProfile.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/member/EditProfileMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/member/EditProfileMember.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/member/OpenVip.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/member/OpenVip.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/member/ProfileMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/member/ProfileMember.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/member/ViewMemberProfile.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/member/ViewMemberProfile.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Client.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/buffer/userVuffer.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ClientFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ClientFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/UploadModify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/UploadModify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/UploadModify.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/UploadModify.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/EditProfileMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/EditProfileMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/EditProfileMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/EditProfileMember.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonVideo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/MyLessonMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/MyLessonMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/OpenVip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/OpenVip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/OpenVip.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/OpenVip.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/ProfileMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/ProfileMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/ProfileMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/ProfileMember.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/ViewMemberProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/ViewMemberProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/ViewMemberProfile.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/ViewMemberProfile.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/other/LessonBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/other/LessonBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/other/UserBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/other/UserBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/buffer/userVuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/userBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Class.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Client.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +101,7 @@
       <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\UI\Other" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Run">
+  <component name="RunManager" selected="Application.UploadModify">
     <configuration name="ALLLessonAdmin" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.admin.ALLLessonAdmin" />
       <module name="Group85" />
@@ -83,12 +115,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NavigatorAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.admin.NavigatorAdmin" />
+    <configuration name="EditProfileMember" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.member.EditProfileMember" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gui.admin.*" />
+          <option name="PATTERN" value="gui.member.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,12 +128,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NavigatorMember" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.member.NavigatorMember" />
+    <configuration name="MyLessonCoach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.coach.MyLessonCoach" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gui.member.*" />
+          <option name="PATTERN" value="gui.coach.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,19 +154,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Run" />
-      <module name="Group85" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserManageAllAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.admin.UserManageAllAdmin" />
+    <configuration name="UploadModify" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.coach.UploadModify" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gui.admin.*" />
+          <option name="PATTERN" value="gui.coach.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,21 +167,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ViewCoachProfile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.coach.ViewCoachProfile" />
+      <module name="Group85" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.coach.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.ALLLessonAdmin" />
-      <item itemvalue="Application.NavigatorAdmin" />
-      <item itemvalue="Application.NavigatorMember" />
-      <item itemvalue="Application.UserManageAllAdmin" />
+      <item itemvalue="Application.ViewCoachProfile" />
+      <item itemvalue="Application.EditProfileMember" />
       <item itemvalue="Application.OpenVip" />
-      <item itemvalue="Application.Run" />
+      <item itemvalue="Application.UploadModify" />
+      <item itemvalue="Application.MyLessonCoach" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Run" />
-        <item itemvalue="Application.NavigatorMember" />
+        <item itemvalue="Application.UploadModify" />
+        <item itemvalue="Application.MyLessonCoach" />
         <item itemvalue="Application.OpenVip" />
-        <item itemvalue="Application.NavigatorAdmin" />
-        <item itemvalue="Application.UserManageAllAdmin" />
+        <item itemvalue="Application.EditProfileMember" />
+        <item itemvalue="Application.ViewCoachProfile" />
       </list>
     </recent_temporary>
   </component>
@@ -226,6 +275,8 @@
       <workItem from="1620647957633" duration="646000" />
       <workItem from="1620648854888" duration="300000" />
       <workItem from="1620649204956" duration="36000" />
+      <workItem from="1621499770608" duration="14777000" />
+      <workItem from="1621557821254" duration="18518000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1617952547719</created>
@@ -514,7 +565,21 @@
       <option name="project" value="LOCAL" />
       <updated>1620621721620</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="update">
+      <created>1621496291209</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1621496291209</updated>
+    </task>
+    <task id="LOCAL-00043" summary="update">
+      <created>1621499807778</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1621499807778</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,5 +1,8 @@
 package gui.member;
 
+import gui.other.UserBuffer;
+import io.client.ClientData;
+
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.*;
@@ -41,6 +44,7 @@ public class ViewMemberProfile extends JFrame {
         decorationLine9 = new JPanel();
         decorationLine10 = new JPanel();
         decorationLine11 = new JPanel();
+        VIPLevel = new JLabel();
 
         //======== this ========
         setBackground(Color.white);
@@ -65,7 +69,7 @@ public class ViewMemberProfile extends JFrame {
             title.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 32));
             title.setBackground(Color.white);
             body.add(title);
-            title.setBounds(new Rectangle(new Point(25, 45), title.getPreferredSize()));
+            title.setBounds(new Rectangle(new Point(35, 35), title.getPreferredSize()));
 
             //---- uidGym ----
             uidGym.setText("UID:88888888 GYM: Muscle King ");
@@ -393,6 +397,12 @@ public class ViewMemberProfile extends JFrame {
             body.add(decorationLine11);
             decorationLine11.setBounds(390, 557, 375, 2);
 
+            //---- VIPLevel ----
+            VIPLevel.setText("VIPLevel");
+            VIPLevel.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
+            body.add(VIPLevel);
+            VIPLevel.setBounds(35, 90, 180, 25);
+
             {
                 // compute preferred size
                 Dimension preferredSize = new Dimension();
@@ -454,6 +464,7 @@ public class ViewMemberProfile extends JFrame {
     private JPanel decorationLine9;
     private JPanel decorationLine10;
     private JPanel decorationLine11;
+    private JLabel VIPLevel;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         ViewMemberProfile.run();
@@ -464,6 +475,7 @@ public class ViewMemberProfile extends JFrame {
             public void run() {
                 try {
                     ViewMemberProfile frame = new ViewMemberProfile();
+                    frame.init();
                     Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setResizable(false);
@@ -473,5 +485,15 @@ public class ViewMemberProfile extends JFrame {
                 }
             }
         });
+    }
+    private void init() {
+        String ID = UserBuffer.getBuffer();
+        ClientData clientData = UserBuffer.getClientSession();
+        this.uidGym.setText(UserBuffer.dataIsEmpty("UID: "+ ID + "    " + "GYM: "));
+        this.VIPLevel.setText(UserBuffer.dataIsEmpty("VIP Level" + clientData.getVIPlevel()));
+        this.name.setText(UserBuffer.dataIsEmpty(clientData.getName()));
+        this.email.setText(UserBuffer.dataIsEmpty(clientData.getEmail()));
+        this.phoneNumber.setText(UserBuffer.dataIsEmpty(clientData.getPhonenumber()));
+        this.gender.setText(UserBuffer.dataIsEmpty(clientData.getSex()));
     }
 }
