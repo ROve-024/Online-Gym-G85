@@ -4,7 +4,12 @@
 
 package gui.member;
 
+import controller.ClassFunction;
+import controller.CoachFunction;
 import gui.coach.ViewCoachProfile;
+import gui.other.LessonBuffer;
+import io.classes.ClassData;
+import io.coach.CoachData;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -50,7 +55,7 @@ public class LessonDetailMember extends JFrame {
         title = new JLabel();
         lessonPicture = new JLabel();
         lessonName = new JLabel();
-        lessionMsg = new JTextPane();
+        lessonMsg = new JTextPane();
         joinButton = new JButton();
         bookButton = new JButton();
         coachAvatar = new JLabel();
@@ -58,6 +63,7 @@ public class LessonDetailMember extends JFrame {
         coachMsg = new JTextPane();
         coachDetailButton = new JButton();
         homeButton2 = new JButton();
+        lessonType = new JLabel();
 
         //======== this ========
         setBackground(Color.white);
@@ -98,16 +104,16 @@ public class LessonDetailMember extends JFrame {
             body.add(lessonName);
             lessonName.setBounds(350, 165, 267, 42);
 
-            //---- lessionMsg ----
-            lessionMsg.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.");
-            lessionMsg.setBackground(Color.white);
-            lessionMsg.setBorder(null);
-            lessionMsg.setCaretColor(Color.white);
-            lessionMsg.setDisabledTextColor(Color.white);
-            lessionMsg.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-            lessionMsg.setEditable(false);
-            body.add(lessionMsg);
-            lessionMsg.setBounds(350, 215, 398, 130);
+            //---- lessonMsg ----
+            lessonMsg.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.");
+            lessonMsg.setBackground(Color.white);
+            lessonMsg.setBorder(null);
+            lessonMsg.setCaretColor(Color.white);
+            lessonMsg.setDisabledTextColor(Color.white);
+            lessonMsg.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
+            lessonMsg.setEditable(false);
+            body.add(lessonMsg);
+            lessonMsg.setBounds(350, 215, 398, 130);
 
             //---- joinButton ----
             joinButton.setText("JOIN NOW");
@@ -167,6 +173,12 @@ public class LessonDetailMember extends JFrame {
             body.add(homeButton2);
             homeButton2.setBounds(675, 45, 100, 40);
 
+            //---- lessonType ----
+            lessonType.setText("Type");
+            lessonType.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+            body.add(lessonType);
+            lessonType.setBounds(620, 175, 65, 30);
+
             {
                 // compute preferred size
                 Dimension preferredSize = new Dimension();
@@ -210,7 +222,7 @@ public class LessonDetailMember extends JFrame {
     private JLabel title;
     private JLabel lessonPicture;
     private JLabel lessonName;
-    private JTextPane lessionMsg;
+    private JTextPane lessonMsg;
     private JButton joinButton;
     private JButton bookButton;
     private JLabel coachAvatar;
@@ -218,10 +230,14 @@ public class LessonDetailMember extends JFrame {
     private JTextPane coachMsg;
     private JButton coachDetailButton;
     private JButton homeButton2;
+    private JLabel lessonType;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         LessonDetailMember.run();
     }
+
+    private String lessonID = LessonBuffer.getBuffer();
+    ClassData classData = ClassFunction.searchClassByID(this.lessonID);
 
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
@@ -240,6 +256,11 @@ public class LessonDetailMember extends JFrame {
         });
     }
     private void init() {
-
+        this.lessonName.setText(this.classData.getName());
+        this.lessonMsg.setText(this.classData.getDetail());
+        this.lessonType.setText(this.classData.getCategory());
+        CoachData coachData = CoachFunction.searchCoachByID(this.classData.getCoachID());
+        this.coachName.setText("Name: " + coachData.getName());
+        this.coachMsg.setText("Phone: " + coachData.getPhonenumber());
     }
 }

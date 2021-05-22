@@ -1,7 +1,7 @@
 <DATA>
 
 	<ROW>
-		<OrderID>1</OrderID>
+		<PlanID>1</PlanID>
 		<ClientID>1</ClientID>
 		<CoachID>2</CoachID>
 		<ClassID>2</ClassID>
@@ -10,7 +10,7 @@
 	</ROW>
 
 	<ROW>
-		<OrderID>2</OrderID>
+		<PlanID>2</PlanID>
 		<ClientID>2</ClientID>
 		<CoachID>2</CoachID>
 		<ClassID>2</ClassID>

@@ -54,7 +54,7 @@ public class LessonDetailAdmin extends JFrame {
         title = new JLabel();
         lessonPicture = new JLabel();
         lessonName = new JLabel();
-        lessionMsg = new JTextPane();
+        lessonMsg = new JTextPane();
         coachAvatar = new JLabel();
         coachName = new JLabel();
         coachMsg = new JTextPane();
@@ -62,6 +62,7 @@ public class LessonDetailAdmin extends JFrame {
         editButton = new JButton();
         deleteButton = new JButton();
         homeButton = new JButton();
+        lessonType = new JLabel();
 
         //======== this ========
         setBackground(Color.white);
@@ -103,16 +104,16 @@ public class LessonDetailAdmin extends JFrame {
             body.add(lessonName);
             lessonName.setBounds(350, 165, 267, 42);
 
-            //---- lessionMsg ----
-            lessionMsg.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.");
-            lessionMsg.setBackground(Color.white);
-            lessionMsg.setBorder(null);
-            lessionMsg.setCaretColor(Color.white);
-            lessionMsg.setDisabledTextColor(Color.white);
-            lessionMsg.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-            lessionMsg.setEditable(false);
-            body.add(lessionMsg);
-            lessionMsg.setBounds(350, 215, 398, 138);
+            //---- lessonMsg ----
+            lessonMsg.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.");
+            lessonMsg.setBackground(Color.white);
+            lessonMsg.setBorder(null);
+            lessonMsg.setCaretColor(Color.white);
+            lessonMsg.setDisabledTextColor(Color.white);
+            lessonMsg.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
+            lessonMsg.setEditable(false);
+            body.add(lessonMsg);
+            lessonMsg.setBounds(350, 215, 398, 138);
 
             //---- coachAvatar ----
             coachAvatar.setBorder(new LineBorder(Color.white));
@@ -172,6 +173,12 @@ public class LessonDetailAdmin extends JFrame {
             body.add(homeButton);
             homeButton.setBounds(675, 45, 100, 40);
 
+            //---- lessonType ----
+            lessonType.setText("lessonType");
+            lessonType.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+            body.add(lessonType);
+            lessonType.setBounds(350, 370, 125, lessonType.getPreferredSize().height);
+
             {
                 // compute preferred size
                 Dimension preferredSize = new Dimension();
@@ -215,7 +222,7 @@ public class LessonDetailAdmin extends JFrame {
     private JLabel title;
     private JLabel lessonPicture;
     private JLabel lessonName;
-    private JTextPane lessionMsg;
+    private JTextPane lessonMsg;
     private JLabel coachAvatar;
     private JLabel coachName;
     private JTextPane coachMsg;
@@ -223,6 +230,7 @@ public class LessonDetailAdmin extends JFrame {
     private JButton editButton;
     private JButton deleteButton;
     private JButton homeButton;
+    private JLabel lessonType;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         LessonDetailAdmin.run();
@@ -248,11 +256,11 @@ public class LessonDetailAdmin extends JFrame {
     }
     private void init(){
         this.lessonName.setText(this.classData.getName());
-//        this.lessonMsg.setText();
-//        this.lessonType.setText(this.classData.getProfile());
+        this.lessonMsg.setText(this.classData.getDetail());
+        this.lessonType.setText(this.classData.getCategory());
         CoachData coachData = CoachFunction.searchCoachByID(this.classData.getCoachID());
-        this.coachName.setText(coachData.getName());
-//        this.coachMsg.setText();
+        this.coachName.setText("Name: " + coachData.getName());
+        this.coachMsg.setText("Phome: " + coachData.getPhonenumber());
 
     }
 }

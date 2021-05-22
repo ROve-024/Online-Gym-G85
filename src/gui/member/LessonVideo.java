@@ -1,5 +1,9 @@
 package gui.member;
 
+import controller.ClassFunction;
+import gui.other.LessonBuffer;
+import io.classes.ClassData;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -25,6 +29,8 @@ public class LessonVideo extends JFrame {
 
     private void homeButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
+        LessonHomeMember.run();
+        this.dispose();
     }
 
     private void initComponents() {
@@ -34,8 +40,9 @@ public class LessonVideo extends JFrame {
         title = new JLabel();
         panel1 = new JPanel();
         lessonName = new JLabel();
-        lessionMsg = new JTextPane();
+        lessonMsg = new JTextPane();
         homeButton2 = new JButton();
+        lessonType = new JLabel();
 
         //======== this ========
         setBackground(Color.white);
@@ -92,16 +99,16 @@ public class LessonVideo extends JFrame {
             body.add(lessonName);
             lessonName.setBounds(30, 485, 267, 42);
 
-            //---- lessionMsg ----
-            lessionMsg.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.");
-            lessionMsg.setBackground(Color.white);
-            lessionMsg.setBorder(null);
-            lessionMsg.setCaretColor(Color.white);
-            lessionMsg.setDisabledTextColor(Color.white);
-            lessionMsg.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-            lessionMsg.setEditable(false);
-            body.add(lessionMsg);
-            lessionMsg.setBounds(30, 535, 750, 138);
+            //---- lessonMsg ----
+            lessonMsg.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.");
+            lessonMsg.setBackground(Color.white);
+            lessonMsg.setBorder(null);
+            lessonMsg.setCaretColor(Color.white);
+            lessonMsg.setDisabledTextColor(Color.white);
+            lessonMsg.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
+            lessonMsg.setEditable(false);
+            body.add(lessonMsg);
+            lessonMsg.setBounds(30, 535, 750, 138);
 
             //---- homeButton2 ----
             homeButton2.setBorderPainted(false);
@@ -110,6 +117,13 @@ public class LessonVideo extends JFrame {
             homeButton2.addActionListener(e -> homeButtonActionPerformed(e));
             body.add(homeButton2);
             homeButton2.setBounds(675, 45, 100, 40);
+
+            //---- lessonType ----
+            lessonType.setText("Lesson Type");
+            lessonType.setBackground(Color.white);
+            lessonType.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+            body.add(lessonType);
+            lessonType.setBounds(305, 500, 125, lessonType.getPreferredSize().height);
 
             {
                 // compute preferred size
@@ -154,12 +168,16 @@ public class LessonVideo extends JFrame {
     private JLabel title;
     private JPanel panel1;
     private JLabel lessonName;
-    private JTextPane lessionMsg;
+    private JTextPane lessonMsg;
     private JButton homeButton2;
+    private JLabel lessonType;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         LessonVideo.run();
     }
+
+    private String lessonID = LessonBuffer.getBuffer();
+    ClassData classData = ClassFunction.searchClassByID(this.lessonID);
 
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
@@ -178,6 +196,8 @@ public class LessonVideo extends JFrame {
         });
     }
     private void init() {
-
+        this.lessonName.setText(this.classData.getName());
+        this.lessonMsg.setText(this.classData.getDetail());
+        this.lessonType.setText(this.classData.getCategory());
     }
 }

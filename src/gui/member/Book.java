@@ -47,7 +47,7 @@ public class Book extends JFrame {
             bookIcon.setHorizontalAlignment(SwingConstants.CENTER);
             bookIcon.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 32));
             body.add(bookIcon);
-            bookIcon.setBounds(140, 0, 120, 60);
+            bookIcon.setBounds(300, 0, 120, 60);
 
             //---- finishButton ----
             finishButton.setText("FINISH");
@@ -56,19 +56,19 @@ public class Book extends JFrame {
             finishButton.setBorderPainted(false);
             finishButton.addActionListener(e -> finishButtonActionPerformed(e));
             body.add(finishButton);
-            finishButton.setBounds(50, 255, 300, 50);
+            finishButton.setBounds(205, 345, 300, 50);
 
             //---- startTime ----
             startTime.setBackground(new Color(242, 242, 242));
             startTime.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
             body.add(startTime);
-            startTime.setBounds(50, 85, 300, 50);
+            startTime.setBounds(335, 85, 300, 50);
 
             //---- endTime ----
             endTime.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 18));
             endTime.setBackground(new Color(242, 242, 242));
             body.add(endTime);
-            endTime.setBounds(50, 145, 300, 50);
+            endTime.setBounds(330, 140, 300, 50);
 
             {
                 // compute preferred size
@@ -86,7 +86,7 @@ public class Book extends JFrame {
             }
         }
         contentPane.add(body);
-        body.setBounds(0, 0, 400, 675);
+        body.setBounds(0, 0, 735, 415);
 
         {
             // compute preferred size

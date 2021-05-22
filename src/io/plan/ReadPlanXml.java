@@ -13,9 +13,9 @@ import java.util.List;
 
 public class ReadPlanXml {
 	
-	public static List readOrderXML() {
+	public static List readPlanXML() {
 		
-		File  xmlFile = new File("src/resources/XMLs/Order.xml");
+		File  xmlFile = new File("src/resources/XMLs/Plan.xml");
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();  //Step1
 		DocumentBuilder builder;
 
@@ -31,10 +31,10 @@ public class ReadPlanXml {
 			NodeList nList = doc.getElementsByTagName("ROW");   //Read the contains in the node ROW
 						
 			for(int  i = 0 ; i<nList.getLength();i++){
-				empList.add(getOrderData(nList.item(i)));
+				empList.add(getPlanData(nList.item(i)));
 			}
 			 //lets print Employee list information
-            //for (OrderData emp : empList) {
+            //for (PlanData emp : empList) {
             //    System.out.println(emp.toString());
             //}
 		}
@@ -45,14 +45,14 @@ public class ReadPlanXml {
 		return empList;
 	}
 	
-	private static PlanData getOrderData(Node node)
+	private static PlanData getPlanData(Node node)
 	{
 		//XMLReaderDOM domReader = new XMLReaderDOM();
 		PlanData emp = new PlanData();
 		if (node.getNodeType() == Node.ELEMENT_NODE)
 		{
 			Element element = (Element) node;
-			emp.setOrderID(getTagValue("OrderID", element));
+			emp.setPlanID(getTagValue("PlanID", element));
             emp.setClientID(getTagValue("ClientID", element));
             emp.setCoachID(getTagValue("CoachID", element));
             emp.setClassID(getTagValue("ClassID", element));

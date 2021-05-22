@@ -224,11 +224,11 @@ public class LessonDetailCoach extends JFrame {
     }
     private void init(){
         this.lessonName.setText(this.classData.getName());
-//        this.lessonMsg.setText();
-        this.lessonType.setText(this.classData.getDetail());
+        this.lessonMsg.setText(this.classData.getDetail());
+        this.lessonType.setText(this.classData.getCategory());
         CoachData coachData = CoachFunction.searchCoachByID(this.classData.getCoachID());
-        this.coachName.setText(coachData.getName());
-//        this.coachMsg.setText();
+        this.coachName.setText("Name: " + coachData.getName());
+        this.coachMsg.setText("Phone: " + coachData.getPhonenumber());
 
     }
 }

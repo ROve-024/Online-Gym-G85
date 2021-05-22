@@ -2,16 +2,16 @@ package io.plan;
 
 public class PlanData {
 	
-	private String OrderID = new String("Empty");
+	private String PlanID = new String("Empty");
 	private String ClientID = new String("Empty");
 	private String CoachID = new String("Empty");
 	private String ClassID = new String("Empty");
 	private String StartTime = new String("Empty");
 	private String Endtime = new String("Empty");
 	
-	public void setOrderID(String OrderID)
+	public void setPlanID(String PlanID)
 	{
-		this.OrderID = OrderID;
+		this.PlanID = PlanID;
 	}
 	
 	public void setClientID(String ClientID)
@@ -39,9 +39,9 @@ public class PlanData {
 		this.Endtime = Endtime;
 	}
 
-	public String getOrderID()
+	public String getPlanID()
 	{
-		return this.OrderID;
+		return this.PlanID;
 	}
 
 	public String getClientID()
@@ -74,7 +74,7 @@ public class PlanData {
 		
 		return
 				"----------------------------\n" +
-				"OrderID: " + OrderID + "\n" +
+				"PlanID: " + PlanID + "\n" +
 				"ClientID: " + ClientID + "\n" +
 				"CoachID: " + CoachID + "\n" +
 				"ClassID: " + ClassID + "\n" +
