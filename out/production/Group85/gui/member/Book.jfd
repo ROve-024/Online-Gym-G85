@@ -17,7 +17,7 @@ new FormModel {
 					"horizontalAlignment": 0
 					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 32 )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"x": 140
+					"x": 300
 					"y": 0
 					"width": 120
 					"height": 60
@@ -30,8 +30,8 @@ new FormModel {
 					"borderPainted": false
 					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "finishButtonActionPerformed", true ) )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"x": 50
-					"y": 255
+					"x": 205
+					"y": 345
 					"width": 300
 					"height": 50
 				} )
@@ -40,9 +40,9 @@ new FormModel {
 					"background": new java.awt.Color( 242, 242, 242, 255 )
 					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 18 )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"x": 50
+					"x": 160
 					"y": 85
-					"width": 300
+					"width": 475
 					"height": 50
 				} )
 				add( new FormComponent( "javax.swing.JPasswordField" ) {
@@ -50,19 +50,40 @@ new FormModel {
 					"font": new java.awt.Font( "Monospaced", 0, 18 )
 					"background": new java.awt.Color( 242, 242, 242, 255 )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"x": 50
-					"y": 145
-					"width": 300
+					"x": 160
+					"y": 190
+					"width": 475
 					"height": 50
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "StartTime:"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 26 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 15
+					"y": 90
+					"width": 145
+					"height": 40
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "EndTime:"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 26 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 30
+					"y": 190
+					"width": 130
+					"height": 40
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"y": 0
-				"width": 400
-				"height": 675
+				"width": 735
+				"height": 415
+				"x": 0
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 20, 0 )
-			"size": new java.awt.Dimension( 380, 675 )
+			"size": new java.awt.Dimension( 735, 675 )
 		} )
 		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
 			name: "UserType"

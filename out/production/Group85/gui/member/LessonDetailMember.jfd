@@ -52,7 +52,7 @@ new FormModel {
 					"y": 165
 				} )
 				add( new FormComponent( "javax.swing.JTextPane" ) {
-					name: "lessionMsg"
+					name: "lessonMsg"
 					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget."
 					"background": sfield java.awt.Color white
 					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
@@ -151,6 +151,16 @@ new FormModel {
 					"height": 40
 					"x": 675
 					"y": 45
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lessonType"
+					"text": "Type"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 620
+					"y": 175
+					"width": 65
+					"height": 30
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 800

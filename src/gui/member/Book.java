@@ -29,6 +29,8 @@ public class Book extends JFrame {
         finishButton = new JButton();
         startTime = new JTextField();
         endTime = new JPasswordField();
+        label1 = new JLabel();
+        label2 = new JLabel();
 
         //======== this ========
         setBackground(Color.white);
@@ -62,13 +64,25 @@ public class Book extends JFrame {
             startTime.setBackground(new Color(242, 242, 242));
             startTime.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
             body.add(startTime);
-            startTime.setBounds(335, 85, 300, 50);
+            startTime.setBounds(160, 85, 475, 50);
 
             //---- endTime ----
             endTime.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 18));
             endTime.setBackground(new Color(242, 242, 242));
             body.add(endTime);
-            endTime.setBounds(330, 140, 300, 50);
+            endTime.setBounds(160, 190, 475, 50);
+
+            //---- label1 ----
+            label1.setText("StartTime:");
+            label1.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 26));
+            body.add(label1);
+            label1.setBounds(15, 90, 145, 40);
+
+            //---- label2 ----
+            label2.setText("EndTime:");
+            label2.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 26));
+            body.add(label2);
+            label2.setBounds(30, 190, 130, 40);
 
             {
                 // compute preferred size
@@ -113,6 +127,8 @@ public class Book extends JFrame {
     private JButton finishButton;
     private JTextField startTime;
     private JPasswordField endTime;
+    private JLabel label1;
+    private JLabel label2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         Book.run();

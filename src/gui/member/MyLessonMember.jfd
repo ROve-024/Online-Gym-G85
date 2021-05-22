@@ -53,7 +53,7 @@ new FormModel {
 						"width": 195
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "lessonLevel1"
+						name: "lessonType1"
 						"text": "Lesson Level"
 						"font": &Font1 new java.awt.Font( "Microsoft YaHei UI", 0, 13 )
 						"background": sfield java.awt.SystemColor menu
@@ -109,7 +109,7 @@ new FormModel {
 						"width": 195
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "lessonLevel2"
+						name: "lessonType2"
 						"text": "Lesson Level"
 						"font": #Font1
 						"background": sfield java.awt.SystemColor menu
@@ -175,7 +175,7 @@ new FormModel {
 						"width": 195
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "lessonLevel3"
+						name: "lessonType3"
 						"text": "Lesson Level"
 						"font": #Font1
 						"background": sfield java.awt.SystemColor menu
@@ -228,10 +228,10 @@ new FormModel {
 					"y": 125
 				} )
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
-					name: "lesson4"
+					name: "lesson6"
 					"background": sfield java.awt.SystemColor menu
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "lessonName4"
+						name: "lessonName6"
 						"text": "Lesson Name"
 						"font": #Font0
 						"background": sfield java.awt.SystemColor menu
@@ -241,7 +241,7 @@ new FormModel {
 						"width": 195
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "lessonLevel4"
+						name: "lessonType6"
 						"text": "Lesson Level"
 						"font": #Font1
 						"background": sfield java.awt.SystemColor menu
@@ -253,7 +253,7 @@ new FormModel {
 						"y": 190
 					} )
 					add( new FormComponent( "javax.swing.JButton" ) {
-						name: "moreButton4"
+						name: "moreButton6"
 						"text": "MORE"
 						"background": sfield java.awt.Color white
 						"borderPainted": false
@@ -266,7 +266,7 @@ new FormModel {
 						"height": 25
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "coachName4"
+						name: "coachName6"
 						"text": "Coach Name"
 						"font": #Font1
 						"background": sfield java.awt.SystemColor menu
@@ -278,7 +278,7 @@ new FormModel {
 						"y": 225
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "lessonPicture4"
+						name: "lessonPicture6"
 						"background": sfield java.awt.SystemColor activeCaption
 						"icon": #SwingIcon0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
@@ -307,7 +307,7 @@ new FormModel {
 						"width": 195
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "lessonLevel5"
+						name: "lessonType5"
 						"text": "Lesson Level"
 						"font": #Font1
 						"background": sfield java.awt.SystemColor menu
@@ -360,10 +360,10 @@ new FormModel {
 					"y": 385
 				} )
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
-					name: "lesson6"
+					name: "lesson4"
 					"background": sfield java.awt.SystemColor menu
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "lessonPicture6"
+						name: "lessonPicture4"
 						"background": sfield java.awt.SystemColor activeCaption
 						"icon": #SwingIcon0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
@@ -373,7 +373,7 @@ new FormModel {
 						"height": 160
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "lessonName6"
+						name: "lessonName4"
 						"text": "Lesson Name"
 						"font": #Font0
 						"background": sfield java.awt.SystemColor menu
@@ -383,7 +383,7 @@ new FormModel {
 						"width": 195
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "lessonLevel6"
+						name: "lessonType4"
 						"text": "Lesson Level"
 						"font": #Font1
 						"background": sfield java.awt.SystemColor menu
@@ -395,7 +395,7 @@ new FormModel {
 						"y": 190
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "coachName6"
+						name: "coachName4"
 						"text": "Coach Name"
 						"font": #Font1
 						"background": sfield java.awt.SystemColor menu
@@ -407,7 +407,7 @@ new FormModel {
 						"y": 225
 					} )
 					add( new FormComponent( "javax.swing.JButton" ) {
-						name: "moreButton6"
+						name: "moreButton4"
 						"text": "MORE"
 						"background": sfield java.awt.Color white
 						"borderPainted": false

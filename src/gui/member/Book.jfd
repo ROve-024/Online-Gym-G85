@@ -40,9 +40,9 @@ new FormModel {
 					"background": new java.awt.Color( 242, 242, 242, 255 )
 					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 18 )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"x": 335
+					"x": 160
 					"y": 85
-					"width": 300
+					"width": 475
 					"height": 50
 				} )
 				add( new FormComponent( "javax.swing.JPasswordField" ) {
@@ -50,10 +50,30 @@ new FormModel {
 					"font": new java.awt.Font( "Monospaced", 0, 18 )
 					"background": new java.awt.Color( 242, 242, 242, 255 )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"x": 330
-					"y": 140
-					"width": 300
+					"x": 160
+					"y": 190
+					"width": 475
 					"height": 50
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "StartTime:"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 26 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 15
+					"y": 90
+					"width": 145
+					"height": 40
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "EndTime:"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 26 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 30
+					"y": 190
+					"width": 130
+					"height": 40
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"y": 0
