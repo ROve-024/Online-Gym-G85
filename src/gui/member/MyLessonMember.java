@@ -1,6 +1,9 @@
 package gui.member;
 
+import controller.CoachFunction;
 import gui.coach.MyLessonCoach;
+import gui.other.LessonBuffer;
+import gui.other.Warning;
 import io.classes.ClassData;
 import io.coach.CoachData;
 
@@ -24,40 +27,85 @@ public class MyLessonMember extends JFrame {
 
     private void moreButton1ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6).getClassID());
         LessonDetailMember.run();
         this.dispose();
     }
 
     private void homeButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
+        this.page = 0;
+        this.update();
     }
 
     private void previousButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
+        if(this.page == 0){
+            Warning.run("No previous page here.");
+        }
+        else{
+            this.page--;
+            this.update();
+        }
     }
 
     private void nextButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
+        int remainItem = this.list.size() - 6 * (this.page + 1);
+
+        if(remainItem <= 0){
+            Warning.run("No more page here.");
+        }
+        else{
+            this.page++;
+            this.update();
+        }
     }
 
     private void moreButton2ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6 + 1).getClassID());
+        LessonDetailMember.run();
+        this.dispose();
     }
 
     private void moreButton3ActionPerformed(ActionEvent e) {
         // TODO add your code here
-    }
-
-    private void moreButton6ActionPerformed(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void moreButton5ActionPerformed(ActionEvent e) {
-        // TODO add your code here
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6 + 2).getClassID());
+        LessonDetailMember.run();
+        this.dispose();
     }
 
     private void moreButton4ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6 + 3).getClassID());
+        LessonDetailMember.run();
+        this.dispose();
+    }
+
+    private void moreButton5ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6 + 4).getClassID());
+        LessonDetailMember.run();
+        this.dispose();
+    }
+
+    private void moreButton6ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        LessonBuffer.setBuffer("");
+        LessonBuffer.setBuffer(this.list.get(this.page*6 + 5).getClassID());
+        LessonDetailMember.run();
+        this.dispose();
+    }
+
+    private void searchButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+
     }
 
     private void initComponents() {
@@ -67,7 +115,7 @@ public class MyLessonMember extends JFrame {
         title = new JLabel();
         lesson1 = new JPanel();
         lessonPicture1 = new JLabel();
-        lessonName = new JLabel();
+        lessonName1 = new JLabel();
         lessonType1 = new JLabel();
         coachName1 = new JLabel();
         moreButton1 = new JButton();
@@ -143,12 +191,12 @@ public class MyLessonMember extends JFrame {
                 lesson1.add(lessonPicture1);
                 lessonPicture1.setBounds(2, 1, 236, 160);
 
-                //---- lessonName ----
-                lessonName.setText("Lesson Name");
-                lessonName.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
-                lessonName.setBackground(SystemColor.menu);
-                lesson1.add(lessonName);
-                lessonName.setBounds(5, 165, 195, lessonName.getPreferredSize().height);
+                //---- lessonName1 ----
+                lessonName1.setText("Lesson Name");
+                lessonName1.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
+                lessonName1.setBackground(SystemColor.menu);
+                lesson1.add(lessonName1);
+                lessonName1.setBounds(5, 165, 195, lessonName1.getPreferredSize().height);
 
                 //---- lessonType1 ----
                 lessonType1.setText("Lesson Level");
@@ -340,7 +388,7 @@ public class MyLessonMember extends JFrame {
                 moreButton6.setBackground(Color.white);
                 moreButton6.setBorderPainted(false);
                 moreButton6.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                moreButton6.addActionListener(e -> moreButton4ActionPerformed(e));
+                moreButton6.addActionListener(e -> moreButton6ActionPerformed(e));
                 lesson6.add(moreButton6);
                 moreButton6.setBounds(170, 220, 65, 25);
 
@@ -476,7 +524,7 @@ public class MyLessonMember extends JFrame {
                 moreButton4.setBackground(Color.white);
                 moreButton4.setBorderPainted(false);
                 moreButton4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                moreButton4.addActionListener(e -> moreButton6ActionPerformed(e));
+                moreButton4.addActionListener(e -> moreButton4ActionPerformed(e));
                 lesson4.add(moreButton4);
                 moreButton4.setBounds(170, 220, 65, 25);
 
@@ -508,6 +556,7 @@ public class MyLessonMember extends JFrame {
             //---- searchButton ----
             searchButton.setBorderPainted(false);
             searchButton.setBackground(SystemColor.controlHighlight);
+            searchButton.addActionListener(e -> searchButtonActionPerformed(e));
             body.add(searchButton);
             searchButton.setBounds(575, 45, 40, 40);
 
@@ -578,7 +627,7 @@ public class MyLessonMember extends JFrame {
     private JLabel title;
     private JPanel lesson1;
     private JLabel lessonPicture1;
-    private JLabel lessonName;
+    private JLabel lessonName1;
     private JLabel lessonType1;
     private JLabel coachName1;
     private JButton moreButton1;
@@ -680,6 +729,132 @@ public class MyLessonMember extends JFrame {
                 this.lessonType6.setOpaque(false);
                 this.coachName6.setOpaque(false);
                 this.moreButton6.setVisible(true);
+        }
+
+        if((remainPage / 6) > 0){
+            for(i = 0; i < 6; i++){
+                classData[i] = this.list.get(i + this.page*6);
+            }
+            this.lessonName1.setText(classData[0].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[0].getCoachID());
+            this.coachName1.setText(coachDataTemp.getName());
+            this.lessonType1.setText(classData[0].getIsLive());
+
+            this.lessonName2.setText(classData[1].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[1].getCoachID());
+            this.coachName2.setText(coachDataTemp.getName());
+            this.lessonType2.setText(classData[1].getIsLive());
+
+            this.lessonName3.setText(classData[2].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[2].getCoachID());
+            this.coachName3.setText(coachDataTemp.getName());
+            this.lessonType3.setText(classData[2].getIsLive());
+
+            this.lessonName4.setText(classData[3].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[3].getCoachID());
+            this.coachName4.setText(coachDataTemp.getName());
+            this.lessonType4.setText(classData[3].getIsLive());
+
+            this.lessonName5.setText(classData[4].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[4].getCoachID());
+            this.coachName5.setText(coachDataTemp.getName());
+            this.lessonType5.setText(classData[4].getIsLive());
+
+            this.lessonName6.setText(classData[5].getName());
+            coachDataTemp = CoachFunction.searchCoachByID(classData[5].getCoachID());
+            this.coachName6.setText(coachDataTemp.getName());
+            this.lessonType6.setText(classData[5].getIsLive());
+        } else {
+            this.lessonRemainNumb = this.list.size() % 6;
+            for (i = 0; i < lessonRemainNumb; i++) {
+                classData[i] = this.list.get(i + this.page * 6);
+            }
+            //Set text for the remaining lessons
+            switch (lessonRemainNumb) {
+                case 5:
+                    this.lessonName5.setText(classData[4].getName());
+                    coachDataTemp = CoachFunction.searchCoachByID(classData[4].getCoachID());
+                    this.coachName5.setText(coachDataTemp.getName());
+                    this.lessonType5.setText(classData[4].getIsLive());
+                case 4:
+                    this.lessonName4.setText(classData[3].getName());
+                    coachDataTemp = CoachFunction.searchCoachByID(classData[3].getCoachID());
+                    this.coachName4.setText(coachDataTemp.getName());
+                    this.lessonType4.setText(classData[3].getIsLive());
+                case 3:
+                    this.lessonName3.setText(classData[2].getName());
+                    coachDataTemp = CoachFunction.searchCoachByID(classData[2].getCoachID());
+                    this.coachName3.setText(coachDataTemp.getName());
+                    this.lessonType3.setText(classData[2].getIsLive());
+                case 2:
+                    this.lessonName2.setText(classData[1].getName());
+                    coachDataTemp = CoachFunction.searchCoachByID(classData[1].getCoachID());
+                    this.coachName2.setText(coachDataTemp.getName());
+                    this.lessonType2.setText(classData[1].getIsLive());
+                case 1:
+                    this.lessonName1.setText(classData[0].getName());
+                    coachDataTemp = CoachFunction.searchCoachByID(classData[0].getCoachID());
+                    this.coachName1.setText(coachDataTemp.getName());
+                    this.lessonType1.setText(classData[0].getIsLive());
+            }
+            //Set style for the remaining lessons
+            switch (lessonRemainNumb){
+                case 1:
+                    this.lessonName2.setText("");
+                    this.lessonName2.setBackground(new Color(230,230,230));
+                    this.lessonName2.setOpaque(true);
+                    this.lessonType2.setText("");
+                    this.lessonType2.setBackground(new Color(230,230,230));
+                    this.lessonType2.setOpaque(true);
+                    this.coachName2.setText("");
+                    this.coachName2.setBackground(new Color(230,230,230));
+                    this.coachName2.setOpaque(true);
+                    this.moreButton2.setVisible(false);
+                case 2:
+                    this.lessonName3.setText("");
+                    this.lessonName3.setBackground(new Color(230,230,230));
+                    this.lessonName3.setOpaque(true);
+                    this.lessonType3.setText("");
+                    this.lessonType3.setBackground(new Color(230,230,230));
+                    this.lessonType3.setOpaque(true);
+                    this.coachName3.setText("");
+                    this.coachName3.setBackground(new Color(230,230,230));
+                    this.coachName3.setOpaque(true);
+                    this.moreButton3.setVisible(false);
+                case 3:
+                    this.lessonName4.setText("");
+                    this.lessonName4.setBackground(new Color(230,230,230));
+                    this.lessonName4.setOpaque(true);
+                    this.lessonType4.setText("");
+                    this.lessonType4.setBackground(new Color(230,230,230));
+                    this.lessonType4.setOpaque(true);
+                    this.coachName4.setText("");
+                    this.coachName4.setBackground(new Color(230,230,230));
+                    this.coachName4.setOpaque(true);
+                    this.moreButton4.setVisible(false);
+                case 4:
+                    this.lessonName5.setText("");
+                    this.lessonName5.setBackground(new Color(230,230,230));
+                    this.lessonName5.setOpaque(true);
+                    this.lessonType5.setText("");
+                    this.lessonType5.setBackground(new Color(230,230,230));
+                    this.lessonType5.setOpaque(true);
+                    this.coachName5.setText("");
+                    this.coachName5.setBackground(new Color(230,230,230));
+                    this.coachName5.setOpaque(true);
+                    this.moreButton5.setVisible(false);
+                case 5:
+                    this.lessonName6.setText("");
+                    this.lessonName6.setBackground(new Color(230,230,230));
+                    this.lessonName6.setOpaque(true);
+                    this.lessonType6.setText("");
+                    this.lessonType6.setBackground(new Color(230,230,230));
+                    this.lessonType6.setOpaque(true);
+                    this.coachName6.setText("");
+                    this.coachName6.setBackground(new Color(230,230,230));
+                    this.coachName6.setOpaque(true);
+                    this.moreButton6.setVisible(false);
+            }
         }
     }
 }
