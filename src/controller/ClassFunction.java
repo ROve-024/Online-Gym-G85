@@ -151,8 +151,8 @@ public class ClassFunction {
             if(classList.get(i).getClassID().equals(classData.getClassID())){
                 classList.get(i).setName(classData.getName());
                 classList.get(i).setCoachID(classData.getCoachID());
-                classList.get(i).setFee(classData.getFee());
-                classList.get(i).setIsLive(classData.getIsLive());
+                //classList.get(i).setFee(classData.getFee());
+                //classList.get(i).setIsLive(classData.getIsLive());
                 classList.get(i).setCategory(classData.getCategory());
                 classList.get(i).setVedioAddress(classData.getVedioAddress());
                 classList.get(i).setDetail(classData.getDetail());

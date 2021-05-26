@@ -3,8 +3,6 @@
     <ROW>
         <ClassID>1</ClassID>
         <Name>hah</Name>
-        <IsLive>0</IsLive>
-        <Fee>10.00</Fee>
         <CoachID>1</CoachID>
         <VedioAddress>Rec.com</VedioAddress>
         <Category>yoga</Category>
@@ -15,8 +13,6 @@
     <ROW>
         <ClassID>2</ClassID>
         <Name>xixi</Name>
-        <IsLive>1</IsLive>
-        <Fee>20.00</Fee>
         <CoachID>1</CoachID>
         <VedioAddress>Live.com</VedioAddress>
         <Category>aerobics</Category>
@@ -25,10 +21,8 @@
         <FileAddress>123.jpg</FileAddress>
     </ROW>
     <ROW>
-        <ClassID>1</ClassID>
+        <ClassID>3</ClassID>
         <Name>hah</Name>
-        <IsLive>0</IsLive>
-        <Fee>10.00</Fee>
         <CoachID>1</CoachID>
         <VedioAddress>Rec.com</VedioAddress>
         <Category>yoga</Category>
@@ -37,10 +31,8 @@
         <FileAddress>123.jpg</FileAddress>
     </ROW>
     <ROW>
-        <ClassID>2</ClassID>
+        <ClassID>4</ClassID>
         <Name>xixi</Name>
-        <IsLive>1</IsLive>
-        <Fee>20.00</Fee>
         <CoachID>1</CoachID>
         <VedioAddress>Live.com</VedioAddress>
         <Category>aerobics</Category>
@@ -49,10 +41,8 @@
         <FileAddress>123.jpg</FileAddress>
     </ROW>
     <ROW>
-        <ClassID>1</ClassID>
+        <ClassID>5</ClassID>
         <Name>hah</Name>
-        <IsLive>0</IsLive>
-        <Fee>10.00</Fee>
         <CoachID>1</CoachID>
         <VedioAddress>Rec.com</VedioAddress>
         <Category>yoga</Category>
@@ -61,10 +51,8 @@
         <FileAddress>123.jpg</FileAddress>
     </ROW>
     <ROW>
-        <ClassID>2</ClassID>
+        <ClassID>6</ClassID>
         <Name>xixi</Name>
-        <IsLive>1</IsLive>
-        <Fee>20.00</Fee>
         <CoachID>1</CoachID>
         <VedioAddress>Live.com</VedioAddress>
         <Category>aerobics</Category>
@@ -73,10 +61,8 @@
         <FileAddress>123.jpg</FileAddress>
     </ROW>
     <ROW>
-        <ClassID>1</ClassID>
+        <ClassID>7</ClassID>
         <Name>hah</Name>
-        <IsLive>0</IsLive>
-        <Fee>10.00</Fee>
         <CoachID>1</CoachID>
         <VedioAddress>Rec.com</VedioAddress>
         <Category>yoga</Category>
@@ -85,15 +71,13 @@
         <FileAddress>123.jpg</FileAddress>
     </ROW>
     <ROW>
-        <ClassID>2</ClassID>
-        <Name>xixi</Name>
-        <IsLive>1</IsLive>
-        <Fee>20.00</Fee>
+        <ClassID>8</ClassID>
+        <Name>11</Name>
         <CoachID>1</CoachID>
-        <VedioAddress>Live.com</VedioAddress>
-        <Category>aerobics</Category>
-        <Detail>haha</Detail>
-        <VIPLevel>2</VIPLevel>
-        <FileAddress>123.jpg</FileAddress>
+        <VedioAddress>11</VedioAddress>
+        <Category>11</Category>
+        <Detail>11</Detail>
+        <VIPLevel>1</VIPLevel>
+        <FileAddress>11</FileAddress>
     </ROW>
 </DATA>

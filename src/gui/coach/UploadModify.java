@@ -28,13 +28,9 @@ public class UploadModify extends JFrame {
         classData.setName(LessonBuffer.toEmpty(this.className.getText()));
         classData.setDetail(LessonBuffer.toEmpty(this.classDetail.getText()));
         classData.setCategory(LessonBuffer.toEmpty(this.classCategory.getText()));
+        classData.setVedioAddress(LessonBuffer.toEmpty(this.classVedio.getText()));
+        classData.setFileAddress(LessonBuffer.toEmpty(this.classFile.getText()));
         classData.setVIPLevel(LessonBuffer.toEmpty(this.needVIP.getSelectedItem().toString()));
-        if(Live.isSelected()) {
-            classData.setIsLive("1");
-        }
-        else {
-            classData.setIsLive("0");
-        }
         ClassFunction.updateClassInfo(classData);
         LessonDetailCoach.run();
         this.dispose();
@@ -63,10 +59,11 @@ public class UploadModify extends JFrame {
         classCategory = new JTextField();
         label4 = new JLabel();
         label5 = new JLabel();
-        label6 = new JLabel();
-        Live = new JRadioButton();
-        NotLive = new JRadioButton();
         needVIP = new JComboBox<>();
+        label6 = new JLabel();
+        classVedio = new JTextField();
+        label7 = new JLabel();
+        classFile = new JTextField();
 
         //======== this ========
         setBackground(Color.white);
@@ -176,26 +173,6 @@ public class UploadModify extends JFrame {
             body.add(label5);
             label5.setBounds(40, 440, 365, label5.getPreferredSize().height);
 
-            //---- label6 ----
-            label6.setText("Live or Not");
-            label6.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
-            body.add(label6);
-            label6.setBounds(35, 435, 145, 30);
-
-            //---- Live ----
-            Live.setText("Live");
-            Live.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
-            Live.setBackground(Color.white);
-            body.add(Live);
-            Live.setBounds(35, 470, 105, Live.getPreferredSize().height);
-
-            //---- NotLive ----
-            NotLive.setText("Not Live");
-            NotLive.setBackground(Color.white);
-            NotLive.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
-            body.add(NotLive);
-            NotLive.setBounds(145, 470, 100, NotLive.getPreferredSize().height);
-
             //---- needVIP ----
             needVIP.setMaximumRowCount(4);
             needVIP.setModel(new DefaultComboBoxModel<>(new String[] {
@@ -208,6 +185,30 @@ public class UploadModify extends JFrame {
             needVIP.setBackground(new Color(245, 245, 245));
             body.add(needVIP);
             needVIP.setBounds(35, 385, 730, 40);
+
+            //---- label6 ----
+            label6.setText("Vedio Address");
+            label6.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
+            body.add(label6);
+            label6.setBounds(new Rectangle(new Point(35, 460), label6.getPreferredSize()));
+
+            //---- classVedio ----
+            classVedio.setBackground(new Color(245, 245, 245));
+            classVedio.setBorder(null);
+            body.add(classVedio);
+            classVedio.setBounds(180, 455, 160, 40);
+
+            //---- label7 ----
+            label7.setText("File Address");
+            label7.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
+            body.add(label7);
+            label7.setBounds(new Rectangle(new Point(365, 460), label7.getPreferredSize()));
+
+            //---- classFile ----
+            classFile.setBackground(new Color(245, 245, 245));
+            classFile.setBorder(null);
+            body.add(classFile);
+            classFile.setBounds(495, 455, 160, 40);
 
             {
                 // compute preferred size
@@ -243,11 +244,6 @@ public class UploadModify extends JFrame {
         }
         pack();
         setLocationRelativeTo(getOwner());
-
-        //---- LiveGroup ----
-        var LiveGroup = new ButtonGroup();
-        LiveGroup.add(Live);
-        LiveGroup.add(NotLive);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -266,10 +262,11 @@ public class UploadModify extends JFrame {
     private JTextField classCategory;
     private JLabel label4;
     private JLabel label5;
-    private JLabel label6;
-    private JRadioButton Live;
-    private JRadioButton NotLive;
     private JComboBox<String> needVIP;
+    private JLabel label6;
+    private JTextField classVedio;
+    private JLabel label7;
+    private JTextField classFile;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         UploadModify.run();
@@ -301,14 +298,10 @@ public class UploadModify extends JFrame {
         this.className.setText(LessonBuffer.dataIsEmpty(classData.getName()));
         this.classDetail.setText(LessonBuffer.dataIsEmpty(classData.getDetail()));
         this.classCategory.setText(LessonBuffer.dataIsEmpty(classData.getCategory()));
+        this.classVedio.setText(LessonBuffer.dataIsEmpty(classData.getVedioAddress()));
+        this.classFile.setText(LessonBuffer.dataIsEmpty(classData.getFileAddress()));
         this.needVIP.setSelectedItem(LessonBuffer.dataIsEmpty(classData.getVIPLevel()));
-        String isLive = classData.getIsLive();
-        if(isLive.equals("1")) {
-            Live.setSelected(true);
-        }
-        else {
-            NotLive.setSelected(true);
-        }
+        //String isLive = classData.getIsLive();
 
     }
 }

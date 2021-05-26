@@ -6,10 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/coach/UploadModify.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/coach/UploadModify.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/member/MyLessonMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/member/MyLessonMember.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/buffer/lessonBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/buffer/viewBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/buffer/viewBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ClassFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ClassFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/UploadModify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/UploadModify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/UploadModify.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/UploadModify.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/member/MyLessonMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/MyLessonMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/MyLessonMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/MyLessonMember.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/classes/ClassData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/classes/ClassData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/classes/ReadClassXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/classes/ReadClassXml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/classes/WriteClassXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/classes/WriteClassXml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/buffer/viewBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/viewBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Class.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,12 +140,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LessonVideo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.member.LessonVideo" />
+    <configuration name="MyLessonCoach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.coach.MyLessonCoach" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gui.member.*" />
+          <option name="PATTERN" value="gui.coach.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,12 +153,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyLessonCoach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.coach.MyLessonCoach" />
+    <configuration name="MyLessonMember" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.member.MyLessonMember" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gui.coach.*" />
+          <option name="PATTERN" value="gui.member.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -166,18 +180,18 @@
     <list>
       <item itemvalue="Application.ALLLessonAdmin" />
       <item itemvalue="Application.LessonDetailCoach" />
-      <item itemvalue="Application.LessonVideo" />
       <item itemvalue="Application.Book" />
       <item itemvalue="Application.LessonHomeMember" />
       <item itemvalue="Application.MyLessonCoach" />
+      <item itemvalue="Application.MyLessonMember" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MyLessonCoach" />
+        <item itemvalue="Application.MyLessonMember" />
         <item itemvalue="Application.Book" />
         <item itemvalue="Application.LessonHomeMember" />
         <item itemvalue="Application.LessonDetailCoach" />
-        <item itemvalue="Application.LessonVideo" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +270,7 @@
       <workItem from="1621856668473" duration="3279000" />
       <workItem from="1621949547968" duration="1220000" />
       <workItem from="1621955488017" duration="99000" />
-      <workItem from="1621989194626" duration="2840000" />
+      <workItem from="1621989194626" duration="18285000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1617952547719</created>
@@ -573,7 +587,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621695757632</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="update">
+      <created>1621992073523</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1621992073523</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

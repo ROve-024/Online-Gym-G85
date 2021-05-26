@@ -54,8 +54,8 @@ public class ReadClassXml {
 			Element element = (Element) node;
 			emp.setClassID(getTagValue("ClassID", element));
 			emp.setName(getTagValue("Name", element));
-            emp.setIsLive(getTagValue("IsLive", element));
-            emp.setFee(getTagValue("Fee", element));
+            //emp.setIsLive(getTagValue("IsLive", element));
+            //emp.setFee(getTagValue("Fee", element));
             emp.setCoachID(getTagValue("CoachID", element));
             emp.setVedioAddress(getTagValue("VedioAddress", element));
             emp.setCategory(getTagValue("Category", element));

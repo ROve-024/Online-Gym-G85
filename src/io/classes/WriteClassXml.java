@@ -39,13 +39,13 @@ public class WriteClassXml {
                     Name.setTextContent(classData.getName());
                     classes.appendChild(Name);
 
-                    Element IsLive = document.createElement("IsLive");
-                    IsLive.setTextContent(classData.getIsLive());
-                    classes.appendChild(IsLive);
+                    //Element IsLive = document.createElement("IsLive");
+                    //IsLive.setTextContent(classData.getIsLive());
+                    //classes.appendChild(IsLive);
 
-                    Element Fee = document.createElement("Fee");
-                    Fee.setTextContent(classData.getFee());
-                    classes.appendChild(Fee);
+                    //Element Fee = document.createElement("Fee");
+                    //Fee.setTextContent(classData.getFee());
+                    //classes.appendChild(Fee);
 
                     Element CoachID = document.createElement("CoachID");
                     CoachID.setTextContent(classData.getCoachID());

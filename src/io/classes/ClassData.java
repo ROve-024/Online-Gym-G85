@@ -4,8 +4,8 @@ public class ClassData {
 	
 	private String ClassID = new String("Empty");
 	private String Name = new String("Empty");
-	private String IsLive = new String("Empty");
-	private String Fee = new String("Empty");
+	//private String IsLive = new String("Empty");
+	//private String Fee = new String("Empty");
 	private String CoachID = new String("Empty");
 	private String VedioAddress = new String("Empty");
 	private String Category = new String("Empty");
@@ -23,15 +23,15 @@ public class ClassData {
 		this.Name = Name;
 	}
 	
-	public void setIsLive(String IsLive)
-	{
-		this.IsLive = IsLive;
-	}
+	//public void setIsLive(String IsLive)
+	//{
+		//this.IsLive = IsLive;
+	//}
 	
-	public void setFee(String Fee)
-	{
-		this.Fee = Fee;
-	}
+	//public void setFee(String Fee)
+	//{
+		//this.Fee = Fee;
+	//}
 	
 	public void setCoachID(String CoachID)
 	{
@@ -72,7 +72,7 @@ public class ClassData {
 	public String getName(){
 		return this.Name;
 	}
-
+/*
 	public String getIsLive()
 	{
 		return this.IsLive;
@@ -82,7 +82,7 @@ public class ClassData {
 	{
 		return this.Fee;
 	}
-
+*/
 	public String getCoachID()
 	{
 		return this.CoachID;
@@ -120,8 +120,8 @@ public class ClassData {
 				"----------------------------\n" +
 				"ClassID: " + ClassID + "\n" +
 				"Name:" + Name + "\n" +
-				"IsLive: " + IsLive + "\n" +
-				"Fee: " + Fee + "\n" +
+				//"IsLive: " + IsLive + "\n" +
+				//"Fee: " + Fee + "\n" +
 				"CoachID: " + CoachID + "\n" +
 				"VedioAddress: " + VedioAddress + "\n" +
 				"Category: " + Category + "\n" +
