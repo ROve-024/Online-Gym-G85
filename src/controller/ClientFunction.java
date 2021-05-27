@@ -91,20 +91,23 @@ public class ClientFunction {
 
         return newID;
     }
-    public static ClientData searchClientByName(String Name){
+    ////////////////////////
+    public static List searchClientByName(String Name){
         List<ClientData> clientList = getWholeClient();
-        ClientData clientData = null;
 
         for(int i=0;i<clientList.size();i++) {
             ClientData temp;
             temp = clientList.get(i);
-            if(temp.getName().equals(Name)){
-                clientData = temp;
-                break;
+            if(!temp.getName().equals(Name)){
+                clientList.remove(i);
+            }
+            else
+            {
+                i++;
             }
         }
 
-        return clientData;
+        return clientList;
     }
     public static ClientData searchClientByID(String ID){
         List<ClientData> clientList = getWholeClient();

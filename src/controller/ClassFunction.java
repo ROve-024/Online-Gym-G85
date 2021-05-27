@@ -132,8 +132,6 @@ public class ClassFunction {
             }
         }
 
-
-
         for(int i=0;i<classList.size();i++){
             ClassData temp = classList.get(i);
             if(!temp.getCoachID().equals(coachID)){

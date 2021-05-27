@@ -6,17 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/UploadModify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/UploadModify.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/UploadModify.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/UploadModify.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/MyLessonMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/MyLessonMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/MyLessonMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/MyLessonMember.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Class.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ClassFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ClassFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ClientFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ClientFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Plan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Plan.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +74,7 @@
       <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\UI\Other" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MyLessonMember">
+  <component name="RunManager" selected="Application.NavigatorCoach">
     <configuration name="ALLLessonAdmin" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.admin.ALLLessonAdmin" />
       <module name="Group85" />
@@ -94,38 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Book" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.member.Book" />
-      <module name="Group85" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="gui.member.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CreateClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.coach.CreateClass" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="gui.coach.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LessonHomeMember" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.member.LessonHomeMember" />
-      <module name="Group85" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="gui.member.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -159,6 +127,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NavigatorCoach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.coach.NavigatorCoach" />
+      <module name="Group85" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.coach.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlanHomeCoach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.coach.PlanHomeCoach" />
+      <module name="Group85" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.coach.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -174,19 +168,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.ALLLessonAdmin" />
-      <item itemvalue="Application.Book" />
-      <item itemvalue="Application.LessonHomeMember" />
       <item itemvalue="Application.MyLessonCoach" />
       <item itemvalue="Application.MyLessonMember" />
       <item itemvalue="Application.CreateClass" />
+      <item itemvalue="Application.PlanHomeCoach" />
+      <item itemvalue="Application.NavigatorCoach" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NavigatorCoach" />
+        <item itemvalue="Application.PlanHomeCoach" />
         <item itemvalue="Application.MyLessonMember" />
         <item itemvalue="Application.CreateClass" />
         <item itemvalue="Application.MyLessonCoach" />
-        <item itemvalue="Application.Book" />
-        <item itemvalue="Application.LessonHomeMember" />
       </list>
     </recent_temporary>
   </component>
@@ -266,7 +260,7 @@
       <workItem from="1621949547968" duration="1220000" />
       <workItem from="1621955488017" duration="99000" />
       <workItem from="1621989194626" duration="18330000" />
-      <workItem from="1622075316787" duration="18220000" />
+      <workItem from="1622075316787" duration="32432000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1617952547719</created>
@@ -597,7 +591,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622052490966</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="update">
+      <created>1622106213569</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1622106213570</updated>
+    </task>
+    <task id="LOCAL-00049" summary="update">
+      <created>1622106275697</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1622106275698</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

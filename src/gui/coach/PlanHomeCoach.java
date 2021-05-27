@@ -1,9 +1,19 @@
 package gui.coach;
 
+import controller.ClassFunction;
+import controller.ClientFunction;
+import controller.CoachFunction;
+import controller.PlanFunction;
 import gui.member.ViewMemberProfile;
+import gui.other.UserBuffer;
+import io.classes.ClassData;
+import io.client.ClientData;
+import io.coach.CoachData;
+import io.plan.PlanData;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.List;
 import javax.swing.*;
 import javax.swing.border.*;
 /*
@@ -27,6 +37,7 @@ public class PlanHomeCoach extends JFrame {
 
     private void previousButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
+
     }
 
     private void nextButtonActionPerformed(ActionEvent e) {
@@ -84,38 +95,38 @@ public class PlanHomeCoach extends JFrame {
         title = new JLabel();
         planDetail = new JPanel();
         lessonName1 = new JLabel();
-        coachName1 = new JLabel();
+        memberName1 = new JLabel();
         startTime1 = new JLabel();
         deleteButton1 = new JButton();
         profileButton1 = new JButton();
         decorationLine2 = new JPanel();
         planDetail2 = new JPanel();
         lessonName2 = new JLabel();
-        coachName2 = new JLabel();
+        memberName2 = new JLabel();
         startTime2 = new JLabel();
         deleteButton2 = new JButton();
         profileButton2 = new JButton();
         planDetail3 = new JPanel();
         lessonName3 = new JLabel();
-        coachName3 = new JLabel();
+        memberName3 = new JLabel();
         startTime3 = new JLabel();
         deleteButton3 = new JButton();
         profileButton3 = new JButton();
         planDetail4 = new JPanel();
         lessonName4 = new JLabel();
-        coachName4 = new JLabel();
+        memberName4 = new JLabel();
         startTime4 = new JLabel();
         deleteButton4 = new JButton();
         profileButton4 = new JButton();
         planDetail5 = new JPanel();
         lessonName5 = new JLabel();
-        coachName5 = new JLabel();
+        memberName5 = new JLabel();
         startTime5 = new JLabel();
         deleteButton5 = new JButton();
         profileButton5 = new JButton();
         planDetail6 = new JPanel();
         lessonName6 = new JLabel();
-        coachName6 = new JLabel();
+        memberName6 = new JLabel();
         startTime6 = new JLabel();
         deleteButton6 = new JButton();
         profileButton6 = new JButton();
@@ -158,18 +169,18 @@ public class PlanHomeCoach extends JFrame {
                 planDetail.add(lessonName1);
                 lessonName1.setBounds(10, 0, 190, 42);
 
-                //---- coachName1 ----
-                coachName1.setText("Member Name");
-                coachName1.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-                coachName1.setForeground(Color.gray);
-                planDetail.add(coachName1);
-                coachName1.setBounds(10, 40, 150, coachName1.getPreferredSize().height);
+                //---- memberName1 ----
+                memberName1.setText("Member Name");
+                memberName1.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+                memberName1.setForeground(Color.gray);
+                planDetail.add(memberName1);
+                memberName1.setBounds(10, 40, 150, memberName1.getPreferredSize().height);
 
                 //---- startTime1 ----
                 startTime1.setText("2021-04-8 12:00");
                 startTime1.setForeground(Color.gray);
                 planDetail.add(startTime1);
-                startTime1.setBounds(new Rectangle(new Point(170, 45), startTime1.getPreferredSize()));
+                startTime1.setBounds(170, 45, 140, startTime1.getPreferredSize().height);
 
                 //---- deleteButton1 ----
                 deleteButton1.setText("DELETE");
@@ -241,18 +252,18 @@ public class PlanHomeCoach extends JFrame {
                 planDetail2.add(lessonName2);
                 lessonName2.setBounds(10, 0, 190, 42);
 
-                //---- coachName2 ----
-                coachName2.setText("Member Name");
-                coachName2.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-                coachName2.setForeground(Color.gray);
-                planDetail2.add(coachName2);
-                coachName2.setBounds(10, 40, 150, coachName2.getPreferredSize().height);
+                //---- memberName2 ----
+                memberName2.setText("Member Name");
+                memberName2.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+                memberName2.setForeground(Color.gray);
+                planDetail2.add(memberName2);
+                memberName2.setBounds(10, 40, 150, memberName2.getPreferredSize().height);
 
                 //---- startTime2 ----
                 startTime2.setText("2021-04-8 12:00");
                 startTime2.setForeground(Color.gray);
                 planDetail2.add(startTime2);
-                startTime2.setBounds(new Rectangle(new Point(170, 45), startTime2.getPreferredSize()));
+                startTime2.setBounds(170, 45, 140, startTime2.getPreferredSize().height);
 
                 //---- deleteButton2 ----
                 deleteButton2.setText("DELETE");
@@ -300,18 +311,18 @@ public class PlanHomeCoach extends JFrame {
                 planDetail3.add(lessonName3);
                 lessonName3.setBounds(10, 0, 190, 42);
 
-                //---- coachName3 ----
-                coachName3.setText("Member Name");
-                coachName3.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-                coachName3.setForeground(Color.gray);
-                planDetail3.add(coachName3);
-                coachName3.setBounds(10, 40, 150, coachName3.getPreferredSize().height);
+                //---- memberName3 ----
+                memberName3.setText("Member Name");
+                memberName3.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+                memberName3.setForeground(Color.gray);
+                planDetail3.add(memberName3);
+                memberName3.setBounds(10, 40, 150, memberName3.getPreferredSize().height);
 
                 //---- startTime3 ----
                 startTime3.setText("2021-04-8 12:00");
                 startTime3.setForeground(Color.gray);
                 planDetail3.add(startTime3);
-                startTime3.setBounds(new Rectangle(new Point(170, 45), startTime3.getPreferredSize()));
+                startTime3.setBounds(170, 45, 140, startTime3.getPreferredSize().height);
 
                 //---- deleteButton3 ----
                 deleteButton3.setText("DELETE");
@@ -359,18 +370,18 @@ public class PlanHomeCoach extends JFrame {
                 planDetail4.add(lessonName4);
                 lessonName4.setBounds(10, 0, 190, 42);
 
-                //---- coachName4 ----
-                coachName4.setText("Member Name");
-                coachName4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-                coachName4.setForeground(Color.gray);
-                planDetail4.add(coachName4);
-                coachName4.setBounds(10, 40, 150, coachName4.getPreferredSize().height);
+                //---- memberName4 ----
+                memberName4.setText("Member Name");
+                memberName4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+                memberName4.setForeground(Color.gray);
+                planDetail4.add(memberName4);
+                memberName4.setBounds(10, 40, 150, memberName4.getPreferredSize().height);
 
                 //---- startTime4 ----
                 startTime4.setText("2021-04-8 12:00");
                 startTime4.setForeground(Color.gray);
                 planDetail4.add(startTime4);
-                startTime4.setBounds(new Rectangle(new Point(170, 45), startTime4.getPreferredSize()));
+                startTime4.setBounds(170, 45, 140, startTime4.getPreferredSize().height);
 
                 //---- deleteButton4 ----
                 deleteButton4.setText("DELETE");
@@ -418,18 +429,18 @@ public class PlanHomeCoach extends JFrame {
                 planDetail5.add(lessonName5);
                 lessonName5.setBounds(10, 0, 190, 42);
 
-                //---- coachName5 ----
-                coachName5.setText("Member Name");
-                coachName5.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-                coachName5.setForeground(Color.gray);
-                planDetail5.add(coachName5);
-                coachName5.setBounds(10, 40, 150, coachName5.getPreferredSize().height);
+                //---- memberName5 ----
+                memberName5.setText("Member Name");
+                memberName5.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+                memberName5.setForeground(Color.gray);
+                planDetail5.add(memberName5);
+                memberName5.setBounds(10, 40, 150, memberName5.getPreferredSize().height);
 
                 //---- startTime5 ----
                 startTime5.setText("2021-04-8 12:00");
                 startTime5.setForeground(Color.gray);
                 planDetail5.add(startTime5);
-                startTime5.setBounds(new Rectangle(new Point(170, 45), startTime5.getPreferredSize()));
+                startTime5.setBounds(170, 45, 140, startTime5.getPreferredSize().height);
 
                 //---- deleteButton5 ----
                 deleteButton5.setText("DELETE");
@@ -477,18 +488,18 @@ public class PlanHomeCoach extends JFrame {
                 planDetail6.add(lessonName6);
                 lessonName6.setBounds(10, 0, 190, 42);
 
-                //---- coachName6 ----
-                coachName6.setText("Member Name");
-                coachName6.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-                coachName6.setForeground(Color.gray);
-                planDetail6.add(coachName6);
-                coachName6.setBounds(10, 40, 150, coachName6.getPreferredSize().height);
+                //---- memberName6 ----
+                memberName6.setText("Member Name");
+                memberName6.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+                memberName6.setForeground(Color.gray);
+                planDetail6.add(memberName6);
+                memberName6.setBounds(10, 40, 150, memberName6.getPreferredSize().height);
 
                 //---- startTime6 ----
                 startTime6.setText("2021-04-8 12:00");
                 startTime6.setForeground(Color.gray);
                 planDetail6.add(startTime6);
-                startTime6.setBounds(new Rectangle(new Point(170, 45), startTime6.getPreferredSize()));
+                startTime6.setBounds(170, 45, 140, startTime6.getPreferredSize().height);
 
                 //---- deleteButton6 ----
                 deleteButton6.setText("DELETE");
@@ -584,38 +595,38 @@ public class PlanHomeCoach extends JFrame {
     private JLabel title;
     private JPanel planDetail;
     private JLabel lessonName1;
-    private JLabel coachName1;
+    private JLabel memberName1;
     private JLabel startTime1;
     private JButton deleteButton1;
     private JButton profileButton1;
     private JPanel decorationLine2;
     private JPanel planDetail2;
     private JLabel lessonName2;
-    private JLabel coachName2;
+    private JLabel memberName2;
     private JLabel startTime2;
     private JButton deleteButton2;
     private JButton profileButton2;
     private JPanel planDetail3;
     private JLabel lessonName3;
-    private JLabel coachName3;
+    private JLabel memberName3;
     private JLabel startTime3;
     private JButton deleteButton3;
     private JButton profileButton3;
     private JPanel planDetail4;
     private JLabel lessonName4;
-    private JLabel coachName4;
+    private JLabel memberName4;
     private JLabel startTime4;
     private JButton deleteButton4;
     private JButton profileButton4;
     private JPanel planDetail5;
     private JLabel lessonName5;
-    private JLabel coachName5;
+    private JLabel memberName5;
     private JLabel startTime5;
     private JButton deleteButton5;
     private JButton profileButton5;
     private JPanel planDetail6;
     private JLabel lessonName6;
-    private JLabel coachName6;
+    private JLabel memberName6;
     private JLabel startTime6;
     private JButton deleteButton6;
     private JButton profileButton6;
@@ -626,6 +637,9 @@ public class PlanHomeCoach extends JFrame {
         PlanHomeCoach.run();
     }
 
+    private int page = 0;
+    private List<PlanData> list;
+    private int planRemainNumb = 0;
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -643,6 +657,132 @@ public class PlanHomeCoach extends JFrame {
         });
     }
     private void init() {
+        CoachData coachData = UserBuffer.getCoachSession();
+        list = PlanFunction.searchPlanByCoachID(coachData.getID());
+        System.out.println(list);
+        this.update();
+    }
 
+    private void update() {
+        int i = 0;
+        int remainPage = this.list.size() - this.page * 6;
+        ClientData clientDataTemp;
+        ClassData classDataTemp;
+        PlanData[] planData = new PlanData[6];
+        ClassData tempClassData = new ClassData();
+
+        switch (this.planRemainNumb){
+            case 0:
+                break;
+            case 1:
+                this.lessonName2.setOpaque(false);
+                this.startTime2.setOpaque(false);
+                this.memberName2.setOpaque(false);
+                this.profileButton2.setVisible(true);
+                this.deleteButton2.setVisible(true);
+            case 2:
+                this.lessonName3.setOpaque(false);
+                this.startTime3.setOpaque(false);
+                this.memberName3.setOpaque(false);
+                this.profileButton3.setVisible(true);
+                this.deleteButton3.setVisible(true);
+            case 3:
+                this.lessonName4.setOpaque(false);
+                this.startTime4.setOpaque(false);
+                this.memberName4.setOpaque(false);
+                this.profileButton4.setVisible(true);
+                this.deleteButton4.setVisible(true);
+            case 4:
+                this.lessonName5.setOpaque(false);
+                this.startTime5.setOpaque(false);
+                this.memberName5.setOpaque(false);
+                this.profileButton5.setVisible(true);
+                this.deleteButton5.setVisible(true);
+            case 5:
+                this.lessonName6.setOpaque(false);
+                this.startTime6.setOpaque(false);
+                this.memberName6.setOpaque(false);
+                this.profileButton6.setVisible(true);
+                this.deleteButton6.setVisible(true);
+        }
+
+        if((remainPage / 6) > 0){
+            for(i = 0; i < 6; i++){
+                planData[i] = this.list.get(i + this.page*6);
+            }
+            clientDataTemp = ClientFunction.searchClientByID(planData[0].getClientID());
+            classDataTemp = ClassFunction.searchClassByID(planData[0].getClassID());
+            this.lessonName1.setText(classDataTemp.getName());
+            this.memberName1.setText(clientDataTemp.getName());
+            this.startTime1.setText(planData[0].getStartTime());
+
+            clientDataTemp = ClientFunction.searchClientByID(planData[1].getClientID());
+            classDataTemp = ClassFunction.searchClassByID(planData[1].getClassID());
+            this.lessonName2.setText(classDataTemp.getName());
+            this.memberName2.setText(clientDataTemp.getName());
+            this.startTime2.setText(planData[1].getStartTime());
+
+            clientDataTemp = ClientFunction.searchClientByID(planData[2].getClientID());
+            classDataTemp = ClassFunction.searchClassByID(planData[2].getClassID());
+            this.lessonName3.setText(classDataTemp.getName());
+            this.memberName3.setText(clientDataTemp.getName());
+            this.startTime3.setText(planData[2].getStartTime());
+
+            clientDataTemp = ClientFunction.searchClientByID(planData[3].getClientID());
+            classDataTemp = ClassFunction.searchClassByID(planData[3].getClassID());
+            this.lessonName4.setText(classDataTemp.getName());
+            this.memberName4.setText(clientDataTemp.getName());
+            this.startTime4.setText(planData[3].getStartTime());
+
+            clientDataTemp = ClientFunction.searchClientByID(planData[4].getClientID());
+            classDataTemp = ClassFunction.searchClassByID(planData[4].getClassID());
+            this.lessonName5.setText(classDataTemp.getName());
+            this.memberName5.setText(clientDataTemp.getName());
+            this.startTime5.setText(planData[4].getStartTime());
+
+            clientDataTemp = ClientFunction.searchClientByID(planData[5].getClientID());
+            classDataTemp = ClassFunction.searchClassByID(planData[5].getClassID());
+            this.lessonName6.setText(classDataTemp.getName());
+            this.memberName6.setText(clientDataTemp.getName());
+            this.startTime6.setText(planData[0].getStartTime());
+        } else {
+            this.planRemainNumb = this.list.size() % 6;
+            for (i = 0; i < planRemainNumb; i++) {
+                planData[i] = this.list.get(i + this.page * 6);
+            }
+            //Set text for the remaining lessons
+            switch (planRemainNumb) {
+                case 5:
+                    clientDataTemp = ClientFunction.searchClientByID(planData[4].getClientID());
+                    classDataTemp = ClassFunction.searchClassByID(planData[4].getClassID());
+                    this.lessonName5.setText(classDataTemp.getName());
+                    this.memberName5.setText(clientDataTemp.getName());
+                    this.startTime5.setText(planData[4].getStartTime());
+                case 4:
+                    clientDataTemp = ClientFunction.searchClientByID(planData[3].getClientID());
+                    classDataTemp = ClassFunction.searchClassByID(planData[3].getClassID());
+                    this.lessonName4.setText(classDataTemp.getName());
+                    this.memberName4.setText(clientDataTemp.getName());
+                    this.startTime4.setText(planData[3].getStartTime());
+                case 3:
+                    clientDataTemp = ClientFunction.searchClientByID(planData[2].getClientID());
+                    classDataTemp = ClassFunction.searchClassByID(planData[2].getClassID());
+                    this.lessonName3.setText(classDataTemp.getName());
+                    this.memberName3.setText(clientDataTemp.getName());
+                    this.startTime3.setText(planData[2].getStartTime());
+                case 2:
+                    clientDataTemp = ClientFunction.searchClientByID(planData[1].getClientID());
+                    classDataTemp = ClassFunction.searchClassByID(planData[1].getClassID());
+                    this.lessonName2.setText(classDataTemp.getName());
+                    this.memberName2.setText(clientDataTemp.getName());
+                    this.startTime2.setText(planData[1].getStartTime());
+                case 1:
+                    clientDataTemp = ClientFunction.searchClientByID(planData[0].getClientID());
+                    classDataTemp = ClassFunction.searchClassByID(planData[0].getClassID());
+                    this.lessonName1.setText(classDataTemp.getName());
+                    this.memberName1.setText(clientDataTemp.getName());
+                    this.startTime1.setText(planData[0].getStartTime());
+            }
+        }
     }
 }

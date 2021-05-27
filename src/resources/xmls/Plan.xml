@@ -3,8 +3,8 @@
 	<ROW>
 		<PlanID>1</PlanID>
 		<ClientID>1</ClientID>
-		<CoachID>2</CoachID>
-		<ClassID>2</ClassID>
+		<CoachID>1</CoachID>
+		<ClassID>1</ClassID>
 		<StartTime>2020-12-3 10:00:00</StartTime>
 		<Endtime>2020-12-3 12:00:00</Endtime>
 	</ROW>

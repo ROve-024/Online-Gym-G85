@@ -44,7 +44,7 @@ new FormModel {
 						"y": 0
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "coachName1"
+						name: "memberName1"
 						"text": "Member Name"
 						"font": &Font1 new java.awt.Font( "Microsoft YaHei UI", 0, 18 )
 						"foreground": sfield java.awt.Color gray
@@ -60,6 +60,7 @@ new FormModel {
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 170
 						"y": 45
+						"width": 140
 					} )
 					add( new FormComponent( "javax.swing.JButton" ) {
 						name: "deleteButton1"
@@ -116,7 +117,7 @@ new FormModel {
 						"y": 0
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "coachName2"
+						name: "memberName2"
 						"text": "Member Name"
 						"font": #Font1
 						"foreground": sfield java.awt.Color gray
@@ -132,6 +133,7 @@ new FormModel {
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 170
 						"y": 45
+						"width": 140
 					} )
 					add( new FormComponent( "javax.swing.JButton" ) {
 						name: "deleteButton2"
@@ -178,7 +180,7 @@ new FormModel {
 						"y": 0
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "coachName3"
+						name: "memberName3"
 						"text": "Member Name"
 						"font": #Font1
 						"foreground": sfield java.awt.Color gray
@@ -194,6 +196,7 @@ new FormModel {
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 170
 						"y": 45
+						"width": 140
 					} )
 					add( new FormComponent( "javax.swing.JButton" ) {
 						name: "deleteButton3"
@@ -240,7 +243,7 @@ new FormModel {
 						"y": 0
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "coachName4"
+						name: "memberName4"
 						"text": "Member Name"
 						"font": #Font1
 						"foreground": sfield java.awt.Color gray
@@ -256,6 +259,7 @@ new FormModel {
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 170
 						"y": 45
+						"width": 140
 					} )
 					add( new FormComponent( "javax.swing.JButton" ) {
 						name: "deleteButton4"
@@ -302,7 +306,7 @@ new FormModel {
 						"y": 0
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "coachName5"
+						name: "memberName5"
 						"text": "Member Name"
 						"font": #Font1
 						"foreground": sfield java.awt.Color gray
@@ -318,6 +322,7 @@ new FormModel {
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 170
 						"y": 45
+						"width": 140
 					} )
 					add( new FormComponent( "javax.swing.JButton" ) {
 						name: "deleteButton5"
@@ -364,7 +369,7 @@ new FormModel {
 						"y": 0
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "coachName6"
+						name: "memberName6"
 						"text": "Member Name"
 						"font": #Font1
 						"foreground": sfield java.awt.Color gray
@@ -380,6 +385,7 @@ new FormModel {
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 170
 						"y": 45
+						"width": 140
 					} )
 					add( new FormComponent( "javax.swing.JButton" ) {
 						name: "deleteButton6"
