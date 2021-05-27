@@ -734,32 +734,32 @@ public class MyLessonCoach extends JFrame {
             this.lessonName1.setText(classData[0].getName());
             coachDataTemp = CoachFunction.searchCoachByID(classData[0].getCoachID());
             this.coachName1.setText(coachDataTemp.getName());
-            //this.lessonType1.setText(classData[0].getIsLive());
+            this.lessonType1.setText(classData[0].getCategory());
 
             this.lessonName2.setText(classData[1].getName());
             coachDataTemp = CoachFunction.searchCoachByID(classData[1].getCoachID());
             this.coachName2.setText(coachDataTemp.getName());
-            //this.lessonType2.setText(classData[1].getIsLive());
+            this.lessonType2.setText(classData[1].getCategory());
 
             this.lessonName3.setText(classData[2].getName());
             coachDataTemp = CoachFunction.searchCoachByID(classData[2].getCoachID());
             this.coachName3.setText(coachDataTemp.getName());
-            //this.lessonType3.setText(classData[2].getIsLive());
+            this.lessonType3.setText(classData[2].getCategory());
 
             this.lessonName4.setText(classData[3].getName());
             coachDataTemp = CoachFunction.searchCoachByID(classData[3].getCoachID());
             this.coachName4.setText(coachDataTemp.getName());
-            //this.lessonType4.setText(classData[3].getIsLive());
+            this.lessonType4.setText(classData[3].getCategory());
 
             this.lessonName5.setText(classData[4].getName());
             coachDataTemp = CoachFunction.searchCoachByID(classData[4].getCoachID());
             this.coachName5.setText(coachDataTemp.getName());
-            //this.lessonType5.setText(classData[4].getIsLive());
+            this.lessonType5.setText(classData[4].getCategory());
 
             this.lessonName6.setText(classData[5].getName());
             coachDataTemp = CoachFunction.searchCoachByID(classData[5].getCoachID());
             this.coachName6.setText(coachDataTemp.getName());
-            //this.lessonType6.setText(classData[5].getIsLive());
+            this.lessonType6.setText(classData[5].getCategory());
         }else{
             this.lessonRemainNumb = this.list.size() % 6;
             for(i = 0; i < lessonRemainNumb; i++){
@@ -771,27 +771,27 @@ public class MyLessonCoach extends JFrame {
                     this.lessonName5.setText(classData[4].getName());
                     coachDataTemp = CoachFunction.searchCoachByID(classData[4].getCoachID());
                     this.coachName5.setText(coachDataTemp.getName());
-                    //this.lessonType5.setText(classData[4].getIsLive());
+                    this.lessonType5.setText(classData[4].getCategory());
                 case 4:
                     this.lessonName4.setText(classData[3].getName());
                     coachDataTemp = CoachFunction.searchCoachByID(classData[3].getCoachID());
                     this.coachName4.setText(coachDataTemp.getName());
-                    //this.lessonType4.setText(classData[3].getIsLive());
+                    this.lessonType4.setText(classData[3].getCategory());
                 case 3:
                     this.lessonName3.setText(classData[2].getName());
                     coachDataTemp = CoachFunction.searchCoachByID(classData[2].getCoachID());
                     this.coachName3.setText(coachDataTemp.getName());
-                    //this.lessonType3.setText(classData[2].getIsLive());
+                    this.lessonType3.setText(classData[2].getCategory());
                 case 2:
                     this.lessonName2.setText(classData[1].getName());
                     coachDataTemp = CoachFunction.searchCoachByID(classData[1].getCoachID());
                     this.coachName2.setText(coachDataTemp.getName());
-                    //this.lessonType2.setText(classData[1].getIsLive());
+                    this.lessonType2.setText(classData[1].getCategory());
                 case 1:
                     this.lessonName1.setText(classData[0].getName());
                     coachDataTemp = CoachFunction.searchCoachByID(classData[0].getCoachID());
                     this.coachName1.setText(coachDataTemp.getName());
-                    //this.lessonType1.setText(classData[0].getIsLive());
+                    this.lessonType1.setText(classData[0].getCategory());
             }
             //Set style for the remaining lessons
             switch (lessonRemainNumb){

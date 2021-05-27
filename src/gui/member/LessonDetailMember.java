@@ -177,7 +177,7 @@ public class LessonDetailMember extends JFrame {
             lessonType.setText("Type");
             lessonType.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
             body.add(lessonType);
-            lessonType.setBounds(620, 175, 65, 30);
+            lessonType.setBounds(620, 175, 120, 30);
 
             {
                 // compute preferred size

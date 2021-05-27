@@ -491,47 +491,37 @@ new FormModel {
 					"y": 385
 				} )
 				add( new FormComponent( "javax.swing.JRadioButton" ) {
-					name: "typeRadioButton"
-					"text": "Type"
-					"background": &Color2 new java.awt.Color( 255, 255, 255, 255 )
-					"$buttonGroup": new FormReference( "searchType" )
-					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					name: "titleRadioButton"
+					"text": "Title"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
 					"foreground": sfield java.awt.Color gray
-					"font": &Font4 new java.awt.Font( "Arial", 0, 12 )
+					"$buttonGroup": new FormReference( "searchType" )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"width": 65
-					"height": 21
-					"x": 390
+					"x": 265
 					"y": 85
+					"width": 60
 				} )
 				add( new FormComponent( "javax.swing.JRadioButton" ) {
 					name: "coachRadioButton"
 					"text": "Coach"
-					"background": #Color2
-					"$buttonGroup": new FormReference( "searchType" )
-					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"background": new java.awt.Color( 255, 255, 255, 255 )
 					"foreground": sfield java.awt.Color gray
-					"font": #Font4
+					"$buttonGroup": new FormReference( "searchType" )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"width": 65
-					"height": 21
 					"x": 325
 					"y": 85
+					"width": 65
 				} )
 				add( new FormComponent( "javax.swing.JRadioButton" ) {
-					name: "titleRadioButton"
-					"text": "Title"
-					"background": #Color2
-					"$buttonGroup": new FormReference( "searchType" )
-					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					name: "typeRadioButton"
+					"text": "Type"
 					"foreground": sfield java.awt.Color gray
-					"font": #Font4
-					"selected": true
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"$buttonGroup": new FormReference( "searchType" )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"width": 55
-					"height": 21
-					"x": 270
+					"x": 390
 					"y": 85
+					"width": 75
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 800
@@ -541,6 +531,11 @@ new FormModel {
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
 			"size": new java.awt.Dimension( 800, 685 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "searchType"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 701 )
 		} )
 	}
 }

@@ -1,10 +1,13 @@
 package gui.member;
 
+import controller.ClassFunction;
 import controller.CoachFunction;
 import gui.coach.MyLessonCoach;
 import gui.other.LessonBuffer;
+import gui.other.UserBuffer;
 import gui.other.Warning;
 import io.classes.ClassData;
+import io.client.ClientData;
 import io.coach.CoachData;
 
 import java.awt.*;
@@ -35,6 +38,7 @@ public class MyLessonMember extends JFrame {
 
     private void homeButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
+        this.list = saveList;
         this.page = 0;
         this.update();
     }
@@ -105,7 +109,23 @@ public class MyLessonMember extends JFrame {
 
     private void searchButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-
+        if(this.search.getText().trim().isEmpty()) {
+            Warning.run("Please do not input empty content!");
+        }
+        else {
+            list.clear();
+            if(this.titleRadioButton.isSelected()){
+                list.add(ClassFunction.searchClassByName(this.search.getText()));
+            }else if(this.coachRadioButton.isSelected()){
+                list = ClassFunction.searchClassByCoachName(this.search.getText());
+                //System.out.println(list);
+            }else if(this.typeRadioButton.isSelected()){
+                list = ClassFunction.searchClassByProfile(this.search.getText());
+                //System.out.println(list);
+            }
+            //System.out.println("4");
+            this.update();
+        }
     }
 
     private void initComponents() {
@@ -154,6 +174,9 @@ public class MyLessonMember extends JFrame {
         homeButton = new JButton();
         previousButton = new JButton();
         nextButton = new JButton();
+        titleRadioButton = new JRadioButton();
+        coachRadioButton = new JRadioButton();
+        typeRadioButton = new JRadioButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -556,6 +579,7 @@ public class MyLessonMember extends JFrame {
             //---- searchButton ----
             searchButton.setBorderPainted(false);
             searchButton.setBackground(SystemColor.controlHighlight);
+            searchButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/search.png")));
             searchButton.addActionListener(e -> searchButtonActionPerformed(e));
             body.add(searchButton);
             searchButton.setBounds(575, 45, 40, 40);
@@ -583,6 +607,27 @@ public class MyLessonMember extends JFrame {
             nextButton.addActionListener(e -> nextButtonActionPerformed(e));
             body.add(nextButton);
             nextButton.setBounds(735, 45, 40, 40);
+
+            //---- titleRadioButton ----
+            titleRadioButton.setText("Title");
+            titleRadioButton.setBackground(Color.white);
+            titleRadioButton.setForeground(Color.gray);
+            body.add(titleRadioButton);
+            titleRadioButton.setBounds(275, 85, 60, titleRadioButton.getPreferredSize().height);
+
+            //---- coachRadioButton ----
+            coachRadioButton.setText("Coach");
+            coachRadioButton.setBackground(Color.white);
+            coachRadioButton.setForeground(Color.gray);
+            body.add(coachRadioButton);
+            coachRadioButton.setBounds(335, 85, 75, coachRadioButton.getPreferredSize().height);
+
+            //---- typeRadioButton ----
+            typeRadioButton.setText("Type");
+            typeRadioButton.setForeground(Color.gray);
+            typeRadioButton.setBackground(Color.white);
+            body.add(typeRadioButton);
+            typeRadioButton.setBounds(410, 85, 70, typeRadioButton.getPreferredSize().height);
 
             {
                 // compute preferred size
@@ -618,6 +663,12 @@ public class MyLessonMember extends JFrame {
         }
         pack();
         setLocationRelativeTo(getOwner());
+
+        //---- sreachType ----
+        var sreachType = new ButtonGroup();
+        sreachType.add(titleRadioButton);
+        sreachType.add(coachRadioButton);
+        sreachType.add(typeRadioButton);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -666,13 +717,17 @@ public class MyLessonMember extends JFrame {
     private JButton homeButton;
     private JButton previousButton;
     private JButton nextButton;
+    private JRadioButton titleRadioButton;
+    private JRadioButton coachRadioButton;
+    private JRadioButton typeRadioButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
-        MyLessonCoach.run();
+        MyLessonMember.run();
     }
 
     private int page = 0;
     private List<ClassData> list;
+    private List<ClassData> saveList;
     private int lessonRemainNumb = 0;
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
@@ -691,8 +746,9 @@ public class MyLessonMember extends JFrame {
         });
     }
     private void init() {
-
-
+        this.search.setText("");
+        list = ClassFunction.getWholeClass();
+        saveList = ClassFunction.getWholeClass();
         this.update();
     }
     private void update() {
@@ -738,32 +794,32 @@ public class MyLessonMember extends JFrame {
             this.lessonName1.setText(classData[0].getName());
             coachDataTemp = CoachFunction.searchCoachByID(classData[0].getCoachID());
             this.coachName1.setText(coachDataTemp.getName());
-            //this.lessonType1.setText(classData[0].getIsLive());
+            this.lessonType1.setText(classData[0].getCategory());
 
             this.lessonName2.setText(classData[1].getName());
             coachDataTemp = CoachFunction.searchCoachByID(classData[1].getCoachID());
             this.coachName2.setText(coachDataTemp.getName());
-            //this.lessonType2.setText(classData[1].getIsLive());
+            this.lessonType2.setText(classData[1].getCategory());
 
             this.lessonName3.setText(classData[2].getName());
             coachDataTemp = CoachFunction.searchCoachByID(classData[2].getCoachID());
             this.coachName3.setText(coachDataTemp.getName());
-            //this.lessonType3.setText(classData[2].getIsLive());
+            this.lessonType3.setText(classData[2].getCategory());
 
             this.lessonName4.setText(classData[3].getName());
             coachDataTemp = CoachFunction.searchCoachByID(classData[3].getCoachID());
             this.coachName4.setText(coachDataTemp.getName());
-            //this.lessonType4.setText(classData[3].getIsLive());
+            this.lessonType4.setText(classData[3].getCategory());
 
             this.lessonName5.setText(classData[4].getName());
             coachDataTemp = CoachFunction.searchCoachByID(classData[4].getCoachID());
             this.coachName5.setText(coachDataTemp.getName());
-            //this.lessonType5.setText(classData[4].getIsLive());
+            this.lessonType5.setText(classData[4].getCategory());
 
             this.lessonName6.setText(classData[5].getName());
             coachDataTemp = CoachFunction.searchCoachByID(classData[5].getCoachID());
             this.coachName6.setText(coachDataTemp.getName());
-            //this.lessonType6.setText(classData[5].getIsLive());
+            this.lessonType6.setText(classData[5].getCategory());
         } else {
             this.lessonRemainNumb = this.list.size() % 6;
             for (i = 0; i < lessonRemainNumb; i++) {
@@ -775,27 +831,27 @@ public class MyLessonMember extends JFrame {
                     this.lessonName5.setText(classData[4].getName());
                     coachDataTemp = CoachFunction.searchCoachByID(classData[4].getCoachID());
                     this.coachName5.setText(coachDataTemp.getName());
-                    //this.lessonType5.setText(classData[4].getIsLive());
+                    this.lessonType5.setText(classData[4].getCategory());
                 case 4:
                     this.lessonName4.setText(classData[3].getName());
                     coachDataTemp = CoachFunction.searchCoachByID(classData[3].getCoachID());
                     this.coachName4.setText(coachDataTemp.getName());
-                    //this.lessonType4.setText(classData[3].getIsLive());
+                    this.lessonType4.setText(classData[3].getCategory());
                 case 3:
                     this.lessonName3.setText(classData[2].getName());
                     coachDataTemp = CoachFunction.searchCoachByID(classData[2].getCoachID());
                     this.coachName3.setText(coachDataTemp.getName());
-                    //this.lessonType3.setText(classData[2].getIsLive());
+                    this.lessonType3.setText(classData[2].getCategory());
                 case 2:
                     this.lessonName2.setText(classData[1].getName());
                     coachDataTemp = CoachFunction.searchCoachByID(classData[1].getCoachID());
                     this.coachName2.setText(coachDataTemp.getName());
-                    //this.lessonType2.setText(classData[1].getIsLive());
+                    this.lessonType2.setText(classData[1].getCategory());
                 case 1:
                     this.lessonName1.setText(classData[0].getName());
                     coachDataTemp = CoachFunction.searchCoachByID(classData[0].getCoachID());
                     this.coachName1.setText(coachDataTemp.getName());
-                    //this.lessonType1.setText(classData[0].getIsLive());
+                    this.lessonType1.setText(classData[0].getCategory());
             }
             //Set style for the remaining lessons
             switch (lessonRemainNumb){

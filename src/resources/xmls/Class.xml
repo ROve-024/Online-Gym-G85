@@ -53,7 +53,7 @@
     <ROW>
         <ClassID>6</ClassID>
         <Name>xixi</Name>
-        <CoachID>1</CoachID>
+        <CoachID>2</CoachID>
         <VedioAddress>Live.com</VedioAddress>
         <Category>aerobics</Category>
         <Detail>haha</Detail>
@@ -73,7 +73,7 @@
     <ROW>
         <ClassID>8</ClassID>
         <Name>11</Name>
-        <CoachID>1</CoachID>
+        <CoachID>2</CoachID>
         <VedioAddress>11</VedioAddress>
         <Category>11</Category>
         <Detail>11</Detail>
@@ -93,7 +93,7 @@
     <ROW>
         <ClassID>10</ClassID>
         <Name>33</Name>
-        <CoachID>1</CoachID>
+        <CoachID>2</CoachID>
         <VedioAddress>33</VedioAddress>
         <Category>33</Category>
         <Detail>33</Detail>

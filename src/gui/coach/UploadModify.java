@@ -190,25 +190,27 @@ public class UploadModify extends JFrame {
             label6.setText("Vedio Address");
             label6.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
             body.add(label6);
-            label6.setBounds(new Rectangle(new Point(35, 460), label6.getPreferredSize()));
+            label6.setBounds(35, 460, 190, label6.getPreferredSize().height);
 
             //---- classVedio ----
             classVedio.setBackground(new Color(245, 245, 245));
-            classVedio.setBorder(null);
+            classVedio.setBorder(new EmptyBorder(5, 10, 5, 10));
+            classVedio.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
             body.add(classVedio);
-            classVedio.setBounds(180, 455, 160, 40);
+            classVedio.setBounds(180, 455, 210, 40);
 
             //---- label7 ----
             label7.setText("File Address");
             label7.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
             body.add(label7);
-            label7.setBounds(new Rectangle(new Point(365, 460), label7.getPreferredSize()));
+            label7.setBounds(425, 460, 190, label7.getPreferredSize().height);
 
             //---- classFile ----
             classFile.setBackground(new Color(245, 245, 245));
-            classFile.setBorder(null);
+            classFile.setBorder(new EmptyBorder(5, 10, 5, 10));
+            classFile.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
             body.add(classFile);
-            classFile.setBounds(495, 455, 160, 40);
+            classFile.setBounds(550, 455, 210, 40);
 
             {
                 // compute preferred size

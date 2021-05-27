@@ -440,6 +440,7 @@ new FormModel {
 					name: "searchButton"
 					"borderPainted": false
 					"background": sfield java.awt.SystemColor controlHighlight
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/icons/search.png" )
 					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchButtonActionPerformed", true ) )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 575
@@ -483,6 +484,39 @@ new FormModel {
 					"x": 735
 					"y": 45
 				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "titleRadioButton"
+					"text": "Title"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"foreground": sfield java.awt.Color gray
+					"$buttonGroup": new FormReference( "sreachType" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 275
+					"y": 85
+					"width": 60
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "coachRadioButton"
+					"text": "Coach"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"foreground": sfield java.awt.Color gray
+					"$buttonGroup": new FormReference( "sreachType" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 335
+					"y": 85
+					"width": 75
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "typeRadioButton"
+					"text": "Type"
+					"foreground": sfield java.awt.Color gray
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"$buttonGroup": new FormReference( "sreachType" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 410
+					"y": 85
+					"width": 70
+				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 800
 				"height": 655
@@ -492,6 +526,11 @@ new FormModel {
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
 			"size": new java.awt.Dimension( 800, 685 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "sreachType"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 701 )
 		} )
 	}
 }
