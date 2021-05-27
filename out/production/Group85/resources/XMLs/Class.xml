@@ -53,7 +53,7 @@
     <ROW>
         <ClassID>6</ClassID>
         <Name>xixi</Name>
-        <CoachID>1</CoachID>
+        <CoachID>2</CoachID>
         <VedioAddress>Live.com</VedioAddress>
         <Category>aerobics</Category>
         <Detail>haha</Detail>
@@ -73,11 +73,31 @@
     <ROW>
         <ClassID>8</ClassID>
         <Name>11</Name>
-        <CoachID>1</CoachID>
+        <CoachID>2</CoachID>
         <VedioAddress>11</VedioAddress>
         <Category>11</Category>
         <Detail>11</Detail>
         <VIPLevel>1</VIPLevel>
         <FileAddress>11</FileAddress>
+    </ROW>
+    <ROW>
+        <ClassID>9</ClassID>
+        <Name>22</Name>
+        <CoachID>1</CoachID>
+        <VedioAddress>22</VedioAddress>
+        <Category>22</Category>
+        <Detail>22</Detail>
+        <VIPLevel>0</VIPLevel>
+        <FileAddress>22</FileAddress>
+    </ROW>
+    <ROW>
+        <ClassID>10</ClassID>
+        <Name>33</Name>
+        <CoachID>2</CoachID>
+        <VedioAddress>33</VedioAddress>
+        <Category>33</Category>
+        <Detail>33</Detail>
+        <VIPLevel>2</VIPLevel>
+        <FileAddress>33</FileAddress>
     </ROW>
 </DATA>

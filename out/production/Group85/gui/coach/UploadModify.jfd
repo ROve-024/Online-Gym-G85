@@ -178,15 +178,17 @@ new FormModel {
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 35
 					"y": 460
+					"width": 190
 				} )
 				add( new FormComponent( "javax.swing.JTextField" ) {
 					name: "classVedio"
 					"background": new java.awt.Color( 245, 245, 245, 255 )
-					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"border": new javax.swing.border.EmptyBorder( 5, 10, 5, 10 )
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 180
 					"y": 455
-					"width": 160
+					"width": 210
 					"height": 40
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
@@ -194,17 +196,19 @@ new FormModel {
 					"text": "File Address"
 					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 18 )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"x": 365
+					"x": 425
 					"y": 460
+					"width": 190
 				} )
 				add( new FormComponent( "javax.swing.JTextField" ) {
 					name: "classFile"
 					"background": new java.awt.Color( 245, 245, 245, 255 )
-					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"border": new javax.swing.border.EmptyBorder( 5, 10, 5, 10 )
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"x": 495
+					"x": 550
 					"y": 455
-					"width": 160
+					"width": 210
 					"height": 40
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
