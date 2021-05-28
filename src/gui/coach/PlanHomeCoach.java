@@ -5,7 +5,10 @@ import controller.ClientFunction;
 import controller.CoachFunction;
 import controller.PlanFunction;
 import gui.member.ViewMemberProfile;
+import gui.other.LessonBuffer;
+import gui.other.PlanBuffer;
 import gui.other.UserBuffer;
+import gui.other.Warning;
 import io.classes.ClassData;
 import io.client.ClientData;
 import io.coach.CoachData;
@@ -37,55 +40,116 @@ public class PlanHomeCoach extends JFrame {
 
     private void previousButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-
+        if(this.page == 0){
+            Warning.run("No previous page here.");
+        }
+        else{
+            this.page--;
+            this.update();
+        }
     }
 
     private void nextButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
+        int remainItem = this.list.size() - 6 * (this.page + 1);
+
+        if(remainItem <= 0){
+            Warning.run("No more page here.");
+        }
+        else{
+            this.page++;
+            this.update();
+        }
     }
 
     private void profileButton2ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        ViewMemberProfile.run();
+        this.dispose();
     }
 
     private void profileButton3ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        ViewMemberProfile.run();
+        this.dispose();
     }
 
     private void profileButton4ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        ViewMemberProfile.run();
+        this.dispose();
     }
 
     private void profileButton5ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        ViewMemberProfile.run();
+        this.dispose();
     }
 
     private void profileButton6ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        ViewMemberProfile.run();
+        this.dispose();
     }
 
     private void deleteButton1ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        PlanBuffer.setBuffer("");
+        PlanBuffer.setBuffer(this.list.get(this.page*6).getPlanID());
+        String planID = PlanBuffer.getBuffer();
+        PlanFunction.DeletePlanByPlanID(planID);
+        this.dispose();
+        PlanHomeCoach.run();
     }
 
     private void deleteButton2ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        PlanBuffer.setBuffer("");
+        PlanBuffer.setBuffer(this.list.get(this.page*6 + 1).getPlanID());
+        String planID = PlanBuffer.getBuffer();
+        PlanFunction.DeletePlanByPlanID(planID);
+        this.dispose();
+        PlanHomeCoach.run();
     }
 
     private void deleteButton3ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        PlanBuffer.setBuffer("");
+        PlanBuffer.setBuffer(this.list.get(this.page*6 + 2).getPlanID());
+        String planID = PlanBuffer.getBuffer();
+        PlanFunction.DeletePlanByPlanID(planID);
+        this.dispose();
+        PlanHomeCoach.run();
     }
 
     private void deleteButton4ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        PlanBuffer.setBuffer("");
+        PlanBuffer.setBuffer(this.list.get(this.page*6 + 3).getPlanID());
+        String planID = PlanBuffer.getBuffer();
+        PlanFunction.DeletePlanByPlanID(planID);
+        this.dispose();
+        PlanHomeCoach.run();
     }
 
     private void deleteButton5ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        PlanBuffer.setBuffer("");
+        PlanBuffer.setBuffer(this.list.get(this.page*6 + 4).getPlanID());
+        String planID = PlanBuffer.getBuffer();
+        PlanFunction.DeletePlanByPlanID(planID);
+        this.dispose();
+        PlanHomeCoach.run();
     }
 
     private void deleteButton6ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        PlanBuffer.setBuffer("");
+        PlanBuffer.setBuffer(this.list.get(this.page*6 + 5).getPlanID());
+        String planID = PlanBuffer.getBuffer();
+        PlanFunction.DeletePlanByPlanID(planID);
+        this.dispose();
+        PlanHomeCoach.run();
     }
 
     private void initComponents() {
@@ -99,6 +163,7 @@ public class PlanHomeCoach extends JFrame {
         startTime1 = new JLabel();
         deleteButton1 = new JButton();
         profileButton1 = new JButton();
+        endTime1 = new JLabel();
         decorationLine2 = new JPanel();
         planDetail2 = new JPanel();
         lessonName2 = new JLabel();
@@ -106,30 +171,35 @@ public class PlanHomeCoach extends JFrame {
         startTime2 = new JLabel();
         deleteButton2 = new JButton();
         profileButton2 = new JButton();
+        endTime2 = new JLabel();
         planDetail3 = new JPanel();
         lessonName3 = new JLabel();
         memberName3 = new JLabel();
         startTime3 = new JLabel();
         deleteButton3 = new JButton();
         profileButton3 = new JButton();
+        endTime3 = new JLabel();
         planDetail4 = new JPanel();
         lessonName4 = new JLabel();
         memberName4 = new JLabel();
         startTime4 = new JLabel();
         deleteButton4 = new JButton();
         profileButton4 = new JButton();
+        endTime4 = new JLabel();
         planDetail5 = new JPanel();
         lessonName5 = new JLabel();
         memberName5 = new JLabel();
         startTime5 = new JLabel();
         deleteButton5 = new JButton();
         profileButton5 = new JButton();
+        endTime5 = new JLabel();
         planDetail6 = new JPanel();
         lessonName6 = new JLabel();
         memberName6 = new JLabel();
         startTime6 = new JLabel();
         deleteButton6 = new JButton();
         profileButton6 = new JButton();
+        endTime6 = new JLabel();
         previousButton = new JButton();
         nextButton = new JButton();
 
@@ -198,6 +268,12 @@ public class PlanHomeCoach extends JFrame {
                 profileButton1.addActionListener(e -> profileButton1ActionPerformed(e));
                 planDetail.add(profileButton1);
                 profileButton1.setBounds(495, 15, 100, 40);
+
+                //---- endTime1 ----
+                endTime1.setText("endTime1");
+                endTime1.setForeground(Color.gray);
+                planDetail.add(endTime1);
+                endTime1.setBounds(315, 45, 145, endTime1.getPreferredSize().height);
 
                 {
                     // compute preferred size
@@ -282,6 +358,12 @@ public class PlanHomeCoach extends JFrame {
                 planDetail2.add(profileButton2);
                 profileButton2.setBounds(495, 15, 100, 40);
 
+                //---- endTime2 ----
+                endTime2.setText("endTime2");
+                endTime2.setForeground(Color.gray);
+                planDetail2.add(endTime2);
+                endTime2.setBounds(315, 45, 145, endTime2.getPreferredSize().height);
+
                 {
                     // compute preferred size
                     Dimension preferredSize = new Dimension();
@@ -340,6 +422,12 @@ public class PlanHomeCoach extends JFrame {
                 profileButton3.addActionListener(e -> profileButton3ActionPerformed(e));
                 planDetail3.add(profileButton3);
                 profileButton3.setBounds(495, 15, 100, 40);
+
+                //---- endTime3 ----
+                endTime3.setText("endTime3");
+                endTime3.setForeground(Color.gray);
+                planDetail3.add(endTime3);
+                endTime3.setBounds(315, 45, 135, endTime3.getPreferredSize().height);
 
                 {
                     // compute preferred size
@@ -400,6 +488,12 @@ public class PlanHomeCoach extends JFrame {
                 planDetail4.add(profileButton4);
                 profileButton4.setBounds(495, 15, 100, 40);
 
+                //---- endTime4 ----
+                endTime4.setText("endTime4");
+                endTime4.setForeground(Color.gray);
+                planDetail4.add(endTime4);
+                endTime4.setBounds(315, 45, 150, endTime4.getPreferredSize().height);
+
                 {
                     // compute preferred size
                     Dimension preferredSize = new Dimension();
@@ -459,6 +553,12 @@ public class PlanHomeCoach extends JFrame {
                 planDetail5.add(profileButton5);
                 profileButton5.setBounds(495, 15, 100, 40);
 
+                //---- endTime5 ----
+                endTime5.setText("endTime5");
+                endTime5.setForeground(Color.gray);
+                planDetail5.add(endTime5);
+                endTime5.setBounds(315, 45, 155, endTime5.getPreferredSize().height);
+
                 {
                     // compute preferred size
                     Dimension preferredSize = new Dimension();
@@ -517,6 +617,12 @@ public class PlanHomeCoach extends JFrame {
                 profileButton6.addActionListener(e -> profileButton6ActionPerformed(e));
                 planDetail6.add(profileButton6);
                 profileButton6.setBounds(495, 15, 100, 40);
+
+                //---- endTime6 ----
+                endTime6.setText("endTime6");
+                endTime6.setForeground(Color.gray);
+                planDetail6.add(endTime6);
+                endTime6.setBounds(315, 45, 150, endTime6.getPreferredSize().height);
 
                 {
                     // compute preferred size
@@ -599,6 +705,7 @@ public class PlanHomeCoach extends JFrame {
     private JLabel startTime1;
     private JButton deleteButton1;
     private JButton profileButton1;
+    private JLabel endTime1;
     private JPanel decorationLine2;
     private JPanel planDetail2;
     private JLabel lessonName2;
@@ -606,30 +713,35 @@ public class PlanHomeCoach extends JFrame {
     private JLabel startTime2;
     private JButton deleteButton2;
     private JButton profileButton2;
+    private JLabel endTime2;
     private JPanel planDetail3;
     private JLabel lessonName3;
     private JLabel memberName3;
     private JLabel startTime3;
     private JButton deleteButton3;
     private JButton profileButton3;
+    private JLabel endTime3;
     private JPanel planDetail4;
     private JLabel lessonName4;
     private JLabel memberName4;
     private JLabel startTime4;
     private JButton deleteButton4;
     private JButton profileButton4;
+    private JLabel endTime4;
     private JPanel planDetail5;
     private JLabel lessonName5;
     private JLabel memberName5;
     private JLabel startTime5;
     private JButton deleteButton5;
     private JButton profileButton5;
+    private JLabel endTime5;
     private JPanel planDetail6;
     private JLabel lessonName6;
     private JLabel memberName6;
     private JLabel startTime6;
     private JButton deleteButton6;
     private JButton profileButton6;
+    private JLabel endTime6;
     private JButton previousButton;
     private JButton nextButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
@@ -659,7 +771,6 @@ public class PlanHomeCoach extends JFrame {
     private void init() {
         CoachData coachData = UserBuffer.getCoachSession();
         list = PlanFunction.searchPlanByCoachID(coachData.getID());
-        System.out.println(list);
         this.update();
     }
 
@@ -677,30 +788,35 @@ public class PlanHomeCoach extends JFrame {
             case 1:
                 this.lessonName2.setOpaque(false);
                 this.startTime2.setOpaque(false);
+                this.endTime2.setOpaque(false);
                 this.memberName2.setOpaque(false);
                 this.profileButton2.setVisible(true);
                 this.deleteButton2.setVisible(true);
             case 2:
                 this.lessonName3.setOpaque(false);
                 this.startTime3.setOpaque(false);
+                this.endTime3.setOpaque(false);
                 this.memberName3.setOpaque(false);
                 this.profileButton3.setVisible(true);
                 this.deleteButton3.setVisible(true);
             case 3:
                 this.lessonName4.setOpaque(false);
                 this.startTime4.setOpaque(false);
+                this.endTime4.setOpaque(false);
                 this.memberName4.setOpaque(false);
                 this.profileButton4.setVisible(true);
                 this.deleteButton4.setVisible(true);
             case 4:
                 this.lessonName5.setOpaque(false);
                 this.startTime5.setOpaque(false);
+                this.endTime5.setOpaque(false);
                 this.memberName5.setOpaque(false);
                 this.profileButton5.setVisible(true);
                 this.deleteButton5.setVisible(true);
             case 5:
                 this.lessonName6.setOpaque(false);
                 this.startTime6.setOpaque(false);
+                this.endTime6.setOpaque(false);
                 this.memberName6.setOpaque(false);
                 this.profileButton6.setVisible(true);
                 this.deleteButton6.setVisible(true);
@@ -715,36 +831,42 @@ public class PlanHomeCoach extends JFrame {
             this.lessonName1.setText(classDataTemp.getName());
             this.memberName1.setText(clientDataTemp.getName());
             this.startTime1.setText(planData[0].getStartTime());
+            this.endTime1.setText(planData[0].getEndtime());
 
             clientDataTemp = ClientFunction.searchClientByID(planData[1].getClientID());
             classDataTemp = ClassFunction.searchClassByID(planData[1].getClassID());
             this.lessonName2.setText(classDataTemp.getName());
             this.memberName2.setText(clientDataTemp.getName());
             this.startTime2.setText(planData[1].getStartTime());
+            this.endTime2.setText(planData[1].getEndtime());
 
             clientDataTemp = ClientFunction.searchClientByID(planData[2].getClientID());
             classDataTemp = ClassFunction.searchClassByID(planData[2].getClassID());
             this.lessonName3.setText(classDataTemp.getName());
             this.memberName3.setText(clientDataTemp.getName());
             this.startTime3.setText(planData[2].getStartTime());
+            this.endTime3.setText(planData[2].getEndtime());
 
             clientDataTemp = ClientFunction.searchClientByID(planData[3].getClientID());
             classDataTemp = ClassFunction.searchClassByID(planData[3].getClassID());
             this.lessonName4.setText(classDataTemp.getName());
             this.memberName4.setText(clientDataTemp.getName());
             this.startTime4.setText(planData[3].getStartTime());
+            this.endTime4.setText(planData[3].getEndtime());
 
             clientDataTemp = ClientFunction.searchClientByID(planData[4].getClientID());
             classDataTemp = ClassFunction.searchClassByID(planData[4].getClassID());
             this.lessonName5.setText(classDataTemp.getName());
             this.memberName5.setText(clientDataTemp.getName());
             this.startTime5.setText(planData[4].getStartTime());
+            this.endTime5.setText(planData[4].getEndtime());
 
             clientDataTemp = ClientFunction.searchClientByID(planData[5].getClientID());
             classDataTemp = ClassFunction.searchClassByID(planData[5].getClassID());
             this.lessonName6.setText(classDataTemp.getName());
             this.memberName6.setText(clientDataTemp.getName());
-            this.startTime6.setText(planData[0].getStartTime());
+            this.startTime6.setText(planData[5].getStartTime());
+            this.endTime6.setText(planData[5].getEndtime());
         } else {
             this.planRemainNumb = this.list.size() % 6;
             for (i = 0; i < planRemainNumb; i++) {
@@ -758,30 +880,35 @@ public class PlanHomeCoach extends JFrame {
                     this.lessonName5.setText(classDataTemp.getName());
                     this.memberName5.setText(clientDataTemp.getName());
                     this.startTime5.setText(planData[4].getStartTime());
+                    this.endTime5.setText(planData[4].getEndtime());
                 case 4:
                     clientDataTemp = ClientFunction.searchClientByID(planData[3].getClientID());
                     classDataTemp = ClassFunction.searchClassByID(planData[3].getClassID());
                     this.lessonName4.setText(classDataTemp.getName());
                     this.memberName4.setText(clientDataTemp.getName());
                     this.startTime4.setText(planData[3].getStartTime());
+                    this.endTime4.setText(planData[3].getEndtime());
                 case 3:
                     clientDataTemp = ClientFunction.searchClientByID(planData[2].getClientID());
                     classDataTemp = ClassFunction.searchClassByID(planData[2].getClassID());
                     this.lessonName3.setText(classDataTemp.getName());
                     this.memberName3.setText(clientDataTemp.getName());
                     this.startTime3.setText(planData[2].getStartTime());
+                    this.endTime3.setText(planData[2].getEndtime());
                 case 2:
                     clientDataTemp = ClientFunction.searchClientByID(planData[1].getClientID());
                     classDataTemp = ClassFunction.searchClassByID(planData[1].getClassID());
                     this.lessonName2.setText(classDataTemp.getName());
                     this.memberName2.setText(clientDataTemp.getName());
                     this.startTime2.setText(planData[1].getStartTime());
+                    this.endTime2.setText(planData[1].getEndtime());
                 case 1:
                     clientDataTemp = ClientFunction.searchClientByID(planData[0].getClientID());
                     classDataTemp = ClassFunction.searchClassByID(planData[0].getClassID());
                     this.lessonName1.setText(classDataTemp.getName());
                     this.memberName1.setText(clientDataTemp.getName());
                     this.startTime1.setText(planData[0].getStartTime());
+                    this.endTime1.setText(planData[0].getEndtime());
             }
         }
     }

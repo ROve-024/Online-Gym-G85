@@ -93,27 +93,32 @@ public class ClassFunction {
         return  classData;
     }
 
-    public static ClassData searchClassByName(String Name){
+    public static List searchClassByName(String Name){
         List<ClassData> classList = getWholeClass();
-        ClassData classData = null;
 
-        for(int i=0;i<classList.size();i++){
+        for(int i=0;i<classList.size();){
             ClassData temp = classList.get(i);
-            if(temp.getName().equals(Name)){
-                classData = temp;
+            if(!temp.getName().equals(Name)){
+                classList.remove(i);
+            }
+            else{
+                i++;
             }
         }
 
-        return  classData;
+        return  classList;
     }
 
     public static List searchClassByProfile(String Profile){
         List<ClassData> classList = getWholeClass();
 
-        for(int i=0;i<classList.size();i++){
+        for(int i=0;i<classList.size();){
             ClassData temp = classList.get(i);
             if(!temp.getCategory().equals(Profile)){
                 classList.remove(i);
+            }
+            else{
+                i++;
             }
         }
 
@@ -126,16 +131,24 @@ public class ClassFunction {
 
         CoachFunction coachFunction = new CoachFunction();
         List<CoachData> coachList = coachFunction.getWholeCoach();
-        for(int j=0;j<coachList.size();j++){
+        for(int j=0;j<coachList.size();){
             if(coachList.get(j).getName().equals(CoachName)){
                 coachID = coachList.get(j).getID();
             }
+            else{
+                j++;
+            }
         }
 
-        for(int i=0;i<classList.size();i++){
+
+
+        for(int i=0;i<classList.size();){
             ClassData temp = classList.get(i);
             if(!temp.getCoachID().equals(coachID)){
                 classList.remove(i);
+            }
+            else{
+                i++;
             }
         }
 

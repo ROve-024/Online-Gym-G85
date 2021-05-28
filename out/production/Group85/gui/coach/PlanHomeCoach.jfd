@@ -87,6 +87,15 @@ new FormModel {
 						"x": 495
 						"y": 15
 					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "endTime1"
+						"text": "endTime1"
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 315
+						"y": 45
+						"width": 145
+					} )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 45
 					"y": 135
@@ -160,6 +169,15 @@ new FormModel {
 						"x": 495
 						"y": 15
 					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "endTime2"
+						"text": "endTime2"
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 315
+						"y": 45
+						"width": 145
+					} )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"width": 720
 					"height": 70
@@ -222,6 +240,15 @@ new FormModel {
 						"height": 40
 						"x": 495
 						"y": 15
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "endTime3"
+						"text": "endTime3"
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 315
+						"y": 45
+						"width": 135
 					} )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"width": 720
@@ -286,6 +313,15 @@ new FormModel {
 						"x": 495
 						"y": 15
 					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "endTime4"
+						"text": "endTime4"
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 315
+						"y": 45
+						"width": 150
+					} )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"width": 720
 					"height": 70
@@ -349,6 +385,15 @@ new FormModel {
 						"x": 495
 						"y": 15
 					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "endTime5"
+						"text": "endTime5"
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 315
+						"y": 45
+						"width": 155
+					} )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"width": 720
 					"height": 70
@@ -411,6 +456,15 @@ new FormModel {
 						"height": 40
 						"x": 495
 						"y": 15
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "endTime6"
+						"text": "endTime6"
+						"foreground": sfield java.awt.Color gray
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 315
+						"y": 45
+						"width": 150
 					} )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"width": 720

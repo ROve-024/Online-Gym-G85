@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update" />
+    <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/coach/PlanHomeCoach.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/coach/PlanHomeCoach.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/member/PlanHomeMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/member/PlanHomeMember.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ClassFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ClassFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CoachFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CoachFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/MyLessonMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/MyLessonMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/buffer/userBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/userBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Plan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Plan.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +82,7 @@
       <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\UI\Other" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NavigatorCoach">
+  <component name="RunManager" selected="Application.PlanHomeCoach">
     <configuration name="ALLLessonAdmin" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.admin.ALLLessonAdmin" />
       <module name="Group85" />
@@ -83,19 +98,6 @@
     </configuration>
     <configuration name="CreateClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.coach.CreateClass" />
-      <module name="Group85" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="gui.coach.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyLessonCoach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.coach.MyLessonCoach" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
@@ -146,34 +148,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration name="PlanHomeMember" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.member.PlanHomeMember" />
+      <module name="Group85" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.member.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.ALLLessonAdmin" />
-      <item itemvalue="Application.MyLessonCoach" />
       <item itemvalue="Application.MyLessonMember" />
       <item itemvalue="Application.CreateClass" />
       <item itemvalue="Application.PlanHomeCoach" />
       <item itemvalue="Application.NavigatorCoach" />
+      <item itemvalue="Application.PlanHomeMember" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NavigatorCoach" />
         <item itemvalue="Application.PlanHomeCoach" />
+        <item itemvalue="Application.PlanHomeMember" />
+        <item itemvalue="Application.NavigatorCoach" />
         <item itemvalue="Application.MyLessonMember" />
         <item itemvalue="Application.CreateClass" />
-        <item itemvalue="Application.MyLessonCoach" />
       </list>
     </recent_temporary>
   </component>
@@ -253,14 +266,8 @@
       <workItem from="1621949547968" duration="1220000" />
       <workItem from="1621955488017" duration="99000" />
       <workItem from="1621989194626" duration="18330000" />
-      <workItem from="1622075316787" duration="32547000" />
-    </task>
-    <task id="LOCAL-00003" summary="README">
-      <created>1617953698782</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1617953698782</updated>
+      <workItem from="1622075316787" duration="32586000" />
+      <workItem from="1622162146739" duration="15133000" />
     </task>
     <task id="LOCAL-00004" summary="Improve user experience">
       <created>1618366371643</created>
@@ -598,7 +605,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622138692941</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="update">
+      <created>1622138756630</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1622138756630</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

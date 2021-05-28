@@ -98,8 +98,8 @@ public class LessonHomeMember extends JFrame {
 
     private void searchButtonActionPerformed(ActionEvent e) {
         if(this.titleRadioButton.isSelected()){
-            list.clear();
-            list.add(ClassFunction.searchClassByName(this.search.getText()));
+            //list.clear();
+            list = ClassFunction.searchClassByName(this.search.getText());
         }else if(this.coachRadioButton.isSelected()){
             list = ClassFunction.searchClassByCoachName(this.search.getText());
         }else if(this.typeRadioButton.isSelected()){

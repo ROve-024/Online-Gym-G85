@@ -115,7 +115,7 @@ public class MyLessonMember extends JFrame {
         else {
             list.clear();
             if(this.titleRadioButton.isSelected()){
-                list.add(ClassFunction.searchClassByName(this.search.getText()));
+                list = ClassFunction.searchClassByName(this.search.getText());
             }else if(this.coachRadioButton.isSelected()){
                 list = ClassFunction.searchClassByCoachName(this.search.getText());
                 //System.out.println(list);

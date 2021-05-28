@@ -89,19 +89,23 @@ public class CoachFunction {
         return newID;
     }
 
-    public static CoachData searchCoachByName(String Name){
+    public static List searchCoachByName(String Name){
         List<CoachData> coachList = getWholeCoach();
-        CoachData coachData = null;
 
-        for(int i=0;i<coachList.size();i++) {
+        for(int i=0;i<coachList.size();) {
             CoachData temp;
             temp = coachList.get(i);
-            if(temp.getName().equals(Name)){
-                coachData = temp;
+            if(!temp.getName().equals(Name)){
+                coachList.remove(i);
+                System.out.println(coachList.size());
+            }
+
+            else {
+                i++;
             }
         }
 
-        return coachData;
+        return coachList;
     }
 
     public static CoachData searchCoachByID(String ID){

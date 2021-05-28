@@ -102,7 +102,7 @@ public class ALLLessonAdmin extends JFrame {
             System.out.println(this.search.getText() + "1");
             if(this.titleRadioButton.isSelected()){
                 list.clear();
-                list.add(ClassFunction.searchClassByName(this.search.getText()));
+                list = ClassFunction.searchClassByName(this.search.getText());
             }else if(this.coachRadioButton.isSelected()){
                 list.clear();
                 list = ClassFunction.searchClassByCoachName(this.search.getText());

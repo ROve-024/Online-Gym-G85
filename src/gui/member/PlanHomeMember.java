@@ -1,6 +1,21 @@
 package gui.member;
 
+import java.awt.event.*;
+import controller.ClassFunction;
+import controller.ClientFunction;
+import controller.CoachFunction;
+import controller.PlanFunction;
+import gui.coach.PlanHomeCoach;
+import gui.other.PlanBuffer;
+import gui.other.UserBuffer;
+import gui.other.Warning;
+import io.classes.ClassData;
+import io.client.ClientData;
+import io.coach.CoachData;
+import io.plan.PlanData;
+
 import java.awt.*;
+import java.util.List;
 import javax.swing.*;
 import javax.swing.border.*;
 /*
@@ -16,6 +31,79 @@ public class PlanHomeMember extends JFrame {
         initComponents();
     }
 
+    private void deleteButton1ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        PlanBuffer.setBuffer("");
+        PlanBuffer.setBuffer(this.list.get(this.page*6).getPlanID());
+        String planID = PlanBuffer.getBuffer();
+        PlanFunction.DeletePlanByPlanID(planID);
+        this.dispose();
+        PlanHomeMember.run();
+    }
+
+    private void deleteButton2ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        PlanBuffer.setBuffer("");
+        PlanBuffer.setBuffer(this.list.get(this.page*6 + 1).getPlanID());
+        String planID = PlanBuffer.getBuffer();
+        PlanFunction.DeletePlanByPlanID(planID);
+        this.dispose();
+        PlanHomeMember.run();
+    }
+
+    private void deleteButton3ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        PlanBuffer.setBuffer("");
+        PlanBuffer.setBuffer(this.list.get(this.page*6 + 2).getPlanID());
+        String planID = PlanBuffer.getBuffer();
+        PlanFunction.DeletePlanByPlanID(planID);
+        this.dispose();
+        PlanHomeMember.run();
+    }
+
+    private void deleteButton4ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        PlanBuffer.setBuffer("");
+        PlanBuffer.setBuffer(this.list.get(this.page*6 + 3).getPlanID());
+        String planID = PlanBuffer.getBuffer();
+        PlanFunction.DeletePlanByPlanID(planID);
+        this.dispose();
+        PlanHomeMember.run();
+    }
+
+    private void deleteButton5ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        PlanBuffer.setBuffer("");
+        PlanBuffer.setBuffer(this.list.get(this.page*6 + 4).getPlanID());
+        String planID = PlanBuffer.getBuffer();
+        PlanFunction.DeletePlanByPlanID(planID);
+        this.dispose();
+        PlanHomeMember.run();
+    }
+
+    private void deleteButton6ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        PlanBuffer.setBuffer("");
+        PlanBuffer.setBuffer(this.list.get(this.page*6 + 5).getPlanID());
+        String planID = PlanBuffer.getBuffer();
+        PlanFunction.DeletePlanByPlanID(planID);
+        this.dispose();
+        PlanHomeMember.run();
+    }
+
+    private void nextPageButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        int remainItem = this.list.size() - 6 * (this.page + 1);
+
+        if(remainItem <= 0){
+            Warning.run("No more page here.");
+        }
+        else{
+            this.page++;
+            this.update();
+        }
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -26,32 +114,38 @@ public class PlanHomeMember extends JFrame {
         coachName1 = new JLabel();
         startTime1 = new JLabel();
         deleteButton1 = new JButton();
+        endTime1 = new JLabel();
         decorationLine2 = new JPanel();
         planDetail2 = new JPanel();
         lessonName2 = new JLabel();
         coachName2 = new JLabel();
         startTime2 = new JLabel();
         deleteButton2 = new JButton();
+        endTime2 = new JLabel();
         planDetail3 = new JPanel();
         lessonName3 = new JLabel();
         coachName3 = new JLabel();
         startTime3 = new JLabel();
         deleteButton3 = new JButton();
+        endTime3 = new JLabel();
         planDetail4 = new JPanel();
         lessonName4 = new JLabel();
         coachName4 = new JLabel();
         startTime4 = new JLabel();
         deleteButton4 = new JButton();
+        endTime4 = new JLabel();
         planDetail5 = new JPanel();
         lessonName5 = new JLabel();
         coachName5 = new JLabel();
         startTime5 = new JLabel();
         deleteButton5 = new JButton();
+        endTime5 = new JLabel();
         planDetail6 = new JPanel();
         lessonName6 = new JLabel();
         coachName6 = new JLabel();
         startTime6 = new JLabel();
         deleteButton6 = new JButton();
+        endTime6 = new JLabel();
         nextPageButton = new JButton();
 
         //======== this ========
@@ -101,15 +195,22 @@ public class PlanHomeMember extends JFrame {
                 startTime1.setText("2021-04-8 12:00");
                 startTime1.setForeground(Color.gray);
                 planDetail.add(startTime1);
-                startTime1.setBounds(new Rectangle(new Point(170, 45), startTime1.getPreferredSize()));
+                startTime1.setBounds(170, 45, 150, startTime1.getPreferredSize().height);
 
                 //---- deleteButton1 ----
                 deleteButton1.setText("DELETE");
                 deleteButton1.setBorderPainted(false);
                 deleteButton1.setBackground(new Color(217, 0, 27));
                 deleteButton1.setForeground(Color.white);
+                deleteButton1.addActionListener(e -> deleteButton1ActionPerformed(e));
                 planDetail.add(deleteButton1);
                 deleteButton1.setBounds(610, 15, 100, 40);
+
+                //---- endTime1 ----
+                endTime1.setText("endTime1");
+                endTime1.setForeground(Color.gray);
+                planDetail.add(endTime1);
+                endTime1.setBounds(340, 45, 150, endTime1.getPreferredSize().height);
 
                 {
                     // compute preferred size
@@ -175,15 +276,22 @@ public class PlanHomeMember extends JFrame {
                 startTime2.setText("2021-04-8 12:00");
                 startTime2.setForeground(Color.gray);
                 planDetail2.add(startTime2);
-                startTime2.setBounds(new Rectangle(new Point(170, 45), startTime2.getPreferredSize()));
+                startTime2.setBounds(170, 45, 150, startTime2.getPreferredSize().height);
 
                 //---- deleteButton2 ----
                 deleteButton2.setText("DELETE");
                 deleteButton2.setBorderPainted(false);
                 deleteButton2.setBackground(new Color(217, 0, 27));
                 deleteButton2.setForeground(Color.white);
+                deleteButton2.addActionListener(e -> deleteButton2ActionPerformed(e));
                 planDetail2.add(deleteButton2);
                 deleteButton2.setBounds(610, 15, 100, 40);
+
+                //---- endTime2 ----
+                endTime2.setText("endTime2");
+                endTime2.setForeground(Color.gray);
+                planDetail2.add(endTime2);
+                endTime2.setBounds(340, 45, 150, endTime2.getPreferredSize().height);
 
                 {
                     // compute preferred size
@@ -225,15 +333,22 @@ public class PlanHomeMember extends JFrame {
                 startTime3.setText("2021-04-8 12:00");
                 startTime3.setForeground(Color.gray);
                 planDetail3.add(startTime3);
-                startTime3.setBounds(new Rectangle(new Point(170, 45), startTime3.getPreferredSize()));
+                startTime3.setBounds(170, 45, 150, startTime3.getPreferredSize().height);
 
                 //---- deleteButton3 ----
                 deleteButton3.setText("DELETE");
                 deleteButton3.setBorderPainted(false);
                 deleteButton3.setBackground(new Color(217, 0, 27));
                 deleteButton3.setForeground(Color.white);
+                deleteButton3.addActionListener(e -> deleteButton3ActionPerformed(e));
                 planDetail3.add(deleteButton3);
                 deleteButton3.setBounds(610, 15, 100, 40);
+
+                //---- endTime3 ----
+                endTime3.setText("endTime3");
+                endTime3.setForeground(Color.gray);
+                planDetail3.add(endTime3);
+                endTime3.setBounds(340, 45, 150, endTime3.getPreferredSize().height);
 
                 {
                     // compute preferred size
@@ -275,15 +390,22 @@ public class PlanHomeMember extends JFrame {
                 startTime4.setText("2021-04-8 12:00");
                 startTime4.setForeground(Color.gray);
                 planDetail4.add(startTime4);
-                startTime4.setBounds(new Rectangle(new Point(170, 45), startTime4.getPreferredSize()));
+                startTime4.setBounds(170, 45, 150, startTime4.getPreferredSize().height);
 
                 //---- deleteButton4 ----
                 deleteButton4.setText("DELETE");
                 deleteButton4.setBorderPainted(false);
                 deleteButton4.setBackground(new Color(217, 0, 27));
                 deleteButton4.setForeground(Color.white);
+                deleteButton4.addActionListener(e -> deleteButton4ActionPerformed(e));
                 planDetail4.add(deleteButton4);
                 deleteButton4.setBounds(610, 15, 100, 40);
+
+                //---- endTime4 ----
+                endTime4.setText("endTime4");
+                endTime4.setForeground(Color.gray);
+                planDetail4.add(endTime4);
+                endTime4.setBounds(340, 45, 150, endTime4.getPreferredSize().height);
 
                 {
                     // compute preferred size
@@ -325,15 +447,22 @@ public class PlanHomeMember extends JFrame {
                 startTime5.setText("2021-04-8 12:00");
                 startTime5.setForeground(Color.gray);
                 planDetail5.add(startTime5);
-                startTime5.setBounds(new Rectangle(new Point(170, 45), startTime5.getPreferredSize()));
+                startTime5.setBounds(170, 45, 150, startTime5.getPreferredSize().height);
 
                 //---- deleteButton5 ----
                 deleteButton5.setText("DELETE");
                 deleteButton5.setBorderPainted(false);
                 deleteButton5.setBackground(new Color(217, 0, 27));
                 deleteButton5.setForeground(Color.white);
+                deleteButton5.addActionListener(e -> deleteButton5ActionPerformed(e));
                 planDetail5.add(deleteButton5);
                 deleteButton5.setBounds(610, 15, 100, 40);
+
+                //---- endTime5 ----
+                endTime5.setText("endTime5");
+                endTime5.setForeground(Color.gray);
+                planDetail5.add(endTime5);
+                endTime5.setBounds(340, 45, 150, endTime5.getPreferredSize().height);
 
                 {
                     // compute preferred size
@@ -375,15 +504,22 @@ public class PlanHomeMember extends JFrame {
                 startTime6.setText("2021-04-8 12:00");
                 startTime6.setForeground(Color.gray);
                 planDetail6.add(startTime6);
-                startTime6.setBounds(new Rectangle(new Point(170, 45), startTime6.getPreferredSize()));
+                startTime6.setBounds(170, 45, 150, startTime6.getPreferredSize().height);
 
                 //---- deleteButton6 ----
                 deleteButton6.setText("DELETE");
                 deleteButton6.setBorderPainted(false);
                 deleteButton6.setBackground(new Color(217, 0, 27));
                 deleteButton6.setForeground(Color.white);
+                deleteButton6.addActionListener(e -> deleteButton6ActionPerformed(e));
                 planDetail6.add(deleteButton6);
                 deleteButton6.setBounds(610, 15, 100, 40);
+
+                //---- endTime6 ----
+                endTime6.setText("endTime6");
+                endTime6.setForeground(Color.gray);
+                planDetail6.add(endTime6);
+                endTime6.setBounds(340, 45, 150, endTime6.getPreferredSize().height);
 
                 {
                     // compute preferred size
@@ -408,6 +544,7 @@ public class PlanHomeMember extends JFrame {
             nextPageButton.setBackground(SystemColor.control);
             nextPageButton.setText("NEXT");
             nextPageButton.setForeground(Color.white);
+            nextPageButton.addActionListener(e -> nextPageButtonActionPerformed(e));
             body.add(nextPageButton);
             nextPageButton.setBounds(655, 595, 100, 40);
 
@@ -457,38 +594,47 @@ public class PlanHomeMember extends JFrame {
     private JLabel coachName1;
     private JLabel startTime1;
     private JButton deleteButton1;
+    private JLabel endTime1;
     private JPanel decorationLine2;
     private JPanel planDetail2;
     private JLabel lessonName2;
     private JLabel coachName2;
     private JLabel startTime2;
     private JButton deleteButton2;
+    private JLabel endTime2;
     private JPanel planDetail3;
     private JLabel lessonName3;
     private JLabel coachName3;
     private JLabel startTime3;
     private JButton deleteButton3;
+    private JLabel endTime3;
     private JPanel planDetail4;
     private JLabel lessonName4;
     private JLabel coachName4;
     private JLabel startTime4;
     private JButton deleteButton4;
+    private JLabel endTime4;
     private JPanel planDetail5;
     private JLabel lessonName5;
     private JLabel coachName5;
     private JLabel startTime5;
     private JButton deleteButton5;
+    private JLabel endTime5;
     private JPanel planDetail6;
     private JLabel lessonName6;
     private JLabel coachName6;
     private JLabel startTime6;
     private JButton deleteButton6;
+    private JLabel endTime6;
     private JButton nextPageButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         PlanHomeMember.run();
     }
 
+    private int page = 0;
+    private List<PlanData> list;
+    private int planRemainNumb = 0;
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -506,6 +652,142 @@ public class PlanHomeMember extends JFrame {
         });
     }
     private void init() {
+        ClientData clientData = UserBuffer.getClientSession();
+        list = PlanFunction.searchPlanByCoachID(clientData.getClientID());
+        this.update();
+    }
 
+    private void update() {
+        int i = 0;
+        int remainPage = this.list.size() - this.page * 6;
+        CoachData coachDataTemp;
+        ClassData classDataTemp;
+        PlanData[] planData = new PlanData[6];
+        ClassData tempClassData = new ClassData();
+
+        switch (this.planRemainNumb){
+            case 0:
+                break;
+            case 1:
+                this.lessonName2.setOpaque(false);
+                this.startTime2.setOpaque(false);
+                this.endTime2.setOpaque(false);
+                this.coachName2.setOpaque(false);
+                this.deleteButton2.setVisible(true);
+            case 2:
+                this.lessonName3.setOpaque(false);
+                this.startTime3.setOpaque(false);
+                this.endTime3.setOpaque(false);
+                this.coachName3.setOpaque(false);
+                this.deleteButton3.setVisible(true);
+            case 3:
+                this.lessonName4.setOpaque(false);
+                this.startTime4.setOpaque(false);
+                this.endTime4.setOpaque(false);
+                this.coachName4.setOpaque(false);
+                this.deleteButton4.setVisible(true);
+            case 4:
+                this.lessonName5.setOpaque(false);
+                this.startTime5.setOpaque(false);
+                this.endTime5.setOpaque(false);
+                this.coachName5.setOpaque(false);
+                this.deleteButton5.setVisible(true);
+            case 5:
+                this.lessonName6.setOpaque(false);
+                this.startTime6.setOpaque(false);
+                this.endTime6.setOpaque(false);
+                this.coachName6.setOpaque(false);
+                this.deleteButton6.setVisible(true);
+        }
+
+        if((remainPage / 6) > 0){
+            for(i = 0; i < 6; i++){
+                planData[i] = this.list.get(i + this.page*6);
+            }
+            coachDataTemp = CoachFunction.searchCoachByID(planData[0].getCoachID());
+            classDataTemp = ClassFunction.searchClassByID(planData[0].getClassID());
+            this.lessonName1.setText(classDataTemp.getName());
+            this.coachName1.setText(coachDataTemp.getName());
+            this.startTime1.setText(planData[0].getStartTime());
+            this.endTime1.setText(planData[0].getEndtime());
+
+            coachDataTemp = CoachFunction.searchCoachByID(planData[1].getCoachID());
+            classDataTemp = ClassFunction.searchClassByID(planData[1].getClassID());
+            this.lessonName2.setText(classDataTemp.getName());
+            this.coachName2.setText(coachDataTemp.getName());
+            this.startTime2.setText(planData[1].getStartTime());
+            this.endTime2.setText(planData[1].getEndtime());
+
+            coachDataTemp = CoachFunction.searchCoachByID(planData[2].getCoachID());
+            classDataTemp = ClassFunction.searchClassByID(planData[2].getClassID());
+            this.lessonName3.setText(classDataTemp.getName());
+            this.coachName3.setText(coachDataTemp.getName());
+            this.startTime3.setText(planData[2].getStartTime());
+            this.endTime3.setText(planData[2].getEndtime());
+
+            coachDataTemp = CoachFunction.searchCoachByID(planData[3].getCoachID());
+            classDataTemp = ClassFunction.searchClassByID(planData[3].getClassID());
+            this.lessonName4.setText(classDataTemp.getName());
+            this.coachName4.setText(coachDataTemp.getName());
+            this.startTime4.setText(planData[3].getStartTime());
+            this.endTime4.setText(planData[3].getEndtime());
+
+            coachDataTemp = CoachFunction.searchCoachByID(planData[4].getCoachID());
+            classDataTemp = ClassFunction.searchClassByID(planData[4].getClassID());
+            this.lessonName5.setText(classDataTemp.getName());
+            this.coachName5.setText(coachDataTemp.getName());
+            this.startTime5.setText(planData[4].getStartTime());
+            this.endTime5.setText(planData[4].getEndtime());
+
+            coachDataTemp = CoachFunction.searchCoachByID(planData[5].getCoachID());
+            classDataTemp = ClassFunction.searchClassByID(planData[5].getClassID());
+            this.lessonName6.setText(classDataTemp.getName());
+            this.coachName6.setText(coachDataTemp.getName());
+            this.startTime6.setText(planData[5].getStartTime());
+            this.endTime6.setText(planData[5].getEndtime());
+        } else {
+            this.planRemainNumb = this.list.size() % 6;
+            for (i = 0; i < planRemainNumb; i++) {
+                planData[i] = this.list.get(i + this.page * 6);
+            }
+            //Set text for the remaining lessons
+            switch (planRemainNumb) {
+                case 5:
+                    coachDataTemp = CoachFunction.searchCoachByID(planData[4].getCoachID());
+                    classDataTemp = ClassFunction.searchClassByID(planData[4].getClassID());
+                    this.lessonName5.setText(classDataTemp.getName());
+                    this.coachName5.setText(coachDataTemp.getName());
+                    this.startTime5.setText(planData[4].getStartTime());
+                    this.endTime5.setText(planData[4].getEndtime());
+                case 4:
+                    coachDataTemp = CoachFunction.searchCoachByID(planData[3].getCoachID());
+                    classDataTemp = ClassFunction.searchClassByID(planData[3].getClassID());
+                    this.lessonName4.setText(classDataTemp.getName());
+                    this.coachName4.setText(coachDataTemp.getName());
+                    this.startTime4.setText(planData[3].getStartTime());
+                    this.endTime4.setText(planData[3].getEndtime());
+                case 3:
+                    coachDataTemp = CoachFunction.searchCoachByID(planData[2].getCoachID());
+                    classDataTemp = ClassFunction.searchClassByID(planData[2].getClassID());
+                    this.lessonName3.setText(classDataTemp.getName());
+                    this.coachName3.setText(coachDataTemp.getName());
+                    this.startTime3.setText(planData[2].getStartTime());
+                    this.endTime3.setText(planData[2].getEndtime());
+                case 2:
+                    coachDataTemp = CoachFunction.searchCoachByID(planData[1].getCoachID());
+                    classDataTemp = ClassFunction.searchClassByID(planData[1].getClassID());
+                    this.lessonName2.setText(classDataTemp.getName());
+                    this.coachName2.setText(coachDataTemp.getName());
+                    this.startTime2.setText(planData[1].getStartTime());
+                    this.endTime2.setText(planData[1].getEndtime());
+                case 1:
+                    coachDataTemp = CoachFunction.searchCoachByID(planData[0].getCoachID());
+                    classDataTemp = ClassFunction.searchClassByID(planData[0].getClassID());
+                    this.lessonName1.setText(classDataTemp.getName());
+                    this.coachName1.setText(coachDataTemp.getName());
+                    this.startTime1.setText(planData[0].getStartTime());
+                    this.endTime1.setText(planData[0].getEndtime());
+            }
+        }
     }
 }
