@@ -52,7 +52,7 @@ public class WritePlanXml {
                     plan.appendChild(StartTime);
 
                     Element Endtime = document.createElement("Endtime");
-                    Endtime.setTextContent(planData.getEndtime());
+                    Endtime.setTextContent(planData.getEndTime());
                     plan.appendChild(Endtime);
 
 

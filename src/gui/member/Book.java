@@ -1,7 +1,16 @@
 package gui.member;
 
+import controller.ClassFunction;
+import controller.PlanFunction;
+import gui.other.LessonBuffer;
+import gui.other.PlanBuffer;
+import gui.other.UserBuffer;
+import io.classes.ClassData;
+import io.plan.PlanData;
+
 import java.awt.*;
 import java.awt.event.*;
+import java.util.List;
 import javax.swing.*;
 /*
  * Created by JFormDesigner on Thu Apr 08 21:58:01 CST 2021
@@ -18,8 +27,20 @@ public class Book extends JFrame {
 
     private void finishButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
-        PlanHomeMember.run();
+        ClassData classData = LessonBuffer.getLessonBuffer();
+        PlanData planData = new PlanData();
+        PlanFunction.createNewPlanInfo(planData);
+        List<PlanData> list;
+        list = PlanFunction.getWholePlan();
+        PlanBuffer.setBuffer(String.valueOf(PlanFunction.maxPlanID(list)));
+        planData.setClassID(LessonBuffer.getBuffer());
+        planData.setCoachID(classData.getCoachID());
+        planData.setClientID(UserBuffer.getBuffer());
+        planData.setStartTime(PlanBuffer.toEmpty(this.startTime.getText()));
+        planData.setEndTime(PlanBuffer.toEmpty(this.endTime.getText()));
+        PlanFunction.updatePlanInfo(planData);
         this.dispose();
+        PlanHomeMember.run();
     }
 
     private void initComponents() {
@@ -28,7 +49,7 @@ public class Book extends JFrame {
         bookIcon = new JLabel();
         finishButton = new JButton();
         startTime = new JTextField();
-        endTime = new JPasswordField();
+        endTime = new JTextField();
         label1 = new JLabel();
         label2 = new JLabel();
 
@@ -67,7 +88,7 @@ public class Book extends JFrame {
             startTime.setBounds(160, 85, 475, 50);
 
             //---- endTime ----
-            endTime.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 18));
+            endTime.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
             endTime.setBackground(new Color(242, 242, 242));
             body.add(endTime);
             endTime.setBounds(160, 190, 475, 50);
@@ -126,7 +147,7 @@ public class Book extends JFrame {
     private JLabel bookIcon;
     private JButton finishButton;
     private JTextField startTime;
-    private JPasswordField endTime;
+    private JTextField endTime;
     private JLabel label1;
     private JLabel label2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables

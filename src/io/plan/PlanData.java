@@ -34,7 +34,7 @@ public class PlanData {
 		this.StartTime = StartTime;
 	}
 	
-	public void setEndtime(String Endtime)
+	public void setEndTime(String Endtime)
 	{
 		this.Endtime = Endtime;
 	}
@@ -64,7 +64,7 @@ public class PlanData {
 		return this.StartTime;
 	}
 
-	public String getEndtime()
+	public String getEndTime()
 	{
 		return this.Endtime;
 	}

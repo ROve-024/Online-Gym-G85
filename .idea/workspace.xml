@@ -6,18 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/coach/PlanHomeCoach.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/coach/PlanHomeCoach.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/member/PlanHomeMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/member/PlanHomeMember.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ClassFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ClassFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CoachFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CoachFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/MyLessonMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/MyLessonMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/Book.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/Book.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/buffer/userBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/userBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/plan/PlanData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/plan/PlanData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/plan/ReadPlanXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/plan/ReadPlanXml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/plan/WritePlanXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/plan/WritePlanXml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/xmls/Plan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Plan.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +78,7 @@
       <recent name="C:\Users\newtr\Documents\我的文件\大学\大学课程\大二\java\Group85\src\UI\Other" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PlanHomeCoach">
+  <component name="RunManager" selected="Application.MyLessonMember">
     <configuration name="ALLLessonAdmin" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.admin.ALLLessonAdmin" />
       <module name="Group85" />
@@ -182,10 +178,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyLessonMember" />
         <item itemvalue="Application.PlanHomeCoach" />
         <item itemvalue="Application.PlanHomeMember" />
         <item itemvalue="Application.NavigatorCoach" />
-        <item itemvalue="Application.MyLessonMember" />
         <item itemvalue="Application.CreateClass" />
       </list>
     </recent_temporary>
@@ -267,14 +263,7 @@
       <workItem from="1621955488017" duration="99000" />
       <workItem from="1621989194626" duration="18330000" />
       <workItem from="1622075316787" duration="32586000" />
-      <workItem from="1622162146739" duration="15133000" />
-    </task>
-    <task id="LOCAL-00004" summary="Improve user experience">
-      <created>1618366371643</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1618366371643</updated>
+      <workItem from="1622162146739" duration="24353000" />
     </task>
     <task id="LOCAL-00005" summary="Improve user experience">
       <created>1618368149125</created>
@@ -612,7 +601,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622138756630</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="update">
+      <created>1622186961579</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1622186961580</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

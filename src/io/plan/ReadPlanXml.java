@@ -57,7 +57,7 @@ public class ReadPlanXml {
             emp.setCoachID(getTagValue("CoachID", element));
             emp.setClassID(getTagValue("ClassID", element));
             emp.setStartTime(getTagValue("StartTime", element));
-            emp.setEndtime(getTagValue("Endtime", element));
+            emp.setEndTime(getTagValue("Endtime", element));
 		}
 		
 		return emp;

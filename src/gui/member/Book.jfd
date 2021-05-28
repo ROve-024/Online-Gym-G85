@@ -45,9 +45,9 @@ new FormModel {
 					"width": 475
 					"height": 50
 				} )
-				add( new FormComponent( "javax.swing.JPasswordField" ) {
+				add( new FormComponent( "javax.swing.JTextField" ) {
 					name: "endTime"
-					"font": new java.awt.Font( "Monospaced", 0, 18 )
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 18 )
 					"background": new java.awt.Color( 242, 242, 242, 255 )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 160

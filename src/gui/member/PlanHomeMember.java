@@ -709,42 +709,42 @@ public class PlanHomeMember extends JFrame {
             this.lessonName1.setText(classDataTemp.getName());
             this.coachName1.setText(coachDataTemp.getName());
             this.startTime1.setText(planData[0].getStartTime());
-            this.endTime1.setText(planData[0].getEndtime());
+            this.endTime1.setText(planData[0].getEndTime());
 
             coachDataTemp = CoachFunction.searchCoachByID(planData[1].getCoachID());
             classDataTemp = ClassFunction.searchClassByID(planData[1].getClassID());
             this.lessonName2.setText(classDataTemp.getName());
             this.coachName2.setText(coachDataTemp.getName());
             this.startTime2.setText(planData[1].getStartTime());
-            this.endTime2.setText(planData[1].getEndtime());
+            this.endTime2.setText(planData[1].getEndTime());
 
             coachDataTemp = CoachFunction.searchCoachByID(planData[2].getCoachID());
             classDataTemp = ClassFunction.searchClassByID(planData[2].getClassID());
             this.lessonName3.setText(classDataTemp.getName());
             this.coachName3.setText(coachDataTemp.getName());
             this.startTime3.setText(planData[2].getStartTime());
-            this.endTime3.setText(planData[2].getEndtime());
+            this.endTime3.setText(planData[2].getEndTime());
 
             coachDataTemp = CoachFunction.searchCoachByID(planData[3].getCoachID());
             classDataTemp = ClassFunction.searchClassByID(planData[3].getClassID());
             this.lessonName4.setText(classDataTemp.getName());
             this.coachName4.setText(coachDataTemp.getName());
             this.startTime4.setText(planData[3].getStartTime());
-            this.endTime4.setText(planData[3].getEndtime());
+            this.endTime4.setText(planData[3].getEndTime());
 
             coachDataTemp = CoachFunction.searchCoachByID(planData[4].getCoachID());
             classDataTemp = ClassFunction.searchClassByID(planData[4].getClassID());
             this.lessonName5.setText(classDataTemp.getName());
             this.coachName5.setText(coachDataTemp.getName());
             this.startTime5.setText(planData[4].getStartTime());
-            this.endTime5.setText(planData[4].getEndtime());
+            this.endTime5.setText(planData[4].getEndTime());
 
             coachDataTemp = CoachFunction.searchCoachByID(planData[5].getCoachID());
             classDataTemp = ClassFunction.searchClassByID(planData[5].getClassID());
             this.lessonName6.setText(classDataTemp.getName());
             this.coachName6.setText(coachDataTemp.getName());
             this.startTime6.setText(planData[5].getStartTime());
-            this.endTime6.setText(planData[5].getEndtime());
+            this.endTime6.setText(planData[5].getEndTime());
         } else {
             this.planRemainNumb = this.list.size() % 6;
             for (i = 0; i < planRemainNumb; i++) {
@@ -758,35 +758,35 @@ public class PlanHomeMember extends JFrame {
                     this.lessonName5.setText(classDataTemp.getName());
                     this.coachName5.setText(coachDataTemp.getName());
                     this.startTime5.setText(planData[4].getStartTime());
-                    this.endTime5.setText(planData[4].getEndtime());
+                    this.endTime5.setText(planData[4].getEndTime());
                 case 4:
                     coachDataTemp = CoachFunction.searchCoachByID(planData[3].getCoachID());
                     classDataTemp = ClassFunction.searchClassByID(planData[3].getClassID());
                     this.lessonName4.setText(classDataTemp.getName());
                     this.coachName4.setText(coachDataTemp.getName());
                     this.startTime4.setText(planData[3].getStartTime());
-                    this.endTime4.setText(planData[3].getEndtime());
+                    this.endTime4.setText(planData[3].getEndTime());
                 case 3:
                     coachDataTemp = CoachFunction.searchCoachByID(planData[2].getCoachID());
                     classDataTemp = ClassFunction.searchClassByID(planData[2].getClassID());
                     this.lessonName3.setText(classDataTemp.getName());
                     this.coachName3.setText(coachDataTemp.getName());
                     this.startTime3.setText(planData[2].getStartTime());
-                    this.endTime3.setText(planData[2].getEndtime());
+                    this.endTime3.setText(planData[2].getEndTime());
                 case 2:
                     coachDataTemp = CoachFunction.searchCoachByID(planData[1].getCoachID());
                     classDataTemp = ClassFunction.searchClassByID(planData[1].getClassID());
                     this.lessonName2.setText(classDataTemp.getName());
                     this.coachName2.setText(coachDataTemp.getName());
                     this.startTime2.setText(planData[1].getStartTime());
-                    this.endTime2.setText(planData[1].getEndtime());
+                    this.endTime2.setText(planData[1].getEndTime());
                 case 1:
                     coachDataTemp = CoachFunction.searchCoachByID(planData[0].getCoachID());
                     classDataTemp = ClassFunction.searchClassByID(planData[0].getClassID());
                     this.lessonName1.setText(classDataTemp.getName());
                     this.coachName1.setText(coachDataTemp.getName());
                     this.startTime1.setText(planData[0].getStartTime());
-                    this.endTime1.setText(planData[0].getEndtime());
+                    this.endTime1.setText(planData[0].getEndTime());
             }
         }
     }
