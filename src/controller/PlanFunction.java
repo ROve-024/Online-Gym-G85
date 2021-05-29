@@ -113,6 +113,51 @@ public class PlanFunction {
         writePlan(PlanList);
     }
 
+    public static void deletePlanByCoachID(String coachID){
+        List<PlanData> planList = getWholePlan();
+        List<PlanData> newPlanList = new ArrayList<PlanData>();
+        PlanData temp;
+
+        for(int i=0;i<planList.size();i++){
+            temp = planList.get(i);
+            if(!temp.getCoachID().equals(coachID)){
+                newPlanList.add(temp);
+            }
+        }
+
+        writePlan(newPlanList);
+    }
+
+    public static void deletePlanByClientID(String clientID){
+        List<PlanData> planList = getWholePlan();
+        List<PlanData> newPlanList = new ArrayList<PlanData>();
+        PlanData temp;
+
+        for(int i=0;i<planList.size();i++){
+            temp = planList.get(i);
+            if(!temp.getClientID().equals(clientID)){
+                newPlanList.add(temp);
+            }
+        }
+
+        writePlan(newPlanList);
+    }
+
+    public static void deletePlanByClassID(String classID){
+        List<PlanData> planList = getWholePlan();
+        List<PlanData> newPlanList = new ArrayList<PlanData>();
+        PlanData temp;
+
+        for(int i=0;i<planList.size();i++){
+            temp = planList.get(i);
+            if(!temp.getClassID().equals(classID)){
+                newPlanList.add(temp);
+            }
+        }
+
+        writePlan(newPlanList);
+    }
+
     public static void updatePlanInfo(PlanData planData){
         List<PlanData> planList = getWholePlan();
 

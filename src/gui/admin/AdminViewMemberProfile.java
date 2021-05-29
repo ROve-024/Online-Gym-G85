@@ -6,6 +6,7 @@ package gui.admin;
 
 import java.awt.event.*;
 import controller.ClientFunction;
+import controller.PlanFunction;
 import gui.other.UserBuffer;
 import gui.other.ViewBuffer;
 import io.client.ClientData;
@@ -24,6 +25,7 @@ public class AdminViewMemberProfile extends JFrame {
 
     private void deleteButtonActionPerformed(ActionEvent e) {
         ClientFunction.DeleteClientByID(ViewBuffer.getBuffer());
+        PlanFunction.deletePlanByClientID(ViewBuffer.getBuffer());
         this.dispose();
         UserManageAllAdmin.run();
     }
@@ -513,12 +515,12 @@ public class AdminViewMemberProfile extends JFrame {
     private void init(){
         String ID = ViewBuffer.getBuffer();
         ClientData clientData = ClientFunction.searchClientByID(ID);
-        this.uid.setText(UserBuffer.dataIsEmpty("UID: "+ ID));
-        this.gym.setText(UserBuffer.dataIsEmpty("GYM: "));
-        this.name.setText(UserBuffer.dataIsEmpty(clientData.getName()));
-        this.email.setText(UserBuffer.dataIsEmpty(clientData.getEmail()));
-        this.phoneNumber.setText(UserBuffer.dataIsEmpty(clientData.getPhonenumber()));
-        this.gender.setText(UserBuffer.dataIsEmpty(clientData.getSex()));
+        this.uid.setText(ViewBuffer.dataIsEmpty("UID: "+ ID));
+        this.gym.setText(ViewBuffer.dataIsEmpty("GYM: "));
+        this.name.setText(ViewBuffer.dataIsEmpty(clientData.getName()));
+        this.email.setText(ViewBuffer.dataIsEmpty(clientData.getEmail()));
+        this.phoneNumber.setText(ViewBuffer.dataIsEmpty(clientData.getPhonenumber()));
+        this.gender.setText(ViewBuffer.dataIsEmpty(clientData.getSex()));
         try{
             this.avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar150/" + clientData.getFileAddress())));
         }catch (NullPointerException miss){

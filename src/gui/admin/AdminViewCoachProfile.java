@@ -5,7 +5,10 @@
 package gui.admin;
 
 import java.awt.event.*;
+
+import controller.ClassFunction;
 import controller.CoachFunction;
+import controller.PlanFunction;
 import gui.other.UserBuffer;
 import gui.other.ViewBuffer;
 import io.coach.CoachData;
@@ -24,6 +27,8 @@ public class AdminViewCoachProfile extends JFrame {
 
     private void deleteButtonActionPerformed(ActionEvent e) {
         CoachFunction.DeleteCoachByID(ViewBuffer.getBuffer());
+        ClassFunction.deleteClassByCoachID(ViewBuffer.getBuffer());
+        PlanFunction.deletePlanByCoachID(ViewBuffer.getBuffer());
         this.dispose();
         UserManageAllAdmin.run();
     }
@@ -514,12 +519,12 @@ public class AdminViewCoachProfile extends JFrame {
     private void init(){
         String ID = ViewBuffer.getBuffer();
         CoachData coachData = CoachFunction.searchCoachByID(ID);
-        this.uid.setText(UserBuffer.dataIsEmpty("UID: "+ ID));
-        this.gym.setText(UserBuffer.dataIsEmpty("GYM: "));
-        this.name.setText(UserBuffer.dataIsEmpty(coachData.getName()));
-        this.email.setText(UserBuffer.dataIsEmpty(coachData.getEmail()));
-        this.phoneNumber.setText(UserBuffer.dataIsEmpty(coachData.getPhonenumber()));
-        this.gender.setText(UserBuffer.dataIsEmpty(coachData.getSex()));
+        this.uid.setText(ViewBuffer.dataIsEmpty("UID: "+ ID));
+        this.gym.setText(ViewBuffer.dataIsEmpty("GYM: "));
+        this.name.setText(ViewBuffer.dataIsEmpty(coachData.getName()));
+        this.email.setText(ViewBuffer.dataIsEmpty(coachData.getEmail()));
+        this.phoneNumber.setText(ViewBuffer.dataIsEmpty(coachData.getPhonenumber()));
+        this.gender.setText(ViewBuffer.dataIsEmpty(coachData.getSex()));
         try{
             this.avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar150/" + coachData.getFileAddress())));
         }catch (NullPointerException miss){

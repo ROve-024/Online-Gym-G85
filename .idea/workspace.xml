@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update" />
+    <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/buffer/lessonBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/PlanFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PlanFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/admin/AdminViewCoachProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/AdminViewCoachProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/admin/AdminViewMemberProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/AdminViewMemberProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/buffer/planBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/planBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/buffer/userBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/userBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/buffer/viewBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/viewBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Class.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Client.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Coach.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Plan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Plan.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -249,13 +264,6 @@
       <workItem from="1622162146739" duration="24709000" />
       <workItem from="1622251625106" duration="827000" />
       <workItem from="1622252499312" duration="6563000" />
-    </task>
-    <task id="LOCAL-00010" summary="Update">
-      <created>1619155369227</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1619155369227</updated>
     </task>
     <task id="LOCAL-00011" summary="Update">
       <created>1619156309865</created>
@@ -593,7 +601,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622255486640</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="update">
+      <created>1622264882029</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1622264882029</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

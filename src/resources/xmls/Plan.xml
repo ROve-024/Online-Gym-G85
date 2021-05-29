@@ -80,4 +80,12 @@
         <StartTime>11</StartTime>
         <Endtime>22</Endtime>
     </ROW>
+    <ROW>
+        <PlanID>12</PlanID>
+        <ClientID>3</ClientID>
+        <CoachID>1</CoachID>
+        <ClassID>1</ClassID>
+        <StartTime>666</StartTime>
+        <Endtime>888</Endtime>
+    </ROW>
 </DATA>

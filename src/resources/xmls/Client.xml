@@ -2,7 +2,7 @@
 <DATA>
     <ROW>
         <ClientID>1</ClientID>
-        <Name>A</Name>
+        <Name>a1</Name>
         <Account>client001</Account>
         <Password>123456</Password>
         <Phonenumber>12375672136</Phonenumber>
@@ -27,19 +27,5 @@
         <Target>haha</Target>
         <PhysicalCondition>good</PhysicalCondition>
         <FileAddress>Acatar (1).jpg</FileAddress>
-    </ROW>
-    <ROW>
-        <ClientID>3</ClientID>
-        <Name>lt</Name>
-        <Account>ZZ</Account>
-        <Password>2</Password>
-        <Phonenumber>1</Phonenumber>
-        <Email>Empty</Email>
-        <Sex>female</Sex>
-        <Balance>Empty</Balance>
-        <VIPlevel>2</VIPlevel>
-        <Target>Empty</Target>
-        <PhysicalCondition>Empty</PhysicalCondition>
-        <FileAddress>Acatar (3).jpg</FileAddress>
     </ROW>
 </DATA>

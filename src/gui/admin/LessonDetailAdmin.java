@@ -2,6 +2,7 @@ package gui.admin;
 
 import controller.ClassFunction;
 import controller.CoachFunction;
+import controller.PlanFunction;
 import gui.coach.ProfileCoach;
 import gui.coach.UploadModify;
 import gui.other.LessonBuffer;
@@ -43,6 +44,7 @@ public class LessonDetailAdmin extends JFrame {
     private void deleteButtonActionPerformed(ActionEvent e) {
         System.out.println("删除lesson：ID="+lessonID);
         ClassFunction.deleteClassByID(lessonID);
+        PlanFunction.deletePlanByClassID(lessonID);
         ALLLessonAdmin.run();
         this.dispose();
     }

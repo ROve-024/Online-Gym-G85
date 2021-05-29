@@ -41,16 +41,6 @@
         <FileAddress>123.jpg</FileAddress>
     </ROW>
     <ROW>
-        <ClassID>5</ClassID>
-        <Name>hah</Name>
-        <CoachID>1</CoachID>
-        <VedioAddress>Rec.com</VedioAddress>
-        <Category>yoga</Category>
-        <Detail>haha</Detail>
-        <VIPLevel>2</VIPLevel>
-        <FileAddress>123.jpg</FileAddress>
-    </ROW>
-    <ROW>
         <ClassID>6</ClassID>
         <Name>xixi</Name>
         <CoachID>2</CoachID>
@@ -109,5 +99,15 @@
         <Detail>55</Detail>
         <VIPLevel>2</VIPLevel>
         <FileAddress>55</FileAddress>
+    </ROW>
+    <ROW>
+        <ClassID>12</ClassID>
+        <Name>66</Name>
+        <CoachID>1</CoachID>
+        <VedioAddress>66</VedioAddress>
+        <Category>66</Category>
+        <Detail>66</Detail>
+        <VIPLevel>3</VIPLevel>
+        <FileAddress>66</FileAddress>
     </ROW>
 </DATA>
