@@ -5,10 +5,7 @@ import controller.ClientFunction;
 import controller.CoachFunction;
 import controller.PlanFunction;
 import gui.member.ViewMemberProfile;
-import gui.other.LessonBuffer;
-import gui.other.PlanBuffer;
-import gui.other.UserBuffer;
-import gui.other.Warning;
+import gui.other.*;
 import io.classes.ClassData;
 import io.client.ClientData;
 import io.coach.CoachData;
@@ -34,6 +31,8 @@ public class PlanHomeCoach extends JFrame {
 
     private void profileButton1ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.list.get(this.page*6).getClientID());
         ViewMemberProfile.run();
         this.dispose();
     }
@@ -64,30 +63,40 @@ public class PlanHomeCoach extends JFrame {
 
     private void profileButton2ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.list.get(this.page*6 + 1).getClientID());
         ViewMemberProfile.run();
         this.dispose();
     }
 
     private void profileButton3ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.list.get(this.page*6 + 2).getClientID());
         ViewMemberProfile.run();
         this.dispose();
     }
 
     private void profileButton4ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.list.get(this.page*6 + 3).getClientID());
         ViewMemberProfile.run();
         this.dispose();
     }
 
     private void profileButton5ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.list.get(this.page*6 + 4).getClientID());
         ViewMemberProfile.run();
         this.dispose();
     }
 
     private void profileButton6ActionPerformed(ActionEvent e) {
         // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.list.get(this.page*6 + 5).getClientID());
         ViewMemberProfile.run();
         this.dispose();
     }

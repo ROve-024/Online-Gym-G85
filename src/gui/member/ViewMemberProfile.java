@@ -1,6 +1,9 @@
 package gui.member;
 
+import controller.ClientFunction;
+import controller.CoachFunction;
 import gui.other.UserBuffer;
+import gui.other.ViewBuffer;
 import io.client.ClientData;
 
 import java.awt.*;
@@ -487,14 +490,14 @@ public class ViewMemberProfile extends JFrame {
         });
     }
     private void init() {
-        String ID = UserBuffer.getBuffer();
-        ClientData clientData = UserBuffer.getClientSession();
-        this.uidGym.setText(UserBuffer.dataIsEmpty("UID: "+ ID + "    " + "GYM: "));
-        this.VIPLevel.setText(UserBuffer.dataIsEmpty("VIP Level" + clientData.getVIPlevel()));
-        this.name.setText(UserBuffer.dataIsEmpty(clientData.getName()));
-        this.email.setText(UserBuffer.dataIsEmpty(clientData.getEmail()));
-        this.phoneNumber.setText(UserBuffer.dataIsEmpty(clientData.getPhonenumber()));
-        this.gender.setText(UserBuffer.dataIsEmpty(clientData.getSex()));
+        String ID = ViewBuffer.getBuffer();
+        ClientData clientData = ClientFunction.searchClientByID(ID);
+        this.uidGym.setText(ViewBuffer.dataIsEmpty("UID: "+ ID + "    " + "GYM: "));
+        this.VIPLevel.setText(ViewBuffer.dataIsEmpty("VIP Level" + clientData.getVIPlevel()));
+        this.name.setText(ViewBuffer.dataIsEmpty(clientData.getName()));
+        this.email.setText(ViewBuffer.dataIsEmpty(clientData.getEmail()));
+        this.phoneNumber.setText(ViewBuffer.dataIsEmpty(clientData.getPhonenumber()));
+        this.gender.setText(ViewBuffer.dataIsEmpty(clientData.getSex()));
         try{
             this.avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar150/" + clientData.getFileAddress())));
         }catch (NullPointerException miss){

@@ -8,6 +8,7 @@ import controller.ClassFunction;
 import controller.CoachFunction;
 import gui.coach.ViewCoachProfile;
 import gui.other.LessonBuffer;
+import gui.other.ViewBuffer;
 import io.classes.ClassData;
 import io.coach.CoachData;
 
@@ -38,6 +39,8 @@ public class LessonDetailMember extends JFrame {
 
     private void coachDetailButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
+        ViewBuffer.setBuffer("");
+        ViewBuffer.setBuffer(this.classData.getCoachID());
         ViewCoachProfile.run();
         this.dispose();
     }

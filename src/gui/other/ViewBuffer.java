@@ -46,5 +46,18 @@ public class ViewBuffer {
         ClientData clientData = ClientFunction.searchClientByID(ID);
         return clientData;
     }
-
+    public static String dataIsEmpty(String string){
+        String result = "";
+        if(!string.equals("Empty")){
+            result = string;
+        }
+        return result;
+    }
+    public static String toEmpty(String string){
+        String result = "Empty";
+        if(!string.equals("")){
+            result = string;
+        }
+        return result;
+    }
 }

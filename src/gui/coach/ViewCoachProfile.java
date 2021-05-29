@@ -1,7 +1,10 @@
 package gui.coach;
 
+import java.awt.event.*;
 import controller.CoachFunction;
+import gui.member.LessonDetailMember;
 import gui.other.UserBuffer;
+import gui.other.ViewBuffer;
 import io.client.ClientData;
 import io.coach.CoachData;
 
@@ -19,6 +22,12 @@ import javax.swing.border.*;
 public class ViewCoachProfile extends JFrame {
     public ViewCoachProfile() {
         initComponents();
+    }
+
+    private void lessonButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        this.dispose();
+        LessonDetailMember.run();
     }
 
     private void initComponents() {
@@ -405,6 +414,7 @@ public class ViewCoachProfile extends JFrame {
             lessonButton.setBackground(SystemColor.menu);
             lessonButton.setText("LESSON");
             lessonButton.setForeground(Color.white);
+            lessonButton.addActionListener(e -> lessonButtonActionPerformed(e));
             body.add(lessonButton);
             lessonButton.setBounds(35, 590, 90, 40);
 
@@ -492,13 +502,13 @@ public class ViewCoachProfile extends JFrame {
         });
     }
     private void init() {
-        String ID = UserBuffer.getBuffer();
+        String ID = ViewBuffer.getBuffer();
         CoachData coachData = CoachFunction.searchCoachByID(ID);
-        this.uidGym.setText(UserBuffer.dataIsEmpty("UID: "+ ID + "    " + "GYM: "));
-        this.name.setText(UserBuffer.dataIsEmpty(coachData.getName()));
-        this.email.setText(UserBuffer.dataIsEmpty(coachData.getEmail()));
-        this.phoneNumber.setText(UserBuffer.dataIsEmpty(coachData.getPhonenumber()));
-        this.gender.setText(UserBuffer.dataIsEmpty(coachData.getSex()));
+        this.uidGym.setText(ViewBuffer.dataIsEmpty("UID: "+ ID + "    " + "GYM: "));
+        this.name.setText(ViewBuffer.dataIsEmpty(coachData.getName()));
+        this.email.setText(ViewBuffer.dataIsEmpty(coachData.getEmail()));
+        this.phoneNumber.setText(ViewBuffer.dataIsEmpty(coachData.getPhonenumber()));
+        this.gender.setText(ViewBuffer.dataIsEmpty(coachData.getSex()));
         try{
             this.avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar150/" + coachData.getFileAddress())));
         }catch (NullPointerException miss){

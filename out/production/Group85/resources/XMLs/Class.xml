@@ -8,7 +8,7 @@
         <Category>yoga</Category>
         <Detail>haha</Detail>
         <VIPLevel>2</VIPLevel>
-        <FileAddress>123.jpg</FileAddress>
+        <FileAddress>run.png</FileAddress>
     </ROW>
     <ROW>
         <ClassID>2</ClassID>
@@ -99,5 +99,15 @@
         <Detail>33</Detail>
         <VIPLevel>2</VIPLevel>
         <FileAddress>33</FileAddress>
+    </ROW>
+    <ROW>
+        <ClassID>11</ClassID>
+        <Name>55</Name>
+        <CoachID>1</CoachID>
+        <VedioAddress>55</VedioAddress>
+        <Category>55</Category>
+        <Detail>55</Detail>
+        <VIPLevel>2</VIPLevel>
+        <FileAddress>55</FileAddress>
     </ROW>
 </DATA>

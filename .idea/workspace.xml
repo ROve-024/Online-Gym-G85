@@ -5,36 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Client.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ClassFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ClassFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/AdminViewCoachProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/AdminViewCoachProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/AdminViewMemberProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/AdminViewMemberProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/NavigatorAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/NavigatorAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/UserManageAllAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/UserManageAllAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/LessonDetailCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/LessonDetailCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/NavigatorCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/NavigatorCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/ProfileCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ProfileCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Coach.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/buffer/lessonBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/MyLessonMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/MyLessonMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/NavigatorMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/NavigatorMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/OpenVip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/OpenVip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/ProfileMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/ProfileMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/member/ViewMemberProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/ViewMemberProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/plan/PlanData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/plan/PlanData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/plan/ReadPlanXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/plan/ReadPlanXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/plan/WritePlanXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/plan/WritePlanXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/buffer/userBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/userBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/other/ViewBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/other/ViewBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/buffer/planBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/planBuffer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/xmls/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Class.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/xmls/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Client.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Coach.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/xmls/Plan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Plan.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -280,21 +264,7 @@
       <workItem from="1622075316787" duration="32586000" />
       <workItem from="1622162146739" duration="24709000" />
       <workItem from="1622251625106" duration="827000" />
-      <workItem from="1622252499312" duration="2267000" />
-    </task>
-    <task id="LOCAL-00008" summary="Add test file, modify class name">
-      <created>1619145948123</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1619145948123</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Add test file, modify class name">
-      <created>1619145988676</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1619145988676</updated>
+      <workItem from="1622252499312" duration="6563000" />
     </task>
     <task id="LOCAL-00010" summary="Update">
       <created>1619155369227</created>
@@ -625,7 +595,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622198134119</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="update">
+      <created>1622255367708</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1622255367708</updated>
+    </task>
+    <task id="LOCAL-00058" summary="update">
+      <created>1622255486640</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1622255486640</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
