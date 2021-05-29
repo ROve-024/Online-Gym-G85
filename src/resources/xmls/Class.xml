@@ -2,112 +2,132 @@
 <DATA>
     <ROW>
         <ClassID>1</ClassID>
-        <Name>hah</Name>
+        <Name>push-up</Name>
         <CoachID>1</CoachID>
         <VedioAddress>Rec.com</VedioAddress>
-        <Category>yoga</Category>
-        <Detail>haha</Detail>
+        <Category>Muscle strength training</Category>
+        <Detail>Coach Gao will teach you how to do push ups reasonably and what points you should pay attention to when doing push ups to achieve the best effect.</Detail>
         <VIPLevel>2</VIPLevel>
-        <FileAddress>run.png</FileAddress>
+        <FileAddress>1.gif</FileAddress>
     </ROW>
     <ROW>
         <ClassID>2</ClassID>
-        <Name>xixi</Name>
+        <Name>Weightlifting</Name>
         <CoachID>1</CoachID>
-        <VedioAddress>Live.com</VedioAddress>
-        <Category>aerobics</Category>
-        <Detail>haha</Detail>
-        <VIPLevel>2</VIPLevel>
-        <FileAddress>123.jpg</FileAddress>
+        <VedioAddress>Rec.com</VedioAddress>
+        <Category>Muscle strength training</Category>
+        <Detail>Coach Gao will give you some knowledge about weightlifting and some important warm-up exercises before class.</Detail>
+        <VIPLevel>3</VIPLevel>
+        <FileAddress>2.jpg</FileAddress>
     </ROW>
     <ROW>
         <ClassID>3</ClassID>
-        <Name>hah</Name>
-        <CoachID>1</CoachID>
+        <Name>sprint</Name>
+        <CoachID>2</CoachID>
         <VedioAddress>Rec.com</VedioAddress>
-        <Category>yoga</Category>
-        <Detail>haha</Detail>
-        <VIPLevel>2</VIPLevel>
-        <FileAddress>123.jpg</FileAddress>
+        <Category>Anaerobic exercise</Category>
+        <Detail>Coach Gao will take you into the mysterious class of sprint, focusing on explaining how sprint exercises our body.</Detail>
+        <VIPLevel>0</VIPLevel>
+        <FileAddress>3.jpg</FileAddress>
     </ROW>
     <ROW>
         <ClassID>4</ClassID>
-        <Name>xixi</Name>
-        <CoachID>1</CoachID>
-        <VedioAddress>Live.com</VedioAddress>
-        <Category>aerobics</Category>
-        <Detail>haha</Detail>
-        <VIPLevel>2</VIPLevel>
-        <FileAddress>123.jpg</FileAddress>
+        <Name>Pedal exercise</Name>
+        <CoachID>2</CoachID>
+        <VedioAddress>Rec.com</VedioAddress>
+        <Category>Aerobic exercise</Category>
+        <Detail>Pedal aerobics, with all the characteristics of aerobics, at the same time, because most of the action is completed on the pedal, it can more effectively enhance the cardiopulmonary function and coordination.</Detail>
+        <VIPLevel>3</VIPLevel>
+        <FileAddress>4.jpg</FileAddress>
     </ROW>
     <ROW>
         <ClassID>5</ClassID>
-        <Name>hah</Name>
-        <CoachID>1</CoachID>
+        <Name>Taiji</Name>
+        <CoachID>3</CoachID>
         <VedioAddress>Rec.com</VedioAddress>
-        <Category>yoga</Category>
-        <Detail>haha</Detail>
-        <VIPLevel>2</VIPLevel>
-        <FileAddress>123.jpg</FileAddress>
+        <Category>Aerobic exercise</Category>
+        <Detail>The so-called Tai Chi is to clarify the universe from the infinite to Tai Chi, as well as the process of all things. Taiji is the state before heaven and earth are opened and chaos is not divided into yin and Yang. The tie words of the book of changes: "it is so easy to have Taiji, and it is to produce Liangyi.".</Detail>
+        <VIPLevel>3</VIPLevel>
+        <FileAddress>5.jpg</FileAddress>
     </ROW>
     <ROW>
         <ClassID>6</ClassID>
-        <Name>xixi</Name>
-        <CoachID>2</CoachID>
-        <VedioAddress>Live.com</VedioAddress>
-        <Category>aerobics</Category>
-        <Detail>haha</Detail>
+        <Name>Hunyuan Taijiquan</Name>
+        <CoachID>3</CoachID>
+        <VedioAddress>Bilibili.com</VedioAddress>
+        <Category>Aerobic exercise</Category>
+        <Detail>Hunyuan Taijiquan is guided by the mind, based on the theory of yin and Yang in Taiji, and through the practice of Taiji's thirteen postures, it can achieve the excellent kung fu of combining internal and external, and mixing yuan and Qi. </Detail>
         <VIPLevel>2</VIPLevel>
-        <FileAddress>123.jpg</FileAddress>
+        <FileAddress>6.jpg</FileAddress>
     </ROW>
     <ROW>
         <ClassID>7</ClassID>
-        <Name>hah</Name>
-        <CoachID>1</CoachID>
-        <VedioAddress>Rec.com</VedioAddress>
-        <Category>yoga</Category>
-        <Detail>haha</Detail>
-        <VIPLevel>2</VIPLevel>
-        <FileAddress>123.jpg</FileAddress>
+        <Name>kickboxing</Name>
+        <CoachID>4</CoachID>
+        <VedioAddress>TT.com</VedioAddress>
+        <Category>Aerobic exercise</Category>
+        <Detail>It combines the basic movements of boxing, Taiquan, taekwondo, Sanshou and Taiji, follows the latest arrangement method of aerobics, and completes a way of physical exercise under the strong music beat.</Detail>
+        <VIPLevel>0</VIPLevel>
+        <FileAddress>7.jpg</FileAddress>
     </ROW>
     <ROW>
         <ClassID>8</ClassID>
-        <Name>11</Name>
-        <CoachID>2</CoachID>
-        <VedioAddress>11</VedioAddress>
-        <Category>11</Category>
-        <Detail>11</Detail>
-        <VIPLevel>1</VIPLevel>
-        <FileAddress>11</FileAddress>
+        <Name>Weightlifting</Name>
+        <CoachID>4</CoachID>
+        <VedioAddress>Rec.com</VedioAddress>
+        <Category>Aerobic exercise</Category>
+        <Detail>The coach will take you to the fun of weightlifting gradually, and help you make a reasonable plan to exercise.</Detail>
+        <VIPLevel>0</VIPLevel>
+        <FileAddress>8.jpg</FileAddress>
     </ROW>
     <ROW>
         <ClassID>9</ClassID>
-        <Name>22</Name>
-        <CoachID>1</CoachID>
-        <VedioAddress>22</VedioAddress>
-        <Category>22</Category>
-        <Detail>22</Detail>
-        <VIPLevel>0</VIPLevel>
-        <FileAddress>22</FileAddress>
+        <Name>Bally Stretch</Name>
+        <CoachID>5</CoachID>
+        <VedioAddress>Rec.com</VedioAddress>
+        <Category>Muscle strength training</Category>
+        <Detail>According to the natural rules of pre-set music action combination, let you easily master the practice techniques, back to the original, fusion of ancient oriental skills and modern techniques, for relieving pressure and preset.</Detail>
+        <VIPLevel>3</VIPLevel>
+        <FileAddress>9.jpg</FileAddress>
     </ROW>
     <ROW>
         <ClassID>10</ClassID>
-        <Name>33</Name>
-        <CoachID>2</CoachID>
-        <VedioAddress>33</VedioAddress>
-        <Category>33</Category>
-        <Detail>33</Detail>
-        <VIPLevel>2</VIPLevel>
-        <FileAddress>33</FileAddress>
+        <Name>Fitness ball</Name>
+        <CoachID>5</CoachID>
+        <VedioAddress>Rec.com</VedioAddress>
+        <Category>Aerobic exercise</Category>
+        <Detail>Fitness ball can train the muscles of chest, abdomen, back, buttocks and legs, which play an important role in maintaining body balance, improving body posture and preventing sports injuries.</Detail>
+        <VIPLevel>1</VIPLevel>
+        <FileAddress>10.jpg</FileAddress>
     </ROW>
     <ROW>
         <ClassID>11</ClassID>
-        <Name>55</Name>
-        <CoachID>1</CoachID>
-        <VedioAddress>55</VedioAddress>
-        <Category>55</Category>
-        <Detail>55</Detail>
+        <Name>Yoga</Name>
+        <CoachID>6</CoachID>
+        <VedioAddress>Rec.com</VedioAddress>
+        <Category>Muscle strength training</Category>
+        <Detail>Yoga posture uses ancient and easy to master skills to improve people's physical, psychological, emotional and spiritual abilities.</Detail>
         <VIPLevel>2</VIPLevel>
-        <FileAddress>55</FileAddress>
+        <FileAddress>11.jpg</FileAddress>
+    </ROW>
+    <ROW>
+        <ClassID>12</ClassID>
+        <Name>Aerobics</Name>
+        <CoachID>6</CoachID>
+        <VedioAddress>Rec.com</VedioAddress>
+        <Category>Aerobic exercise</Category>
+        <Detail>Calisthenics is a kind of sports that combines gymnastics, music and dance in pursuit of human health and beauty. Therefore, calisthenics has many social and cultural functions such as sports, dance, music and aesthetic education.</Detail>
+        <VIPLevel>3</VIPLevel>
+        <FileAddress>12.jpg</FileAddress>
+    </ROW>
+    <ROW>
+        <ClassID>13</ClassID>
+        <Name>Aerobic dance</Name>
+        <CoachID>7</CoachID>
+        <VedioAddress>Rec.com</VedioAddress>
+        <Category>Aerobic exercise</Category>
+        <Detail>Aerobic dance is an aerobic exercise that moves rhythmically with music. On the one hand, aerobic dance can consume more heat, on the other hand, it can turn many dance movements into aerobics. Through the form of aerobic aerobics, it can repeat or combine exercises.</Detail>
+        <VIPLevel>0</VIPLevel>
+        <FileAddress>13.jpg</FileAddress>
     </ROW>
 </DATA>
