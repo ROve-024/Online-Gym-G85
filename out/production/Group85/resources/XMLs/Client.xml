@@ -12,7 +12,7 @@
         <VIPlevel>2</VIPlevel>
         <Target>haha</Target>
         <PhysicalCondition>good</PhysicalCondition>
-        <FileAddress>123.jpg</FileAddress>
+        <FileAddress>Acatar (1).jpg</FileAddress>
     </ROW>
     <ROW>
         <ClientID>2</ClientID>
@@ -26,7 +26,7 @@
         <VIPlevel>3</VIPlevel>
         <Target>haha</Target>
         <PhysicalCondition>good</PhysicalCondition>
-        <FileAddress>123.jpg</FileAddress>
+        <FileAddress>Acatar (1).jpg</FileAddress>
     </ROW>
     <ROW>
         <ClientID>3</ClientID>
@@ -37,9 +37,9 @@
         <Email>Empty</Email>
         <Sex>female</Sex>
         <Balance>Empty</Balance>
-        <VIPlevel>Empty</VIPlevel>
+        <VIPlevel>3</VIPlevel>
         <Target>Empty</Target>
         <PhysicalCondition>Empty</PhysicalCondition>
-        <FileAddress>Empty</FileAddress>
+        <FileAddress>Acatar (3).jpg</FileAddress>
     </ROW>
 </DATA>

@@ -25,3 +25,11 @@ hs_err_pid*
 
 #folder
 out.production/
+
+#folder
+out.production/
+out/
+.idea/
+
+#other
+*.iml

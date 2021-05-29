@@ -261,6 +261,15 @@ public class LessonDetailAdmin extends JFrame {
         CoachData coachData = CoachFunction.searchCoachByID(this.classData.getCoachID());
         this.coachName.setText("Name: " + coachData.getName());
         this.coachMsg.setText("Phome: " + coachData.getPhonenumber());
-
+        try{
+            this.coachAvatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData.getFileAddress())));
+        }catch (NullPointerException miss){
+            this.coachAvatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+        }
+        try{
+            this.lessonPicture.setIcon(new ImageIcon(getClass().getResource("/resources/images/lessonPic/" + classData.getFileAddress())));
+        }catch (NullPointerException miss){
+            this.lessonPicture.setIcon(new ImageIcon(getClass().getResource("/resources/images/lessonPic/404.png")));
+        }
     }
 }

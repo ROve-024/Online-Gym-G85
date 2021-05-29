@@ -514,5 +514,10 @@ public class ProfileMember extends JFrame {
         this.email.setText(UserBuffer.dataIsEmpty(clientData.getEmail()));
         this.phoneNumber.setText(UserBuffer.dataIsEmpty(clientData.getPhonenumber()));
         this.gender.setText(UserBuffer.dataIsEmpty(clientData.getSex()));
+        try{
+            this.avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar150/" + clientData.getFileAddress())));
+        }catch (NullPointerException miss){
+            this.avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar150/404.jpg")));
+        }
     }
 }

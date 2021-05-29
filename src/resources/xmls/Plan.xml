@@ -56,4 +56,12 @@
         <StartTime>2021-5-30 15:00:00</StartTime>
         <Endtime>2021-5-30 17:00:00</Endtime>
     </ROW>
+    <ROW>
+        <PlanID>8</PlanID>
+        <ClientID>3</ClientID>
+        <CoachID>2</CoachID>
+        <ClassID>10</ClassID>
+        <StartTime>111</StartTime>
+        <Endtime>222</Endtime>
+    </ROW>
 </DATA>

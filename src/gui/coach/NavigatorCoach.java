@@ -301,5 +301,10 @@ public class NavigatorCoach extends JFrame {
         CoachData coachData = UserBuffer.getCoachSession();
         this.username.setText(coachData.getAccount());
         this.welcomeMsg.setText("Welcome, coach.");
+        try{
+            this.label1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData.getFileAddress())));
+        }catch (NullPointerException miss){
+            this.label1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+        }
     }
 }

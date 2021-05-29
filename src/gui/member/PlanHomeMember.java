@@ -653,7 +653,7 @@ public class PlanHomeMember extends JFrame {
     }
     private void init() {
         ClientData clientData = UserBuffer.getClientSession();
-        list = PlanFunction.searchPlanByCoachID(clientData.getClientID());
+        list = PlanFunction.searchPlanByClientID(clientData.getClientID());
         this.update();
     }
 

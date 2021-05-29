@@ -315,6 +315,12 @@ public class NavigatorMember extends JFrame {
     private void init(){
         ClientData clientData = UserBuffer.getClientSession();
         this.username.setText(clientData.getAccount());
+        this.vipLevel.setText("Level" + clientData.getVIPlevel());
         this.welcomeMsg.setText("Welcome, dear client.");
+        try{
+            this.label1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData.getFileAddress())));
+        }catch (NullPointerException miss){
+            this.label1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+        }
     }
 }

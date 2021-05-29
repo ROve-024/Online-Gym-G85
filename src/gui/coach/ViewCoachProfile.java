@@ -499,5 +499,10 @@ public class ViewCoachProfile extends JFrame {
         this.email.setText(UserBuffer.dataIsEmpty(coachData.getEmail()));
         this.phoneNumber.setText(UserBuffer.dataIsEmpty(coachData.getPhonenumber()));
         this.gender.setText(UserBuffer.dataIsEmpty(coachData.getSex()));
+        try{
+            this.avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar150/" + coachData.getFileAddress())));
+        }catch (NullPointerException miss){
+            this.avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar150/404.jpg")));
+        }
     }
 }

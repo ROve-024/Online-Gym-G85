@@ -35,7 +35,14 @@ public class OpenVip extends JFrame {
             clientData.setVIPlevel("3");
         }
         ClientFunction.updateClientInfo(clientData);
-        this.dispose();
+        java.awt.Window[] win = java.awt.Window.getWindows();
+        int i=0;
+        while (i<win.length) {
+            win[i].dispose();
+            i++;
+        }
+        NavigatorMember.run();
+        ProfileMember.run();
     }
 
     private void initComponents() {

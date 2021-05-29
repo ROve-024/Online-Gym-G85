@@ -1439,29 +1439,70 @@ public class UserManageAllAdmin extends JFrame {
             }
             this.clientName1.setText(clientData[0].getName());
             this.clientGender1.setText(clientData[0].getSex());
+            try{
+                this.clientAvatar1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData[0].getFileAddress())));
+            }catch (NullPointerException miss){
+                this.clientAvatar1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            }
 
             this.clientName2.setText(clientData[1].getName());
             this.clientGender2.setText(clientData[1].getSex());
+            try{
+                this.clientAvatar2.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData[1].getFileAddress())));
+            }catch (NullPointerException miss){
+                this.clientAvatar2.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            }
 
             this.clientName3.setText(clientData[2].getName());
             this.clientGender3.setText(clientData[2].getSex());
+            try{
+                this.clientAvatar3.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData[2].getFileAddress())));
+            }catch (NullPointerException miss){
+                this.clientAvatar3.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            }
 
             this.clientName4.setText(clientData[3].getName());
             this.clientGender4.setText(clientData[3].getSex());
+            try{
+                this.clientAvatar4.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData[3].getFileAddress())));
+            }catch (NullPointerException miss){
+                this.clientAvatar4.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            }
 
             this.clientName5.setText(clientData[4].getName());
             this.clientGender5.setText(clientData[4].getSex());
+            try{
+                this.clientAvatar5.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData[4].getFileAddress())));
+            }catch (NullPointerException miss){
+                this.clientAvatar5.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            }
 
             this.clientName6.setText(clientData[5].getName());
             this.clientGender6.setText(clientData[5].getSex());
+            try{
+                this.clientAvatar6.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData[5].getFileAddress())));
+            }catch (NullPointerException miss){
+                this.clientAvatar6.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            }
 
             this.clientName7.setText(clientData[6].getName());
             this.clientGender7.setText(clientData[6].getSex());
+            try{
+                this.clientAvatar7.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData[6].getFileAddress())));
+            }catch (NullPointerException miss){
+                this.clientAvatar7.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            }
 
             this.clientName8.setText(clientData[7].getName());
             this.clientGender8.setText(clientData[7].getSex());
+            try{
+                this.clientAvatar8.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData[7].getFileAddress())));
+            }catch (NullPointerException miss){
+                this.clientAvatar8.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            }
 
-        }else{
+        }
+        else{
             this.clientRemainNumb = this.clientList.size() % 8;
             for(i = 0; i < clientRemainNumb; i++){
                 clientData[i] = this.clientList.get(i + this.pageClient * 8);
@@ -1471,24 +1512,59 @@ public class UserManageAllAdmin extends JFrame {
                 case 7:
                     this.clientName7.setText(clientData[6].getName());
                     this.clientGender7.setText(clientData[6].getSex());
+                    try{
+                        this.clientAvatar7.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData[6].getFileAddress())));
+                    }catch (NullPointerException miss){
+                        this.clientAvatar7.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+                    }
                 case 6:
                     this.clientName6.setText(clientData[5].getName());
                     this.clientGender6.setText(clientData[5].getSex());
+                    try{
+                        this.clientAvatar6.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData[5].getFileAddress())));
+                    }catch (NullPointerException miss){
+                        this.clientAvatar6.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+                    }
                 case 5:
                     this.clientName5.setText(clientData[4].getName());
                     this.clientGender5.setText(clientData[4].getSex());
+                    try{
+                        this.clientAvatar5.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData[4].getFileAddress())));
+                    }catch (NullPointerException miss){
+                        this.clientAvatar5.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+                    }
                 case 4:
                     this.clientName4.setText(clientData[3].getName());
                     this.clientGender4.setText(clientData[3].getSex());
+                    try{
+                        this.clientAvatar4.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData[3].getFileAddress())));
+                    }catch (NullPointerException miss){
+                        this.clientAvatar4.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+                    }
                 case 3:
                     this.clientName3.setText(clientData[2].getName());
                     this.clientGender3.setText(clientData[2].getSex());
+                    try{
+                        this.clientAvatar3.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData[2].getFileAddress())));
+                    }catch (NullPointerException miss){
+                        this.clientAvatar3.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+                    }
                 case 2:
                     this.clientName2.setText(clientData[1].getName());
                     this.clientGender2.setText(clientData[1].getSex());
+                    try{
+                        this.clientAvatar2.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData[1].getFileAddress())));
+                    }catch (NullPointerException miss){
+                        this.clientAvatar2.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+                    }
                 case 1:
                     this.clientName1.setText(clientData[0].getName());
                     this.clientGender1.setText(clientData[0].getSex());
+                    try{
+                        this.clientAvatar1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData[0].getFileAddress())));
+                    }catch (NullPointerException miss){
+                        this.clientAvatar1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+                    }
             }
             //Set style for the remaining clients
             switch (clientRemainNumb){
@@ -1500,6 +1576,7 @@ public class UserManageAllAdmin extends JFrame {
                     this.clientGender2.setBackground(new Color(230,230,230));
                     this.clientGender2.setOpaque(true);
                     this.memberMoreButton2.setVisible(false);
+                    this.clientAvatar2.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
                 case 2:
                     this.clientName3.setText("");
                     this.clientName3.setBackground(new Color(230,230,230));
@@ -1508,6 +1585,7 @@ public class UserManageAllAdmin extends JFrame {
                     this.clientGender3.setBackground(new Color(230,230,230));
                     this.clientGender3.setOpaque(true);
                     this.memberMoreButton3.setVisible(false);
+                    this.clientAvatar3.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
                 case 3:
                     this.clientName4.setText("");
                     this.clientName4.setBackground(new Color(230,230,230));
@@ -1516,6 +1594,7 @@ public class UserManageAllAdmin extends JFrame {
                     this.clientGender4.setBackground(new Color(230,230,230));
                     this.clientGender4.setOpaque(true);
                     this.memberMoreButton4.setVisible(false);
+                    this.clientAvatar4.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
                 case 4:
                     this.clientName5.setText("");
                     this.clientName5.setBackground(new Color(230,230,230));
@@ -1524,6 +1603,7 @@ public class UserManageAllAdmin extends JFrame {
                     this.clientGender5.setBackground(new Color(230,230,230));
                     this.clientGender5.setOpaque(true);
                     this.memberMoreButton5.setVisible(false);
+                    this.clientAvatar5.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
                 case 5:
                     this.clientName6.setText("");
                     this.clientName6.setBackground(new Color(230,230,230));
@@ -1532,6 +1612,7 @@ public class UserManageAllAdmin extends JFrame {
                     this.clientGender6.setBackground(new Color(230,230,230));
                     this.clientGender6.setOpaque(true);
                     this.memberMoreButton6.setVisible(false);
+                    this.clientAvatar6.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
                 case 6:
                     this.clientName7.setText("");
                     this.clientName7.setBackground(new Color(230,230,230));
@@ -1540,6 +1621,7 @@ public class UserManageAllAdmin extends JFrame {
                     this.clientGender7.setBackground(new Color(230,230,230));
                     this.clientGender7.setOpaque(true);
                     this.memberMoreButton7.setVisible(false);
+                    this.clientAvatar7.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
                 case 7:
                     this.clientName8.setText("");
                     this.clientName8.setBackground(new Color(230,230,230));
@@ -1548,6 +1630,7 @@ public class UserManageAllAdmin extends JFrame {
                     this.clientGender8.setBackground(new Color(230,230,230));
                     this.clientGender8.setOpaque(true);
                     this.memberMoreButton8.setVisible(false);
+                    this.clientAvatar8.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
             }
         }
     }
@@ -1597,27 +1680,67 @@ public class UserManageAllAdmin extends JFrame {
             }
             this.coachName1.setText(coachData[0].getName());
             this.coachGender1.setText(coachData[0].getSex());
+            try{
+                this.coachAvatar1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData[0].getFileAddress())));
+            }catch (NullPointerException miss){
+                this.coachAvatar1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            }
 
             this.coachName2.setText(coachData[1].getName());
             this.coachGender2.setText(coachData[1].getSex());
+            try{
+                this.coachAvatar2.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData[1].getFileAddress())));
+            }catch (NullPointerException miss){
+                this.coachAvatar2.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            }
 
             this.coachName3.setText(coachData[2].getName());
             this.coachGender3.setText(coachData[2].getSex());
+            try{
+                this.coachAvatar3.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData[2].getFileAddress())));
+            }catch (NullPointerException miss){
+                this.coachAvatar3.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            }
 
             this.coachName4.setText(coachData[3].getName());
             this.coachGender4.setText(coachData[3].getSex());
+            try{
+                this.coachAvatar4.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData[3].getFileAddress())));
+            }catch (NullPointerException miss){
+                this.coachAvatar4.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            }
 
             this.coachName5.setText(coachData[4].getName());
             this.coachGender5.setText(coachData[4].getSex());
+            try{
+                this.coachAvatar5.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData[4].getFileAddress())));
+            }catch (NullPointerException miss){
+                this.coachAvatar5.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            }
 
             this.coachName6.setText(coachData[5].getName());
             this.coachGender6.setText(coachData[5].getSex());
+            try{
+                this.coachAvatar6.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData[5].getFileAddress())));
+            }catch (NullPointerException miss){
+                this.coachAvatar6.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            }
 
             this.coachName7.setText(coachData[6].getName());
             this.coachGender7.setText(coachData[6].getSex());
+            try{
+                this.coachAvatar7.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData[6].getFileAddress())));
+            }catch (NullPointerException miss){
+                this.coachAvatar7.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            }
 
             this.coachName8.setText(coachData[7].getName());
             this.coachGender8.setText(coachData[7].getSex());
+            try{
+                this.coachAvatar8.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData[7].getFileAddress())));
+            }catch (NullPointerException miss){
+                this.coachAvatar8.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            }
 
         }else{
             this.coachRemainNumb = this.coachList.size() % 8;
@@ -1629,24 +1752,59 @@ public class UserManageAllAdmin extends JFrame {
                 case 7:
                     this.coachName7.setText(coachData[6].getName());
                     this.coachGender7.setText(coachData[6].getSex());
+                    try{
+                        this.coachAvatar7.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData[6].getFileAddress())));
+                    }catch (NullPointerException miss){
+                        this.coachAvatar7.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+                    }
                 case 6:
                     this.coachName6.setText(coachData[5].getName());
                     this.coachGender6.setText(coachData[5].getSex());
+                    try{
+                        this.coachAvatar6.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData[5].getFileAddress())));
+                    }catch (NullPointerException miss){
+                        this.coachAvatar6.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+                    }
                 case 5:
                     this.coachName5.setText(coachData[4].getName());
                     this.coachGender5.setText(coachData[4].getSex());
+                    try{
+                        this.coachAvatar5.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData[4].getFileAddress())));
+                    }catch (NullPointerException miss){
+                        this.coachAvatar5.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+                    }
                 case 4:
                     this.coachName4.setText(coachData[3].getName());
                     this.coachGender4.setText(coachData[3].getSex());
+                    try{
+                        this.coachAvatar4.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData[3].getFileAddress())));
+                    }catch (NullPointerException miss){
+                        this.coachAvatar4.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+                    }
                 case 3:
                     this.coachName3.setText(coachData[2].getName());
                     this.coachGender3.setText(coachData[2].getSex());
+                    try{
+                        this.coachAvatar3.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData[2].getFileAddress())));
+                    }catch (NullPointerException miss){
+                        this.coachAvatar3.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+                    }
                 case 2:
                     this.coachName2.setText(coachData[1].getName());
                     this.coachGender2.setText(coachData[1].getSex());
+                    try{
+                        this.coachAvatar2.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData[1].getFileAddress())));
+                    }catch (NullPointerException miss){
+                        this.coachAvatar2.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+                    }
                 case 1:
                     this.coachName1.setText(coachData[0].getName());
                     this.coachGender1.setText(coachData[0].getSex());
+                    try{
+                        this.coachAvatar1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData[0].getFileAddress())));
+                    }catch (NullPointerException miss){
+                        this.coachAvatar1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+                    }
             }
             //Set style for the remaining clients
             switch (coachRemainNumb){
@@ -1658,6 +1816,7 @@ public class UserManageAllAdmin extends JFrame {
                     this.coachGender2.setBackground(new Color(230,230,230));
                     this.coachGender2.setOpaque(true);
                     this.coachMoreButton2.setVisible(false);
+                    this.coachAvatar2.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
                 case 2:
                     this.coachName3.setText("");
                     this.coachName3.setBackground(new Color(230,230,230));
@@ -1666,6 +1825,7 @@ public class UserManageAllAdmin extends JFrame {
                     this.coachGender3.setBackground(new Color(230,230,230));
                     this.coachGender3.setOpaque(true);
                     this.coachMoreButton3.setVisible(false);
+                    this.coachAvatar3.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
                 case 3:
                     this.coachName4.setText("");
                     this.coachName4.setBackground(new Color(230,230,230));
@@ -1674,6 +1834,7 @@ public class UserManageAllAdmin extends JFrame {
                     this.coachGender4.setBackground(new Color(230,230,230));
                     this.coachGender4.setOpaque(true);
                     this.coachMoreButton4.setVisible(false);
+                    this.coachAvatar4.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
                 case 4:
                     this.coachName5.setText("");
                     this.coachName5.setBackground(new Color(230,230,230));
@@ -1682,6 +1843,7 @@ public class UserManageAllAdmin extends JFrame {
                     this.coachGender5.setBackground(new Color(230,230,230));
                     this.coachGender5.setOpaque(true);
                     this.coachMoreButton5.setVisible(false);
+                    this.coachAvatar5.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
                 case 5:
                     this.coachName6.setText("");
                     this.coachName6.setBackground(new Color(230,230,230));
@@ -1690,6 +1852,7 @@ public class UserManageAllAdmin extends JFrame {
                     this.coachGender6.setBackground(new Color(230,230,230));
                     this.coachGender6.setOpaque(true);
                     this.coachMoreButton6.setVisible(false);
+                    this.coachAvatar6.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
                 case 6:
                     this.coachName7.setText("");
                     this.coachName7.setBackground(new Color(230,230,230));
@@ -1698,6 +1861,7 @@ public class UserManageAllAdmin extends JFrame {
                     this.coachGender7.setBackground(new Color(230,230,230));
                     this.coachGender7.setOpaque(true);
                     this.coachMoreButton7.setVisible(false);
+                    this.coachAvatar7.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
                 case 7:
                     this.coachName8.setText("");
                     this.coachName8.setBackground(new Color(230,230,230));
@@ -1706,6 +1870,8 @@ public class UserManageAllAdmin extends JFrame {
                     this.coachGender8.setBackground(new Color(230,230,230));
                     this.coachGender8.setOpaque(true);
                     this.coachMoreButton8.setVisible(false);
+                    this.coachAvatar8.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+
             }
         }
     }

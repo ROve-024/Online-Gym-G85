@@ -263,5 +263,10 @@ public class NavigatorAdmin extends JFrame {
         AdminData adminData = UserBuffer.getAdminSession();
         this.username.setText(adminData.getAccount());
         this.welcomeMsg.setText("Welcome, admin.");
+        try{
+            this.avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/admin.png" )));
+        }catch (NullPointerException miss){
+            this.avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+        }
     }
 }

@@ -127,32 +127,24 @@ public class ClassFunction {
 
     public static List searchClassByCoachName(String CoachName){
         List<ClassData> classList = getWholeClass();
+        List<ClassData> result = new ArrayList<ClassData>();
         String coachID = null;
 
         CoachFunction coachFunction = new CoachFunction();
         List<CoachData> coachList = coachFunction.getWholeCoach();
-        for(int j=0;j<coachList.size();){
+        for(int j=0;j<coachList.size();j++){
             if(coachList.get(j).getName().equals(CoachName)){
                 coachID = coachList.get(j).getID();
-            }
-            else{
-                j++;
-            }
-        }
-
-
-
-        for(int i=0;i<classList.size();){
-            ClassData temp = classList.get(i);
-            if(!temp.getCoachID().equals(coachID)){
-                classList.remove(i);
-            }
-            else{
-                i++;
+                for(int i=0;i<classList.size();i++){
+                    ClassData temp = classList.get(i);
+                    if(temp.getCoachID().equals(coachID)){
+                        result.add(temp);
+                    }
+                }
             }
         }
 
-        return  classList;
+        return  result;
     }
 
     public static void updateClassInfo(ClassData classData){
