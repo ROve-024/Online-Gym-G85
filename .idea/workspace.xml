@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Coach.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/buffer/lessonBuffer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/ViewMemberProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/ViewMemberProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/other/ViewBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/other/ViewBuffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/buffer/planBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/planBuffer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Class.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Client.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Plan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Plan.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
