@@ -13,7 +13,7 @@ import static io.plan.ReadPlanXml.readPlanXML;
 public class PlanFunction {
 
 
-    public static List getWholePlan(){
+    public static List<PlanData> getWholePlan(){
         List<PlanData> planList = readPlanXML();
 
         return planList;
@@ -64,7 +64,7 @@ public class PlanFunction {
         return PlanData;
     }
 
-    public static List searchPlanByClientID(String ClientID){
+    public static List<PlanData> searchPlanByClientID(String ClientID){
 
         List<PlanData> PlanList = getWholePlan();
 
@@ -82,7 +82,7 @@ public class PlanFunction {
         return PlanList;
     }
 
-    public static List searchPlanByCoachID(String CoachID){
+    public static List<PlanData> searchPlanByCoachID(String CoachID){
 
         List<PlanData> PlanList = getWholePlan();
 

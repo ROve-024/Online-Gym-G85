@@ -11,7 +11,7 @@ import org.w3c.dom.Node;import org.w3c.dom.NodeList;
 
 public class ReadCoachXml {
 	
-	public static List readCoachXML() {
+	public static List<CoachData> readCoachXML() {
 		
 		File  xmlFile = new File("src/resources/XMLs/Coach.xml");
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();  //Step1

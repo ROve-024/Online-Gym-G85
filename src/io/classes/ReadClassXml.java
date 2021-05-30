@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ReadClassXml {
 	
-	public static List readClassXML() {
+	public static List<ClassData> readClassXML() {
 		
 		File  xmlFile = new File("src/resources/XMLs/Class.xml");
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();  //Step1

@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ReadClientXml {
 	
-	public static List readClientXML() {
+	public static List<ClientData> readClientXML() {
 		
 		File  xmlFile = new File("src/resources/XMLs/Client.xml");
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();  //Step1

@@ -397,7 +397,7 @@ new FormModel {
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "nextPageButton"
 					"borderPainted": false
-					"background": sfield java.awt.SystemColor control
+					"background": sfield java.awt.Color darkGray
 					"text": "NEXT"
 					"foreground": sfield java.awt.Color white
 					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "nextPageButtonActionPerformed", true ) )

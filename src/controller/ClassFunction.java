@@ -10,7 +10,7 @@ import java.util.List;
 import static io.classes.ReadClassXml.readClassXML;
 
 public class ClassFunction {
-    public static List getWholeClass(){                    //return the whole class info
+    public static List<ClassData> getWholeClass(){                    //return the whole class info
         List<ClassData> classList = readClassXML();
 
         return classList;
@@ -93,7 +93,7 @@ public class ClassFunction {
         return  classData;
     }
 
-    public static List searchClassByName(String Name){
+    public static List<ClassData> searchClassByName(String Name){
         List<ClassData> classList = getWholeClass();
 
         for(int i=0;i<classList.size();){
@@ -109,7 +109,7 @@ public class ClassFunction {
         return  classList;
     }
 
-    public static List searchClassByProfile(String Profile){
+    public static List<ClassData> searchClassByProfile(String Profile){
         List<ClassData> classList = getWholeClass();
 
         for(int i=0;i<classList.size();){
@@ -125,7 +125,7 @@ public class ClassFunction {
         return  classList;
     }
 
-    public static List searchClassByCoachName(String CoachName){
+    public static List<ClassData> searchClassByCoachName(String CoachName){
         List<ClassData> classList = getWholeClass();
         List<ClassData> result = new ArrayList<ClassData>();
         String coachID = null;

@@ -36,8 +36,11 @@ public class Login extends JFrame {
         boolean judge;
         String account = this.username.getText();
         String password = new String(this.password.getPassword());
-        //if(CheckFunction.checkPassword(this.password.getPassword()))
-//        System.out.println(account+": "+password);
+        CheckFunction checkFunction = new CheckFunction();
+        if(checkFunction.checkPassword(password)) {
+
+        }
+//      System.out.println(account+": "+password);
         if(this.userButton.isSelected()){
             if(ClientFunction.loginMatch(account, password)){
                 String ID = ClientFunction.getIDByAccount(account);
@@ -74,6 +77,7 @@ public class Login extends JFrame {
         }
 
     }
+
 
     private void signUpButtonActionPerformed(ActionEvent e) {
         // TODO add your code here

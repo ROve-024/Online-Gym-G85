@@ -9,7 +9,7 @@ import static io.coach.ReadCoachXml.readCoachXML;
 
 public class CoachFunction {
 
-    public static List getWholeCoach(){                    //return the whole coach info
+    public static List<CoachData> getWholeCoach(){                    //return the whole coach info
         List<CoachData> coachList = readCoachXML();
 
         return coachList;
@@ -89,7 +89,7 @@ public class CoachFunction {
         return newID;
     }
 
-    public static List searchCoachByName(String Name){
+    public static List<CoachData> searchCoachByName(String Name){
         List<CoachData> coachList = getWholeCoach();
 
         for(int i=0;i<coachList.size();) {

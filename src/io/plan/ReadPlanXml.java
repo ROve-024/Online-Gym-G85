@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ReadPlanXml {
 	
-	public static List readPlanXML() {
+	public static List<PlanData> readPlanXML() {
 		
 		File  xmlFile = new File("src/resources/XMLs/Plan.xml");
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();  //Step1

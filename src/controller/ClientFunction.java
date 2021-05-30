@@ -9,7 +9,7 @@ import java.util.List;
 import static io.client.ReadClientXml.readClientXML;
 
 public class ClientFunction {
-    public static List getWholeClient(){                    //return the whole client info
+    public static List<ClientData> getWholeClient(){                    //return the whole client info
         List<ClientData> clientList = readClientXML();
 
         return clientList;
@@ -92,7 +92,7 @@ public class ClientFunction {
         return newID;
     }
     ////////////////////////
-    public static List searchClientByName(String Name){
+    public static List<ClientData> searchClientByName(String Name){
         List<ClientData> clientList = getWholeClient();
 
         for(int i=0;i<clientList.size();i++) {

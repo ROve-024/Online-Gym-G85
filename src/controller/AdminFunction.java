@@ -9,7 +9,7 @@ import java.util.List;
 
 
 public class AdminFunction {
-    public static List getWholeAdmin(){                    //return the whole coach info
+    public static List<AdminData> getWholeAdmin(){                    //return the whole coach info
         List<AdminData> adminList = ReadAdminXml.readAmdinXML();
 
         return adminList;

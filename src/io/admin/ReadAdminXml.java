@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadAdminXml {
-    public static List readAmdinXML() {
+    public static List<AdminData> readAmdinXML() {
 
         File xmlFile = new File("src/resources/XMLs/Admin.xml");
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();  //Step1
