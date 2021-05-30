@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CheckFunction {
-    public boolean checkEmail(String email){
+    public static boolean checkEmail(String email){
         String regex = "[a-zA-Z0-9_]+@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9]+)+"; // (Note: \ is an escape character）
 
         boolean flag = email.matches(regex);

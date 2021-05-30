@@ -36,10 +36,6 @@ public class Login extends JFrame {
         boolean judge;
         String account = this.username.getText();
         String password = new String(this.password.getPassword());
-        CheckFunction checkFunction = new CheckFunction();
-        if(checkFunction.checkPassword(password)) {
-
-        }
 //      System.out.println(account+": "+password);
         if(this.userButton.isSelected()){
             if(ClientFunction.loginMatch(account, password)){

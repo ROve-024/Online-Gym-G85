@@ -1,10 +1,12 @@
 package gui.member;
 
+import controller.CheckFunction;
 import controller.ClassFunction;
 import controller.PlanFunction;
 import gui.other.LessonBuffer;
 import gui.other.PlanBuffer;
 import gui.other.UserBuffer;
+import gui.other.Warning;
 import io.classes.ClassData;
 import io.plan.PlanData;
 
@@ -27,20 +29,26 @@ public class Book extends JFrame {
 
     private void finishButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
+        CheckFunction checkFunction = new CheckFunction();
         ClassData classData = LessonBuffer.getLessonBuffer();
         PlanData planData = new PlanData();
         PlanFunction.createNewPlanInfo(planData);
         List<PlanData> list;
         list = PlanFunction.getWholePlan();
-        PlanBuffer.setBuffer(String.valueOf(PlanFunction.maxPlanID(list)));
-        planData.setClassID(LessonBuffer.getBuffer());
-        planData.setCoachID(classData.getCoachID());
-        planData.setClientID(UserBuffer.getBuffer());
-        planData.setStartTime(PlanBuffer.toEmpty(this.startTime.getText()));
-        planData.setEndTime(PlanBuffer.toEmpty(this.endTime.getText()));
-        PlanFunction.updatePlanInfo(planData);
-        this.dispose();
-        PlanHomeMember.run();
+        if(checkFunction.checkDate(this.startTime.getText())&&checkFunction.checkDate(this.endTime.getText())){
+            PlanBuffer.setBuffer(String.valueOf(PlanFunction.maxPlanID(list)));
+            planData.setClassID(LessonBuffer.getBuffer());
+            planData.setCoachID(classData.getCoachID());
+            planData.setClientID(UserBuffer.getBuffer());
+            planData.setStartTime(PlanBuffer.toEmpty(this.startTime.getText()));
+            planData.setEndTime(PlanBuffer.toEmpty(this.endTime.getText()));
+            PlanFunction.updatePlanInfo(planData);
+            this.dispose();
+            PlanHomeMember.run();
+        }
+        else {
+            Warning.run("Please enter the correct date format.");
+        }
     }
 
     private void initComponents() {

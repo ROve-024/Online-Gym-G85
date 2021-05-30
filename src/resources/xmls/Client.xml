@@ -4,9 +4,9 @@
         <ClientID>1</ClientID>
         <Name>AA</Name>
         <Account>client001</Account>
-        <Password>123456</Password>
+        <Password>123456as</Password>
         <Phonenumber>12375672136</Phonenumber>
-        <Email>123@qq.com</Email>
+        <Email>1231455@qq.com</Email>
         <Sex>male</Sex>
         <Balance>0.99</Balance>
         <VIPlevel>1</VIPlevel>

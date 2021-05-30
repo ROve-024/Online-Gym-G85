@@ -4,6 +4,7 @@
 
 package gui.coach;
 
+import controller.CheckFunction;
 import controller.CoachFunction;
 import gui.other.UserBuffer;
 import gui.other.Warning;
@@ -25,21 +26,30 @@ public class EditProfileCoach extends JFrame {
     private void finishButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         CoachData coachData = UserBuffer.getCoachSession();
+        CheckFunction checkFunction = new CheckFunction();
         if(CoachFunction.loginMatch(coachData.getAccount(), new String(this.currentPassword.getPassword()))){
             if(new String(this.newPassword.getPassword()).equals(new String(this.confirmPassword.getPassword()))){
                 coachData.setName(UserBuffer.toEmpty(this.name.getText()));
-                coachData.setEmail(UserBuffer.toEmpty(this.email.getText()));
-                coachData.setPhonenumber(UserBuffer.toEmpty(this.phoneNumber.getText()));
-                coachData.setPassword(UserBuffer.toEmpty(new String(this.newPassword.getPassword())));
-                if(maleRadio.isSelected()){
-                    coachData.setSex("male");
+                if(CheckFunction.checkEmail(this.email.getText())) {
+                    coachData.setEmail(UserBuffer.toEmpty(this.email.getText()));
+                    coachData.setPhonenumber(UserBuffer.toEmpty(this.phoneNumber.getText()));
+                    if(checkFunction.checkPassword(new String(this.newPassword.getPassword()))) {
+                        coachData.setPassword(UserBuffer.toEmpty(new String(this.newPassword.getPassword())));
+                        if(maleRadio.isSelected()){
+                            coachData.setSex("male");
+                        }
+                        else{
+                            coachData.setSex("female");
+                        }
+                        CoachFunction.updateCoachInfo(coachData);
+                        ProfileCoach.run();
+                        this.dispose();
+                    } else {
+                        Warning.run("The password is too simple, please re-enter.");
+                    }
+                } else {
+                    Warning.run("Please enter the correct email format.");
                 }
-                else{
-                    coachData.setSex("female");
-                }
-                CoachFunction.updateCoachInfo(coachData);
-                ProfileCoach.run();
-                this.dispose();
             }
             else {
                 Warning.run("The password did not match the re-typed password");
@@ -101,7 +111,7 @@ public class EditProfileCoach extends JFrame {
             title.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 32));
             title.setBackground(Color.white);
             body.add(title);
-            title.setBounds(new Rectangle(new Point(25, 45), title.getPreferredSize()));
+            title.setBounds(25, 45, 280, title.getPreferredSize().height);
 
             //---- finishButton ----
             finishButton.setBorderPainted(false);

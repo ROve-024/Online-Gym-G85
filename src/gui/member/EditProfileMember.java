@@ -4,7 +4,9 @@
 
 package gui.member;
 
+import controller.CheckFunction;
 import controller.ClientFunction;
+import controller.CoachFunction;
 import gui.coach.ProfileCoach;
 import gui.other.UserBuffer;
 import gui.other.Warning;
@@ -25,21 +27,30 @@ public class EditProfileMember extends JFrame {
 
     private void finishButtonActionPerformed(ActionEvent e) {
         ClientData clientData = UserBuffer.getClientSession();
+        CheckFunction checkFunction = new CheckFunction();
         if(ClientFunction.loginMatch(clientData.getAccount(), new String(this.currentPassword.getPassword()))){
             if(new String(this.newPassword.getPassword()).equals(new String(this.confirmPassword.getPassword()))){
                 clientData.setName(UserBuffer.toEmpty(this.name.getText()));
-                clientData.setEmail(UserBuffer.toEmpty(this.email.getText()));
-                clientData.setPhonenumber(UserBuffer.toEmpty(this.phoneNumber.getText()));
-                clientData.setPassword(UserBuffer.toEmpty(new String(this.newPassword.getPassword())));
-                if(maleRadio.isSelected()){
-                    clientData.setSex("male");
+                if(CheckFunction.checkEmail(this.email.getText())) {
+                    clientData.setEmail(UserBuffer.toEmpty(this.email.getText()));
+                    clientData.setPhonenumber(UserBuffer.toEmpty(this.phoneNumber.getText()));
+                    if(checkFunction.checkPassword(new String(this.newPassword.getPassword()))) {
+                        clientData.setPassword(UserBuffer.toEmpty(new String(this.newPassword.getPassword())));
+                        if(maleRadio.isSelected()){
+                            clientData.setSex("male");
+                        }
+                        else{
+                            clientData.setSex("female");
+                        }
+                        ClientFunction.updateClientInfo(clientData);
+                        ProfileMember.run();
+                        this.dispose();
+                    } else {
+                        Warning.run("The password is too simple, please re-enter.");
+                    }
+                } else {
+                    Warning.run("Please enter the correct email format.");
                 }
-                else{
-                    clientData.setSex("female");
-                }
-                ClientFunction.updateClientInfo(clientData);
-                ProfileMember.run();
-                this.dispose();
             }
             else {
                 Warning.run("The password did not match the re-typed password");

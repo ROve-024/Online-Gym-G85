@@ -5,6 +5,7 @@ import javax.swing.border.*;
 import controller.AdminFunction;
 import controller.ClientFunction;
 import controller.CoachFunction;
+import controller.CheckFunction;
 import gui.other.UserBuffer;
 import gui.other.Warning;
 
@@ -26,53 +27,59 @@ public class SignUp extends JFrame {
 
     private void signUpButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
+        CheckFunction checkFunction = new CheckFunction();
         String account = this.account.getText();
         String password = new String(this.password.getPassword());
         String rePassword = new String(this.rePassword.getPassword());
-        if(userButton.isSelected()){
-            if(ClientFunction.ifExistSameAccount(account))
-            {
-                Warning.run("The account entered already exists");
+        if(checkFunction.checkPassword(password)) {
+            if(userButton.isSelected()){
+                if(ClientFunction.ifExistSameAccount(account))
+                {
+                    Warning.run("The account entered already exists");
+                }
+                else if(!password.equals(rePassword)){
+                    Warning.run("The password did not match the re-typed password");
+                }
+                else{
+                    String ID = ClientFunction.signUpSubmit(account,password);
+                    UserBuffer.setBuffer(ID);
+                    Login.run();
+                    this.dispose();
+                }
             }
-            else if(!password.equals(rePassword)){
-                Warning.run("The password did not match the re-typed password");
+            else if(coachButton.isSelected()){
+                if(CoachFunction.ifExistSameAccount(account))
+                {
+                    Warning.run("The account entered already exists");
+                }
+                else if(!password.equals(rePassword)){
+                    Warning.run("The password did not match the re-typed password");
+                }
+                else{
+                    String ID = CoachFunction.signUpSubmit(account,password);
+                    UserBuffer.setBuffer(ID);
+                    Login.run();
+                    this.dispose();
+                }
             }
-            else{
-                String ID = ClientFunction.signUpSubmit(account,password);
-                UserBuffer.setBuffer(ID);
-                Login.run();
-                this.dispose();
+            else if(adminButton.isSelected()){
+                if(AdminFunction.ifExistSameAccount(account))
+                {
+                    Warning.run("The account entered already exists");
+                }
+                else if(!password.equals(rePassword)){
+                    Warning.run("The password did not match the re-typed password");
+                }
+                else{
+                    String ID = AdminFunction.signUpSubmit(account,password);
+                    UserBuffer.setBuffer(ID);
+                    Login.run();
+                    this.dispose();
+                }
             }
         }
-        else if(coachButton.isSelected()){
-            if(CoachFunction.ifExistSameAccount(account))
-            {
-                Warning.run("The account entered already exists");
-            }
-            else if(!password.equals(rePassword)){
-                Warning.run("The password did not match the re-typed password");
-            }
-            else{
-                String ID = CoachFunction.signUpSubmit(account,password);
-                UserBuffer.setBuffer(ID);
-                Login.run();
-                this.dispose();
-            }
-        }
-        else if(adminButton.isSelected()){
-            if(AdminFunction.ifExistSameAccount(account))
-            {
-                Warning.run("The account entered already exists");
-            }
-            else if(!password.equals(rePassword)){
-                Warning.run("The password did not match the re-typed password");
-            }
-            else{
-                String ID = AdminFunction.signUpSubmit(account,password);
-                UserBuffer.setBuffer(ID);
-                Login.run();
-                this.dispose();
-            }
+        else {
+            Warning.run("The password is too simple, please re-enter.");
         }
     }
 
