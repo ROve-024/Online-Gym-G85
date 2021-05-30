@@ -46,10 +46,10 @@ new FormModel {
 					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 32 )
 					"background": sfield java.awt.Color white
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"width": 267
+					"width": 315
 					"height": 42
 					"x": 350
-					"y": 165
+					"y": 155
 				} )
 				add( new FormComponent( "javax.swing.JTextPane" ) {
 					name: "lessonMsg"
@@ -62,9 +62,9 @@ new FormModel {
 					"editable": false
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"width": 398
-					"height": 130
+					"height": 180
 					"x": 350
-					"y": 215
+					"y": 235
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "coachAvatar"
@@ -132,10 +132,22 @@ new FormModel {
 					name: "lessonType"
 					"text": "Type"
 					"background": new java.awt.Color( 240, 128, 128, 255 )
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 350
-					"y": 345
-					"width": 75
+					"y": 205
+					"width": 400
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "needVIP"
+					"text": "VIP"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 3, 16 )
+					"background": sfield java.awt.Color white
+					"foreground": new java.awt.Color( 255, 100, 100, 255 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 685
+					"y": 175
+					"width": 70
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 800

@@ -104,4 +104,12 @@
         <StartTime>2021-05-29 13:00:00</StartTime>
         <Endtime>2021-05-29 15:00:00</Endtime>
     </ROW>
+    <ROW>
+        <PlanID>14</PlanID>
+        <ClientID>Empty</ClientID>
+        <CoachID>Empty</CoachID>
+        <ClassID>Empty</ClassID>
+        <StartTime>Empty</StartTime>
+        <Endtime>Empty</Endtime>
+    </ROW>
 </DATA>

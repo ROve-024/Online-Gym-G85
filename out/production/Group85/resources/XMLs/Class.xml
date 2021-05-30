@@ -130,4 +130,54 @@
         <VIPLevel>0</VIPLevel>
         <FileAddress>13.jpg</FileAddress>
     </ROW>
+    <ROW>
+        <ClassID>14</ClassID>
+        <Name>Belly Dance</Name>
+        <CoachID>1</CoachID>
+        <VedioAddress>Rec.com</VedioAddress>
+        <Category>Aerobic exercise</Category>
+        <Detail>Belly dance is a relatively female dance, which is characterized by the dancers swinging their hips and abdomen with the changing fast rhythm. The dancing posture is beautiful and changeable, and most of them show the Arabian style. It is famous for its mystery. In recent years, as a popular way for women to lose weight, belly dance is popular all over the world.</Detail>
+        <VIPLevel>3</VIPLevel>
+        <FileAddress>14.jpg</FileAddress>
+    </ROW>
+    <ROW>
+        <ClassID>15</ClassID>
+        <Name>Fitness ball</Name>
+        <CoachID>1</CoachID>
+        <VedioAddress>Rec.com</VedioAddress>
+        <Category>Aerobic exercise</Category>
+        <Detail>Fitness ball is one of the traditional fitness and health equipment in China. There are stone, steel, copper, jade, and cloisonne health balls. Mainly produced in Baoding area, also known as Wang blacksmith iron ball. The reason why the fitness ball is beneficial to physical fitness lies in the moderate movement of the fingers and palms when playing the ball, which regulates the meridians of the body.</Detail>
+        <VIPLevel>2</VIPLevel>
+        <FileAddress>15.jpg</FileAddress>
+    </ROW>
+    <ROW>
+        <ClassID>16</ClassID>
+        <Name>long-distance run</Name>
+        <CoachID>1</CoachID>
+        <VedioAddress>Rec.com</VedioAddress>
+        <Category>Aerobic exercise</Category>
+        <Detail>Long run can improve respiratory and cardiovascular system functions. Scientific practice has proved that long-term, long-term, rhythmic breathing can make the human body breathe a large amount of oxygen. If the oxygen absorption exceeds 7-8 times of the normal time, it can inhibit the growth and reproduction of human cancer cells. Second, long-distance exercise also improved the state of myocardial oxygen supply, accelerated the metabolism of the heart, at the same time, made the myocardial fiber thicker, the cardiac contractility increased, thus improving the heart working ability.</Detail>
+        <VIPLevel>3</VIPLevel>
+        <FileAddress>16.jpg</FileAddress>
+    </ROW>
+    <ROW>
+        <ClassID>17</ClassID>
+        <Name>Bench Press</Name>
+        <CoachID>1</CoachID>
+        <VedioAddress>Rec.com</VedioAddress>
+        <Category>Muscle training</Category>
+        <Detail>The recumbent frame is a special equipment for training pectoralis major. It has three types: supine, sitting recline and vertical recline. They are made up of steel pipe welding support and plate surface. The supine push frame is used to develop the muscles on both sides of pectoralis major, while the sitting and vertical push frames are used to develop the muscles on the upper and lower parts of pectoralis major.</Detail>
+        <VIPLevel>1</VIPLevel>
+        <FileAddress>17.jpg</FileAddress>
+    </ROW>
+    <ROW>
+        <ClassID>18</ClassID>
+        <Name>kickboxing</Name>
+        <CoachID>1</CoachID>
+        <VedioAddress>Rec.com</VedioAddress>
+        <Category>Aerobic exercise</Category>
+        <Detail>Fighting aerobics requires the perfect combination of speed and strength, which can consume a lot of heat. Doing one hour's fighting aerobics can consume 600 calories, which is twice as much as dancing aerobics. Practicing fighting aerobics can strengthen the muscle strength of the waist and abdomen, which can make the exerciser have good endurance after three months of continuous practice.</Detail>
+        <VIPLevel>0</VIPLevel>
+        <FileAddress>18.jpg</FileAddress>
+    </ROW>
 </DATA>

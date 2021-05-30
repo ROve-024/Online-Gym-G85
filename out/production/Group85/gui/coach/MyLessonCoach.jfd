@@ -60,7 +60,7 @@ new FormModel {
 						"background": sfield java.awt.SystemColor menu
 						"foreground": &Color0 new java.awt.Color( 150, 150, 150, 255 )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"width": 85
+						"width": 138
 						"height": 17
 						"x": 7
 						"y": 195
@@ -117,7 +117,7 @@ new FormModel {
 						"background": sfield java.awt.SystemColor menu
 						"foreground": #Color0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"width": 85
+						"width": 138
 						"height": 17
 						"x": 7
 						"y": 195
@@ -184,7 +184,7 @@ new FormModel {
 						"background": sfield java.awt.SystemColor menu
 						"foreground": #Color0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"width": 85
+						"width": 133
 						"height": 17
 						"x": 7
 						"y": 195
@@ -251,7 +251,7 @@ new FormModel {
 						"background": sfield java.awt.SystemColor menu
 						"foreground": #Color0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"width": 85
+						"width": 133
 						"height": 17
 						"x": 7
 						"y": 195
@@ -318,7 +318,7 @@ new FormModel {
 						"background": sfield java.awt.SystemColor menu
 						"foreground": #Color0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"width": 85
+						"width": 133
 						"height": 17
 						"x": 7
 						"y": 195
@@ -395,7 +395,7 @@ new FormModel {
 						"background": sfield java.awt.SystemColor menu
 						"foreground": #Color0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"width": 85
+						"width": 128
 						"height": 17
 						"x": 7
 						"y": 195

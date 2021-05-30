@@ -6,19 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Group85.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Group85.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/coach/EditProfileCoach.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/coach/EditProfileCoach.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Client.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Coach.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/admin/LessonDetailAdmin.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/admin/LessonDetailAdmin.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/coach/LessonDetailCoach.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/coach/LessonDetailCoach.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/coach/MyLessonCoach.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/coach/MyLessonCoach.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/member/LessonDetailMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/member/LessonDetailMember.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/gui/member/LessonHomeMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/gui/member/LessonHomeMember.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/XMLs/Class.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Group85/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Group85/resources/buffer/lessonBuffer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/buffer/planBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/planBuffer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Class.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/LessonDetailCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/LessonDetailCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/coach/LessonDetailCoach.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/LessonDetailCoach.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/member/OpenVip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/OpenVip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Client.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/xmls/Plan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Plan.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,19 +113,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Book" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.member.Book" />
-      <module name="Group85" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="gui.member.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ClassFunctionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="controller.ClassFunctionTest" />
       <module name="Group85" />
@@ -150,12 +139,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EditProfileMember" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.member.EditProfileMember" />
+    <configuration name="LessonDetailAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.admin.LessonDetailAdmin" />
       <module name="Group85" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gui.member.*" />
+          <option name="PATTERN" value="gui.admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LessonDetailCoach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.coach.LessonDetailCoach" />
+      <module name="Group85" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.coach.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -183,19 +185,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.ALLLessonAdmin" />
-      <item itemvalue="Application.EditProfileMember" />
-      <item itemvalue="Application.Book" />
       <item itemvalue="Application.ClassFunctionTest" />
       <item itemvalue="Application.CreateClass" />
       <item itemvalue="Application.Run" />
+      <item itemvalue="Application.LessonDetailCoach" />
+      <item itemvalue="Application.LessonDetailAdmin" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Run" />
+        <item itemvalue="Application.LessonDetailAdmin" />
+        <item itemvalue="Application.LessonDetailCoach" />
         <item itemvalue="Application.CreateClass" />
         <item itemvalue="Application.ClassFunctionTest" />
-        <item itemvalue="Application.Book" />
-        <item itemvalue="Application.EditProfileMember" />
       </list>
     </recent_temporary>
   </component>
@@ -282,14 +284,7 @@
       <workItem from="1622273636537" duration="4954000" />
       <workItem from="1622336513744" duration="632000" />
       <workItem from="1622337424524" duration="14879000" />
-      <workItem from="1622361148381" duration="2361000" />
-    </task>
-    <task id="LOCAL-00017" summary="Added titles and icon of app">
-      <created>1619221171165</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1619221171165</updated>
+      <workItem from="1622361148381" duration="7231000" />
     </task>
     <task id="LOCAL-00018" summary="Added titles and icon of app">
       <created>1619221189437</created>
@@ -627,7 +622,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622355445079</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="update">
+      <created>1622363535917</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1622363535918</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

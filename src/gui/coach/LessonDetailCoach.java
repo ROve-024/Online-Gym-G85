@@ -49,6 +49,7 @@ public class LessonDetailCoach extends JFrame {
         editButton = new JButton();
         homeButton = new JButton();
         lessonType = new JLabel();
+        needVIP = new JLabel();
 
         //======== this ========
         setBackground(Color.white);
@@ -87,7 +88,7 @@ public class LessonDetailCoach extends JFrame {
             lessonName.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 32));
             lessonName.setBackground(Color.white);
             body.add(lessonName);
-            lessonName.setBounds(350, 165, 267, 42);
+            lessonName.setBounds(350, 155, 315, 42);
 
             //---- lessonMsg ----
             lessonMsg.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.");
@@ -98,7 +99,7 @@ public class LessonDetailCoach extends JFrame {
             lessonMsg.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
             lessonMsg.setEditable(false);
             body.add(lessonMsg);
-            lessonMsg.setBounds(350, 215, 398, 130);
+            lessonMsg.setBounds(350, 235, 398, 180);
 
             //---- coachAvatar ----
             coachAvatar.setBorder(new LineBorder(Color.white));
@@ -145,8 +146,17 @@ public class LessonDetailCoach extends JFrame {
             //---- lessonType ----
             lessonType.setText("Type");
             lessonType.setBackground(new Color(240, 128, 128));
+            lessonType.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
             body.add(lessonType);
-            lessonType.setBounds(350, 345, 75, lessonType.getPreferredSize().height);
+            lessonType.setBounds(350, 205, 400, lessonType.getPreferredSize().height);
+
+            //---- needVIP ----
+            needVIP.setText("VIP");
+            needVIP.setFont(new Font("Microsoft YaHei UI", Font.BOLD | Font.ITALIC, 16));
+            needVIP.setBackground(Color.white);
+            needVIP.setForeground(new Color(255, 100, 100));
+            body.add(needVIP);
+            needVIP.setBounds(685, 175, 70, needVIP.getPreferredSize().height);
 
             {
                 // compute preferred size
@@ -198,6 +208,7 @@ public class LessonDetailCoach extends JFrame {
     private JButton editButton;
     private JButton homeButton;
     private JLabel lessonType;
+    private JLabel needVIP;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         LessonDetailCoach.run();
@@ -224,6 +235,7 @@ public class LessonDetailCoach extends JFrame {
     }
     private void init(){
         this.lessonName.setText(this.classData.getName());
+        this.needVIP.setText("VIP " + this.classData.getVIPLevel());
         this.lessonMsg.setText(this.classData.getDetail());
         this.lessonType.setText(this.classData.getCategory());
         CoachData coachData = CoachFunction.searchCoachByID(this.classData.getCoachID());

@@ -7,6 +7,7 @@ package gui.member;
 import controller.ClientFunction;
 import gui.coach.ProfileCoach;
 import gui.other.UserBuffer;
+import gui.other.Warning;
 import io.client.ClientData;
 
 import java.awt.*;
@@ -26,23 +27,53 @@ public class OpenVip extends JFrame {
         // TODO add your code here
         ClientData clientData = UserBuffer.getClientSession();
         if(levelChoice1.isSelected()){
-            clientData.setVIPlevel("1");
+            if(Integer.parseInt(clientData.getVIPlevel()) < 1){
+                clientData.setVIPlevel("1");
+                ClientFunction.updateClientInfo(clientData);
+                java.awt.Window[] win = java.awt.Window.getWindows();
+                int i=0;
+                while (i<win.length) {
+                    win[i].dispose();
+                    i++;
+                }
+                NavigatorMember.run();
+                ProfileMember.run();
+            } else {
+                Warning.run("Your VIP level is higher than the selected level.");
+            }
         }
         else if(levelChoice2.isSelected()){
-            clientData.setVIPlevel("2");
+            if(Integer.parseInt(clientData.getVIPlevel()) < 2){
+                clientData.setVIPlevel("2");
+                ClientFunction.updateClientInfo(clientData);
+                java.awt.Window[] win = java.awt.Window.getWindows();
+                int i=0;
+                while (i<win.length) {
+                    win[i].dispose();
+                    i++;
+                }
+                NavigatorMember.run();
+                ProfileMember.run();
+            } else {
+                Warning.run("Your VIP level is higher than the selected level.");
+            }
         }
         else{
-            clientData.setVIPlevel("3");
+            if(Integer.parseInt(clientData.getVIPlevel()) < 3){
+                clientData.setVIPlevel("3");
+                ClientFunction.updateClientInfo(clientData);
+                java.awt.Window[] win = java.awt.Window.getWindows();
+                int i=0;
+                while (i<win.length) {
+                    win[i].dispose();
+                    i++;
+                }
+                NavigatorMember.run();
+                ProfileMember.run();
+            } else {
+                Warning.run("Your VIP level is higher than the selected level.");
+            }
         }
-        ClientFunction.updateClientInfo(clientData);
-        java.awt.Window[] win = java.awt.Window.getWindows();
-        int i=0;
-        while (i<win.length) {
-            win[i].dispose();
-            i++;
-        }
-        NavigatorMember.run();
-        ProfileMember.run();
     }
 
     private void initComponents() {
