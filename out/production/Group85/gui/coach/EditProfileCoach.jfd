@@ -28,6 +28,7 @@ new FormModel {
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 25
 					"y": 45
+					"width": 280
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "finishButton"

@@ -133,6 +133,11 @@ public class LessonHomeMember extends JFrame {
         body = new JPanel();
         decorationLine = new JLabel();
         title = new JLabel();
+        search = new JTextField();
+        searchButton = new JButton();
+        homeButton = new JButton();
+        previousButton = new JButton();
+        nextButton = new JButton();
         lesson1 = new JPanel();
         lessonPicture1 = new JLabel();
         lessonName1 = new JLabel();
@@ -151,29 +156,24 @@ public class LessonHomeMember extends JFrame {
         moreButton3 = new JButton();
         coachName3 = new JLabel();
         lessonPicture3 = new JLabel();
-        lesson6 = new JPanel();
-        lessonName6 = new JLabel();
-        lessonType6 = new JLabel();
-        moreButton6 = new JButton();
-        coachName6 = new JLabel();
-        lessonPicture6 = new JLabel();
+        lesson4 = new JPanel();
+        lessonName4 = new JLabel();
+        lessonType4 = new JLabel();
+        moreButton4 = new JButton();
+        coachName4 = new JLabel();
+        lessonPicture4 = new JLabel();
         lesson5 = new JPanel();
         lessonName5 = new JLabel();
         lessonType5 = new JLabel();
         coachName5 = new JLabel();
         lessonPicture5 = new JLabel();
         moreButton5 = new JButton();
-        lesson4 = new JPanel();
-        lessonPicture4 = new JLabel();
-        lessonName4 = new JLabel();
-        lessonType4 = new JLabel();
-        coachName4 = new JLabel();
-        moreButton4 = new JButton();
-        search = new JTextField();
-        searchButton = new JButton();
-        homeButton = new JButton();
-        previousButton = new JButton();
-        nextButton = new JButton();
+        lesson6 = new JPanel();
+        lessonPicture6 = new JLabel();
+        lessonName6 = new JLabel();
+        lessonType6 = new JLabel();
+        coachName6 = new JLabel();
+        moreButton6 = new JButton();
         titleRadioButton = new JRadioButton();
         coachRadioButton = new JRadioButton();
         typeRadioButton = new JRadioButton();
@@ -197,11 +197,50 @@ public class LessonHomeMember extends JFrame {
             decorationLine.setBounds(35, 115, 730, decorationLine.getPreferredSize().height);
 
             //---- title ----
-            title.setText("My Lesson ");
+            title.setText("Lesson ");
             title.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 32));
             title.setBackground(Color.white);
             body.add(title);
             title.setBounds(new Rectangle(new Point(25, 45), title.getPreferredSize()));
+
+            //---- search ----
+            search.setBackground(SystemColor.menu);
+            search.setBorder(new EmptyBorder(5, 10, 5, 0));
+            search.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+            body.add(search);
+            search.setBounds(270, 45, 300, 40);
+
+            //---- searchButton ----
+            searchButton.setBorderPainted(false);
+            searchButton.setBackground(SystemColor.controlHighlight);
+            searchButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/search.png")));
+            searchButton.addActionListener(e -> searchButtonActionPerformed(e));
+            body.add(searchButton);
+            searchButton.setBounds(570, 45, 40, 40);
+
+            //---- homeButton ----
+            homeButton.setBorderPainted(false);
+            homeButton.setBackground(SystemColor.menu);
+            homeButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/home.png")));
+            homeButton.addActionListener(e -> homeButtonActionPerformed(e));
+            body.add(homeButton);
+            homeButton.setBounds(645, 45, 40, 40);
+
+            //---- previousButton ----
+            previousButton.setBorderPainted(false);
+            previousButton.setBackground(SystemColor.menu);
+            previousButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/previous.png")));
+            previousButton.addActionListener(e -> previousButtonActionPerformed(e));
+            body.add(previousButton);
+            previousButton.setBounds(690, 45, 40, 40);
+
+            //---- nextButton ----
+            nextButton.setBorderPainted(false);
+            nextButton.setBackground(SystemColor.menu);
+            nextButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/next.png")));
+            nextButton.addActionListener(e -> nextButtonActionPerformed(e));
+            body.add(nextButton);
+            nextButton.setBounds(735, 45, 40, 40);
 
             //======== lesson1 ========
             {
@@ -210,24 +249,24 @@ public class LessonHomeMember extends JFrame {
 
                 //---- lessonPicture1 ----
                 lessonPicture1.setBackground(SystemColor.activeCaption);
-                lessonPicture1.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/synthesize.png")));
+                lessonPicture1.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/run.png")));
                 lesson1.add(lessonPicture1);
-                lessonPicture1.setBounds(2, 1, 236, 160);
+                lessonPicture1.setBounds(1, 1, 238, 160);
 
                 //---- lessonName1 ----
                 lessonName1.setText("Lesson Name");
                 lessonName1.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
                 lessonName1.setBackground(SystemColor.menu);
                 lesson1.add(lessonName1);
-                lessonName1.setBounds(5, 165, 195, lessonName1.getPreferredSize().height);
+                lessonName1.setBounds(7, 168, 195, 23);
 
                 //---- lessonType1 ----
                 lessonType1.setText("Lesson Level");
-                lessonType1.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
+                lessonType1.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
                 lessonType1.setBackground(SystemColor.menu);
                 lessonType1.setForeground(new Color(150, 150, 150));
                 lesson1.add(lessonType1);
-                lessonType1.setBounds(5, 190, 85, 17);
+                lessonType1.setBounds(7, 195, 123, 17);
 
                 //---- coachName1 ----
                 coachName1.setText("Coach Name");
@@ -235,7 +274,7 @@ public class LessonHomeMember extends JFrame {
                 coachName1.setBackground(SystemColor.menu);
                 coachName1.setForeground(new Color(120, 120, 120));
                 lesson1.add(coachName1);
-                coachName1.setBounds(5, 225, 85, 17);
+                coachName1.setBounds(7, 225, 120, 18);
 
                 //---- moreButton1 ----
                 moreButton1.setText("MORE");
@@ -274,15 +313,15 @@ public class LessonHomeMember extends JFrame {
                 lessonName2.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
                 lessonName2.setBackground(SystemColor.menu);
                 lesson2.add(lessonName2);
-                lessonName2.setBounds(5, 165, 195, lessonName2.getPreferredSize().height);
+                lessonName2.setBounds(7, 168, 195, 23);
 
                 //---- lessonType2 ----
                 lessonType2.setText("Lesson Level");
-                lessonType2.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
+                lessonType2.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
                 lessonType2.setBackground(SystemColor.menu);
                 lessonType2.setForeground(new Color(150, 150, 150));
                 lesson2.add(lessonType2);
-                lessonType2.setBounds(5, 190, 85, 17);
+                lessonType2.setBounds(7, 195, 123, 17);
 
                 //---- coachName2 ----
                 coachName2.setText("Coach Name");
@@ -290,13 +329,13 @@ public class LessonHomeMember extends JFrame {
                 coachName2.setBackground(SystemColor.menu);
                 coachName2.setForeground(new Color(120, 120, 120));
                 lesson2.add(coachName2);
-                coachName2.setBounds(5, 225, 85, 17);
+                coachName2.setBounds(7, 225, 120, 18);
 
                 //---- lessonPicture2 ----
                 lessonPicture2.setBackground(SystemColor.activeCaption);
-                lessonPicture2.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/synthesize.png")));
+                lessonPicture2.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/crunches.png")));
                 lesson2.add(lessonPicture2);
-                lessonPicture2.setBounds(2, 1, 236, 160);
+                lessonPicture2.setBounds(1, 1, 238, 160);
 
                 //---- moreButton2 ----
                 moreButton2.setText("MORE");
@@ -335,15 +374,15 @@ public class LessonHomeMember extends JFrame {
                 lessonName3.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
                 lessonName3.setBackground(SystemColor.menu);
                 lesson3.add(lessonName3);
-                lessonName3.setBounds(5, 165, 195, lessonName3.getPreferredSize().height);
+                lessonName3.setBounds(7, 168, 195, 23);
 
                 //---- lessonType3 ----
-                lessonType3.setText("Lesson Level");
-                lessonType3.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
+                lessonType3.setText("Live Lesson");
+                lessonType3.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
                 lessonType3.setBackground(SystemColor.menu);
                 lessonType3.setForeground(new Color(150, 150, 150));
                 lesson3.add(lessonType3);
-                lessonType3.setBounds(5, 190, 85, 17);
+                lessonType3.setBounds(7, 195, 123, 17);
 
                 //---- moreButton3 ----
                 moreButton3.setText("MORE");
@@ -360,13 +399,13 @@ public class LessonHomeMember extends JFrame {
                 coachName3.setBackground(SystemColor.menu);
                 coachName3.setForeground(new Color(120, 120, 120));
                 lesson3.add(coachName3);
-                coachName3.setBounds(5, 225, 85, 17);
+                coachName3.setBounds(7, 225, 120, 18);
 
                 //---- lessonPicture3 ----
                 lessonPicture3.setBackground(SystemColor.activeCaption);
-                lessonPicture3.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/synthesize.png")));
+                lessonPicture3.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/soccer.png")));
                 lesson3.add(lessonPicture3);
-                lessonPicture3.setBounds(2, 1, 236, 160);
+                lessonPicture3.setBounds(1, 1, 238, 160);
 
                 {
                     // compute preferred size
@@ -386,66 +425,66 @@ public class LessonHomeMember extends JFrame {
             body.add(lesson3);
             lesson3.setBounds(535, 125, 240, 250);
 
-            //======== lesson6 ========
+            //======== lesson4 ========
             {
-                lesson6.setBackground(SystemColor.menu);
-                lesson6.setLayout(null);
+                lesson4.setBackground(SystemColor.menu);
+                lesson4.setLayout(null);
 
-                //---- lessonName6 ----
-                lessonName6.setText("Lesson Name");
-                lessonName6.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
-                lessonName6.setBackground(SystemColor.menu);
-                lesson6.add(lessonName6);
-                lessonName6.setBounds(5, 165, 195, lessonName6.getPreferredSize().height);
+                //---- lessonName4 ----
+                lessonName4.setText("Lesson Name");
+                lessonName4.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
+                lessonName4.setBackground(SystemColor.menu);
+                lesson4.add(lessonName4);
+                lessonName4.setBounds(7, 168, 195, 23);
 
-                //---- lessonType6 ----
-                lessonType6.setText("Lesson Level");
-                lessonType6.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                lessonType6.setBackground(SystemColor.menu);
-                lessonType6.setForeground(new Color(150, 150, 150));
-                lesson6.add(lessonType6);
-                lessonType6.setBounds(5, 190, 85, 17);
+                //---- lessonType4 ----
+                lessonType4.setText("Lesson Level");
+                lessonType4.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
+                lessonType4.setBackground(SystemColor.menu);
+                lessonType4.setForeground(new Color(150, 150, 150));
+                lesson4.add(lessonType4);
+                lessonType4.setBounds(7, 195, 133, 17);
 
-                //---- moreButton6 ----
-                moreButton6.setText("MORE");
-                moreButton6.setBackground(Color.white);
-                moreButton6.setBorderPainted(false);
-                moreButton6.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                moreButton6.addActionListener(e -> moreButton6ActionPerformed(e));
-                lesson6.add(moreButton6);
-                moreButton6.setBounds(170, 220, 65, 25);
+                //---- moreButton4 ----
+                moreButton4.setText("MORE");
+                moreButton4.setBackground(Color.white);
+                moreButton4.setBorderPainted(false);
+                moreButton4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                moreButton4.addActionListener(e -> moreButton4ActionPerformed(e));
+                lesson4.add(moreButton4);
+                moreButton4.setBounds(170, 220, 65, 25);
 
-                //---- coachName6 ----
-                coachName6.setText("Coach Name");
-                coachName6.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                coachName6.setBackground(SystemColor.menu);
-                coachName6.setForeground(new Color(120, 120, 120));
-                lesson6.add(coachName6);
-                coachName6.setBounds(5, 225, 85, 17);
+                //---- coachName4 ----
+                coachName4.setText("Coach Name");
+                coachName4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
+                coachName4.setBackground(SystemColor.menu);
+                coachName4.setForeground(new Color(120, 120, 120));
+                lesson4.add(coachName4);
+                coachName4.setBounds(7, 225, 120, 18);
 
-                //---- lessonPicture6 ----
-                lessonPicture6.setBackground(SystemColor.activeCaption);
-                lessonPicture6.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/synthesize.png")));
-                lesson6.add(lessonPicture6);
-                lessonPicture6.setBounds(2, 1, 236, 160);
+                //---- lessonPicture4 ----
+                lessonPicture4.setBackground(SystemColor.activeCaption);
+                lessonPicture4.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/yoga.png")));
+                lesson4.add(lessonPicture4);
+                lessonPicture4.setBounds(1, 1, 238, 160);
 
                 {
                     // compute preferred size
                     Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < lesson6.getComponentCount(); i++) {
-                        Rectangle bounds = lesson6.getComponent(i).getBounds();
+                    for(int i = 0; i < lesson4.getComponentCount(); i++) {
+                        Rectangle bounds = lesson4.getComponent(i).getBounds();
                         preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
                         preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
                     }
-                    Insets insets = lesson6.getInsets();
+                    Insets insets = lesson4.getInsets();
                     preferredSize.width += insets.right;
                     preferredSize.height += insets.bottom;
-                    lesson6.setMinimumSize(preferredSize);
-                    lesson6.setPreferredSize(preferredSize);
+                    lesson4.setMinimumSize(preferredSize);
+                    lesson4.setPreferredSize(preferredSize);
                 }
             }
-            body.add(lesson6);
-            lesson6.setBounds(535, 385, 240, 250);
+            body.add(lesson4);
+            lesson4.setBounds(25, 385, 240, 250);
 
             //======== lesson5 ========
             {
@@ -457,15 +496,15 @@ public class LessonHomeMember extends JFrame {
                 lessonName5.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
                 lessonName5.setBackground(SystemColor.menu);
                 lesson5.add(lessonName5);
-                lessonName5.setBounds(5, 165, 195, lessonName5.getPreferredSize().height);
+                lessonName5.setBounds(7, 168, 195, 23);
 
                 //---- lessonType5 ----
                 lessonType5.setText("Lesson Level");
-                lessonType5.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
+                lessonType5.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
                 lessonType5.setBackground(SystemColor.menu);
                 lessonType5.setForeground(new Color(150, 150, 150));
                 lesson5.add(lessonType5);
-                lessonType5.setBounds(5, 190, 85, 17);
+                lessonType5.setBounds(7, 195, 133, 17);
 
                 //---- coachName5 ----
                 coachName5.setText("Coach Name");
@@ -473,13 +512,13 @@ public class LessonHomeMember extends JFrame {
                 coachName5.setBackground(SystemColor.menu);
                 coachName5.setForeground(new Color(120, 120, 120));
                 lesson5.add(coachName5);
-                coachName5.setBounds(5, 225, 85, 17);
+                coachName5.setBounds(7, 225, 120, 18);
 
                 //---- lessonPicture5 ----
                 lessonPicture5.setBackground(SystemColor.activeCaption);
                 lessonPicture5.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/synthesize.png")));
                 lesson5.add(lessonPicture5);
-                lessonPicture5.setBounds(2, 1, 236, 160);
+                lessonPicture5.setBounds(1, 1, 238, 160);
 
                 //---- moreButton5 ----
                 moreButton5.setText("MORE");
@@ -508,126 +547,94 @@ public class LessonHomeMember extends JFrame {
             body.add(lesson5);
             lesson5.setBounds(280, 385, 240, 250);
 
-            //======== lesson4 ========
+            //======== lesson6 ========
             {
-                lesson4.setBackground(SystemColor.menu);
-                lesson4.setLayout(null);
+                lesson6.setBackground(SystemColor.menu);
+                lesson6.setLayout(null);
 
-                //---- lessonPicture4 ----
-                lessonPicture4.setBackground(SystemColor.activeCaption);
-                lessonPicture4.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/synthesize.png")));
-                lesson4.add(lessonPicture4);
-                lessonPicture4.setBounds(2, 1, 236, 160);
+                //---- lessonPicture6 ----
+                lessonPicture6.setBackground(SystemColor.activeCaption);
+                lessonPicture6.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/dumbbell.png")));
+                lesson6.add(lessonPicture6);
+                lessonPicture6.setBounds(1, 1, 238, 160);
 
-                //---- lessonName4 ----
-                lessonName4.setText("Lesson Name");
-                lessonName4.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
-                lessonName4.setBackground(SystemColor.menu);
-                lesson4.add(lessonName4);
-                lessonName4.setBounds(5, 165, 195, lessonName4.getPreferredSize().height);
+                //---- lessonName6 ----
+                lessonName6.setText("Lesson Name");
+                lessonName6.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
+                lessonName6.setBackground(SystemColor.menu);
+                lesson6.add(lessonName6);
+                lessonName6.setBounds(7, 168, 195, 23);
 
-                //---- lessonType4 ----
-                lessonType4.setText("Lesson Level");
-                lessonType4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                lessonType4.setBackground(SystemColor.menu);
-                lessonType4.setForeground(new Color(150, 150, 150));
-                lesson4.add(lessonType4);
-                lessonType4.setBounds(5, 190, 85, 17);
+                //---- lessonType6 ----
+                lessonType6.setText("Lesson Level");
+                lessonType6.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 13));
+                lessonType6.setBackground(SystemColor.menu);
+                lessonType6.setForeground(new Color(150, 150, 150));
+                lesson6.add(lessonType6);
+                lessonType6.setBounds(7, 195, 133, 17);
 
-                //---- coachName4 ----
-                coachName4.setText("Coach Name");
-                coachName4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
-                coachName4.setBackground(SystemColor.menu);
-                coachName4.setForeground(new Color(120, 120, 120));
-                lesson4.add(coachName4);
-                coachName4.setBounds(5, 225, 85, 17);
+                //---- coachName6 ----
+                coachName6.setText("Coach Name");
+                coachName6.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 13));
+                coachName6.setBackground(SystemColor.menu);
+                coachName6.setForeground(new Color(120, 120, 120));
+                lesson6.add(coachName6);
+                coachName6.setBounds(7, 225, 120, 18);
 
-                //---- moreButton4 ----
-                moreButton4.setText("MORE");
-                moreButton4.setBackground(Color.white);
-                moreButton4.setBorderPainted(false);
-                moreButton4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
-                moreButton4.addActionListener(e -> moreButton4ActionPerformed(e));
-                lesson4.add(moreButton4);
-                moreButton4.setBounds(170, 220, 65, 25);
+                //---- moreButton6 ----
+                moreButton6.setText("MORE");
+                moreButton6.setBackground(Color.white);
+                moreButton6.setBorderPainted(false);
+                moreButton6.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 9));
+                moreButton6.addActionListener(e -> moreButton6ActionPerformed(e));
+                lesson6.add(moreButton6);
+                moreButton6.setBounds(170, 220, 65, 25);
 
                 {
                     // compute preferred size
                     Dimension preferredSize = new Dimension();
-                    for(int i = 0; i < lesson4.getComponentCount(); i++) {
-                        Rectangle bounds = lesson4.getComponent(i).getBounds();
+                    for(int i = 0; i < lesson6.getComponentCount(); i++) {
+                        Rectangle bounds = lesson6.getComponent(i).getBounds();
                         preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
                         preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
                     }
-                    Insets insets = lesson4.getInsets();
+                    Insets insets = lesson6.getInsets();
                     preferredSize.width += insets.right;
                     preferredSize.height += insets.bottom;
-                    lesson4.setMinimumSize(preferredSize);
-                    lesson4.setPreferredSize(preferredSize);
+                    lesson6.setMinimumSize(preferredSize);
+                    lesson6.setPreferredSize(preferredSize);
                 }
             }
-            body.add(lesson4);
-            lesson4.setBounds(25, 385, 240, 250);
-
-            //---- search ----
-            search.setBackground(SystemColor.menu);
-            search.setBorder(null);
-            search.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
-            body.add(search);
-            search.setBounds(275, 45, 300, 40);
-
-            //---- searchButton ----
-            searchButton.setBorderPainted(false);
-            searchButton.setBackground(SystemColor.controlHighlight);
-            searchButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/search.png")));
-            searchButton.addActionListener(e -> searchButtonActionPerformed(e));
-            body.add(searchButton);
-            searchButton.setBounds(575, 45, 40, 40);
-
-            //---- homeButton ----
-            homeButton.setBorderPainted(false);
-            homeButton.setBackground(SystemColor.menu);
-            homeButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/home.png")));
-            homeButton.addActionListener(e -> homeButtonActionPerformed(e));
-            body.add(homeButton);
-            homeButton.setBounds(645, 45, 40, 40);
-
-            //---- previousButton ----
-            previousButton.setBorderPainted(false);
-            previousButton.setBackground(SystemColor.menu);
-            previousButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/previous.png")));
-            previousButton.addActionListener(e -> previousButtonActionPerformed(e));
-            body.add(previousButton);
-            previousButton.setBounds(690, 45, 40, 40);
-
-            //---- nextButton ----
-            nextButton.setBorderPainted(false);
-            nextButton.setBackground(SystemColor.menu);
-            nextButton.setIcon(new ImageIcon(getClass().getResource("/resources/icons/next.png")));
-            nextButton.addActionListener(e -> nextButtonActionPerformed(e));
-            body.add(nextButton);
-            nextButton.setBounds(735, 45, 40, 40);
+            body.add(lesson6);
+            lesson6.setBounds(535, 385, 240, 250);
 
             //---- titleRadioButton ----
             titleRadioButton.setText("Title");
             titleRadioButton.setBackground(Color.white);
+            titleRadioButton.setBorder(null);
             titleRadioButton.setForeground(Color.gray);
+            titleRadioButton.setFont(new Font("Arial", Font.PLAIN, 12));
+            titleRadioButton.setSelected(true);
             body.add(titleRadioButton);
-            titleRadioButton.setBounds(275, 85, 60, titleRadioButton.getPreferredSize().height);
+            titleRadioButton.setBounds(270, 85, 55, 21);
 
             //---- coachRadioButton ----
             coachRadioButton.setText("Coach");
             coachRadioButton.setBackground(Color.white);
+            coachRadioButton.setBorder(null);
             coachRadioButton.setForeground(Color.gray);
+            coachRadioButton.setFont(new Font("Arial", Font.PLAIN, 12));
             body.add(coachRadioButton);
-            coachRadioButton.setBounds(335, 85, 75, coachRadioButton.getPreferredSize().height);
+            coachRadioButton.setBounds(325, 85, 65, 21);
 
             //---- typeRadioButton ----
             typeRadioButton.setText("Type");
-            typeRadioButton.setForeground(Color.gray);
             typeRadioButton.setBackground(Color.white);
+            typeRadioButton.setBorder(null);
+            typeRadioButton.setForeground(Color.gray);
+            typeRadioButton.setFont(new Font("Arial", Font.PLAIN, 12));
             body.add(typeRadioButton);
-            typeRadioButton.setBounds(410, 85, 70, typeRadioButton.getPreferredSize().height);
+            typeRadioButton.setBounds(390, 85, 65, 21);
 
             {
                 // compute preferred size
@@ -664,11 +671,11 @@ public class LessonHomeMember extends JFrame {
         pack();
         setLocationRelativeTo(getOwner());
 
-        //---- sreachType ----
-        var sreachType = new ButtonGroup();
-        sreachType.add(titleRadioButton);
-        sreachType.add(coachRadioButton);
-        sreachType.add(typeRadioButton);
+        //---- searchType ----
+        var searchType = new ButtonGroup();
+        searchType.add(titleRadioButton);
+        searchType.add(coachRadioButton);
+        searchType.add(typeRadioButton);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -676,6 +683,11 @@ public class LessonHomeMember extends JFrame {
     private JPanel body;
     private JLabel decorationLine;
     private JLabel title;
+    private JTextField search;
+    private JButton searchButton;
+    private JButton homeButton;
+    private JButton previousButton;
+    private JButton nextButton;
     private JPanel lesson1;
     private JLabel lessonPicture1;
     private JLabel lessonName1;
@@ -694,29 +706,24 @@ public class LessonHomeMember extends JFrame {
     private JButton moreButton3;
     private JLabel coachName3;
     private JLabel lessonPicture3;
-    private JPanel lesson6;
-    private JLabel lessonName6;
-    private JLabel lessonType6;
-    private JButton moreButton6;
-    private JLabel coachName6;
-    private JLabel lessonPicture6;
+    private JPanel lesson4;
+    private JLabel lessonName4;
+    private JLabel lessonType4;
+    private JButton moreButton4;
+    private JLabel coachName4;
+    private JLabel lessonPicture4;
     private JPanel lesson5;
     private JLabel lessonName5;
     private JLabel lessonType5;
     private JLabel coachName5;
     private JLabel lessonPicture5;
     private JButton moreButton5;
-    private JPanel lesson4;
-    private JLabel lessonPicture4;
-    private JLabel lessonName4;
-    private JLabel lessonType4;
-    private JLabel coachName4;
-    private JButton moreButton4;
-    private JTextField search;
-    private JButton searchButton;
-    private JButton homeButton;
-    private JButton previousButton;
-    private JButton nextButton;
+    private JPanel lesson6;
+    private JLabel lessonPicture6;
+    private JLabel lessonName6;
+    private JLabel lessonType6;
+    private JLabel coachName6;
+    private JButton moreButton6;
     private JRadioButton titleRadioButton;
     private JRadioButton coachRadioButton;
     private JRadioButton typeRadioButton;

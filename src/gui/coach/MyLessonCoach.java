@@ -206,7 +206,7 @@ public class MyLessonCoach extends JFrame {
                 lessonType1.setBackground(SystemColor.menu);
                 lessonType1.setForeground(new Color(150, 150, 150));
                 lesson1.add(lessonType1);
-                lessonType1.setBounds(7, 195, 85, 17);
+                lessonType1.setBounds(7, 195, 138, 17);
 
                 //---- coachName1 ----
                 coachName1.setText("Coach Name");
@@ -261,7 +261,7 @@ public class MyLessonCoach extends JFrame {
                 lessonType2.setBackground(SystemColor.menu);
                 lessonType2.setForeground(new Color(150, 150, 150));
                 lesson2.add(lessonType2);
-                lessonType2.setBounds(7, 195, 85, 17);
+                lessonType2.setBounds(7, 195, 138, 17);
 
                 //---- coachName2 ----
                 coachName2.setText("Coach Name");
@@ -322,7 +322,7 @@ public class MyLessonCoach extends JFrame {
                 lessonType3.setBackground(SystemColor.menu);
                 lessonType3.setForeground(new Color(150, 150, 150));
                 lesson3.add(lessonType3);
-                lessonType3.setBounds(7, 195, 85, 17);
+                lessonType3.setBounds(7, 195, 133, 17);
 
                 //---- moreButton3 ----
                 moreButton3.setText("MORE");
@@ -383,7 +383,7 @@ public class MyLessonCoach extends JFrame {
                 lessonType5.setBackground(SystemColor.menu);
                 lessonType5.setForeground(new Color(150, 150, 150));
                 lesson5.add(lessonType5);
-                lessonType5.setBounds(7, 195, 85, 17);
+                lessonType5.setBounds(7, 195, 133, 17);
 
                 //---- coachName5 ----
                 coachName5.setText("Coach Name");
@@ -444,7 +444,7 @@ public class MyLessonCoach extends JFrame {
                 lessonType4.setBackground(SystemColor.menu);
                 lessonType4.setForeground(new Color(150, 150, 150));
                 lesson4.add(lessonType4);
-                lessonType4.setBounds(7, 195, 85, 17);
+                lessonType4.setBounds(7, 195, 133, 17);
 
                 //---- moreButton4 ----
                 moreButton4.setText("MORE");
@@ -511,7 +511,7 @@ public class MyLessonCoach extends JFrame {
                 lessonType6.setBackground(SystemColor.menu);
                 lessonType6.setForeground(new Color(150, 150, 150));
                 lesson6.add(lessonType6);
-                lessonType6.setBounds(7, 195, 85, 17);
+                lessonType6.setBounds(7, 195, 128, 17);
 
                 //---- coachName6 ----
                 coachName6.setText("Coach Name");

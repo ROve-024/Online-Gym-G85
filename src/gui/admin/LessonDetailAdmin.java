@@ -104,7 +104,7 @@ public class LessonDetailAdmin extends JFrame {
             lessonName.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 32));
             lessonName.setBackground(Color.white);
             body.add(lessonName);
-            lessonName.setBounds(350, 165, 267, 42);
+            lessonName.setBounds(350, 165, 400, 42);
 
             //---- lessonMsg ----
             lessonMsg.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.");
@@ -179,7 +179,7 @@ public class LessonDetailAdmin extends JFrame {
             lessonType.setText("lessonType");
             lessonType.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
             body.add(lessonType);
-            lessonType.setBounds(350, 370, 125, lessonType.getPreferredSize().height);
+            lessonType.setBounds(350, 370, 400, lessonType.getPreferredSize().height);
 
             {
                 // compute preferred size

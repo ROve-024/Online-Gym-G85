@@ -80,4 +80,28 @@
         <StartTime>2018-05-13 13:00:00</StartTime>
         <Endtime>2018-05-13 15:00:00</Endtime>
     </ROW>
+    <ROW>
+        <PlanID>11</PlanID>
+        <ClientID>Empty</ClientID>
+        <CoachID>Empty</CoachID>
+        <ClassID>Empty</ClassID>
+        <StartTime>Empty</StartTime>
+        <Endtime>Empty</Endtime>
+    </ROW>
+    <ROW>
+        <PlanID>12</PlanID>
+        <ClientID>Empty</ClientID>
+        <CoachID>Empty</CoachID>
+        <ClassID>Empty</ClassID>
+        <StartTime>Empty</StartTime>
+        <Endtime>Empty</Endtime>
+    </ROW>
+    <ROW>
+        <PlanID>13</PlanID>
+        <ClientID>1</ClientID>
+        <CoachID>1</CoachID>
+        <ClassID>2</ClassID>
+        <StartTime>2021-05-29 13:00:00</StartTime>
+        <Endtime>2021-05-29 15:00:00</Endtime>
+    </ROW>
 </DATA>
