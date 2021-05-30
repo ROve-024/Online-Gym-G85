@@ -179,7 +179,6 @@ public class ProfileCoach extends JFrame {
             editButton.setBorderPainted(false);
             editButton.setBackground(SystemColor.menu);
             editButton.setText("EDIT");
-            editButton.setForeground(Color.white);
             editButton.addActionListener(e -> editButtonActionPerformed(e));
             body.add(editButton);
             editButton.setBounds(35, 585, 90, 40);

@@ -1,7 +1,9 @@
 package gui.member;
 
+import java.awt.event.*;
 import controller.ClientFunction;
 import controller.CoachFunction;
+import gui.coach.PlanHomeCoach;
 import gui.other.UserBuffer;
 import gui.other.ViewBuffer;
 import io.client.ClientData;
@@ -20,6 +22,12 @@ import javax.swing.border.*;
 public class ViewMemberProfile extends JFrame {
     public ViewMemberProfile() {
         initComponents();
+    }
+
+    private void planButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        PlanHomeCoach.run();
+        this.dispose();
     }
 
     private void initComponents() {
@@ -48,6 +56,7 @@ public class ViewMemberProfile extends JFrame {
         decorationLine10 = new JPanel();
         decorationLine11 = new JPanel();
         VIPLevel = new JLabel();
+        planButton = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -406,6 +415,14 @@ public class ViewMemberProfile extends JFrame {
             body.add(VIPLevel);
             VIPLevel.setBounds(35, 90, 180, 25);
 
+            //---- planButton ----
+            planButton.setText("PLAN");
+            planButton.setBackground(SystemColor.control);
+            planButton.setBorderPainted(false);
+            planButton.addActionListener(e -> planButtonActionPerformed(e));
+            body.add(planButton);
+            planButton.setBounds(35, 590, 90, 40);
+
             {
                 // compute preferred size
                 Dimension preferredSize = new Dimension();
@@ -468,6 +485,7 @@ public class ViewMemberProfile extends JFrame {
     private JPanel decorationLine10;
     private JPanel decorationLine11;
     private JLabel VIPLevel;
+    private JButton planButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         ViewMemberProfile.run();

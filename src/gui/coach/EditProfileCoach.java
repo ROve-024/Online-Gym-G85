@@ -117,7 +117,6 @@ public class EditProfileCoach extends JFrame {
             finishButton.setBorderPainted(false);
             finishButton.setBackground(new Color(240, 240, 240));
             finishButton.setText("FINISH");
-            finishButton.setForeground(Color.white);
             finishButton.addActionListener(e -> finishButtonActionPerformed(e));
             body.add(finishButton);
             finishButton.setBounds(50, 590, 90, 40);

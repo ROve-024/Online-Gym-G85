@@ -413,7 +413,6 @@ public class ViewCoachProfile extends JFrame {
             lessonButton.setBorderPainted(false);
             lessonButton.setBackground(SystemColor.menu);
             lessonButton.setText("LESSON");
-            lessonButton.setForeground(Color.white);
             lessonButton.addActionListener(e -> lessonButtonActionPerformed(e));
             body.add(lessonButton);
             lessonButton.setBounds(35, 590, 90, 40);

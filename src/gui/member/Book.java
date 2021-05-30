@@ -1,13 +1,16 @@
 package gui.member;
 
+import javax.swing.border.*;
 import controller.CheckFunction;
 import controller.ClassFunction;
+import controller.CoachFunction;
 import controller.PlanFunction;
 import gui.other.LessonBuffer;
 import gui.other.PlanBuffer;
 import gui.other.UserBuffer;
 import gui.other.Warning;
 import io.classes.ClassData;
+import io.coach.CoachData;
 import io.plan.PlanData;
 
 import java.awt.*;
@@ -51,15 +54,26 @@ public class Book extends JFrame {
         }
     }
 
+    private void backButtonActionPerformed(ActionEvent e) {
+        this.dispose();
+        LessonDetailMember.run();
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
-        bookIcon = new JLabel();
         finishButton = new JButton();
         startTime = new JTextField();
         endTime = new JTextField();
         label1 = new JLabel();
         label2 = new JLabel();
+        title = new JLabel();
+        decorationLine = new JLabel();
+        backButton = new JButton();
+        label3 = new JLabel();
+        lessonTitle = new JLabel();
+        coachName = new JLabel();
+        label4 = new JLabel();
 
         //======== this ========
         setBackground(Color.white);
@@ -72,14 +86,6 @@ public class Book extends JFrame {
             body.setBackground(Color.white);
             body.setLayout(null);
 
-            //---- bookIcon ----
-            bookIcon.setText("BOOK");
-            bookIcon.setBackground(Color.white);
-            bookIcon.setHorizontalAlignment(SwingConstants.CENTER);
-            bookIcon.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 32));
-            body.add(bookIcon);
-            bookIcon.setBounds(300, 0, 120, 60);
-
             //---- finishButton ----
             finishButton.setText("FINISH");
             finishButton.setBackground(new Color(217, 0, 27));
@@ -87,31 +93,84 @@ public class Book extends JFrame {
             finishButton.setBorderPainted(false);
             finishButton.addActionListener(e -> finishButtonActionPerformed(e));
             body.add(finishButton);
-            finishButton.setBounds(205, 345, 300, 50);
+            finishButton.setBounds(30, 505, 150, 50);
 
             //---- startTime ----
             startTime.setBackground(new Color(242, 242, 242));
-            startTime.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+            startTime.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 14));
+            startTime.setBorder(new EmptyBorder(5, 10, 5, 0));
+            startTime.setForeground(Color.darkGray);
             body.add(startTime);
-            startTime.setBounds(160, 85, 475, 50);
+            startTime.setBounds(30, 330, 290, 40);
 
             //---- endTime ----
-            endTime.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+            endTime.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 14));
             endTime.setBackground(new Color(242, 242, 242));
+            endTime.setBorder(new EmptyBorder(5, 10, 5, 0));
+            endTime.setForeground(Color.darkGray);
             body.add(endTime);
-            endTime.setBounds(160, 190, 475, 50);
+            endTime.setBounds(30, 405, 290, 40);
 
             //---- label1 ----
-            label1.setText("StartTime:");
-            label1.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 26));
+            label1.setText("Start Time: ");
+            label1.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 16));
+            label1.setForeground(Color.gray);
             body.add(label1);
-            label1.setBounds(15, 90, 145, 40);
+            label1.setBounds(30, 300, 285, 35);
 
             //---- label2 ----
-            label2.setText("EndTime:");
-            label2.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 26));
+            label2.setText("End Time");
+            label2.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 16));
+            label2.setForeground(Color.gray);
             body.add(label2);
-            label2.setBounds(30, 190, 130, 40);
+            label2.setBounds(30, 375, 130, 35);
+
+            //---- title ----
+            title.setText("Lesson Book");
+            title.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 32));
+            title.setBackground(Color.white);
+            body.add(title);
+            title.setBounds(new Rectangle(new Point(25, 45), title.getPreferredSize()));
+
+            //---- decorationLine ----
+            decorationLine.setBackground(Color.black);
+            decorationLine.setBorder(LineBorder.createBlackLineBorder());
+            body.add(decorationLine);
+            decorationLine.setBounds(35, 115, 730, decorationLine.getPreferredSize().height);
+
+            //---- backButton ----
+            backButton.setBorderPainted(false);
+            backButton.setBackground(SystemColor.menu);
+            backButton.setIcon(null);
+            backButton.setText("BACK");
+            backButton.addActionListener(e -> backButtonActionPerformed(e));
+            body.add(backButton);
+            backButton.setBounds(675, 45, 100, 40);
+
+            //---- label3 ----
+            label3.setIcon(new ImageIcon(getClass().getResource("/resources/images/originalPic/book small.png")));
+            body.add(label3);
+            label3.setBounds(345, 190, 440, 361);
+
+            //---- lessonTitle ----
+            lessonTitle.setText("Lesson Title");
+            lessonTitle.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 28));
+            body.add(lessonTitle);
+            lessonTitle.setBounds(35, 200, 250, lessonTitle.getPreferredSize().height);
+
+            //---- coachName ----
+            coachName.setText("Coach Name");
+            coachName.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 18));
+            coachName.setForeground(Color.darkGray);
+            body.add(coachName);
+            coachName.setBounds(35, 235, 250, 32);
+
+            //---- label4 ----
+            label4.setText("yyyy-mm-dd hh:mm:ss");
+            label4.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 16));
+            label4.setForeground(Color.lightGray);
+            body.add(label4);
+            label4.setBounds(30, 440, 285, 35);
 
             {
                 // compute preferred size
@@ -129,7 +188,7 @@ public class Book extends JFrame {
             }
         }
         contentPane.add(body);
-        body.setBounds(0, 0, 735, 415);
+        body.setBounds(0, 0, 800, 655);
 
         {
             // compute preferred size
@@ -152,12 +211,18 @@ public class Book extends JFrame {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel body;
-    private JLabel bookIcon;
     private JButton finishButton;
     private JTextField startTime;
     private JTextField endTime;
     private JLabel label1;
     private JLabel label2;
+    private JLabel title;
+    private JLabel decorationLine;
+    private JButton backButton;
+    private JLabel label3;
+    private JLabel lessonTitle;
+    private JLabel coachName;
+    private JLabel label4;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         Book.run();
@@ -168,6 +233,9 @@ public class Book extends JFrame {
             public void run() {
                 try {
                     Book frame = new Book();
+                    frame.init();
+                    Dimension screenSize =Toolkit.getDefaultToolkit().getScreenSize();
+                    frame.setLocation(screenSize.width/2-400/2,screenSize.height/2-700/2);
                     frame.setResizable(false);
                     frame.setVisible(true);
                 } catch (Exception e) {
@@ -175,5 +243,12 @@ public class Book extends JFrame {
                 }
             }
         });
+    }
+
+    public void init(){
+        ClassData classData = LessonBuffer.getLessonBuffer();
+        CoachData coachData = CoachFunction.searchCoachByID(classData.getCoachID());
+        this.lessonTitle.setText(classData.getName());
+        this.coachName.setText(coachData.getName());
     }
 }

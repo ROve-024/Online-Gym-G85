@@ -729,7 +729,7 @@ public class LessonHomeMember extends JFrame {
     private JRadioButton typeRadioButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
-        MyLessonMember.run();
+        LessonHomeMember.run();
     }
 
     private int page = 0;

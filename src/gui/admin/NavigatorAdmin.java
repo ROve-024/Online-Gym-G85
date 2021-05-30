@@ -54,6 +54,18 @@ public class NavigatorAdmin extends JFrame {
         Login.run();
     }
 
+    private void planButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        java.awt.Window[] win = java.awt.Window.getWindows();
+        int i=0;
+        while (i<win.length) {
+            win[i].dispose();
+            i++;
+        }
+        NavigatorAdmin.run();
+        PlanHomeAdmin.run();
+    }
+
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
@@ -68,9 +80,11 @@ public class NavigatorAdmin extends JFrame {
         lessonManageMenu = new JPanel();
         lessonManage = new JButton();
         VenuesManageMenu = new JPanel();
+        planManage = new JButton();
         switchAccount = new JButton();
         label2 = new JButton();
         label3 = new JButton();
+        button2 = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -153,6 +167,15 @@ public class NavigatorAdmin extends JFrame {
                 {
                     VenuesManageMenu.setBackground(Color.white);
                     VenuesManageMenu.setLayout(new GridLayout());
+
+                    //---- planManage ----
+                    planManage.setText("Plan Management");
+                    planManage.setBackground(Color.white);
+                    planManage.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 18));
+                    planManage.setHorizontalAlignment(SwingConstants.LEFT);
+                    planManage.setBorderPainted(false);
+                    planManage.addActionListener(e -> planButtonActionPerformed(e));
+                    VenuesManageMenu.add(planManage);
                 }
                 menu.add(VenuesManageMenu);
             }
@@ -185,6 +208,13 @@ public class NavigatorAdmin extends JFrame {
             label3.setIcon(new ImageIcon(getClass().getResource("/resources/icons/video.png")));
             body.add(label3);
             label3.setBounds(25, 222, 25, 25);
+
+            //---- button2 ----
+            button2.setIcon(new ImageIcon(getClass().getResource("/resources/icons/plan.png")));
+            button2.setBackground(Color.white);
+            button2.setForeground(Color.white);
+            body.add(button2);
+            button2.setBounds(25, 290, 25, 25);
 
             {
                 // compute preferred size
@@ -235,9 +265,11 @@ public class NavigatorAdmin extends JFrame {
     private JPanel lessonManageMenu;
     private JButton lessonManage;
     private JPanel VenuesManageMenu;
+    private JButton planManage;
     private JButton switchAccount;
     private JButton label2;
     private JButton label3;
+    private JButton button2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         NavigatorAdmin.run();

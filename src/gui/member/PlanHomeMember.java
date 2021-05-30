@@ -563,6 +563,8 @@ public class PlanHomeMember extends JFrame {
             //---- prePageButton ----
             prePageButton.setText("PRE");
             prePageButton.setForeground(Color.white);
+            prePageButton.setBorderPainted(false);
+            prePageButton.setBackground(Color.darkGray);
             prePageButton.addActionListener(e -> prePageButtonActionPerformed(e));
             body.add(prePageButton);
             prePageButton.setBounds(55, 595, 100, 40);

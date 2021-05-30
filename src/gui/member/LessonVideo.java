@@ -123,7 +123,7 @@ public class LessonVideo extends JFrame {
             lessonType.setBackground(Color.white);
             lessonType.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
             body.add(lessonType);
-            lessonType.setBounds(305, 500, 125, lessonType.getPreferredSize().height);
+            lessonType.setBounds(305, 500, 195, lessonType.getPreferredSize().height);
 
             {
                 // compute preferred size
