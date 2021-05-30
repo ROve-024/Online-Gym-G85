@@ -104,6 +104,17 @@ public class PlanHomeMember extends JFrame {
         }
     }
 
+    private void prePageButtonActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        if(this.page == 0){
+            Warning.run("No previous page here.");
+        }
+        else{
+            this.page--;
+            this.update();
+        }
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -147,6 +158,7 @@ public class PlanHomeMember extends JFrame {
         deleteButton6 = new JButton();
         endTime6 = new JLabel();
         nextPageButton = new JButton();
+        prePageButton = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -548,6 +560,13 @@ public class PlanHomeMember extends JFrame {
             body.add(nextPageButton);
             nextPageButton.setBounds(655, 595, 100, 40);
 
+            //---- prePageButton ----
+            prePageButton.setText("PRE");
+            prePageButton.setForeground(Color.white);
+            prePageButton.addActionListener(e -> prePageButtonActionPerformed(e));
+            body.add(prePageButton);
+            prePageButton.setBounds(55, 595, 100, 40);
+
             {
                 // compute preferred size
                 Dimension preferredSize = new Dimension();
@@ -627,6 +646,7 @@ public class PlanHomeMember extends JFrame {
     private JButton deleteButton6;
     private JLabel endTime6;
     private JButton nextPageButton;
+    private JButton prePageButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
         PlanHomeMember.run();
