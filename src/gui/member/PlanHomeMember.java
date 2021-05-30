@@ -541,7 +541,7 @@ public class PlanHomeMember extends JFrame {
 
             //---- nextPageButton ----
             nextPageButton.setBorderPainted(false);
-            nextPageButton.setBackground(SystemColor.control);
+            nextPageButton.setBackground(Color.darkGray);
             nextPageButton.setText("NEXT");
             nextPageButton.setForeground(Color.white);
             nextPageButton.addActionListener(e -> nextPageButtonActionPerformed(e));
@@ -787,6 +787,80 @@ public class PlanHomeMember extends JFrame {
                     this.coachName1.setText(coachDataTemp.getName());
                     this.startTime1.setText(planData[0].getStartTime());
                     this.endTime1.setText(planData[0].getEndTime());
+            }
+
+            //Set style for the remaining plans
+            switch (planRemainNumb) {
+                case 1:
+                    this.lessonName2.setText("");
+                    this.lessonName2.setBackground(new Color(240, 240, 240));
+                    this.lessonName2.setOpaque(true);
+                    this.coachName2.setText("");
+                    this.coachName2.setBackground(new Color(240, 240, 240));
+                    this.coachName2.setOpaque(true);
+                    this.startTime2.setText("");
+                    this.startTime2.setBackground(new Color(240, 240, 240));
+                    this.startTime2.setOpaque(true);
+                    this.endTime2.setText("");
+                    this.endTime2.setBackground(new Color(240, 240, 240));
+                    this.endTime2.setOpaque(true);
+                    this.deleteButton2.setVisible(false);
+                case 2:
+                    this.lessonName3.setText("");
+                    this.lessonName3.setBackground(new Color(240, 240, 240));
+                    this.lessonName3.setOpaque(true);
+                    this.coachName3.setText("");
+                    this.coachName3.setBackground(new Color(240, 240, 240));
+                    this.coachName3.setOpaque(true);
+                    this.startTime3.setText("");
+                    this.startTime3.setBackground(new Color(240, 240, 240));
+                    this.startTime3.setOpaque(true);
+                    this.endTime3.setText("");
+                    this.endTime3.setBackground(new Color(240, 240, 240));
+                    this.endTime3.setOpaque(true);
+                    this.deleteButton3.setVisible(false);
+                case 3:
+                    this.lessonName4.setText("");
+                    this.lessonName4.setBackground(new Color(240, 240, 240));
+                    this.lessonName4.setOpaque(true);
+                    this.coachName4.setText("");
+                    this.coachName4.setBackground(new Color(240, 240, 240));
+                    this.coachName4.setOpaque(true);
+                    this.startTime4.setText("");
+                    this.startTime4.setBackground(new Color(240, 240, 240));
+                    this.startTime4.setOpaque(true);
+                    this.endTime4.setText("");
+                    this.endTime4.setBackground(new Color(240, 240, 240));
+                    this.endTime4.setOpaque(true);
+                    this.deleteButton4.setVisible(false);
+                case 4:
+                    this.lessonName5.setText("");
+                    this.lessonName5.setBackground(new Color(240, 240, 240));
+                    this.lessonName5.setOpaque(true);
+                    this.coachName5.setText("");
+                    this.coachName5.setBackground(new Color(240, 240, 240));
+                    this.coachName5.setOpaque(true);
+                    this.startTime5.setText("");
+                    this.startTime5.setBackground(new Color(240, 240, 240));
+                    this.startTime5.setOpaque(true);
+                    this.endTime5.setText("");
+                    this.endTime5.setBackground(new Color(240, 240, 240));
+                    this.endTime5.setOpaque(true);
+                    this.deleteButton5.setVisible(false);
+                case 5:
+                    this.lessonName6.setText("");
+                    this.lessonName6.setBackground(new Color(240, 240, 240));
+                    this.lessonName6.setOpaque(true);
+                    this.coachName6.setText("");
+                    this.coachName6.setBackground(new Color(240, 240, 240));
+                    this.coachName6.setOpaque(true);
+                    this.startTime6.setText("");
+                    this.startTime6.setBackground(new Color(240, 240, 240));
+                    this.startTime6.setOpaque(true);
+                    this.endTime6.setText("");
+                    this.endTime6.setBackground(new Color(240, 240, 240));
+                    this.endTime6.setOpaque(true);
+                    this.deleteButton6.setVisible(false);
             }
         }
     }

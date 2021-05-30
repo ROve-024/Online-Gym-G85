@@ -3,7 +3,9 @@ package gui.login;
 import javax.swing.border.*;
 
 import controller.AdminFunction;
+import controller.CheckFunction;
 import controller.ClientFunction;
+import controller.CheckFunction;
 import gui.admin.NavigatorAdmin;
 import gui.other.UserBuffer;
 import gui.coach.NavigatorCoach;
@@ -31,8 +33,10 @@ public class Login extends JFrame {
     private void loginButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         UserBuffer.setBuffer("");
+        boolean judge;
         String account = this.username.getText();
         String password = new String(this.password.getPassword());
+        //if(CheckFunction.checkPassword(this.password.getPassword()))
 //        System.out.println(account+": "+password);
         if(this.userButton.isSelected()){
             if(ClientFunction.loginMatch(account, password)){

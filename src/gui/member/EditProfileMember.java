@@ -38,7 +38,7 @@ public class EditProfileMember extends JFrame {
                     clientData.setSex("female");
                 }
                 ClientFunction.updateClientInfo(clientData);
-                ProfileCoach.run();
+                ProfileMember.run();
                 this.dispose();
             }
             else {

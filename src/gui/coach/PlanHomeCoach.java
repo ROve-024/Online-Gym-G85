@@ -919,6 +919,85 @@ public class PlanHomeCoach extends JFrame {
                     this.startTime1.setText(planData[0].getStartTime());
                     this.endTime1.setText(planData[0].getEndTime());
             }
+
+            //Set style for the remaining plans
+            switch (planRemainNumb) {
+                case 1:
+                    this.lessonName2.setText("");
+                    this.lessonName2.setBackground(new Color(240, 240, 240));
+                    this.lessonName2.setOpaque(true);
+                    this.memberName2.setText("");
+                    this.memberName2.setBackground(new Color(240, 240, 240));
+                    this.memberName2.setOpaque(true);
+                    this.startTime2.setText("");
+                    this.startTime2.setBackground(new Color(240, 240, 240));
+                    this.startTime2.setOpaque(true);
+                    this.endTime2.setText("");
+                    this.endTime2.setBackground(new Color(240, 240, 240));
+                    this.endTime2.setOpaque(true);
+                    this.profileButton2.setVisible(false);
+                    this.deleteButton2.setVisible(false);
+                case 2:
+                    this.lessonName3.setText("");
+                    this.lessonName3.setBackground(new Color(240, 240, 240));
+                    this.lessonName3.setOpaque(true);
+                    this.memberName3.setText("");
+                    this.memberName3.setBackground(new Color(240, 240, 240));
+                    this.memberName3.setOpaque(true);
+                    this.startTime3.setText("");
+                    this.startTime3.setBackground(new Color(240, 240, 240));
+                    this.startTime3.setOpaque(true);
+                    this.endTime3.setText("");
+                    this.endTime3.setBackground(new Color(240, 240, 240));
+                    this.endTime3.setOpaque(true);
+                    this.profileButton3.setVisible(false);
+                    this.deleteButton3.setVisible(false);
+                case 3:
+                    this.lessonName4.setText("");
+                    this.lessonName4.setBackground(new Color(240, 240, 240));
+                    this.lessonName4.setOpaque(true);
+                    this.memberName4.setText("");
+                    this.memberName4.setBackground(new Color(240, 240, 240));
+                    this.memberName4.setOpaque(true);
+                    this.startTime4.setText("");
+                    this.startTime4.setBackground(new Color(240, 240, 240));
+                    this.startTime4.setOpaque(true);
+                    this.endTime4.setText("");
+                    this.endTime4.setBackground(new Color(240, 240, 240));
+                    this.endTime4.setOpaque(true);
+                    this.profileButton4.setVisible(false);
+                    this.deleteButton4.setVisible(false);
+                case 4:
+                    this.lessonName5.setText("");
+                    this.lessonName5.setBackground(new Color(240, 240, 240));
+                    this.lessonName5.setOpaque(true);
+                    this.memberName5.setText("");
+                    this.memberName5.setBackground(new Color(240, 240, 240));
+                    this.memberName5.setOpaque(true);
+                    this.startTime5.setText("");
+                    this.startTime5.setBackground(new Color(240, 240, 240));
+                    this.startTime5.setOpaque(true);
+                    this.endTime5.setText("");
+                    this.endTime5.setBackground(new Color(240, 240, 240));
+                    this.endTime5.setOpaque(true);
+                    this.profileButton5.setVisible(false);
+                    this.deleteButton5.setVisible(false);
+                case 5:
+                    this.lessonName6.setText("");
+                    this.lessonName6.setBackground(new Color(240, 240, 240));
+                    this.lessonName6.setOpaque(true);
+                    this.memberName6.setText("");
+                    this.memberName6.setBackground(new Color(240, 240, 240));
+                    this.memberName6.setOpaque(true);
+                    this.startTime6.setText("");
+                    this.startTime6.setBackground(new Color(240, 240, 240));
+                    this.startTime6.setOpaque(true);
+                    this.endTime6.setText("");
+                    this.endTime6.setBackground(new Color(240, 240, 240));
+                    this.endTime6.setOpaque(true);
+                    this.profileButton6.setVisible(false);
+                    this.deleteButton6.setVisible(false);
+            }
         }
     }
 }
