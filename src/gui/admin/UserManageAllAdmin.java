@@ -323,7 +323,7 @@ public class UserManageAllAdmin extends JFrame {
 
                 //---- clientAvatar1 ----
                 clientAvatar1.setBackground(Color.white);
-                clientAvatar1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
+                clientAvatar1.setIcon(null);
                 clientAvatar1.setHorizontalAlignment(SwingConstants.CENTER);
                 client1.add(clientAvatar1);
                 clientAvatar1.setBounds(10, 10, 75, 75);
@@ -391,7 +391,7 @@ public class UserManageAllAdmin extends JFrame {
 
                 //---- coachAvatar1 ----
                 coachAvatar1.setBackground(Color.white);
-                coachAvatar1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
+                coachAvatar1.setIcon(null);
                 coachAvatar1.setHorizontalAlignment(SwingConstants.CENTER);
                 coach1.add(coachAvatar1);
                 coachAvatar1.setBounds(10, 10, 75, 75);
@@ -470,7 +470,7 @@ public class UserManageAllAdmin extends JFrame {
 
                 //---- clientAvatar2 ----
                 clientAvatar2.setBackground(Color.white);
-                clientAvatar2.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
+                clientAvatar2.setIcon(null);
                 clientAvatar2.setHorizontalAlignment(SwingConstants.CENTER);
                 client2.add(clientAvatar2);
                 clientAvatar2.setBounds(10, 10, 75, 75);
@@ -525,7 +525,7 @@ public class UserManageAllAdmin extends JFrame {
 
                 //---- clientAvatar3 ----
                 clientAvatar3.setBackground(Color.white);
-                clientAvatar3.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
+                clientAvatar3.setIcon(null);
                 clientAvatar3.setHorizontalAlignment(SwingConstants.CENTER);
                 client3.add(clientAvatar3);
                 clientAvatar3.setBounds(10, 10, 75, 75);
@@ -580,7 +580,7 @@ public class UserManageAllAdmin extends JFrame {
 
                 //---- clientAvatar4 ----
                 clientAvatar4.setBackground(Color.white);
-                clientAvatar4.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
+                clientAvatar4.setIcon(null);
                 clientAvatar4.setHorizontalAlignment(SwingConstants.CENTER);
                 client4.add(clientAvatar4);
                 clientAvatar4.setBounds(10, 10, 75, 75);
@@ -635,7 +635,7 @@ public class UserManageAllAdmin extends JFrame {
 
                 //---- clientAvatar5 ----
                 clientAvatar5.setBackground(Color.white);
-                clientAvatar5.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
+                clientAvatar5.setIcon(null);
                 clientAvatar5.setHorizontalAlignment(SwingConstants.CENTER);
                 client5.add(clientAvatar5);
                 clientAvatar5.setBounds(10, 10, 75, 75);
@@ -690,7 +690,7 @@ public class UserManageAllAdmin extends JFrame {
 
                 //---- clientAvatar6 ----
                 clientAvatar6.setBackground(Color.white);
-                clientAvatar6.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
+                clientAvatar6.setIcon(null);
                 clientAvatar6.setHorizontalAlignment(SwingConstants.CENTER);
                 client6.add(clientAvatar6);
                 clientAvatar6.setBounds(10, 10, 75, 75);
@@ -745,7 +745,7 @@ public class UserManageAllAdmin extends JFrame {
 
                 //---- clientAvatar7 ----
                 clientAvatar7.setBackground(Color.white);
-                clientAvatar7.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
+                clientAvatar7.setIcon(null);
                 clientAvatar7.setHorizontalAlignment(SwingConstants.CENTER);
                 client7.add(clientAvatar7);
                 clientAvatar7.setBounds(10, 10, 75, 75);
@@ -800,7 +800,7 @@ public class UserManageAllAdmin extends JFrame {
 
                 //---- clientAvatar8 ----
                 clientAvatar8.setBackground(Color.white);
-                clientAvatar8.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (1).jpg")));
+                clientAvatar8.setIcon(null);
                 clientAvatar8.setHorizontalAlignment(SwingConstants.CENTER);
                 client8.add(clientAvatar8);
                 clientAvatar8.setBounds(10, 10, 75, 75);
@@ -855,7 +855,7 @@ public class UserManageAllAdmin extends JFrame {
 
                 //---- coachAvatar2 ----
                 coachAvatar2.setBackground(Color.white);
-                coachAvatar2.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
+                coachAvatar2.setIcon(null);
                 coachAvatar2.setHorizontalAlignment(SwingConstants.CENTER);
                 coach2.add(coachAvatar2);
                 coachAvatar2.setBounds(10, 10, 75, 75);
@@ -910,7 +910,7 @@ public class UserManageAllAdmin extends JFrame {
 
                 //---- coachAvatar3 ----
                 coachAvatar3.setBackground(Color.white);
-                coachAvatar3.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
+                coachAvatar3.setIcon(null);
                 coachAvatar3.setHorizontalAlignment(SwingConstants.CENTER);
                 coach3.add(coachAvatar3);
                 coachAvatar3.setBounds(10, 10, 75, 75);
@@ -965,7 +965,7 @@ public class UserManageAllAdmin extends JFrame {
 
                 //---- coachAvatar4 ----
                 coachAvatar4.setBackground(Color.white);
-                coachAvatar4.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
+                coachAvatar4.setIcon(null);
                 coachAvatar4.setHorizontalAlignment(SwingConstants.CENTER);
                 coach4.add(coachAvatar4);
                 coachAvatar4.setBounds(10, 10, 75, 75);
@@ -1020,7 +1020,7 @@ public class UserManageAllAdmin extends JFrame {
 
                 //---- coachAvatar5 ----
                 coachAvatar5.setBackground(Color.white);
-                coachAvatar5.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
+                coachAvatar5.setIcon(null);
                 coachAvatar5.setHorizontalAlignment(SwingConstants.CENTER);
                 coach5.add(coachAvatar5);
                 coachAvatar5.setBounds(10, 10, 75, 75);
@@ -1075,7 +1075,7 @@ public class UserManageAllAdmin extends JFrame {
 
                 //---- coachAvatar6 ----
                 coachAvatar6.setBackground(Color.white);
-                coachAvatar6.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
+                coachAvatar6.setIcon(null);
                 coachAvatar6.setHorizontalAlignment(SwingConstants.CENTER);
                 coach6.add(coachAvatar6);
                 coachAvatar6.setBounds(10, 10, 75, 75);
@@ -1130,7 +1130,7 @@ public class UserManageAllAdmin extends JFrame {
 
                 //---- coachAvatar7 ----
                 coachAvatar7.setBackground(Color.white);
-                coachAvatar7.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
+                coachAvatar7.setIcon(null);
                 coachAvatar7.setHorizontalAlignment(SwingConstants.CENTER);
                 coach7.add(coachAvatar7);
                 coachAvatar7.setBounds(10, 10, 75, 75);
@@ -1185,7 +1185,7 @@ public class UserManageAllAdmin extends JFrame {
 
                 //---- coachAvatar8 ----
                 coachAvatar8.setBackground(Color.white);
-                coachAvatar8.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (17).jpg")));
+                coachAvatar8.setIcon(null);
                 coachAvatar8.setHorizontalAlignment(SwingConstants.CENTER);
                 coach8.add(coachAvatar8);
                 coachAvatar8.setBounds(10, 10, 75, 75);

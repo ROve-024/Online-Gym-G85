@@ -108,7 +108,7 @@ public class LessonDetailMember extends JFrame {
             //---- lessonPicture ----
             lessonPicture.setBorder(new LineBorder(Color.lightGray));
             lessonPicture.setHorizontalAlignment(SwingConstants.CENTER);
-            lessonPicture.setIcon(new ImageIcon(getClass().getResource("/resources/images/lessonPic/yoga.png")));
+            lessonPicture.setIcon(null);
             body.add(lessonPicture);
             lessonPicture.setBounds(30, 165, 300, 251);
 
@@ -150,7 +150,7 @@ public class LessonDetailMember extends JFrame {
             //---- coachAvatar ----
             coachAvatar.setBorder(new LineBorder(Color.white));
             coachAvatar.setHorizontalAlignment(SwingConstants.CENTER);
-            coachAvatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (10).jpg")));
+            coachAvatar.setIcon(null);
             body.add(coachAvatar);
             coachAvatar.setBounds(30, 485, 75, 75);
 

@@ -235,7 +235,7 @@ public class ALLLessonAdmin extends JFrame {
 
                 //---- lessonPicture1 ----
                 lessonPicture1.setBackground(SystemColor.activeCaption);
-                lessonPicture1.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/run.png")));
+                lessonPicture1.setIcon(null);
                 lesson1.add(lessonPicture1);
                 lessonPicture1.setBounds(1, 1, 238, 160);
 
@@ -319,7 +319,7 @@ public class ALLLessonAdmin extends JFrame {
 
                 //---- lessonPicture2 ----
                 lessonPicture2.setBackground(SystemColor.activeCaption);
-                lessonPicture2.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/crunches.png")));
+                lessonPicture2.setIcon(null);
                 lesson2.add(lessonPicture2);
                 lessonPicture2.setBounds(1, 1, 238, 160);
 
@@ -389,7 +389,7 @@ public class ALLLessonAdmin extends JFrame {
 
                 //---- lessonPicture3 ----
                 lessonPicture3.setBackground(SystemColor.activeCaption);
-                lessonPicture3.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/soccer.png")));
+                lessonPicture3.setIcon(null);
                 lesson3.add(lessonPicture3);
                 lessonPicture3.setBounds(1, 1, 238, 160);
 
@@ -450,7 +450,7 @@ public class ALLLessonAdmin extends JFrame {
 
                 //---- lessonPicture4 ----
                 lessonPicture4.setBackground(SystemColor.activeCaption);
-                lessonPicture4.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/yoga.png")));
+                lessonPicture4.setIcon(null);
                 lesson4.add(lessonPicture4);
                 lessonPicture4.setBounds(1, 1, 238, 160);
 
@@ -502,7 +502,7 @@ public class ALLLessonAdmin extends JFrame {
 
                 //---- lessonPicture5 ----
                 lessonPicture5.setBackground(SystemColor.activeCaption);
-                lessonPicture5.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/synthesize.png")));
+                lessonPicture5.setIcon(null);
                 lesson5.add(lessonPicture5);
                 lessonPicture5.setBounds(1, 1, 238, 160);
 
@@ -540,7 +540,7 @@ public class ALLLessonAdmin extends JFrame {
 
                 //---- lessonPicture6 ----
                 lessonPicture6.setBackground(SystemColor.activeCaption);
-                lessonPicture6.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/dumbbell.png")));
+                lessonPicture6.setIcon(null);
                 lesson6.add(lessonPicture6);
                 lessonPicture6.setBounds(1, 1, 238, 160);
 

@@ -18,7 +18,7 @@ new FormModel {
 					"background": new java.awt.Color( 0, 0, 0, 255 )
 					"foreground": sfield java.awt.Color white
 					"horizontalAlignment": 0
-					"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/images/avatar/Acatar (6).jpg" )
+					"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 15
 					"y": 20

@@ -93,7 +93,7 @@ public class ViewMemberProfile extends JFrame {
 
             //---- avatar ----
             avatar.setBackground(SystemColor.textHighlight);
-            avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar150/Acatar (8).jpg")));
+            avatar.setIcon(null);
             body.add(avatar);
             avatar.setBounds(295, 145, 150, 150);
 

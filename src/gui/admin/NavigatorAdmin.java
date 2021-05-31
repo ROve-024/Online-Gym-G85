@@ -103,7 +103,7 @@ public class NavigatorAdmin extends JFrame {
             avatar.setText("avatar");
             avatar.setBackground(Color.black);
             avatar.setForeground(Color.white);
-            avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (7).jpg")));
+            avatar.setIcon(null);
             avatar.setHorizontalAlignment(SwingConstants.CENTER);
             body.add(avatar);
             avatar.setBounds(15, 20, 85, 75);

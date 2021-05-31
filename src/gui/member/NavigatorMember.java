@@ -112,7 +112,7 @@ public class NavigatorMember extends JFrame {
             label1.setBackground(Color.black);
             label1.setForeground(Color.white);
             label1.setHorizontalAlignment(SwingConstants.CENTER);
-            label1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (6).jpg")));
+            label1.setIcon(null);
             body.add(label1);
             label1.setBounds(15, 20, 90, 75);
 

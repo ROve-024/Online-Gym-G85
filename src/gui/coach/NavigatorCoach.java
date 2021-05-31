@@ -106,7 +106,7 @@ public class NavigatorCoach extends JFrame {
             label1.setText("avatar");
             label1.setBackground(Color.black);
             label1.setForeground(Color.white);
-            label1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (24).jpg")));
+            label1.setIcon(null);
             label1.setHorizontalAlignment(SwingConstants.CENTER);
             body.add(label1);
             label1.setBounds(15, 20, 90, 75);

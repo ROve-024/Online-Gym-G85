@@ -79,7 +79,7 @@ public class LessonDetailCoach extends JFrame {
             //---- lessonPicture ----
             lessonPicture.setBorder(new LineBorder(Color.lightGray));
             lessonPicture.setHorizontalAlignment(SwingConstants.CENTER);
-            lessonPicture.setIcon(new ImageIcon(getClass().getResource("/resources/images/lessonPic/synthesize.png")));
+            lessonPicture.setIcon(null);
             body.add(lessonPicture);
             lessonPicture.setBounds(30, 165, 300, 251);
 
@@ -104,7 +104,7 @@ public class LessonDetailCoach extends JFrame {
             //---- coachAvatar ----
             coachAvatar.setBorder(new LineBorder(Color.white));
             coachAvatar.setHorizontalAlignment(SwingConstants.CENTER);
-            coachAvatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (10).jpg")));
+            coachAvatar.setIcon(null);
             body.add(coachAvatar);
             coachAvatar.setBounds(30, 440, 75, 75);
 

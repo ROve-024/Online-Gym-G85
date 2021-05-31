@@ -33,7 +33,7 @@ new FormModel {
 					name: "lessonPicture"
 					"border": new javax.swing.border.LineBorder( sfield java.awt.Color lightGray, 1, false )
 					"horizontalAlignment": 0
-					"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/images/lessonPic/synthesize.png" )
+					"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 30
 					"y": 165
@@ -70,7 +70,7 @@ new FormModel {
 					name: "coachAvatar"
 					"border": new javax.swing.border.LineBorder( sfield java.awt.Color white, 1, false )
 					"horizontalAlignment": 0
-					"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/images/avatar/Acatar (10).jpg" )
+					"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"width": 75
 					"height": 75

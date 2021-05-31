@@ -59,7 +59,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "clientAvatar1"
 						"background": sfield java.awt.Color white
-						"icon": &SwingIcon0 new com.jformdesigner.model.SwingIcon( 0, "/resources/images/avatar/Acatar (1).jpg" )
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 						"horizontalAlignment": 0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 10
@@ -136,7 +136,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "coachAvatar1"
 						"background": sfield java.awt.Color white
-						"icon": &SwingIcon1 new com.jformdesigner.model.SwingIcon( 0, "/resources/images/avatar/Acatar (17).jpg" )
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 						"horizontalAlignment": 0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 10
@@ -228,7 +228,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "clientAvatar2"
 						"background": sfield java.awt.Color white
-						"icon": #SwingIcon0
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 						"horizontalAlignment": 0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 10
@@ -284,7 +284,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "clientAvatar3"
 						"background": sfield java.awt.Color white
-						"icon": #SwingIcon0
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 						"horizontalAlignment": 0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 10
@@ -340,7 +340,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "clientAvatar4"
 						"background": sfield java.awt.Color white
-						"icon": #SwingIcon0
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 						"horizontalAlignment": 0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 10
@@ -396,7 +396,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "clientAvatar5"
 						"background": sfield java.awt.Color white
-						"icon": #SwingIcon0
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 						"horizontalAlignment": 0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 10
@@ -452,7 +452,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "clientAvatar6"
 						"background": sfield java.awt.Color white
-						"icon": #SwingIcon0
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 						"horizontalAlignment": 0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 10
@@ -508,7 +508,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "clientAvatar7"
 						"background": sfield java.awt.Color white
-						"icon": #SwingIcon0
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 						"horizontalAlignment": 0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 10
@@ -564,7 +564,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "clientAvatar8"
 						"background": sfield java.awt.Color white
-						"icon": #SwingIcon0
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 						"horizontalAlignment": 0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 10
@@ -620,7 +620,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "coachAvatar2"
 						"background": sfield java.awt.Color white
-						"icon": #SwingIcon1
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 						"horizontalAlignment": 0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 10
@@ -676,7 +676,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "coachAvatar3"
 						"background": sfield java.awt.Color white
-						"icon": #SwingIcon1
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 						"horizontalAlignment": 0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 10
@@ -732,7 +732,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "coachAvatar4"
 						"background": sfield java.awt.Color white
-						"icon": #SwingIcon1
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 						"horizontalAlignment": 0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 10
@@ -788,7 +788,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "coachAvatar5"
 						"background": sfield java.awt.Color white
-						"icon": #SwingIcon1
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 						"horizontalAlignment": 0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 10
@@ -844,7 +844,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "coachAvatar6"
 						"background": sfield java.awt.Color white
-						"icon": #SwingIcon1
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 						"horizontalAlignment": 0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 10
@@ -900,7 +900,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "coachAvatar7"
 						"background": sfield java.awt.Color white
-						"icon": #SwingIcon1
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 						"horizontalAlignment": 0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 10
@@ -956,7 +956,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "coachAvatar8"
 						"background": sfield java.awt.Color white
-						"icon": #SwingIcon1
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 						"horizontalAlignment": 0
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 10

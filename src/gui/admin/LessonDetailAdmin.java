@@ -96,7 +96,7 @@ public class LessonDetailAdmin extends JFrame {
             lessonPicture.setBorder(new LineBorder(Color.lightGray));
             lessonPicture.setHorizontalAlignment(SwingConstants.CENTER);
             lessonPicture.setBackground(SystemColor.menu);
-            lessonPicture.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/crunches.png")));
+            lessonPicture.setIcon(null);
             body.add(lessonPicture);
             lessonPicture.setBounds(30, 165, 300, 250);
 
@@ -121,7 +121,7 @@ public class LessonDetailAdmin extends JFrame {
             //---- coachAvatar ----
             coachAvatar.setBorder(new LineBorder(Color.white));
             coachAvatar.setHorizontalAlignment(SwingConstants.CENTER);
-            coachAvatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/Acatar (3).jpg")));
+            coachAvatar.setIcon(null);
             body.add(coachAvatar);
             coachAvatar.setBounds(30, 440, 75, 75);
 
