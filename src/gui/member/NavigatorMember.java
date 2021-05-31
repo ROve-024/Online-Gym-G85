@@ -314,7 +314,7 @@ public class NavigatorMember extends JFrame {
     }
     private void init(){
         ClientData clientData = UserBuffer.getClientSession();
-        this.username.setText(clientData.getAccount());
+        this.username.setText(clientData.getName());
         this.vipLevel.setText("Level" + clientData.getVIPlevel());
         this.welcomeMsg.setText("Welcome, dear client.");
         try{

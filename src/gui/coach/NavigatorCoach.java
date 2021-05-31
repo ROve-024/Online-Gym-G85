@@ -299,7 +299,7 @@ public class NavigatorCoach extends JFrame {
     }
     private void init(){
         CoachData coachData = UserBuffer.getCoachSession();
-        this.username.setText(coachData.getAccount());
+        this.username.setText(coachData.getName());
         this.welcomeMsg.setText("Welcome, coach.");
         try{
             this.label1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + coachData.getFileAddress())));
