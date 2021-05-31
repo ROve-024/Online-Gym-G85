@@ -35,7 +35,7 @@ public class UserManageAllAdmin extends JFrame {
         }
     }
     private void memberNextButtonActionPerformed(ActionEvent e) {
-        int remainItem = this.clientList.size() - 6 * (this.pageClient + 1);
+        int remainItem = this.clientList.size() - 8 * (this.pageClient + 1);
         if(remainItem <= 0){
             Warning.run("No more page here.");
         }
@@ -56,7 +56,7 @@ public class UserManageAllAdmin extends JFrame {
     }
 
     private void coachNextButtonActionPerformed(ActionEvent e) {
-        int remainItem = this.coachList.size() - 6 * (this.pageCoach + 1);
+        int remainItem = this.coachList.size() - 8 * (this.pageCoach + 1);
         if(remainItem <= 0){
             Warning.run("No more page here.");
         }
