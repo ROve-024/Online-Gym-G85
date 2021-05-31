@@ -24,7 +24,13 @@ public class ChangeCoachAvatar extends JFrame {
         CoachData coachData = UserBuffer.getCoachSession();
         coachData.setFileAddress(this.avatarName.getText());
         CoachFunction.updateCoachInfo(coachData);
-        this.dispose();
+        java.awt.Window[] win = java.awt.Window.getWindows();
+        int i=0;
+        while (i<win.length) {
+            win[i].dispose();
+            i++;
+        }
+        NavigatorCoach.run();
         ProfileCoach.run();
     }
 
