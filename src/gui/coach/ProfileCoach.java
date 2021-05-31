@@ -1,7 +1,7 @@
 package gui.coach;
 
 import controller.CoachFunction;
-import gui.other.UserBuffer;
+import gui.others.UserBuffer;
 import io.coach.CoachData;
 
 import java.awt.*;
@@ -22,9 +22,13 @@ public class ProfileCoach extends JFrame {
     }
 
     private void editButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
         EditProfileCoach.run();
         this.dispose();
+    }
+
+    private void avatarActionPerformed(ActionEvent e) {
+        this.dispose();
+        ChangeCoachAvatar.run();
     }
 
     private void initComponents() {
@@ -100,8 +104,9 @@ public class ProfileCoach extends JFrame {
             avatar.setBackground(SystemColor.menu);
             avatar.setBorderPainted(false);
             avatar.setIcon(null);
+            avatar.addActionListener(e -> avatarActionPerformed(e));
             body.add(avatar);
-            avatar.setBounds(295, 145, 150, 150);
+            avatar.setBounds(295, 145, 145, 150);
 
             //---- nameTip ----
             nameTip.setText("Name");
@@ -517,6 +522,7 @@ public class ProfileCoach extends JFrame {
         this.phoneNumber.setText(UserBuffer.dataIsEmpty(coachData.getPhonenumber()));
         this.gender.setText(UserBuffer.dataIsEmpty(coachData.getSex()));
         try{
+            System.out.println("/resources/images/avatar150/" + coachData.getFileAddress());
             this.avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar150/" + coachData.getFileAddress())));
         }catch (NullPointerException miss){
             this.avatar.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar150/404.jpg")));

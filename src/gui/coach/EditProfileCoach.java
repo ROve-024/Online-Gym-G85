@@ -6,8 +6,8 @@ package gui.coach;
 
 import controller.CheckFunction;
 import controller.CoachFunction;
-import gui.other.UserBuffer;
-import gui.other.Warning;
+import gui.others.UserBuffer;
+import gui.others.Warning;
 import io.coach.CoachData;
 
 import java.awt.*;

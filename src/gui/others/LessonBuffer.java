@@ -1,19 +1,16 @@
-package gui.other;
+package gui.others;
+
 
 import controller.ClassFunction;
-import controller.ClientFunction;
-import controller.CoachFunction;
 import io.classes.ClassData;
-import io.client.ClientData;
-import io.coach.CoachData;
 
 import java.io.*;
 
-public class ViewBuffer {
+public class LessonBuffer {
     public static String getBuffer(){
         String line = "";
         try{
-            File filename = new File("src/resources/buffer/viewBuffer.txt");
+            File filename = new File("src/resources/buffer/lessonBuffer.txt");
             InputStreamReader reader = new InputStreamReader(new FileInputStream(filename));
             BufferedReader br = new BufferedReader(reader);
             line = br.readLine();
@@ -23,7 +20,7 @@ public class ViewBuffer {
         return line;
     }
     public static void setBuffer(String ID){
-        File file = new File("src/resources/buffer/viewBuffer.txt");
+        File file = new File("src/resources/buffer/lessonBuffer.txt");
         file.delete();
         try {
             file.createNewFile();
@@ -36,15 +33,10 @@ public class ViewBuffer {
             System.out.println("Create File Error!");
         }
     }
-    public static CoachData getViewCoachBuffer(){
+    public static ClassData getLessonBuffer(){
         String ID = LessonBuffer.getBuffer();
-        CoachData coachData = CoachFunction.searchCoachByID(ID);
-        return coachData;
-    }
-    public static ClientData getViewClientBuffer(){
-        String ID = LessonBuffer.getBuffer();
-        ClientData clientData = ClientFunction.searchClientByID(ID);
-        return clientData;
+        ClassData classData = ClassFunction.searchClassByID(ID);
+        return classData;
     }
     public static String dataIsEmpty(String string){
         String result = "";

@@ -2,7 +2,7 @@ package gui.coach;
 
 import controller.ClassFunction;
 import controller.CoachFunction;
-import gui.other.LessonBuffer;
+import gui.others.LessonBuffer;
 import io.classes.ClassData;
 import io.coach.CoachData;
 

@@ -3,15 +3,13 @@ package gui.login;
 import javax.swing.border.*;
 
 import controller.AdminFunction;
-import controller.CheckFunction;
 import controller.ClientFunction;
-import controller.CheckFunction;
 import gui.admin.NavigatorAdmin;
-import gui.other.UserBuffer;
+import gui.others.UserBuffer;
 import gui.coach.NavigatorCoach;
 import gui.member.NavigatorMember;
 import controller.CoachFunction;
-import gui.other.Warning;
+import gui.others.Warning;
 
 import java.awt.*;
 import java.awt.event.*;

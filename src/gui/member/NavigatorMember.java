@@ -1,7 +1,7 @@
 package gui.member;
 
 import gui.login.Login;
-import gui.other.UserBuffer;
+import gui.others.UserBuffer;
 import io.client.ClientData;
 
 import java.awt.*;

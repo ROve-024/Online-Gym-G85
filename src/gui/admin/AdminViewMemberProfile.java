@@ -7,8 +7,7 @@ package gui.admin;
 import java.awt.event.*;
 import controller.ClientFunction;
 import controller.PlanFunction;
-import gui.other.UserBuffer;
-import gui.other.ViewBuffer;
+import gui.others.ViewBuffer;
 import io.client.ClientData;
 
 import java.awt.*;

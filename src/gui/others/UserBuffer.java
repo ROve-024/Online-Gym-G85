@@ -1,18 +1,18 @@
-package gui.other;
-
-
-import controller.ClassFunction;
+package gui.others;
+import controller.AdminFunction;
+import controller.ClientFunction;
 import controller.CoachFunction;
-import io.classes.ClassData;
+import io.admin.AdminData;
+import io.client.ClientData;
 import io.coach.CoachData;
 
 import java.io.*;
 
-public class LessonBuffer {
+public class UserBuffer {
     public static String getBuffer(){
         String line = "";
         try{
-            File filename = new File("src/resources/buffer/lessonBuffer.txt");
+            File filename = new File("src/resources/buffer/userBuffer.txt");
             InputStreamReader reader = new InputStreamReader(new FileInputStream(filename));
             BufferedReader br = new BufferedReader(reader);
             line = br.readLine();
@@ -22,7 +22,7 @@ public class LessonBuffer {
         return line;
     }
     public static void setBuffer(String ID){
-        File file = new File("src/resources/buffer/lessonBuffer.txt");
+        File file = new File("src/resources/buffer/userBuffer.txt");
         file.delete();
         try {
             file.createNewFile();
@@ -35,10 +35,20 @@ public class LessonBuffer {
             System.out.println("Create File Error!");
         }
     }
-    public static ClassData getLessonBuffer(){
-        String ID = LessonBuffer.getBuffer();
-        ClassData classData = ClassFunction.searchClassByID(ID);
-        return classData;
+    public static CoachData getCoachSession(){
+        String ID = UserBuffer.getBuffer();
+        CoachData coachData = CoachFunction.searchCoachByID(ID);
+        return coachData;
+    }
+    public static AdminData getAdminSession(){
+        String ID = UserBuffer.getBuffer();
+        AdminData adminData = AdminFunction.searchAdminByID(ID);
+        return adminData;
+    }
+    public static ClientData getClientSession(){
+        String ID = UserBuffer.getBuffer();
+        ClientData clientData = ClientFunction.searchClientByID(ID);
+        return clientData;
     }
     public static String dataIsEmpty(String string){
         String result = "";

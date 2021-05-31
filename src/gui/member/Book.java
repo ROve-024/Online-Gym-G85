@@ -2,13 +2,12 @@ package gui.member;
 
 import javax.swing.border.*;
 import controller.CheckFunction;
-import controller.ClassFunction;
 import controller.CoachFunction;
 import controller.PlanFunction;
-import gui.other.LessonBuffer;
-import gui.other.PlanBuffer;
-import gui.other.UserBuffer;
-import gui.other.Warning;
+import gui.others.LessonBuffer;
+import gui.others.PlanBuffer;
+import gui.others.UserBuffer;
+import gui.others.Warning;
 import io.classes.ClassData;
 import io.coach.CoachData;
 import io.plan.PlanData;

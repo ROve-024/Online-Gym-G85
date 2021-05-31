@@ -5,13 +5,12 @@
 package gui.member;
 
 import controller.ClassFunction;
-import controller.ClientFunction;
 import controller.CoachFunction;
 import gui.coach.ViewCoachProfile;
-import gui.other.LessonBuffer;
-import gui.other.UserBuffer;
-import gui.other.ViewBuffer;
-import gui.other.Warning;
+import gui.others.LessonBuffer;
+import gui.others.UserBuffer;
+import gui.others.ViewBuffer;
+import gui.others.Warning;
 import io.classes.ClassData;
 import io.client.ClientData;
 import io.coach.CoachData;

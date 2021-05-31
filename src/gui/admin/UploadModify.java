@@ -1,8 +1,7 @@
 package gui.admin;
 
 import controller.ClassFunction;
-import gui.other.LessonBuffer;
-import gui.other.UserBuffer;
+import gui.others.LessonBuffer;
 import io.classes.ClassData;
 
 import java.awt.*;
@@ -179,10 +178,10 @@ public class UploadModify extends JFrame {
             //---- needVIP ----
             needVIP.setMaximumRowCount(4);
             needVIP.setModel(new DefaultComboBoxModel<>(new String[] {
-                    "0",
-                    "1",
-                    "2",
-                    "3"
+                "0",
+                "1",
+                "2",
+                "3"
             }));
             needVIP.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
             needVIP.setBackground(new Color(245, 245, 245));

@@ -9,8 +9,7 @@ import java.awt.event.*;
 import controller.ClassFunction;
 import controller.CoachFunction;
 import controller.PlanFunction;
-import gui.other.UserBuffer;
-import gui.other.ViewBuffer;
+import gui.others.ViewBuffer;
 import io.coach.CoachData;
 
 import java.awt.*;

@@ -2,10 +2,8 @@ package gui.member;
 
 import java.awt.event.*;
 import controller.ClientFunction;
-import controller.CoachFunction;
 import gui.coach.PlanHomeCoach;
-import gui.other.UserBuffer;
-import gui.other.ViewBuffer;
+import gui.others.ViewBuffer;
 import io.client.ClientData;
 
 import java.awt.*;

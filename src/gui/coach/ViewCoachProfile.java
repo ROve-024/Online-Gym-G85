@@ -3,9 +3,7 @@ package gui.coach;
 import java.awt.event.*;
 import controller.CoachFunction;
 import gui.member.LessonDetailMember;
-import gui.other.UserBuffer;
-import gui.other.ViewBuffer;
-import io.client.ClientData;
+import gui.others.ViewBuffer;
 import io.coach.CoachData;
 
 import java.awt.*;

@@ -1,7 +1,7 @@
 package gui.admin;
 
 import gui.login.Login;
-import gui.other.UserBuffer;
+import gui.others.UserBuffer;
 import io.admin.AdminData;
 
 import java.awt.*;

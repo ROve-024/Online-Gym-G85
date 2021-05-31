@@ -2,12 +2,9 @@ package gui.member;
 
 import controller.ClassFunction;
 import controller.CoachFunction;
-import gui.coach.MyLessonCoach;
-import gui.other.LessonBuffer;
-import gui.other.UserBuffer;
-import gui.other.Warning;
+import gui.others.LessonBuffer;
+import gui.others.Warning;
 import io.classes.ClassData;
-import io.client.ClientData;
 import io.coach.CoachData;
 
 import java.awt.*;

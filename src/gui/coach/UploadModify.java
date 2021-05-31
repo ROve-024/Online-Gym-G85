@@ -1,8 +1,7 @@
 package gui.coach;
 
 import controller.ClassFunction;
-import gui.other.LessonBuffer;
-import gui.other.UserBuffer;
+import gui.others.LessonBuffer;
 import io.classes.ClassData;
 
 import java.awt.*;

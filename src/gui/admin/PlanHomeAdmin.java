@@ -1,14 +1,10 @@
 package gui.admin;
 
 import controller.ClassFunction;
-import controller.CoachFunction;
 import controller.PlanFunction;
-import gui.other.PlanBuffer;
-import gui.other.UserBuffer;
-import gui.other.Warning;
+import gui.others.PlanBuffer;
+import gui.others.Warning;
 import io.classes.ClassData;
-import io.client.ClientData;
-import io.coach.CoachData;
 import io.plan.PlanData;
 
 import javax.swing.*;

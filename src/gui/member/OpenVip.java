@@ -5,9 +5,8 @@
 package gui.member;
 
 import controller.ClientFunction;
-import gui.coach.ProfileCoach;
-import gui.other.UserBuffer;
-import gui.other.Warning;
+import gui.others.UserBuffer;
+import gui.others.Warning;
 import io.client.ClientData;
 
 import java.awt.*;

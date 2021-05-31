@@ -1,7 +1,7 @@
 package gui.member;
 
 import controller.ClassFunction;
-import gui.other.LessonBuffer;
+import gui.others.LessonBuffer;
 import io.classes.ClassData;
 
 import java.awt.*;

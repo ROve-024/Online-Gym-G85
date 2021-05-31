@@ -2,10 +2,9 @@ package gui.coach;
 
 import controller.ClassFunction;
 import controller.ClientFunction;
-import controller.CoachFunction;
 import controller.PlanFunction;
 import gui.member.ViewMemberProfile;
-import gui.other.*;
+import gui.others.*;
 import io.classes.ClassData;
 import io.client.ClientData;
 import io.coach.CoachData;

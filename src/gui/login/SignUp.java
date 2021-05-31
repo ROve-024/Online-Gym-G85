@@ -6,8 +6,8 @@ import controller.AdminFunction;
 import controller.ClientFunction;
 import controller.CoachFunction;
 import controller.CheckFunction;
-import gui.other.UserBuffer;
-import gui.other.Warning;
+import gui.others.UserBuffer;
+import gui.others.Warning;
 
 import java.awt.*;
 import java.awt.event.*;

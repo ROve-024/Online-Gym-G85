@@ -4,8 +4,7 @@ import controller.ClassFunction;
 import controller.CoachFunction;
 import controller.PlanFunction;
 import gui.coach.ProfileCoach;
-import gui.admin.UploadModify;
-import gui.other.LessonBuffer;
+import gui.others.LessonBuffer;
 import io.classes.ClassData;
 import io.coach.CoachData;
 

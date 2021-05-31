@@ -1,4 +1,4 @@
-package gui.other;
+package gui.others;
 
 public class WindowFunctions {
 

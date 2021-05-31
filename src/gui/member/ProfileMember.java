@@ -1,6 +1,6 @@
 package gui.member;
 
-import gui.other.UserBuffer;
+import gui.others.UserBuffer;
 import io.client.ClientData;
 
 import java.awt.*;
@@ -21,9 +21,13 @@ public class ProfileMember extends JFrame {
     }
 
     private void editButtonActionPerformed(ActionEvent e) {
-        // TODO add your code here
         EditProfileMember.run();
         this.dispose();
+    }
+
+    private void avatarActionPerformed(ActionEvent e) {
+        this.dispose();
+        ChangeMemberAvatar.run();
     }
 
     private void initComponents() {
@@ -98,8 +102,9 @@ public class ProfileMember extends JFrame {
             avatar.setBackground(SystemColor.textHighlight);
             avatar.setBorderPainted(false);
             avatar.setIcon(null);
+            avatar.addActionListener(e -> avatarActionPerformed(e));
             body.add(avatar);
-            avatar.setBounds(295, 145, 150, 150);
+            avatar.setBounds(295, 145, 145, 150);
 
             //---- nameTip ----
             nameTip.setText("Name");

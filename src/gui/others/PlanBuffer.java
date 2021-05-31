@@ -1,9 +1,7 @@
-package gui.other;
+package gui.others;
 
 import controller.PlanFunction;
-import controller.CoachFunction;
 import io.plan.PlanData;
-import io.coach.CoachData;
 
 import java.io.*;
 

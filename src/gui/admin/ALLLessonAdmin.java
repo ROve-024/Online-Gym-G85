@@ -6,8 +6,8 @@ package gui.admin;
 
 import controller.ClassFunction;
 import controller.CoachFunction;
-import gui.other.LessonBuffer;
-import gui.other.Warning;
+import gui.others.LessonBuffer;
+import gui.others.Warning;
 import io.classes.ClassData;
 import io.coach.CoachData;
 

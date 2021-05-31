@@ -1,7 +1,7 @@
 package gui.coach;
 
 import io.coach.CoachData;
-import gui.other.UserBuffer;
+import gui.others.UserBuffer;
 import gui.login.Login;
 
 import java.awt.*;

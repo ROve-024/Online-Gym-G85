@@ -1,10 +1,9 @@
 package gui.coach;
 
 import controller.ClassFunction;
-import gui.other.LessonBuffer;
-import gui.other.UserBuffer;
+import gui.others.LessonBuffer;
+import gui.others.UserBuffer;
 import io.classes.ClassData;
-import io.coach.CoachData;
 
 import java.awt.*;
 import java.awt.event.*;
