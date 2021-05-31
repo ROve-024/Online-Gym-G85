@@ -22,12 +22,13 @@ new FormModel {
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "title"
-					"text": "My Profile "
+					"text": "Modify Upload"
 					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 32 )
 					"background": sfield java.awt.Color white
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 25
 					"y": 45
+					"width": 325
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "finishButton"
@@ -59,6 +60,7 @@ new FormModel {
 					"border": &EmptyBorder0 new javax.swing.border.EmptyBorder( 5, 10, 5, 10 )
 					"caretColor": sfield java.awt.Color darkGray
 					"background": &Color0 new java.awt.Color( 245, 245, 245, 255 )
+					"foreground": sfield java.awt.Color gray
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 35
 					"y": 165
@@ -83,6 +85,7 @@ new FormModel {
 					"border": #EmptyBorder0
 					"caretColor": sfield java.awt.Color darkGray
 					"background": #Color0
+					"foreground": sfield java.awt.Color gray
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 35
 					"y": 235
@@ -130,6 +133,7 @@ new FormModel {
 					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
 					"caretColor": sfield java.awt.Color darkGray
 					"border": #EmptyBorder0
+					"foreground": sfield java.awt.Color gray
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 35
 					"y": 310
@@ -165,6 +169,7 @@ new FormModel {
 					}
 					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 18 )
 					"background": new java.awt.Color( 245, 245, 245, 255 )
+					"foreground": sfield java.awt.Color gray
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 35
 					"y": 385
@@ -185,6 +190,7 @@ new FormModel {
 					"background": new java.awt.Color( 245, 245, 245, 255 )
 					"border": new javax.swing.border.EmptyBorder( 5, 10, 5, 10 )
 					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
+					"foreground": sfield java.awt.Color gray
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 180
 					"y": 455
@@ -205,6 +211,7 @@ new FormModel {
 					"background": new java.awt.Color( 245, 245, 245, 255 )
 					"border": new javax.swing.border.EmptyBorder( 5, 10, 5, 10 )
 					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
+					"foreground": sfield java.awt.Color gray
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 550
 					"y": 455

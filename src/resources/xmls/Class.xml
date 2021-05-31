@@ -8,7 +8,7 @@
         <Category>Muscle strength training</Category>
         <Detail>Coach Gao will teach you how to do push ups reasonably and what points you should pay attention to when doing push ups to achieve the best effect.</Detail>
         <VIPLevel>2</VIPLevel>
-        <FileAddress>Lesson (1)</FileAddress>
+        <FileAddress>Lesson (1).png</FileAddress>
     </ROW>
     <ROW>
         <ClassID>2</ClassID>
@@ -18,7 +18,7 @@
         <Category>Muscle strength training</Category>
         <Detail>Coach Gao will give you some knowledge about weightlifting and some important warm-up exercises before class.</Detail>
         <VIPLevel>3</VIPLevel>
-        <FileAddress>Lesson (2)</FileAddress>
+        <FileAddress>Lesson (2).png</FileAddress>
     </ROW>
     <ROW>
         <ClassID>3</ClassID>
@@ -138,7 +138,7 @@
         <Category>Aerobic exercise</Category>
         <Detail>Belly dance is a relatively female dance, which is characterized by the dancers swinging their hips and abdomen with the changing fast rhythm. The dancing posture is beautiful and changeable, and most of them show the Arabian style. It is famous for its mystery. In recent years, as a popular way for women to lose weight, belly dance is popular all over the world.</Detail>
         <VIPLevel>3</VIPLevel>
-        <FileAddress>14.jpg</FileAddress>
+        <FileAddress>Lesson (7).png</FileAddress>
     </ROW>
     <ROW>
         <ClassID>15</ClassID>
@@ -148,7 +148,7 @@
         <Category>Aerobic exercise</Category>
         <Detail>Fitness ball is one of the traditional fitness and health equipment in China. There are stone, steel, copper, jade, and cloisonne health balls. Mainly produced in Baoding area, also known as Wang blacksmith iron ball. The reason why the fitness ball is beneficial to physical fitness lies in the moderate movement of the fingers and palms when playing the ball, which regulates the meridians of the body.</Detail>
         <VIPLevel>2</VIPLevel>
-        <FileAddress>Lesson (5)</FileAddress>
+        <FileAddress>Lesson (5).png</FileAddress>
     </ROW>
     <ROW>
         <ClassID>18</ClassID>
@@ -158,6 +158,6 @@
         <Category>Aerobic exercise</Category>
         <Detail>Fighting aerobics requires the perfect combination of speed and strength, which can consume a lot of heat. Doing one hour's fighting aerobics can consume 600 calories, which is twice as much as dancing aerobics. Practicing fighting aerobics can strengthen the muscle strength of the waist and abdomen, which can make the exerciser have good endurance after three months of continuous practice.</Detail>
         <VIPLevel>0</VIPLevel>
-        <FileAddress>Lesson (2)</FileAddress>
+        <FileAddress>Lesson (2).png</FileAddress>
     </ROW>
 </DATA>

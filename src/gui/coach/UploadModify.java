@@ -84,11 +84,11 @@ public class UploadModify extends JFrame {
             decorationLine.setBounds(35, 115, 730, decorationLine.getPreferredSize().height);
 
             //---- title ----
-            title.setText("My Profile ");
+            title.setText("Modify Upload");
             title.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 32));
             title.setBackground(Color.white);
             body.add(title);
-            title.setBounds(new Rectangle(new Point(25, 45), title.getPreferredSize()));
+            title.setBounds(25, 45, 325, title.getPreferredSize().height);
 
             //---- finishButton ----
             finishButton.setBorderPainted(false);
@@ -112,6 +112,7 @@ public class UploadModify extends JFrame {
             className.setBorder(new EmptyBorder(5, 10, 5, 10));
             className.setCaretColor(Color.darkGray);
             className.setBackground(new Color(245, 245, 245));
+            className.setForeground(Color.gray);
             body.add(className);
             className.setBounds(35, 165, 730, 40);
 
@@ -128,6 +129,7 @@ public class UploadModify extends JFrame {
             classDetail.setBorder(new EmptyBorder(5, 10, 5, 10));
             classDetail.setCaretColor(Color.darkGray);
             classDetail.setBackground(new Color(245, 245, 245));
+            classDetail.setForeground(Color.gray);
             body.add(classDetail);
             classDetail.setBounds(35, 235, 730, 40);
 
@@ -159,6 +161,7 @@ public class UploadModify extends JFrame {
             classCategory.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
             classCategory.setCaretColor(Color.darkGray);
             classCategory.setBorder(new EmptyBorder(5, 10, 5, 10));
+            classCategory.setForeground(Color.gray);
             body.add(classCategory);
             classCategory.setBounds(35, 310, 730, 40);
 
@@ -183,6 +186,7 @@ public class UploadModify extends JFrame {
             }));
             needVIP.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
             needVIP.setBackground(new Color(245, 245, 245));
+            needVIP.setForeground(Color.gray);
             body.add(needVIP);
             needVIP.setBounds(35, 385, 730, 40);
 
@@ -196,6 +200,7 @@ public class UploadModify extends JFrame {
             classVedio.setBackground(new Color(245, 245, 245));
             classVedio.setBorder(new EmptyBorder(5, 10, 5, 10));
             classVedio.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+            classVedio.setForeground(Color.gray);
             body.add(classVedio);
             classVedio.setBounds(180, 455, 210, 40);
 
@@ -209,6 +214,7 @@ public class UploadModify extends JFrame {
             classFile.setBackground(new Color(245, 245, 245));
             classFile.setBorder(new EmptyBorder(5, 10, 5, 10));
             classFile.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+            classFile.setForeground(Color.gray);
             body.add(classFile);
             classFile.setBounds(550, 455, 210, 40);
 
