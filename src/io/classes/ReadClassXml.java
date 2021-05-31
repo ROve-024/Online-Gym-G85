@@ -10,9 +10,22 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * <p>
+ *     This class is designed to read class Xml.
+ * </p>
+ *
+ * @author Dayou Yang
+ * @version 3.0
+ *
+ */
 public class ReadClassXml {
-	
+	/**
+	 * <p>
+	 *     This function is designed to read class XML.
+	 * </p>
+	 * @return ClassData
+	 */
 	public static List<ClassData> readClassXML() {
 		
 		File  xmlFile = new File("src/resources/XMLs/Class.xml");
@@ -44,7 +57,13 @@ public class ReadClassXml {
 
 		return empList;
 	}
-	
+	/**
+	 * <p>
+	 *     This function is designed to get Class data.
+	 * </p>
+	 * @param node
+	 * @return ClassData
+	 */
 	private static ClassData getClassData(Node node)
 	{
 		//XMLReaderDOM domReader = new XMLReaderDOM();
@@ -66,7 +85,14 @@ public class ReadClassXml {
 		
 		return emp;
 	}
-	
+	/**
+	 * <p>
+	 *     This function is designed to get tag value.
+	 * </p>
+	 * @param tag
+	 * @param element
+	 * @return TagValue
+	 */
 	private static String getTagValue(String tag, Element element) {
 
         NodeList nodeList = element.getElementsByTagName(tag).item(0).getChildNodes();

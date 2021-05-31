@@ -20,6 +20,9 @@ import javax.swing.*;
 
 
 /**
+ * <p>
+ *     This class is used for login.
+ * </p>
  * @author Anna
  */
 public class Login extends JFrame {
@@ -28,6 +31,12 @@ public class Login extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function is used to log in.
+     * </p>
+     * @param e
+     */
     private void loginButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         UserBuffer.setBuffer("");
@@ -72,13 +81,23 @@ public class Login extends JFrame {
 
     }
 
-
+    /**
+     * <p>
+     *     This function is used to sign up.
+     * </p>
+     * @param e
+     */
     private void signUpButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         this.dispose();
         SignUp.run();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         loginBody = new JPanel();
@@ -261,6 +280,11 @@ public class Login extends JFrame {
         Login.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {

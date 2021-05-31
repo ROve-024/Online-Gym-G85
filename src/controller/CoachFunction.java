@@ -6,20 +6,46 @@ import io.coach.WriteCoachXml;
 import java.util.List;
 
 import static io.coach.ReadCoachXml.readCoachXML;
-
+/**
+ * <p>
+ *     This class implements Coach functions
+ * </p>
+ *
+ * @author Dayou Yang
+ * @version 3.0
+ *
+ */
 public class CoachFunction {
-
+    /**
+     * <p>
+     *     This function is designed to return the data of Coach
+     * </p>
+     * @return List<CoachData>
+     *
+     */
     public static List<CoachData> getWholeCoach(){                    //return the whole coach info
         List<CoachData> coachList = readCoachXML();
 
         return coachList;
     }
-
+    /**
+     * <p>
+     *     This function is designed to write data to XML.
+     * </p>
+     * @param coachList
+     *
+     */
     public static void writeCoach(List<CoachData> coachList){
         WriteCoachXml wx = new WriteCoachXml();
         wx.writeXML(coachList);
     }
-
+    /**
+     * <p>
+     *     This function is designed to return the max CoachID.
+     * </p>
+     * @param coachList
+     * @return maxCoachID
+     */
     public static int maxCoachID(List<CoachData> coachList){
         int maxId = 0;
         CoachData coachData;
@@ -34,7 +60,15 @@ public class CoachFunction {
 
         return maxId;
     }
-
+    /**
+     * <p>
+     *     This function is designed to judge whether the login is matched.
+     * </p>
+     * @param Account
+     * @param Password
+     * @return whether the login is matched
+     *
+     */
     public static boolean loginMatch(String Account, String Password){       //check the account and the password if match
         List<CoachData> coachList = getWholeCoach();
 
@@ -50,7 +84,13 @@ public class CoachFunction {
 
         return ifMatch;
     }
-
+    /**
+     * <p>
+     *     This function is designed to judge if there exist a same account.
+     * </p>
+     * @param Account
+     * @return whether there exist same account.
+     */
     public static boolean ifExistSameAccount(String Account){
         List<CoachData> coachList = getWholeCoach();
         boolean ifExist = false;
@@ -64,7 +104,15 @@ public class CoachFunction {
 
         return ifExist;
     }
-
+    /**
+     * <p>
+     *     This function is designed to get a submit of sign up.
+     *
+     * </p>
+     * @param Account
+     * @param Password
+     * @return a newID
+     */
     public static String signUpSubmit(String Account, String Password){
         List<CoachData> coachList = getWholeCoach();
 
@@ -88,7 +136,13 @@ public class CoachFunction {
 
         return newID;
     }
-
+    /**
+     * <p>
+     *     This function is designed to search Coach by Name.
+     * </p>
+     * @param Name
+     * @return CoachData
+     */
     public static List<CoachData> searchCoachByName(String Name){
         List<CoachData> coachList = getWholeCoach();
 
@@ -107,7 +161,13 @@ public class CoachFunction {
 
         return coachList;
     }
-
+    /**
+     * <p>
+     *     This function is designed to search Coach by CoachID.
+     * </p>
+     * @param ID
+     * @return CoachData
+     */
     public static CoachData searchCoachByID(String ID){
         List<CoachData> coachList = getWholeCoach();
         CoachData coachData = null;
@@ -121,7 +181,12 @@ public class CoachFunction {
         }
         return coachData;
     }
-
+    /**
+     * <p>
+     *     This function is designed to update the information of Coach.
+     * </p>
+     * @param updateCoachData
+     */
     public static void updateCoachInfo(CoachData updateCoachData){
         List<CoachData> coachList = getWholeCoach();
 
@@ -141,7 +206,12 @@ public class CoachFunction {
 
         writeCoach(coachList);
     }
-
+    /**
+     * <p>
+     *     This function is designed to delete Coach by CoachID.
+     * </p>
+     * @param ID
+     */
     public static void DeleteCoachByID(String ID){
         List<CoachData> coachList = getWholeCoach();
 
@@ -156,7 +226,12 @@ public class CoachFunction {
         }
         writeCoach(coachList);
     }
-
+    /**
+     * <p>
+     *     This function is designed to delete Coach by account.
+     * </p>
+     * @param Account
+     */
     public static void DeleteCoachByAccount(String Account){
         List<CoachData> coachList = getWholeCoach();
 
@@ -171,7 +246,12 @@ public class CoachFunction {
         }
         writeCoach(coachList);
     }
-
+    /**
+     * <p>
+     *     This function is designed to get ID by Account.
+     * </p>
+     * @param Account
+     */
     public static String getIDByAccount(String Account){
         List<CoachData> coachList = getWholeCoach();
         CoachData coachData = null;

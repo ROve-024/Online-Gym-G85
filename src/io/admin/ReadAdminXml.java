@@ -11,8 +11,23 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * <p>
+ *     This class is designed to read admin Xml.
+ * </p>
+ *
+ * @author Chuangchao Li
+ * @version 3.0
+ *
+ */
 public class ReadAdminXml {
+
+    /**
+     * <p>
+     *     This function is designed to read admin XML.
+     * </p>
+     * @return AdminData
+     */
     public static List<AdminData> readAmdinXML() {
 
         File xmlFile = new File("src/resources/XMLs/Admin.xml");
@@ -45,6 +60,13 @@ public class ReadAdminXml {
         return empList;
     }
 
+    /**
+     * <p>
+     *     This function is designed to get admin data.
+     * </p>
+     * @param node
+     * @return AdminData
+     */
     private static AdminData getAdminData(Node node)
     {
         //XMLReaderDOM domReader = new XMLReaderDOM();
@@ -59,6 +81,14 @@ public class ReadAdminXml {
         return emp;
     }
 
+    /**
+     * <p>
+     *     This function is designed to get tag value.
+     * </p>
+     * @param tag
+     * @param element
+     * @return TagValue
+     */
     private static String getTagValue(String tag, Element element) {
 
         NodeList nodeList = element.getElementsByTagName(tag).item(0).getChildNodes();

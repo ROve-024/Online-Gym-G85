@@ -22,6 +22,9 @@ import javax.swing.border.*;
 
 
 /**
+ * <p>
+ *     This class is used to display appointment plans.
+ * </p>
  * @author Anna
  */
 public class PlanHomeMember extends JFrame {
@@ -29,6 +32,12 @@ public class PlanHomeMember extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function is used to delete the current plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton1ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -39,6 +48,12 @@ public class PlanHomeMember extends JFrame {
         PlanHomeMember.run();
     }
 
+    /**
+     * <p>
+     *     This function is used to delete the current plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton2ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -49,6 +64,12 @@ public class PlanHomeMember extends JFrame {
         PlanHomeMember.run();
     }
 
+    /**
+     * <p>
+     *     This function is used to delete the current plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton3ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -59,6 +80,12 @@ public class PlanHomeMember extends JFrame {
         PlanHomeMember.run();
     }
 
+    /**
+     * <p>
+     *     This function is used to delete the current plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton4ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -69,6 +96,12 @@ public class PlanHomeMember extends JFrame {
         PlanHomeMember.run();
     }
 
+    /**
+     * <p>
+     *     This function is used to delete the current plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton5ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -79,6 +112,12 @@ public class PlanHomeMember extends JFrame {
         PlanHomeMember.run();
     }
 
+    /**
+     * <p>
+     *     This function is used to delete the current plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton6ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -89,6 +128,12 @@ public class PlanHomeMember extends JFrame {
         PlanHomeMember.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to page forward.
+     * </p>
+     * @param e
+     */
     private void nextPageButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         int remainItem = this.list.size() - 6 * (this.page + 1);
@@ -102,6 +147,12 @@ public class PlanHomeMember extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to page backward.
+     * </p>
+     * @param e
+     */
     private void prePageButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         if(this.page == 0){
@@ -113,6 +164,11 @@ public class PlanHomeMember extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -655,6 +711,12 @@ public class PlanHomeMember extends JFrame {
     private int page = 0;
     private List<PlanData> list;
     private int planRemainNumb = 0;
+
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -671,12 +733,23 @@ public class PlanHomeMember extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init() {
         ClientData clientData = UserBuffer.getClientSession();
         list = PlanFunction.searchPlanByClientID(clientData.getClientID());
         this.update();
     }
 
+    /**
+     * <p>
+     *     This function updates the contents of the page.
+     * </p>
+     */
     private void update() {
         int i = 0;
         int remainPage = this.list.size() - this.page * 6;

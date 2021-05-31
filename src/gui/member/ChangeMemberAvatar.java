@@ -18,6 +18,9 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 /**
+ * <p>
+ *     This class is used to modify the user's Avatar.
+ * </p>
  * @author Anna
  */
 public class ChangeMemberAvatar extends JFrame {
@@ -25,6 +28,12 @@ public class ChangeMemberAvatar extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function is used to set a new user avator.
+     * </p>
+     * @param e
+     */
     private void submitButtonActionPerformed(ActionEvent e) {
         ClientData clientData = UserBuffer.getClientSession();
         clientData.setFileAddress(this.avatarName.getText());
@@ -39,6 +48,11 @@ public class ChangeMemberAvatar extends JFrame {
         ProfileMember.run();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -179,6 +193,11 @@ public class ChangeMemberAvatar extends JFrame {
         ChangeMemberAvatar.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -195,6 +214,12 @@ public class ChangeMemberAvatar extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     public void init(){
         ClientData clientData = UserBuffer.getClientSession();
         this.avatarName.setText(clientData.getFileAddress());

@@ -11,9 +11,22 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.util.List;
-
+/**
+ * <p>
+ *     This class is designed to write Plan Xml.
+ * </p>
+ *
+ * @author Xuan Wei
+ * @version 3.0
+ *
+ */
 public class WritePlanXml {
-
+    /**
+     * <p>
+     *     This function is designed to write XMl.
+     * </p>
+     * @param planList
+     */
         public void writeXML(List<PlanData> planList) {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             PlanData planData;

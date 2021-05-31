@@ -18,6 +18,9 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 /**
+ * <p>
+ *     This class is used to show all courses.
+ * </p>
  * @author Anna
  */
 public class ALLLessonAdmin extends JFrame {
@@ -25,12 +28,24 @@ public class ALLLessonAdmin extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function provides the function of refreshing the course page.
+     * </p>
+     * @param e
+     */
     private void homeButtonActionPerformed(ActionEvent e) {
         this.list = ClassFunction.getWholeClass();
         this.page = 0;
         this.update();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to page backward.
+     * </p>
+     * @param e
+     */
     private void previousButtonActionPerformed(ActionEvent e) {
         if(this.page == 0){
             Warning.run("No previous page here.");
@@ -41,6 +56,12 @@ public class ALLLessonAdmin extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to page forward.
+     * </p>
+     * @param e
+     */
     private void nextButtonActionPerformed(ActionEvent e) {
         int remainItem = this.list.size() - 6 * (this.page + 1);
         if(remainItem <= 0){
@@ -52,6 +73,12 @@ public class ALLLessonAdmin extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to view class details.
+     * </p>
+     * @param e
+     */
     private void moreButton1ActionPerformed(ActionEvent e) {
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6).getClassID());
@@ -59,6 +86,12 @@ public class ALLLessonAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to view class details.
+     * </p>
+     * @param e
+     */
     private void moreButton2ActionPerformed(ActionEvent e) {
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6 + 1).getClassID());
@@ -66,6 +99,12 @@ public class ALLLessonAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to view class details.
+     * </p>
+     * @param e
+     */
     private void moreButton3ActionPerformed(ActionEvent e) {
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6 + 2).getClassID());
@@ -73,6 +112,12 @@ public class ALLLessonAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to view class details.
+     * </p>
+     * @param e
+     */
     private void moreButton4ActionPerformed(ActionEvent e) {
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6 + 3).getClassID());
@@ -80,6 +125,12 @@ public class ALLLessonAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to view class details.
+     * </p>
+     * @param e
+     */
     private void moreButton5ActionPerformed(ActionEvent e) {
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6 + 4).getClassID());
@@ -87,6 +138,12 @@ public class ALLLessonAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to view class details.
+     * </p>
+     * @param e
+     */
     private void moreButton6ActionPerformed(ActionEvent e) {
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6 + 5).getClassID());
@@ -94,6 +151,12 @@ public class ALLLessonAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function can search for courses based on the input content.
+     * </p>
+     * @param e
+     */
     private void searchButtonActionPerformed(ActionEvent e) {
         if(this.search.getText().trim().isEmpty()) {
             Warning.run("Please do not input empty content!");
@@ -114,6 +177,11 @@ public class ALLLessonAdmin extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -715,6 +783,12 @@ public class ALLLessonAdmin extends JFrame {
     private int page = 0;
     private List<ClassData> list;
     private int lessonRemainNumb = 0;
+
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -732,11 +806,22 @@ public class ALLLessonAdmin extends JFrame {
         });
     }
 
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init(){
         this.search.setText("");
         list = ClassFunction.getWholeClass();
         this.update();
     }
+
+    /**
+     * <p>
+     *     This function updates the contents of the page.
+     * </p>
+     */
     private void update(){
         int i = 0;
         int remainPage = this.list.size() - this.page * 6;

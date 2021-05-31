@@ -21,6 +21,9 @@ import javax.swing.border.*;
 
 
 /**
+ * <p>
+ *     This class is used to show the coach's plan.
+ * </p>
  * @author Anna
  */
 public class PlanHomeCoach extends JFrame {
@@ -28,6 +31,12 @@ public class PlanHomeCoach extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function is used to view the client information of the reservation plan.
+     * </p>
+     * @param e
+     */
     private void profileButton1ActionPerformed(ActionEvent e) {
         // TODO add your code here
         ViewBuffer.setBuffer("");
@@ -36,6 +45,12 @@ public class PlanHomeCoach extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to page backward.
+     * </p>
+     * @param e
+     */
     private void previousButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         if(this.page == 0){
@@ -47,6 +62,12 @@ public class PlanHomeCoach extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to page forward.
+     * </p>
+     * @param e
+     */
     private void nextButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         int remainItem = this.list.size() - 6 * (this.page + 1);
@@ -60,6 +81,12 @@ public class PlanHomeCoach extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function is used to view the client information of the reservation plan.
+     * </p>
+     * @param e
+     */
     private void profileButton2ActionPerformed(ActionEvent e) {
         // TODO add your code here
         ViewBuffer.setBuffer("");
@@ -68,6 +95,12 @@ public class PlanHomeCoach extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function is used to view the client information of the reservation plan.
+     * </p>
+     * @param e
+     */
     private void profileButton3ActionPerformed(ActionEvent e) {
         // TODO add your code here
         ViewBuffer.setBuffer("");
@@ -76,6 +109,12 @@ public class PlanHomeCoach extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function is used to view the client information of the reservation plan.
+     * </p>
+     * @param e
+     */
     private void profileButton4ActionPerformed(ActionEvent e) {
         // TODO add your code here
         ViewBuffer.setBuffer("");
@@ -84,6 +123,12 @@ public class PlanHomeCoach extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function is used to view the client information of the reservation plan.
+     * </p>
+     * @param e
+     */
     private void profileButton5ActionPerformed(ActionEvent e) {
         // TODO add your code here
         ViewBuffer.setBuffer("");
@@ -92,6 +137,12 @@ public class PlanHomeCoach extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function is used to view the client information of the reservation plan.
+     * </p>
+     * @param e
+     */
     private void profileButton6ActionPerformed(ActionEvent e) {
         // TODO add your code here
         ViewBuffer.setBuffer("");
@@ -100,6 +151,12 @@ public class PlanHomeCoach extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function is used to delete the plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton1ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -110,6 +167,12 @@ public class PlanHomeCoach extends JFrame {
         PlanHomeCoach.run();
     }
 
+    /**
+     * <p>
+     *     This function is used to delete the plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton2ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -120,6 +183,12 @@ public class PlanHomeCoach extends JFrame {
         PlanHomeCoach.run();
     }
 
+    /**
+     * <p>
+     *     This function is used to delete the plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton3ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -130,6 +199,12 @@ public class PlanHomeCoach extends JFrame {
         PlanHomeCoach.run();
     }
 
+    /**
+     * <p>
+     *     This function is used to delete the plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton4ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -140,6 +215,12 @@ public class PlanHomeCoach extends JFrame {
         PlanHomeCoach.run();
     }
 
+    /**
+     * <p>
+     *     This function is used to delete the plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton5ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -150,6 +231,12 @@ public class PlanHomeCoach extends JFrame {
         PlanHomeCoach.run();
     }
 
+    /**
+     * <p>
+     *     This function is used to delete the plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton6ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -160,6 +247,11 @@ public class PlanHomeCoach extends JFrame {
         PlanHomeCoach.run();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -760,6 +852,12 @@ public class PlanHomeCoach extends JFrame {
     private int page = 0;
     private List<PlanData> list;
     private int planRemainNumb = 0;
+
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -776,12 +874,23 @@ public class PlanHomeCoach extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init() {
         CoachData coachData = UserBuffer.getCoachSession();
         list = PlanFunction.searchPlanByCoachID(coachData.getID());
         this.update();
     }
 
+    /**
+     * <p>
+     *     This function updates the contents of the page.
+     * </p>
+     */
     private void update() {
         int i = 0;
         int remainPage = this.list.size() - this.page * 6;

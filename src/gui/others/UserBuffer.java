@@ -8,7 +8,17 @@ import io.coach.CoachData;
 
 import java.io.*;
 
+/**
+ *<p>
+ *     This class is used to operate on UserBuffer
+ *</p>
+ */
 public class UserBuffer {
+    /**
+     * <p>
+     *     This method is used to get the current value of the Buffer.
+     * </p>
+     */
     public static String getBuffer(){
         String line = "";
         try{
@@ -21,6 +31,13 @@ public class UserBuffer {
         }
         return line;
     }
+
+    /**
+     * <p>
+     *     This method is used to set the value of the Buffer.
+     * </p>
+     * @param ID
+     */
     public static void setBuffer(String ID){
         File file = new File("src/resources/buffer/userBuffer.txt");
         file.delete();
@@ -35,21 +52,50 @@ public class UserBuffer {
             System.out.println("Create File Error!");
         }
     }
+
+    /**
+     * <p>
+     *     This method is used to get the current CoachData
+     * </p>
+     * @return CoachData
+     */
     public static CoachData getCoachSession(){
         String ID = UserBuffer.getBuffer();
         CoachData coachData = CoachFunction.searchCoachByID(ID);
         return coachData;
     }
+
+    /**
+     * <p>
+     *     This method is used to get the current AdminData
+     * </p>
+     * @return AdminData
+     */
     public static AdminData getAdminSession(){
         String ID = UserBuffer.getBuffer();
         AdminData adminData = AdminFunction.searchAdminByID(ID);
         return adminData;
     }
+
+    /**
+     * <p>
+     *     This method is used to get the current ClientData
+     * </p>
+     * @return ClientData
+     */
     public static ClientData getClientSession(){
         String ID = UserBuffer.getBuffer();
         ClientData clientData = ClientFunction.searchClientByID(ID);
         return clientData;
     }
+
+    /**
+     * <p>
+     *     This method sets the value of the string..
+     * </p>
+     * @param string
+     * @return String
+     */
     public static String dataIsEmpty(String string){
         String result = "";
         if(!string.equals("Empty")){
@@ -57,6 +103,14 @@ public class UserBuffer {
         }
         return result;
     }
+
+    /**
+     * <p>
+     *     This method sets the value of the string..
+     * </p>
+     * @param string
+     * @return String
+     */
     public static String toEmpty(String string){
         String result = "Empty";
         if(!string.equals("")){

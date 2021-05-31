@@ -15,6 +15,9 @@ import javax.swing.border.*;
 
 
 /**
+ * <p>
+ *     This class is used to display client information for coach.
+ * </p>
  * @author Anna
  */
 public class ViewMemberProfile extends JFrame {
@@ -22,12 +25,23 @@ public class ViewMemberProfile extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This method is used to return to the plan page.
+     * </p>
+     * @param e
+     */
     private void planButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanHomeCoach.run();
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -489,6 +503,11 @@ public class ViewMemberProfile extends JFrame {
         ViewMemberProfile.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -505,6 +524,12 @@ public class ViewMemberProfile extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init() {
         String ID = ViewBuffer.getBuffer();
         ClientData clientData = ClientFunction.searchClientByID(ID);

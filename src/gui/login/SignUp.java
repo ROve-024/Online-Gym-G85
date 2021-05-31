@@ -18,6 +18,9 @@ import javax.swing.*;
 
 
 /**
+ * <p>
+ *     This class is used for sign up.
+ * </p>
  * @author Anna
  */
 public class SignUp extends JFrame {
@@ -25,6 +28,11 @@ public class SignUp extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function is used to set new user information.
+     * </p>
+     */
     private void signUpButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         CheckFunction checkFunction = new CheckFunction();
@@ -83,6 +91,11 @@ public class SignUp extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -273,6 +286,11 @@ public class SignUp extends JFrame {
         SignUp.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {

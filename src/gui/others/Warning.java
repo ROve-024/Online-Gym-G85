@@ -9,6 +9,9 @@ import java.awt.event.*;
 import javax.swing.*;
 
 /**
+ * <p>
+ *     This class is used to display the warning interface.
+ * </p>
  * @author Anna
  */
 public class Warning extends JFrame {
@@ -16,11 +19,22 @@ public class Warning extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function is used to close the window.
+     * </p>
+     * @param e
+     */
     private void confirmButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         mainPenel = new JPanel();
@@ -132,6 +146,11 @@ public class Warning extends JFrame {
         Warning.run("");
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(String warningMsg){
         EventQueue.invokeLater(new Runnable() {
             public void run() {

@@ -22,6 +22,9 @@ import javax.swing.*;
 
 
 /**
+ * <p>
+ *     This class is used to book offline courses.
+ * </p>
  * @author Anna
  */
 public class Book extends JFrame {
@@ -29,6 +32,12 @@ public class Book extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function is used to set a new plan
+     * </p>
+     * @param e
+     */
     private void finishButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         CheckFunction checkFunction = new CheckFunction();
@@ -53,11 +62,22 @@ public class Book extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function is used to abort a reservation.
+     * </p>
+     * @param e
+     */
     private void backButtonActionPerformed(ActionEvent e) {
         this.dispose();
         LessonDetailMember.run();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -227,6 +247,11 @@ public class Book extends JFrame {
         Book.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -244,6 +269,11 @@ public class Book extends JFrame {
         });
     }
 
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     public void init(){
         ClassData classData = LessonBuffer.getLessonBuffer();
         CoachData coachData = CoachFunction.searchCoachByID(classData.getCoachID());

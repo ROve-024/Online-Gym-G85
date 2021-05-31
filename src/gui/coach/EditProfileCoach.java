@@ -16,6 +16,9 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 /**
+ * <p>
+ *     This class is used to modify coach personal information.
+ * </p>
  * @author Anna
  */
 public class EditProfileCoach extends JFrame {
@@ -23,6 +26,12 @@ public class EditProfileCoach extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function is used to set up a new coach profile.
+     * </p>
+     * @param e
+     */
     private void finishButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         CoachData coachData = UserBuffer.getCoachSession();
@@ -60,6 +69,11 @@ public class EditProfileCoach extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -449,6 +463,11 @@ public class EditProfileCoach extends JFrame {
         EditProfileCoach.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -465,6 +484,12 @@ public class EditProfileCoach extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init(){
         CoachData coachData = UserBuffer.getCoachSession();
         this.name.setText(UserBuffer.dataIsEmpty(coachData.getName()));

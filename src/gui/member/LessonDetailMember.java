@@ -21,6 +21,9 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 /**
+ * <p>
+ *     This class is used to view course details.
+ * </p>
  * @author Anna
  */
 public class LessonDetailMember extends JFrame {
@@ -28,12 +31,24 @@ public class LessonDetailMember extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function is used to join the live broadcast.
+     * </p>
+     * @param e
+     */
     private void joinButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         LessonVideo.run();
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function is used to book coaching sessions.
+     * </p>
+     * @param e
+     */
     private void bookButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         ClientData clientData = UserBuffer.getClientSession();
@@ -47,6 +62,12 @@ public class LessonDetailMember extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function is used to view the details of the course coach.
+     * </p>
+     * @param e
+     */
     private void coachDetailButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         ViewBuffer.setBuffer("");
@@ -55,12 +76,23 @@ public class LessonDetailMember extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function returns a list of courses.
+     * </p>
+     * @param e
+     */
     private void homeButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         LessonHomeMember.run();
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -261,6 +293,11 @@ public class LessonDetailMember extends JFrame {
     private String lessonID = LessonBuffer.getBuffer();
     ClassData classData = ClassFunction.searchClassByID(this.lessonID);
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -277,6 +314,12 @@ public class LessonDetailMember extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init() {
         this.lessonName.setText(this.classData.getName());
         this.needVIP.setText("VIP " + this.classData.getVIPLevel());

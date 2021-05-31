@@ -7,19 +7,48 @@ import io.coach.CoachData;
 
 import java.util.List;
 
-
+/**
+ * <p>
+ *     This class implements admin functions
+ * </p>
+ *
+ * @author ChuangchaoLi
+ * @version 3.0
+ *
+ */
 public class AdminFunction {
+    /**
+     * <p>
+     *     This function is designed to return the data of admin
+     * </p>
+     * @return List<AdminData>
+     *
+     */
     public static List<AdminData> getWholeAdmin(){                    //return the whole coach info
         List<AdminData> adminList = ReadAdminXml.readAmdinXML();
 
         return adminList;
     }
 
+    /**
+     * <p>
+     *     This function is designed to write data to XML.
+     * </p>
+     * @param adminList
+     *
+     */
     public static void writeCoach(List<AdminData> adminList){
         WriteAdminXml wx = new WriteAdminXml();
         wx.writeXML(adminList);
     }
 
+    /**
+     * <p>
+     *     This function is designed to return the max adminID.
+     * </p>
+     * @param adminList
+     * @return maxAdminID
+     */
     public static int maxAdminID(List<AdminData> adminList){
         int maxId = 0;
         AdminData adminData;
@@ -35,6 +64,15 @@ public class AdminFunction {
         return maxId;
     }
 
+    /**
+     * <p>
+     *     This function is designed to judge whether the login is matched.
+     * </p>
+     * @param Account
+     * @param Password
+     * @return whether the login is matched
+     *
+     */
     public static boolean loginMatch(String Account, String Password){       //check the account and the password if match
         List<AdminData> adminList = getWholeAdmin();
 
@@ -51,6 +89,13 @@ public class AdminFunction {
         return ifMatch;
     }
 
+    /**
+     * <p>
+     *     This function is designed to judge if there exist a same account.
+     * </p>
+     * @param Account
+     * @return whether there exist same account.
+     */
     public static boolean ifExistSameAccount(String Account){
         List<AdminData> adminList = getWholeAdmin();
         boolean ifExist = false;
@@ -65,6 +110,15 @@ public class AdminFunction {
         return ifExist;
     }
 
+    /**
+     * <p>
+     *     This function is designed to get a submit of sign up.
+     *
+     * </p>
+     * @param Account
+     * @param Password
+     * @return a newID
+     */
     public static String signUpSubmit(String Account, String Password){
         List<AdminData> adminList = getWholeAdmin();
         AdminData adminData = new AdminData();
@@ -77,6 +131,13 @@ public class AdminFunction {
         return newID;
     }
 
+    /**
+     * <p>
+     *     This function is designed to return an ID by account.
+     * </p>
+     * @param Account
+     * @return AdminID
+     */
     public static String getIDByAccount(String Account){
         List<AdminData> adminList = getWholeAdmin();
         AdminData adminData = null;
@@ -91,6 +152,14 @@ public class AdminFunction {
         return adminData.getAdminIO();
     }
 
+
+    /**
+     * <p>
+     *     This function is designed to search Admin by ID.
+     * </p>
+     * @param ID
+     * @return AdminData
+     */
     public static AdminData searchAdminByID(String ID){
         List<AdminData> adminList = getWholeAdmin();
         AdminData adminData = null;

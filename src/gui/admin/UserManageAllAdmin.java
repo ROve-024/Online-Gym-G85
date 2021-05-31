@@ -25,6 +25,12 @@ public class UserManageAllAdmin extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     Go back to the previous customer page.
+     * </p>
+     * @param e
+     */
     private void memberPrevButtonActionPerformed(ActionEvent e) {
         if(this.pageClient == 0){
             Warning.run("No previous page here.");
@@ -34,6 +40,13 @@ public class UserManageAllAdmin extends JFrame {
             this.updateClient();
         }
     }
+
+    /**
+     * <p>
+     *     Show the next eight customers.
+     * </p>
+     * @param e
+     */
     private void memberNextButtonActionPerformed(ActionEvent e) {
         int remainItem = this.clientList.size() - 8 * (this.pageClient + 1);
         if(remainItem <= 0){
@@ -45,6 +58,12 @@ public class UserManageAllAdmin extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     Go back to the previous coach page.
+     * </p>
+     * @param e
+     */
     private void coachPrevButtonActionPerformed(ActionEvent e) {
         if(this.pageCoach == 0){
             Warning.run("No previous page here.");
@@ -55,6 +74,12 @@ public class UserManageAllAdmin extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     Show the next eight coachs.
+     * </p>
+     * @param e
+     */
     private void coachNextButtonActionPerformed(ActionEvent e) {
         int remainItem = this.coachList.size() - 8 * (this.pageCoach + 1);
         if(remainItem <= 0){
@@ -66,6 +91,12 @@ public class UserManageAllAdmin extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     View the details of this customer.
+     * </p>
+     * @param e
+     */
     private void memberMoreButton1ActionPerformed(ActionEvent e) {
         ViewBuffer.setBuffer("");
         ViewBuffer.setBuffer(this.clientList.get(this.pageClient*8).getClientID());
@@ -73,6 +104,12 @@ public class UserManageAllAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     View the details of this customer.
+     * </p>
+     * @param e
+     */
     private void memberMoreButton2ActionPerformed(ActionEvent e) {
         ViewBuffer.setBuffer("");
         ViewBuffer.setBuffer(this.clientList.get(this.pageClient*8 + 1).getClientID());
@@ -80,6 +117,12 @@ public class UserManageAllAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     View the details of this customer.
+     * </p>
+     * @param e
+     */
     private void memberMoreButton3ActionPerformed(ActionEvent e) {
         ViewBuffer.setBuffer("");
         ViewBuffer.setBuffer(this.clientList.get(this.pageClient*8 + 2).getClientID());
@@ -87,6 +130,12 @@ public class UserManageAllAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     View the details of this customer.
+     * </p>
+     * @param e
+     */
     private void memberMoreButton4ActionPerformed(ActionEvent e) {
         ViewBuffer.setBuffer("");
         ViewBuffer.setBuffer(this.clientList.get(this.pageClient*8 + 3).getClientID());
@@ -94,6 +143,12 @@ public class UserManageAllAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     View the details of this customer.
+     * </p>
+     * @param e
+     */
     private void memberMoreButton5ActionPerformed(ActionEvent e) {
         ViewBuffer.setBuffer("");
         ViewBuffer.setBuffer(this.clientList.get(this.pageClient*8 + 4).getClientID());
@@ -101,6 +156,12 @@ public class UserManageAllAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     View the details of this customer.
+     * </p>
+     * @param e
+     */
     private void memberMoreButton6ActionPerformed(ActionEvent e) {
         ViewBuffer.setBuffer("");
         ViewBuffer.setBuffer(this.clientList.get(this.pageClient*8 + 5).getClientID());
@@ -108,6 +169,12 @@ public class UserManageAllAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     View the details of this customer.
+     * </p>
+     * @param e
+     */
     private void memberMoreButton7ActionPerformed(ActionEvent e) {
         ViewBuffer.setBuffer("");
         ViewBuffer.setBuffer(this.clientList.get(this.pageClient*8 + 6).getClientID());
@@ -115,6 +182,12 @@ public class UserManageAllAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     View the details of this customer.
+     * </p>
+     * @param e
+     */
     private void memberMoreButton8ActionPerformed(ActionEvent e) {
         ViewBuffer.setBuffer("");
         ViewBuffer.setBuffer(this.clientList.get(this.pageClient*8 + 7).getClientID());
@@ -122,6 +195,12 @@ public class UserManageAllAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     View the details of this coach.
+     * </p>
+     * @param e
+     */
     private void coachMoreButton1ActionPerformed(ActionEvent e) {
         ViewBuffer.setBuffer("");
         ViewBuffer.setBuffer(this.coachList.get(this.pageCoach*8).getID());
@@ -129,6 +208,12 @@ public class UserManageAllAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     View the details of this coach.
+     * </p>
+     * @param e
+     */
     private void coachMoreButton2ActionPerformed(ActionEvent e) {
         ViewBuffer.setBuffer("");
         ViewBuffer.setBuffer(this.coachList.get(this.pageCoach*8 + 1).getID());
@@ -136,6 +221,12 @@ public class UserManageAllAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     View the details of this coach.
+     * </p>
+     * @param e
+     */
     private void coachMoreButton3ActionPerformed(ActionEvent e) {
         ViewBuffer.setBuffer("");
         ViewBuffer.setBuffer(this.coachList.get(this.pageCoach*8 + 2).getID());
@@ -143,6 +234,12 @@ public class UserManageAllAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     View the details of this coach.
+     * </p>
+     * @param e
+     */
     private void coachMoreButton4ActionPerformed(ActionEvent e) {
         ViewBuffer.setBuffer("");
         ViewBuffer.setBuffer(this.coachList.get(this.pageCoach*8 + 3).getID());
@@ -150,6 +247,12 @@ public class UserManageAllAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     View the details of this coach.
+     * </p>
+     * @param e
+     */
     private void coachMoreButton5ActionPerformed(ActionEvent e) {
         ViewBuffer.setBuffer("");
         ViewBuffer.setBuffer(this.coachList.get(this.pageCoach*8 + 4).getID());
@@ -157,6 +260,12 @@ public class UserManageAllAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     View the details of this coach.
+     * </p>
+     * @param e
+     */
     private void coachMoreButton6ActionPerformed(ActionEvent e) {
         ViewBuffer.setBuffer("");
         ViewBuffer.setBuffer(this.coachList.get(this.pageCoach*8 + 5).getID());
@@ -164,6 +273,12 @@ public class UserManageAllAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     View the details of this coach.
+     * </p>
+     * @param e
+     */
     private void coachMoreButton7ActionPerformed(ActionEvent e) {
         ViewBuffer.setBuffer("");
         ViewBuffer.setBuffer(this.coachList.get(this.pageCoach*8 + 6).getID());
@@ -171,6 +286,12 @@ public class UserManageAllAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     View the details of this coach.
+     * </p>
+     * @param e
+     */
     private void coachMoreButton8ActionPerformed(ActionEvent e) {
         ViewBuffer.setBuffer("");
         ViewBuffer.setBuffer(this.coachList.get(this.pageCoach*8 + 7).getID());
@@ -178,10 +299,11 @@ public class UserManageAllAdmin extends JFrame {
         this.dispose();
     }
 
-
-
-
-
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -1372,6 +1494,11 @@ public class UserManageAllAdmin extends JFrame {
     private int clientRemainNumb = 0;
     private int coachRemainNumb = 0;
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -1388,12 +1515,24 @@ public class UserManageAllAdmin extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init(){
         this.clientList = ClientFunction.getWholeClient();
         this.coachList = CoachFunction.getWholeCoach();
         this.updateClient();
         this.updateCoach();
     }
+
+    /**
+     * <p>
+     *     This function updates the contents of the client page.
+     * </p>
+     */
     private void updateClient(){
         int i = 0;
         int remainPage = this.clientList.size() - this.pageClient * 8;
@@ -1635,6 +1774,11 @@ public class UserManageAllAdmin extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function updates the contents of the coach page.
+     * </p>
+     */
     private void updateCoach(){
         int i = 0;
         int remainPage = this.coachList.size() - this.pageCoach * 8;

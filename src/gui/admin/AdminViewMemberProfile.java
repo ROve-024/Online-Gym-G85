@@ -15,6 +15,9 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 /**
+ * <p>
+ *      This class provides administrators with the ability to view client details.
+ * </p>
  * @author Anna
  */
 public class AdminViewMemberProfile extends JFrame {
@@ -22,6 +25,12 @@ public class AdminViewMemberProfile extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function provides the administrator with the ability to delete client.
+     * </p>
+     * @param e
+     */
     private void deleteButtonActionPerformed(ActionEvent e) {
         ClientFunction.DeleteClientByID(ViewBuffer.getBuffer());
         PlanFunction.deletePlanByClientID(ViewBuffer.getBuffer());
@@ -29,6 +38,11 @@ public class AdminViewMemberProfile extends JFrame {
         UserManageAllAdmin.run();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -495,6 +509,11 @@ public class AdminViewMemberProfile extends JFrame {
         AdminViewMemberProfile.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -511,6 +530,12 @@ public class AdminViewMemberProfile extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init(){
         String ID = ViewBuffer.getBuffer();
         ClientData clientData = ClientFunction.searchClientByID(ID);

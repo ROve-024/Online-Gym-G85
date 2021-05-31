@@ -12,8 +12,22 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.util.List;
-
+/**
+ * <p>
+ *     This class is designed to write admin Xml.
+ * </p>
+ *
+ * @author Chuangchao Li
+ * @version 3.0
+ *
+ */
 public class WriteAdminXml {
+    /**
+     * <p>
+     *     This function is designed to write XMl.
+     * </p>
+     * @param adminList
+     */
     public void writeXML(List<AdminData> adminList) {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         AdminData adminData;

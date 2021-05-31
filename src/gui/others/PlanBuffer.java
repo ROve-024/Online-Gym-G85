@@ -5,7 +5,17 @@ import io.plan.PlanData;
 
 import java.io.*;
 
+/**
+ *<p>
+ *     This class is used to operate on PlanBuffer
+ *</p>
+ */
 public class PlanBuffer {
+    /**
+     * <p>
+     *     This method is used to get the current value of the Buffer.
+     * </p>
+     */
     public static String getBuffer() {
         String line = "";
         try {
@@ -19,6 +29,12 @@ public class PlanBuffer {
         return line;
     }
 
+    /**
+     * <p>
+     *     This method is used to set the value of the Buffer.
+     * </p>
+     * @param ID
+     */
     public static void setBuffer(String ID) {
         File file = new File("src/resources/buffer/planBuffer.txt");
         file.delete();
@@ -33,12 +49,25 @@ public class PlanBuffer {
         }
     }
 
+    /**
+     * <p>
+     *     This method is used to get the current LessonData
+     * </p>
+     * @return ClassData
+     */
     public static PlanData getPlanBuffer() {
         String ID = PlanBuffer.getBuffer();
         PlanData planData = PlanFunction.searchPlanByPlanID(ID);
         return planData;
     }
 
+    /**
+     * <p>
+     *     This method sets the value of the string..
+     * </p>
+     * @param string
+     * @return String
+     */
     public static String dataIsEmpty(String string) {
         String result = "";
         if (!string.equals("Empty")) {
@@ -47,6 +76,13 @@ public class PlanBuffer {
         return result;
     }
 
+    /**
+     * <p>
+     *     This method sets the value of the string..
+     * </p>
+     * @param string
+     * @return String
+     */
     public static String toEmpty(String string) {
         String result = "Empty";
         if (!string.equals("")) {

@@ -14,6 +14,9 @@ import javax.swing.border.*;
 
 
 /**
+ * <p>
+ *     This class is the initial interface of the administrator.
+ * </p>
  * @author Anna
  */
 public class NavigatorAdmin extends JFrame {
@@ -21,6 +24,12 @@ public class NavigatorAdmin extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function enters the user management interface.
+     * </p>
+     * @param e
+     */
     private void userManageActionPerformed(ActionEvent e) {
         java.awt.Window[] win = java.awt.Window.getWindows();
         int i=0;
@@ -32,6 +41,12 @@ public class NavigatorAdmin extends JFrame {
         UserManageAllAdmin.run();
     }
 
+    /**
+     * <p>
+     *     This function enters the lesson management interface.
+     * </p>
+     * @param e
+     */
     private void lessonManageActionPerformed(ActionEvent e) {
         java.awt.Window[] win = java.awt.Window.getWindows();
         int i=0;
@@ -43,6 +58,12 @@ public class NavigatorAdmin extends JFrame {
         ALLLessonAdmin.run();
     }
 
+    /**
+     * <p>
+     *     Return to the login screen.
+     * </p>
+     * @param e
+     */
     private void switchAccountActionPerformed(ActionEvent e) {
         // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
@@ -54,6 +75,12 @@ public class NavigatorAdmin extends JFrame {
         Login.run();
     }
 
+    /**
+     * <p>
+     *     This function enters the plan management interface.
+     * </p>
+     * @param e
+     */
     private void planButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
@@ -66,7 +93,11 @@ public class NavigatorAdmin extends JFrame {
         PlanHomeAdmin.run();
     }
 
-
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -275,6 +306,11 @@ public class NavigatorAdmin extends JFrame {
         NavigatorAdmin.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -291,6 +327,12 @@ public class NavigatorAdmin extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init(){
         AdminData adminData = UserBuffer.getAdminSession();
         this.username.setText(adminData.getAccount());

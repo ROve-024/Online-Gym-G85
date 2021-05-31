@@ -15,6 +15,9 @@ import javax.swing.border.*;
 
 
 /**
+ * <p>
+ *      This class is used to display the personal information of the coach.
+ * </p>
  * @author Anna
  */
 public class ViewCoachProfile extends JFrame {
@@ -22,12 +25,23 @@ public class ViewCoachProfile extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function is used to return to the course interface.
+     * </p>
+     * @param e
+     */
     private void lessonButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         this.dispose();
         LessonDetailMember.run();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -482,6 +496,11 @@ public class ViewCoachProfile extends JFrame {
         ViewCoachProfile.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -498,6 +517,12 @@ public class ViewCoachProfile extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init() {
         String ID = ViewBuffer.getBuffer();
         CoachData coachData = CoachFunction.searchCoachByID(ID);

@@ -16,6 +16,9 @@ import javax.swing.border.*;
 
 
 /**
+ * <p>
+ *     This class provides course details.
+ * </p>
  * @author Anna
  */
 public class LessonDetailCoach extends JFrame {
@@ -23,18 +26,35 @@ public class LessonDetailCoach extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function allows coachs to modify lesson information.
+     * </p>
+     * @param e
+     */
     private void editButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         UploadModify.run();
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function returns a list of courses.
+     * </p>
+     * @param e
+     */
     private void homeButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         MyLessonCoach.run();
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -217,6 +237,11 @@ public class LessonDetailCoach extends JFrame {
     private String lessonID = LessonBuffer.getBuffer();
     ClassData classData = ClassFunction.searchClassByID(this.lessonID);
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -233,6 +258,12 @@ public class LessonDetailCoach extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init(){
         this.lessonName.setText(this.classData.getName());
         this.needVIP.setText("VIP " + this.classData.getVIPLevel());

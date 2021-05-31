@@ -14,6 +14,9 @@ import javax.swing.border.*;
 
 
 /**
+ * <p>
+ *     This class is the initial interface of the coach.
+ * </p>
  * @author Anna
  */
 public class NavigatorCoach extends JFrame {
@@ -21,6 +24,12 @@ public class NavigatorCoach extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function is used to enter the coach's course interface.
+     * </p>
+     * @param e
+     */
     private void myLessonActionPerformed(ActionEvent e) {
         // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
@@ -33,6 +42,12 @@ public class NavigatorCoach extends JFrame {
         MyLessonCoach.run();
     }
 
+    /**
+     * <p>
+     *     This function is used to enter the coach's plan interface.
+     * </p>
+     * @param e
+     */
     private void myPlanActionPerformed(ActionEvent e) {
         // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
@@ -45,6 +60,12 @@ public class NavigatorCoach extends JFrame {
         PlanHomeCoach.run();
     }
 
+    /**
+     * <p>
+     *     This function is used to enter the coach's profile interface.
+     * </p>
+     * @param e
+     */
     private void myProfileActionPerformed(ActionEvent e) {
         // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
@@ -57,6 +78,12 @@ public class NavigatorCoach extends JFrame {
         ProfileCoach.run();
     }
 
+    /**
+     * <p>
+     *     Return to the login screen.
+     * </p>
+     * @param e
+     */
     private void switchAccoutActionPerformed(ActionEvent e) {
         // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
@@ -68,8 +95,11 @@ public class NavigatorCoach extends JFrame {
         Login.run();
     }
 
-
-
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -281,6 +311,11 @@ public class NavigatorCoach extends JFrame {
         NavigatorCoach.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -297,6 +332,12 @@ public class NavigatorCoach extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init(){
         CoachData coachData = UserBuffer.getCoachSession();
         this.username.setText(coachData.getName());

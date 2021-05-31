@@ -16,9 +16,22 @@ import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-
+/**
+ * <p>
+ *     This class is designed to write coach Xml.
+ * </p>
+ *
+ * @author Bingzhe Cui
+ * @version 3.0
+ *
+ */
 public class WriteCoachXml {
-
+    /**
+     * <p>
+     *     This function is designed to write XMl.
+     * </p>
+     * @param coachList
+     */
         public void writeXML(List<CoachData> coachList) {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             CoachData coachData;

@@ -13,6 +13,9 @@ import javax.swing.border.*;
 
 
 /**
+ * <p>
+ *     This class is used to display client information.
+ * </p>
  * @author Anna
  */
 public class ProfileMember extends JFrame {
@@ -20,16 +23,33 @@ public class ProfileMember extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This method is used to modify customer information.
+     * </p>
+     * @param e
+     */
     private void editButtonActionPerformed(ActionEvent e) {
         EditProfileMember.run();
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This method is used to modify customer avatar.
+     * </p>
+     * @param e
+     */
     private void avatarActionPerformed(ActionEvent e) {
         this.dispose();
         ChangeMemberAvatar.run();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -494,6 +514,11 @@ public class ProfileMember extends JFrame {
         ProfileMember.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -510,6 +535,12 @@ public class ProfileMember extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init() {
         String ID = UserBuffer.getBuffer();
         ClientData clientData = UserBuffer.getClientSession();

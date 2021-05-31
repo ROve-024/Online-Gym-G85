@@ -25,6 +25,12 @@ public class PlanHomeAdmin extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function allows the administrator to delete the plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton1ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -35,6 +41,12 @@ public class PlanHomeAdmin extends JFrame {
         PlanHomeAdmin.run();
     }
 
+    /**
+     * <p>
+     *     This function allows the administrator to delete the plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton2ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -45,6 +57,12 @@ public class PlanHomeAdmin extends JFrame {
         PlanHomeAdmin.run();
     }
 
+    /**
+     * <p>
+     *     This function allows the administrator to delete the plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton3ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -55,6 +73,12 @@ public class PlanHomeAdmin extends JFrame {
         PlanHomeAdmin.run();
     }
 
+    /**
+     * <p>
+     *     This function allows the administrator to delete the plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton4ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -65,6 +89,12 @@ public class PlanHomeAdmin extends JFrame {
         PlanHomeAdmin.run();
     }
 
+    /**
+     * <p>
+     *     This function allows the administrator to delete the plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton5ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -75,6 +105,12 @@ public class PlanHomeAdmin extends JFrame {
         PlanHomeAdmin.run();
     }
 
+    /**
+     * <p>
+     *     This function allows the administrator to delete the plan.
+     * </p>
+     * @param e
+     */
     private void deleteButton6ActionPerformed(ActionEvent e) {
         // TODO add your code here
         PlanBuffer.setBuffer("");
@@ -85,6 +121,12 @@ public class PlanHomeAdmin extends JFrame {
         PlanHomeAdmin.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to page forward.
+     * </p>
+     * @param e
+     */
     private void nextPageButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         int remainItem = this.list.size() - 6 * (this.page + 1);
@@ -98,6 +140,12 @@ public class PlanHomeAdmin extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to page backward.
+     * </p>
+     * @param e
+     */
     private void prePageButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         if(this.page == 0){
@@ -109,6 +157,11 @@ public class PlanHomeAdmin extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -705,6 +758,12 @@ public class PlanHomeAdmin extends JFrame {
     private int page = 0;
     private List<PlanData> list;
     private int planRemainNumb = 0;
+
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -721,11 +780,22 @@ public class PlanHomeAdmin extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init() {
         list = PlanFunction.getWholePlan();
         this.update();
     }
 
+    /**
+     * <p>
+     *     This function updates the contents of the page.
+     * </p>
+     */
     private void update() {
         int i = 0;
         int remainPage = this.list.size() - this.page * 6;

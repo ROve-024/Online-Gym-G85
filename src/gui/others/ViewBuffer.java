@@ -7,7 +7,17 @@ import io.coach.CoachData;
 
 import java.io.*;
 
+/**
+ *<p>
+ *     This class is used to operate on ViewBuffer
+ *</p>
+ */
 public class ViewBuffer {
+    /**
+     * <p>
+     *     This method is used to get the current value of the Buffer.
+     * </p>
+     */
     public static String getBuffer(){
         String line = "";
         try{
@@ -20,6 +30,13 @@ public class ViewBuffer {
         }
         return line;
     }
+
+    /**
+     * <p>
+     *     This method is used to set the value of the Buffer.
+     * </p>
+     * @param ID
+     */
     public static void setBuffer(String ID){
         File file = new File("src/resources/buffer/viewBuffer.txt");
         file.delete();
@@ -34,16 +51,38 @@ public class ViewBuffer {
             System.out.println("Create File Error!");
         }
     }
+
+    /**
+     * <p>
+     *     This method is used to get the current CoachData
+     * </p>
+     * @return CoachData
+     */
     public static CoachData getViewCoachBuffer(){
         String ID = LessonBuffer.getBuffer();
         CoachData coachData = CoachFunction.searchCoachByID(ID);
         return coachData;
     }
+
+    /**
+     * <p>
+     *     This method is used to get the current ClientData
+     * </p>
+     * @return ClientData
+     */
     public static ClientData getViewClientBuffer(){
         String ID = LessonBuffer.getBuffer();
         ClientData clientData = ClientFunction.searchClientByID(ID);
         return clientData;
     }
+
+    /**
+     * <p>
+     *     This method sets the value of the string..
+     * </p>
+     * @param string
+     * @return String
+     */
     public static String dataIsEmpty(String string){
         String result = "";
         if(!string.equals("Empty")){
@@ -51,6 +90,14 @@ public class ViewBuffer {
         }
         return result;
     }
+
+    /**
+     * <p>
+     *     This method sets the value of the string..
+     * </p>
+     * @param string
+     * @return String
+     */
     public static String toEmpty(String string){
         String result = "Empty";
         if(!string.equals("")){

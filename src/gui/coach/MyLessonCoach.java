@@ -19,6 +19,9 @@ import java.util.List;
 
 
 /**
+ * <p>
+ *     This class is used to show the coach's course.
+ * </p>
  * @author Anna
  */
 public class MyLessonCoach extends JFrame {
@@ -26,12 +29,24 @@ public class MyLessonCoach extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function provides the function of refreshing the course page.
+     * </p>
+     * @param e
+     */
     private void homeButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         this.page = 0;
         this.update();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to page backward.
+     * </p>
+     * @param e
+     */
     private void previousButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         if(this.page == 0){
@@ -43,6 +58,12 @@ public class MyLessonCoach extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to page forward.
+     * </p>
+     * @param e
+     */
     private void nextButtonActionPerformed(ActionEvent e) {
         int remainItem = this.list.size() - 6 * (this.page + 1);
         if(remainItem <= 0){
@@ -54,6 +75,12 @@ public class MyLessonCoach extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to view class details.
+     * </p>
+     * @param e
+     */
     private void moreButton1ActionPerformed(ActionEvent e) {
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6).getClassID());
@@ -61,6 +88,12 @@ public class MyLessonCoach extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to view class details.
+     * </p>
+     * @param e
+     */
     private void moreButton2ActionPerformed(ActionEvent e) {
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6 + 1).getClassID());
@@ -68,6 +101,12 @@ public class MyLessonCoach extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to view class details.
+     * </p>
+     * @param e
+     */
     private void moreButton3ActionPerformed(ActionEvent e) {
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6 + 2).getClassID());
@@ -75,6 +114,12 @@ public class MyLessonCoach extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to view class details.
+     * </p>
+     * @param e
+     */
     private void moreButton4ActionPerformed(ActionEvent e) {
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6 + 3).getClassID());
@@ -82,6 +127,12 @@ public class MyLessonCoach extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to view class details.
+     * </p>
+     * @param e
+     */
     private void moreButton5ActionPerformed(ActionEvent e) {
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6 + 4).getClassID());
@@ -89,6 +140,12 @@ public class MyLessonCoach extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to view class details.
+     * </p>
+     * @param e
+     */
     private void moreButton6ActionPerformed(ActionEvent e) {
         LessonBuffer.setBuffer("");
         LessonBuffer.setBuffer(this.list.get(this.page*6 + 5).getClassID());
@@ -96,12 +153,22 @@ public class MyLessonCoach extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This class is used for coaches to add courses.
+     * </p>
+     * @param e
+     */
     private void UploadActionPerformed(ActionEvent e) {
         CreateClass.run();
         this.dispose();
     }
 
-
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -661,6 +728,12 @@ public class MyLessonCoach extends JFrame {
     private int page = 0;
     private List<ClassData> list;
     private int lessonRemainNumb = 0;
+
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -677,11 +750,23 @@ public class MyLessonCoach extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init(){
         CoachData coachData = UserBuffer.getCoachSession();
         list = ClassFunction.searchClassByCoachName(coachData.getName());
         this.update();
     }
+
+    /**
+     * <p>
+     *     This function updates the contents of the page.
+     * </p>
+     */
     private void update(){
         int i = 0;
         int remainPage = this.list.size() - this.page * 6;

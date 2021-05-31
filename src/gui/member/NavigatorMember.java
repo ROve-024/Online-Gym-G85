@@ -14,6 +14,9 @@ import javax.swing.border.*;
 
 
 /**
+ * <p>
+ *     This class is the user's main interface.
+ * </p>
  * @author Anna
  */
 public class NavigatorMember extends JFrame {
@@ -21,6 +24,12 @@ public class NavigatorMember extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function is used to open the course selection interface.
+     * </p>
+     * @param e
+     */
     private void myLessonActionPerformed(ActionEvent e) {
         // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
@@ -33,6 +42,12 @@ public class NavigatorMember extends JFrame {
         LessonHomeMember.run();
     }
 
+    /**
+     * <p>
+     *     This function is used to open the scheduled schedule interface.
+     * </p>
+     * @param e
+     */
     private void myPlanActionPerformed(ActionEvent e) {
         // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
@@ -46,6 +61,12 @@ public class NavigatorMember extends JFrame {
 
     }
 
+    /**
+     * <p>
+     *     This function is used to open the personal information interface.
+     * </p>
+     * @param e
+     */
     private void myProfileActionPerformed(ActionEvent e) {
         // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
@@ -58,6 +79,12 @@ public class NavigatorMember extends JFrame {
         ProfileMember.run();
     }
 
+    /**
+     * <p>
+     *     This function is used to return to the login interface.
+     * </p>
+     * @param e
+     */
     private void switchAccoutActionPerformed(ActionEvent e) {
         // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
@@ -69,11 +96,22 @@ public class NavigatorMember extends JFrame {
         Login.run();
     }
 
+    /**
+     * <p>
+     *     This function is used to purchase VIP.
+     * </p>
+     * @param e
+     */
     private void vipLevelActionPerformed(ActionEvent e) {
         // TODO add your code here
         OpenVip.run();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -296,6 +334,11 @@ public class NavigatorMember extends JFrame {
         NavigatorMember.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -312,6 +355,12 @@ public class NavigatorMember extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init(){
         ClientData clientData = UserBuffer.getClientSession();
         this.username.setText(clientData.getName());

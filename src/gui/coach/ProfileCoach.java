@@ -14,6 +14,9 @@ import javax.swing.border.*;
 
 
 /**
+ * <p>
+ *      This class is used to display the personal information of the coach.
+ * </p>
  * @author Anna
  */
 public class ProfileCoach extends JFrame {
@@ -21,16 +24,33 @@ public class ProfileCoach extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function is used to modify the coach's personal information.
+     * </p>
+     * @param e
+     */
     private void editButtonActionPerformed(ActionEvent e) {
         EditProfileCoach.run();
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function is used to modify the coach's Avatar.
+     * </p>
+     * @param e
+     */
     private void avatarActionPerformed(ActionEvent e) {
         this.dispose();
         ChangeCoachAvatar.run();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -496,6 +516,11 @@ public class ProfileCoach extends JFrame {
         ProfileCoach.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -512,6 +537,12 @@ public class ProfileCoach extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init(){
         String ID = UserBuffer.getBuffer();
         CoachData coachData = CoachFunction.searchCoachByID(ID);

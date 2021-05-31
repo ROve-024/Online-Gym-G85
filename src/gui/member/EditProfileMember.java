@@ -16,6 +16,9 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 /**
+ * <p>
+ *     This class is used to modify user information.
+ * </p>
  * @author Anna
  */
 public class EditProfileMember extends JFrame {
@@ -23,6 +26,12 @@ public class EditProfileMember extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function is used to set up new user information.
+     * </p>
+     * @param e
+     */
     private void finishButtonActionPerformed(ActionEvent e) {
         ClientData clientData = UserBuffer.getClientSession();
         CheckFunction checkFunction = new CheckFunction();
@@ -59,6 +68,11 @@ public class EditProfileMember extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -448,6 +462,11 @@ public class EditProfileMember extends JFrame {
         EditProfileMember.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -465,6 +484,11 @@ public class EditProfileMember extends JFrame {
         });
     }
 
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init(){
         ClientData clientData = UserBuffer.getClientSession();
         this.name.setText(UserBuffer.dataIsEmpty(clientData.getName()));

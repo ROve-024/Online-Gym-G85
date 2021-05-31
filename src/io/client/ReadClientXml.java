@@ -10,9 +10,22 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * <p>
+ *     This class is designed to read admin Xml.
+ * </p>
+ *
+ * @author Haoqian Yu
+ * @version 3.0
+ *
+ */
 public class ReadClientXml {
-	
+	/**
+	 * <p>
+	 *     This function is designed to read CLient XML.
+	 * </p>
+	 * @return ClientData
+	 */
 	public static List<ClientData> readClientXML() {
 		
 		File  xmlFile = new File("src/resources/XMLs/Client.xml");
@@ -44,7 +57,13 @@ public class ReadClientXml {
 
 		return empList;
 	}
-	
+	/**
+	 * <p>
+	 *     This function is designed to get client data.
+	 * </p>
+	 * @param node
+	 * @return ClientData
+	 */
 	private static ClientData getClientData(Node node)
 	{
 		//XMLReaderDOM domReader = new XMLReaderDOM();
@@ -68,7 +87,14 @@ public class ReadClientXml {
 		
 		return emp;
 	}
-	
+	/**
+	 * <p>
+	 *     This function is designed to get tag value.
+	 * </p>
+	 * @param tag
+	 * @param element
+	 * @return TagValue
+	 */
 	private static String getTagValue(String tag, Element element) {
 
         NodeList nodeList = element.getElementsByTagName(tag).item(0).getChildNodes();

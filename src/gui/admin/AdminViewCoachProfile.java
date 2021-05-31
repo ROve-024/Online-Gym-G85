@@ -17,6 +17,10 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 /**
+ * <p>
+ *     This class provides administrators with the ability to view coach details.
+ * </p>
+ *
  * @author Anna
  */
 public class AdminViewCoachProfile extends JFrame {
@@ -24,6 +28,12 @@ public class AdminViewCoachProfile extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function provides the administrator with the ability to delete coaches.
+     * </p>
+     * @ActionEvent
+     */
     private void deleteButtonActionPerformed(ActionEvent e) {
         CoachFunction.DeleteCoachByID(ViewBuffer.getBuffer());
         ClassFunction.deleteClassByCoachID(ViewBuffer.getBuffer());
@@ -32,6 +42,11 @@ public class AdminViewCoachProfile extends JFrame {
         UserManageAllAdmin.run();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -498,6 +513,11 @@ public class AdminViewCoachProfile extends JFrame {
         AdminViewCoachProfile.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -515,6 +535,11 @@ public class AdminViewCoachProfile extends JFrame {
         });
     }
 
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init(){
         String ID = ViewBuffer.getBuffer();
         CoachData coachData = CoachFunction.searchCoachByID(ID);

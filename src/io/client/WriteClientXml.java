@@ -11,9 +11,22 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.util.List;
-
+/**
+ * <p>
+ *     This class is designed to write Class Xml.
+ * </p>
+ *
+ * @author Haoqian Yu
+ * @version 3.0
+ *
+ */
 public class WriteClientXml {
-
+    /**
+     * <p>
+     *     This function is designed to write XMl.
+     * </p>
+     * @param clientList
+     */
         public void writeXML(List<ClientData> clientList) {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             ClientData clientData;

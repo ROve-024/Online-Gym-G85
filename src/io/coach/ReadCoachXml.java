@@ -8,9 +8,22 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Document;import org.w3c.dom.Element;
 import org.w3c.dom.Node;import org.w3c.dom.NodeList;
-
+/**
+ * <p>
+ *     This class is designed to read admin Xml.
+ * </p>
+ *
+ * @author Bingzhe Cui
+ * @version 3.0
+ *
+ */
 public class ReadCoachXml {
-	
+	/**
+	 * <p>
+	 *     This function is designed to read coach XML.
+	 * </p>
+	 * @return CoachData
+	 */
 	public static List<CoachData> readCoachXML() {
 		
 		File  xmlFile = new File("src/resources/XMLs/Coach.xml");
@@ -42,7 +55,13 @@ public class ReadCoachXml {
 
 		return empList;
 	}
-	
+	/**
+	 * <p>
+	 *     This function is designed to get coach data.
+	 * </p>
+	 * @param node
+	 * @return CoachData
+	 */
 	private static CoachData getCoachData(Node node) 
 	{
 		//XMLReaderDOM domReader = new XMLReaderDOM();
@@ -63,7 +82,14 @@ public class ReadCoachXml {
 		
 		return emp;
 	}
-	
+	/**
+	 * <p>
+	 *     This function is designed to get tag value.
+	 * </p>
+	 * @param tag
+	 * @param element
+	 * @return TagValue
+	 */
 	private static String getTagValue(String tag, Element element) {
 
         NodeList nodeList = element.getElementsByTagName(tag).item(0).getChildNodes();

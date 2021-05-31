@@ -10,9 +10,22 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * <p>
+ *     This class is designed to read Plan Xml.
+ * </p>
+ *
+ * @author Xuan Wei
+ * @version 3.0
+ *
+ */
 public class ReadPlanXml {
-	
+	/**
+	 * <p>
+	 *     This function is designed to read Plan XML.
+	 * </p>
+	 * @return PlanData
+	 */
 	public static List<PlanData> readPlanXML() {
 		
 		File  xmlFile = new File("src/resources/XMLs/Plan.xml");
@@ -44,7 +57,13 @@ public class ReadPlanXml {
 
 		return empList;
 	}
-	
+	/**
+	 * <p>
+	 *     This function is designed to get Plan data.
+	 * </p>
+	 * @param node
+	 * @return PlanData
+	 */
 	private static PlanData getPlanData(Node node)
 	{
 		//XMLReaderDOM domReader = new XMLReaderDOM();
@@ -62,7 +81,14 @@ public class ReadPlanXml {
 		
 		return emp;
 	}
-	
+	/**
+	 * <p>
+	 *     This function is designed to get tag value.
+	 * </p>
+	 * @param tag
+	 * @param element
+	 * @return TagValue
+	 */
 	private static String getTagValue(String tag, Element element) {
 
         NodeList nodeList = element.getElementsByTagName(tag).item(0).getChildNodes();

@@ -21,6 +21,12 @@ public class UploadModify extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function allows administrators to modify course information.
+     * </p>
+     * @param e
+     */
     private void finishButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         ClassData classData = LessonBuffer.getLessonBuffer();
@@ -35,6 +41,12 @@ public class UploadModify extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function allows the administrator to delete the course.
+     * </p>
+     * @param e
+     */
     private void deleteButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         ClassFunction.deleteClassByID(lessonID);
@@ -42,6 +54,11 @@ public class UploadModify extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -282,6 +299,11 @@ public class UploadModify extends JFrame {
     private String lessonID = LessonBuffer.getBuffer();
     ClassData classData = ClassFunction.searchClassByID(this.lessonID);
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -298,6 +320,12 @@ public class UploadModify extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init() {
         String ID = LessonBuffer.getBuffer();
         ClassData classData = LessonBuffer.getLessonBuffer();

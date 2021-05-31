@@ -14,12 +14,22 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 /**
+ * <p>
+ *     This class is used to modify the user's Avatar.
+ * </p>
  * @author Anna
  */
 public class ChangeCoachAvatar extends JFrame {
     public ChangeCoachAvatar() {
         initComponents();
     }
+
+    /**
+     * <p>
+     *     This function is used to set the user's new avatar.
+     * </p>
+     * @param e
+     */
     private void submitButtonActionPerformed(ActionEvent e) {
         CoachData coachData = UserBuffer.getCoachSession();
         coachData.setFileAddress(this.avatarName.getText());
@@ -34,6 +44,11 @@ public class ChangeCoachAvatar extends JFrame {
         ProfileCoach.run();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -174,6 +189,11 @@ public class ChangeCoachAvatar extends JFrame {
         ChangeCoachAvatar.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -190,6 +210,12 @@ public class ChangeCoachAvatar extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     public void init(){
         CoachData coachData = UserBuffer.getCoachSession();
         this.avatarName.setText(coachData.getFileAddress());

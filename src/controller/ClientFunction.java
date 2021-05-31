@@ -7,19 +7,46 @@ import io.coach.CoachData;
 import java.util.List;
 
 import static io.client.ReadClientXml.readClientXML;
-
+/**
+ * <p>
+ *     This class implements Client functions
+ * </p>
+ *
+ * @author Haoqian Yu
+ * @version 3.0
+ *
+ */
 public class ClientFunction {
+    /**
+     * <p>
+     *     This function is designed to return the data of Client
+     * </p>
+     * @return List<ClientData>
+     *
+     */
     public static List<ClientData> getWholeClient(){                    //return the whole client info
         List<ClientData> clientList = readClientXML();
 
         return clientList;
     }
-
+    /**
+     * <p>
+     *     This function is designed to write data to XML.
+     * </p>
+     * @param clientList
+     *
+     */
     public static void writeClient(List<ClientData> clientList){
         WriteClientXml wx = new WriteClientXml();
         wx.writeXML(clientList);
     }
-
+    /**
+     * <p>
+     *     This function is designed to return the max ClientID.
+     * </p>
+     * @param clientList
+     * @return maxClientID
+     */
     public static int maxClientID(List<ClientData> clientList){
         int maxId = 0;
         ClientData clientData;
@@ -34,7 +61,15 @@ public class ClientFunction {
 
         return maxId;
     }
-    //implemented in signUpSubmit
+    /**
+     * <p>
+     *     This function is designed to judge whether the login is matched.
+     * </p>
+     * @param Account
+     * @param Password
+     * @return whether the login is matched
+     *
+     */
     public static boolean loginMatch(String Account, String Password){       //check the account and the password if match
         List<ClientData> clientList = getWholeClient();
 
@@ -51,6 +86,13 @@ public class ClientFunction {
 
         return ifMatch;
     }
+    /**
+     * <p>
+     *     This function is designed to judge if there exist a same account.
+     * </p>
+     * @param Account
+     * @return whether there exist same account.
+     */
     public static boolean ifExistSameAccount(String Account){
         List<ClientData> clientList = getWholeClient();
         boolean ifExist = false;
@@ -65,6 +107,15 @@ public class ClientFunction {
 
         return ifExist;
     }
+    /**
+     * <p>
+     *     This function is designed to get a submit of sign up.
+     *
+     * </p>
+     * @param Account
+     * @param Password
+     * @return a newID
+     */
     public static String signUpSubmit(String Account, String Password){
         List<ClientData> clientList = getWholeClient();
 
@@ -91,7 +142,14 @@ public class ClientFunction {
 
         return newID;
     }
-    ////////////////////////
+
+    /**
+     * <p>
+     *     This function is designed to search Client by Name.
+     * </p>
+     * @param Name
+     * @return ClientData
+     */
     public static List<ClientData> searchClientByName(String Name){
         List<ClientData> clientList = getWholeClient();
 
@@ -109,6 +167,14 @@ public class ClientFunction {
 
         return clientList;
     }
+
+    /**
+     * <p>
+     *     This function is designed to search Client by ClientID.
+     * </p>
+     * @param ID
+     * @return ClientData
+     */
     public static ClientData searchClientByID(String ID){
         List<ClientData> clientList = getWholeClient();
         ClientData clientData = null;
@@ -123,6 +189,13 @@ public class ClientFunction {
         }
         return clientData;
     }
+
+    /**
+     * <p>
+     *     This function is designed to update the information of Client.
+     * </p>
+     * @param updateClientData
+     */
     public static void updateClientInfo(ClientData updateClientData){
         List<ClientData> clientList = getWholeClient();
 
@@ -146,6 +219,12 @@ public class ClientFunction {
 
         writeClient(clientList);
     }
+    /**
+     * <p>
+     *     This function is designed to delete Client by ClientID.
+     * </p>
+     * @param ID
+     */
     public static void DeleteClientByID(String ID){
         List<ClientData> clientList = getWholeClient();
 
@@ -159,6 +238,12 @@ public class ClientFunction {
         }
         writeClient(clientList);
     }
+    /**
+     * <p>
+     *     This function is designed to delete Client by account.
+     * </p>
+     * @param Account
+     */
     public static void DeleteClientByAccount(String Account){
         List<ClientData> clientList = getWholeClient();
 
@@ -172,6 +257,12 @@ public class ClientFunction {
         }
         writeClient(clientList);
     }
+    /**
+     * <p>
+     *     This function is designed to get ID by Account.
+     * </p>
+     * @param Account
+     */
     public static String getIDByAccount(String Account){
         List<ClientData> clientList = getWholeClient();
         ClientData clientData = null;

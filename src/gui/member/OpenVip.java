@@ -15,6 +15,9 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 /**
+ * <p>
+ *     This class is used to buy VIP.
+ * </p>
  * @author Anna
  */
 public class OpenVip extends JFrame {
@@ -22,6 +25,12 @@ public class OpenVip extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function is used to set a new VIP level.
+     * </p>
+     * @param e
+     */
     private void button1ActionPerformed(ActionEvent e) {     //PURCHASE Action
         // TODO add your code here
         ClientData clientData = UserBuffer.getClientSession();
@@ -75,6 +84,11 @@ public class OpenVip extends JFrame {
         }
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -519,6 +533,11 @@ public class OpenVip extends JFrame {
         OpenVip.run();
     }
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -535,6 +554,12 @@ public class OpenVip extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init(){
         ClientData clientData = UserBuffer.getClientSession();
         this.currentLevel.setText("Level" + clientData.getVIPlevel());

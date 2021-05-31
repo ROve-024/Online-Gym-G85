@@ -18,6 +18,9 @@ import javax.swing.border.*;
 
 
 /**
+ * <p>
+ *     This class provides course details.
+ * </p>
  * @author Anna
  */
 public class LessonDetailAdmin extends JFrame {
@@ -25,21 +28,45 @@ public class LessonDetailAdmin extends JFrame {
         initComponents();
     }
 
+    /**
+     * <p>
+     *     This function allows administrators to modify lesson information.
+     * </p>
+     * @param e
+     */
     private void editButtonActionPerformed(ActionEvent e) {
         UploadModify.run();
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function allows the administrator to view the details of the coach in charge of the lesson.
+     * </p>
+     * @param e
+     */
     private void coachDetailButtonActionPerformed(ActionEvent e) {
         ProfileCoach.run();
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function returns a list of courses.
+     * </p>
+     * @param e
+     */
     private void homeButtonActionPerformed(ActionEvent e) {
         ALLLessonAdmin.run();
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function allows the administrator to delete the class.
+     * </p>
+     * @param e
+     */
     private void deleteButtonActionPerformed(ActionEvent e) {
         System.out.println("删除lesson：ID="+lessonID);
         ClassFunction.deleteClassByID(lessonID);
@@ -48,6 +75,11 @@ public class LessonDetailAdmin extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -249,6 +281,12 @@ public class LessonDetailAdmin extends JFrame {
 
     private String lessonID = LessonBuffer.getBuffer();
     ClassData classData = ClassFunction.searchClassByID(this.lessonID);
+
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -265,6 +303,12 @@ public class LessonDetailAdmin extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init(){
         this.lessonName.setText(this.classData.getName());
         this.needVIP.setText("VIP " + this.classData.getVIPLevel());

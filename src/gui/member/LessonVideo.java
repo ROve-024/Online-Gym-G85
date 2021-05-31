@@ -14,6 +14,9 @@ import javax.swing.border.*;
 
 
 /**
+ * <p>
+ *     This class is used to play video.
+ * </p>
  * @author Anna
  */
 public class LessonVideo extends JFrame {
@@ -27,12 +30,23 @@ public class LessonVideo extends JFrame {
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function is used to return to the course interface.
+     * </p>
+     * @param e
+     */
     private void homeButtonActionPerformed(ActionEvent e) {
         // TODO add your code here
         LessonHomeMember.run();
         this.dispose();
     }
 
+    /**
+     * <p>
+     *     This function defines the variables and layout structure of the GUI.
+     * </p>
+     */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
@@ -179,6 +193,11 @@ public class LessonVideo extends JFrame {
     private String lessonID = LessonBuffer.getBuffer();
     ClassData classData = ClassFunction.searchClassByID(this.lessonID);
 
+    /**
+     * <p>
+     *     This function provides the ability to run.
+     * </p>
+     */
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -195,6 +214,12 @@ public class LessonVideo extends JFrame {
             }
         });
     }
+
+    /**
+     * <p>
+     *     This function initializes the contents of the GUI.
+     * </p>
+     */
     private void init() {
         this.lessonName.setText(this.classData.getName());
         this.lessonMsg.setText(this.classData.getDetail());
