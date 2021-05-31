@@ -77,11 +77,11 @@ public class AdminViewMemberProfile extends JFrame {
             decorationLine.setBounds(35, 115, 730, decorationLine.getPreferredSize().height);
 
             //---- title ----
-            title.setText("My Profile ");
+            title.setText("Member Profile ");
             title.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 32));
             title.setBackground(Color.white);
             body.add(title);
-            title.setBounds(new Rectangle(new Point(25, 45), title.getPreferredSize()));
+            title.setBounds(25, 45, 320, title.getPreferredSize().height);
 
             //---- avatar ----
             avatar.setBackground(SystemColor.textHighlight);

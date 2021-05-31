@@ -22,12 +22,13 @@ new FormModel {
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "title"
-					"text": "My Profile "
+					"text": "Member Profile "
 					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 32 )
 					"background": sfield java.awt.Color white
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 25
 					"y": 45
+					"width": 320
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "avatar"

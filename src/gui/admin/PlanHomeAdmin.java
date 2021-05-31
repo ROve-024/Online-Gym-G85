@@ -604,7 +604,7 @@ public class PlanHomeAdmin extends JFrame {
             nextPageButton.setForeground(Color.white);
             nextPageButton.addActionListener(e -> nextPageButtonActionPerformed(e));
             body.add(nextPageButton);
-            nextPageButton.setBounds(655, 595, 100, 40);
+            nextPageButton.setBounds(665, 595, 100, 40);
 
             //---- prePageButton ----
             prePageButton.setText("PRE");
@@ -613,7 +613,7 @@ public class PlanHomeAdmin extends JFrame {
             prePageButton.setBorderPainted(false);
             prePageButton.addActionListener(e -> prePageButtonActionPerformed(e));
             body.add(prePageButton);
-            prePageButton.setBounds(55, 595, 100, 40);
+            prePageButton.setBounds(560, 595, 100, 40);
 
             {
                 // compute preferred size

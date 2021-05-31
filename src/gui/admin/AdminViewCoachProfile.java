@@ -80,11 +80,11 @@ public class AdminViewCoachProfile extends JFrame {
             decorationLine.setBounds(35, 115, 730, decorationLine.getPreferredSize().height);
 
             //---- title ----
-            title.setText("My Profile ");
+            title.setText("Coach Profile ");
             title.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 32));
             title.setBackground(Color.white);
             body.add(title);
-            title.setBounds(new Rectangle(new Point(25, 45), title.getPreferredSize()));
+            title.setBounds(25, 45, 270, title.getPreferredSize().height);
 
             //---- avatar ----
             avatar.setBackground(SystemColor.textHighlight);

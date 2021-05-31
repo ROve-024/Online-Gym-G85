@@ -77,11 +77,11 @@ public class ViewMemberProfile extends JFrame {
             decorationLine.setBounds(35, 115, 730, decorationLine.getPreferredSize().height);
 
             //---- title ----
-            title.setText("My Profile ");
+            title.setText("Member Profile ");
             title.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 32));
             title.setBackground(Color.white);
             body.add(title);
-            title.setBounds(new Rectangle(new Point(35, 35), title.getPreferredSize()));
+            title.setBounds(35, 35, 315, title.getPreferredSize().height);
 
             //---- uidGym ----
             uidGym.setText("UID:88888888 GYM: Muscle King ");
