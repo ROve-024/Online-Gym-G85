@@ -51,6 +51,7 @@ new FormModel {
 					"$buttonGroup": new FormReference( "UserType" )
 					"background": sfield java.awt.Color white
 					"foreground": sfield java.awt.Color gray
+					"enabled": false
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"width": 70
 					"height": 21

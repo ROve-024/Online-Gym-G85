@@ -266,7 +266,7 @@ new FormModel {
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "planButton"
-					"text": "plan"
+					"text": "PLAN"
 					"background": sfield java.awt.SystemColor control
 					"borderPainted": false
 					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "planButtonActionPerformed", true ) )

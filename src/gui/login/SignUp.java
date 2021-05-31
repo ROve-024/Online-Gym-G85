@@ -139,6 +139,7 @@ public class SignUp extends JFrame {
             adminButton.setText("Admin");
             adminButton.setBackground(Color.white);
             adminButton.setForeground(Color.gray);
+            adminButton.setEnabled(false);
             body.add(adminButton);
             adminButton.setBounds(280, 305, 70, 21);
 
