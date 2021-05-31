@@ -1,0 +1,232 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			"background": sfield java.awt.Color white
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/resources/icons/gym.png" )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "body"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "decorationLine"
+					"background": sfield java.awt.Color black
+					"border": new javax.swing.border.LineBorder( sfield java.awt.Color black, 1, false )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 115
+					"width": 730
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "title"
+					"text": "Modify Upload"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 32 )
+					"background": sfield java.awt.Color white
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 25
+					"y": 45
+					"width": 325
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "finishButton"
+					"borderPainted": false
+					"background": sfield java.awt.SystemColor textHighlight
+					"text": "UPLOAD"
+					"foreground": sfield java.awt.Color white
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "finishButtonActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 90
+					"height": 40
+					"x": 35
+					"y": 585
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "Lesson Title"
+					"background": sfield java.awt.Color white
+					"font": &Font0 new java.awt.Font( "Microsoft YaHei UI", 1, 18 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 135
+					"width": 130
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "className"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
+					"margin": new java.awt.Insets( 2, 10, 2, 6 )
+					"border": &EmptyBorder0 new javax.swing.border.EmptyBorder( 5, 10, 5, 10 )
+					"caretColor": sfield java.awt.Color darkGray
+					"background": &Color0 new java.awt.Color( 245, 245, 245, 255 )
+					"foreground": sfield java.awt.Color gray
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 165
+					"width": 730
+					"height": 40
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "Lesson Description"
+					"background": sfield java.awt.Color white
+					"font": #Font0
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 265
+					"height": 24
+					"x": 35
+					"y": 205
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "classDetail"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
+					"margin": new java.awt.Insets( 5, 10, 5, 10 )
+					"border": #EmptyBorder0
+					"caretColor": sfield java.awt.Color darkGray
+					"background": #Color0
+					"foreground": sfield java.awt.Color gray
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 235
+					"width": 730
+					"height": 40
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "videoSelectedButton"
+					"borderPainted": false
+					"background": new java.awt.Color( 220, 220, 220, 255 )
+					"text": "SELECT A FILE"
+					"foreground": sfield java.awt.Color white
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 40
+					"x": 35
+					"y": 520
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "deleteButton"
+					"borderPainted": false
+					"background": new java.awt.Color( 240, 128, 128, 255 )
+					"text": "DELETE"
+					"foreground": sfield java.awt.Color white
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "deleteButtonActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 90
+					"height": 40
+					"x": 130
+					"y": 585
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "Lessom Type"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 18 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 285
+					"width": 260
+					"height": 25
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "classCategory"
+					"background": new java.awt.Color( 245, 245, 245, 255 )
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
+					"caretColor": sfield java.awt.Color darkGray
+					"border": #EmptyBorder0
+					"foreground": sfield java.awt.Color gray
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 310
+					"width": 730
+					"height": 40
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label4"
+					"text": "VIP Level"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 18 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 360
+					"width": 390
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label5"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 18 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 40
+					"y": 440
+					"width": 365
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "needVIP"
+					"maximumRowCount": 4
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "0"
+						addElement( "0" )
+						addElement( "1" )
+						addElement( "2" )
+						addElement( "3" )
+					}
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 18 )
+					"background": new java.awt.Color( 245, 245, 245, 255 )
+					"foreground": sfield java.awt.Color gray
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 385
+					"width": 730
+					"height": 40
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label6"
+					"text": "Vedio Address"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 18 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 35
+					"y": 460
+					"width": 190
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "classVedio"
+					"background": new java.awt.Color( 245, 245, 245, 255 )
+					"border": new javax.swing.border.EmptyBorder( 5, 10, 5, 10 )
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
+					"foreground": sfield java.awt.Color gray
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 180
+					"y": 455
+					"width": 210
+					"height": 40
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label7"
+					"text": "File Address"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 18 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 425
+					"y": 460
+					"width": 190
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "classFile"
+					"background": new java.awt.Color( 245, 245, 245, 255 )
+					"border": new javax.swing.border.EmptyBorder( 5, 10, 5, 10 )
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
+					"foreground": sfield java.awt.Color gray
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 550
+					"y": 455
+					"width": 210
+					"height": 40
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 800
+				"height": 655
+				"x": 5
+				"y": 0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 800, 685 )
+		} )
+	}
+}
