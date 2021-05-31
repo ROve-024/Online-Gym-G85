@@ -27,7 +27,6 @@ hs_err_pid*
 out.production/
 
 #folder
-out.production/
 out/
 .idea/
 

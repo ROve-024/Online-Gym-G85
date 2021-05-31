@@ -496,6 +496,7 @@ new FormModel {
 					"background": new java.awt.Color( 255, 255, 255, 255 )
 					"foreground": sfield java.awt.Color gray
 					"$buttonGroup": new FormReference( "searchType" )
+					"selected": true
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 265
 					"y": 85

@@ -26,7 +26,7 @@ public class ALLLessonAdmin extends JFrame {
     }
 
     private void homeButtonActionPerformed(ActionEvent e) {
-        this.list = saveList;
+        this.list = ClassFunction.getWholeClass();
         this.page = 0;
         this.update();
     }
@@ -598,6 +598,7 @@ public class ALLLessonAdmin extends JFrame {
             titleRadioButton.setText("Title");
             titleRadioButton.setBackground(Color.white);
             titleRadioButton.setForeground(Color.gray);
+            titleRadioButton.setSelected(true);
             body.add(titleRadioButton);
             titleRadioButton.setBounds(265, 85, 60, titleRadioButton.getPreferredSize().height);
 
@@ -713,7 +714,6 @@ public class ALLLessonAdmin extends JFrame {
 
     private int page = 0;
     private List<ClassData> list;
-    private List<ClassData> saveList;
     private int lessonRemainNumb = 0;
     public static void run(){
         EventQueue.invokeLater(new Runnable() {
@@ -735,7 +735,6 @@ public class ALLLessonAdmin extends JFrame {
     private void init(){
         this.search.setText("");
         list = ClassFunction.getWholeClass();
-        saveList = ClassFunction.getWholeClass();
         this.update();
     }
     private void update(){
