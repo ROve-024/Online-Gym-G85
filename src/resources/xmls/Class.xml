@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DATA>
+
+
+<ROW>
+
+<ClassID>1</ClassID>
+
+<Name>Strengthen your muscle</Name>
+
+<CoachID>1</CoachID>
+
+<VedioAddress>Rec.com</VedioAddress>
+
+<Category>muscle</Category>
+
+<Detail>If you want to build your muscle, choose this one! We will rebuild your body!</Detail>
+
+<VIPLevel>2</VIPLevel>
+
+<FileAddress>1.jpg</FileAddress>
+
+</ROW>
+
+<ROW>
+
+<ClassID>2</ClassID>
+
+<Name>Cardio</Name>
+
+<CoachID>2</CoachID>
+
+<VedioAddress>Rec.com</VedioAddress>
+
+<Category>cardio</Category>
+
+<Detail>If you want to enhance cardiopulmonary function, choose this one! We will help you!</Detail>
+
+<VIPLevel>2</VIPLevel>
+
+<FileAddress>2.jpg</FileAddress>
+
+</ROW>
+
+<ROW>
+
+<ClassID>3</ClassID>
+
+<Name>Lose weight</Name>
+
+<CoachID>3</CoachID>
+
+<VedioAddress>Rec.com</VedioAddress>
+
+<Category>cardio</Category>
+
+<Detail>If you want to lose weight, choose this one! We will help you!</Detail>
+
+<VIPLevel>2</VIPLevel>
+
+<FileAddress>3.jpg</FileAddress>
+
+</ROW>
+
+<ROW>
+
+<ClassID>4</ClassID>
+
+<Name>Healthy food</Name>
+
+<CoachID>4</CoachID>
+
+<VedioAddress>Rec.com</VedioAddress>
+
+<Category>food</Category>
+
+<Detail>If you want to lose weight and eat healthily, choose this one! We will help you!</Detail>
+
+<VIPLevel>1</VIPLevel>
+
+<FileAddress>4.jpg</FileAddress>
+
+</ROW>
+
+<ROW>
+
+<ClassID>5</ClassID>
+
+<Name>Lose fat and Build muscle</Name>
+
+<CoachID>5</CoachID>
+
+<VedioAddress>Rec.com</VedioAddress>
+
+<Category>muscle</Category>
+
+<Detail>If you want to be a perfect body-builder, join us!</Detail>
+
+<VIPLevel>2</VIPLevel>
+
+<FileAddress>5.jpg</FileAddress>
+
+</ROW>
+
+<ROW>
+
+<ClassID>6</ClassID>
+
+<Name>Female training</Name>
+
+<CoachID>6</CoachID>
+
+<VedioAddress>Rec.com</VedioAddress>
+
+<Category>female</Category>
+
+<Detail>If you want to be a thin girl, join us!</Detail>
+
+<VIPLevel>2</VIPLevel>
+
+<FileAddress>6.jpg</FileAddress>
+
+</ROW>
+
+<ROW>
+
+<ClassID>7</ClassID>
+
+<Name>Child training</Name>
+
+<CoachID>7</CoachID>
+
+<VedioAddress>Rec.com</VedioAddress>
+
+<Category>child</Category>
+
+<Detail>If you have a baby, you can take him/her here!</Detail>
+
+<VIPLevel>2</VIPLevel>
+
+<FileAddress>7.jpg</FileAddress>
+
+</ROW>
+
+<ROW>
+
+<ClassID>8</ClassID>
+
+<Name>Elder training</Name>
+
+<CoachID>8</CoachID>
+
+<VedioAddress>Rec.com</VedioAddress>
+
+<Category>elder</Category>
+
+<Detail>If you are more than 50 years old and want to stay healthy, we are professional! </Detail>
+
+<VIPLevel>3</VIPLevel>
+
+<FileAddress>8.jpg</FileAddress>
+
+</ROW>
+
+<ROW>
+
+<ClassID>9</ClassID>
+
+<Name>Rehabilitation training</Name>
+
+<CoachID>9</CoachID>
+
+<VedioAddress>Rec.com</VedioAddress>
+
+<Category>rehabilitation</Category>
+
+<Detail>If you are injured recently, come here and we can help you!</Detail>
+
+<VIPLevel>3</VIPLevel>
+
+<FileAddress>9.jpg</FileAddress>
+
+</ROW>
+
+<ROW>
+
+<ClassID>10</ClassID>
+
+<Name>Relaxing training</Name>
+
+<CoachID>10</CoachID>
+
+<VedioAddress>Rec.com</VedioAddress>
+
+<Category>stress</Category>
+
+<Detail>If you are suffered from stress recently, come and we can help you relax.</Detail>
+
+<VIPLevel>3</VIPLevel>
+
+<FileAddress>10.jpg</FileAddress>
+
+</ROW>
+</DATA>
