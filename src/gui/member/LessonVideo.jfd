@@ -32,6 +32,27 @@ new FormModel {
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 					name: "panel1"
 					"background": sfield java.awt.SystemColor menu
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"text": "The video failed to load, please watch it in your browser:"
+						"foreground": sfield java.awt.Color gray
+						"font": new java.awt.Font( "Microsoft YaHei UI", 0, 14 )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 15
+						"y": 5
+						"width": 405
+						"height": 40
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "URL"
+						"background": sfield java.awt.SystemColor menu
+						"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"font": new java.awt.Font( "Microsoft YaHei UI", 2, 14 )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 405
+						"y": 15
+						"width": 285
+					} )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 30
 					"y": 130

@@ -2,12 +2,7 @@
 <DATA>
     <ROW>
         <AdminID>1</AdminID>
-        <Account>A</Account>
-        <Password>1</Password>
-    </ROW>
-    <ROW>
-        <AdminID>2</AdminID>
-        <Account>SB</Account>
-        <Password>1</Password>
+        <Account>admin</Account>
+        <Password>123456as</Password>
     </ROW>
 </DATA>

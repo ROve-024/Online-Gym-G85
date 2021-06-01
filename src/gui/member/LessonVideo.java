@@ -53,6 +53,8 @@ public class LessonVideo extends JFrame {
         decorationLine = new JLabel();
         title = new JLabel();
         panel1 = new JPanel();
+        label1 = new JLabel();
+        URL = new JTextField();
         lessonName = new JLabel();
         lessonMsg = new JTextPane();
         homeButton2 = new JButton();
@@ -87,6 +89,20 @@ public class LessonVideo extends JFrame {
             {
                 panel1.setBackground(SystemColor.menu);
                 panel1.setLayout(null);
+
+                //---- label1 ----
+                label1.setText("The video failed to load, please watch it in your browser:");
+                label1.setForeground(Color.gray);
+                label1.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 14));
+                panel1.add(label1);
+                label1.setBounds(15, 5, 405, 40);
+
+                //---- URL ----
+                URL.setBackground(SystemColor.menu);
+                URL.setBorder(null);
+                URL.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 14));
+                panel1.add(URL);
+                URL.setBounds(405, 15, 285, URL.getPreferredSize().height);
 
                 {
                     // compute preferred size
@@ -181,6 +197,8 @@ public class LessonVideo extends JFrame {
     private JLabel decorationLine;
     private JLabel title;
     private JPanel panel1;
+    private JLabel label1;
+    private JTextField URL;
     private JLabel lessonName;
     private JTextPane lessonMsg;
     private JButton homeButton2;
@@ -224,5 +242,6 @@ public class LessonVideo extends JFrame {
         this.lessonName.setText(this.classData.getName());
         this.lessonMsg.setText(this.classData.getDetail());
         this.lessonType.setText(this.classData.getCategory());
+        this.URL.setText(this.classData.getVedioAddress());
     }
 }

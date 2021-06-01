@@ -12,7 +12,7 @@
         <VIPlevel>1</VIPlevel>
         <Target>Reduced fat</Target>
         <PhysicalCondition>There's a lot of fat</PhysicalCondition>
-        <FileAddress>Acatar (1).jpg</FileAddress>
+        <FileAddress>Avatar (1).jpg</FileAddress>
     </ROW>
     <ROW>
         <ClientID>2</ClientID>
@@ -26,7 +26,7 @@
         <VIPlevel>3</VIPlevel>
         <Target>Get healthier</Target>
         <PhysicalCondition>Medium height</PhysicalCondition>
-        <FileAddress>Acatar (1).jpg</FileAddress>
+        <FileAddress>Avatar (2).jpg</FileAddress>
     </ROW>
     <ROW>
         <ClientID>3</ClientID>
@@ -40,7 +40,7 @@
         <VIPlevel>1</VIPlevel>
         <Target>Champion of bodybuilding competition</Target>
         <PhysicalCondition>very good</PhysicalCondition>
-        <FileAddress>Empty</FileAddress>
+        <FileAddress>Avatar (3).jpg</FileAddress>
     </ROW>
     <ROW>
         <ClientID>4</ClientID>
@@ -54,7 +54,7 @@
         <VIPlevel>2</VIPlevel>
         <Target>Enter a boxing match</Target>
         <PhysicalCondition>Have boxing experience</PhysicalCondition>
-        <FileAddress>Empty</FileAddress>
+        <FileAddress>Avatar (4).jpg</FileAddress>
     </ROW>
     <ROW>
         <ClientID>5</ClientID>
@@ -68,7 +68,7 @@
         <VIPlevel>1</VIPlevel>
         <Target>Reduced to 80 catties</Target>
         <PhysicalCondition>Have high blood pressure</PhysicalCondition>
-        <FileAddress>Empty</FileAddress>
+        <FileAddress>Avatar (5).jpg</FileAddress>
     </ROW>
     <ROW>
         <ClientID>6</ClientID>
@@ -82,7 +82,7 @@
         <VIPlevel>2</VIPlevel>
         <Target>I want to work my leg muscles</Target>
         <PhysicalCondition>very good</PhysicalCondition>
-        <FileAddress>Empty</FileAddress>
+        <FileAddress>Avatar (6).jpg</FileAddress>
     </ROW>
     <ROW>
         <ClientID>7</ClientID>
@@ -96,7 +96,7 @@
         <VIPlevel>1</VIPlevel>
         <Target>Reduced fat</Target>
         <PhysicalCondition>Have diabetes</PhysicalCondition>
-        <FileAddress>Empty</FileAddress>
+        <FileAddress>Avatar (7).jpg</FileAddress>
     </ROW>
     <ROW>
         <ClientID>8</ClientID>
@@ -110,7 +110,7 @@
         <VIPlevel>1</VIPlevel>
         <Target>I want to exercise my chest muscles</Target>
         <PhysicalCondition>very good</PhysicalCondition>
-        <FileAddress>Empty</FileAddress>
+        <FileAddress>Avatar (8).jpg</FileAddress>
     </ROW>
     <ROW>
         <ClientID>9</ClientID>
@@ -124,7 +124,7 @@
         <VIPlevel>2</VIPlevel>
         <Target>I want to build my muscles</Target>
         <PhysicalCondition>average</PhysicalCondition>
-        <FileAddress>Empty</FileAddress>
+        <FileAddress>Avatar (9).jpg</FileAddress>
     </ROW>
     <ROW>
         <ClientID>10</ClientID>
@@ -138,6 +138,6 @@
         <VIPlevel>3</VIPlevel>
         <Target>Reduced fat</Target>
         <PhysicalCondition>a little fat</PhysicalCondition>
-        <FileAddress>Empty</FileAddress>
+        <FileAddress>Avatar (10).jpg</FileAddress>
     </ROW>
 </DATA>

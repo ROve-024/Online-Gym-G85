@@ -68,7 +68,7 @@ new FormModel {
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "joinButton"
-					"text": "JOIN NOW"
+					"text": "PLAY"
 					"background": sfield java.awt.SystemColor menu
 					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
 					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "joinButtonActionPerformed", true ) )

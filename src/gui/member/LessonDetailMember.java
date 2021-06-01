@@ -162,7 +162,7 @@ public class LessonDetailMember extends JFrame {
             lessonMsg.setBounds(350, 235, 398, 110);
 
             //---- joinButton ----
-            joinButton.setText("JOIN NOW");
+            joinButton.setText("PLAY");
             joinButton.setBackground(SystemColor.menu);
             joinButton.setBorder(null);
             joinButton.addActionListener(e -> joinButtonActionPerformed(e));
