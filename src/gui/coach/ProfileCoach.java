@@ -126,7 +126,7 @@ public class ProfileCoach extends JFrame {
             avatar.setIcon(null);
             avatar.addActionListener(e -> avatarActionPerformed(e));
             body.add(avatar);
-            avatar.setBounds(295, 145, 145, 150);
+            avatar.setBounds(295, 145, 148, 150);
 
             //---- nameTip ----
             nameTip.setText("Name");

@@ -62,7 +62,7 @@ new FormModel {
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 295
 					"y": 145
-					"width": 145
+					"width": 148
 					"height": 150
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {

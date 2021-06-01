@@ -31,7 +31,6 @@ public class NavigatorMember extends JFrame {
      * @param e
      */
     private void myLessonActionPerformed(ActionEvent e) {
-        // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
         int i=0;
         while (i<win.length) {
@@ -49,7 +48,6 @@ public class NavigatorMember extends JFrame {
      * @param e
      */
     private void myPlanActionPerformed(ActionEvent e) {
-        // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
         int i=0;
         while (i<win.length) {
@@ -68,7 +66,6 @@ public class NavigatorMember extends JFrame {
      * @param e
      */
     private void myProfileActionPerformed(ActionEvent e) {
-        // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
         int i=0;
         while (i<win.length) {
@@ -86,7 +83,6 @@ public class NavigatorMember extends JFrame {
      * @param e
      */
     private void switchAccoutActionPerformed(ActionEvent e) {
-        // TODO add your code here
         java.awt.Window[] win = java.awt.Window.getWindows();
         int i=0;
         while (i<win.length) {
@@ -103,8 +99,11 @@ public class NavigatorMember extends JFrame {
      * @param e
      */
     private void vipLevelActionPerformed(ActionEvent e) {
-        // TODO add your code here
         OpenVip.run();
+    }
+
+    private void avatarButtonActionPerformed(ActionEvent e) {
+        ChangeMemberAvatar.run();
     }
 
     /**
@@ -115,7 +114,7 @@ public class NavigatorMember extends JFrame {
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         body = new JPanel();
-        label1 = new JLabel();
+        avatarButton = new JButton();
         username = new JLabel();
         welcomeMsg = new JLabel();
         decorationLine1 = new JLabel();
@@ -145,14 +144,16 @@ public class NavigatorMember extends JFrame {
             body.setBorder(null);
             body.setLayout(null);
 
-            //---- label1 ----
-            label1.setText("avatar");
-            label1.setBackground(Color.black);
-            label1.setForeground(Color.white);
-            label1.setHorizontalAlignment(SwingConstants.CENTER);
-            label1.setIcon(null);
-            body.add(label1);
-            label1.setBounds(15, 20, 90, 75);
+            //---- avatarButton ----
+            avatarButton.setText("avatar");
+            avatarButton.setBackground(Color.white);
+            avatarButton.setForeground(Color.white);
+            avatarButton.setHorizontalAlignment(SwingConstants.CENTER);
+            avatarButton.setIcon(null);
+            avatarButton.setBorder(null);
+            avatarButton.addActionListener(e -> avatarButtonActionPerformed(e));
+            body.add(avatarButton);
+            avatarButton.setBounds(15, 20, 74, 75);
 
             //---- username ----
             username.setText("Username");
@@ -313,7 +314,7 @@ public class NavigatorMember extends JFrame {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel body;
-    private JLabel label1;
+    private JButton avatarButton;
     private JLabel username;
     private JLabel welcomeMsg;
     private JLabel decorationLine1;
@@ -367,9 +368,9 @@ public class NavigatorMember extends JFrame {
         this.vipLevel.setText("Level" + clientData.getVIPlevel());
         this.welcomeMsg.setText("Welcome, dear client.");
         try{
-            this.label1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData.getFileAddress())));
+            this.avatarButton.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/" + clientData.getFileAddress())));
         }catch (NullPointerException miss){
-            this.label1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
+            this.avatarButton.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
         }
     }
 }

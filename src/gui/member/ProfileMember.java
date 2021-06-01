@@ -119,12 +119,12 @@ public class ProfileMember extends JFrame {
             uidGym.setBounds(470, 93, 300, 24);
 
             //---- avatar ----
-            avatar.setBackground(SystemColor.textHighlight);
+            avatar.setBackground(SystemColor.window);
             avatar.setBorderPainted(false);
             avatar.setIcon(null);
             avatar.addActionListener(e -> avatarActionPerformed(e));
             body.add(avatar);
-            avatar.setBounds(295, 145, 145, 150);
+            avatar.setBounds(295, 145, 148, 150);
 
             //---- nameTip ----
             nameTip.setText("Name");

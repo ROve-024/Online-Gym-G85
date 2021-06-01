@@ -12,17 +12,18 @@ new FormModel {
 				name: "body"
 				"background": sfield java.awt.Color white
 				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
-				add( new FormComponent( "javax.swing.JLabel" ) {
-					name: "label1"
-					"text": "avatar"
-					"background": new java.awt.Color( 0, 0, 0, 255 )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "avatarButton"
+					"background": sfield java.awt.Color white
 					"foreground": sfield java.awt.Color white
 					"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
 					"horizontalAlignment": 0
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "avatarButtonActionPerformed", true ) )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 15
 					"y": 20
-					"width": 90
+					"width": 74
 					"height": 75
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
