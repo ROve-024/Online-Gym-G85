@@ -95,14 +95,14 @@ public class LessonVideo extends JFrame {
                 label1.setForeground(Color.gray);
                 label1.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 14));
                 panel1.add(label1);
-                label1.setBounds(15, 5, 405, 40);
+                label1.setBounds(15, 5, 390, 40);
 
                 //---- URL ----
                 URL.setBackground(SystemColor.menu);
                 URL.setBorder(null);
                 URL.setFont(new Font("Microsoft YaHei UI", Font.ITALIC, 14));
                 panel1.add(URL);
-                URL.setBounds(405, 15, 285, URL.getPreferredSize().height);
+                URL.setBounds(405, 17, 315, URL.getPreferredSize().height);
 
                 {
                     // compute preferred size

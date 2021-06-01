@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<DATA>
+    <ROW>
+        <ClientID>1</ClientID>
+        <Name>XuanWei</Name>
+        <Account>weixuan852</Account>
+        <Password>57688138a</Password>
+        <Phonenumber>15317326828</Phonenumber>
+        <Email>465810567@qq.com</Email>
+        <Sex>male</Sex>
+        <Balance>100.25</Balance>
+        <VIPlevel>1</VIPlevel>
+        <Target>Reduced fat</Target>
+        <PhysicalCondition>There's a lot of fat</PhysicalCondition>
+        <FileAddress>Avatar (1).jpg</FileAddress>
+    </ROW>
+    <ROW>
+        <ClientID>2</ClientID>
+        <Name>Anna</Name>
+        <Account>Anna0028</Account>
+        <Password>jhskxni273</Password>
+        <Phonenumber>16484778277</Phonenumber>
+        <Email>Anna0028@gmail.com</Email>
+        <Sex>female</Sex>
+        <Balance>500.00</Balance>
+        <VIPlevel>3</VIPlevel>
+        <Target>Get healthier</Target>
+        <PhysicalCondition>Medium height</PhysicalCondition>
+        <FileAddress>Avatar (2).jpg</FileAddress>
+    </ROW>
+    <ROW>
+        <ClientID>3</ClientID>
+        <Name>YanxiLiu</Name>
+        <Account>wisjxnk23</Account>
+        <Password>jisadjn4</Password>
+        <Phonenumber>19572765455</Phonenumber>
+        <Email>jisgyhhh@163.com</Email>
+        <Sex>Male</Sex>
+        <Balance>300.00</Balance>
+        <VIPlevel>1</VIPlevel>
+        <Target>Champion of bodybuilding competition</Target>
+        <PhysicalCondition>very good</PhysicalCondition>
+        <FileAddress>Avatar (3).jpg</FileAddress>
+    </ROW>
+    <ROW>
+        <ClientID>4</ClientID>
+        <Name>YunhengLi</Name>
+        <Account>lyh112233</Account>
+        <Password>lyh1008</Password>
+        <Phonenumber>15937287265</Phonenumber>
+        <Email>lyh123@163.com</Email>
+        <Sex>Famale</Sex>
+        <Balance>0.00</Balance>
+        <VIPlevel>2</VIPlevel>
+        <Target>Enter a boxing match</Target>
+        <PhysicalCondition>Have boxing experience</PhysicalCondition>
+        <FileAddress>Avatar (4).jpg</FileAddress>
+    </ROW>
+    <ROW>
+        <ClientID>5</ClientID>
+        <Name>SiyuChen</Name>
+        <Account>csy123</Account>
+        <Password>0815081a</Password>
+        <Phonenumber>15873658273</Phonenumber>
+        <Email>csycsy@gmail.com</Email>
+        <Sex>Famale</Sex>
+        <Balance>0.00</Balance>
+        <VIPlevel>1</VIPlevel>
+        <Target>Reduced to 80 catties</Target>
+        <PhysicalCondition>Have high blood pressure</PhysicalCondition>
+        <FileAddress>Avatar (5).jpg</FileAddress>
+    </ROW>
+    <ROW>
+        <ClientID>6</ClientID>
+        <Name>XiaoyanWu</Name>
+        <Account>wxy123</Account>
+        <Password>wuxiao123</Password>
+        <Phonenumber>19572765252</Phonenumber>
+        <Email>xiangqiwang@gmail.com</Email>
+        <Sex>Famale</Sex>
+        <Balance>200.00</Balance>
+        <VIPlevel>2</VIPlevel>
+        <Target>I want to work my leg muscles</Target>
+        <PhysicalCondition>very good</PhysicalCondition>
+        <FileAddress>Avatar (6).jpg</FileAddress>
+    </ROW>
+    <ROW>
+        <ClientID>7</ClientID>
+        <Name>YuchenMa</Name>
+        <Account>yuuu1001</Account>
+        <Password>yuuuuuuu1</Password>
+        <Phonenumber>18572837653</Phonenumber>
+        <Email>28365726@qq.com</Email>
+        <Sex>Famale</Sex>
+        <Balance>0.00</Balance>
+        <VIPlevel>1</VIPlevel>
+        <Target>Reduced fat</Target>
+        <PhysicalCondition>Have diabetes</PhysicalCondition>
+        <FileAddress>Avatar (7).jpg</FileAddress>
+    </ROW>
+    <ROW>
+        <ClientID>8</ClientID>
+        <Name>KunhongZhou</Name>
+        <Account>qingniaozzz</Account>
+        <Password>zkh954954</Password>
+        <Phonenumber>19728752387</Phonenumber>
+        <Email>Qingniao@163.com</Email>
+        <Sex>Male</Sex>
+        <Balance>40.00</Balance>
+        <VIPlevel>1</VIPlevel>
+        <Target>I want to exercise my chest muscles</Target>
+        <PhysicalCondition>very good</PhysicalCondition>
+        <FileAddress>Avatar (8).jpg</FileAddress>
+    </ROW>
+    <ROW>
+        <ClientID>9</ClientID>
+        <Name>ChangyuanYu</Name>
+        <Account>xiaoyu001</Account>
+        <Password>xiaoyao11</Password>
+        <Phonenumber>18572773726</Phonenumber>
+        <Email>xiaaaa@gmail.com</Email>
+        <Sex>Male</Sex>
+        <Balance>80.00</Balance>
+        <VIPlevel>2</VIPlevel>
+        <Target>I want to build my muscles</Target>
+        <PhysicalCondition>average</PhysicalCondition>
+        <FileAddress>Avatar (9).jpg</FileAddress>
+    </ROW>
+    <ROW>
+        <ClientID>10</ClientID>
+        <Name>LingYiLi</Name>
+        <Account>li01123</Account>
+        <Password>lilili01</Password>
+        <Phonenumber>12737772873</Phonenumber>
+        <Email>sfhuhwh@gmail.com</Email>
+        <Sex>Famale</Sex>
+        <Balance>5.00</Balance>
+        <VIPlevel>3</VIPlevel>
+        <Target>Reduced fat</Target>
+        <PhysicalCondition>a little fat</PhysicalCondition>
+        <FileAddress>Avatar (10).jpg</FileAddress>
+    </ROW>
+</DATA>

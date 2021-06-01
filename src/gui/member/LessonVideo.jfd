@@ -40,7 +40,7 @@ new FormModel {
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 15
 						"y": 5
-						"width": 405
+						"width": 390
 						"height": 40
 					} )
 					add( new FormComponent( "javax.swing.JTextField" ) {
@@ -50,8 +50,8 @@ new FormModel {
 						"font": new java.awt.Font( "Microsoft YaHei UI", 2, 14 )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 405
-						"y": 15
-						"width": 285
+						"y": 17
+						"width": 315
 					} )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 30
