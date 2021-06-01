@@ -222,7 +222,7 @@ public class NavigatorCoach extends JFrame {
             label2.setForeground(Color.white);
             label2.setHorizontalAlignment(SwingConstants.CENTER);
             label2.setBorderPainted(false);
-            label2.setIcon(new ImageIcon(getClass().getResource("/resources/icons/video.png")));
+            label2.setIcon(new ImageIcon(getClass().getResource("/resources/icons/videoIcon.png")));
             body.add(label2);
             label2.setBounds(20, 157, 25, 25);
 

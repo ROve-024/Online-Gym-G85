@@ -111,7 +111,7 @@ new FormModel {
 					"foreground": sfield java.awt.Color white
 					"horizontalAlignment": 0
 					"borderPainted": false
-					"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/icons/video.png" )
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/icons/videoIcon.png" )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"width": 25
 					"height": 25

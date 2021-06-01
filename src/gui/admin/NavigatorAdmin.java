@@ -236,7 +236,7 @@ public class NavigatorAdmin extends JFrame {
             label3.setForeground(Color.white);
             label3.setHorizontalAlignment(SwingConstants.CENTER);
             label3.setBorderPainted(false);
-            label3.setIcon(new ImageIcon(getClass().getResource("/resources/icons/video.png")));
+            label3.setIcon(new ImageIcon(getClass().getResource("/resources/icons/videoIcon.png")));
             body.add(label3);
             label3.setBounds(25, 222, 25, 25);
 
