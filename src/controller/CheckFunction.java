@@ -23,7 +23,7 @@ public class CheckFunction {
      * @return whether the email is ok.
      */
     public static boolean checkEmail(String email){
-        String regex = "[a-zA-Z0-9_]+@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9]+)+"; // (Note: \ is an escape character）
+        String regex = "[a-zA-Z0-9_]+@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9]+)+";
 
         boolean flag = email.matches(regex);
         return flag;
@@ -100,22 +100,11 @@ public class CheckFunction {
      */
     private boolean wrongLetter(String password){
         boolean ifWrong = false;
-        int letter = 0;
-        int digit = 0;
 
-        for(int i=0;i<password.length();i++){
-            if(Character.isDigit(password.charAt(i))){
-                digit++;
-            }
-            else{
-                int temp = (int)password.charAt(i);
-                if((65<=temp && temp<=90) || (97<=temp && temp<=122)){
-                    letter++;
-                }
-            }
-        }
+        String check = password;
+        check = check.replace(" ","");
 
-        if(letter == 0 || digit == 0 || letter+digit!=password.length()){
+        if(password.length() != check.length()){
             ifWrong = true;
         }
 
