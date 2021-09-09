@@ -1,3 +1,7 @@
+# Demo
+
+![demo](README.assets/demo.gif)
+
 # Compile and Run
 
 Method 1 and method 3 data can be shared, while method 2 data is independent (in jar).
