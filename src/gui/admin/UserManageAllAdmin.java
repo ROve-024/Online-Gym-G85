@@ -1707,6 +1707,15 @@ public class UserManageAllAdmin extends JFrame {
             }
             //Set style for the remaining clients
             switch (clientRemainNumb){
+                case 0:
+                    this.clientName1.setText("");
+                    this.clientName1.setBackground(new Color(230,230,230));
+                    this.clientName1.setOpaque(true);
+                    this.clientGender1.setText("");
+                    this.clientGender1.setBackground(new Color(230,230,230));
+                    this.clientGender1.setOpaque(true);
+                    this.memberMoreButton1.setVisible(false);
+                    this.clientAvatar1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
                 case 1:
                     this.clientName2.setText("");
                     this.clientName2.setBackground(new Color(230,230,230));
@@ -1952,6 +1961,15 @@ public class UserManageAllAdmin extends JFrame {
             }
             //Set style for the remaining clients
             switch (coachRemainNumb){
+                case 0:
+                    this.coachName1.setText("");
+                    this.coachName1.setBackground(new Color(230,230,230));
+                    this.coachName1.setOpaque(true);
+                    this.coachGender1.setText("");
+                    this.coachGender1.setBackground(new Color(230,230,230));
+                    this.coachGender1.setOpaque(true);
+                    this.coachMoreButton1.setVisible(false);
+                    this.coachAvatar1.setIcon(new ImageIcon(getClass().getResource("/resources/images/avatar/404.jpg")));
                 case 1:
                     this.coachName2.setText("");
                     this.coachName2.setBackground(new Color(230,230,230));

@@ -998,6 +998,18 @@ public class LessonHomeMember extends JFrame {
             }
             //Set style for the remaining lessons
             switch (lessonRemainNumb){
+                case 0:
+                    this.lessonName1.setText("");
+                    this.lessonName1.setBackground(new Color(230,230,230));
+                    this.lessonName1.setOpaque(true);
+                    this.lessonType1.setText("");
+                    this.lessonType1.setBackground(new Color(230,230,230));
+                    this.lessonType1.setOpaque(true);
+                    this.coachName1.setText("");
+                    this.coachName1.setBackground(new Color(230,230,230));
+                    this.coachName1.setOpaque(true);
+                    this.moreButton1.setVisible(false);
+                    this.lessonPicture1.setIcon(new ImageIcon(getClass().getResource("/resources/images/preview/404.png")));
                 case 1:
                     this.lessonName2.setText("");
                     this.lessonName2.setBackground(new Color(230,230,230));

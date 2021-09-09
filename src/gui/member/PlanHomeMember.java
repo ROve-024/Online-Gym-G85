@@ -884,6 +884,20 @@ public class PlanHomeMember extends JFrame {
 
             //Set style for the remaining plans
             switch (planRemainNumb) {
+                case 0:
+                    this.lessonName1.setText("");
+                    this.lessonName1.setBackground(new Color(240, 240, 240));
+                    this.lessonName1.setOpaque(true);
+                    this.coachName1.setText("");
+                    this.coachName1.setBackground(new Color(240, 240, 240));
+                    this.coachName1.setOpaque(true);
+                    this.startTime1.setText("");
+                    this.startTime1.setBackground(new Color(240, 240, 240));
+                    this.startTime1.setOpaque(true);
+                    this.endTime1.setText("");
+                    this.endTime1.setBackground(new Color(240, 240, 240));
+                    this.endTime1.setOpaque(true);
+                    this.deleteButton1.setVisible(false);
                 case 1:
                     this.lessonName2.setText("");
                     this.lessonName2.setBackground(new Color(240, 240, 240));

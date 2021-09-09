@@ -5,120 +5,172 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6668c83-24a3-4b9f-be0e-8b183d89e3b2" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_4_23_13_11_[Default_Changelist]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_4_23_13_11_[Default_Changelist]/shelved.patch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_5_20_15_20_[Default_Changelist]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_5_20_15_20_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/User Manual.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/CheckTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/Run.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/allclasses-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/allpackages-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/controller/AdminFunction.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/controller/CheckFunction.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/controller/ClassFunction.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/controller/ClientFunction.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/controller/CoachFunction.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/controller/PlanFunction.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/controller/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/controller/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/deprecated-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/element-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/admin/ALLLessonAdmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/admin/AdminViewCoachProfile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/admin/AdminViewMemberProfile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/admin/LessonDetailAdmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/admin/NavigatorAdmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/admin/PlanHomeAdmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/admin/UploadModify.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/admin/UserManageAllAdmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/admin/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/admin/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/coach/ChangeCoachAvatar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/coach/CreateClass.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/coach/EditProfileCoach.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/coach/LessonDetailCoach.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/coach/MyLessonCoach.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/coach/NavigatorCoach.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/coach/PlanHomeCoach.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/coach/ProfileCoach.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/coach/UploadModify.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/coach/ViewCoachProfile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/coach/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/coach/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/login/Login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/login/SignUp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/login/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/login/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/member/Book.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/member/ChangeMemberAvatar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/member/EditProfileMember.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/member/LessonDetailMember.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/member/LessonHomeMember.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/member/LessonVideo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/member/NavigatorMember.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/member/OpenVip.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/member/PlanHomeMember.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/member/ProfileMember.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/member/ViewMemberProfile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/member/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/member/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/others/LessonBuffer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/others/PlanBuffer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/others/UserBuffer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/others/ViewBuffer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/others/Warning.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/others/WindowFunctions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/others/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/gui/others/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-13.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-14.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-15.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-16.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-17.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-18.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index-files/index-9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/admin/AdminData.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/admin/ReadAdminXml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/admin/WriteAdminXml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/admin/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/admin/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/classes/ClassData.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/classes/ReadClassXml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/classes/WriteClassXml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/classes/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/classes/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/client/ClientData.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/client/ReadClientXml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/client/WriteClientXml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/client/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/client/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/coach/CoachData.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/coach/ReadCoachXml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/coach/WriteCoachXml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/coach/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/coach/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/plan/PlanData.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/plan/ReadPlanXml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/plan/WritePlanXml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/plan/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/io/plan/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/member-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/overview-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/package-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/resources/glass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/resources/x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/external/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/images/ui-bg_glass_65_dadada_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/images/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/images/ui-icons_222222_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/images/ui-icons_454545_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/images/ui-icons_888888_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/jquery-3.4.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/jquery-ui.structure.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/jquery-ui.structure.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/jszip-utils/dist/jszip-utils-ie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/jszip-utils/dist/jszip-utils-ie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/jszip-utils/dist/jszip-utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/jszip-utils/dist/jszip-utils.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/jszip/dist/jszip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script-dir/jszip/dist/jszip.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/serialized-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaDoc/type-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_5_20_15_20__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_5_20_15_20__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_5_20_15_22_[Default_Changelist]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_5_20_15_22_[Default_Changelist]/shelved.patch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_5_20_15_22__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_5_20_15_22__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Group85.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Group85.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.assets/Demo.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source.txt" beforeDir="false" afterPath="$PROJECT_DIR$/source.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Run.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/AdminFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AdminFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CheckFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CheckFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ClassFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ClassFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ClientFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ClientFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CoachFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CoachFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/PlanFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PlanFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/ALLLessonAdmin.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/AdminViewCoachProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/AdminViewCoachProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/AdminViewCoachProfile.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/AdminViewCoachProfile.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/AdminViewMemberProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/AdminViewMemberProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/AdminViewMemberProfile.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/AdminViewMemberProfile.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/LessonDetailAdmin.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/NavigatorAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/NavigatorAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/NavigatorAdmin.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/NavigatorAdmin.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/admin/PlanHomeAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/PlanHomeAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/PlanHomeAdmin.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/PlanHomeAdmin.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/UploadModify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/UploadModify.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/UploadModify.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/UploadModify.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/admin/UserManageAllAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/UserManageAllAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/admin/UserManageAllAdmin.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/admin/UserManageAllAdmin.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/ChangeCoachAvatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ChangeCoachAvatar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/ChangeCoachAvatar.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ChangeCoachAvatar.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/CreateClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/CreateClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/CreateClass.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/CreateClass.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/EditProfileCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/EditProfileCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/EditProfileCoach.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/EditProfileCoach.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/LessonDetailCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/LessonDetailCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/LessonDetailCoach.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/LessonDetailCoach.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/MyLessonCoach.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/NavigatorCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/NavigatorCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/NavigatorCoach.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/NavigatorCoach.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/PlanHomeCoach.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/ProfileCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ProfileCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/ProfileCoach.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ProfileCoach.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/UploadModify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/UploadModify.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/UploadModify.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/UploadModify.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/coach/ViewCoachProfile.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/login/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/login/Login.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/login/Login.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/login/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/login/SignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/login/SignUp.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/login/SignUp.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/Book.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/Book.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/ChangeMemberAvatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/ChangeMemberAvatar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/ChangeMemberAvatar.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/ChangeMemberAvatar.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/EditProfileMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/EditProfileMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/EditProfileMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/EditProfileMember.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonDetailMember.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonHomeMember.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonVideo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/LessonVideo.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/LessonVideo.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/NavigatorMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/NavigatorMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/NavigatorMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/NavigatorMember.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/OpenVip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/OpenVip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/OpenVip.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/OpenVip.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/PlanHomeMember.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/ProfileMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/ProfileMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/ProfileMember.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/ProfileMember.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/ViewMemberProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/ViewMemberProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/member/ViewMemberProfile.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/member/ViewMemberProfile.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/others/LessonBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/others/LessonBuffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/others/PlanBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/others/PlanBuffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/others/UserBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/others/UserBuffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/others/ViewBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/others/ViewBuffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/others/Warning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/others/Warning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/others/Warning.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/others/Warning.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/others/WindowFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/others/WindowFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/admin/AdminData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/admin/AdminData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/admin/ReadAdminXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/admin/ReadAdminXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/admin/WriteAdminXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/admin/WriteAdminXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/classes/ClassData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/classes/ClassData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/classes/ReadClassXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/classes/ReadClassXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/classes/WriteClassXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/classes/WriteClassXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/client/ClientData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/client/ClientData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/client/ReadClientXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/client/ReadClientXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/client/WriteClientXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/client/WriteClientXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/coach/CoachData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/coach/CoachData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/coach/ReadCoachXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/coach/ReadCoachXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/coach/WriteCoachXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/coach/WriteCoachXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/plan/PlanData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/plan/PlanData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/plan/ReadPlanXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/plan/ReadPlanXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/plan/WritePlanXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/plan/WritePlanXml.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/lessonBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/buffer/planBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/planBuffer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/buffer/viewBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buffer/viewBuffer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Admin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Class.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Client.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Coach.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/xmls/Plan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/xmls/Plan.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start up.bat" beforeDir="false" afterPath="$PROJECT_DIR$/start up.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/resources/buffer/planBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/resources/buffer/planBuffer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/resources/xmls/Coach.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/resources/xmls/Coach.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/resources/xmls/Plan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/resources/xmls/Plan.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,13 +325,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -392,6 +446,7 @@
       <workItem from="1622466087516" duration="4094000" />
       <workItem from="1622471594370" duration="97000" />
       <workItem from="1622471718043" duration="17010000" />
+      <workItem from="1631155722511" duration="669000" />
     </task>
     <task id="LOCAL-00018" summary="Added titles and icon of app">
       <created>1619221189437</created>

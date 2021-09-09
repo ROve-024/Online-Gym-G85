@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <DATA>
     <ROW>
-        <PlanID>1</PlanID>
-        <ClientID>1</ClientID>
-        <CoachID>1</CoachID>
-        <ClassID>1</ClassID>
-        <StartTime>2021-12-3 10:00:00</StartTime>
-        <Endtime>2021-12-3 12:00:00</Endtime>
-    </ROW>
-    <ROW>
         <PlanID>2</PlanID>
         <ClientID>2</ClientID>
         <CoachID>2</CoachID>
@@ -39,14 +31,6 @@
         <ClassID>4</ClassID>
         <StartTime>2021-6-8 13:00:00</StartTime>
         <Endtime>2021-6-8 15:00:00</Endtime>
-    </ROW>
-    <ROW>
-        <PlanID>6</PlanID>
-        <ClientID>7</ClientID>
-        <CoachID>1</CoachID>
-        <ClassID>1</ClassID>
-        <StartTime>2021-6-11 15:00:00</StartTime>
-        <Endtime>2021-6-11 16:00:00</Endtime>
     </ROW>
     <ROW>
         <PlanID>7</PlanID>

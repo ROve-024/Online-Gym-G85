@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"controller"},{"l":"gui.admin"},{"l":"gui.coach"},{"l":"gui.login"},{"l":"gui.member"},{"l":"gui.others"},{"l":"io.admin"},{"l":"io.classes"},{"l":"io.client"},{"l":"io.coach"},{"l":"io.plan"},{"l":"所有程序包","url":"allpackages-index.html"}]
